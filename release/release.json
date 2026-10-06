@@ -4,172 +4,124 @@
   "origin": "https://uutistenlukija.fi",
   "ga4_id": "G-35XERS8V6J",
   "source_commit": "1a5daacd25480e3a7766edae1031c4d007c7ec63",
-  "job_id": "9c818b9e83818ccf047a7fce9a4c2657f551f5abe743370f60b812af3bd5ed56",
-  "packet_sha256": "5a7b75e3632eaee8f2a353ed1c38c7af52842f3cb6187798641cf40a4adbac64",
-  "draft_sha256": "04a6d43f22f178d87455c2b70d088db298c6d8e92cae793efdc2b63a4e145ac1",
-  "image_sha256": null,
+  "job_id": "4ccf0693154e87b0e3c18b13e745b1413f957abc06bf87c6899d0b1cb1c599d5",
+  "packet_sha256": "c6eb8a7076f0a9a6ac074eca0e0be46e438cfc1986b60ef26e1ad328e7f39854",
+  "draft_sha256": "a2546730d0f4e31dd5f9b2663cae5b98669ed1bba3d43681b755b1e8314cf9b5",
+  "image_sha256": "8136c5504900bb9090a8529b6d2c44112a4d2c97349aa2a3dd90d4671f289dda",
   "text_only": {
     "policy": "official-text-v1",
     "policy_sha256": "901a881c0ed60542e137b124a671a87d2fb07b251a12312d96053f5d4a134e1e",
-    "provenance_sha256": "16bd540b674b688b443243c716c0ec5ebe18f6b6100ce5690b8e1ebd1af849fb"
+    "provenance_sha256": "f5779a26f4607d6731fc7618ff8f5cd65d608c43ac39bfa4ec10ac5714cdeee2"
   },
   "stock_image": {
-    "alt": "Arkistokuva: Suuri puu, jossa on kirkkaan keltaisia syyslehtiä, hallitsee etualaa, ja sen runko on vasemmalla. Keskellä näkyy keinuja nurmialueella, ja maa on peittynyt keltaisiin lehtiin.",
-    "caption": "Arkistokuva artikkelin aiheesta.",
+    "alt": "Arkistokuva: Tiheä metsä, jossa on ohuita mäntyjen runkoja, vihreitä neulasia ja ruskeaa kaarnaa. Metsän pohja on sammaleen ja oksien peitossa.",
+    "caption": "Arkistokuva artikkelin aiheesta. Kuva ei esitä uutisen tapahtumapaikkaa.",
     "classifier_output": {
-      "category": "Kotimaa",
+      "category": "Talous",
       "concepts": [
         {
-          "depictable_scene": "Leikkipuiston keinut ja liukumäki syksyisessä puistoympäristössä, jossa maassa on pudonneita lehtiä.",
+          "depictable_scene": "Taimikko, jossa on pieniä puita ja niiden välissä näkyvää metsäpohjaa.",
           "must_avoid": [
-            "People, children, faces or body parts",
-            "Invented recognizable Helsinki playground",
-            "Fabricated readable text or logos"
+            "People or body parts",
+            "Invented readable signs",
+            "Current restriction site claim"
           ],
           "must_show": [
-            "Playground swings and slide",
-            "Autumn leaves on the ground"
+            "small tree seedlings",
+            "forest floor"
           ],
           "rank": 1,
           "safe_to_generate": true,
           "search_queries": [
-            "Helsinki leikkipuisto syksy",
-            "leikkipuisto keinut liukumäki",
-            "autumn playground swings"
+            "Finnish tree seedlings",
+            "taimikon hoito metsä",
+            "young planted forest"
           ],
-          "subject": "Syysloman tekemistä leikkipuistoissa"
+          "subject": "Taimikon hoito"
         },
         {
-          "depictable_scene": "Todellinen valokuva Myllypuron Liikuntamyllyn liikuntasalista, jossa lapset ja aikuiset pelaavat pallopeliä kentän rajaviivojen sisällä.",
+          "depictable_scene": "Nuoren metsän hoidon aiheeseen liittyvä harvennettu metsikkö: hoikkia puiden runkoja, sammaleista metsäpohjaa ja oksia maassa.",
           "must_avoid": [
-            "Another venue presented as Liikuntamylly",
-            "Unverified claim that the photo shows the October 2026 autumn holiday event"
+            "People or body parts",
+            "Invented readable signs",
+            "Current restriction site claim"
           ],
           "must_show": [
-            "Authentic Liikuntamylly sports hall",
-            "Children and adults playing a ball game"
+            "slender forest tree trunks",
+            "branches on forest floor"
           ],
           "rank": 2,
-          "safe_to_generate": false,
-          "search_queries": [
-            "Myllypuron Liikuntamylly pallopelit",
-            "Liikuntamylly perheliikunta",
-            "Liikuntamylly indoor ball games",
-            "Liikuntamylly lapset liikuntasali"
-          ],
-          "subject": "Pallopelejä Myllypuron Liikuntamyllyssä"
-        },
-        {
-          "depictable_scene": "Työpajapöydällä on värillisiä paperiarkkeja, muutamia leikattuja paperimuotoja ja värikyniä keskeneräisen paperityön vieressä.",
-          "must_avoid": [
-            "People, children, faces or body parts",
-            "Invented recognizable cultural centre interior",
-            "Fabricated readable text, logos or recognizable copyrighted characters"
-          ],
-          "must_show": [
-            "Colored paper craft in progress",
-            "Colored pencils on a workshop table"
-          ],
-          "rank": 3,
           "safe_to_generate": true,
           "search_queries": [
-            "taidetyöpaja paperi värikynät",
-            "paper craft table",
-            "colored paper art materials"
+            "young forest thinning",
+            "Finnish pine stand",
+            "metsän hoito harvennus"
           ],
-          "subject": "Kulttuurikeskusten taidetyöpajoja"
+          "subject": "Nuoren metsän hoito"
         }
       ],
       "version": "article-first-v1"
     },
-    "credit": "Photo by Austin on Unsplash",
-    "depicted": "The image shows a park scene during autumn, dominated by a large tree with bright yellow leaves in the foreground, partially obscuring the upper left and top of the frame. Its trunk is visible on the left side, with some fallen yellow leaves scattered around its base and across the grassy ground. In the middle ground, there is a swing set with multiple swings. Beyond the swing set, several cars are parked, and various buildings, including houses and what appears to be a larger institutional buil",
+    "credit": "Photo by MPorciusCato on Wikimedia Commons",
+    "depicted": "A dense forest of slender pine trees with green needles and brown trunks. The forest floor is covered with green moss, some dry grass, and scattered branches and twigs.",
     "generated": false,
-    "hotlink": true,
-    "license": "Unsplash License",
-    "license_url": "https://unsplash.com/license",
+    "hotlink": false,
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "local_path": "media/8136c5504900bb9090a8529b6d2c44112a4d2c97349aa2a3dd90d4671f289dda.jpg",
     "pixel_review": {
-      "alt_fi": "Suuri puu, jossa on kirkkaan keltaisia syyslehtiä, hallitsee etualaa, ja sen runko on vasemmalla. Keskellä näkyy keinuja nurmialueella, ja maa on peittynyt keltaisiin lehtiin.",
+      "alt_fi": "Tiheä metsä, jossa on ohuita mäntyjen runkoja, vihreitä neulasia ja ruskeaa kaarnaa. Metsän pohja on sammaleen ja oksien peitossa.",
       "approved": true,
-      "article_text_sha256": "6ef4f4cacb5037953268514b4b134be8ee06dec1351e84b9949d8c07d065f2f0",
-      "concept_sha256": "dd4be624b4d476a5e72df6ba0c747050af7901a4540a1d38e33db517b7b208e6",
-      "description": "A large tree with bright yellow autumn leaves dominates the foreground, with its trunk on the left. In the middle ground, a swing set with multiple swings is visible on a grassy area. The ground in the foreground is covered with fallen yellow leaves. In the background, there are buildings and parked cars.",
+      "article_text_sha256": "35d165e09fa625bbc9f3d32f9515cce1803cdd02b641f38fd9d21ecbe8891fff",
+      "concept_sha256": "4c0c8c380a81275507e74301e3d69ffeb4f080f8de2a7bdb4ef1fa7d8d138b1f",
+      "description": "A dense forest of slender pine trees with green needles and brown trunks. The forest floor is covered with green moss, some dry grass, and scattered branches and twigs.",
       "fit_score": 9,
-      "image_sha256": "a449f008673b5250e1007d5fdbba18c57e565d853bfa8cc708dd42bb76dcfd21",
+      "image_sha256": "8136c5504900bb9090a8529b6d2c44112a4d2c97349aa2a3dd90d4671f289dda",
       "model": "google:gemini-2.5-flash",
       "must_show_visible": [
         true,
         true
       ],
       "no_people": true,
-      "reason": "The image clearly depicts a swing set and autumn leaves on the ground, which directly matches the 'Playground swings and slide' and 'Autumn leaves on the ground' must-show elements. The article discusses autumn holiday activities in playgrounds, making the image highly relevant to the article's subject.",
-      "reviewed_at": "2026-10-06T13:54:41.564851+00:00",
-      "text_audit": {
-        "examples": [],
-        "readable_text_present": false
-      }
+      "reason": "The image clearly depicts a thinned forest with slender tree trunks and branches on the forest floor, which directly illustrates the concept of 'Nuoren metsän hoito' (young forest management) and specifically 'harvennettu metsikkö' (thinned forest stand) as described in the selected concept and is relevant to the article's topic of forest management support.",
+      "reviewed_at": "2026-10-06T14:00:07.138446+00:00",
+      "source_context": {
+        "image_sha256": "8136c5504900bb9090a8529b6d2c44112a4d2c97349aa2a3dd90d4671f289dda",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "photo_id": "wikimedia-2957828",
+        "photo_url": "https://commons.wikimedia.org/wiki/File:A_young_stand_of_pine_after_the_first_thinning.jpg",
+        "photographer": "MPorciusCato",
+        "provider": "wikimedia",
+        "title": "A young stand of pine after the first thinning.jpg"
+      },
+      "source_context_sha256": "aba8cdf55f1dcb9c5a71ab1c5d7dd0d581087c75a0c3e16e9c4482f306ee452a"
     },
     "pixels": {
-      "height": 975,
+      "height": 1944,
       "mode": "RGB",
-      "variance": 10032.0,
-      "width": 1536
+      "variance": 6529.3,
+      "width": 2592
     },
     "relevance_check": {
       "accepted": true,
-      "evidence": "A large tree with bright yellow autumn leaves dominates the foreground, with its trunk on the left. In the middle ground, a swing set with multiple swings is visible on a grassy area. The ground in the foreground is covered with fallen yellow leaves. In the background, there are buildings and parked cars.",
-      "matched": [
-        "autumn",
-        "ground",
-        "leaves",
-        "swings"
-      ],
+      "evidence": "A dense forest of slender pine trees with green needles and brown trunks. The forest floor is covered with green moss, some dry grass, and scattered branches and twigs.",
+      "matched": [],
       "method": "vision",
-      "reason": "Exact-pixel full-article score meets the 8/10 threshold"
+      "reason": "The image clearly depicts a thinned forest with slender tree trunks and branches on the forest floor, which directly illustrates the concept of 'Nuoren metsän hoito' (young forest management) and specifically 'harvennettu metsikkö' (thinned forest stand) as described in the selected concept and is r"
     },
     "selection_evidence": {
-      "article_text_sha256": "6ef4f4cacb5037953268514b4b134be8ee06dec1351e84b9949d8c07d065f2f0",
-      "decision_sha256": "509f641b1a47607c01fbd8fae59dc06bb8ae8fddd87fc59e38e936511023de73",
+      "article_text_sha256": "35d165e09fa625bbc9f3d32f9515cce1803cdd02b641f38fd9d21ecbe8891fff",
+      "decision_sha256": "7e489509739487dab0f8f6c69853985223fd4127d3162cbf247960e6894f7388",
       "minimum_real_fit": 8,
       "searches": [
         {
           "candidates": [],
           "concept_rank": 1,
-          "outcome": "no_qualifying_candidate",
-          "provider": "source-news",
-          "queries": [
-            "cited source image"
-          ]
-        },
-        {
-          "candidates": [],
-          "concept_rank": 1,
-          "outcome": "no_qualifying_candidate",
+          "outcome": "unavailable",
           "provider": "wikimedia",
           "queries": [
-            "Helsinki leikkipuisto syksy",
-            "leikkipuisto keinut liukumäki",
-            "autumn playground swings"
-          ]
-        },
-        {
-          "candidates": [
-            {
-              "approved": false,
-              "fit_score": 4,
-              "image_sha256": "cc9623ef43a1d3049181dadc534b3e35e6f998cf5c86dc307264aa0bc20ff0de",
-              "license": "Pexels License",
-              "reason": "The image contains a child, which is explicitly listed in the 'must_avoid' criteria. Additionally, the 'must_show' elements of 'Playground swings and slide' are not present in the image. One or more required concept elements are not visible.",
-              "source_url": "https://www.pexels.com/photo/child-playing-with-autumn-leaves-in-sweden-34230223/"
-            }
-          ],
-          "concept_rank": 1,
-          "outcome": "no_qualifying_candidate",
-          "provider": "pexels",
-          "queries": [
-            "Helsinki leikkipuisto syksy",
-            "leikkipuisto keinut liukumäki",
-            "autumn playground swings"
+            "taimikko Finland"
           ]
         },
         {
@@ -177,288 +129,51 @@
             {
               "approved": true,
               "fit_score": 9,
-              "image_sha256": "a449f008673b5250e1007d5fdbba18c57e565d853bfa8cc708dd42bb76dcfd21",
-              "license": "Unsplash License",
-              "reason": "The image clearly depicts a swing set and autumn leaves on the ground, which directly matches the 'Playground swings and slide' and 'Autumn leaves on the ground' must-show elements. The article discusses autumn holiday activities in playgrounds, making the image highly relevant to the article's subject.",
-              "source_url": "https://unsplash.com/photos/autumn-park-with-colorful-trees-and-playground-swings-lklFkXEkZMg?utm_source=uutistenlukija&utm_medium=referral"
+              "image_sha256": "8136c5504900bb9090a8529b6d2c44112a4d2c97349aa2a3dd90d4671f289dda",
+              "license": "CC BY-SA 3.0",
+              "reason": "The image clearly depicts a thinned forest with slender tree trunks and branches on the forest floor, which directly illustrates the concept of 'Nuoren metsän hoito' (young forest management) and specifically 'harvennettu metsikkö' (thinned forest stand) as described in the selected concept and is relevant to the article's topic of forest management support.",
+              "source_url": "https://commons.wikimedia.org/wiki/File:A_young_stand_of_pine_after_the_first_thinning.jpg"
             }
           ],
-          "concept_rank": 1,
+          "concept_rank": 2,
           "outcome": "accepted",
-          "provider": "unsplash",
-          "queries": [
-            "Helsinki leikkipuisto syksy",
-            "leikkipuisto keinut liukumäki",
-            "autumn playground swings"
-          ]
-        },
-        {
-          "candidates": [],
-          "concept_rank": 2,
-          "outcome": "no_qualifying_candidate",
-          "provider": "source-news",
-          "queries": [
-            "cited source image"
-          ]
-        },
-        {
-          "candidates": [],
-          "concept_rank": 2,
-          "outcome": "no_qualifying_candidate",
           "provider": "wikimedia",
           "queries": [
-            "Myllypuron Liikuntamylly pallopelit",
-            "Liikuntamylly perheliikunta",
-            "Liikuntamylly indoor ball games"
-          ]
-        },
-        {
-          "candidates": [
-            {
-              "approved": false,
-              "fit_score": 0,
-              "image_sha256": "c445103a09bee7b8929d78e240384d075ab068712e52d4b9ec668e408b5eade0",
-              "license": "Pexels License",
-              "reason": "The image shows an outdoor game on a lawn, which does not match the concept of children and adults playing a ball game inside Myllypuron Liikuntamylly sports hall. The visible content does not depict a sports hall or people playing a ball game. One or more required concept elements are not visible.",
-              "source_url": "https://www.pexels.com/photo/wooden-toy-with-balls-12774924/"
-            },
-            {
-              "approved": false,
-              "fit_score": 4,
-              "image_sha256": "3f2ca10833e5237392b0927238c1facf0ec4dd9e7061db5def307b10273b0e43",
-              "license": "Pexels License",
-              "reason": "The article mentions Myllypuron Liikuntamylly as a venue for ball games and climbing for children and families. The selected concept specifically requires an authentic Myllypuron Liikuntamylly sports hall with children and adults playing a ball game. The image shows a man walking in what appears to be a sports hall or gym, but there are no children",
-              "source_url": "https://www.pexels.com/photo/man-entering-sports-hall-6339318/"
-            },
-            {
-              "approved": false,
-              "fit_score": 4,
-              "image_sha256": "c5892c6ddcb0d09c98a37aaa6025eda054e1b143ee1155f858c95cb7b2af7c42",
-              "license": "Pexels License",
-              "reason": "The article discusses various autumn holiday activities in Helsinki, including ball games and climbing at Myllypuron Liikuntamylly. The selected concept specifically requires an authentic photo of Myllypuron Liikuntamylly's sports hall with children and adults playing a ball game. The provided image shows two adults playing badminton outdoors in a ",
-              "source_url": "https://www.pexels.com/photo/couple-playing-badminton-on-grass-field-8795114/"
-            },
-            {
-              "approved": false,
-              "fit_score": 4,
-              "image_sha256": "224a9b6a6729a08efad32e930b55399a1f7002589debc15f8405d0cc548f1dc3",
-              "license": "Pexels License",
-              "reason": "The article mentions Myllypuron Liikuntamylly as a venue for ball games and climbing for children and families. The image shows adults stretching, which is a general fitness activity, not specifically ball games or climbing, and it does not clearly depict children. The venue is not identifiable as Myllypuron Liikuntamylly from the pixels alone. The",
-              "source_url": "https://www.pexels.com/photo/people-stretching-inside-the-room-6339348/"
-            }
-          ],
-          "concept_rank": 2,
-          "outcome": "no_qualifying_candidate",
-          "provider": "pexels",
-          "queries": [
-            "Myllypuron Liikuntamylly pallopelit",
-            "Liikuntamylly perheliikunta",
-            "Liikuntamylly indoor ball games"
-          ]
-        },
-        {
-          "candidates": [],
-          "concept_rank": 2,
-          "outcome": "no_qualifying_candidate",
-          "provider": "unsplash",
-          "queries": [
-            "Myllypuron Liikuntamylly pallopelit",
-            "Liikuntamylly perheliikunta",
-            "Liikuntamylly indoor ball games"
-          ]
-        },
-        {
-          "candidates": [],
-          "concept_rank": 2,
-          "outcome": "no_qualifying_candidate",
-          "provider": "google",
-          "queries": [
-            "Myllypuron Liikuntamylly pallopelit",
-            "Liikuntamylly perheliikunta",
-            "Liikuntamylly indoor ball games"
-          ]
-        },
-        {
-          "candidates": [],
-          "concept_rank": 3,
-          "outcome": "no_qualifying_candidate",
-          "provider": "source-news",
-          "queries": [
-            "cited source image"
-          ]
-        },
-        {
-          "candidates": [
-            {
-              "approved": false,
-              "fit_score": 0,
-              "image_sha256": "abe1c3a39ea02f508b23d9e7714ea9f6d8605da00f30b7c5863df357649db665",
-              "license": "CC BY-SA 4.0",
-              "reason": "The image shows a concrete pot, which is unrelated to the article about autumn holiday activities for children and youth in Helsinki. It does not depict colored paper craft in progress or colored pencils on a workshop table, which are the required elements for the selected concept of art workshops. One or more required concept elements are not visi",
-              "source_url": "https://commons.wikimedia.org/wiki/File:Part%20of%20a%20hand%20made%20paper%20table%20by%20Bangalee%20Woman.jpg"
-            },
-            {
-              "approved": false,
-              "fit_score": 3,
-              "image_sha256": "658cfca83f7c9c2ac9e49910367e10f1e5e03e39caeeb7db3be258a42f786639",
-              "license": "CC0",
-              "reason": "The article discusses art workshops involving paper crafts and other activities for children and youth. The selected concept specifies 'Colored paper craft in progress' and 'Colored pencils on a workshop table'. The image shows an illuminated lamp with a shade made of folded material, which could be paper, but it is a finished product, not a craft ",
-              "source_url": "https://commons.wikimedia.org/wiki/File:Dragontail%20Table%20Lamp.jpg"
-            },
-            {
-              "approved": false,
-              "fit_score": 6,
-              "image_sha256": "43cf7c4a94e810e7fb06fd511aa706b51dee031b35f293d3f1084ce038f4410c",
-              "license": "CC BY-SA 4.0",
-              "reason": "The image shows finished paper crafts, not paper craft in progress with materials like colored paper sheets and pencils on a workshop table as specified in the concept. The visible subject does not match the selected concept's requirements. One or more required concept elements are not visible.",
-              "source_url": "https://commons.wikimedia.org/wiki/File:Crepe%20paper%20table%20flower.jpg"
-            },
-            {
-              "approved": false,
-              "fit_score": 0,
-              "image_sha256": "561c53029f0e5bdd4052659eb9a01ad16d9b72d59a5b25a8e70928d03a3b2e78",
-              "license": "CC BY-SA 4.0",
-              "reason": "The article discusses art workshops involving paper crafts and colored pencils. The selected concept describes colored paper craft in progress and colored pencils on a workshop table. The image is an abstract painting and does not visibly depict any paper craft, colored pencils, or a workshop table. Therefore, it does not meet the 'must_show' requi",
-              "source_url": "https://commons.wikimedia.org/wiki/File:Colored%20paper%20in%20a%20cardboard%20box%20painting%20by%20Christopher%20Willard.png"
-            }
-          ],
-          "concept_rank": 3,
-          "outcome": "unavailable",
-          "provider": "wikimedia",
-          "queries": [
-            "taidetyöpaja paperi värikynät",
-            "paper craft table",
-            "colored paper art materials"
-          ]
-        },
-        {
-          "candidates": [
-            {
-              "approved": false,
-              "fit_score": 6,
-              "image_sha256": "f78b6d757b78dde5b21faa836a7a65c06b2b99d5db687e89841f2f8bdfceaccd",
-              "license": "Pexels License",
-              "reason": "The image shows colored pencils and colored paper, which are materials for paper crafts. However, the concept requires 'colored paper craft in progress' and 'colored pencils on a workshop table'. The image does not show any craft in progress, nor is there any indication of a workshop table; the papers are merely a background. Therefore, it fails to",
-              "source_url": "https://www.pexels.com/photo/colorful-pencils-on-vibrant-paper-background-38957007/"
-            },
-            {
-              "approved": false,
-              "fit_score": 6,
-              "image_sha256": "de09fd1f6dbcba8c38b14d69577093bdee5970d3effa00292c365b1ef09ea420",
-              "license": "Pexels License",
-              "reason": "The image shows colored pencils and colored paper, which are materials for paper crafts. However, the concept requires 'Colored paper craft in progress' and 'Colored pencils on a workshop table'. The image does not show any craft in progress, only plain paper strips, and the setting is not visibly a workshop table. Therefore, it fails to meet the '",
-              "source_url": "https://www.pexels.com/photo/colorful-pencils-on-vibrant-paper-background-38957008/"
-            },
-            {
-              "approved": false,
-              "fit_score": 6,
-              "image_sha256": "e4239f4ed5d1be413c390cd4285e7cb9a12356f330ce300c39e749eb49e4eeb8",
-              "license": "Pexels License",
-              "reason": "The image shows colored pencils and a hand drawing on paper, which relates to art workshops. However, the concept requires 'Colored paper craft in progress' and 'Colored pencils on a workshop table'. The image does not show colored paper craft in progress, nor is it clearly on a workshop table. The hand is also a 'body part' which is in the must_av",
-              "source_url": "https://www.pexels.com/photo/person-holding-green-and-red-coloring-pencils-8014277/"
-            },
-            {
-              "approved": false,
-              "fit_score": 6,
-              "image_sha256": "c526ddf6d6c07cf86f78dfd498e2009fa36006d5df3c259f427f3a066fb1a603",
-              "license": "Pexels License",
-              "reason": "The image shows colored pencils and some paper, which broadly relates to art activities. However, it does not clearly depict 'colored paper craft in progress' as required by the concept. There are no distinct cut paper shapes or an obvious craft project underway. The visible text 'PRESS' and the 'PAPER BIRD' logo also introduce elements that are no",
-              "source_url": "https://www.pexels.com/photo/close-up-of-colored-pencils-and-paper-5865567/"
-            }
-          ],
-          "concept_rank": 3,
-          "outcome": "no_qualifying_candidate",
-          "provider": "pexels",
-          "queries": [
-            "taidetyöpaja paperi värikynät",
-            "paper craft table",
-            "colored paper art materials"
-          ]
-        },
-        {
-          "candidates": [
-            {
-              "approved": false,
-              "fit_score": 6,
-              "image_sha256": "eb74dd329675cee71c1aeba8b47f397a72d6df0e0e2bdcccf3c53466d9b3d343",
-              "license": "Unsplash License",
-              "reason": "The image shows colored paper and colored pens, which are materials for paper crafts. However, the selected concept specifically requires 'Colored paper craft in progress' and 'Colored pencils on a workshop table'. The image does not show any craft in progress, nor does it show colored pencils; instead, it shows marker pens. Therefore, it does not ",
-              "source_url": "https://unsplash.com/photos/a-bunch-of-different-colored-paper-and-pens-Q6q-2YT0J7Y?utm_source=uutistenlukija&utm_medium=referral"
-            },
-            {
-              "approved": false,
-              "fit_score": 4,
-              "image_sha256": "d2b12159c088c16cbf3e1cd436b1ff0a5d532cfeff5cab386224f30e2153d317",
-              "license": "Unsplash License",
-              "reason": "The image shows crumpled paper and a notebook, which could broadly relate to writing or creative activities. However, the selected concept specifically requires 'Colored paper craft in progress' and 'Colored pencils on a workshop table'. The visible paper is plain white and crumpled, not colored craft paper, and there are no colored pencils or any ",
-              "source_url": "https://unsplash.com/photos/white-paper-on-brown-wooden-table-lPX6-ee-1zU?utm_source=uutistenlukija&utm_medium=referral"
-            },
-            {
-              "approved": false,
-              "fit_score": 0,
-              "image_sha256": "155786f1e4b465f0ad03d3571ec2412e6cd602bafa197e60aba40afee15dd221",
-              "license": "Unsplash License",
-              "reason": "The image shows crumpled white paper, which does not match the concept of 'Colored paper craft in progress' or 'Colored pencils on a workshop table'. There are no colored papers, craft in progress, or colored pencils visible. One or more required concept elements are not visible.",
-              "source_url": "https://unsplash.com/photos/white-paper-on-white-floor-tiles-SPuHHjbSso8?utm_source=uutistenlukija&utm_medium=referral"
-            },
-            {
-              "approved": false,
-              "fit_score": 7,
-              "image_sha256": "4d43a2115932eaf4baff2b3c42600b6e3f0e199a47f661653e3a8d8ce425a2f6",
-              "license": "Unsplash License",
-              "reason": "The image directly depicts a child engaged in a paper craft activity with colored pencils and other materials on a table, which aligns perfectly with the 'Colored paper craft in progress' and 'Colored pencils on a workshop table' must-show elements, illustrating the concept of art workshops mentioned in the article. Readable text is visible in the ",
-              "source_url": "https://unsplash.com/photos/child-drawing-on-paper-at-table-TJxotQTUr8o?utm_source=uutistenlukija&utm_medium=referral"
-            }
-          ],
-          "concept_rank": 3,
-          "outcome": "no_qualifying_candidate",
-          "provider": "unsplash",
-          "queries": [
-            "taidetyöpaja paperi värikynät",
-            "paper craft table",
-            "colored paper art materials"
-          ]
-        },
-        {
-          "candidates": [],
-          "concept_rank": 3,
-          "outcome": "no_qualifying_candidate",
-          "provider": "google",
-          "queries": [
-            "taidetyöpaja paperi värikynät",
-            "paper craft table",
-            "colored paper art materials"
+            "young forest thinning"
           ]
         }
       ],
       "selected": {
-        "concept_rank": 1,
+        "concept_rank": 2,
         "fit_score": 9,
-        "image_sha256": "a449f008673b5250e1007d5fdbba18c57e565d853bfa8cc708dd42bb76dcfd21",
+        "image_sha256": "8136c5504900bb9090a8529b6d2c44112a4d2c97349aa2a3dd90d4671f289dda",
         "kind": "real"
       },
       "version": "article-first-v1"
     },
-    "source_url": "https://unsplash.com/photos/autumn-park-with-colorful-trees-and-playground-swings-lklFkXEkZMg?utm_source=uutistenlukija&utm_medium=referral",
+    "sha256": "8136c5504900bb9090a8529b6d2c44112a4d2c97349aa2a3dd90d4671f289dda",
+    "source_url": "https://commons.wikimedia.org/wiki/File:A_young_stand_of_pine_after_the_first_thinning.jpg",
     "stock_provenance": {
-      "download_tracking": {
-        "successful": true,
-        "url": "https://api.unsplash.com/photos/lklFkXEkZMg/download?ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwzfHxhdXR1bW4lMjBwbGF5Z3JvdW5kJTIwc3dpbmdzfGVufDB8MHx8fDE3OTEyOTQ4NzV8MA"
+      "attribution": {
+        "changes": "Tallennettu JPEG-muodossa; kuvan sisältöä ei muokattu.",
+        "title": "A young stand of pine after the first thinning.jpg"
       },
-      "image_url": "https://images.unsplash.com/photo-1742094212061-c7b14a9f0587?ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwzfHxhdXR1bW4lMjBwbGF5Z3JvdW5kJTIwc3dpbmdzfGVufDB8MHx8fDE3OTEyOTQ4NzV8MA&w=1536&q=80&fm=jpg&fit=crop",
-      "photo_id": "lklFkXEkZMg",
-      "photo_url": "https://unsplash.com/photos/autumn-park-with-colorful-trees-and-playground-swings-lklFkXEkZMg?utm_source=uutistenlukija&utm_medium=referral",
-      "photographer": "Austin",
-      "photographer_url": "https://unsplash.com/@austin_7792?utm_source=uutistenlukija&utm_medium=referral",
-      "provider": "unsplash",
-      "query": "autumn playground swings",
-      "retrieved_at": "2026-10-06T13:54:38Z"
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/61/A_young_stand_of_pine_after_the_first_thinning.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "photo_id": "wikimedia-2957828",
+      "photo_url": "https://commons.wikimedia.org/wiki/File:A_young_stand_of_pine_after_the_first_thinning.jpg",
+      "photographer": "MPorciusCato",
+      "photographer_url": "https://commons.wikimedia.org/wiki/File:A_young_stand_of_pine_after_the_first_thinning.jpg",
+      "provider": "wikimedia",
+      "query": "young forest thinning",
+      "retrieved_at": "2026-10-06T14:00:07Z"
     },
-    "stock_provenance_sha256": "2894e02f7ed21627f8a347046d12d323b514752afe013c42f928eb1ee09bbddb",
-    "url": "https://images.unsplash.com/photo-1742094212061-c7b14a9f0587?ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwzfHxhdXR1bW4lMjBwbGF5Z3JvdW5kJTIwc3dpbmdzfGVufDB8MHx8fDE3OTEyOTQ4NzV8MA&w=1536&q=80&fm=jpg&fit=crop"
+    "stock_provenance_sha256": "89c9189b6dd6bc78665930bebe08241e626f9ee8751e08c978bf38b6f79e2484",
+    "url": "https://uutistenlukija.fi/media/8136c5504900bb9090a8529b6d2c44112a4d2c97349aa2a3dd90d4671f289dda.jpg"
   },
   "new_article_files": [
-    "uutiset/helsinki-tarjoaa-syyslomatekemista-lapsille-nuorille-9c818b9e8381/index.html"
+    "uutiset/metsanhoidon-tuen-hakuaika-pitenee-rajoitustilanteissa-4ccf0693154e/index.html"
   ],
   "files": {
     "0bce47347326f83e8507a46c6b0c3bdb.txt": "f1a2b584ad8690f8447736e1c18c93360e63182fd2e6fe49ec7359a97c9b40c5",
@@ -473,14 +188,14 @@
     "categories/kotimaa/sivu/6/index.html": "fe145deceeb8b60ac271357a9d8f14d31a84313d871d391f9430872e4ce536cb",
     "categories/kotimaa/sivu/7/index.html": "1119abc957e7122b3253270b0bf794eddadd427ec3c105f27527f9d48f45082e",
     "categories/kulttuuri/index.html": "c49449da3aed4cc712d41f29874f6bc45a3775c23080235eb160e36fbb5b99a6",
-    "categories/talous/index.html": "8fe622cb4ec1ebc5d3796771b7090540aad2d654436739c81dcd324e97d71123",
+    "categories/talous/index.html": "d6339f2ec9c87498e2882fa6e2d3211ff861eb7d74832384f5b9078733985e99",
     "categories/talous/sivu/2/index.html": "a723a0dab1f260de70d85733f8ef6f4c4435b49c13a52b8503caa6889e2ffcab",
     "categories/talous/sivu/3/index.html": "58d84cdbd1d4510df6042021d8cc2fd49c7731009c16e3ce81af6ae2dc528a79",
     "categories/teknologia/index.html": "4a6c8385a65ff3cd748a785952adbd292a7494897b7a6b35a6e8924aa0aa9305",
     "categories/tiede/index.html": "845d431808ab489c26e91850b9128117753683069d3b699dc75c73ec1fa5836f",
     "categories/ulkomaat/index.html": "333652c353d80472de0e9c62d90ba8a04f26fa537d05262149f859260b6e6eed",
     "categories/urheilu/index.html": "be350c70f4e2a673565fe58bbe8ee45bb7a4b05ba309fc5035411cd580b7ebd4",
-    "index.html": "4b6657b5a916acb8140baf080c4234440a70a1889cef65ef116732b4f86972e9",
+    "index.html": "0bc64f3e4ffe703137430873743136085fa0fcc86e7c915266fc2156fbb2219d",
     "lahteet/index.html": "e30f94eb46965835d1745c6b8485fcd6950f7b09d4ddd0fa73317407c68f1f8c",
     "mvp-assets/01867736718078bcdabb739dcb8fd7b1e6d2aade84bf3e81f0cf68b8004971a5.jpg": "01867736718078bcdabb739dcb8fd7b1e6d2aade84bf3e81f0cf68b8004971a5",
     "mvp-assets/01b79a7a532c0a287fefc6792135f4f5a246ba352d5efc6131385157b1a9316d.jpg": "01b79a7a532c0a287fefc6792135f4f5a246ba352d5efc6131385157b1a9316d",
@@ -743,6 +458,7 @@
     "mvp-assets/7f4bf4c44ee9a1faa265aa9821e3c5098bde992048b0206dd7cc68f048cb0697.jpg": "7f4bf4c44ee9a1faa265aa9821e3c5098bde992048b0206dd7cc68f048cb0697",
     "mvp-assets/800a9149b56dff3ad75f67c9d2c1f49202dd6e96f81bf3cd049d95434d980399.jpg": "800a9149b56dff3ad75f67c9d2c1f49202dd6e96f81bf3cd049d95434d980399",
     "mvp-assets/80688dfec444a8f312a36f2634ced4cd58f07732da11519a3c8fc5a715398ab6.jpg": "80688dfec444a8f312a36f2634ced4cd58f07732da11519a3c8fc5a715398ab6",
+    "mvp-assets/8136c5504900bb9090a8529b6d2c44112a4d2c97349aa2a3dd90d4671f289dda.jpg": "8136c5504900bb9090a8529b6d2c44112a4d2c97349aa2a3dd90d4671f289dda",
     "mvp-assets/815f8f1edb8b2b84c04a37cfde97e58f012455e1ab52c3e33b1ec1ce5e1d5aa8.jpg": "815f8f1edb8b2b84c04a37cfde97e58f012455e1ab52c3e33b1ec1ce5e1d5aa8",
     "mvp-assets/817b4a785e02ff156c96416e31311336a0c68d7a3867bffd1315f8598a735e9d.jpg": "817b4a785e02ff156c96416e31311336a0c68d7a3867bffd1315f8598a735e9d",
     "mvp-assets/81882169353a704f66955968689aa5a2a7a98f924400f27643d4d7f24ae11738.jpg": "81882169353a704f66955968689aa5a2a7a98f924400f27643d4d7f24ae11738",
@@ -1041,7 +757,7 @@
     "sivu/9/index.html": "cbf89e07f7786b713245e8e72a2bcb0f4073a1833f98295646fbd47e4af1ba41",
     "tietoja/index.html": "c9fdd4514fe9ceec6600556e68e6b21184e9f7580c2bb907d796623f949f38ad",
     "tietosuoja/index.html": "038b099e00efd59bc723f2d8dec81a4f16d791e275193c1a5c311138ea779a56",
-    "tuoreimmat/index.html": "5eaecbd31c0bce7c350e15cb79148779b40d2c63e7057e6146d5037e8ec0321b",
+    "tuoreimmat/index.html": "bcb78e447e10a63e443a5b62b8f14ae34d1b77983b6c27b8dddac1918fe8141d",
     "tuoreimmat/sivu/10/index.html": "07623e5821241c2180fb9ceafb566cc5070ad366c0802ee5bf088fb740da1f5a",
     "tuoreimmat/sivu/2/index.html": "306afdcded1d2c3bc7fef0d77b9b8a83423f8e2d6fd002efe092a1a2f81e8b5a",
     "tuoreimmat/sivu/3/index.html": "b959591195704a581c89f171583c0f6c660c9b5c40da724a31c0d1f277f12f80",
@@ -1217,7 +933,7 @@
     "uutiset/malmin-novaan-suunnitellaan-laajennusta-asukkaiden-6643e2b67fc8/index.html": "692a02aebc58525f09345747ecf01810b2d921ac156b01c43a3c64193ae91b30",
     "uutiset/matkaviestinverkkojen-uusia-toimilupia-valmistellaan-1fc73b45c172/index.html": "8ba84be6eacbee2c2f1f1f2c4cd61eae97a82e3ca7ff078b57c81270331dd638",
     "uutiset/meriteollisuusstrategia-tahtaa-viennin-kasvuun-d6f58ecba065/index.html": "0e3c6f8d11f01a11a08cabf3c03540bb61e41eaf9406a66f4f461a6c16c1c356",
-    "uutiset/metsanhoidon-tuen-hakuaika-pitenee-rajoitustilanteissa-4ccf0693154e/index.html": "c66d4d8443c191b467e5353542fa4b45b1e7a4093f7789b3c140fae6f60e40f1",
+    "uutiset/metsanhoidon-tuen-hakuaika-pitenee-rajoitustilanteissa-4ccf0693154e/index.html": "0b7aed2786baad1c65e62edd4d4681f2f24cda575f81340db645d698579cb1bd",
     "uutiset/ministerio-valmistelee-karhun-kiintiometsastyksen-804377534929/index.html": "9ace344b2e838dd8694d6f85f9f1098b4525648a17f95ebeb5723a38b8434673",
     "uutiset/minna-canth-palkinnon-ehdotusaika-paattyy-29-9-2742b84a5738/index.html": "65962c554763485c28f5c2f307e9ca1ef61fe2d51f961158aa7227a2a8d15b1b",
     "uutiset/multala-hakee-saksasta-yhteistyota-vetytalouteen-dacb24d664ef/index.html": "054f6426f8f16e4095f805dd0eb08902f4d36748530856f505eee9de3910196d",
@@ -1372,162 +1088,114 @@
   "packet": {
     "fixture": false,
     "image": {
-      "alt": "Arkistokuva: Suuri puu, jossa on kirkkaan keltaisia syyslehtiä, hallitsee etualaa, ja sen runko on vasemmalla. Keskellä näkyy keinuja nurmialueella, ja maa on peittynyt keltaisiin lehtiin.",
-      "caption": "Arkistokuva artikkelin aiheesta.",
+      "alt": "Arkistokuva: Tiheä metsä, jossa on ohuita mäntyjen runkoja, vihreitä neulasia ja ruskeaa kaarnaa. Metsän pohja on sammaleen ja oksien peitossa.",
+      "caption": "Arkistokuva artikkelin aiheesta. Kuva ei esitä uutisen tapahtumapaikkaa.",
       "classifier_output": {
-        "category": "Kotimaa",
+        "category": "Talous",
         "concepts": [
           {
-            "depictable_scene": "Leikkipuiston keinut ja liukumäki syksyisessä puistoympäristössä, jossa maassa on pudonneita lehtiä.",
+            "depictable_scene": "Taimikko, jossa on pieniä puita ja niiden välissä näkyvää metsäpohjaa.",
             "must_avoid": [
-              "People, children, faces or body parts",
-              "Invented recognizable Helsinki playground",
-              "Fabricated readable text or logos"
+              "People or body parts",
+              "Invented readable signs",
+              "Current restriction site claim"
             ],
             "must_show": [
-              "Playground swings and slide",
-              "Autumn leaves on the ground"
+              "small tree seedlings",
+              "forest floor"
             ],
             "rank": 1,
             "safe_to_generate": true,
             "search_queries": [
-              "Helsinki leikkipuisto syksy",
-              "leikkipuisto keinut liukumäki",
-              "autumn playground swings"
+              "Finnish tree seedlings",
+              "taimikon hoito metsä",
+              "young planted forest"
             ],
-            "subject": "Syysloman tekemistä leikkipuistoissa"
+            "subject": "Taimikon hoito"
           },
           {
-            "depictable_scene": "Todellinen valokuva Myllypuron Liikuntamyllyn liikuntasalista, jossa lapset ja aikuiset pelaavat pallopeliä kentän rajaviivojen sisällä.",
+            "depictable_scene": "Nuoren metsän hoidon aiheeseen liittyvä harvennettu metsikkö: hoikkia puiden runkoja, sammaleista metsäpohjaa ja oksia maassa.",
             "must_avoid": [
-              "Another venue presented as Liikuntamylly",
-              "Unverified claim that the photo shows the October 2026 autumn holiday event"
+              "People or body parts",
+              "Invented readable signs",
+              "Current restriction site claim"
             ],
             "must_show": [
-              "Authentic Liikuntamylly sports hall",
-              "Children and adults playing a ball game"
+              "slender forest tree trunks",
+              "branches on forest floor"
             ],
             "rank": 2,
-            "safe_to_generate": false,
-            "search_queries": [
-              "Myllypuron Liikuntamylly pallopelit",
-              "Liikuntamylly perheliikunta",
-              "Liikuntamylly indoor ball games",
-              "Liikuntamylly lapset liikuntasali"
-            ],
-            "subject": "Pallopelejä Myllypuron Liikuntamyllyssä"
-          },
-          {
-            "depictable_scene": "Työpajapöydällä on värillisiä paperiarkkeja, muutamia leikattuja paperimuotoja ja värikyniä keskeneräisen paperityön vieressä.",
-            "must_avoid": [
-              "People, children, faces or body parts",
-              "Invented recognizable cultural centre interior",
-              "Fabricated readable text, logos or recognizable copyrighted characters"
-            ],
-            "must_show": [
-              "Colored paper craft in progress",
-              "Colored pencils on a workshop table"
-            ],
-            "rank": 3,
             "safe_to_generate": true,
             "search_queries": [
-              "taidetyöpaja paperi värikynät",
-              "paper craft table",
-              "colored paper art materials"
+              "young forest thinning",
+              "Finnish pine stand",
+              "metsän hoito harvennus"
             ],
-            "subject": "Kulttuurikeskusten taidetyöpajoja"
+            "subject": "Nuoren metsän hoito"
           }
         ],
         "version": "article-first-v1"
       },
-      "credit": "Photo by Austin on Unsplash",
-      "depicted": "The image shows a park scene during autumn, dominated by a large tree with bright yellow leaves in the foreground, partially obscuring the upper left and top of the frame. Its trunk is visible on the left side, with some fallen yellow leaves scattered around its base and across the grassy ground. In the middle ground, there is a swing set with multiple swings. Beyond the swing set, several cars are parked, and various buildings, including houses and what appears to be a larger institutional buil",
+      "credit": "Photo by MPorciusCato on Wikimedia Commons",
+      "depicted": "A dense forest of slender pine trees with green needles and brown trunks. The forest floor is covered with green moss, some dry grass, and scattered branches and twigs.",
       "generated": false,
-      "hotlink": true,
-      "license": "Unsplash License",
-      "license_url": "https://unsplash.com/license",
+      "hotlink": false,
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "local_path": "media/8136c5504900bb9090a8529b6d2c44112a4d2c97349aa2a3dd90d4671f289dda.jpg",
       "pixel_review": {
-        "alt_fi": "Suuri puu, jossa on kirkkaan keltaisia syyslehtiä, hallitsee etualaa, ja sen runko on vasemmalla. Keskellä näkyy keinuja nurmialueella, ja maa on peittynyt keltaisiin lehtiin.",
+        "alt_fi": "Tiheä metsä, jossa on ohuita mäntyjen runkoja, vihreitä neulasia ja ruskeaa kaarnaa. Metsän pohja on sammaleen ja oksien peitossa.",
         "approved": true,
-        "article_text_sha256": "6ef4f4cacb5037953268514b4b134be8ee06dec1351e84b9949d8c07d065f2f0",
-        "concept_sha256": "dd4be624b4d476a5e72df6ba0c747050af7901a4540a1d38e33db517b7b208e6",
-        "description": "A large tree with bright yellow autumn leaves dominates the foreground, with its trunk on the left. In the middle ground, a swing set with multiple swings is visible on a grassy area. The ground in the foreground is covered with fallen yellow leaves. In the background, there are buildings and parked cars.",
+        "article_text_sha256": "35d165e09fa625bbc9f3d32f9515cce1803cdd02b641f38fd9d21ecbe8891fff",
+        "concept_sha256": "4c0c8c380a81275507e74301e3d69ffeb4f080f8de2a7bdb4ef1fa7d8d138b1f",
+        "description": "A dense forest of slender pine trees with green needles and brown trunks. The forest floor is covered with green moss, some dry grass, and scattered branches and twigs.",
         "fit_score": 9,
-        "image_sha256": "a449f008673b5250e1007d5fdbba18c57e565d853bfa8cc708dd42bb76dcfd21",
+        "image_sha256": "8136c5504900bb9090a8529b6d2c44112a4d2c97349aa2a3dd90d4671f289dda",
         "model": "google:gemini-2.5-flash",
         "must_show_visible": [
           true,
           true
         ],
         "no_people": true,
-        "reason": "The image clearly depicts a swing set and autumn leaves on the ground, which directly matches the 'Playground swings and slide' and 'Autumn leaves on the ground' must-show elements. The article discusses autumn holiday activities in playgrounds, making the image highly relevant to the article's subject.",
-        "reviewed_at": "2026-10-06T13:54:41.564851+00:00",
-        "text_audit": {
-          "examples": [],
-          "readable_text_present": false
-        }
+        "reason": "The image clearly depicts a thinned forest with slender tree trunks and branches on the forest floor, which directly illustrates the concept of 'Nuoren metsän hoito' (young forest management) and specifically 'harvennettu metsikkö' (thinned forest stand) as described in the selected concept and is relevant to the article's topic of forest management support.",
+        "reviewed_at": "2026-10-06T14:00:07.138446+00:00",
+        "source_context": {
+          "image_sha256": "8136c5504900bb9090a8529b6d2c44112a4d2c97349aa2a3dd90d4671f289dda",
+          "license": "CC BY-SA 3.0",
+          "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+          "photo_id": "wikimedia-2957828",
+          "photo_url": "https://commons.wikimedia.org/wiki/File:A_young_stand_of_pine_after_the_first_thinning.jpg",
+          "photographer": "MPorciusCato",
+          "provider": "wikimedia",
+          "title": "A young stand of pine after the first thinning.jpg"
+        },
+        "source_context_sha256": "aba8cdf55f1dcb9c5a71ab1c5d7dd0d581087c75a0c3e16e9c4482f306ee452a"
       },
       "pixels": {
-        "height": 975,
+        "height": 1944,
         "mode": "RGB",
-        "variance": 10032.0,
-        "width": 1536
+        "variance": 6529.3,
+        "width": 2592
       },
       "relevance_check": {
         "accepted": true,
-        "evidence": "A large tree with bright yellow autumn leaves dominates the foreground, with its trunk on the left. In the middle ground, a swing set with multiple swings is visible on a grassy area. The ground in the foreground is covered with fallen yellow leaves. In the background, there are buildings and parked cars.",
-        "matched": [
-          "autumn",
-          "ground",
-          "leaves",
-          "swings"
-        ],
+        "evidence": "A dense forest of slender pine trees with green needles and brown trunks. The forest floor is covered with green moss, some dry grass, and scattered branches and twigs.",
+        "matched": [],
         "method": "vision",
-        "reason": "Exact-pixel full-article score meets the 8/10 threshold"
+        "reason": "The image clearly depicts a thinned forest with slender tree trunks and branches on the forest floor, which directly illustrates the concept of 'Nuoren metsän hoito' (young forest management) and specifically 'harvennettu metsikkö' (thinned forest stand) as described in the selected concept and is r"
       },
       "selection_evidence": {
-        "article_text_sha256": "6ef4f4cacb5037953268514b4b134be8ee06dec1351e84b9949d8c07d065f2f0",
-        "decision_sha256": "509f641b1a47607c01fbd8fae59dc06bb8ae8fddd87fc59e38e936511023de73",
+        "article_text_sha256": "35d165e09fa625bbc9f3d32f9515cce1803cdd02b641f38fd9d21ecbe8891fff",
+        "decision_sha256": "7e489509739487dab0f8f6c69853985223fd4127d3162cbf247960e6894f7388",
         "minimum_real_fit": 8,
         "searches": [
           {
             "candidates": [],
             "concept_rank": 1,
-            "outcome": "no_qualifying_candidate",
-            "provider": "source-news",
-            "queries": [
-              "cited source image"
-            ]
-          },
-          {
-            "candidates": [],
-            "concept_rank": 1,
-            "outcome": "no_qualifying_candidate",
+            "outcome": "unavailable",
             "provider": "wikimedia",
             "queries": [
-              "Helsinki leikkipuisto syksy",
-              "leikkipuisto keinut liukumäki",
-              "autumn playground swings"
-            ]
-          },
-          {
-            "candidates": [
-              {
-                "approved": false,
-                "fit_score": 4,
-                "image_sha256": "cc9623ef43a1d3049181dadc534b3e35e6f998cf5c86dc307264aa0bc20ff0de",
-                "license": "Pexels License",
-                "reason": "The image contains a child, which is explicitly listed in the 'must_avoid' criteria. Additionally, the 'must_show' elements of 'Playground swings and slide' are not present in the image. One or more required concept elements are not visible.",
-                "source_url": "https://www.pexels.com/photo/child-playing-with-autumn-leaves-in-sweden-34230223/"
-              }
-            ],
-            "concept_rank": 1,
-            "outcome": "no_qualifying_candidate",
-            "provider": "pexels",
-            "queries": [
-              "Helsinki leikkipuisto syksy",
-              "leikkipuisto keinut liukumäki",
-              "autumn playground swings"
+              "taimikko Finland"
             ]
           },
           {
@@ -1535,481 +1203,197 @@
               {
                 "approved": true,
                 "fit_score": 9,
-                "image_sha256": "a449f008673b5250e1007d5fdbba18c57e565d853bfa8cc708dd42bb76dcfd21",
-                "license": "Unsplash License",
-                "reason": "The image clearly depicts a swing set and autumn leaves on the ground, which directly matches the 'Playground swings and slide' and 'Autumn leaves on the ground' must-show elements. The article discusses autumn holiday activities in playgrounds, making the image highly relevant to the article's subject.",
-                "source_url": "https://unsplash.com/photos/autumn-park-with-colorful-trees-and-playground-swings-lklFkXEkZMg?utm_source=uutistenlukija&utm_medium=referral"
+                "image_sha256": "8136c5504900bb9090a8529b6d2c44112a4d2c97349aa2a3dd90d4671f289dda",
+                "license": "CC BY-SA 3.0",
+                "reason": "The image clearly depicts a thinned forest with slender tree trunks and branches on the forest floor, which directly illustrates the concept of 'Nuoren metsän hoito' (young forest management) and specifically 'harvennettu metsikkö' (thinned forest stand) as described in the selected concept and is relevant to the article's topic of forest management support.",
+                "source_url": "https://commons.wikimedia.org/wiki/File:A_young_stand_of_pine_after_the_first_thinning.jpg"
               }
             ],
-            "concept_rank": 1,
+            "concept_rank": 2,
             "outcome": "accepted",
-            "provider": "unsplash",
-            "queries": [
-              "Helsinki leikkipuisto syksy",
-              "leikkipuisto keinut liukumäki",
-              "autumn playground swings"
-            ]
-          },
-          {
-            "candidates": [],
-            "concept_rank": 2,
-            "outcome": "no_qualifying_candidate",
-            "provider": "source-news",
-            "queries": [
-              "cited source image"
-            ]
-          },
-          {
-            "candidates": [],
-            "concept_rank": 2,
-            "outcome": "no_qualifying_candidate",
             "provider": "wikimedia",
             "queries": [
-              "Myllypuron Liikuntamylly pallopelit",
-              "Liikuntamylly perheliikunta",
-              "Liikuntamylly indoor ball games"
-            ]
-          },
-          {
-            "candidates": [
-              {
-                "approved": false,
-                "fit_score": 0,
-                "image_sha256": "c445103a09bee7b8929d78e240384d075ab068712e52d4b9ec668e408b5eade0",
-                "license": "Pexels License",
-                "reason": "The image shows an outdoor game on a lawn, which does not match the concept of children and adults playing a ball game inside Myllypuron Liikuntamylly sports hall. The visible content does not depict a sports hall or people playing a ball game. One or more required concept elements are not visible.",
-                "source_url": "https://www.pexels.com/photo/wooden-toy-with-balls-12774924/"
-              },
-              {
-                "approved": false,
-                "fit_score": 4,
-                "image_sha256": "3f2ca10833e5237392b0927238c1facf0ec4dd9e7061db5def307b10273b0e43",
-                "license": "Pexels License",
-                "reason": "The article mentions Myllypuron Liikuntamylly as a venue for ball games and climbing for children and families. The selected concept specifically requires an authentic Myllypuron Liikuntamylly sports hall with children and adults playing a ball game. The image shows a man walking in what appears to be a sports hall or gym, but there are no children",
-                "source_url": "https://www.pexels.com/photo/man-entering-sports-hall-6339318/"
-              },
-              {
-                "approved": false,
-                "fit_score": 4,
-                "image_sha256": "c5892c6ddcb0d09c98a37aaa6025eda054e1b143ee1155f858c95cb7b2af7c42",
-                "license": "Pexels License",
-                "reason": "The article discusses various autumn holiday activities in Helsinki, including ball games and climbing at Myllypuron Liikuntamylly. The selected concept specifically requires an authentic photo of Myllypuron Liikuntamylly's sports hall with children and adults playing a ball game. The provided image shows two adults playing badminton outdoors in a ",
-                "source_url": "https://www.pexels.com/photo/couple-playing-badminton-on-grass-field-8795114/"
-              },
-              {
-                "approved": false,
-                "fit_score": 4,
-                "image_sha256": "224a9b6a6729a08efad32e930b55399a1f7002589debc15f8405d0cc548f1dc3",
-                "license": "Pexels License",
-                "reason": "The article mentions Myllypuron Liikuntamylly as a venue for ball games and climbing for children and families. The image shows adults stretching, which is a general fitness activity, not specifically ball games or climbing, and it does not clearly depict children. The venue is not identifiable as Myllypuron Liikuntamylly from the pixels alone. The",
-                "source_url": "https://www.pexels.com/photo/people-stretching-inside-the-room-6339348/"
-              }
-            ],
-            "concept_rank": 2,
-            "outcome": "no_qualifying_candidate",
-            "provider": "pexels",
-            "queries": [
-              "Myllypuron Liikuntamylly pallopelit",
-              "Liikuntamylly perheliikunta",
-              "Liikuntamylly indoor ball games"
-            ]
-          },
-          {
-            "candidates": [],
-            "concept_rank": 2,
-            "outcome": "no_qualifying_candidate",
-            "provider": "unsplash",
-            "queries": [
-              "Myllypuron Liikuntamylly pallopelit",
-              "Liikuntamylly perheliikunta",
-              "Liikuntamylly indoor ball games"
-            ]
-          },
-          {
-            "candidates": [],
-            "concept_rank": 2,
-            "outcome": "no_qualifying_candidate",
-            "provider": "google",
-            "queries": [
-              "Myllypuron Liikuntamylly pallopelit",
-              "Liikuntamylly perheliikunta",
-              "Liikuntamylly indoor ball games"
-            ]
-          },
-          {
-            "candidates": [],
-            "concept_rank": 3,
-            "outcome": "no_qualifying_candidate",
-            "provider": "source-news",
-            "queries": [
-              "cited source image"
-            ]
-          },
-          {
-            "candidates": [
-              {
-                "approved": false,
-                "fit_score": 0,
-                "image_sha256": "abe1c3a39ea02f508b23d9e7714ea9f6d8605da00f30b7c5863df357649db665",
-                "license": "CC BY-SA 4.0",
-                "reason": "The image shows a concrete pot, which is unrelated to the article about autumn holiday activities for children and youth in Helsinki. It does not depict colored paper craft in progress or colored pencils on a workshop table, which are the required elements for the selected concept of art workshops. One or more required concept elements are not visi",
-                "source_url": "https://commons.wikimedia.org/wiki/File:Part%20of%20a%20hand%20made%20paper%20table%20by%20Bangalee%20Woman.jpg"
-              },
-              {
-                "approved": false,
-                "fit_score": 3,
-                "image_sha256": "658cfca83f7c9c2ac9e49910367e10f1e5e03e39caeeb7db3be258a42f786639",
-                "license": "CC0",
-                "reason": "The article discusses art workshops involving paper crafts and other activities for children and youth. The selected concept specifies 'Colored paper craft in progress' and 'Colored pencils on a workshop table'. The image shows an illuminated lamp with a shade made of folded material, which could be paper, but it is a finished product, not a craft ",
-                "source_url": "https://commons.wikimedia.org/wiki/File:Dragontail%20Table%20Lamp.jpg"
-              },
-              {
-                "approved": false,
-                "fit_score": 6,
-                "image_sha256": "43cf7c4a94e810e7fb06fd511aa706b51dee031b35f293d3f1084ce038f4410c",
-                "license": "CC BY-SA 4.0",
-                "reason": "The image shows finished paper crafts, not paper craft in progress with materials like colored paper sheets and pencils on a workshop table as specified in the concept. The visible subject does not match the selected concept's requirements. One or more required concept elements are not visible.",
-                "source_url": "https://commons.wikimedia.org/wiki/File:Crepe%20paper%20table%20flower.jpg"
-              },
-              {
-                "approved": false,
-                "fit_score": 0,
-                "image_sha256": "561c53029f0e5bdd4052659eb9a01ad16d9b72d59a5b25a8e70928d03a3b2e78",
-                "license": "CC BY-SA 4.0",
-                "reason": "The article discusses art workshops involving paper crafts and colored pencils. The selected concept describes colored paper craft in progress and colored pencils on a workshop table. The image is an abstract painting and does not visibly depict any paper craft, colored pencils, or a workshop table. Therefore, it does not meet the 'must_show' requi",
-                "source_url": "https://commons.wikimedia.org/wiki/File:Colored%20paper%20in%20a%20cardboard%20box%20painting%20by%20Christopher%20Willard.png"
-              }
-            ],
-            "concept_rank": 3,
-            "outcome": "unavailable",
-            "provider": "wikimedia",
-            "queries": [
-              "taidetyöpaja paperi värikynät",
-              "paper craft table",
-              "colored paper art materials"
-            ]
-          },
-          {
-            "candidates": [
-              {
-                "approved": false,
-                "fit_score": 6,
-                "image_sha256": "f78b6d757b78dde5b21faa836a7a65c06b2b99d5db687e89841f2f8bdfceaccd",
-                "license": "Pexels License",
-                "reason": "The image shows colored pencils and colored paper, which are materials for paper crafts. However, the concept requires 'colored paper craft in progress' and 'colored pencils on a workshop table'. The image does not show any craft in progress, nor is there any indication of a workshop table; the papers are merely a background. Therefore, it fails to",
-                "source_url": "https://www.pexels.com/photo/colorful-pencils-on-vibrant-paper-background-38957007/"
-              },
-              {
-                "approved": false,
-                "fit_score": 6,
-                "image_sha256": "de09fd1f6dbcba8c38b14d69577093bdee5970d3effa00292c365b1ef09ea420",
-                "license": "Pexels License",
-                "reason": "The image shows colored pencils and colored paper, which are materials for paper crafts. However, the concept requires 'Colored paper craft in progress' and 'Colored pencils on a workshop table'. The image does not show any craft in progress, only plain paper strips, and the setting is not visibly a workshop table. Therefore, it fails to meet the '",
-                "source_url": "https://www.pexels.com/photo/colorful-pencils-on-vibrant-paper-background-38957008/"
-              },
-              {
-                "approved": false,
-                "fit_score": 6,
-                "image_sha256": "e4239f4ed5d1be413c390cd4285e7cb9a12356f330ce300c39e749eb49e4eeb8",
-                "license": "Pexels License",
-                "reason": "The image shows colored pencils and a hand drawing on paper, which relates to art workshops. However, the concept requires 'Colored paper craft in progress' and 'Colored pencils on a workshop table'. The image does not show colored paper craft in progress, nor is it clearly on a workshop table. The hand is also a 'body part' which is in the must_av",
-                "source_url": "https://www.pexels.com/photo/person-holding-green-and-red-coloring-pencils-8014277/"
-              },
-              {
-                "approved": false,
-                "fit_score": 6,
-                "image_sha256": "c526ddf6d6c07cf86f78dfd498e2009fa36006d5df3c259f427f3a066fb1a603",
-                "license": "Pexels License",
-                "reason": "The image shows colored pencils and some paper, which broadly relates to art activities. However, it does not clearly depict 'colored paper craft in progress' as required by the concept. There are no distinct cut paper shapes or an obvious craft project underway. The visible text 'PRESS' and the 'PAPER BIRD' logo also introduce elements that are no",
-                "source_url": "https://www.pexels.com/photo/close-up-of-colored-pencils-and-paper-5865567/"
-              }
-            ],
-            "concept_rank": 3,
-            "outcome": "no_qualifying_candidate",
-            "provider": "pexels",
-            "queries": [
-              "taidetyöpaja paperi värikynät",
-              "paper craft table",
-              "colored paper art materials"
-            ]
-          },
-          {
-            "candidates": [
-              {
-                "approved": false,
-                "fit_score": 6,
-                "image_sha256": "eb74dd329675cee71c1aeba8b47f397a72d6df0e0e2bdcccf3c53466d9b3d343",
-                "license": "Unsplash License",
-                "reason": "The image shows colored paper and colored pens, which are materials for paper crafts. However, the selected concept specifically requires 'Colored paper craft in progress' and 'Colored pencils on a workshop table'. The image does not show any craft in progress, nor does it show colored pencils; instead, it shows marker pens. Therefore, it does not ",
-                "source_url": "https://unsplash.com/photos/a-bunch-of-different-colored-paper-and-pens-Q6q-2YT0J7Y?utm_source=uutistenlukija&utm_medium=referral"
-              },
-              {
-                "approved": false,
-                "fit_score": 4,
-                "image_sha256": "d2b12159c088c16cbf3e1cd436b1ff0a5d532cfeff5cab386224f30e2153d317",
-                "license": "Unsplash License",
-                "reason": "The image shows crumpled paper and a notebook, which could broadly relate to writing or creative activities. However, the selected concept specifically requires 'Colored paper craft in progress' and 'Colored pencils on a workshop table'. The visible paper is plain white and crumpled, not colored craft paper, and there are no colored pencils or any ",
-                "source_url": "https://unsplash.com/photos/white-paper-on-brown-wooden-table-lPX6-ee-1zU?utm_source=uutistenlukija&utm_medium=referral"
-              },
-              {
-                "approved": false,
-                "fit_score": 0,
-                "image_sha256": "155786f1e4b465f0ad03d3571ec2412e6cd602bafa197e60aba40afee15dd221",
-                "license": "Unsplash License",
-                "reason": "The image shows crumpled white paper, which does not match the concept of 'Colored paper craft in progress' or 'Colored pencils on a workshop table'. There are no colored papers, craft in progress, or colored pencils visible. One or more required concept elements are not visible.",
-                "source_url": "https://unsplash.com/photos/white-paper-on-white-floor-tiles-SPuHHjbSso8?utm_source=uutistenlukija&utm_medium=referral"
-              },
-              {
-                "approved": false,
-                "fit_score": 7,
-                "image_sha256": "4d43a2115932eaf4baff2b3c42600b6e3f0e199a47f661653e3a8d8ce425a2f6",
-                "license": "Unsplash License",
-                "reason": "The image directly depicts a child engaged in a paper craft activity with colored pencils and other materials on a table, which aligns perfectly with the 'Colored paper craft in progress' and 'Colored pencils on a workshop table' must-show elements, illustrating the concept of art workshops mentioned in the article. Readable text is visible in the ",
-                "source_url": "https://unsplash.com/photos/child-drawing-on-paper-at-table-TJxotQTUr8o?utm_source=uutistenlukija&utm_medium=referral"
-              }
-            ],
-            "concept_rank": 3,
-            "outcome": "no_qualifying_candidate",
-            "provider": "unsplash",
-            "queries": [
-              "taidetyöpaja paperi värikynät",
-              "paper craft table",
-              "colored paper art materials"
-            ]
-          },
-          {
-            "candidates": [],
-            "concept_rank": 3,
-            "outcome": "no_qualifying_candidate",
-            "provider": "google",
-            "queries": [
-              "taidetyöpaja paperi värikynät",
-              "paper craft table",
-              "colored paper art materials"
+              "young forest thinning"
             ]
           }
         ],
         "selected": {
-          "concept_rank": 1,
+          "concept_rank": 2,
           "fit_score": 9,
-          "image_sha256": "a449f008673b5250e1007d5fdbba18c57e565d853bfa8cc708dd42bb76dcfd21",
+          "image_sha256": "8136c5504900bb9090a8529b6d2c44112a4d2c97349aa2a3dd90d4671f289dda",
           "kind": "real"
         },
         "version": "article-first-v1"
       },
-      "source_url": "https://unsplash.com/photos/autumn-park-with-colorful-trees-and-playground-swings-lklFkXEkZMg?utm_source=uutistenlukija&utm_medium=referral",
+      "sha256": "8136c5504900bb9090a8529b6d2c44112a4d2c97349aa2a3dd90d4671f289dda",
+      "source_url": "https://commons.wikimedia.org/wiki/File:A_young_stand_of_pine_after_the_first_thinning.jpg",
       "stock_provenance": {
-        "download_tracking": {
-          "successful": true,
-          "url": "https://api.unsplash.com/photos/lklFkXEkZMg/download?ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwzfHxhdXR1bW4lMjBwbGF5Z3JvdW5kJTIwc3dpbmdzfGVufDB8MHx8fDE3OTEyOTQ4NzV8MA"
+        "attribution": {
+          "changes": "Tallennettu JPEG-muodossa; kuvan sisältöä ei muokattu.",
+          "title": "A young stand of pine after the first thinning.jpg"
         },
-        "image_url": "https://images.unsplash.com/photo-1742094212061-c7b14a9f0587?ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwzfHxhdXR1bW4lMjBwbGF5Z3JvdW5kJTIwc3dpbmdzfGVufDB8MHx8fDE3OTEyOTQ4NzV8MA&w=1536&q=80&fm=jpg&fit=crop",
-        "photo_id": "lklFkXEkZMg",
-        "photo_url": "https://unsplash.com/photos/autumn-park-with-colorful-trees-and-playground-swings-lklFkXEkZMg?utm_source=uutistenlukija&utm_medium=referral",
-        "photographer": "Austin",
-        "photographer_url": "https://unsplash.com/@austin_7792?utm_source=uutistenlukija&utm_medium=referral",
-        "provider": "unsplash",
-        "query": "autumn playground swings",
-        "retrieved_at": "2026-10-06T13:54:38Z"
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/61/A_young_stand_of_pine_after_the_first_thinning.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "photo_id": "wikimedia-2957828",
+        "photo_url": "https://commons.wikimedia.org/wiki/File:A_young_stand_of_pine_after_the_first_thinning.jpg",
+        "photographer": "MPorciusCato",
+        "photographer_url": "https://commons.wikimedia.org/wiki/File:A_young_stand_of_pine_after_the_first_thinning.jpg",
+        "provider": "wikimedia",
+        "query": "young forest thinning",
+        "retrieved_at": "2026-10-06T14:00:07Z"
       },
-      "stock_provenance_sha256": "2894e02f7ed21627f8a347046d12d323b514752afe013c42f928eb1ee09bbddb",
-      "url": "https://images.unsplash.com/photo-1742094212061-c7b14a9f0587?ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwzfHxhdXR1bW4lMjBwbGF5Z3JvdW5kJTIwc3dpbmdzfGVufDB8MHx8fDE3OTEyOTQ4NzV8MA&w=1536&q=80&fm=jpg&fit=crop"
+      "stock_provenance_sha256": "89c9189b6dd6bc78665930bebe08241e626f9ee8751e08c978bf38b6f79e2484",
+      "url": "https://uutistenlukija.fi/media/8136c5504900bb9090a8529b6d2c44112a4d2c97349aa2a3dd90d4671f289dda.jpg"
     },
     "publication_basis": {
       "policy": "official-text-v1",
       "policy_sha256": "901a881c0ed60542e137b124a671a87d2fb07b251a12312d96053f5d4a134e1e",
-      "provider": "helsinki",
+      "provider": "valtioneuvosto",
       "related_sources": 0,
-      "source_fields_sha256": "3f66855c7444e123687709a2d78e7c241c57bcef635000d89f1d961d61048bfe",
-      "source_sha256": "13146217a08ba1199c445d6417ee5744db3919c41ac9b8a49099a803f1971aed"
+      "source_fields_sha256": "47e9f1b3fdbb8afdaf9e64246642eb3d46ad50d6c1de73e571cda7f3c336249b",
+      "source_sha256": "c2640e2be06dfe4e1033bd8a5e86bc2ce27ee16aba79306cf16a75fe0b479832"
     },
     "sources": [
       {
         "id": "A",
-        "published_at": "2026-10-05T09:42:19+0300",
-        "publisher": "Helsingin kaupunki",
+        "published_at": "2026-10-06T10:47+0300",
+        "publisher": "Valtioneuvoston kanslia",
         "reuse": {
           "changes": "Itsenäinen suomenkielinen uutisteksti; lähteen tietoja on tiivistetty.",
-          "license": "Helsinki Region Infoshare -käyttöehdot (Espoo, Helsinki, Vantaa, Kauniainen): laaja käyttöoikeus Creative Commons Nimeä 4.0 mukaisesti; sekä ei-kaupallisiin että kaupallisiin tarkoituksiin",
-          "license_url": "https://creativecommons.org/licenses/by/4.0/",
-          "url": "https://hri.fi/data/fi/dataset/helsingin-hel-fi-sivuston-avoin-rajapinta-uutisille"
+          "license": "Valtioneuvoston sivuston käyttöehdot: tekstiaineiston käyttö ja siihen linkitys on sallittu hyvän tavan mukaisissa asiayhteyksissä, kun lähde mainitaan; aineiston käytöstä kaupalliseen tarkoitukseen on sovittava erikseen",
+          "license_url": "https://valtioneuvosto.fi/tietoa-sivustosta",
+          "notice": "Lähde: Valtioneuvosto. Tekstin uudelleenkäyttö sallittu lähde mainiten; kaupallinen käyttö vaatii erillisen sopimuksen.",
+          "url": "https://valtioneuvosto.fi/tietoa-sivustosta"
         },
-        "text": "Syyslomaviikolla Helsingin leikkipuistoissa on tarjolla yhteisöllistä tekemistä perheille. Leikkipuistoissa leikitään, pelataan, ulkoillaan, askarrellaan ja vietetään lomaa yhdessä. Maksutonta ohjelmaa järjestetään koululaisille, leikki-ikäisille ja vauvoille.\nLeikkipuistoon on helppo tulla, myös ensimmäistä kertaa. Lapset löytävät leikkiseuraa ja aikuiset voivat samalla tavata muita lapsiperheitä. Leikkipuisto on rento ja viihtyisä paikka viettää aikaa lasten kanssa, nähdä kavereita ja osallistua yhteisölliseen, ohjattuun toimintaan.\nPuistojen sisätiloissa voi lämmittää omia eväitä sekä keittää kahvia tai teetä. Tarkemmat ohjelmatiedot löydät leikkipuistojen omilta verkkosivuilta. Syyslomaviikolla leikkipuistot ovat avoinna maanantaista perjantaihin kello 9–16.\nNutalle hengailemaan ja leipomaan\nNuorisotalojen syyslomaohjelmassa on muun muassa työpajoja, pelaamista ja musiikkitapahtumia. Retkiä tehdään trampoliinipuistoon, Fazerilaan, Heurekaan ja Vuosaaren lähiluontoon.\nSyyslomaperjantaina 16.10. Malmitalo muuttuu 13–17-vuotiaiden ruotsinlaivaksi, jossa on luvassa risteilyohjelmaa, karaoke ja pallomeri. Illan pääesiintyjä on Seksikäs-Suklaa ja tanssimusiikista vastaa DJ Academy. Tapahtuma on maksuton.\nNuorisotaloissa on tarjolla myös paljon vapaamuotoista yhdessä tekemistä, kuten leffailtoja ja leipomista sekä hengailua ilman ennakkoilmoittautumista. Osallistuminen nuorisotalojen toimintaan edellyttää, että huoltaja rekisteröi lapselle Jässäri-jäsenkortin osoitteessa\nnuorten.hel.fi/jassari(Linkki johtaa ulkoiseen palveluun).\nHelsingin ruotsinkielisillä nuorisotaloilla vietetään syyslomaa päiväleirien, avoimen toiminnan ja sateenkaarinuorille suunnatun ohjelman parissa. Rastiksen, Sandelsin ja Munccan nuorisotalojen päiväleireillä luvassa on toimintaa nuorisotaloilla sekä retkiä eri puolille kaupunkia. Lisäksi Rastiksessa syysloma jatkuu viikon loppupuolella avoimella toiminnalla kouluikäisille nuorille.\nSateenkaarinuorille ohjelmaa tarjoavat Ungpride ja IrisHelsinki. Syyslomaviikolla järjestetään muun muassa elokuvailta 13–17-vuotiaille sekä syysilta 16–25-vuotiaille nuorille.\nTutustu nuorten syyslomaohjelmaan(Linkki johtaa ulkoiseen palveluun)\nYhdessä liikkumista ja uusia lajeja\nMyllypuron Liikuntamyllyn syyslomatapahtumassa alakouluikäiset lapset perheineen pääsevät kokeilemaan monipuolisesti eri lajeja maanantaista keskiviikkoon 12.–14.10. kello 11–14. Luvassa on pallopelejä, kiipeilyä, pomppupatjalla pomppimista ja eri lajeihin tutustumista. Useat aktiviteetit sopivat myös toimintarajoitteisille lapsille. Pääsymaksu: lapset: 2,10 euroa, aikuiset: 3,60 euroa.\nNuorille on tarjolla maksutonta liikuntaa Vimma- ja Puhti-liikunnan tunneilla. Vimma-liikunta on suunnattu 12–16-vuotiaile ja Puhti-liikunta 16–22-vuotiaille. Tunneille voi tulla mukaan ilmoittautumatta. Ajantasainen tieto syysloman tunneista kannattaa katsoa Vimman ja Puhdin viikkokalentereista.\nVimma-liikunnan viikkokalenteri(Linkki johtaa ulkoiseen palveluun)\nPuhti-liikunnan viikkokalenteri(Linkki johtaa ulkoiseen palveluun)\nLukemisen iloa kirjastoissa\nSyysloma on lukuloma! Lähikirjastossa voi uppoutua kirjojen maailmaan kaikessa rauhassa. Kirjastolaiset vinkkaavat mielellään sopivaa lomalukemista.\nLukemisen ilo näkyy syyslomalla myös kirjastojen tapahtumissa. Puistolan kirjaston lukubileissä luetaan ja herkutellaan. Lasten hiljaisessa lukupiirissä Kannelmäen kirjastossa saa lukea rauhassa yhdessä muiden kirjojen ystävien kanssa. Lukukoira kuuntelee ääneen lukemista Kallion, Laajasalon, Myllypuron, Tapanilan ja Töölön kirjastoissa.\nKirjoittamisen ystäville on tarjolla Malminkartanon tarinakerho, ja Jätkäsaaren sarjispajassa voi kokeilla sarjakuvan tekemistä. Vuosaaren mangapiiri puolestaan kutsuu keskustelemaan mangasta. Kaikki kirjastojen syyslomatoiminta löytyy osoitteesta\nhelmet.fi/tapahtumat(Linkki johtaa ulkoiseen palveluun).\nLasten kaupunki ja Ratikkamuseo kutsuvat tutkimaan ja kokeilemaan\nHelsingin kaupunginmuseon Lasten kaupungissa ja Ratikkamuseossa riittää mukavaa puuhaa lapsiperheille syysloman jokaisena päivänä. Elämyksellisessä Lasten kaupunki -näyttelyssä Helsingin historiaan saa tarttua omin käsin; eri aikakausien kodit, lelut ja arjen tarinat kutsuvat tutkimaan, kokeilemaan ja löytämään. Töölössä sijaitsevassa Ratikkamuseossa voi puolestaan hypätä Helsingin katuja yli sata vuotta kolistelleiden ratikoiden kyytiin. Kaupunginmuseoon ja Ratikkamuseoon on aina vapaa pääsy.\nTyöpajoja, leffoja ja diskoilua kulttuurikeskuksissa\nLasten ja nuorten taidekeskus Annantalolla sukelletaan syyslomalla kirjojen maailmaan. Koko perheen työpajapäivässä lauantaina 10.10. taiteillaan satumaan asukkeja ja varjokuvia. Lomakinossa katsellaan maanantaista torstaihin lempikirjoihin perustuvia leffoja, ja viikko huipentuu perjantaina 16.10. suosittuun AnnanHouse-diskoon, jossa tavataan Risto Räppääjä ja muita tuttuja hahmoja.\nKanneltalossa tehdään ekologista taidetta ylijäämäpaperista Seikkailutaidekoulun maksuttomissa työpajoissa maanantaina 12. ja keskiviikkona 14.10.\nMalmitalon lomaleireillä opitaan uusia kädentaitoja, kuten huovutettujen donitsien ja karkkikorvakorujen valmistusta sekä omien vaatteiden tuunausta. Tiistaista torstaihin esitetään maksuttomia syyslomaleffoja, ja perjantaina 16.10.\nVuotalossa syyslomaa vietetään sarjakuvan ja mangan parissa. Sarjakuvakeskuksen järjestämiin maksuttomiin työpajoihin voi osallistua maanantaista perjantaihin ilman ennakkoilmoittautumista.",
-        "title": "Syysloma Helsingissä on täynnä toimintaa",
-        "url": "https://www.hel.fi/fi/uutiset/syysloma-helsingissa-on-taynna-toimintaa"
+        "text": "Taimikon ja nuoren metsän hoidon tuen hakuaikoihin muutos ASF-rajoitusten alueella\nmaa- ja metsätalousministeriö\nJulkaisuajankohta 6.10.2026 10.47\nTyyppi:Tiedote\nMetsätalouden kannustejärjestelmää koskevan asetuksen muutoksella varmistetaan, että esimerkiksi afrikkalaisen sikaruton (ASF) torjumiseksi asetetuista viranomaisrajoituksista huolimatta metsänomistajilla on kohtuullisesti aikaa toteuttaa taimikon ja nuoren metsän hoitotyö ja hakea siihen tukea. Muutokset tulevat voimaan 7.10.2026. Muuttuneita määräaikoja sovelletaan tämän jälkeen saapuneisiin hakemuksiin.\nTaimikon ja nuoren metsän hoidon tuen hakuaikoihin tehdyn muutoksen myötä tukea tulee hakea viimeistään yhdeksän kuukauden kuluessa viranomaisrajoitusten päättymisestä. Muutos koskee poikkeuksellisia tilanteita, joissa viranomainen on päätöksellään kieltänyt toiminnan tietyllä alueella siten, että taimikon ja nuoren metsän hoitotyön loppuun saattaminen määräajassa estyy. Tavoitteena on turvata metsänomistajien yhdenvertainen kohtelu ja mahdollisuudet saada tukea myös silloin, kun työt viivästyvät viranomaispäätöksiin perustuvista syistä.\nPääsääntö on edelleen, että taimikon ja nuoren metsän hoidon tukea on haettava viimeistään kuuden kuukauden kuluessa toimenpiteiden aloittamisesta ja kahden kuukauden kuluessa niiden valmistumisesta.\nMaa- ja metsätalousministeriön asetukseen tehty muutos tulee voimaan 7.10.2026. Muuttuneita määräaikoja sovelletaan hakemuksiin, jotka ovat saapuneet Suomen metsäkeskukseen asetuksen voimaantulon jälkeen.\nAsetusluonnoksesta järjestettiin lausuntokierros syyskuussa 2026. Lausunnonantajat pitivät esitystä tarpeellisena. Hakuaikaa pidennettiin yhdeksään kuukauteen lausuntopalautteen perusteella.\nLisätietoja:\nNiina Riissanen\nmetsäneuvos, maa- ja metsätalousministeriö\n[email protected]\n029 5162 339\nBiotalous Hallinnonala Lainsäädäntö Luonnonvarat Luonto ja ilmasto Metsät Tuet\nafrikkalainen sikarutto metsätalous metsätalousyrittäjät taimikonhoito",
+        "title": "Taimikon ja nuoren metsän hoidon tuen hakuaikoihin muutos ASF-rajoitusten alueella",
+        "url": "https://valtioneuvosto.fi/-/1410837/taimikon-ja-nuoren-metsan-hoidon-tuen-hakuaikoihin-muutos-asf-rajoitusten-alueella"
       }
     ],
-    "story_key": "url:https://www.hel.fi/fi/uutiset/syysloma-helsingissa-on-taynna-toimintaa",
+    "story_key": "url:https://valtioneuvosto.fi/-/1410837/taimikon-ja-nuoren-metsan-hoidon-tuen-hakuaikoihin-muutos-asf-rajoitusten-alueella",
     "supporting_documents": [
       {
         "id": "RIGHTS",
         "purpose": "text reuse permission; not news or image evidence",
-        "retrieved_at": "2026-10-06T13:52:01.100344+00:00",
-        "sha256": "d2817fd6f870cc54108440fa16631faac31b6c08327bdab394494b3473a02612",
-        "text": "Helsingin kaupungin hel.fi-sivuston kaikki uutiset ovat saatavissa avoimena datana RSS-syötteenä. Sivuston sisällöstä vastaa Helsingin kaupunginkanslian viestintä.\nSyötteen sisältöä voi muokata uutissivulla olevilla suodattimilla. Räätälöity RSS-syöte muodostetaan automaattisesti valittujen suodattimien pohjalta ja sen voi tilata uutissivulta.\nHuomioitavaa: Helsingin kaupungilla on uutisissa käytettyihin kuviin kaikki oikeudet. Kuvaa / kuvia saa käyttää ainoastaan siihen liittyvän uutisen yhteydessä. Kuvien käyttäminen tähän tarkoitukseen on käyttäjälle ilmaista. Kuvan käyttö tai siirto muihin tarkoituksiin on kielletty. Kuvia käytettäessä on ehdottomasti mainittava kuvien lähde ja kuvaaja.\nhttps://creativecommons.org/licenses/by/4.0/",
-        "url": "https://hri.fi/data/fi/dataset/helsingin-hel-fi-sivuston-avoin-rajapinta-uutisille"
+        "retrieved_at": "2026-10-06T10:06:32.976968+00:00",
+        "sha256": "b3db66de80f7789bad9c7f967316730728258b1f9a9d8f7e6e1334b9caf60429",
+        "text": "Tekijänoikeudet\nValtioneuvoston kanslialla tai muulla aineiston yhteydessä ilmoitetulla tiedontuottajalla on oikeudet sivustossa julkaistavaan teksti- ja kuva-aineistoon. Tekstiaineiston käyttö ja siihen linkitys on sallittu hyvän tavan mukaisissa asiayhteyksissä, kun lähde mainitaan. Aineiston käytöstä kaupalliseen tarkoitukseen on sovittava erikseen.\nValtioneuvoston kuvia välitetään Creative Commons -lisensseillä valtioneuvoston aineistopankissa ja Flickr-kuvapalvelussa. Niissä tarjottavat kuvat on tarkoitettu vapaaseen viestinnälliseen käyttöön. Kuvien tarkat käyttöehdot on ilmoitettu kunkin kuvan kohdalla.\n",
+        "url": "https://valtioneuvosto.fi/tietoa-sivustosta"
       }
     ]
   },
   "draft": {
-    "category": "Kotimaa",
+    "category": "Talous",
     "image": {
-      "alt": "Arkistokuva: Suuri puu, jossa on kirkkaan keltaisia syyslehtiä, hallitsee etualaa, ja sen runko on vasemmalla. Keskellä näkyy keinuja nurmialueella, ja maa on peittynyt keltaisiin lehtiin.",
-      "caption": "Arkistokuva artikkelin aiheesta.",
+      "alt": "Arkistokuva: Tiheä metsä, jossa on ohuita mäntyjen runkoja, vihreitä neulasia ja ruskeaa kaarnaa. Metsän pohja on sammaleen ja oksien peitossa.",
+      "caption": "Arkistokuva artikkelin aiheesta. Kuva ei esitä uutisen tapahtumapaikkaa.",
       "classifier_output": {
-        "category": "Kotimaa",
+        "category": "Talous",
         "concepts": [
           {
-            "depictable_scene": "Leikkipuiston keinut ja liukumäki syksyisessä puistoympäristössä, jossa maassa on pudonneita lehtiä.",
+            "depictable_scene": "Taimikko, jossa on pieniä puita ja niiden välissä näkyvää metsäpohjaa.",
             "must_avoid": [
-              "People, children, faces or body parts",
-              "Invented recognizable Helsinki playground",
-              "Fabricated readable text or logos"
+              "People or body parts",
+              "Invented readable signs",
+              "Current restriction site claim"
             ],
             "must_show": [
-              "Playground swings and slide",
-              "Autumn leaves on the ground"
+              "small tree seedlings",
+              "forest floor"
             ],
             "rank": 1,
             "safe_to_generate": true,
             "search_queries": [
-              "Helsinki leikkipuisto syksy",
-              "leikkipuisto keinut liukumäki",
-              "autumn playground swings"
+              "Finnish tree seedlings",
+              "taimikon hoito metsä",
+              "young planted forest"
             ],
-            "subject": "Syysloman tekemistä leikkipuistoissa"
+            "subject": "Taimikon hoito"
           },
           {
-            "depictable_scene": "Todellinen valokuva Myllypuron Liikuntamyllyn liikuntasalista, jossa lapset ja aikuiset pelaavat pallopeliä kentän rajaviivojen sisällä.",
+            "depictable_scene": "Nuoren metsän hoidon aiheeseen liittyvä harvennettu metsikkö: hoikkia puiden runkoja, sammaleista metsäpohjaa ja oksia maassa.",
             "must_avoid": [
-              "Another venue presented as Liikuntamylly",
-              "Unverified claim that the photo shows the October 2026 autumn holiday event"
+              "People or body parts",
+              "Invented readable signs",
+              "Current restriction site claim"
             ],
             "must_show": [
-              "Authentic Liikuntamylly sports hall",
-              "Children and adults playing a ball game"
+              "slender forest tree trunks",
+              "branches on forest floor"
             ],
             "rank": 2,
-            "safe_to_generate": false,
-            "search_queries": [
-              "Myllypuron Liikuntamylly pallopelit",
-              "Liikuntamylly perheliikunta",
-              "Liikuntamylly indoor ball games",
-              "Liikuntamylly lapset liikuntasali"
-            ],
-            "subject": "Pallopelejä Myllypuron Liikuntamyllyssä"
-          },
-          {
-            "depictable_scene": "Työpajapöydällä on värillisiä paperiarkkeja, muutamia leikattuja paperimuotoja ja värikyniä keskeneräisen paperityön vieressä.",
-            "must_avoid": [
-              "People, children, faces or body parts",
-              "Invented recognizable cultural centre interior",
-              "Fabricated readable text, logos or recognizable copyrighted characters"
-            ],
-            "must_show": [
-              "Colored paper craft in progress",
-              "Colored pencils on a workshop table"
-            ],
-            "rank": 3,
             "safe_to_generate": true,
             "search_queries": [
-              "taidetyöpaja paperi värikynät",
-              "paper craft table",
-              "colored paper art materials"
+              "young forest thinning",
+              "Finnish pine stand",
+              "metsän hoito harvennus"
             ],
-            "subject": "Kulttuurikeskusten taidetyöpajoja"
+            "subject": "Nuoren metsän hoito"
           }
         ],
         "version": "article-first-v1"
       },
-      "credit": "Photo by Austin on Unsplash",
-      "depicted": "The image shows a park scene during autumn, dominated by a large tree with bright yellow leaves in the foreground, partially obscuring the upper left and top of the frame. Its trunk is visible on the left side, with some fallen yellow leaves scattered around its base and across the grassy ground. In the middle ground, there is a swing set with multiple swings. Beyond the swing set, several cars are parked, and various buildings, including houses and what appears to be a larger institutional buil",
+      "credit": "Photo by MPorciusCato on Wikimedia Commons",
+      "depicted": "A dense forest of slender pine trees with green needles and brown trunks. The forest floor is covered with green moss, some dry grass, and scattered branches and twigs.",
       "generated": false,
-      "hotlink": true,
-      "license": "Unsplash License",
-      "license_url": "https://unsplash.com/license",
+      "hotlink": false,
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "local_path": "media/8136c5504900bb9090a8529b6d2c44112a4d2c97349aa2a3dd90d4671f289dda.jpg",
       "pixel_review": {
-        "alt_fi": "Suuri puu, jossa on kirkkaan keltaisia syyslehtiä, hallitsee etualaa, ja sen runko on vasemmalla. Keskellä näkyy keinuja nurmialueella, ja maa on peittynyt keltaisiin lehtiin.",
+        "alt_fi": "Tiheä metsä, jossa on ohuita mäntyjen runkoja, vihreitä neulasia ja ruskeaa kaarnaa. Metsän pohja on sammaleen ja oksien peitossa.",
         "approved": true,
-        "article_text_sha256": "6ef4f4cacb5037953268514b4b134be8ee06dec1351e84b9949d8c07d065f2f0",
-        "concept_sha256": "dd4be624b4d476a5e72df6ba0c747050af7901a4540a1d38e33db517b7b208e6",
-        "description": "A large tree with bright yellow autumn leaves dominates the foreground, with its trunk on the left. In the middle ground, a swing set with multiple swings is visible on a grassy area. The ground in the foreground is covered with fallen yellow leaves. In the background, there are buildings and parked cars.",
+        "article_text_sha256": "35d165e09fa625bbc9f3d32f9515cce1803cdd02b641f38fd9d21ecbe8891fff",
+        "concept_sha256": "4c0c8c380a81275507e74301e3d69ffeb4f080f8de2a7bdb4ef1fa7d8d138b1f",
+        "description": "A dense forest of slender pine trees with green needles and brown trunks. The forest floor is covered with green moss, some dry grass, and scattered branches and twigs.",
         "fit_score": 9,
-        "image_sha256": "a449f008673b5250e1007d5fdbba18c57e565d853bfa8cc708dd42bb76dcfd21",
+        "image_sha256": "8136c5504900bb9090a8529b6d2c44112a4d2c97349aa2a3dd90d4671f289dda",
         "model": "google:gemini-2.5-flash",
         "must_show_visible": [
           true,
           true
         ],
         "no_people": true,
-        "reason": "The image clearly depicts a swing set and autumn leaves on the ground, which directly matches the 'Playground swings and slide' and 'Autumn leaves on the ground' must-show elements. The article discusses autumn holiday activities in playgrounds, making the image highly relevant to the article's subject.",
-        "reviewed_at": "2026-10-06T13:54:41.564851+00:00",
-        "text_audit": {
-          "examples": [],
-          "readable_text_present": false
-        }
+        "reason": "The image clearly depicts a thinned forest with slender tree trunks and branches on the forest floor, which directly illustrates the concept of 'Nuoren metsän hoito' (young forest management) and specifically 'harvennettu metsikkö' (thinned forest stand) as described in the selected concept and is relevant to the article's topic of forest management support.",
+        "reviewed_at": "2026-10-06T14:00:07.138446+00:00",
+        "source_context": {
+          "image_sha256": "8136c5504900bb9090a8529b6d2c44112a4d2c97349aa2a3dd90d4671f289dda",
+          "license": "CC BY-SA 3.0",
+          "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+          "photo_id": "wikimedia-2957828",
+          "photo_url": "https://commons.wikimedia.org/wiki/File:A_young_stand_of_pine_after_the_first_thinning.jpg",
+          "photographer": "MPorciusCato",
+          "provider": "wikimedia",
+          "title": "A young stand of pine after the first thinning.jpg"
+        },
+        "source_context_sha256": "aba8cdf55f1dcb9c5a71ab1c5d7dd0d581087c75a0c3e16e9c4482f306ee452a"
       },
       "pixels": {
-        "height": 975,
+        "height": 1944,
         "mode": "RGB",
-        "variance": 10032.0,
-        "width": 1536
+        "variance": 6529.3,
+        "width": 2592
       },
       "relevance_check": {
         "accepted": true,
-        "evidence": "A large tree with bright yellow autumn leaves dominates the foreground, with its trunk on the left. In the middle ground, a swing set with multiple swings is visible on a grassy area. The ground in the foreground is covered with fallen yellow leaves. In the background, there are buildings and parked cars.",
-        "matched": [
-          "autumn",
-          "ground",
-          "leaves",
-          "swings"
-        ],
+        "evidence": "A dense forest of slender pine trees with green needles and brown trunks. The forest floor is covered with green moss, some dry grass, and scattered branches and twigs.",
+        "matched": [],
         "method": "vision",
-        "reason": "Exact-pixel full-article score meets the 8/10 threshold"
+        "reason": "The image clearly depicts a thinned forest with slender tree trunks and branches on the forest floor, which directly illustrates the concept of 'Nuoren metsän hoito' (young forest management) and specifically 'harvennettu metsikkö' (thinned forest stand) as described in the selected concept and is r"
       },
       "selection_evidence": {
-        "article_text_sha256": "6ef4f4cacb5037953268514b4b134be8ee06dec1351e84b9949d8c07d065f2f0",
-        "decision_sha256": "509f641b1a47607c01fbd8fae59dc06bb8ae8fddd87fc59e38e936511023de73",
+        "article_text_sha256": "35d165e09fa625bbc9f3d32f9515cce1803cdd02b641f38fd9d21ecbe8891fff",
+        "decision_sha256": "7e489509739487dab0f8f6c69853985223fd4127d3162cbf247960e6894f7388",
         "minimum_real_fit": 8,
         "searches": [
           {
             "candidates": [],
             "concept_rank": 1,
-            "outcome": "no_qualifying_candidate",
-            "provider": "source-news",
-            "queries": [
-              "cited source image"
-            ]
-          },
-          {
-            "candidates": [],
-            "concept_rank": 1,
-            "outcome": "no_qualifying_candidate",
+            "outcome": "unavailable",
             "provider": "wikimedia",
             "queries": [
-              "Helsinki leikkipuisto syksy",
-              "leikkipuisto keinut liukumäki",
-              "autumn playground swings"
-            ]
-          },
-          {
-            "candidates": [
-              {
-                "approved": false,
-                "fit_score": 4,
-                "image_sha256": "cc9623ef43a1d3049181dadc534b3e35e6f998cf5c86dc307264aa0bc20ff0de",
-                "license": "Pexels License",
-                "reason": "The image contains a child, which is explicitly listed in the 'must_avoid' criteria. Additionally, the 'must_show' elements of 'Playground swings and slide' are not present in the image. One or more required concept elements are not visible.",
-                "source_url": "https://www.pexels.com/photo/child-playing-with-autumn-leaves-in-sweden-34230223/"
-              }
-            ],
-            "concept_rank": 1,
-            "outcome": "no_qualifying_candidate",
-            "provider": "pexels",
-            "queries": [
-              "Helsinki leikkipuisto syksy",
-              "leikkipuisto keinut liukumäki",
-              "autumn playground swings"
+              "taimikko Finland"
             ]
           },
           {
@@ -2017,337 +1401,676 @@
               {
                 "approved": true,
                 "fit_score": 9,
-                "image_sha256": "a449f008673b5250e1007d5fdbba18c57e565d853bfa8cc708dd42bb76dcfd21",
-                "license": "Unsplash License",
-                "reason": "The image clearly depicts a swing set and autumn leaves on the ground, which directly matches the 'Playground swings and slide' and 'Autumn leaves on the ground' must-show elements. The article discusses autumn holiday activities in playgrounds, making the image highly relevant to the article's subject.",
-                "source_url": "https://unsplash.com/photos/autumn-park-with-colorful-trees-and-playground-swings-lklFkXEkZMg?utm_source=uutistenlukija&utm_medium=referral"
+                "image_sha256": "8136c5504900bb9090a8529b6d2c44112a4d2c97349aa2a3dd90d4671f289dda",
+                "license": "CC BY-SA 3.0",
+                "reason": "The image clearly depicts a thinned forest with slender tree trunks and branches on the forest floor, which directly illustrates the concept of 'Nuoren metsän hoito' (young forest management) and specifically 'harvennettu metsikkö' (thinned forest stand) as described in the selected concept and is relevant to the article's topic of forest management support.",
+                "source_url": "https://commons.wikimedia.org/wiki/File:A_young_stand_of_pine_after_the_first_thinning.jpg"
               }
             ],
-            "concept_rank": 1,
+            "concept_rank": 2,
             "outcome": "accepted",
-            "provider": "unsplash",
-            "queries": [
-              "Helsinki leikkipuisto syksy",
-              "leikkipuisto keinut liukumäki",
-              "autumn playground swings"
-            ]
-          },
-          {
-            "candidates": [],
-            "concept_rank": 2,
-            "outcome": "no_qualifying_candidate",
-            "provider": "source-news",
-            "queries": [
-              "cited source image"
-            ]
-          },
-          {
-            "candidates": [],
-            "concept_rank": 2,
-            "outcome": "no_qualifying_candidate",
             "provider": "wikimedia",
             "queries": [
-              "Myllypuron Liikuntamylly pallopelit",
-              "Liikuntamylly perheliikunta",
-              "Liikuntamylly indoor ball games"
-            ]
-          },
-          {
-            "candidates": [
-              {
-                "approved": false,
-                "fit_score": 0,
-                "image_sha256": "c445103a09bee7b8929d78e240384d075ab068712e52d4b9ec668e408b5eade0",
-                "license": "Pexels License",
-                "reason": "The image shows an outdoor game on a lawn, which does not match the concept of children and adults playing a ball game inside Myllypuron Liikuntamylly sports hall. The visible content does not depict a sports hall or people playing a ball game. One or more required concept elements are not visible.",
-                "source_url": "https://www.pexels.com/photo/wooden-toy-with-balls-12774924/"
-              },
-              {
-                "approved": false,
-                "fit_score": 4,
-                "image_sha256": "3f2ca10833e5237392b0927238c1facf0ec4dd9e7061db5def307b10273b0e43",
-                "license": "Pexels License",
-                "reason": "The article mentions Myllypuron Liikuntamylly as a venue for ball games and climbing for children and families. The selected concept specifically requires an authentic Myllypuron Liikuntamylly sports hall with children and adults playing a ball game. The image shows a man walking in what appears to be a sports hall or gym, but there are no children",
-                "source_url": "https://www.pexels.com/photo/man-entering-sports-hall-6339318/"
-              },
-              {
-                "approved": false,
-                "fit_score": 4,
-                "image_sha256": "c5892c6ddcb0d09c98a37aaa6025eda054e1b143ee1155f858c95cb7b2af7c42",
-                "license": "Pexels License",
-                "reason": "The article discusses various autumn holiday activities in Helsinki, including ball games and climbing at Myllypuron Liikuntamylly. The selected concept specifically requires an authentic photo of Myllypuron Liikuntamylly's sports hall with children and adults playing a ball game. The provided image shows two adults playing badminton outdoors in a ",
-                "source_url": "https://www.pexels.com/photo/couple-playing-badminton-on-grass-field-8795114/"
-              },
-              {
-                "approved": false,
-                "fit_score": 4,
-                "image_sha256": "224a9b6a6729a08efad32e930b55399a1f7002589debc15f8405d0cc548f1dc3",
-                "license": "Pexels License",
-                "reason": "The article mentions Myllypuron Liikuntamylly as a venue for ball games and climbing for children and families. The image shows adults stretching, which is a general fitness activity, not specifically ball games or climbing, and it does not clearly depict children. The venue is not identifiable as Myllypuron Liikuntamylly from the pixels alone. The",
-                "source_url": "https://www.pexels.com/photo/people-stretching-inside-the-room-6339348/"
-              }
-            ],
-            "concept_rank": 2,
-            "outcome": "no_qualifying_candidate",
-            "provider": "pexels",
-            "queries": [
-              "Myllypuron Liikuntamylly pallopelit",
-              "Liikuntamylly perheliikunta",
-              "Liikuntamylly indoor ball games"
-            ]
-          },
-          {
-            "candidates": [],
-            "concept_rank": 2,
-            "outcome": "no_qualifying_candidate",
-            "provider": "unsplash",
-            "queries": [
-              "Myllypuron Liikuntamylly pallopelit",
-              "Liikuntamylly perheliikunta",
-              "Liikuntamylly indoor ball games"
-            ]
-          },
-          {
-            "candidates": [],
-            "concept_rank": 2,
-            "outcome": "no_qualifying_candidate",
-            "provider": "google",
-            "queries": [
-              "Myllypuron Liikuntamylly pallopelit",
-              "Liikuntamylly perheliikunta",
-              "Liikuntamylly indoor ball games"
-            ]
-          },
-          {
-            "candidates": [],
-            "concept_rank": 3,
-            "outcome": "no_qualifying_candidate",
-            "provider": "source-news",
-            "queries": [
-              "cited source image"
-            ]
-          },
-          {
-            "candidates": [
-              {
-                "approved": false,
-                "fit_score": 0,
-                "image_sha256": "abe1c3a39ea02f508b23d9e7714ea9f6d8605da00f30b7c5863df357649db665",
-                "license": "CC BY-SA 4.0",
-                "reason": "The image shows a concrete pot, which is unrelated to the article about autumn holiday activities for children and youth in Helsinki. It does not depict colored paper craft in progress or colored pencils on a workshop table, which are the required elements for the selected concept of art workshops. One or more required concept elements are not visi",
-                "source_url": "https://commons.wikimedia.org/wiki/File:Part%20of%20a%20hand%20made%20paper%20table%20by%20Bangalee%20Woman.jpg"
-              },
-              {
-                "approved": false,
-                "fit_score": 3,
-                "image_sha256": "658cfca83f7c9c2ac9e49910367e10f1e5e03e39caeeb7db3be258a42f786639",
-                "license": "CC0",
-                "reason": "The article discusses art workshops involving paper crafts and other activities for children and youth. The selected concept specifies 'Colored paper craft in progress' and 'Colored pencils on a workshop table'. The image shows an illuminated lamp with a shade made of folded material, which could be paper, but it is a finished product, not a craft ",
-                "source_url": "https://commons.wikimedia.org/wiki/File:Dragontail%20Table%20Lamp.jpg"
-              },
-              {
-                "approved": false,
-                "fit_score": 6,
-                "image_sha256": "43cf7c4a94e810e7fb06fd511aa706b51dee031b35f293d3f1084ce038f4410c",
-                "license": "CC BY-SA 4.0",
-                "reason": "The image shows finished paper crafts, not paper craft in progress with materials like colored paper sheets and pencils on a workshop table as specified in the concept. The visible subject does not match the selected concept's requirements. One or more required concept elements are not visible.",
-                "source_url": "https://commons.wikimedia.org/wiki/File:Crepe%20paper%20table%20flower.jpg"
-              },
-              {
-                "approved": false,
-                "fit_score": 0,
-                "image_sha256": "561c53029f0e5bdd4052659eb9a01ad16d9b72d59a5b25a8e70928d03a3b2e78",
-                "license": "CC BY-SA 4.0",
-                "reason": "The article discusses art workshops involving paper crafts and colored pencils. The selected concept describes colored paper craft in progress and colored pencils on a workshop table. The image is an abstract painting and does not visibly depict any paper craft, colored pencils, or a workshop table. Therefore, it does not meet the 'must_show' requi",
-                "source_url": "https://commons.wikimedia.org/wiki/File:Colored%20paper%20in%20a%20cardboard%20box%20painting%20by%20Christopher%20Willard.png"
-              }
-            ],
-            "concept_rank": 3,
-            "outcome": "unavailable",
-            "provider": "wikimedia",
-            "queries": [
-              "taidetyöpaja paperi värikynät",
-              "paper craft table",
-              "colored paper art materials"
-            ]
-          },
-          {
-            "candidates": [
-              {
-                "approved": false,
-                "fit_score": 6,
-                "image_sha256": "f78b6d757b78dde5b21faa836a7a65c06b2b99d5db687e89841f2f8bdfceaccd",
-                "license": "Pexels License",
-                "reason": "The image shows colored pencils and colored paper, which are materials for paper crafts. However, the concept requires 'colored paper craft in progress' and 'colored pencils on a workshop table'. The image does not show any craft in progress, nor is there any indication of a workshop table; the papers are merely a background. Therefore, it fails to",
-                "source_url": "https://www.pexels.com/photo/colorful-pencils-on-vibrant-paper-background-38957007/"
-              },
-              {
-                "approved": false,
-                "fit_score": 6,
-                "image_sha256": "de09fd1f6dbcba8c38b14d69577093bdee5970d3effa00292c365b1ef09ea420",
-                "license": "Pexels License",
-                "reason": "The image shows colored pencils and colored paper, which are materials for paper crafts. However, the concept requires 'Colored paper craft in progress' and 'Colored pencils on a workshop table'. The image does not show any craft in progress, only plain paper strips, and the setting is not visibly a workshop table. Therefore, it fails to meet the '",
-                "source_url": "https://www.pexels.com/photo/colorful-pencils-on-vibrant-paper-background-38957008/"
-              },
-              {
-                "approved": false,
-                "fit_score": 6,
-                "image_sha256": "e4239f4ed5d1be413c390cd4285e7cb9a12356f330ce300c39e749eb49e4eeb8",
-                "license": "Pexels License",
-                "reason": "The image shows colored pencils and a hand drawing on paper, which relates to art workshops. However, the concept requires 'Colored paper craft in progress' and 'Colored pencils on a workshop table'. The image does not show colored paper craft in progress, nor is it clearly on a workshop table. The hand is also a 'body part' which is in the must_av",
-                "source_url": "https://www.pexels.com/photo/person-holding-green-and-red-coloring-pencils-8014277/"
-              },
-              {
-                "approved": false,
-                "fit_score": 6,
-                "image_sha256": "c526ddf6d6c07cf86f78dfd498e2009fa36006d5df3c259f427f3a066fb1a603",
-                "license": "Pexels License",
-                "reason": "The image shows colored pencils and some paper, which broadly relates to art activities. However, it does not clearly depict 'colored paper craft in progress' as required by the concept. There are no distinct cut paper shapes or an obvious craft project underway. The visible text 'PRESS' and the 'PAPER BIRD' logo also introduce elements that are no",
-                "source_url": "https://www.pexels.com/photo/close-up-of-colored-pencils-and-paper-5865567/"
-              }
-            ],
-            "concept_rank": 3,
-            "outcome": "no_qualifying_candidate",
-            "provider": "pexels",
-            "queries": [
-              "taidetyöpaja paperi värikynät",
-              "paper craft table",
-              "colored paper art materials"
-            ]
-          },
-          {
-            "candidates": [
-              {
-                "approved": false,
-                "fit_score": 6,
-                "image_sha256": "eb74dd329675cee71c1aeba8b47f397a72d6df0e0e2bdcccf3c53466d9b3d343",
-                "license": "Unsplash License",
-                "reason": "The image shows colored paper and colored pens, which are materials for paper crafts. However, the selected concept specifically requires 'Colored paper craft in progress' and 'Colored pencils on a workshop table'. The image does not show any craft in progress, nor does it show colored pencils; instead, it shows marker pens. Therefore, it does not ",
-                "source_url": "https://unsplash.com/photos/a-bunch-of-different-colored-paper-and-pens-Q6q-2YT0J7Y?utm_source=uutistenlukija&utm_medium=referral"
-              },
-              {
-                "approved": false,
-                "fit_score": 4,
-                "image_sha256": "d2b12159c088c16cbf3e1cd436b1ff0a5d532cfeff5cab386224f30e2153d317",
-                "license": "Unsplash License",
-                "reason": "The image shows crumpled paper and a notebook, which could broadly relate to writing or creative activities. However, the selected concept specifically requires 'Colored paper craft in progress' and 'Colored pencils on a workshop table'. The visible paper is plain white and crumpled, not colored craft paper, and there are no colored pencils or any ",
-                "source_url": "https://unsplash.com/photos/white-paper-on-brown-wooden-table-lPX6-ee-1zU?utm_source=uutistenlukija&utm_medium=referral"
-              },
-              {
-                "approved": false,
-                "fit_score": 0,
-                "image_sha256": "155786f1e4b465f0ad03d3571ec2412e6cd602bafa197e60aba40afee15dd221",
-                "license": "Unsplash License",
-                "reason": "The image shows crumpled white paper, which does not match the concept of 'Colored paper craft in progress' or 'Colored pencils on a workshop table'. There are no colored papers, craft in progress, or colored pencils visible. One or more required concept elements are not visible.",
-                "source_url": "https://unsplash.com/photos/white-paper-on-white-floor-tiles-SPuHHjbSso8?utm_source=uutistenlukija&utm_medium=referral"
-              },
-              {
-                "approved": false,
-                "fit_score": 7,
-                "image_sha256": "4d43a2115932eaf4baff2b3c42600b6e3f0e199a47f661653e3a8d8ce425a2f6",
-                "license": "Unsplash License",
-                "reason": "The image directly depicts a child engaged in a paper craft activity with colored pencils and other materials on a table, which aligns perfectly with the 'Colored paper craft in progress' and 'Colored pencils on a workshop table' must-show elements, illustrating the concept of art workshops mentioned in the article. Readable text is visible in the ",
-                "source_url": "https://unsplash.com/photos/child-drawing-on-paper-at-table-TJxotQTUr8o?utm_source=uutistenlukija&utm_medium=referral"
-              }
-            ],
-            "concept_rank": 3,
-            "outcome": "no_qualifying_candidate",
-            "provider": "unsplash",
-            "queries": [
-              "taidetyöpaja paperi värikynät",
-              "paper craft table",
-              "colored paper art materials"
-            ]
-          },
-          {
-            "candidates": [],
-            "concept_rank": 3,
-            "outcome": "no_qualifying_candidate",
-            "provider": "google",
-            "queries": [
-              "taidetyöpaja paperi värikynät",
-              "paper craft table",
-              "colored paper art materials"
+              "young forest thinning"
             ]
           }
         ],
         "selected": {
-          "concept_rank": 1,
+          "concept_rank": 2,
           "fit_score": 9,
-          "image_sha256": "a449f008673b5250e1007d5fdbba18c57e565d853bfa8cc708dd42bb76dcfd21",
+          "image_sha256": "8136c5504900bb9090a8529b6d2c44112a4d2c97349aa2a3dd90d4671f289dda",
           "kind": "real"
         },
         "version": "article-first-v1"
       },
-      "source_url": "https://unsplash.com/photos/autumn-park-with-colorful-trees-and-playground-swings-lklFkXEkZMg?utm_source=uutistenlukija&utm_medium=referral",
+      "sha256": "8136c5504900bb9090a8529b6d2c44112a4d2c97349aa2a3dd90d4671f289dda",
+      "source_url": "https://commons.wikimedia.org/wiki/File:A_young_stand_of_pine_after_the_first_thinning.jpg",
       "stock_provenance": {
-        "download_tracking": {
-          "successful": true,
-          "url": "https://api.unsplash.com/photos/lklFkXEkZMg/download?ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwzfHxhdXR1bW4lMjBwbGF5Z3JvdW5kJTIwc3dpbmdzfGVufDB8MHx8fDE3OTEyOTQ4NzV8MA"
+        "attribution": {
+          "changes": "Tallennettu JPEG-muodossa; kuvan sisältöä ei muokattu.",
+          "title": "A young stand of pine after the first thinning.jpg"
         },
-        "image_url": "https://images.unsplash.com/photo-1742094212061-c7b14a9f0587?ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwzfHxhdXR1bW4lMjBwbGF5Z3JvdW5kJTIwc3dpbmdzfGVufDB8MHx8fDE3OTEyOTQ4NzV8MA&w=1536&q=80&fm=jpg&fit=crop",
-        "photo_id": "lklFkXEkZMg",
-        "photo_url": "https://unsplash.com/photos/autumn-park-with-colorful-trees-and-playground-swings-lklFkXEkZMg?utm_source=uutistenlukija&utm_medium=referral",
-        "photographer": "Austin",
-        "photographer_url": "https://unsplash.com/@austin_7792?utm_source=uutistenlukija&utm_medium=referral",
-        "provider": "unsplash",
-        "query": "autumn playground swings",
-        "retrieved_at": "2026-10-06T13:54:38Z"
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/61/A_young_stand_of_pine_after_the_first_thinning.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "photo_id": "wikimedia-2957828",
+        "photo_url": "https://commons.wikimedia.org/wiki/File:A_young_stand_of_pine_after_the_first_thinning.jpg",
+        "photographer": "MPorciusCato",
+        "photographer_url": "https://commons.wikimedia.org/wiki/File:A_young_stand_of_pine_after_the_first_thinning.jpg",
+        "provider": "wikimedia",
+        "query": "young forest thinning",
+        "retrieved_at": "2026-10-06T14:00:07Z"
       },
-      "stock_provenance_sha256": "2894e02f7ed21627f8a347046d12d323b514752afe013c42f928eb1ee09bbddb",
-      "url": "https://images.unsplash.com/photo-1742094212061-c7b14a9f0587?ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwzfHxhdXR1bW4lMjBwbGF5Z3JvdW5kJTIwc3dpbmdzfGVufDB8MHx8fDE3OTEyOTQ4NzV8MA&w=1536&q=80&fm=jpg&fit=crop"
+      "stock_provenance_sha256": "89c9189b6dd6bc78665930bebe08241e626f9ee8751e08c978bf38b6f79e2484",
+      "url": "https://uutistenlukija.fi/media/8136c5504900bb9090a8529b6d2c44112a4d2c97349aa2a3dd90d4671f289dda.jpg"
     },
     "paragraphs": [
       {
         "source_ids": [
           "A"
         ],
-        "text": "Leikkipuistot ovat kaupungin mukaan syyslomaviikolla avoinna maanantaista perjantaihin kello 9–16. Maksutonta ohjattua tekemistä järjestetään koululaisille, leikki-ikäisille ja vauvoille. Sisätiloissa voi lämmittää omia eväitä, ja puistokohtaiset ohjelmat löytyvät niiden verkkosivuilta."
+        "text": "Maa- ja metsätalousministeriön mukaan pidennetty hakuaika koskee tilanteita, joissa viranomaisen määräämä alueellinen toimintakielto estää taimikon tai nuoren metsän hoitotyön valmistumisen määräajassa. Tällainen kielto voi liittyä esimerkiksi afrikkalaisen sikaruton torjuntaan."
       },
       {
         "source_ids": [
           "A"
         ],
-        "text": "Nuorisotalojen ohjelmaan kuuluu kaupungin mukaan työpajoja, peli- ja elokuvailtoja sekä retkiä. Vapaamuotoiseen yhdessäoloon voi tulla ilman ennakkoilmoittautumista, mutta nuorisotalojen toimintaan osallistuminen edellyttää huoltajan lapselle rekisteröimää Jässäri-jäsenkorttia. Rekisteröinti tehdään osoitteessa nuorten.hel.fi/jassari."
+        "text": "Ministeriön tiedotteen mukaan asetusmuutos tulee voimaan 7. lokakuuta 2026. Uusia määräaikoja sovelletaan hakemuksiin, jotka saapuvat Suomen metsäkeskukseen asetuksen voimaantulon jälkeen."
       },
       {
         "source_ids": [
           "A"
         ],
-        "text": "Myllypuron Liikuntamyllyssä järjestetään kaupungin mukaan alakouluikäisille ja heidän perheilleen lajikokeiluja 12.–14. lokakuuta kello 11–14. Ohjelmassa on muun muassa pallopelejä ja kiipeilyä, ja useat aktiviteetit sopivat myös toimintarajoitteisille lapsille. Lasten pääsymaksu on 2,10 euroa ja aikuisten 3,60 euroa."
+        "text": "Tavanomaisissa tilanteissa määräajat pysyvät ministeriön mukaan ennallaan: tukea on haettava viimeistään kuuden kuukauden kuluessa töiden aloittamisesta ja kahden kuukauden kuluessa niiden valmistumisesta."
       },
       {
         "source_ids": [
           "A"
         ],
-        "text": "Nuorille kaupunki tarjoaa myös maksuttomia liikuntatunteja ilman ilmoittautumista. Vimma-tunnit on tarkoitettu 12–16-vuotiaille ja Puhti-tunnit 16–22-vuotiaille. Syysloman ajantasaiset tuntitiedot on kaupungin mukaan tarkistettava palvelujen viikkokalentereista."
-      },
-      {
-        "source_ids": [
-          "A"
-        ],
-        "text": "Kirjastoissa on kaupungin mukaan esimerkiksi lukutapahtumia, lukukoiratoimintaa sekä sarjakuva- ja kirjoittamisharrastuksiin liittyvää ohjelmaa. Tapahtumatiedot löytyvät osoitteesta helmet.fi/tapahtumat. Kaupunginmuseon Lasten kaupunkiin ja Ratikkamuseoon on vapaa pääsy, ja ne tarjoavat tekemistä syysloman jokaisena päivänä."
-      },
-      {
-        "source_ids": [
-          "A"
-        ],
-        "text": "Kulttuurikeskusten maksuttomaan tarjontaan kuuluu kaupungin mukaan Kanneltalon taidetyöpajoja 12. ja 14. lokakuuta sekä Vuotalon sarjakuva- ja mangatyöpajoja maanantaista perjantaihin ilman ennakkoilmoittautumista. Malmitalossa järjestetään 16. lokakuuta maksuton, risteilyteemainen tapahtuma 13–17-vuotiaille."
+        "text": "Ministeriö kertoo, että poikkeustilanteiden hakuaika pidennettiin yhdeksään kuukauteen syyskuussa järjestetyn lausuntokierroksen palautteen perusteella. Muutoksen tavoitteena on turvata tuen hakumahdollisuus myös metsänomistajille, joiden työt viivästyvät viranomaispäätöksen vuoksi."
       }
     ],
-    "summary": "Helsingin kaupungin mukaan syyslomalla on tarjolla maksutonta ohjelmaa leikkipuistoissa, nuorisotaloissa ja kulttuurikeskuksissa. Osa toiminnasta edellyttää jäsenkorttia, ja Liikuntamyllyn perhetapahtuma on maksullinen.",
-    "title": "Helsinki tarjoaa syyslomatekemistä lapsille ja nuorille"
+    "summary": "Maa- ja metsätalousministeriön mukaan viranomaisen toimintakiellon viivästyttämään taimikon ja nuoren metsän hoitoon voi hakea tukea yhdeksän kuukauden kuluessa rajoitusten päättymisestä. Muutos tulee voimaan 7. lokakuuta, eikä se muuta tavanomaisia hakuaikoja.",
+    "title": "Metsänhoidon tuen hakuaika pitenee rajoitustilanteissa"
   },
   "review": {
     "approved": true,
-    "draft_sha256": "04a6d43f22f178d87455c2b70d088db298c6d8e92cae793efdc2b63a4e145ac1",
+    "archive_image_only": {
+      "article_text_unchanged": true,
+      "operation": "image_only_archive_correction",
+      "original_draft_sha256": "0928e036f09656171fa52c63eb191d7e9a9ea3b7916a01665fe3fd4d73ec0791",
+      "original_published_at": "2026-10-06T10:06:58.802902+00:00",
+      "original_review_sha256": "326d70a62ae76ee320b32bf4f596770321b434ab74f75ddb2f73500eb40f4515",
+      "unchanged_text_sha256": "b69050b60cb050339c3d0e56d195bc9746b8b7706e0692257f0bed971fb1803c"
+    },
+    "draft_sha256": "a2546730d0f4e31dd5f9b2663cae5b98669ed1bba3d43681b755b1e8314cf9b5",
+    "historical_text_observations": [],
     "reasons": [
-      "Otsikko on 55 merkkiä eli alle 60 merkin tavoitteen. Helsinki ja syyslomatarjonta ovat alussa. Lähde A tukee otsikkoa ja ingressin erottelua maksuttomaan ohjelmaan, jäsenkorttia edellyttävään nuorisotalotoimintaan ja maksulliseen Liikuntamyllyn tapahtumaan.",
-      "Lähde A tukee ensimmäisen kappaleen aukioloa maanantaista perjantaihin kello 9–16, maksuttoman ohjatun toiminnan kohderyhmiä ja eväiden lämmittämistä. Se tukee myös toisen kappaleen työpajoja, peli- ja elokuvailtoja, retkiä, ilmoittautumatonta yhdessäoloa sekä huoltajan rekisteröimää Jässäri-korttia ja annettua verkko-osoitetta.",
-      "Lähde A vahvistaa kolmannen kappaleen Liikuntamyllyn tapahtuma-ajaksi 12.–14.10. kello 11–14, kohderyhmäksi alakouluikäiset perheineen ja hinnoiksi lapsilta 2,10 euroa ja aikuisilta 3,60 euroa. Pallopelit, kiipeily ja useiden aktiviteettien soveltuvuus toimintarajoitteisille lapsille vastaavat lähdettä. Neljännen kappaleen maksuttomuus, ilmoittautumattomuus sekä Vimman 12–16 ja Puhdin 16–22 vuoden ikärajat ovat samoin lähteessä A.",
-      "Lähde A tukee viidennen kappaleen kirjasto-ohjelmaa, helmet.fi/tapahtumat-osoitetta sekä Lasten kaupungin ja Ratikkamuseon maksuttomuutta ja tekemistä jokaisena syyslomapäivänä. Kuudennen kappaleen Kanneltalon päivät 12. ja 14.10., Vuotalon maksuttomat työpajat maanantaista perjantaihin ilman ennakkoilmoittautumista sekä Malmitalon maksuton risteilyteemainen tapahtuma 16.10. 13–17-vuotiaille vastaavat lähdettä A.",
-      "Kaikkien kappaleiden source_ids-merkintä A on asianmukainen. Kaupungin 5.10.2026 julkaisema tiedote on arviointihetkellä 6.10.2026 ajankohtainen ja riittävä tämän paikallisen palvelu-uutisen lähteeksi. Teksti erottaa kaupungin ilmoittamat tiedot riippumattomasta varmennuksesta, pysyy Helsingissä eikä lisää syy-seurausväitteitä tai valtakunnallisia yleistyksiä. Kotimaa-luokitus sopii aiheeseen. Suomenkielinen tiivistelmä on neutraali ja itsenäisesti muotoiltu; RIGHTS-asiakirja tukee tekstin uudelleenkäyttöä, ei uutisväitteitä eikä tämän kuvan oikeuksia.",
-      "Luonnoksen koko kuvatietue vastaa lähdepaketin kuvatietuetta. Kolme järjestettyä kuvakonseptia ja haut jokaiselle on dokumentoitu. Valitun Unsplash-valokuvan yksilöity kuvatunniste, kuvaajasivu, alkuperä- ja lataustiedot sekä Unsplash License muodostavat käyttöoikeusnäytön pelkkää lisenssimainintaa laajemmin. Pikseliarvion kirjattu koko artikkelin sopivuus on 9/10. Kuvauksen konkreettiset keinut ja pudonneet syyslehdet liittyvät suoraan jutun syysloman leikkipuistotoimintaan, eivät vain yleiseen paikkakategoriaan. Liukumäen puuttuminen ei yksin estä hyväksyntää, vaikka pikseliarvion perustelu liioittelee tämän sommitteluelementin toteutumista. Tietueen mukaan kuvassa ei ole ihmisiä tai luettavaa tekstiä. Arkistokuvamerkintä ja Austin-kuvaajakrediitti eivät väitä kuvaa Helsingissä tai vuoden 2026 tapahtumassa otetuksi. Kuvauspäivää ei ole annettu, eikä teksti perustu sen ajankohtaan."
+      "Täsmällisen kuvan SHA-256 on 8136c5504900bb9090a8529b6d2c44112a4d2c97349aa2a3dd90d4671f289dda. Sama tunniste on kuvatietueessa, riippumattomassa pixel_review-arviossa ja valintatodisteessa. Pixel_review on sidottu artikkelitekstin tunnisteeseen 35d165e09fa625bbc9f3d32f9515cce1803cdd02b641f38fd9d21ecbe8891fff, ja sen osuvuuspiste on 9/10.",
+      "Kaksi järjestettyä konseptia kuvaavat artikkelin konkreettisia aiheita. Valitun nuoren metsän hoito -konseptin molemmat olennaiset elementit, hoikat puunrungot ja metsäpohjan oksat, on riippumattomassa pikseliarviossa todettu näkyviksi. Harvennettua nuorta metsikköä esittävä kuva liittyy suoraan koko artikkelin ja lähdekatkelman käsittelemään hoitotyöhön eikä vain talouskategoriaan. Kuvassa ei arvion mukaan ole ihmisiä, eikä kuvateksti väitä sen esittävän toimintakieltoaluetta tai uutisen tapahtumapaikkaa.",
+      "Alt-teksti vastaa pikseliarvion kuvausta männyistä, sammaleesta ja oksista. Arkistokuvamerkintä ja tapahtumapaikkaa koskeva rajaus ovat asianmukaiset. Kyseessä on todellinen valokuva, joten AI-kuvan ilmoituksia ei tarvita.",
+      "Kuvakohtainen provenienssi yksilöi Wikimedia Commonsin tiedostosivun, alkuperäisen kuvatiedoston ja kuvaajan MPorciusCato. CC BY-SA 3.0 -lisenssi ja sen URL ovat yhtenevät kuvatietueessa, provenienssissa ja pikseliarvion lähdekontekstissa. Krediitti nimeää kuvaajan ja lähteen, ja tallennusmuutos on ilmoitettu. Oikeusperusta on sidottu tähän kuvaan, ei artikkelin tekstilähteen käyttöehtoihin. Hyväksyntä koskee vain tätä uutta kuvatietuetta muuttumattoman, 6.10.2026 julkaistun arkistoartikkelin yhteydessä."
     ]
-  }
+  },
+  "image_backfill": [
+    {
+      "article_file": "uutiset/metsanhoidon-tuen-hakuaika-pitenee-rajoitustilanteissa-4ccf0693154e/index.html",
+      "draft": {
+        "category": "Talous",
+        "image": {
+          "alt": "Arkistokuva: Tiheä metsä, jossa on ohuita mäntyjen runkoja, vihreitä neulasia ja ruskeaa kaarnaa. Metsän pohja on sammaleen ja oksien peitossa.",
+          "caption": "Arkistokuva artikkelin aiheesta. Kuva ei esitä uutisen tapahtumapaikkaa.",
+          "classifier_output": {
+            "category": "Talous",
+            "concepts": [
+              {
+                "depictable_scene": "Taimikko, jossa on pieniä puita ja niiden välissä näkyvää metsäpohjaa.",
+                "must_avoid": [
+                  "People or body parts",
+                  "Invented readable signs",
+                  "Current restriction site claim"
+                ],
+                "must_show": [
+                  "small tree seedlings",
+                  "forest floor"
+                ],
+                "rank": 1,
+                "safe_to_generate": true,
+                "search_queries": [
+                  "Finnish tree seedlings",
+                  "taimikon hoito metsä",
+                  "young planted forest"
+                ],
+                "subject": "Taimikon hoito"
+              },
+              {
+                "depictable_scene": "Nuoren metsän hoidon aiheeseen liittyvä harvennettu metsikkö: hoikkia puiden runkoja, sammaleista metsäpohjaa ja oksia maassa.",
+                "must_avoid": [
+                  "People or body parts",
+                  "Invented readable signs",
+                  "Current restriction site claim"
+                ],
+                "must_show": [
+                  "slender forest tree trunks",
+                  "branches on forest floor"
+                ],
+                "rank": 2,
+                "safe_to_generate": true,
+                "search_queries": [
+                  "young forest thinning",
+                  "Finnish pine stand",
+                  "metsän hoito harvennus"
+                ],
+                "subject": "Nuoren metsän hoito"
+              }
+            ],
+            "version": "article-first-v1"
+          },
+          "credit": "Photo by MPorciusCato on Wikimedia Commons",
+          "depicted": "A dense forest of slender pine trees with green needles and brown trunks. The forest floor is covered with green moss, some dry grass, and scattered branches and twigs.",
+          "generated": false,
+          "hotlink": false,
+          "license": "CC BY-SA 3.0",
+          "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+          "local_path": "media/8136c5504900bb9090a8529b6d2c44112a4d2c97349aa2a3dd90d4671f289dda.jpg",
+          "pixel_review": {
+            "alt_fi": "Tiheä metsä, jossa on ohuita mäntyjen runkoja, vihreitä neulasia ja ruskeaa kaarnaa. Metsän pohja on sammaleen ja oksien peitossa.",
+            "approved": true,
+            "article_text_sha256": "35d165e09fa625bbc9f3d32f9515cce1803cdd02b641f38fd9d21ecbe8891fff",
+            "concept_sha256": "4c0c8c380a81275507e74301e3d69ffeb4f080f8de2a7bdb4ef1fa7d8d138b1f",
+            "description": "A dense forest of slender pine trees with green needles and brown trunks. The forest floor is covered with green moss, some dry grass, and scattered branches and twigs.",
+            "fit_score": 9,
+            "image_sha256": "8136c5504900bb9090a8529b6d2c44112a4d2c97349aa2a3dd90d4671f289dda",
+            "model": "google:gemini-2.5-flash",
+            "must_show_visible": [
+              true,
+              true
+            ],
+            "no_people": true,
+            "reason": "The image clearly depicts a thinned forest with slender tree trunks and branches on the forest floor, which directly illustrates the concept of 'Nuoren metsän hoito' (young forest management) and specifically 'harvennettu metsikkö' (thinned forest stand) as described in the selected concept and is relevant to the article's topic of forest management support.",
+            "reviewed_at": "2026-10-06T14:00:07.138446+00:00",
+            "source_context": {
+              "image_sha256": "8136c5504900bb9090a8529b6d2c44112a4d2c97349aa2a3dd90d4671f289dda",
+              "license": "CC BY-SA 3.0",
+              "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+              "photo_id": "wikimedia-2957828",
+              "photo_url": "https://commons.wikimedia.org/wiki/File:A_young_stand_of_pine_after_the_first_thinning.jpg",
+              "photographer": "MPorciusCato",
+              "provider": "wikimedia",
+              "title": "A young stand of pine after the first thinning.jpg"
+            },
+            "source_context_sha256": "aba8cdf55f1dcb9c5a71ab1c5d7dd0d581087c75a0c3e16e9c4482f306ee452a"
+          },
+          "pixels": {
+            "height": 1944,
+            "mode": "RGB",
+            "variance": 6529.3,
+            "width": 2592
+          },
+          "relevance_check": {
+            "accepted": true,
+            "evidence": "A dense forest of slender pine trees with green needles and brown trunks. The forest floor is covered with green moss, some dry grass, and scattered branches and twigs.",
+            "matched": [],
+            "method": "vision",
+            "reason": "The image clearly depicts a thinned forest with slender tree trunks and branches on the forest floor, which directly illustrates the concept of 'Nuoren metsän hoito' (young forest management) and specifically 'harvennettu metsikkö' (thinned forest stand) as described in the selected concept and is r"
+          },
+          "selection_evidence": {
+            "article_text_sha256": "35d165e09fa625bbc9f3d32f9515cce1803cdd02b641f38fd9d21ecbe8891fff",
+            "decision_sha256": "7e489509739487dab0f8f6c69853985223fd4127d3162cbf247960e6894f7388",
+            "minimum_real_fit": 8,
+            "searches": [
+              {
+                "candidates": [],
+                "concept_rank": 1,
+                "outcome": "unavailable",
+                "provider": "wikimedia",
+                "queries": [
+                  "taimikko Finland"
+                ]
+              },
+              {
+                "candidates": [
+                  {
+                    "approved": true,
+                    "fit_score": 9,
+                    "image_sha256": "8136c5504900bb9090a8529b6d2c44112a4d2c97349aa2a3dd90d4671f289dda",
+                    "license": "CC BY-SA 3.0",
+                    "reason": "The image clearly depicts a thinned forest with slender tree trunks and branches on the forest floor, which directly illustrates the concept of 'Nuoren metsän hoito' (young forest management) and specifically 'harvennettu metsikkö' (thinned forest stand) as described in the selected concept and is relevant to the article's topic of forest management support.",
+                    "source_url": "https://commons.wikimedia.org/wiki/File:A_young_stand_of_pine_after_the_first_thinning.jpg"
+                  }
+                ],
+                "concept_rank": 2,
+                "outcome": "accepted",
+                "provider": "wikimedia",
+                "queries": [
+                  "young forest thinning"
+                ]
+              }
+            ],
+            "selected": {
+              "concept_rank": 2,
+              "fit_score": 9,
+              "image_sha256": "8136c5504900bb9090a8529b6d2c44112a4d2c97349aa2a3dd90d4671f289dda",
+              "kind": "real"
+            },
+            "version": "article-first-v1"
+          },
+          "sha256": "8136c5504900bb9090a8529b6d2c44112a4d2c97349aa2a3dd90d4671f289dda",
+          "source_url": "https://commons.wikimedia.org/wiki/File:A_young_stand_of_pine_after_the_first_thinning.jpg",
+          "stock_provenance": {
+            "attribution": {
+              "changes": "Tallennettu JPEG-muodossa; kuvan sisältöä ei muokattu.",
+              "title": "A young stand of pine after the first thinning.jpg"
+            },
+            "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/61/A_young_stand_of_pine_after_the_first_thinning.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "license": "CC BY-SA 3.0",
+            "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+            "photo_id": "wikimedia-2957828",
+            "photo_url": "https://commons.wikimedia.org/wiki/File:A_young_stand_of_pine_after_the_first_thinning.jpg",
+            "photographer": "MPorciusCato",
+            "photographer_url": "https://commons.wikimedia.org/wiki/File:A_young_stand_of_pine_after_the_first_thinning.jpg",
+            "provider": "wikimedia",
+            "query": "young forest thinning",
+            "retrieved_at": "2026-10-06T14:00:07Z"
+          },
+          "stock_provenance_sha256": "89c9189b6dd6bc78665930bebe08241e626f9ee8751e08c978bf38b6f79e2484",
+          "url": "https://uutistenlukija.fi/media/8136c5504900bb9090a8529b6d2c44112a4d2c97349aa2a3dd90d4671f289dda.jpg"
+        },
+        "paragraphs": [
+          {
+            "source_ids": [
+              "A"
+            ],
+            "text": "Maa- ja metsätalousministeriön mukaan pidennetty hakuaika koskee tilanteita, joissa viranomaisen määräämä alueellinen toimintakielto estää taimikon tai nuoren metsän hoitotyön valmistumisen määräajassa. Tällainen kielto voi liittyä esimerkiksi afrikkalaisen sikaruton torjuntaan."
+          },
+          {
+            "source_ids": [
+              "A"
+            ],
+            "text": "Ministeriön tiedotteen mukaan asetusmuutos tulee voimaan 7. lokakuuta 2026. Uusia määräaikoja sovelletaan hakemuksiin, jotka saapuvat Suomen metsäkeskukseen asetuksen voimaantulon jälkeen."
+          },
+          {
+            "source_ids": [
+              "A"
+            ],
+            "text": "Tavanomaisissa tilanteissa määräajat pysyvät ministeriön mukaan ennallaan: tukea on haettava viimeistään kuuden kuukauden kuluessa töiden aloittamisesta ja kahden kuukauden kuluessa niiden valmistumisesta."
+          },
+          {
+            "source_ids": [
+              "A"
+            ],
+            "text": "Ministeriö kertoo, että poikkeustilanteiden hakuaika pidennettiin yhdeksään kuukauteen syyskuussa järjestetyn lausuntokierroksen palautteen perusteella. Muutoksen tavoitteena on turvata tuen hakumahdollisuus myös metsänomistajille, joiden työt viivästyvät viranomaispäätöksen vuoksi."
+          }
+        ],
+        "summary": "Maa- ja metsätalousministeriön mukaan viranomaisen toimintakiellon viivästyttämään taimikon ja nuoren metsän hoitoon voi hakea tukea yhdeksän kuukauden kuluessa rajoitusten päättymisestä. Muutos tulee voimaan 7. lokakuuta, eikä se muuta tavanomaisia hakuaikoja.",
+        "title": "Metsänhoidon tuen hakuaika pitenee rajoitustilanteissa"
+      },
+      "draft_sha256": "a2546730d0f4e31dd5f9b2663cae5b98669ed1bba3d43681b755b1e8314cf9b5",
+      "image_sha256": "8136c5504900bb9090a8529b6d2c44112a4d2c97349aa2a3dd90d4671f289dda",
+      "job_id": "4ccf0693154e87b0e3c18b13e745b1413f957abc06bf87c6899d0b1cb1c599d5",
+      "packet": {
+        "fixture": false,
+        "image": {
+          "alt": "Arkistokuva: Tiheä metsä, jossa on ohuita mäntyjen runkoja, vihreitä neulasia ja ruskeaa kaarnaa. Metsän pohja on sammaleen ja oksien peitossa.",
+          "caption": "Arkistokuva artikkelin aiheesta. Kuva ei esitä uutisen tapahtumapaikkaa.",
+          "classifier_output": {
+            "category": "Talous",
+            "concepts": [
+              {
+                "depictable_scene": "Taimikko, jossa on pieniä puita ja niiden välissä näkyvää metsäpohjaa.",
+                "must_avoid": [
+                  "People or body parts",
+                  "Invented readable signs",
+                  "Current restriction site claim"
+                ],
+                "must_show": [
+                  "small tree seedlings",
+                  "forest floor"
+                ],
+                "rank": 1,
+                "safe_to_generate": true,
+                "search_queries": [
+                  "Finnish tree seedlings",
+                  "taimikon hoito metsä",
+                  "young planted forest"
+                ],
+                "subject": "Taimikon hoito"
+              },
+              {
+                "depictable_scene": "Nuoren metsän hoidon aiheeseen liittyvä harvennettu metsikkö: hoikkia puiden runkoja, sammaleista metsäpohjaa ja oksia maassa.",
+                "must_avoid": [
+                  "People or body parts",
+                  "Invented readable signs",
+                  "Current restriction site claim"
+                ],
+                "must_show": [
+                  "slender forest tree trunks",
+                  "branches on forest floor"
+                ],
+                "rank": 2,
+                "safe_to_generate": true,
+                "search_queries": [
+                  "young forest thinning",
+                  "Finnish pine stand",
+                  "metsän hoito harvennus"
+                ],
+                "subject": "Nuoren metsän hoito"
+              }
+            ],
+            "version": "article-first-v1"
+          },
+          "credit": "Photo by MPorciusCato on Wikimedia Commons",
+          "depicted": "A dense forest of slender pine trees with green needles and brown trunks. The forest floor is covered with green moss, some dry grass, and scattered branches and twigs.",
+          "generated": false,
+          "hotlink": false,
+          "license": "CC BY-SA 3.0",
+          "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+          "local_path": "media/8136c5504900bb9090a8529b6d2c44112a4d2c97349aa2a3dd90d4671f289dda.jpg",
+          "pixel_review": {
+            "alt_fi": "Tiheä metsä, jossa on ohuita mäntyjen runkoja, vihreitä neulasia ja ruskeaa kaarnaa. Metsän pohja on sammaleen ja oksien peitossa.",
+            "approved": true,
+            "article_text_sha256": "35d165e09fa625bbc9f3d32f9515cce1803cdd02b641f38fd9d21ecbe8891fff",
+            "concept_sha256": "4c0c8c380a81275507e74301e3d69ffeb4f080f8de2a7bdb4ef1fa7d8d138b1f",
+            "description": "A dense forest of slender pine trees with green needles and brown trunks. The forest floor is covered with green moss, some dry grass, and scattered branches and twigs.",
+            "fit_score": 9,
+            "image_sha256": "8136c5504900bb9090a8529b6d2c44112a4d2c97349aa2a3dd90d4671f289dda",
+            "model": "google:gemini-2.5-flash",
+            "must_show_visible": [
+              true,
+              true
+            ],
+            "no_people": true,
+            "reason": "The image clearly depicts a thinned forest with slender tree trunks and branches on the forest floor, which directly illustrates the concept of 'Nuoren metsän hoito' (young forest management) and specifically 'harvennettu metsikkö' (thinned forest stand) as described in the selected concept and is relevant to the article's topic of forest management support.",
+            "reviewed_at": "2026-10-06T14:00:07.138446+00:00",
+            "source_context": {
+              "image_sha256": "8136c5504900bb9090a8529b6d2c44112a4d2c97349aa2a3dd90d4671f289dda",
+              "license": "CC BY-SA 3.0",
+              "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+              "photo_id": "wikimedia-2957828",
+              "photo_url": "https://commons.wikimedia.org/wiki/File:A_young_stand_of_pine_after_the_first_thinning.jpg",
+              "photographer": "MPorciusCato",
+              "provider": "wikimedia",
+              "title": "A young stand of pine after the first thinning.jpg"
+            },
+            "source_context_sha256": "aba8cdf55f1dcb9c5a71ab1c5d7dd0d581087c75a0c3e16e9c4482f306ee452a"
+          },
+          "pixels": {
+            "height": 1944,
+            "mode": "RGB",
+            "variance": 6529.3,
+            "width": 2592
+          },
+          "relevance_check": {
+            "accepted": true,
+            "evidence": "A dense forest of slender pine trees with green needles and brown trunks. The forest floor is covered with green moss, some dry grass, and scattered branches and twigs.",
+            "matched": [],
+            "method": "vision",
+            "reason": "The image clearly depicts a thinned forest with slender tree trunks and branches on the forest floor, which directly illustrates the concept of 'Nuoren metsän hoito' (young forest management) and specifically 'harvennettu metsikkö' (thinned forest stand) as described in the selected concept and is r"
+          },
+          "selection_evidence": {
+            "article_text_sha256": "35d165e09fa625bbc9f3d32f9515cce1803cdd02b641f38fd9d21ecbe8891fff",
+            "decision_sha256": "7e489509739487dab0f8f6c69853985223fd4127d3162cbf247960e6894f7388",
+            "minimum_real_fit": 8,
+            "searches": [
+              {
+                "candidates": [],
+                "concept_rank": 1,
+                "outcome": "unavailable",
+                "provider": "wikimedia",
+                "queries": [
+                  "taimikko Finland"
+                ]
+              },
+              {
+                "candidates": [
+                  {
+                    "approved": true,
+                    "fit_score": 9,
+                    "image_sha256": "8136c5504900bb9090a8529b6d2c44112a4d2c97349aa2a3dd90d4671f289dda",
+                    "license": "CC BY-SA 3.0",
+                    "reason": "The image clearly depicts a thinned forest with slender tree trunks and branches on the forest floor, which directly illustrates the concept of 'Nuoren metsän hoito' (young forest management) and specifically 'harvennettu metsikkö' (thinned forest stand) as described in the selected concept and is relevant to the article's topic of forest management support.",
+                    "source_url": "https://commons.wikimedia.org/wiki/File:A_young_stand_of_pine_after_the_first_thinning.jpg"
+                  }
+                ],
+                "concept_rank": 2,
+                "outcome": "accepted",
+                "provider": "wikimedia",
+                "queries": [
+                  "young forest thinning"
+                ]
+              }
+            ],
+            "selected": {
+              "concept_rank": 2,
+              "fit_score": 9,
+              "image_sha256": "8136c5504900bb9090a8529b6d2c44112a4d2c97349aa2a3dd90d4671f289dda",
+              "kind": "real"
+            },
+            "version": "article-first-v1"
+          },
+          "sha256": "8136c5504900bb9090a8529b6d2c44112a4d2c97349aa2a3dd90d4671f289dda",
+          "source_url": "https://commons.wikimedia.org/wiki/File:A_young_stand_of_pine_after_the_first_thinning.jpg",
+          "stock_provenance": {
+            "attribution": {
+              "changes": "Tallennettu JPEG-muodossa; kuvan sisältöä ei muokattu.",
+              "title": "A young stand of pine after the first thinning.jpg"
+            },
+            "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/61/A_young_stand_of_pine_after_the_first_thinning.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "license": "CC BY-SA 3.0",
+            "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+            "photo_id": "wikimedia-2957828",
+            "photo_url": "https://commons.wikimedia.org/wiki/File:A_young_stand_of_pine_after_the_first_thinning.jpg",
+            "photographer": "MPorciusCato",
+            "photographer_url": "https://commons.wikimedia.org/wiki/File:A_young_stand_of_pine_after_the_first_thinning.jpg",
+            "provider": "wikimedia",
+            "query": "young forest thinning",
+            "retrieved_at": "2026-10-06T14:00:07Z"
+          },
+          "stock_provenance_sha256": "89c9189b6dd6bc78665930bebe08241e626f9ee8751e08c978bf38b6f79e2484",
+          "url": "https://uutistenlukija.fi/media/8136c5504900bb9090a8529b6d2c44112a4d2c97349aa2a3dd90d4671f289dda.jpg"
+        },
+        "publication_basis": {
+          "policy": "official-text-v1",
+          "policy_sha256": "901a881c0ed60542e137b124a671a87d2fb07b251a12312d96053f5d4a134e1e",
+          "provider": "valtioneuvosto",
+          "related_sources": 0,
+          "source_fields_sha256": "47e9f1b3fdbb8afdaf9e64246642eb3d46ad50d6c1de73e571cda7f3c336249b",
+          "source_sha256": "c2640e2be06dfe4e1033bd8a5e86bc2ce27ee16aba79306cf16a75fe0b479832"
+        },
+        "sources": [
+          {
+            "id": "A",
+            "published_at": "2026-10-06T10:47+0300",
+            "publisher": "Valtioneuvoston kanslia",
+            "reuse": {
+              "changes": "Itsenäinen suomenkielinen uutisteksti; lähteen tietoja on tiivistetty.",
+              "license": "Valtioneuvoston sivuston käyttöehdot: tekstiaineiston käyttö ja siihen linkitys on sallittu hyvän tavan mukaisissa asiayhteyksissä, kun lähde mainitaan; aineiston käytöstä kaupalliseen tarkoitukseen on sovittava erikseen",
+              "license_url": "https://valtioneuvosto.fi/tietoa-sivustosta",
+              "notice": "Lähde: Valtioneuvosto. Tekstin uudelleenkäyttö sallittu lähde mainiten; kaupallinen käyttö vaatii erillisen sopimuksen.",
+              "url": "https://valtioneuvosto.fi/tietoa-sivustosta"
+            },
+            "text": "Taimikon ja nuoren metsän hoidon tuen hakuaikoihin muutos ASF-rajoitusten alueella\nmaa- ja metsätalousministeriö\nJulkaisuajankohta 6.10.2026 10.47\nTyyppi:Tiedote\nMetsätalouden kannustejärjestelmää koskevan asetuksen muutoksella varmistetaan, että esimerkiksi afrikkalaisen sikaruton (ASF) torjumiseksi asetetuista viranomaisrajoituksista huolimatta metsänomistajilla on kohtuullisesti aikaa toteuttaa taimikon ja nuoren metsän hoitotyö ja hakea siihen tukea. Muutokset tulevat voimaan 7.10.2026. Muuttuneita määräaikoja sovelletaan tämän jälkeen saapuneisiin hakemuksiin.\nTaimikon ja nuoren metsän hoidon tuen hakuaikoihin tehdyn muutoksen myötä tukea tulee hakea viimeistään yhdeksän kuukauden kuluessa viranomaisrajoitusten päättymisestä. Muutos koskee poikkeuksellisia tilanteita, joissa viranomainen on päätöksellään kieltänyt toiminnan tietyllä alueella siten, että taimikon ja nuoren metsän hoitotyön loppuun saattaminen määräajassa estyy. Tavoitteena on turvata metsänomistajien yhdenvertainen kohtelu ja mahdollisuudet saada tukea myös silloin, kun työt viivästyvät viranomaispäätöksiin perustuvista syistä.\nPääsääntö on edelleen, että taimikon ja nuoren metsän hoidon tukea on haettava viimeistään kuuden kuukauden kuluessa toimenpiteiden aloittamisesta ja kahden kuukauden kuluessa niiden valmistumisesta.\nMaa- ja metsätalousministeriön asetukseen tehty muutos tulee voimaan 7.10.2026. Muuttuneita määräaikoja sovelletaan hakemuksiin, jotka ovat saapuneet Suomen metsäkeskukseen asetuksen voimaantulon jälkeen.\nAsetusluonnoksesta järjestettiin lausuntokierros syyskuussa 2026. Lausunnonantajat pitivät esitystä tarpeellisena. Hakuaikaa pidennettiin yhdeksään kuukauteen lausuntopalautteen perusteella.\nLisätietoja:\nNiina Riissanen\nmetsäneuvos, maa- ja metsätalousministeriö\n[email protected]\n029 5162 339\nBiotalous Hallinnonala Lainsäädäntö Luonnonvarat Luonto ja ilmasto Metsät Tuet\nafrikkalainen sikarutto metsätalous metsätalousyrittäjät taimikonhoito",
+            "title": "Taimikon ja nuoren metsän hoidon tuen hakuaikoihin muutos ASF-rajoitusten alueella",
+            "url": "https://valtioneuvosto.fi/-/1410837/taimikon-ja-nuoren-metsan-hoidon-tuen-hakuaikoihin-muutos-asf-rajoitusten-alueella"
+          }
+        ],
+        "story_key": "url:https://valtioneuvosto.fi/-/1410837/taimikon-ja-nuoren-metsan-hoidon-tuen-hakuaikoihin-muutos-asf-rajoitusten-alueella",
+        "supporting_documents": [
+          {
+            "id": "RIGHTS",
+            "purpose": "text reuse permission; not news or image evidence",
+            "retrieved_at": "2026-10-06T10:06:32.976968+00:00",
+            "sha256": "b3db66de80f7789bad9c7f967316730728258b1f9a9d8f7e6e1334b9caf60429",
+            "text": "Tekijänoikeudet\nValtioneuvoston kanslialla tai muulla aineiston yhteydessä ilmoitetulla tiedontuottajalla on oikeudet sivustossa julkaistavaan teksti- ja kuva-aineistoon. Tekstiaineiston käyttö ja siihen linkitys on sallittu hyvän tavan mukaisissa asiayhteyksissä, kun lähde mainitaan. Aineiston käytöstä kaupalliseen tarkoitukseen on sovittava erikseen.\nValtioneuvoston kuvia välitetään Creative Commons -lisensseillä valtioneuvoston aineistopankissa ja Flickr-kuvapalvelussa. Niissä tarjottavat kuvat on tarkoitettu vapaaseen viestinnälliseen käyttöön. Kuvien tarkat käyttöehdot on ilmoitettu kunkin kuvan kohdalla.\n",
+            "url": "https://valtioneuvosto.fi/tietoa-sivustosta"
+          }
+        ]
+      },
+      "packet_sha256": "c6eb8a7076f0a9a6ac074eca0e0be46e438cfc1986b60ef26e1ad328e7f39854",
+      "review": {
+        "approved": true,
+        "archive_image_only": {
+          "article_text_unchanged": true,
+          "operation": "image_only_archive_correction",
+          "original_draft_sha256": "0928e036f09656171fa52c63eb191d7e9a9ea3b7916a01665fe3fd4d73ec0791",
+          "original_published_at": "2026-10-06T10:06:58.802902+00:00",
+          "original_review_sha256": "326d70a62ae76ee320b32bf4f596770321b434ab74f75ddb2f73500eb40f4515",
+          "unchanged_text_sha256": "b69050b60cb050339c3d0e56d195bc9746b8b7706e0692257f0bed971fb1803c"
+        },
+        "draft_sha256": "a2546730d0f4e31dd5f9b2663cae5b98669ed1bba3d43681b755b1e8314cf9b5",
+        "historical_text_observations": [],
+        "reasons": [
+          "Täsmällisen kuvan SHA-256 on 8136c5504900bb9090a8529b6d2c44112a4d2c97349aa2a3dd90d4671f289dda. Sama tunniste on kuvatietueessa, riippumattomassa pixel_review-arviossa ja valintatodisteessa. Pixel_review on sidottu artikkelitekstin tunnisteeseen 35d165e09fa625bbc9f3d32f9515cce1803cdd02b641f38fd9d21ecbe8891fff, ja sen osuvuuspiste on 9/10.",
+          "Kaksi järjestettyä konseptia kuvaavat artikkelin konkreettisia aiheita. Valitun nuoren metsän hoito -konseptin molemmat olennaiset elementit, hoikat puunrungot ja metsäpohjan oksat, on riippumattomassa pikseliarviossa todettu näkyviksi. Harvennettua nuorta metsikköä esittävä kuva liittyy suoraan koko artikkelin ja lähdekatkelman käsittelemään hoitotyöhön eikä vain talouskategoriaan. Kuvassa ei arvion mukaan ole ihmisiä, eikä kuvateksti väitä sen esittävän toimintakieltoaluetta tai uutisen tapahtumapaikkaa.",
+          "Alt-teksti vastaa pikseliarvion kuvausta männyistä, sammaleesta ja oksista. Arkistokuvamerkintä ja tapahtumapaikkaa koskeva rajaus ovat asianmukaiset. Kyseessä on todellinen valokuva, joten AI-kuvan ilmoituksia ei tarvita.",
+          "Kuvakohtainen provenienssi yksilöi Wikimedia Commonsin tiedostosivun, alkuperäisen kuvatiedoston ja kuvaajan MPorciusCato. CC BY-SA 3.0 -lisenssi ja sen URL ovat yhtenevät kuvatietueessa, provenienssissa ja pikseliarvion lähdekontekstissa. Krediitti nimeää kuvaajan ja lähteen, ja tallennusmuutos on ilmoitettu. Oikeusperusta on sidottu tähän kuvaan, ei artikkelin tekstilähteen käyttöehtoihin. Hyväksyntä koskee vain tätä uutta kuvatietuetta muuttumattoman, 6.10.2026 julkaistun arkistoartikkelin yhteydessä."
+        ]
+      },
+      "stock_image": {
+        "alt": "Arkistokuva: Tiheä metsä, jossa on ohuita mäntyjen runkoja, vihreitä neulasia ja ruskeaa kaarnaa. Metsän pohja on sammaleen ja oksien peitossa.",
+        "caption": "Arkistokuva artikkelin aiheesta. Kuva ei esitä uutisen tapahtumapaikkaa.",
+        "classifier_output": {
+          "category": "Talous",
+          "concepts": [
+            {
+              "depictable_scene": "Taimikko, jossa on pieniä puita ja niiden välissä näkyvää metsäpohjaa.",
+              "must_avoid": [
+                "People or body parts",
+                "Invented readable signs",
+                "Current restriction site claim"
+              ],
+              "must_show": [
+                "small tree seedlings",
+                "forest floor"
+              ],
+              "rank": 1,
+              "safe_to_generate": true,
+              "search_queries": [
+                "Finnish tree seedlings",
+                "taimikon hoito metsä",
+                "young planted forest"
+              ],
+              "subject": "Taimikon hoito"
+            },
+            {
+              "depictable_scene": "Nuoren metsän hoidon aiheeseen liittyvä harvennettu metsikkö: hoikkia puiden runkoja, sammaleista metsäpohjaa ja oksia maassa.",
+              "must_avoid": [
+                "People or body parts",
+                "Invented readable signs",
+                "Current restriction site claim"
+              ],
+              "must_show": [
+                "slender forest tree trunks",
+                "branches on forest floor"
+              ],
+              "rank": 2,
+              "safe_to_generate": true,
+              "search_queries": [
+                "young forest thinning",
+                "Finnish pine stand",
+                "metsän hoito harvennus"
+              ],
+              "subject": "Nuoren metsän hoito"
+            }
+          ],
+          "version": "article-first-v1"
+        },
+        "credit": "Photo by MPorciusCato on Wikimedia Commons",
+        "depicted": "A dense forest of slender pine trees with green needles and brown trunks. The forest floor is covered with green moss, some dry grass, and scattered branches and twigs.",
+        "generated": false,
+        "hotlink": false,
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "local_path": "media/8136c5504900bb9090a8529b6d2c44112a4d2c97349aa2a3dd90d4671f289dda.jpg",
+        "pixel_review": {
+          "alt_fi": "Tiheä metsä, jossa on ohuita mäntyjen runkoja, vihreitä neulasia ja ruskeaa kaarnaa. Metsän pohja on sammaleen ja oksien peitossa.",
+          "approved": true,
+          "article_text_sha256": "35d165e09fa625bbc9f3d32f9515cce1803cdd02b641f38fd9d21ecbe8891fff",
+          "concept_sha256": "4c0c8c380a81275507e74301e3d69ffeb4f080f8de2a7bdb4ef1fa7d8d138b1f",
+          "description": "A dense forest of slender pine trees with green needles and brown trunks. The forest floor is covered with green moss, some dry grass, and scattered branches and twigs.",
+          "fit_score": 9,
+          "image_sha256": "8136c5504900bb9090a8529b6d2c44112a4d2c97349aa2a3dd90d4671f289dda",
+          "model": "google:gemini-2.5-flash",
+          "must_show_visible": [
+            true,
+            true
+          ],
+          "no_people": true,
+          "reason": "The image clearly depicts a thinned forest with slender tree trunks and branches on the forest floor, which directly illustrates the concept of 'Nuoren metsän hoito' (young forest management) and specifically 'harvennettu metsikkö' (thinned forest stand) as described in the selected concept and is relevant to the article's topic of forest management support.",
+          "reviewed_at": "2026-10-06T14:00:07.138446+00:00",
+          "source_context": {
+            "image_sha256": "8136c5504900bb9090a8529b6d2c44112a4d2c97349aa2a3dd90d4671f289dda",
+            "license": "CC BY-SA 3.0",
+            "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+            "photo_id": "wikimedia-2957828",
+            "photo_url": "https://commons.wikimedia.org/wiki/File:A_young_stand_of_pine_after_the_first_thinning.jpg",
+            "photographer": "MPorciusCato",
+            "provider": "wikimedia",
+            "title": "A young stand of pine after the first thinning.jpg"
+          },
+          "source_context_sha256": "aba8cdf55f1dcb9c5a71ab1c5d7dd0d581087c75a0c3e16e9c4482f306ee452a"
+        },
+        "pixels": {
+          "height": 1944,
+          "mode": "RGB",
+          "variance": 6529.3,
+          "width": 2592
+        },
+        "relevance_check": {
+          "accepted": true,
+          "evidence": "A dense forest of slender pine trees with green needles and brown trunks. The forest floor is covered with green moss, some dry grass, and scattered branches and twigs.",
+          "matched": [],
+          "method": "vision",
+          "reason": "The image clearly depicts a thinned forest with slender tree trunks and branches on the forest floor, which directly illustrates the concept of 'Nuoren metsän hoito' (young forest management) and specifically 'harvennettu metsikkö' (thinned forest stand) as described in the selected concept and is r"
+        },
+        "selection_evidence": {
+          "article_text_sha256": "35d165e09fa625bbc9f3d32f9515cce1803cdd02b641f38fd9d21ecbe8891fff",
+          "decision_sha256": "7e489509739487dab0f8f6c69853985223fd4127d3162cbf247960e6894f7388",
+          "minimum_real_fit": 8,
+          "searches": [
+            {
+              "candidates": [],
+              "concept_rank": 1,
+              "outcome": "unavailable",
+              "provider": "wikimedia",
+              "queries": [
+                "taimikko Finland"
+              ]
+            },
+            {
+              "candidates": [
+                {
+                  "approved": true,
+                  "fit_score": 9,
+                  "image_sha256": "8136c5504900bb9090a8529b6d2c44112a4d2c97349aa2a3dd90d4671f289dda",
+                  "license": "CC BY-SA 3.0",
+                  "reason": "The image clearly depicts a thinned forest with slender tree trunks and branches on the forest floor, which directly illustrates the concept of 'Nuoren metsän hoito' (young forest management) and specifically 'harvennettu metsikkö' (thinned forest stand) as described in the selected concept and is relevant to the article's topic of forest management support.",
+                  "source_url": "https://commons.wikimedia.org/wiki/File:A_young_stand_of_pine_after_the_first_thinning.jpg"
+                }
+              ],
+              "concept_rank": 2,
+              "outcome": "accepted",
+              "provider": "wikimedia",
+              "queries": [
+                "young forest thinning"
+              ]
+            }
+          ],
+          "selected": {
+            "concept_rank": 2,
+            "fit_score": 9,
+            "image_sha256": "8136c5504900bb9090a8529b6d2c44112a4d2c97349aa2a3dd90d4671f289dda",
+            "kind": "real"
+          },
+          "version": "article-first-v1"
+        },
+        "sha256": "8136c5504900bb9090a8529b6d2c44112a4d2c97349aa2a3dd90d4671f289dda",
+        "source_url": "https://commons.wikimedia.org/wiki/File:A_young_stand_of_pine_after_the_first_thinning.jpg",
+        "stock_provenance": {
+          "attribution": {
+            "changes": "Tallennettu JPEG-muodossa; kuvan sisältöä ei muokattu.",
+            "title": "A young stand of pine after the first thinning.jpg"
+          },
+          "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/61/A_young_stand_of_pine_after_the_first_thinning.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "license": "CC BY-SA 3.0",
+          "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+          "photo_id": "wikimedia-2957828",
+          "photo_url": "https://commons.wikimedia.org/wiki/File:A_young_stand_of_pine_after_the_first_thinning.jpg",
+          "photographer": "MPorciusCato",
+          "photographer_url": "https://commons.wikimedia.org/wiki/File:A_young_stand_of_pine_after_the_first_thinning.jpg",
+          "provider": "wikimedia",
+          "query": "young forest thinning",
+          "retrieved_at": "2026-10-06T14:00:07Z"
+        },
+        "stock_provenance_sha256": "89c9189b6dd6bc78665930bebe08241e626f9ee8751e08c978bf38b6f79e2484",
+        "url": "https://uutistenlukija.fi/media/8136c5504900bb9090a8529b6d2c44112a4d2c97349aa2a3dd90d4671f289dda.jpg"
+      },
+      "text_only": {
+        "policy": "official-text-v1",
+        "policy_sha256": "901a881c0ed60542e137b124a671a87d2fb07b251a12312d96053f5d4a134e1e",
+        "provenance_sha256": "f5779a26f4607d6731fc7618ff8f5cd65d608c43ac39bfa4ec10ac5714cdeee2"
+      }
+    }
+  ],
+  "image_backfill_sha256": "8edf85110c47b86645bea7cf029e93961127e5072ff9e6bde32985c7006b846b"
 }
