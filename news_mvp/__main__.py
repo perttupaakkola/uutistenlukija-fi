@@ -14,7 +14,7 @@ def main():
     parser = argparse.ArgumentParser(description="Fresh news MVP — local private workflow")
     sub = parser.add_subparsers(dest="command", required=True)
     for name in ("init", "ingest", "discover", "collect", "tick", "live-tick", "render", "status", "stop",
-                 "requeue-failed"):
+                 "requeue-failed", "revise-manuscript"):
         p = sub.add_parser(name)
         p.add_argument("--config", type=Path, required=True)
         if name == "ingest":
@@ -24,6 +24,10 @@ def main():
             p.add_argument("--revise-rejected", action="store_true", help="Explicit evidence amendment; retain saved draft and archive prior rejection")
         if name == "requeue-failed":
             p.add_argument("--job", help="Requeue one exact failed publication; default all failed")
+        if name == "revise-manuscript":
+            p.add_argument("--job", required=True, help="Exact rejected job ID")
+            p.add_argument("manuscript", type=Path,
+                           help="Operator-supported JSON manuscript (text and citations only)")
     p = sub.add_parser("demo", help="Run a clearly labelled fabricated local example, no model/network")
     p.add_argument("--output", type=Path, default=Path(".demo"))
     args = parser.parse_args()
@@ -68,6 +72,10 @@ def main():
                 result = {"intake": receipt, "admission": admission}
             elif args.command == "ingest":
                 result = ingest(config, json.loads(args.packet.read_text()))
+            elif args.command == "revise-manuscript":
+                from .intake import revise_manuscript
+                result = revise_manuscript(config, args.job,
+                                           json.loads(args.manuscript.read_text(encoding="utf-8")))
             elif args.command == "live-tick":
                 from .live import live_tick
                 result = live_tick(args.config)

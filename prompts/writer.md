@@ -17,12 +17,16 @@ Jos lähdepaketissa on image, säilytä sen objekti muuttumattomana. Jos ei ole,
 Paketissa voi olla useita lähteitä: A on alkuperäinen virallinen tiedote, B–H ovat samaa
 aihetta käsittelevää muuta uutisointia. Kirjoita synteesi, älä yhden lähteen referaattia.
 
-- Merkitse jokaisen kappaleen source_ids-listaan KAIKKI lähteet, joiden tietoja kappaleessa on.
-- Kun useampi lähde kertoo saman asian, merkitse ne kaikki. Se osoittaa vahvistuksen.
-- Kun lähteet ovat eri mieltä tai antavat eri lukuja, älä valitse hiljaa toista: kerro ero
-  ja merkitse molemmat lähteet.
-- Älä esitä yhden virallisen tiedotteen väitettä varmistettuna tietona, jos vain A tukee sitä.
-  Merkitse se lähteen väitteeksi ("X:n mukaan"). Jos B–H vahvistavat sen, se on vahvempi.
+- Jokaisen source_ids-listassa olevan lähteen on tuettava kappaleen kaikkia keskeisiä
+  faktaväitteitä. Pelkkä saman aiheen tai yhden lauseen tuki ei riitä koko kappaleen viitteeksi.
+- Jos lähteiden tuki vaihtelee väitteittäin, jaa kappale lähdekohtaisiin osiin tai jätä
+  osittain tukeva lähde tämän kappaleen viitteistä pois, kun muut merkityt lähteet tukevat
+  koko kappaletta. Älä käytä automaattisesti vain A:ta: säilytä muun lähteen oma tieto ja attribuutio.
+- Saman tiedotteen toistaminen ei ole riippumaton vahvistus. Kerro varmistuksesta vain,
+  jos lähteen oma raportointi osoittaa sen; pelkkä usean julkaisijan maininta ei osoita sitä.
+- Kun lähteet ovat eri mieltä tai antavat eri lukuja, kerro ero ja lähdekohtaiset väitteet.
+  Jaa ne tarvittaessa eri kappaleisiin, jotta viitteiden väitekohtainen tuki säilyy täsmällisenä.
+- Merkitse vain yhden lähteen tukema väite kyseisen lähteen väitteeksi ("X:n mukaan").
 - Älä keksi yhteyksiä lähteiden välille. Jos lähteet eivät liity samaan asiaan, käytä vain
   niitä, jotka liittyvät, ja jätä muut pois.
 - Uutisotsikko ja ingressi saavat perustua vain siihen, mitä lähteet tukevat yhdessä.

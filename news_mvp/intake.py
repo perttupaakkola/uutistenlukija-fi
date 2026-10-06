@@ -1,13 +1,24 @@
 """Small explicit-URL source intake. Network work belongs to the controller, not models."""
 import hashlib
 import json
+import sqlite3
 from datetime import datetime, timezone
 from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import urlsplit
 from urllib.request import Request, urlopen
 
-from .editorial import digest, validate_packet, web_url
+from .editorial import (digest, encode, text, validate_draft, validate_packet,
+                        validate_review, web_url)
+
+
+MANUSCRIPT_FIELDS = frozenset(("category", "title", "summary", "paragraphs"))
+PARAGRAPH_FIELDS = frozenset(("text", "source_ids"))
+MANUSCRIPT_REVISION_KIND = "operator-supported-archived-manuscript-v1"
+MANUSCRIPT_REVISION_REASON = (
+    "Operator supplied a source-citation correction to a rejected saved manuscript; "
+    "fresh image and editorial review are required."
+)
 
 
 def fetch(url, allowed_hosts, limit=2000000):
@@ -132,7 +143,6 @@ def revise_rejected(config, packet, now=None):
     No automatic revision loop or second job. A new reviewer decision is required.
     """
     from .controller import single_tick
-    from .editorial import encode, validate_draft
     from .store import database
 
     validate_packet(packet, now or datetime.now(timezone.utc), config["max_source_age_hours"])
@@ -153,3 +163,163 @@ def revise_rejected(config, packet, now=None):
             with store.db:
                 store.db.execute("UPDATE jobs SET packet=?, review=NULL, status='ready', attempts=0, next_attempt=0, error=NULL WHERE id=?", (encode(packet), job_id))
     return {"id": job_id, "revised_evidence": True, "draft_unchanged": True, "previous_record": str(archive)}
+
+
+def _manuscript_candidate(value):
+    """Return the exact operator manuscript shape; reject every control field."""
+    if not isinstance(value, dict) or set(value) != MANUSCRIPT_FIELDS:
+        raise ValueError("Manuscript must contain exactly category, title, summary, and paragraphs")
+    paragraphs = value.get("paragraphs")
+    if not isinstance(paragraphs, list):
+        raise ValueError("Manuscript paragraphs must be a list")
+    for paragraph in paragraphs:
+        if not isinstance(paragraph, dict) or set(paragraph) != PARAGRAPH_FIELDS:
+            raise ValueError("Each manuscript paragraph must contain exactly text and source_ids")
+        if not isinstance(paragraph["source_ids"], list):
+            raise ValueError("Manuscript paragraph source_ids must be a list")
+    # Copy the admitted fields so a caller cannot mutate the installed value through aliases.
+    return {
+        "category": value["category"],
+        "title": value["title"],
+        "summary": value["summary"],
+        "paragraphs": [
+            {"text": paragraph["text"], "source_ids": list(paragraph["source_ids"])}
+            for paragraph in paragraphs
+        ],
+    }
+
+
+def _publication_fence(db, job_id):
+    """Refuse an existing publication or an unreadable/unknown publication schema."""
+    try:
+        objects = list(db.execute(
+            "SELECT type FROM sqlite_master WHERE name='publications' ORDER BY type"
+        ))
+        if not objects:
+            raise ValueError("Publication state is missing; cannot verify manuscript revision")
+        if len(objects) != 1 or objects[0]["type"] != "table":
+            raise ValueError("Publication state is not a recognized table")
+        columns = [row[1] for row in db.execute("PRAGMA table_info(publications)")]
+        expected = ["job_id", "packet_sha", "draft_sha", "image_sha", "source_commit",
+                    "remote_commit", "run_id", "status", "attempts", "error"]
+        if columns != expected:
+            raise ValueError("Publication state has an unknown schema")
+        if db.execute("SELECT 1 FROM publications WHERE job_id=?", (job_id,)).fetchone():
+            raise ValueError("Manuscript revision is forbidden after publication preparation")
+    except sqlite3.Error as error:
+        raise ValueError("Publication state cannot be verified") from error
+
+
+def revise_manuscript(config, job_id, manuscript, now=None):
+    """Install one explicit operator amendment of a rejected archived manuscript.
+
+    The stored source packet is immutable here. The candidate deliberately enters the normal
+    controller as text-only, so its old image and both old approvals are merely history: the
+    next tick must classify/select/review imagery and review the final article again.
+    """
+    from .controller import single_tick
+    from .site import atomic_write
+    from .store import database
+
+    job_id = text(job_id, "job id", 200)
+    candidate = _manuscript_candidate(manuscript)
+    if config.get("enabled") is not True or config.get("backend") != "hermes":
+        raise ValueError("Manuscript revision requires an enabled live Hermes configuration")
+    if config.get("illustrations", True) is not True:
+        raise ValueError("Manuscript revision requires the normal illustrations pipeline")
+    now = now or datetime.now(timezone.utc)
+
+    with single_tick(config["state_dir"]) as locked:
+        if not locked:
+            raise ValueError("Another tick is running")
+        with database(config["state_dir"]) as store:
+            # BEGIN IMMEDIATE makes the identity/status recheck and update one state change.
+            # The controller lock is already held before this transaction begins.
+            store.db.execute("BEGIN IMMEDIATE")
+            try:
+                old = store.get(job_id)
+                if old is None:
+                    raise ValueError("Manuscript revision job does not exist")
+                if old["status"] != "rejected" or not old["draft"] or not old["review"]:
+                    raise ValueError("Manuscript revision requires a rejected saved draft and review")
+
+                try:
+                    packet = json.loads(old["packet"])
+                    old_draft = json.loads(old["draft"])
+                    old_review = json.loads(old["review"])
+                    if not isinstance(old_review, dict) or old_review.get("approved") is not False:
+                        raise ValueError("Manuscript revision requires the original rejected review")
+                    validate_packet(packet, now, config["max_source_age_hours"])
+                    if packet.get("fixture") is not False or packet.get("private_only") is True:
+                        raise ValueError("Manuscript revision requires a live publication-eligible packet")
+                    if (old["id"] != job_id or digest(packet["story_key"]) != job_id or
+                            old["story_key"] != packet["story_key"] or
+                            old["source_url"] != web_url(packet["sources"][0]["url"])):
+                        raise ValueError("Stored job and source packet identity do not match")
+                    validate_draft(old_draft, packet)
+                    validate_review(old_review, old_draft)
+                except (TypeError, KeyError, AttributeError) as error:
+                    raise ValueError("Stored rejected job is malformed") from error
+                _publication_fence(store.db, job_id)
+
+                old_manuscript = {key: old_draft.get(key) for key in MANUSCRIPT_FIELDS}
+                if candidate == old_manuscript:
+                    raise ValueError("Candidate manuscript does not amend the rejected draft")
+                # Never validate against (or inherit) the old image approval. The installed
+                # draft and this validation-only packet projection both explicitly have none.
+                installed = {**candidate, "image": None}
+                validation_packet = {**packet, "image": None}
+                try:
+                    validate_draft(installed, validation_packet)
+                except (TypeError, KeyError) as error:
+                    raise ValueError("Invalid manuscript text or citation schema") from error
+                # The normal controller repairs titles over 60 characters with another model
+                # call. Refuse that shape here so this supported path can never regenerate text.
+                if len(candidate["title"]) > 60:
+                    raise ValueError("Amended title exceeds the no-regeneration 60-character limit")
+                candidate_sha = digest(candidate)
+
+                archive_record = {
+                    "revision_kind": MANUSCRIPT_REVISION_KIND,
+                    "reason": MANUSCRIPT_REVISION_REASON,
+                    "candidate_sha256": candidate_sha,
+                    "previous_job": old,
+                }
+                archive = (Path(config["state_dir"]) / "revisions" /
+                           (digest(archive_record) + ".json"))
+                archive_text = json.dumps(archive_record, ensure_ascii=False, indent=2) + "\n"
+                if archive.exists():
+                    if archive.read_text(encoding="utf-8") != archive_text:
+                        raise ValueError("Existing manuscript revision archive does not match")
+                else:
+                    atomic_write(archive, archive_text)
+
+                changed = store.db.execute(
+                    "UPDATE jobs SET draft=?,review=NULL,status='ready',attempts=0,"
+                    "next_attempt=0,error=NULL,adapter=? "
+                    "WHERE id=? AND status='rejected' AND story_key=? AND source_url=? "
+                    "AND packet=? AND draft=? AND review=?",
+                    (encode(installed), MANUSCRIPT_REVISION_KIND, job_id, old["story_key"],
+                     old["source_url"], old["packet"], old["draft"], old["review"]),
+                )
+                if changed.rowcount != 1:
+                    raise ValueError("Rejected job changed during manuscript revision")
+                current = store.get(job_id)
+                if (current["packet"] != old["packet"] or
+                        current["story_key"] != old["story_key"] or
+                        current["source_url"] != old["source_url"]):
+                    raise ValueError("Manuscript revision changed immutable source evidence")
+                store.db.commit()
+            except Exception:
+                store.db.rollback()
+                raise
+    return {
+        "id": job_id,
+        "status": "ready",
+        "revised_manuscript": True,
+        "candidate_sha256": candidate_sha,
+        "installed_draft_sha256": digest(installed),
+        "previous_record": str(archive),
+        "fresh_image_review_required": True,
+        "fresh_editorial_review_required": True,
+    }
