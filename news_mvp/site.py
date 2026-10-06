@@ -43,6 +43,19 @@ IMAGE_ALT_CORRECTIONS = {
     '264c57353d9b25dc92b699b12ef724269a820b833bb5b8778d85e8ae5d2e7aec': 'Arkistokuva: matkustajakoneen siipi pilvien yllä.',
     'c4411f82b0001b9f6099f01b680fa02e29becf51c18a88a785ce489ec5111e0e': 'Arkistokuva: tuulivoimaloita ilta-auringossa.',
 }
+_PROGRAMME_LINK_ARTICLE = "/uutiset/kuopion-vanhustenviikko-tuo-kulttuuria-kohtaamisia-5cd5fcd61b42/"
+_PROGRAMME_LINK_SOURCE = (
+    "https://www.kuopio.fi/2026/10/05/"
+    "kuopion-vanhustenviikolla-kohtaamisia-kulttuuria-ja-yhteisia-elamyksia/"
+)
+_PROGRAMME_LINK_LABEL = "www.kuopio.fi/vanhustenviikko2026"
+_PROGRAMME_LINK_DESTINATION = "https://www.kuopio.fi/vanhustenviikko2026"
+_PROGRAMME_LINK_PARAGRAPH = (
+    "Vanhustyön keskusliiton avoimia verkkoluentoja voi kaupungin mukaan seurata myös "
+    "yhteisissä etäkatsomoissa: maanantaina Nilsiässä, keskiviikkona Juankoskella ja "
+    "perjantaina Maaningalla. Katsomoissa on lisäksi kevyttä tuolijumppaa. Koko "
+    "tapahtumaohjelma on osoitteessa www.kuopio.fi/vanhustenviikko2026."
+)
 
 
 def display_image(image):
@@ -64,6 +77,24 @@ def short_license_label(license_url):
 
 def esc(value):
     return html.escape(str(value), quote=True)
+
+
+def _paragraph_text_html(article_route, paragraph, sources):
+    """Escape prose, adding only the one explicitly reviewed programme link."""
+    text = paragraph["text"]
+    plain = esc(text)
+    if article_route != _PROGRAMME_LINK_ARTICLE or text != _PROGRAMME_LINK_PARAGRAPH:
+        return plain
+    cited_ids = paragraph["source_ids"]
+    if not any(source["id"] in cited_ids and source["url"] == _PROGRAMME_LINK_SOURCE
+               for source in sources):
+        return plain
+    if text.count(_PROGRAMME_LINK_LABEL) != 1:
+        return plain
+    before, after = text.split(_PROGRAMME_LINK_LABEL)
+    return (esc(before)
+            + f'<a href="{esc(_PROGRAMME_LINK_DESTINATION)}">{esc(_PROGRAMME_LINK_LABEL)}</a>'
+            + esc(after))
 
 
 def semantic_datetime(value):
@@ -1245,7 +1276,8 @@ def render_site(store, output_dir, state_dir=None, public=False, include_ids=Non
         _machine_date, date = semantic_datetime(job["created_at"])
         fixture = '<p class="fixture">Testiaineisto: keksitty uutinen, ei oikea julkaisu.</p>' if packet.get("fixture") else ""
         source_numbers = {s["id"]: i + 1 for i, s in enumerate(packet["sources"])}
-        paragraphs = "".join('<p>' + esc(p["text"]) + ' <span class="citations">' +
+        paragraphs = "".join('<p>' + _paragraph_text_html(link, p, packet["sources"]) +
+                             ' <span class="citations">' +
                              " ".join(f'<a href="#lahde-{source_numbers[s]}">[{source_numbers[s]}]</a>' for s in p["source_ids"]) +
                              '</span></p>' for p in draft["paragraphs"])
         source_list = source_list_html(packet["sources"])

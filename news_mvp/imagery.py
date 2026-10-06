@@ -66,7 +66,7 @@ MIN_REAL_FIT = 8
 MAX_ARTICLE_CANDIDATES_PER_PROVIDER = 4
 _GENERATED_PERSON_SCENE = re.compile(
     r'\b(?:laps\w*|last(?:a(?:ni|si|mme|nne|an|nsa)?|en\w*)|children|kids?|people|persons?|faces?|kasvo\w*|'
-    r'ihmi\w*|henkil\w*|aiku\w*|nuor\w*|katsoj\w*|opettaj\w*|'
+    r'ihmi\w*|henkil(?![öo]auto(?:n|ja)?\b)\w*|aiku\w*|nuor\w*|katsoj\w*|opettaj\w*|'
     r'ohjaaj\w*|teacher\w*|k(?:ä|a)si\w*|hands?)\b', re.I)
 
 
@@ -76,13 +76,22 @@ def _depicts_people(scene):
         r'\b(?:ilman|without|no)\s+(?:ihmi\w*|henkil\w*|people|persons?|'
         r'kasvo\w*|faces?|laps\w*|last\w*|children|hands?|k(?:ä|a)si\w*)\b',
         '', scene, flags=re.I)
+    # `nuori` can be a person, but in these bounded forestry noun phrases it is an
+    # adjective. Keep every other use visible to the conservative person matcher.
+    without_exclusion = re.sub(
+        r'\b(?:nuori|nuoren)\s+(?:havumetsikkö|havumetsikön|taimikko|taimikon)\b',
+        '', without_exclusion, flags=re.I)
     # Recognise only explicit negative existence clauses, not arbitrary negation.
     # 'lastausvarret' (cargo loading arms) is not 'lasten' (children's).
-    # Remove the bounded excluded noun only; later positive people remain visible.
+    # Remove a bounded comma-list only when each later noun ends the list or is
+    # followed by another list separator; a positive `, käsi näkyy` stays visible.
     without_exclusion = re.sub(
         r'\b(?:ei|eik(?:ä|a))(?:\s+(?:kuvassa|n(?:ä|a)kym(?:ä|a)ss(?:ä|a)))?\s+'
         r'(?:ole|n(?:ä|a)y)\s+(?:ihmi\w*|henkil\w*|kasvo\w*|laps\w*|'
-        r'last(?:a(?:ni|si|mme|nne|an|nsa)?|en\w*)|k(?:ä|a)si\w*)\b',
+        r'last(?:a(?:ni|si|mme|nne|an|nsa)?|en\w*)|k(?:ä|a)si\w*)\b'
+        r'(?:\s*,\s*(?:ihmi\w*|henkil\w*|kasvo\w*|laps\w*|'
+        r'last(?:a(?:ni|si|mme|nne|an|nsa)?|en\w*)|k(?:ä|a)si\w*)\b'
+        r'(?=\s*(?:[,.;]|eik(?:ä|a)\b|ja\b|tai\b|$)))*',
         '', without_exclusion, flags=re.I)
     return bool(_GENERATED_PERSON_SCENE.search(without_exclusion))
 MAX_DECISION_TEXT = 500

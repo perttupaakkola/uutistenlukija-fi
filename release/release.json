@@ -3,40 +3,222 @@
   "hermes_step": 5,
   "origin": "https://uutistenlukija.fi",
   "ga4_id": "G-35XERS8V6J",
-  "source_commit": "e12f57beb4b3598827ba724be713ce1b59cf51b8",
-  "job_id": "c5f827f0eb7bfc3ef3042d3eb693d1e38d96c8dd0ba0a0e6176d724e8d9e1061",
-  "packet_sha256": "abcf343e4467c4f0c93d05ef792fb8566f7ee720a253e4310a7e587fc123e8ed",
-  "draft_sha256": "cd3ce48107ae9443f8b4f1cb0f5d00e9f387096913b7b9ff971a65d66ca63576",
-  "image_sha256": "835ccab54252c5231b7b9a53cab945026aa17a6d38d616db2ad17c03198731a7",
+  "source_commit": "035781be6de3bc11b3fea1b409eb37403a198f04",
+  "job_id": "cb48c97676beedb567883b1c5a9f6be76a41360ffea8b6510870f3d5862a51a9",
+  "packet_sha256": "079c8b174eb1fbd2615198a2fd5ede18c0394e72d93f4b776056ef5220b76cec",
+  "draft_sha256": "af71cb48d3d1a378ac04f6db217b8cd423a68066a3092adbdc6f9a30637434e9",
+  "image_sha256": "70aa7b5b2e3e76ff06b24780dc44ffedd3b830d7ce620f17d304c9250bb6febb",
   "text_only": {
     "policy": "official-text-v1",
     "policy_sha256": "901a881c0ed60542e137b124a671a87d2fb07b251a12312d96053f5d4a134e1e",
-    "provenance_sha256": "c2f8ac4e7dae3071f451cfad2b4174e058956428ec56d2c17ce7bd8209a5c78e"
+    "provenance_sha256": "ae67d0b5e0bd6047204842b492162f40920f1be96a8d41b4b20655d703ca8cbd"
+  },
+  "stock_image": {
+    "alt": "Arkistokuva: Lähikuva valkoisen henkilöauton etulokasuojasta ja pyörästä, latauskaapeli on kytketty auton latausporttiin.",
+    "caption": "Arkistokuva artikkelin aiheesta.",
+    "classifier_output": {
+      "category": "Talous",
+      "concepts": [
+        {
+          "depictable_scene": "Muutama uusi sähköhenkilöauto rinnakkain nimettömän autoliikkeen siistissä esittelytilassa. Etualan auton avoin latausluukku ja siihen kytketty latausjohto näkyvät selvästi. Tilassa ei ole ihmisiä.",
+          "must_avoid": [
+            "Ihmiset ja ruumiinosat",
+            "Keksityt automerkkien logot tai luettava teksti",
+            "Tietyn oikean autoliikkeen jäljittely"
+          ],
+          "must_show": [
+            "New passenger cars in a showroom",
+            "Visible charging connection on the foreground car"
+          ],
+          "rank": 1,
+          "safe_to_generate": true,
+          "search_queries": [
+            "uudet sähköautot autoliike",
+            "sähköautot esittelytila",
+            "electric cars showroom",
+            "new electric cars dealership Finland"
+          ],
+          "subject": "Uusia henkilöautoja autoliikkeen sähköautovalikoimassa"
+        },
+        {
+          "depictable_scene": "Rajattu lähikuva pysäköidyn henkilöauton kyljestä, avoimesta latausluukusta ja latausporttiin kytketystä pistokkeesta. Latauskaapeli jatkuu kuvan ulkopuolelle, eikä kuvassa näy ihmisiä tai tunnistettavaa paikkaa.",
+          "must_avoid": [
+            "Ihmiset ja ruumiinosat",
+            "Polttoainepistooli latauspistokkeen sijasta",
+            "Keksityt logot tai luettava teksti"
+          ],
+          "must_show": [
+            "Charging plug connected to a passenger car",
+            "Open charging flap"
+          ],
+          "rank": 2,
+          "safe_to_generate": true,
+          "search_queries": [
+            "sähköauton latauspistoke lähikuva",
+            "henkilöauton latausliitäntä",
+            "electric car charging connector",
+            "plugged in car charging port closeup"
+          ],
+          "subject": "Ladattavia autoja kuvaava latausliitännän lähikuva"
+        }
+      ],
+      "version": "article-first-v1"
+    },
+    "credit": "Photo by Rathaphon Nanthapreecha on Pexels",
+    "depicted": "The image shows the front left side of a white car, likely an electric or hybrid vehicle, with a charging cable plugged into its port. The charging port is open, revealing a black interior with a blue and black charging connector inserted. A bright yellow cable extends downwards from the connector. Below the charging port, a black circular cap is visible. The car's front fender and a portion of the hood are visible, reflecting overhead lights. Part of the front wheel, with a multi-spoke silver r",
+    "generated": false,
+    "hotlink": false,
+    "license": "Pexels License",
+    "license_evidence": {
+      "image_path": "/photos/3846205/pexels-photo-3846205.jpeg",
+      "license": "Pexels License",
+      "license_code": "Pexels",
+      "license_url": "https://www.pexels.com/license/",
+      "photo_id": "3846205",
+      "photo_url": "https://www.pexels.com/photo/white-car-charging-3846205/",
+      "photographer": "Rathaphon Nanthapreecha",
+      "photographer_url": "https://www.pexels.com/@bank",
+      "response_sha256": "db86cc7f5cddb95a61d7345535ccdbdddd5d82424eb9e32e351f4311733411a1",
+      "retrieved_at": "2026-10-06T10:40:49.960410+00:00",
+      "transport": "jina_reader",
+      "version": 1
+    },
+    "license_url": "https://www.pexels.com/license/",
+    "local_path": "media/70aa7b5b2e3e76ff06b24780dc44ffedd3b830d7ce620f17d304c9250bb6febb.jpg",
+    "pixel_review": {
+      "alt_fi": "Lähikuva valkoisen henkilöauton etulokasuojasta ja pyörästä, latauskaapeli on kytketty auton latausporttiin.",
+      "approved": true,
+      "article_text_sha256": "269f3cf46cb4bfcc17aec2f5c099ec57c708eb469eeacda16c8909174b17778c",
+      "concept_sha256": "478d90d3738fdd2740b3c8593bd210b4fa04c46ebedafa2cbfd8b49f2b0b42af",
+      "description": "A close-up view of the front fender and wheel of a white car, with a charging cable plugged into the car's charging port. The charging port cover is open.",
+      "fit_score": 9,
+      "image_sha256": "70aa7b5b2e3e76ff06b24780dc44ffedd3b830d7ce620f17d304c9250bb6febb",
+      "model": "google:gemini-2.5-flash",
+      "must_show_visible": [
+        true,
+        true
+      ],
+      "no_people": true,
+      "reason": "The image clearly shows a charging electric car, which directly illustrates the article's subject of increasing electric car registrations. The visible charging connection on the foreground car is present, and the car appears new, fitting the concept of new passenger cars in a showroom, even if the full showroom is not visible.",
+      "reviewed_at": "2026-10-06T10:40:51.875954+00:00"
+    },
+    "pixels": {
+      "height": 627,
+      "mode": "RGB",
+      "variance": 23935.5,
+      "width": 940
+    },
+    "relevance_check": {
+      "accepted": true,
+      "evidence": "A close-up view of the front fender and wheel of a white car, with a charging cable plugged into the car's charging port. The charging port cover is open.",
+      "matched": [
+        "car",
+        "charging"
+      ],
+      "method": "vision",
+      "reason": "Exact-pixel full-article score meets the 8/10 threshold"
+    },
+    "selection_evidence": {
+      "article_text_sha256": "269f3cf46cb4bfcc17aec2f5c099ec57c708eb469eeacda16c8909174b17778c",
+      "decision_sha256": "71d922718f62c0c29e150badf823990fc043884b511563ba81db2d793cb6f932",
+      "minimum_real_fit": 8,
+      "searches": [
+        {
+          "candidates": [
+            {
+              "approved": false,
+              "fit_score": 6,
+              "image_sha256": "3e403c726ebd6a96fefe848fe64ddb601d8d44f528053277e0a7629c08af9b75",
+              "license": "Pexels License",
+              "reason": "The image shows a person charging an electric car outdoors, which is relevant to the article's topic of electric car registrations. However, the selected concept specifically requires 'New passenger cars in a showroom' and 'Visible charging connection on the foreground car'. This image does not depict a showroom setting, nor does it show multiple n",
+              "source_url": "https://www.pexels.com/photo/person-charging-electric-car-outdoors-34800929/"
+            },
+            {
+              "approved": true,
+              "fit_score": 9,
+              "image_sha256": "70aa7b5b2e3e76ff06b24780dc44ffedd3b830d7ce620f17d304c9250bb6febb",
+              "license": "Pexels License",
+              "reason": "The image clearly shows a charging electric car, which directly illustrates the article's subject of increasing electric car registrations. The visible charging connection on the foreground car is present, and the car appears new, fitting the concept of new passenger cars in a showroom, even if the full showroom is not visible.",
+              "source_url": "https://www.pexels.com/photo/white-car-charging-3846205/"
+            }
+          ],
+          "concept_rank": 1,
+          "outcome": "accepted",
+          "provider": "pexels",
+          "queries": [
+            "uudet sähköautot autoliike",
+            "sähköautot esittelytila",
+            "electric cars showroom"
+          ]
+        },
+        {
+          "candidates": [
+            {
+              "approved": true,
+              "fit_score": 9,
+              "image_sha256": "8638cc566590cd469bd3c2aa0a4b3f2df5c755abf462e21910acaa0a9b093079",
+              "license": "Pexels License",
+              "reason": "The image clearly depicts a charging plug connected to a passenger car and an open charging flap, directly matching the 'must_show' elements of the selected concept. The subject of a charging electric car is highly relevant to the article about the increase in electric car registrations.",
+              "source_url": "https://www.pexels.com/photo/close-up-shot-of-an-electirc-car-charging-9799729/"
+            }
+          ],
+          "concept_rank": 2,
+          "outcome": "accepted",
+          "provider": "pexels",
+          "queries": [
+            "sähköauton latauspistoke lähikuva",
+            "henkilöauton latausliitäntä",
+            "electric car charging connector"
+          ]
+        }
+      ],
+      "selected": {
+        "concept_rank": 1,
+        "fit_score": 9,
+        "image_sha256": "70aa7b5b2e3e76ff06b24780dc44ffedd3b830d7ce620f17d304c9250bb6febb",
+        "kind": "real"
+      },
+      "version": "article-first-v1"
+    },
+    "sha256": "70aa7b5b2e3e76ff06b24780dc44ffedd3b830d7ce620f17d304c9250bb6febb",
+    "source_url": "https://www.pexels.com/photo/white-car-charging-3846205/",
+    "stock_provenance": {
+      "image_url": "https://images.pexels.com/photos/3846205/pexels-photo-3846205.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "photo_id": "3846205",
+      "photo_url": "https://www.pexels.com/photo/white-car-charging-3846205/",
+      "photographer": "Rathaphon Nanthapreecha",
+      "photographer_url": "https://www.pexels.com/@bank",
+      "provider": "pexels",
+      "query": "uudet sähköautot autoliike",
+      "retrieved_at": "2026-10-06T10:40:49Z"
+    },
+    "stock_provenance_sha256": "8d04745331dbd01586b576674888a2ea5bb85bd0ceff48f5947b251094d39e62",
+    "url": "https://uutistenlukija.fi/media/70aa7b5b2e3e76ff06b24780dc44ffedd3b830d7ce620f17d304c9250bb6febb.jpg"
   },
   "new_article_files": [
-    "uutiset/helsingin-rakennusjarjestyksen-uusiminen-eteni-c5f827f0eb7b/index.html"
+    "uutiset/tayssahkoautojen-ensirekisteroinnit-kasvoivat-syyskuussa-cb48c97676be/index.html"
   ],
   "files": {
     "0bce47347326f83e8507a46c6b0c3bdb.txt": "f1a2b584ad8690f8447736e1c18c93360e63182fd2e6fe49ec7359a97c9b40c5",
     "404.html": "3ef41e1305790155be46be908dc06918bf950b3bb9e26ec7c76c0fcff9331269",
-    "_redirects": "0857289a27aba8c14cc2d022640d817155a8a6af6d426644e9a4f0bda2ee5ffa",
-    "ai-kuvat/index.html": "fd5df9d32e5ef214056bd2e03d338b2cdbfc50e43c7e7316db3736f6f75b99ba",
-    "categories/kotimaa/index.html": "812d268f64515356f7605b4249da5f59792695761e9e09abc67ea143a358eee6",
-    "categories/kotimaa/sivu/2/index.html": "0890f44bb9ae7ff11eee8a618455bf2f9026abf6174c54982194f2b5284b7ab4",
-    "categories/kotimaa/sivu/3/index.html": "e20e0d60be0567e7ac59307033c4f6657ec2949c98b41c9154e70f8698e634e1",
-    "categories/kotimaa/sivu/4/index.html": "586c2b67dad2c6bf6a234c36851081129d765d43d4a6e4b4ecab0e52ee9ae6fa",
-    "categories/kotimaa/sivu/5/index.html": "d06d9ee0765b648f73ac59f4dffe2c1a876809ff890b0f11eeb2d308088abbf1",
-    "categories/kotimaa/sivu/6/index.html": "8e18cf9e5f8b3cb6a004368f7da81585f6ab7fa82001de639b5485d202bdabb7",
-    "categories/kotimaa/sivu/7/index.html": "96ad30921f01b03d8e7be46b62040deb7aa0b50c0b5c31e2c8ce19801519ec79",
-    "categories/kulttuuri/index.html": "76cbbf7522e2333b06d4720cbdc0aaf1eaaae643527a18b910ec765b10f820b3",
-    "categories/talous/index.html": "97747c6b1b08b348457100b56f8c6769fea83e7a4402a83bf7570da8e042d0a3",
-    "categories/talous/sivu/2/index.html": "730cb6e20211a79169aa5d5b2eee917a0097170a38db166664dcfbd4f2c17233",
-    "categories/teknologia/index.html": "ced633607a7e830a198f62c0e978f08c8ea00a9861441f29e925d27b559e8e4c",
-    "categories/tiede/index.html": "70a28bae12c94f586c5afd7e3d67ee21939149c193dec67e31611badcb219d33",
-    "categories/ulkomaat/index.html": "ce277ced3bc09d474422c60ad9a33956822b63b67f763944f219b5344f83e3a5",
-    "categories/urheilu/index.html": "9b98504685b62c01c4819b7c6fd8c1021d1834694d54e160a8efca34139e7fcc",
-    "index.html": "969c189a2efec0e54db899a7a647029a4eb35d6b28b3a1792f658bc96262abdd",
-    "lahteet/index.html": "9e206f4160164340b3d03bca4584ff68b2deed2c7ad3aff8cc8bd91b2fea558f",
+    "_redirects": "d32073479f2107c71e07aeb4159e99e1b98b9c7432b16f0c0dd8e9c3cef5ec1c",
+    "ai-kuvat/index.html": "c32a1c13d000caa7357d7ca269e645317b633e58301c9f1acf178b68d34234db",
+    "categories/kotimaa/index.html": "8fe245ab5297b128adeef35315d5d98fb6c7678c82a0d52254225f7ada23eea7",
+    "categories/kotimaa/sivu/2/index.html": "ec26370159b018fe9b3f5cd1a0b286801e6775166bfbdc5408376d5ba04a804c",
+    "categories/kotimaa/sivu/3/index.html": "1810aba527716370f1af0ffe79687600a06eb1c9a2a6b8ff9e3849fbfd85292f",
+    "categories/kotimaa/sivu/4/index.html": "753f703c537d7100532434a44110db2cd81950d822f700975117ea537bab401a",
+    "categories/kotimaa/sivu/5/index.html": "f3760168b6b61410759c97ee93b25b120a580011d35671d5db665d546080bdf7",
+    "categories/kotimaa/sivu/6/index.html": "9a648346299b37390d7c67de882e209aeead632ecf2e50072cc4f9e31d6fa38f",
+    "categories/kotimaa/sivu/7/index.html": "1b750ef668dba7cd584d1be2180f47c9af6b250f336574afea6e08b2ce273110",
+    "categories/kulttuuri/index.html": "6ad2f11c2e64204ab147c73ed1d062f6675c6cc2d14bd2c974dd81f129e537d0",
+    "categories/talous/index.html": "0e72923f42ab994583446a9eb0f1f863c055cb30d050c03a953fd1100522f5d3",
+    "categories/talous/sivu/2/index.html": "2b0802e04f60634f539e5dd3f40e1a09cb7d802aea90962f3c7f813a36f965db",
+    "categories/teknologia/index.html": "d0cde820414ee8704e1da4ce9ef3d53a460c175e5f48a60c217a0de686491d4c",
+    "categories/tiede/index.html": "784154dbdbc0a70d87728d01ac65efc116b72be70ec900b4b8d54f0397c8402c",
+    "categories/ulkomaat/index.html": "17b50cbcca44738e2150b6a36742ba2baa5219b1d668010c86906d1eb6c8e009",
+    "categories/urheilu/index.html": "ed739db1e2ab1f4dd5e3489770987eb8dfada90de6a25fa789d07199cedfd026",
+    "index.html": "35dc625d1cb37b8f76d26ae1c92c8f7e7e3374e795bdfdb6377924c6981a25ef",
+    "lahteet/index.html": "ca2fc37998919b25a7f3faead3e0c262c11ac826b8b8dc1cc6a2cb9a7e8a4233",
     "mvp-assets/01867736718078bcdabb739dcb8fd7b1e6d2aade84bf3e81f0cf68b8004971a5.jpg": "01867736718078bcdabb739dcb8fd7b1e6d2aade84bf3e81f0cf68b8004971a5",
     "mvp-assets/01b79a7a532c0a287fefc6792135f4f5a246ba352d5efc6131385157b1a9316d.jpg": "01b79a7a532c0a287fefc6792135f4f5a246ba352d5efc6131385157b1a9316d",
     "mvp-assets/020c65efe1489020fdc17475da30723728933f3ce06ce05a837fd1c442cc6a5d.jpg": "020c65efe1489020fdc17475da30723728933f3ce06ce05a837fd1c442cc6a5d",
@@ -256,6 +438,7 @@
     "mvp-assets/6e9130c6dacb14aee5e67a102a134b7caa0e236d027eb419ffa6c753ef9e44ea.jpg": "6e9130c6dacb14aee5e67a102a134b7caa0e236d027eb419ffa6c753ef9e44ea",
     "mvp-assets/6edf21477c4b8d0b96b7b32fbf2ca44616f78db3430b004390a93c913608c991.jpg": "6edf21477c4b8d0b96b7b32fbf2ca44616f78db3430b004390a93c913608c991",
     "mvp-assets/7075f35e2e9f1221ed82bca4c48689d6c2c79c5c00e90e36be1239620e570fea.jpg": "7075f35e2e9f1221ed82bca4c48689d6c2c79c5c00e90e36be1239620e570fea",
+    "mvp-assets/70aa7b5b2e3e76ff06b24780dc44ffedd3b830d7ce620f17d304c9250bb6febb.jpg": "70aa7b5b2e3e76ff06b24780dc44ffedd3b830d7ce620f17d304c9250bb6febb",
     "mvp-assets/71a3591ff8fb41bd8b50b19a924e5d65d0f138f09aa48c2396a9a6a2f1fd5084.jpg": "71a3591ff8fb41bd8b50b19a924e5d65d0f138f09aa48c2396a9a6a2f1fd5084",
     "mvp-assets/7228edc4f7f3a6a48f3cd4b1989fbbfad1b7e6dd9c29ce1f92028bbfcb3eca18.jpg": "7228edc4f7f3a6a48f3cd4b1989fbbfad1b7e6dd9c29ce1f92028bbfcb3eca18",
     "mvp-assets/726e608c93edee7e7187d5e74d0dd7cc6fa2dad03f8a7668464b02dfd68b4267.jpg": "726e608c93edee7e7187d5e74d0dd7cc6fa2dad03f8a7668464b02dfd68b4267",
@@ -577,31 +760,31 @@
     "mvp-assets/portal.js": "ae7a9eee9306242d93362e5d9b19506af0cc9aed46e19b75c1b475bc3727c92a",
     "mvp-assets/style-readability.css": "5698b48fa0cfab909525ebff2e9dc579e8e3ca3c332c6bae114bc8aa27536f85",
     "mvp-assets/style.css": "c38c69b89c21567c06f0b8695347f82b02ce529911525ce6448c3722b9f6a605",
-    "oppaat/index.html": "872593d13ac07ac5f7a4af10560e9bf5756506f48e8b2dd43c5d7f2bd0f2b4f5",
+    "oppaat/index.html": "42968c82bd9d39b613e94d7717ac27116060b362839b3e9a2cdbef2b4aecf525",
     "robots.txt": "6dc23d5568c5bc8604aa1f40cc531e4ba269d6434cad28e660c4d327f2527a13",
-    "rss.xml": "6e06d9ea273bd8fa97da14a85d69f64bbf614b577e0ed113376650758007c251",
-    "sitemap.xml": "5ea878353f672fdcb4b77f70f8f4128cff38a80e789e01254c3d4ca9be09a09f",
-    "sivu/10/index.html": "63f9576b85f67713c1b1d96c47fb0bc03284cfb1c18e2a0955e251ebb210f2aa",
-    "sivu/2/index.html": "d0c75c2f06e61329b7fa567133e6779284d1d61b141aaadb2ed16a42add9d8c4",
-    "sivu/3/index.html": "e3b6a4e60d5ef5bd6f9fe25ddbcc1f185ebf1315951d8b01ab52bc0faf48fc2e",
-    "sivu/4/index.html": "cfb7bfef4bf05766759f8d54b950e533ec8b56033a638645359a91b20da110b0",
-    "sivu/5/index.html": "87fd2b0f89bae1345e27613beaf29fbc146d7e09033328285fd24ccec95f0af7",
-    "sivu/6/index.html": "f6951fac66fd0c1972c7ef9fa4e03f6ee60e82444c12b3cf6a482cba93dcaa27",
-    "sivu/7/index.html": "c05c8968e6972e2a9e5ef60381549f2acb6870e440a7682a0c56f54fb9953790",
-    "sivu/8/index.html": "e47076288777e41cdbffc4dbf20006e2db68abd57153b49fcb4821aa3b370084",
-    "sivu/9/index.html": "e3dcb20a05d70e4de0e7d2f608278b53eb2b97cff52ce1fc2f3521befc504c8a",
-    "tietoja/index.html": "b4e7a49b96b88a095f2cebe723bac37c9d14f1c3c34adfe0664d0e0da51524a0",
-    "tietosuoja/index.html": "e4e4e1da97017153da382048282af3945eeb2de0e79770a31389f64e1eecf830",
-    "tuoreimmat/index.html": "83fc7fedbdf561bcfad7888e2ce099d460c331eb8c6c47a2157aa57a827c2398",
-    "tuoreimmat/sivu/10/index.html": "4f75bc0e97a26827c3128a1106cabc2c0525b8baedf4d9ff1ee0488c8105dfff",
-    "tuoreimmat/sivu/2/index.html": "d122fc70319909a420d751de9cd876da86634c95f92494e129449fd2fd50101b",
-    "tuoreimmat/sivu/3/index.html": "5cfd250e90b6521d684f7ebd6414905e0e266e03c9580e1290f56d39e788348a",
-    "tuoreimmat/sivu/4/index.html": "5e32d2df16c20f0792f59a768be303791b129ef35eaffec9c7ffed1e8a746ff8",
-    "tuoreimmat/sivu/5/index.html": "a0d94956299b94dee6fb4475fa086090db6912e8068976e8e246402c96a7dbd4",
-    "tuoreimmat/sivu/6/index.html": "ee93b4664cdf0e5975bc8c30026f14d7dd63af86ee0f64439b22c64e1120f2b4",
-    "tuoreimmat/sivu/7/index.html": "ff00b1e880b53226ab263c94ac9a8cb4f2fa562c679741756fab9217f288182b",
-    "tuoreimmat/sivu/8/index.html": "bc95e665c8e633a032a809359c14a98a7732d3e6e3b9254cfb246690f5cb0df6",
-    "tuoreimmat/sivu/9/index.html": "a6076f59a1a43423a7b7561fbca8b20019b781862712837d10f8680da6e68a07",
+    "rss.xml": "c291d8f0e6210fd4c17b74e08d963070835087a57fa30394cb934654bdfa2626",
+    "sitemap.xml": "a4f680c0a1ab29a62209c13d9c33a6d1253b7dcfd5e3be24ce21f1929a04f06f",
+    "sivu/10/index.html": "c0ceb97e17e2b1c896b4eb8dcfa0db67326989088b077cb699dedecfdb0e647c",
+    "sivu/2/index.html": "0da346c49eb189da98aae304be9615123e77c5f28666f8496e3239773168155c",
+    "sivu/3/index.html": "2611dd45ff196cb016f62155e7bee080af6cbadb52e321d82086710f97f93dc4",
+    "sivu/4/index.html": "93a49b320eb4d329f4b539e92a0801d6dc3d5b9e3e09ded38deffad56b302311",
+    "sivu/5/index.html": "7687e0dc635ac9df0f95a5c078934aefb9a1327a6a54a2a191a090bd3e190b14",
+    "sivu/6/index.html": "01b9897a50e6672a00a623d9722211fbf439065b8ef40ac5f010a32f1b5146e3",
+    "sivu/7/index.html": "b24692ebe233cfd4feea43a1c7d48b0b169a7b67a438b5fc870e86d900bba663",
+    "sivu/8/index.html": "3495307ef59866add6f068ba0731dea23e98a20da2f95a9aa9741e4b019abab6",
+    "sivu/9/index.html": "a717585e0b0d997ba5f203f715495340ba8c25c32d317a83b8bd6ed34c247659",
+    "tietoja/index.html": "ec53301dc14e7be88743cd22bae007c68399d2cda0bba587e97f15e9a8d7e326",
+    "tietosuoja/index.html": "c6661eee976d16d70742ee160f5633a41f28557daf28cf4a2ae6f21d1566ff3c",
+    "tuoreimmat/index.html": "af993a889c131173afea23712d0752f6a52bc3823dc712e1c7b0b4c86b1ca0d6",
+    "tuoreimmat/sivu/10/index.html": "b6261b89755bcf78501289aa0ab1d5b420e045cc55f956ff7f3b879203511fde",
+    "tuoreimmat/sivu/2/index.html": "95f309bd7b418c4dd5f704768ee46257f93a650fe42af2eb32e60cb41790371a",
+    "tuoreimmat/sivu/3/index.html": "04d1fe87d561afa0fb91291d278eb507979e4ae24f40e6c144331619110c26c4",
+    "tuoreimmat/sivu/4/index.html": "92a800fb52eac48e0e874edbf5b3bb08bd8e2a2ad764d5cdc486c8b1510b9f07",
+    "tuoreimmat/sivu/5/index.html": "7af94cbd65ff2d23e39fed54ddb3395797b766abfbee0b0e6029a6a64a0a669c",
+    "tuoreimmat/sivu/6/index.html": "f82236736146067f35d4494ba265581f98b7d1d37304240aac3248aa335617ef",
+    "tuoreimmat/sivu/7/index.html": "1bcd8c9361686eb04add521b14e87a15a123833da4f8f81f74a1ad2466316565",
+    "tuoreimmat/sivu/8/index.html": "b8ee0b859e778d7d8941524e68816fcefe2588415b4b0b38bfb86de0edeb65b5",
+    "tuoreimmat/sivu/9/index.html": "ec9ac199a14d3dcee8375006ff29e08393898a8f0c92650d569d0ff1ae2dd1f6",
     "uutiset/17f3a9e55a5d4d88935f20a8572a23b2522e0894cb422211d2e7f4022b290d36/index.html": "f8bba59d140818710fd0b40e5ea2acd3f6d2506cbd877d3547afff9fc7ca7049",
     "uutiset/23759dbb8476ae59710577bdfd0d4cba3960e107147aed62bf13cbb38659c5c1/index.html": "4e8b636f577e02f15669e12445b1ab4b6ea95f13bc60ac86179b39f96ce0dc64",
     "uutiset/38c33234e1a7981b6f66bfd1545876e5e55061ef2fe11e6664dfa123c3800986/index.html": "1b3db1560585175d085bebc71afb133498c294c57a408510c54ed527f8695b68",
@@ -615,948 +798,749 @@
     "uutiset/8d2082f784a9a0de37af7b186eadc015dba2533fe40674e1a1611cf1043b8ce5/index.html": "1cb85356dcd175739ce8c9bf44cb8cb8a79adee3c6a7dc127047e9862dc736f2",
     "uutiset/a421e685a2cb7e31e84256cb4a854b3444d0da5b5b6a72f6237d68e661b7bc3c/index.html": "684ff134eb4e9a603fecc0d74812e11b8165fa360bc080912793e1fc4da12765",
     "uutiset/a4a923e9509dfb822f648accd35235cd5aad2c5bf178814c20d4d03815c24edf/index.html": "8ae96cfe2f8047c21368e608be8e758e8596c1451d4eaacb30e6790c339b6b01",
-    "uutiset/aanekosken-paijat-hameen-irtisanotuille-haetaan-eu-tukea-df471ee2bb29/index.html": "21c6669c32f273e14864a61ab08e707372f99ed95a682ac9979ef8fad6fa742c",
+    "uutiset/aanekosken-paijat-hameen-irtisanotuille-haetaan-eu-tukea-df471ee2bb29/index.html": "c5d87c4857c811237b93486a92b19c7970c27946a8c90bbcbb6156a89fb2af38",
     "uutiset/aca81b732a644936757bd14b1304352fed52be190ee17d8c8156524918f1666c/index.html": "efe169f0142a65166fc1bdab4505a05ace7fec8db6961d9a32f9fa52ff9c231d",
-    "uutiset/alueellisen-tieverkon-korjausvelka-kasvaa-selvityksen-b7a9132e4a52/index.html": "c0d5a0ea06832a56ea3d5e06a692bb290d9ff226de76f9e426af416d21c7bebb",
-    "uutiset/annefredin-siltatyomaa-kaventaa-tuusulanvaylaa-9d1e28e3e034/index.html": "bad5eb6ed355bd6a07b7a31577d5f886fd6052057bf04c092fa18f68e14dcf18",
-    "uutiset/arctic-open-alkaa-vantaalla-6-lokakuuta-07b41b9ba608/index.html": "bf59430644f64f6317f78c0d643ec51ff328b5ae8a164c2c917f277223368b31",
-    "uutiset/arkadiankadun-uusi-silta-valmis-katutyot-jatkuvat-5bc3d1cb671d/index.html": "5f0cf80524206d2f6575b453d46a4774bcebff911b14dfb906e8ef98334a75d8",
-    "uutiset/arviointineuvosto-suosittelee-tarkennuksia-paasykiellosta-fe62074fc0be/index.html": "f56d7d53367178e58229577bd7bdbb75cc4ba80d1119c0ffff4a3760ce843d4e",
-    "uutiset/arviointineuvosto-vakivaltalakiehdotusta-tarkennettava-fb1552eb887b/index.html": "75e0577b268b46190972935ef0803bff790e0c857a4dfce5c435809cacf13f8e",
-    "uutiset/asunto-osakeyhtiolaki-uudistuu-lokakuun-alussa-d62554b951bb/index.html": "66bcbf1bceb5bbdc63334c3a7ae331cd2553d3039087e9319c913ca32932f38a",
-    "uutiset/aurinkorinteen-koulun-yrittajyysopintoihin-tulee-oman-d40abfad061f/index.html": "ed26baade76b14af820b2b1c0fc6e3941cc5a1f956781b8e23b790e45e86eb45",
-    "uutiset/avaruusasemalta-otettu-kuva-nayttaa-monterreyn-vuorten-8d2082f784a9/index.html": "6859d1fd1109338e0c1a7e746bcb2887b614001cdbd1952c639d79552a5a1f23",
+    "uutiset/alueellisen-tieverkon-korjausvelka-kasvaa-selvityksen-b7a9132e4a52/index.html": "b7c52e053701432b81c298d239afb12f4d65bee350e703e0c3c088d030e1441d",
+    "uutiset/annefredin-siltatyomaa-kaventaa-tuusulanvaylaa-9d1e28e3e034/index.html": "94663837da9d957a2f3311def07187cb3341791c8cd02dcb14dd628b5fed0640",
+    "uutiset/arctic-open-alkaa-vantaalla-6-lokakuuta-07b41b9ba608/index.html": "2ec26e9bd000f78e89772193b1a829b06199aae9377ababc0d958f74cafef4aa",
+    "uutiset/arkadiankadun-uusi-silta-valmis-katutyot-jatkuvat-5bc3d1cb671d/index.html": "83fae91fb1417b058c9de2e4657882065aad05cb981650d16952fa6712837a82",
+    "uutiset/arviointineuvosto-suosittelee-tarkennuksia-paasykiellosta-fe62074fc0be/index.html": "ce863f6f6df5569d70eacadcebb62b33b8c5bd727b8e41ff2b659fc85d9dbce5",
+    "uutiset/arviointineuvosto-vakivaltalakiehdotusta-tarkennettava-fb1552eb887b/index.html": "4bce057eda52f0419b83604f4607ae1b58c9170b3e4aad48b6254b5204ee39f2",
+    "uutiset/asunto-osakeyhtiolaki-uudistuu-lokakuun-alussa-d62554b951bb/index.html": "3339c4f723cab3a2034f0b1b6629acb29e21222ef0397d161163cc3ad988aab6",
+    "uutiset/aurinkorinteen-koulun-yrittajyysopintoihin-tulee-oman-d40abfad061f/index.html": "5fac49cf6a037389931e8347cb30ce3af632cb319e43e1b35906a3c31b4bd88b",
+    "uutiset/avaruusasemalta-otettu-kuva-nayttaa-monterreyn-vuorten-8d2082f784a9/index.html": "7aef0a665b12d2155851893f2ebc459b520e12617e6b4f92a80fd1df79d3b510",
     "uutiset/ba164fa2011db8e10425ba41ff1894f9a21b08a25cc3ca021990d84f2ff72682/index.html": "1b44aa7f1b9ad73f8a73ce558f8a1b3fd90017fcb316ccb8210fe379bd099733",
     "uutiset/bd71b526d449ca4df522726b9a909fdca71f16d10555ba06d9338bb03b18652f/index.html": "edb6fbb6d9c6b15e875208ddd92315feb06a96f111f73fcb0924d20882419cdf",
-    "uutiset/bolivian-suola-aavikot-satelliitin-vaaravarikuvassa-0924ef34c6ba/index.html": "31860fa0e06e5c0586737a9ccc1c88a762a1aab92e7a017f0de1362a5de6e3ab",
-    "uutiset/bristol-bayn-syysmaisema-nakyy-satelliittikuvassa-350921f18f95/index.html": "bcb7007327a3ad2526bdb5fb098273a742f622fec80825e55ab82131b6a5073c",
-    "uutiset/businessoulu-aloittaa-tyonhakusarjan-nuorille-210c711e2099/index.html": "ab6b5af17c272b3533d27958359094aa1c84fa836014adcd8a6e7758d05cc411",
-    "uutiset/cygnaeus-palkinto-tulevaisuususkoa-vahvistavalle-mallille-37cc7ff33cb5/index.html": "ee50a195d425e34033429e6b8fdae6e47ceb6d58eba9805a923dc8f9b48cbc64",
+    "uutiset/bolivian-suola-aavikot-satelliitin-vaaravarikuvassa-0924ef34c6ba/index.html": "bc1224e30a59c11659ceaab45a6a7964eace7e28368be77ec6c5082801f97351",
+    "uutiset/bristol-bayn-syysmaisema-nakyy-satelliittikuvassa-350921f18f95/index.html": "61c1a4699da8d2914dd040b5458d8c149b68db550c673947367650d642e534f1",
+    "uutiset/businessoulu-aloittaa-tyonhakusarjan-nuorille-210c711e2099/index.html": "1abff53cb6340f81a3d39d3880f0b0e550f96168143b7e07e39352ab20cd297b",
+    "uutiset/cygnaeus-palkinto-tulevaisuususkoa-vahvistavalle-mallille-37cc7ff33cb5/index.html": "afae30f2dbf8cc45bfc34518bb1571aefa12c6cf8366db6e8477b71cce82526f",
     "uutiset/d6f4493ba6e8fe544637229380dbba892bb87f002f66bba68c536b146eca957c/index.html": "2042bfcf42321a5ac1a22be704d48ccb31c389e62869b3d0449179e93e8d05f0",
-    "uutiset/dixin-kuormaa-siirretaan-ratikkatunnelin-tielta-4989a6476536/index.html": "66b071a4e13a52e022ac9b7bce012dc8b7b05c1478aebe8b0877fa9bc2bd17c2",
+    "uutiset/dixin-kuormaa-siirretaan-ratikkatunnelin-tielta-4989a6476536/index.html": "c44381e285913a6ebfb1cfcb22cf0053ee3c969190ec4cb99e3f4aab787932ce",
     "uutiset/ea2b1f992164639a89e76eafa9b96141479b9461b17aee281ace2296550b41cf/index.html": "9c8e902884769e236d62b984ad6fd52f72a52e44804195e0e09dc6c5f3902512",
-    "uutiset/eevil-stoo-avaa-lumoklubin-korsossa-kaupunki-kertoo-37f8679698b3/index.html": "8c8dc4a73f681a3e1b8c2fbb5cbf8e69e9df396807d8c6eb08187d73e3f79cac",
-    "uutiset/ehkaisyneuvonta-muuttaa-kruununhakaan-24-syyskuuta-7e5c6325a332/index.html": "4624ebff7974d9b4b3d4eca8200a6a5edae36772a749b641c9aeb25ee571edaa",
-    "uutiset/ekp-n-palkkaseuranta-viittaa-2-7-prosentin-sopimuspalkkojen-8552d795654a/index.html": "79f117837bb1a4ec84bb29256c83eb63418d9ce342eb16f55eff66baa15ca9f8",
-    "uutiset/ekp-uudistaa-eurojarjestelman-vakuussaantoja-de3982a6e85c/index.html": "793912ee2533182ae393e9c5a8144dfd54f968f2d44816ee3fbfd341c8f27f25",
-    "uutiset/ekp-uusista-euroseteleista-lahes-10-miljoonaa-vastausta-b4a58ddabbcb/index.html": "6378e06a6e298dd8be29cc5dd20070a1763a80a3ae7999d0716461a26c01df89",
-    "uutiset/energian-kulutus-kasvoi-6-tammi-kesakuussa-8d4dcbd44943/index.html": "7b53bb8557432ea98f4002715dc749b36a07af6adbb95c31c2812ea77801a635",
-    "uutiset/energiansaastoviikko-kaynnistyi-30-kerran-da961501d33f/index.html": "d96cd733e950ec7d47aca61ada9bd5a979f7736444e77c2de18be4bbb60c1a27",
-    "uutiset/energiatuonnin-arvo-kasvoi-ennakkotietojen-50-59c33e8be2a0/index.html": "c7dbc2c56f8232299197dfbfe093e7f45c3f088de3e879de82285f75fd8484c8",
-    "uutiset/esa-kohtamaelle-sivistyksen-suunta-palkinto-131bf1f10bae/index.html": "25d9ea3a5087955bc3d1d181c8015d7fc8a24c849430dcd690a5b80fbc890bae",
-    "uutiset/esplanadien-kaavaehdotus-suojelisi-puiston-arvot-c35acc4fb9b9/index.html": "6f7041e955260687ad3bd4823fc62af0bb9981d66d9853de7ad77e0d63c7ae36",
-    "uutiset/etela-koivurinteeseen-suunnitellaan-noin-135-uutta-1f3d2b8cfef3/index.html": "729aa0604b347c8402c523be1fbf452929b789beedb85e4ffa4a3d759784a10f",
-    "uutiset/etelaesplanadin-pyoratietyomaalla-tehdaan-yotoita-a659c4d75a68/index.html": "51113b8607c1c89ec79723db7697eb77341a9a826737ca25ecf2cd0f297320e0",
-    "uutiset/eu-ministerivaliokunta-linjasi-kantoja-eu-uudistuksiin-b69ef715fc50/index.html": "3bf40b122d8464ce69d81e37baf0533fc11d3eaee34a579a3051301624325b7f",
-    "uutiset/eu-n-laajentumiskomissaari-kos-vierailee-helsingissa-61f60677da98/index.html": "3f7bf383a977186d2b04c3170ec271464577ffe9003e62975f97593ae2db666c",
-    "uutiset/eu-n-puolustusministerit-koolla-brysselissa-1fca2d498635/index.html": "891ae32fc7716ea0689c25cfdcffa8c4df300a76f1e5cb2b24cfab2ad938a8a2",
-    "uutiset/eu-rahoituskehys-suomi-pitaa-komission-tasoa-liian-korkeana-518eb0208bf9/index.html": "9ded4b0e19b818023e06b43ea7f871743c5348bd8291f89941831fe5dac69df5",
+    "uutiset/eevil-stoo-avaa-lumoklubin-korsossa-kaupunki-kertoo-37f8679698b3/index.html": "6945dcc8b67af32c75966e99d4c300b0dc743adffc207771f71580da22a068bc",
+    "uutiset/ehkaisyneuvonta-muuttaa-kruununhakaan-24-syyskuuta-7e5c6325a332/index.html": "3d73d70af8abf1f9e376e3af885d99ce6a1fee377b3916caec5b1f582d24dfa1",
+    "uutiset/ekp-n-palkkaseuranta-viittaa-2-7-prosentin-sopimuspalkkojen-8552d795654a/index.html": "b39ad3b1b55675df5e2fcb93404a23a80ff47ee10fa198ee463a5d13f0cc0f68",
+    "uutiset/ekp-uudistaa-eurojarjestelman-vakuussaantoja-de3982a6e85c/index.html": "22a99e2bcdc2a9d7179f798dab445162a7f7bb74f8c1b80d7d98be49bd8ed3f5",
+    "uutiset/ekp-uusista-euroseteleista-lahes-10-miljoonaa-vastausta-b4a58ddabbcb/index.html": "16c860663b96789fef865375db52bb820cbb019819cc8ac3393f33c878bb31da",
+    "uutiset/energian-kulutus-kasvoi-6-tammi-kesakuussa-8d4dcbd44943/index.html": "e07062045675716f7bda41865a355fb1ccae84a407ab1b2babfca70e47aafa73",
+    "uutiset/energiansaastoviikko-kaynnistyi-30-kerran-da961501d33f/index.html": "c1285c73b07f005cb290976ee69492c589c25cc67cfc6650ca617b5f4c652972",
+    "uutiset/energiatuonnin-arvo-kasvoi-ennakkotietojen-50-59c33e8be2a0/index.html": "5b44ab8a1aa3c8e0ed553fe5e418696847e32e0d6a5a19fb3033a0d5c0ac5b78",
+    "uutiset/esa-kohtamaelle-sivistyksen-suunta-palkinto-131bf1f10bae/index.html": "5d321229de9e1d6eef16f0c9a1f809c1654dbe21cdd72ce43642fcad5397ca2f",
+    "uutiset/esplanadien-kaavaehdotus-suojelisi-puiston-arvot-c35acc4fb9b9/index.html": "44777bd221e288c7b78c4e1c34aaec3f74f23fdc8da6142121a4c3b986cd08f9",
+    "uutiset/etela-koivurinteeseen-suunnitellaan-noin-135-uutta-1f3d2b8cfef3/index.html": "0aaa273b1b18ebe55e6f4b53879c819c46551b78b164d2416b03601cfc38ae04",
+    "uutiset/etelaesplanadin-pyoratietyomaalla-tehdaan-yotoita-a659c4d75a68/index.html": "1735265a3942f37de3582b291b361df02491da5f20cd48fdea62a9fec775af44",
+    "uutiset/eu-ministerivaliokunta-linjasi-kantoja-eu-uudistuksiin-b69ef715fc50/index.html": "e4bd1b4a2c1a56e1cb922688922090a4be28c42dd2bf5c7ca7368207744fc1da",
+    "uutiset/eu-n-laajentumiskomissaari-kos-vierailee-helsingissa-61f60677da98/index.html": "52b31a609358151f791b2736369dcf96bb95ad0b340d3d8c992d19e94483755d",
+    "uutiset/eu-n-puolustusministerit-koolla-brysselissa-1fca2d498635/index.html": "bfcbe8d31de109d209625d7fbda347180ab50a0bf0617dd76b3fb2fa0b43283c",
+    "uutiset/eu-rahoituskehys-suomi-pitaa-komission-tasoa-liian-korkeana-518eb0208bf9/index.html": "37065e513d7ff1d86aff870cfcd59068ddbc857bd1dcb1a072376d9e8ba9d307",
     "uutiset/f2a3b9da839589d46ac72b039229620a9aa0e0d265327182362d25f7859b7803/index.html": "326338149b0d119ba4ec4744333a40cdd6448d7d0cafe8ee46624fa06b92a9e6",
-    "uutiset/fay-palasi-trooppiseksi-myrskyksi-modis-julkaisun-0a4d65b77061/index.html": "0234535a0390808227890da9ebd6771365075df422fe3d3dab965c976f102a08",
+    "uutiset/fay-palasi-trooppiseksi-myrskyksi-modis-julkaisun-0a4d65b77061/index.html": "d6c1bf6e3b2c9a103a738d1d4a809eff3c38825727eb98661cc22f602bc6eae0",
     "uutiset/ff4aa5e086dcd4a698701c61ddaf9f81c2e7746fccda531c05e280c20527d5c7/index.html": "9c890be988d60f74aa1937309960317346d13acfa84124e5a90dd18b196ae17c",
-    "uutiset/fortumin-yritysasiakkaalle-suositettu-hyvitysta-45c3d38688f1/index.html": "634f83cb3105c98722501d7ac3413fe04f4aaef322832e7884335d833d3cb40c",
-    "uutiset/fredrikintorin-remontti-viivastyy-arviolta-vuoden-loppuun-2a57e16b0903/index.html": "4956899bb9ad39760bb32fbb0e97c1dd51918e033efcc70e97590ea47ca6f533",
-    "uutiset/hakansbolen-kartanomuseo-kutsuu-syysloman-tapahtumiin-2684ca78ebd5/index.html": "de094d7fd376680a32116b576ed68235c671ce6f526568f5cb7290d6f5d43b7b",
-    "uutiset/hakkanen-vieraili-libanonissa-israelissa-265e1c050023/index.html": "70d05df907ca593d52b34eb37528a68d6c1a766ea4f9f6a07540df0b79ec3be7",
-    "uutiset/hallitus-ehdottaa-saaristolain-uudistamista-kausiasukkaat-2a902aa7df9e/index.html": "b895f5fe574372637b60af58c55b7825b6c3f6d06261c681a259bb32e46d33c1",
-    "uutiset/hallitus-esittaa-koulutukseen-joustoja-hairiotilanteissa-dbd531c56a76/index.html": "75148da1571d59662e903c6b07ea04f9c7ab5f3251422856f6f9d723024a62c4",
-    "uutiset/hallitus-esittaa-lvm-n-budjetiksi-3-73-miljardia-b7dcd94bbbf9/index.html": "faa6e8545c5bec2f14fea77cb5b4dc7185aa8725c2afdb5a3f947484ef0ddc9c",
-    "uutiset/hallitus-esittaa-mahdollisuutta-jattaa-kelan-f3971ff28482/index.html": "7450f989b870714fb679a68dad604062d3e0718e67e44723cf58d43bcf8519e3",
-    "uutiset/hallitus-esittaa-muutoksia-sote-lakien-palveluhankintaan-8e7e3e585fec/index.html": "52b7246fc11bc25006c54d1938a8b99c16fd186af939db4de283517937c33d5b",
-    "uutiset/hallitus-esittaa-poliisille-laajempia-valtuuksia-puuttua-90375dd8de77/index.html": "8a10fd241e292878b7fe0c5f8d53e9ab47a671831328862332300efe8b22c196",
-    "uutiset/hallitus-esittaa-tyottomyysvakuutusmaksujen-laskua-2027-f97bcef965b5/index.html": "13e1efa1015a3fdb37891371932cc6d71d751a780a7847bcb08dd4bc254390fa",
-    "uutiset/hallitus-esittaa-uusia-maksuja-erikoissairaanhoitoon-1009344e322c/index.html": "1781e7fa6aa0aebaa653328f08b5857ead1d623ab2741c99d6267b7c9dd99919",
-    "uutiset/haruspuistossa-kaadetaan-noin-100-puuta-lokakuussa-c3e242101b0c/index.html": "28f8aed5db28ce346c97dd5d84320cc7cdf1558c1f6ec3dc9638c4a16a7fe1b7",
-    "uutiset/havikkiviikko-kannustaa-kouluja-vahentamaan-ruokahavikkia-61b3c101e925/index.html": "8411b8ac8a285a1f8ebaab7de08a2ba90432cfb9dea6b3aec2e3e00d0bc93637",
-    "uutiset/helsingin-elinkeinojaosto-kuuli-tonttitarjonnan-katsauksen-8f7bf8135bb7/index.html": "616215fba707d56da5254315beb01a2f4b948cf3b9afb1cb0218d874f0ae8808",
-    "uutiset/helsingin-konsernijaosto-puoltaa-raitiovaunuhankintojen-38c33234e1a7/index.html": "edd5e4df326f226e473c01d20015ebdf7e097e9de774357a5a856e1072af7b43",
-    "uutiset/helsingin-kyselyssa-myonteisia-arvioita-etahoidosta-ff4aa5e086dc/index.html": "43f6c939b6d5d0c282b352537be08c6efb98454aa48d5d403a981d3236a0a1a6",
-    "uutiset/helsingin-liikunnan-avustukset-uudistuvat-vuonna-2027-728af67d1511/index.html": "26230417aa20b61c8f717a46699a8f3b7d60a63613e0b1f57eb87630837b7771",
-    "uutiset/helsingin-pienituloisuus-yleistyi-vuonna-2024-333a8e11bac1/index.html": "ce5ecc057c689194f1b18f53fda296fe6e122c302454efdb577f5c93bcf3b9f6",
-    "uutiset/helsingin-rakennusjarjestyksen-uusiminen-eteni-c5f827f0eb7b/index.html": "630ae23e9314ea9828d8fde9ff45c39040e853268e42506bcd7428a0facc4f55",
-    "uutiset/helsingin-silakkamarkkinoille-uusi-ravintola-alue-lokakuussa-8919f3311ee7/index.html": "5ff4ea65dff2a579131f4f89ebbdd9a46b96ef4419ca97a52a99c75d5200ea64",
-    "uutiset/helsinki-itiksen-symppis-siirtyy-turunlinnantielle-2f05494ef557/index.html": "64649fc1f8d42cab1f9597c234c10dd87fb92275c63cd769436714c0c77029ff",
-    "uutiset/helsinki-jarjestaa-vauvan-unta-kasittelevan-verkkoinfon-24-23759dbb8476/index.html": "4b82b840af535b6ec17c51ccee14dd9227866680f714a98ebe578b0862ca3040",
-    "uutiset/helsinki-kertoo-paivittaneensa-ymparistotavoitteensa-e15ca37246a1/index.html": "ed93a5aaee0ab2a4ebbfe50197d7b9b9deabfb2e900f9bbc80e2800a9efa165c",
-    "uutiset/helsinki-kertoo-sinisen-talouden-yritysohjelmasta-2a8b2adee4b6/index.html": "9fc3663f0714be2eb44f96178db2617d2a02bd7cebc009f7f479acd4a09a9914",
-    "uutiset/helsinki-kiristaa-ajoneuvohankintojensa-ymparistokriteerit-52aae0fe9233/index.html": "575033a0a78fda5f0859fd791740c04986f37ad59dee03f6a927bc1426573d06",
-    "uutiset/helsinki-kytkee-yk-n-kestavan-kehityksen-tavoitteet-tyohonsa-66ca79131373/index.html": "2df711ef9bdb4c30afb8a76a34972275687890e51c52bffd4470c410aada81bc",
-    "uutiset/helsinki-otti-kayttoon-turvallisemman-tilan-periaatteet-ea2b1f992164/index.html": "3da528eee52db2b0cf284f30956c64fa61ea5edf6c6275088a7153191c534023",
-    "uutiset/helsinki-poistaa-syksylla-kaytosta-noin-35-pysakoinnin-d6f4493ba6e8/index.html": "c30076979036433032de4e0f730e57168d86998be6019f6128f4241055489e89",
-    "uutiset/helsinki-pyytaa-kommentteja-suunnitellun-kansallisen-bd71b526d449/index.html": "e9f0f9fb840045688a9396a9a43e3cc9653bfe3ac1c8c93d9dd3eee981383871",
-    "uutiset/helsinki-tallinna-tunneli-esilla-ministeritapaamisessa-78287132895f/index.html": "fbf77e725ca1f8007f39b2969b348fae40a4f55365e6295fcf03bfea613802da",
-    "uutiset/helsinki-tavoittelee-pyorailyverkkoa-valmiiksi-vuoteen-2029-56c04677f3b3/index.html": "75f9ab4ca442ed3921036112adb61b75e54b0dd8be1c7db7bf37f459beb24be8",
-    "uutiset/helsinki-ykkoseksi-kolmannen-kerran-gds-kestavyysvertailussa-2c5050d14dd8/index.html": "a3fdd7c3358d5ad7cb173907eef05cfa3e8f5bd1db03c67932e4f67a8065c821",
-    "uutiset/helsinki-yrjonkatu-avautuu-liikenteelle-28-syyskuuta-e7bd28796feb/index.html": "971950f36e759c4e81f65f5804b0a7e3c83e6ed67283ea7918c95f40349be738",
-    "uutiset/heteniitynkentan-peruskorjaus-valmistuu-syksylla-2027-893508c01462/index.html": "2d3b6a0a40ada2353d4392ab15b57eb81fdff45778f94d29b3f48fe68451aafe",
-    "uutiset/hoas-rakentaa-174-opiskelija-asuntoa-itakeskukseen-04f5e7c23aea/index.html": "65dd5fe6dd6024a456846d708f1bcf2df3292edbe597bf09fbdde21f8287a122",
-    "uutiset/huippukokkien-club-des-chefs-des-chefs-vieraili-suomessa-f9ea85f1e6d7/index.html": "8e8d696997345068bb40deb0437d29675fe485c9aea04df2ae3ce3edee3ca631",
-    "uutiset/hurrikaani-polo-toiseksi-voimakkain-tyynenmeren-itaosassa-df134e357787/index.html": "320c851e4aaf3ef24382d11d8cb183a88fdeea25c4c972baba51cc2a6055adb4",
-    "uutiset/hyvinvointialueiden-rahoitus-27-5-miljardia-euroa-2027-57e39fbd0a4b/index.html": "faa30e1777ab115b082822ea23ae699fe9e6e32582cfcd0f1688238eac7da9ab",
-    "uutiset/ikonen-kuntien-ohjaus-esilla-pohjoismaisessa-kokouksessa-6be99b8cbd81/index.html": "bca851ace436d756f704360221e0d1873fb90f805f022d5a3268af3feb1888e2",
-    "uutiset/indonesian-palojen-savu-nakyy-satelliittikuvassa-kuivuus-5e19146e4f51/index.html": "b68e3480d3ca2c65512abae54ba75fdefd40fc87660487849036ea19534fb832",
-    "uutiset/inflaatio-nousi-elokuussa-2-2-prosenttiin-hinnat-laskivat-ba164fa2011d/index.html": "b4755425e5709331aef5cfbca26e4e689d7aef91c180e947ec80eaab82577210",
-    "uutiset/isabel-schnabel-jattaa-ekp-n-siirtyy-imf-aan-86fcec1077e9/index.html": "f96bb79ecf3db00b805ac679ee3e1b3a7e2af8ada8de9e04b7de599b2af5c9fa",
-    "uutiset/itakeskuksen-terminaalista-arkkitehtuurikilpailu-bc32d0e7e97e/index.html": "50f2f37580c6072990c0613466f2906c3097a4c0439ffd737a767033d3cfaa23",
-    "uutiset/jakomaen-vaaralan-lampialue-kunnostetaan-lammet-koira-17f3a9e55a5d/index.html": "c5dbafb256072e08cc2a9ccbae4a402a85e9e301f568950f408ccd5eb543e18e",
-    "uutiset/julkishallinto-vauhdittaa-tekoalyn-kayttoonottoa-231d1af5e7f4/index.html": "1c142ab426d239277deb151811d19370d750c605ee22a1ac99dbe4c88c7b7442",
-    "uutiset/julkisyhteisojen-alijaama-0-5-miljardia-huhti-kesakuussa-4065dbc091a8/index.html": "1d59683a1ebd002483e5e11ee0219ec9d354d2587501e5d36fd5f638361e322b",
-    "uutiset/julkisyhteisojen-velka-nousi-259-6-miljardiin-euroon-a24ef4286ebe/index.html": "04e4035bcafc4ef8cf6467972e3d109d3b7ee01746677b5d1430d15ac479772f",
-    "uutiset/jynkanvuoren-kavely-pyoravaylaa-kunnostetaan-kuopiossa-1b809e5df98a/index.html": "3681e07d85151d6e14f040bf701d37a3ed26f01cc2955fa914983f5448930718",
-    "uutiset/kampin-terveys-hyvinvointikeskuksen-rakennus-valmistui-b6bddd1a6fb9/index.html": "8c0a450dc50b6d408ce1022acf957e69e763817c599c12a2090b7fdd5d91d933",
-    "uutiset/karamzininrannan-uudistus-toolonlahdella-etenee-kivityot-55e6e217d134/index.html": "e4df0438cf89e1172bf87a770ff31b2ddecc9880a8e626a4bcd546f3e2ba07ef",
-    "uutiset/karjalan-lennoston-harjoitus-voi-sulkea-teita-lokakuussa-9f5082949d65/index.html": "b141d80239c0849a57e7661e7bfedfc5da7c803b60bb5e7b55b14460bc6efc69",
-    "uutiset/kaupan-liikevaihto-kasvoi-elokuussa-7-9-prosenttia-0172ab418392/index.html": "486d3fd0fcb2551e5276822c6d392afb2b7b30bb0838ba57980aa1bc1419f579",
-    "uutiset/korean-niemimaan-sedimentti-erottuu-nasan-kuvassa-b25d7a241a77/index.html": "41062bc8594ed0539e18a03f3c5e61a831b1579094b7923bf7acf7efa64e9b7e",
-    "uutiset/korkeakoulut-solmivat-yhteistyosopimuksia-kiinassa-e9296ac693e9/index.html": "f5ae7fb06c632df3d3359ac8e3ce16b61033633e845576464408e883a9db50c9",
-    "uutiset/korson-uimahalli-sulkeutuu-2027-hakunilassa-remontti-402abbd6fcc3/index.html": "9db14205c915bd3a6a270f8c8cca451b7c287c6d96b91504fcc17fdec0c0bb84",
-    "uutiset/kotilon-lastenkulttuurinayttelyyn-voi-tutustua-verkossa-ed01e64009e6/index.html": "d28c5b027c96491f66ee3a184106dec6cc96a78d01cda8b3dcdde499f08b14b3",
-    "uutiset/kulttuuripankki-kokoaa-14-maakunnan-taidepalvelut-9f85a9249ff4/index.html": "246e3035593f49cbb7d43d7c3da9d77b1d4b5c6eada44a67acc876ca9e136fcc",
-    "uutiset/kuluttajahintojen-vuosinousu-syyskuussa-ennakolta-2-6-2e846b3cf176/index.html": "a72576ff11c49713f3a1c6db2a37c8d542a1346bf4eeaed07cffb42948cfcb9a",
-    "uutiset/kuntaliitto-ehdottaa-valitusoikeuden-maaraaikaista-rajausta-fe92f910b26a/index.html": "162f7e1592cca25369ca8f3208aa5e8f344e3cceea90006d0b74247fa3e830c5",
-    "uutiset/kuntaliitto-tyollisyyspalvelujen-asiakasmaara-kasvoi-10e9a01ad0d6/index.html": "c4ccb16cf423a7e8a43c7d3059195cef04c75f0a906f8e03f94d6ef565c4de3b",
-    "uutiset/kuntapaattajakysely-tavoittaa-valtuutetut-viranhaltijat-0dadd1c7a542/index.html": "7dc4a2c7588252da75237353cda4775b674eb97f1caa13d81ca051884db98952",
-    "uutiset/kuntatalous-heikkenee-vuonna-2027-valtionosuudet-pienenevat-4c28a63affcd/index.html": "133ec24b6438e7c9c9f519f042617309ee91cc5a5bb30e11092e9818621b411c",
-    "uutiset/kuopio-ennustaa-8-5-miljoonan-euron-ylijaamaa-414e3cacf805/index.html": "f055329c90978bf501ff3d9fe7b13c80fe42adfeaec85e3f6928d888b30d0729",
-    "uutiset/kuopio-etsii-kuntalaisilta-ideoita-896aafea7d4a/index.html": "86a4631b8eb53592292d7fad4b062a91ef7dd9ff2c26236d05c7efc6991130a1",
-    "uutiset/kuopio-eurooppalaiseen-johtamiskoulutukseen-aa9ec5a14b3a/index.html": "0aa8246b2ea6519dc6c6a99cd225944c627b009c80feb5421c62a0666040a257",
-    "uutiset/kuopio-julkisti-vanhustenviikon-ohjelman-lokakuulle-1b86dc585a62/index.html": "9a52c93e55a8015071993e1c0e55551f33d9a2a98e126ea822f79330924a853b",
-    "uutiset/kuopio-kertoo-osallistuvansa-lvv26-harjoitukseen-7026a3950494/index.html": "2e0293c8bbade076bae91cd9cef0b4223905a5d066d2cbe8f6960ce9c8723d9e",
-    "uutiset/kuopio-palkkaa-syksylla-viisi-tyotonta-nuorta-ensi-vuoden-9daf662c054b/index.html": "c5a47cb6d538d6c036a961543e7db76fc0a4506195f04772d7830c6909057c68",
-    "uutiset/kuopio-tarkentaisi-esiopetuksen-oppilaaksiottoa-b883b041affa/index.html": "5f2136a2ae2ff8b780ae9cb894181c6dd205234e5270d3325f620f05b8a4c97d",
-    "uutiset/kuopio-uudistaa-turvallisuustekopalkinnon-0135c0ae3ae2/index.html": "a1a6430a6d337ecb602487c5987f1e1f7bb5db741614363fbd017dc2ad14af89",
-    "uutiset/kuopio-valmistelee-sarkiniemen-paivakodin-tilaratkaisuja-a5bce1875201/index.html": "346432767bf421683a6748ba39f8f6c9596fb7074f5b93cf341307c6622c89ac",
-    "uutiset/kuopion-blogi-ajan-puute-yleisin-este-liikkumiselle-9497221470f7/index.html": "4e3c73af8e0aabe4396910c7bde9e44f3c0eaa466c61c1f5f1993e8dfcec921a",
-    "uutiset/kuopion-johtamismalli-nojaa-kolmeen-arvopariin-6caece9cc4b0/index.html": "a6f0824b75b47245128d9c6bdcc0ed910e898585b6efb58ed9ec4154c4487f11",
-    "uutiset/kuopion-kaupunginorkesteri-svang-yhteiskonserttiin-abb6da8fa71d/index.html": "003ad81eca837400c3a0839dabb2f59950c65c30037041e2a44bf1462cc37587",
-    "uutiset/kuopion-kaupunki-taideviikot-jatkuvat-lokakuulle-8a665fa35d3d/index.html": "ade74f013e25320a29b2bd8a24ff01d20c454ee6aa1cd3cf1f9c73439ea9b5bf",
-    "uutiset/kuopion-keskustan-liikkumiskysely-avoinna-31-10-saakka-b8d212c57650/index.html": "5273df0dbf7f4ca2e3cdd00e379278a743aac346931d47a0ce31fa7ffee60b86",
-    "uutiset/kuopion-museo-saa-samurai-nayttelyn-toukokuussa-2027-f6062bf646e6/index.html": "d0ec195aacd4126bb073be59371beb40d00dfdfefe0a7997101c73648bd6f7fe",
-    "uutiset/kuopion-taidelukio-lumit-saa-eu-n-opetuspalkinnon-5302e5201e17/index.html": "a912185c76a8fd57f24c1e69ae7087acfd3218470ec8d632b2dc73010b33c6c7",
-    "uutiset/kuopion-talousarvioesitys-niukasti-ylijaamainen-8e994b485511/index.html": "84d1920ca7b131382016f537cdcab48b3713d5fa68453aafe443f8c808af4eea",
-    "uutiset/kuopion-tyoelamailta-kasittelee-tyontekijan-oikeuksia-f6aeaa0e7a76/index.html": "0030f930ba430720cb99ca0b6f3a14f6700d667f80299580229426dbc585f4d5",
-    "uutiset/kuopion-vakiluku-kasvoi-396-hengella-alkuvuonna-2cd7ce2136f0/index.html": "a42bc70d583ce2b5513bf3b7a8cf926be53a38da622449eaf0023c89b7055c04",
-    "uutiset/kuopion-vanhustenviikko-tuo-kulttuuria-kohtaamisia-5cd5fcd61b42/index.html": "09336b629f5b01ea117bc62af3b89e111787f9b6455ac155f674f135f0396722",
-    "uutiset/kuopion-welcome-to-kuopio-tapahtuma-20-lokakuuta-a050cd8361c0/index.html": "dc16866ee0a1a5c46be0415838a79af3ea4be4e6d4fb113554dc37d0322c8460",
-    "uutiset/kuopion-ymparistopaallikko-lahiluonto-kaupungin-kasvun-3728f0b0d62c/index.html": "c206c8366b3d8229acf07e4d63ebb2e81cb127c5ff0befbf41a5d016a7979703",
-    "uutiset/kuopiossa-asfaltoidaan-pyoronkaarta-jynkanvuoren-vaylaa-8cacb894e21b/index.html": "89689d68eb1e4b3ad672514fb89c2e99a16c8dcd1f34e0756b66ab45692cca52",
-    "uutiset/kuopiossa-kokeiltiin-koulunkayntia-vaestonsuojassa-bfb80bbc6d7e/index.html": "75b41bcb88c26f5bc6889bdc78d22c73c82c4e62db00e7af8ba008b5bafb6457",
-    "uutiset/kuusijarven-saunakapasiteetti-pienenee-valiaikaisesti-ac11a9d263e5/index.html": "c8593df2966e05eb1e2dbd2de6ffbf2a950fef8cc2ade69cfc31e44a3528d9c9",
-    "uutiset/kuusijarven-savusaunat-voittivat-arkkitehtuurin-finlandian-f7ba9ee3717d/index.html": "23a89b1e2ad4d777c67d7a24e12d6732cb8cc90c66358cb460e2baa24e2bc4a1",
-    "uutiset/kuusijarven-savusaunoille-arkkitehtuurin-finlandia-2205f6bc9b0b/index.html": "6df72c1bb225d36e7d2ebdc2f8f6bebe1d65dc493a74dc2dbda6c756ef699f49",
-    "uutiset/kuusijarven-wc-tilat-kayttoon-12-lokakuuta-c2bc4a29129d/index.html": "475089072f50e08fb85a20b987f83ce3751d4abbaea0c5b80558e906c045622b",
-    "uutiset/laajasalon-palvelukeskus-vie-kohtaamiskahvilan-saareen-c12a889800ff/index.html": "483bba04ea13e5c31c0bbe7f80d9bc4b4547232cba570e06428f71f36c5e448e",
-    "uutiset/lammitysenergia-kallistui-kesakuussa-vuodentakaisesta-849661688f3c/index.html": "46f9f5e312b7bfe273d769a7cec311aae7956c21800914f61275a4f56ac68eea",
-    "uutiset/lansimaen-koirapuistoon-tulossa-kayttokatko-torstaiaamuna-133493c7588f/index.html": "4152604a844bdc7500bef8d22c725ac0ea522b80df9c7e1400706b062da9908d",
-    "uutiset/lansisataman-pikaraitiotien-hankesuunnitelma-hyvaksyttiin-743604e52b6d/index.html": "f381371998d5380ce57533df117d4301f9624debc6a44e56013730f015cf7075",
-    "uutiset/lapinlahden-peruskorjauksen-valmistelu-jatkuu-esitys-86f1d633295b/index.html": "9e87da8cd0e237f75f41f12a9ff461548eb6153371544405a8c1d6e733fee72a",
-    "uutiset/lemmenkujan-jalankulku-pyoraily-yhteys-kiertoreitille-b72bfc87ea57/index.html": "8ca42d41df39b5263c52389ec9acf553d3661bf3e9e4f350144aeb5185a88d81",
-    "uutiset/lemmenkujan-kiertoreitti-kaytossa-viela-viikon-41-9379acd25d35/index.html": "af53a2f41b7cdae75d41cf98d9cc6812a87d83ea23d90a65d7e988efe3a23671",
-    "uutiset/lentokenttien-matkustajamaara-kasvoi-2-elokuussa-e4e3315600c7/index.html": "2a9466d3ce8a30d3aa41b2f18a71fc21cee5dfe612160bd286b6ec9d51e17f09",
-    "uutiset/lintulahdenkadun-rakennustyot-alkavat-lehtoniemessa-b2fc857c6685/index.html": "904183170dd0c9a9c1f62b9067ed26f6841b3eb56ff32ab37cf9fbb9e03f0be6",
-    "uutiset/luottolaitosten-rahoituskate-pieneni-7-1-prosenttia-81e510f0302f/index.html": "e6eebd10e525da038b0af9587402508a11f774b1f996f864d1160e0ba5abd777",
-    "uutiset/maa-metsatalousministerion-budjetti-2027-2-6-miljardia-f4660882883d/index.html": "a27d73a17e0e21da2a63e7cb13baaa138ee5136e3cf70f7df4f2b84f68d8e2c7",
-    "uutiset/maarakennusalan-kustannukset-nousivat-6-4-elokuussa-7a59abbcb656/index.html": "bc14c7855f83841f31528bec9015fc148c79c7ab250f45a045d0650e58f67ade",
-    "uutiset/maarit-raja-aho-tutustui-myyrmaen-kunnossapitoon-379dbddb774b/index.html": "ef3d8cdaf5feec112e89dc4186320147a235e1a1fd894d590fed6dd647507bd2",
-    "uutiset/maatalouden-tuotantovalineet-kallistuivat-heinakuussa-5-8-aca81b732a64/index.html": "6609aae6de7f250b87a55c7a4e915bd6fcc997f446759740116c81cfacc4fd26",
-    "uutiset/maatalouden-tuottajahinnat-heinakuussa-vuoden-takaista-43d7e9f8a735/index.html": "3887cd3093cd5e86cc95cf677ff1bd654328cc9e900792265a71fa46e7b2a798",
-    "uutiset/maavoimille-hankitaan-trackx-tela-ajoneuvojen-esisarja-4e34402bf900/index.html": "1758a7cdaad8913c0a805cb1945df43fe45c0c98b864af72926d50b23bddc3f8",
-    "uutiset/maksullisten-tutkintojen-vaikutuksia-tarkennettava-530d03529b18/index.html": "e688eedb68e2aaa1b0a54b09c321f6888f0c86d4f4e7466af9f72754b7d8cc37",
-    "uutiset/malmin-novaan-suunnitellaan-laajennusta-asukkaiden-6643e2b67fc8/index.html": "f5dd6df0534d315e92c09de72286bb435e43f4ef455623d98a28468625101110",
-    "uutiset/matkaviestinverkkojen-uusia-toimilupia-valmistellaan-1fc73b45c172/index.html": "7cbd4da2c6e6757639f3694bc27290917a384493a7f97fa0d4b0fcba332e2e60",
-    "uutiset/meriteollisuusstrategia-tahtaa-viennin-kasvuun-d6f58ecba065/index.html": "a104ffe98836e3622d57582591f2a241644f11b7efabe628c49de3e41f6b3eae",
-    "uutiset/ministerio-valmistelee-karhun-kiintiometsastyksen-804377534929/index.html": "4e6f0ac869c5eeca76cd82c989004676c5e48ee70815cc5cf70b188faf20d18c",
-    "uutiset/minna-canth-palkinnon-ehdotusaika-paattyy-29-9-2742b84a5738/index.html": "696568887d3f014db10019f69f7195a61affd05add542b38cac1bfeef39e5af9",
-    "uutiset/multala-hakee-saksasta-yhteistyota-vetytalouteen-dacb24d664ef/index.html": "530ee0b551a6d2349dfa3fe7d16d32d6da34a2149ec6220c7e4955286126c41e",
-    "uutiset/nasa-aqua-satelliitti-kuvasi-doverinsalmen-76d26ccc835a/index.html": "e47ecd74b10c9150cf44c0a721615edef5c6ae1913f9c4cf264cd34605495842",
-    "uutiset/nasa-julkaisi-satelliittikuvan-australian-spencerinlahdesta-69f08f8012cf/index.html": "4110af2a42585da9df37f8b0ee92c21fcdc95ccc7c9dfbcbe56b852e290aa1c6",
-    "uutiset/nasa-julkaisi-terra-satelliitin-adirondack-kuvan-893d279b6ca6/index.html": "3a957e6105e31750e41c4c7f6dfa02934966a7718ab4ad7f7eaef85082118f9d",
-    "uutiset/nasa-satelliitti-maastopalot-levisivat-etoshan-suolapannun-3e3118902b27/index.html": "b568ef3712ba96627041135130e2386d99b6b7606ea4447e63340f798898c727",
-    "uutiset/neulamaessa-vedenlaatuhairiot-mahdollisia-keskiviikkona-cadc5e300307/index.html": "b579b4a6fd1a36d30b107b925eba3df9483e46839dff61731d16b697bcd9e12f",
-    "uutiset/neulamaessa-voi-esiintya-vesihairioita-28-syyskuuta-6f6c31f5cf96/index.html": "ab28344c3a7a003ed5a36ae39dfb4a5a87867a8db3a82878f9f29a73e08cebb4",
-    "uutiset/nolo-toi-rankkasateita-havaijille-nasan-58795708c3dd/index.html": "3b05be744c2fdf9ece3017ab64da0cad6aa480289c4bf44f9e40aaa8f8d6c1bb",
-    "uutiset/nuorten-nurkka-avautuu-pekurissa-12-lokakuuta-75f6dca5be2e/index.html": "b8d14303f5d033cfad61f5610fc82eb9c4e76472458fe92e8a0f07459e1a37cb",
-    "uutiset/oikeusministerio-julkaisi-oppaan-lasten-nuorten-f9615094ff17/index.html": "b5aac241cff8e6ede5824fcd0bd1db14bfe4a90f6b25c151dde68488b0d3f4ad",
-    "uutiset/oikeusministerio-pyytaa-lausuntoja-lapsirauharikoksesta-7d6a15176a04/index.html": "dcb8e74924d573770e3a8288662fd8e8b23bd670dba7067c4df5304d8819a186",
-    "uutiset/oikeuspalveluviraston-toimipaikat-vahenevat-158-sta-38-aan-c3565ca130d6/index.html": "06b69f52d0cf1aba94fe05863134013f8d5461a38d118eb66e04d098d325ff30",
-    "uutiset/oregonin-maastopalot-jatkuivat-syyskuun-lopulla-c79a7f054313/index.html": "c78b1a897e7079aa0232ae0501fdf00daf1885ee712abf3b79f252a3ca64247e",
-    "uutiset/orpo-sai-katsauksen-kansanedustajien-turvallisuudesta-41eea6aee980/index.html": "217199efe31ae84958742c3e46e3d06de3527052fe9b52e42c6e3417c563743e",
-    "uutiset/osaamistilin-kokeilussa-harkitaan-tekoalykoulutuksen-96de6f5ec840/index.html": "a90c3a2a5d549541ef9558f8b302aaf0a40bf471007799e28a6ce1d949e63c53",
-    "uutiset/oulu-keraa-asukkailta-nakemyksia-sivistysohjelmaan-c8956407ecbb/index.html": "7b7eca9ffdf8b3a6086f6917395183cd221ed4d6d2f43b4011f2b2456c65a222",
-    "uutiset/oulu-kertoo-johtavansa-suurten-kaupunkien-liikuntavertailua-84215ac70cf4/index.html": "4dbb3162b52519b48a19bcab207b761e6cd1e7d22fdaaf0812e6c625e50e0fc2",
-    "uutiset/oulu-kertoo-osallistuvansa-valmiusharjoitukseen-97ffa58ef1b1/index.html": "d3c4692f2202644038fdbb59115d0b55ef98a7e1fbdb3b027c3d219b0c6385f1",
-    "uutiset/oulu-kysyy-asukkailta-sivistysohjelmasta-lokakuussa-a16a2aa7f71d/index.html": "fedbf97327186b12e905e6a6d44fa32c4fcd063d77c577b55f0527a820aec35a",
-    "uutiset/oulu-sai-hyvat-arviot-katuvalaistuksesta-talvihoidosta-fc37e26d3a19/index.html": "31a6a5fbd5f768bdc5541401fa12022902410071448e470e550120614c6dc0a0",
-    "uutiset/oulu-uudistaa-kainuuntien-katuvalaistuksen-fc12a9cde34d/index.html": "ea949ffb84682c3b007e4042a6d4533cd8350ddd365aadbdbad2680d282bc970",
-    "uutiset/oulu-valmistelee-ravander-korttelin-kaavamuutosta-f9a3d7c0d980/index.html": "b1abb52143ba42af194a917c8dfddf31eb5c93b10acde22d684c8add582ec87a",
-    "uutiset/oulun-greco-n-ryhma-arvioi-kaupungin-hallintoa-0dec2b39d891/index.html": "227885a75f0b3f7590d96dd24a272beb1de692ca5b4d05e849e4df0e195485ee",
-    "uutiset/oulun-kaupungin-vaihteen-numero-poistuu-kaytosta-8-10-c5e10b449ff6/index.html": "e7aa6d87fb0cef83e1d058b2f1c21cde574ae02e8f4e11dd1d6f27f7e857a564",
-    "uutiset/oulun-kaupunginhallitus-hylkasi-oikaisuvaatimuksen-6425b16e5671/index.html": "39d36fccee279a9446f58b48e908afa221c17e37e6514dcfc2d55681c0fd1f22",
-    "uutiset/oulun-kaupunki-jaalinmajan-uimaranta-vaihtaa-yllapitajaa-e5a0f5bea8dc/index.html": "3c5941f2b462be6295bf8e02c0db2c14d786683a851406f2ff9c0c96f9e07b3a",
-    "uutiset/oulun-kaupunki-kertoo-ymparistoterveyden-valvonnasta-c05f7df9e539/index.html": "f286190d40bc72a17efba27d96f0c34271066ddc00232549fa7be26120774c12",
-    "uutiset/oulun-kaupunki-lastenkulttuurifoorumi-kasittelee-mediaa-bc357262eb3f/index.html": "2afc3f90733a0d3bbca4df91e95a961e0abfd3f46e4e02184be2435f7e0d6bdc",
-    "uutiset/oulun-kaupunki-russt-teos-asennettiin-oulu10b-hen-7320b219279d/index.html": "2621c22265bb00a0a899add28ae750e122596ebbd835be6ed641f9307fe9fe1c",
-    "uutiset/oulun-kulttuuripaakaupunkivuosi-esilla-eu-vierailulla-288034a2f477/index.html": "14e24e57ed60c10e6f8d565ce072392161d3c988558f350e93c37df2f3938449",
-    "uutiset/oulun-osallistuvan-budjetoinnin-aanestys-paattyy-sunnuntaina-b46385fe582c/index.html": "4dc2d5698f1f4b2d97ecfe121c657a682c6b47ac29983c7b542822591890daa9",
-    "uutiset/oulun-seudun-tyollistamisseteli-noin-kaksi-miljoonaa-euroa-ffb5e853ea4b/index.html": "e63cb32fb52de96e0b9be9a71b8019c4753339e2fc8125886a380a528340fc08",
-    "uutiset/oulun-talousarvioesitys-2027-ssa-23-miljoonan-alijaama-5fef23277802/index.html": "7ee6080ae316c23ae75a739b1f193acdb012ccd2d8993ddc568870cf3c3dffba",
-    "uutiset/oulun-valtuusto-hyvaksyi-paivitetyn-konserniohjeen-6b274c9cef7a/index.html": "47c7f3ee167dc5b335c8337f9a8a1d0092dffd3db14468c6f05f70cc3dcad547",
-    "uutiset/oulussa-jarjestetaan-kaatumisten-ehkaisyn-tapahtumia-ab7243f61af1/index.html": "749d33db393af4f58192208391afbe0f5861006438ff750d2764241438d428f9",
-    "uutiset/packalen-rantala-kilpinen-esiintyvat-yhdessa-kuopiossa-482c01da18bf/index.html": "aac4f9ec65c6d11af755ff1205d6f2fa203cbd35cc2ba0865b772cdb3c6aa87d",
-    "uutiset/pakistanin-ylla-nakyi-harmaa-hiukkasusva-f6d6d00e00a6/index.html": "53a145a0ff50c45159e168d081501d9db3a0a80ac777606e1fcd2510c0f08576",
-    "uutiset/palkkasumma-kasvoi-elokuussa-3-4-prosenttia-vuodessa-8c742b4b56b8/index.html": "16440ed6a1e8cddcd58e8b619651e4089082e76b29b96c84037e0ba7385ec986",
-    "uutiset/paloristi-kahdeksalle-pelastustoimen-ansioituneelle-cd562eb1e32c/index.html": "d3236b5ba88e804d471e762988b0cf72cdd401de2af2bce9df58c9f4a625ace1",
-    "uutiset/pihlajasaaren-kehittaminen-kaynnistyy-vuonna-2027-64aa1785598d/index.html": "e195e29b449d94b69dc2c39afe3c12d72bcad6f95d405668a033b9b525d02d58",
-    "uutiset/pk-yritysbarometri-odotukset-kohenevat-investointi-7bc4c26f61fa/index.html": "4163a84ba12daefb6c9d34c45eb144ef8cd1d1fd0dc4e0afe63ea21880384c00",
-    "uutiset/poikien-elinajanodote-nousi-ensimmaista-kertaa-80-vuoteen-54a3a84f0d82/index.html": "b842ba253483b6190b1924cbd6ad4010dbabb37109e4ce6338452360069cda85",
-    "uutiset/puolustusministerio-jussi-toivanen-kenraalin-virkaan-sauli-2912317fbc92/index.html": "a99b4d222b1cfa3437900a9d2379af352456b6bbbb12e8a50e04897663219dba",
-    "uutiset/puolustusvoimien-kansainvalinen-yhteistoiminta-lausunnolle-2e5b6f771351/index.html": "b3abbb3fde41cb5ff2630781fd3ebbacac058a94558a2e9e1c7b7c1f0984dd8a",
-    "uutiset/rachel-hurrikaani-kulki-baja-californian-etelapuolella-59edc2fdcd34/index.html": "6e51852cbb92c9040aa6560d1b5cfa7f5f1d92a465c205833e9d8af5dda82cdd",
-    "uutiset/rahastojen-verotukseen-ehdotetaan-lapivirtausmallia-822144960788/index.html": "e978332bf154a2158a99581f8f3521b245bd76d558c4156a94ba97f59b3d51fb",
-    "uutiset/rakentamisluvat-kasvoivat-16-heinakuussa-2026-3f76041fe5ad/index.html": "1218d7da5d8d4a840d44bac14a0b7a2da4698b1026f919d9fbd2c1c2c325c87e",
-    "uutiset/rautatientorin-metroaseman-perusparannus-valtuustoon-8dd79400fd98/index.html": "b2c592f4bef13689e8a6729d93f31de2ea42e8fddca07039995d2bf0cbcc1b67",
-    "uutiset/rautatientorin-metroaseman-remontti-etenee-valtuustoon-58b84ada8648/index.html": "2381d57d90740e5f7d7cd9d42c028e5f57b2f5e4b9ec3fdcab8e46cc34441423",
-    "uutiset/reservilaispalkkojen-korotus-alkaa-lokakuussa-fb7f0f0b3e59/index.html": "3549e0905aaed45fa7f5d1af012b8b96d449a8ebf36f7f1558deb0bd5e1daf98",
-    "uutiset/rivieranraitin-louhinta-valmistuu-vantaan-763dffd702f2/index.html": "9e302300ec71aaba5f42b667d65bb14cd66600b22113d28e69f0d14458ce4e1d",
-    "uutiset/sahkon-hintasaantelyyn-kaivataan-tarkempaa-vaikutusarviota-3201487f4521/index.html": "32e9e8e013ea7ebf4b33489efb673c302f92b425263e676bd3f8e6d383fb4ba8",
-    "uutiset/sahkopotkulautojen-kaytto-vaheni-helsingissa-81f29c83f795/index.html": "6873eea9a40f17622e5ce2d40db7d76ec09d8063538726d09888420b911b541f",
-    "uutiset/sahkoverkkoon-liittamiselle-esitetaan-etusijamenettelya-b88d52aa579e/index.html": "25992350658650881ef919d78fd7aa6a6968ce778e233f6352d2059260247e5e",
-    "uutiset/savilahden-tutkimuksesta-halutaan-lisaa-liiketoimintaa-4410ea6cee46/index.html": "ab62255015f0dfc1eaf23a2c17e476f59ab4b7dc60433b065ab94503c17749fc",
-    "uutiset/sdg-liputuspaiva-muistuttaa-yk-n-tavoitteista-ed4545bb087d/index.html": "04188f5f107cc2b63cde8c84665caaa8c4bb78062741fb84f697defc22c228e0",
-    "uutiset/seure-omistus-etenee-helsingin-paatoksentekoon-0eef129b805c/index.html": "cdd9f00dacfa2865e8e828eba67d7ba0f56ef193d2bd9b7a23e3b49ce6dd5955",
-    "uutiset/sijaishuollosta-poissa-olevien-lasten-etsintaohje-uudistui-ccde11681bc6/index.html": "6f8cde45606543a55f400b689fb92a336ec0e7523faab03c75fe7f40e48ea3fc",
-    "uutiset/sisaministerio-lahetti-ulkomaalaislain-muutokset-4c675026386a/index.html": "7bc082f6db740081cba9ddd6ce32c815503be64990232bf99368eb1511eff22f",
-    "uutiset/sisaministerio-pelastustoimen-palvelutarpeiden-arviointiin-2c46131fe163/index.html": "785fb5a242bbe95fc691af56914ffe7c92443874dbef46bc2725bae27faca2c6",
-    "uutiset/sisaministerio-suomi-lahettaa-asiantuntijan-gronlantiin-c5e976469083/index.html": "1f0398c8067a650027c6e44216ecbb87430bd7f6b8da80f68609ac1555a91994",
-    "uutiset/siviili-ilmailun-onnettomuussuunnitelma-lausunnoille-009bd8338513/index.html": "1f68c566e93c3609bd99d90654d3ecfa7a6870e74cc384fbef4bcf29fd2efcfc",
-    "uutiset/siviilipalvelus-kytkettaisiin-kokonaisturvallisuuteen-60ae5103baea/index.html": "b69a50725402817f04b3d99f4e65ca364aa9924d2cfab903c35cf242deae94b2",
-    "uutiset/sprinkleritestit-voivat-heikentaa-veden-laatua-kuopiossa-602baae68d92/index.html": "bfe84833d2114b862d9b916dec9762b5b5f9292b7ca9c654f6d9ef82f7056a6b",
-    "uutiset/stm-avasi-huoltajille-kyselyn-lasten-somekaytosta-da0191af3831/index.html": "62bda9cfd1b030a68a600bb85b83460458508e79d893f9bbd9bed7184f666bb6",
-    "uutiset/stm-laakehoidon-kustannusvastuun-selvittely-jatkuu-2218f9c8bbde/index.html": "cb8f0e8cb7d542bf6dddbf907ffef2be8c085e9a4ff27b6b7971f18d7b650265",
-    "uutiset/strand-kos-keskustelivat-eu-n-laajentumisesta-edc2082a22d2/index.html": "43158ecb1f89beadbc8e6969e03a271683d7eefd8fd0d61a74fcfade0589bb2b",
-    "uutiset/stubb-st-re-tekoaly-pidettava-ihmisten-hallinnassa-f912fe343766/index.html": "95fd32bf17602e335108c8169dbdae9ff1b5e0e2dd35995c14ab4f53af4ce43f",
-    "uutiset/suomi-kalifornia-allekirjoittivat-yhteistyopoytakirjan-f3d38d6cc848/index.html": "a46b56d0c65e4e39fbee2d8591f60c71babaa72ac107208da7c7af1fb3ab0fb0",
-    "uutiset/suomi-mukana-maatalouden-eurooppalaisessa-digikonsortiossa-6b30890419a1/index.html": "ccb9101f99472d0a2dc8817853872bb8e1260739333eddbd7c83f1f5e5f98a4b",
-    "uutiset/suomi-tukee-eu-n-pankkisaantelyn-yksinkertaistamista-c0ed3784ff13/index.html": "5b402b94fc802d6171be57345479dfa3c4a9fa2de2285bd003f0496849f6a17b",
-    "uutiset/suomi-ukraina-allekirjoittivat-droonidiilin-404c67dcc0c9/index.html": "413bbbd0c42636afb56c5db1a4f0d8fe2e2e9596b218227f811ad11102ba6e57",
-    "uutiset/suomi-valmistelee-sosiaaliturvasopimusta-ukrainan-c00b055093de/index.html": "a5464a72e98488a01827531d856b81069595b2e3abab30bba668719ff9b99721",
-    "uutiset/suorat-sijoitukset-suomeen-kasvoivat-9-8-mrd-euroa-d3a1b3daea40/index.html": "cb232e4f2d3729c71fb49fb1dc5e4f22e8f24fb082d790334fe0724a0a36027b",
-    "uutiset/suuntimopuistoon-suunnitellaan-nuorisotaloa-asukkaiden-a421e685a2cb/index.html": "780f284ec0cf30ad41f3b138b0fe6f19820c902fa7de77ca74f6d45f511bfe6f",
-    "uutiset/suvilahti-diy-skeittiparkin-purkua-lykataan-uuden-puiston-f2a3b9da8395/index.html": "a989a948a5fc21a1b6d1cbece036846dadb74bd352737a279f078041ac4695ea",
-    "uutiset/syopastrategialle-tiekartta-vuosille-2026-2031-2f0dda6d3c53/index.html": "50b12bc8db694f7e4ff2e686d91561ac31d6055fb33b7c827824ec8005c4b21c",
-    "uutiset/taifuuni-dujuan-kaantyy-koilliseen-kohti-japania-12ba6b5b591e/index.html": "51978e3616587fb6626dacb06ce442a1f9c3cd27d48d6a7d3dd46947a81fcaa0",
-    "uutiset/tem-pyytaa-lausuntoja-yritystukien-kriteerien-muuttamisesta-df3aa3cca842/index.html": "177735ab6da7c284b1467fbfe29cec319907628732539e84171bc4d2741e8730",
-    "uutiset/tiibetin-ylangolle-satoi-runsaasti-lunta-nasan-06fea975771b/index.html": "9bdc3904a982a4acd65dad75e558f2e875b5bc2c16c62bb6544a4db28b2adeea",
-    "uutiset/tikkuraitin-kavelyreitit-siirtyvat-etelareunaan-21-9-83ff62c717c4/index.html": "833371c86fb577fab88dc8e139b95c63a76adce08028145e1bedd2a4caab5874",
-    "uutiset/tilastokeskus-kotimaan-vapaa-ajanmatkat-kasvoivat-bc811a1e0b85/index.html": "d3e1a64de26127f1d24a582aa7207d1e136bec4af5f5e936903452e14cd3834b",
-    "uutiset/tilastokeskus-kuluttajaluottamus-heikkeni-syyskuussa-0b8385ef2ec4/index.html": "1d6e1122ab8d39ba4755d2b62c64f78f769444232e0bf7892780424d30f0f72a",
-    "uutiset/tilastokeskus-kuorma-autojen-tavaramaara-kasvoi-15-54f3c629fbec/index.html": "9fa24a2327f95d1759354efc1aae0a8a3f9373608b200149dfba5ce2956fcc1d",
-    "uutiset/tilastokeskus-rautateiden-rahtimaara-vaheni-6-prosenttia-5c7038698aab/index.html": "0f5e3904f5d33960b1f1e95b96c5e93413d893773eafaf491d8bfc0c31cdda03",
-    "uutiset/tilastokeskus-saastamisaste-4-bkt-kasvoi-0-3-62a3efa8b32a/index.html": "c57635a68b03b375e2e9e450a3a457489a01fa2c225d9f58bc00b49e62fcd969",
-    "uutiset/tilastokeskus-suomalaisten-paastot-laskivat-4-655a35755963/index.html": "f12f1ad17a82e895e84f4da11d842424a8905e8470e29c92a1074c0660ef457a",
-    "uutiset/tilastokeskus-tuotanto-kasvoi-elokuussa-2-3-prosenttia-9b023452fb72/index.html": "66a4ffec9b31edfe317d69ddda81ce6c72a74f418d995e0ac4599d9ba5eecce7",
-    "uutiset/tilastokeskus-tuottajahinnat-nousivat-7-3-prosenttia-0d04d24d7fe2/index.html": "c9a7d224d4eb25da3810dfad2f2c1f565d70d5c8a242b90a4d08a4e1fe9a24b9",
-    "uutiset/tilastokeskus-tyollisia-34-000-enemman-kuin-vuosi-sitten-c9ed2d317f03/index.html": "a9d694b683b8adcb9fb833d27f127fac1a5fcbe18c6b34b1e9e6a5d2d0d5a4ba",
-    "uutiset/tilastokeskus-tyotunti-maksoi-tyonantajalle-38-7-euroa-f733c3e47c8c/index.html": "f53696cea63d81dd74d4ff407a5a984b118ff0eefdc726dc1b24f86ca0db3f75",
-    "uutiset/toolonlahden-tulvasuojelutyomaa-palkittiin-helsingissa-c8d9df28ef8c/index.html": "7af4da63ff0ab83a4838aa01cdec0cb8e83eed173f3fa9b1de5b1f79a8d94cc5",
-    "uutiset/toolonlahdenpuistoon-suunnitellaan-aalto-skeittipoolia-d0725b324ab4/index.html": "8e41fb5390169f18a13b06416266def0ebd257c1bf2a085946647b5db553098c",
-    "uutiset/tp-utva-kasitteli-ukrainan-tukea-kiina-suhdetta-aac41588a8b4/index.html": "1d8e2054e1134e6f07d2b5843342b9596229a713abefb1260669e8ff2405b25b",
-    "uutiset/tp-utva-kasitteli-ukrainan-tukemista-persianlahden-abd979348665/index.html": "a53f3d30c4ddc13be41eb3c8491e50c501d65e35b025b38eafd4f1a0f23a4c5e",
-    "uutiset/tsahkna-vierailee-helsingissa-kertoo-ulkoministerio-c1124443e572/index.html": "fa313b57240af0c6fef933be46361628362428bb22714100dd1aa9f1449134e6",
-    "uutiset/tukkutorin-suunnitteluperiaatteet-areenasta-luovutaan-66b21dd4363f/index.html": "db48002c30d1b5c0d46f9f09e85fad67ab47c4fe6f0cb5418254b18227a3fb8a",
-    "uutiset/tyoryhma-ehdottaa-vapaan-sivistystyon-rahoituksen-b2545a689479/index.html": "df4aaca496b1a89e27d2805194ac16dfab54d2c9000b86f210a61f984a2d2479",
-    "uutiset/ulkoministerio-roy-eriksson-muncheniin-perustettavan-20e36c0252e9/index.html": "ca6a1b9dcb5091f66c3c0f29c6dbaef146e1ee820a001610606dc256c9053365",
-    "uutiset/ulkoministerio-tavio-vierailee-tallinnassa-kauppayhteistyon-94c6d93ffe07/index.html": "0a1f08d4df7c4d16ba6c37532c544e97d1c9b01e026bb21e93cdf538d74fa1eb",
-    "uutiset/um-lehtinen-yk-n-hataapurahaston-ryhmaan-fbe5ec9a52b1/index.html": "c1910641bdf311a4e732714620ca9781140678376a7b3426864c3593344cefcd",
-    "uutiset/uudenmaan-vieraskielisten-maara-voi-tuplaantua-2045-mennessa-260f179f793f/index.html": "178485b09d7ac35ee9a77c6bffa7056330cc6538fa08dd7f6ce16d07e95e6fdc",
-    "uutiset/vaaralan-bussipysakit-siirtyvat-6-lokakuuta-5fca6d55d831/index.html": "875f02bc8f8732666d8ce0aa2c6bb29a597140701f4257d2fe43c1b27915548f",
-    "uutiset/vaaralan-varikon-louhinnat-valmistuvat-murskaus-jatkuu-9b9c4b59f7f1/index.html": "0adbd95d3d18de56aa16a8e074b82fe972fec243f3d60740312eb519e4900972",
-    "uutiset/vaihtotase-1-3-miljardia-euroa-ylijaamainen-f047738905a4/index.html": "5ad15a315661b21a38d6237e0bae140be825589a375b3ab4a5eddde175b055fd",
-    "uutiset/valinnanvapauskokeiluun-fysioterapia-kuusi-laakarikayntia-7f1c353a070a/index.html": "d6c9b67ae45544bd58ad69e78e146ee5844cd222f891c112e2f2b618a69e9bbb",
-    "uutiset/valtioneuvosto-eu-neuvosto-linjasi-kalatalousrahoitusta-092c43fb123e/index.html": "c491cfb23d8b80ea8224b4e037f5d3a20add4361b24fef8a1b67a3ec93f5677f",
-    "uutiset/valtionhallinnolle-uusi-luontotyon-johtamisen-malli-802f22d74986/index.html": "8ca32b312ae6e71a0a14090b58008fb55a8c142a91ebf55cb5b771961bea4004",
-    "uutiset/valtionosuusprosentti-laskee-25-05-prosenttiin-vuonna-2027-37ed852a27c6/index.html": "2f5a34befb6267587503a34c8e6e94385d7d58a3424408493023bea983450c07",
-    "uutiset/valtiovarainministerio-kasvu-nopeutuu-alijaama-syvenee-34fd8ffc3b62/index.html": "6f3be5dabfc147eb56cdbee105eba29388d4d27c8be00f8f6ce9868912df7dc6",
-    "uutiset/valtonen-arktinen-yhteistyo-vahvistaa-turvallisuutta-95ad2d8ee611/index.html": "69a8e7f2f6e9fafaf391f98d8da9f80f7738d06755ca5b12677086acfaba43d7",
-    "uutiset/valvesalille-vaistotiloja-oulun-vanhasta-vankilasta-55b598f4b18d/index.html": "eb3b5f729d92e9afa57132f17d3404a1d8b37a1e6907334ee63fd0ad302615a8",
-    "uutiset/vantaa-haastaa-kunnat-luontoterveysvuoteen-2027-31c76d776a4f/index.html": "fbd6d8fda779bc7181a433d12618f880ead85e90ac44db0ff1691de25a052ac5",
-    "uutiset/vantaa-harjoitteli-vaestonsiirtoon-varautumista-12c4d486d6af/index.html": "8eb49675d5ff18f83aaff735af2b692355ac107834ed830233d228eeec28b0f2",
-    "uutiset/vantaa-jarjestaa-vaikuttamistapahtuman-30-syyskuuta-e524270d4616/index.html": "8e3793ea11505271670589d9def9b430a8bcd28b13377fbfe7fa9c9432e94bf1",
-    "uutiset/vantaa-keraa-tyonhakijoilta-palautetta-palveluista-5a635efaca1d/index.html": "8cad99075681e2218df7848492c2c726f55880466506d0b33e16aff655555fd0",
-    "uutiset/vantaa-kertoi-liputtaneensa-kestavan-kehityksen-puolesta-c190474290f6/index.html": "17a78d9f7f3db7e0681af53cd4b156f80dfe84feca933c89b4d173ce2dd8af8a",
-    "uutiset/vantaa-kertoo-aamu-iltapaivatoiminnan-kilpailutuksesta-32dddf9b3ee9/index.html": "310967e7047518057bbda475f8677a2623018ff6d3a27b0c04da0310a04235d1",
-    "uutiset/vantaa-kyytitien-pontitustyo-alkaa-1-lokakuuta-c88460bedac1/index.html": "eaa7bda08c1e8290cdcc7632dc4fe07d4f63c34c91673bad2963ecb2e749e0f9",
-    "uutiset/vantaa-kyytitien-pontitustyo-alkaa-1-lokakuuta-ef9f7920c011/index.html": "ab9d97d4759fcd9248151ad93b7b22a7ba893b5b2da73e54160fa7413781c5cd",
-    "uutiset/vantaa-lahettaa-kiinteistonomistajille-tiedotteet-uudesta-ed3b01a4297a/index.html": "0c2c210893607a5a70a25f827c6ce8a5b17ffbcd09e8b5260a832e5ae345222f",
-    "uutiset/vantaa-mittaa-toimitilojensa-radonia-talvella-2026-2027-e34055926556/index.html": "c08af68731b54456dbb5c4e1f2751b48b0e906b9622a623c661292c925195c5c",
-    "uutiset/vantaa-osuustien-ratikkatyomaa-laajenee-28b2b9770662/index.html": "db7c0dd32f6290807b6280a02d8358931c93c5f5c6dba80210766340e4a1ddf0",
-    "uutiset/vantaa-porvoonvaylan-kaistoja-levennetaan-d838076e2c08/index.html": "d16e8a510e9725556a079908e111fd501e8f5e1dc5264e5e941d153311442e01",
-    "uutiset/vantaa-valmistelee-yhteista-suunnitelmaa-palveluille-6851893ce6d2/index.html": "9efe695c6b6b624cb3f16137dbe3aeddd0e6155f9e40c7dab17007a92c4d58e1",
-    "uutiset/vantaan-hiekkaharjun-golfliput-maksavat-viisi-euroa-8d0312b9b940/index.html": "cc7d5588e6d14d812244f0c0b322877e25959835655ab7fc34c7847e8abac544",
-    "uutiset/vantaan-historian-museo-hakee-avajaisiin-vapaaehtoisia-d96705192438/index.html": "e829c43fe7a3e264da5cffcf48d93a847de318d24802947af0fc23548a61204e",
-    "uutiset/vantaan-keihastien-jarjestelyt-muuttuvat-28cb5bdd8d54/index.html": "73595eb1a118f777dd20517f71b293295f2fe40d8235deef1236463e4174c5b6",
-    "uutiset/vantaan-leppakorven-liikuntahalli-valmistuu-alkuvuonna-2027-b1ea3401e43a/index.html": "156c203fa261d8b71d75a74991a9220d2343a084d693d6e4dc66bbb0ff4c1891",
-    "uutiset/vantaan-monikielinen-neuvonta-auttaa-myos-pitkaan-asuneita-8244199fd98e/index.html": "5071f43cb272684e7ec70dea30f465c203fe95269f1792eea2c6edddad2649d8",
-    "uutiset/vantaan-musiikkiopiston-isanpaivakonserttiin-vapaa-paasy-004a6e9a6859/index.html": "2380bf65022af63b0f332e3dd55bd5ecea764ae77f8b3d40d1fe772570133c9d",
-    "uutiset/vantaan-osa-kaappisangyista-poistetaan-kaytosta-17fb53caf5e1/index.html": "86b2ba1b0a0c2b885918a0b5b7df97bb8e9cd49d18e22e171f499def46230a3f",
-    "uutiset/vantaan-paivakotikaavat-etenevat-valtuuston-hyvaksyttaviksi-3879659d8f8a/index.html": "bcd871a097dae676eaeccca73e43bd70645afe450019d59bf3bd60359d0180c7",
-    "uutiset/vantaan-ratikan-tunneli-etenee-tikkurilan-aseman-alle-1ca8188892bb/index.html": "0121a4d851a988f2308acdc9abc5cd1af4b56a1a8dcbfaa458119b33c8a85931",
-    "uutiset/vantaan-syyslomassa-taidepajoja-kartanon-kekri-f1f023667c0f/index.html": "ef8b4b8dde1aba07775e8c25b98caecae99893ab5e47193760fc3e1575ed35c9",
-    "uutiset/vantaan-valtuusto-hyvaksyi-ratikan-vaunuhankinnan-takauksen-f3cdd3704bdf/index.html": "00fd6ef643f0f500162a9581a0df94452c2ea62d19b82f317b0dd86fe432c67e",
-    "uutiset/vantaan-valtuutettu-tutustui-ristipuron-paivakodin-arkeen-24780c2c9ea2/index.html": "f8735977fdc8603c418197426fb944033d5064effacc5c2f45275a79ca35ff65",
-    "uutiset/vantaan-yty-akatemian-ideat-etenevat-tyoryhmaan-ba96b94ee71f/index.html": "7b1dce1abe2d30d359a7d579b0388f0aa602bd7e34a4a07fadbebc1f34a228fa",
-    "uutiset/varhaiskasvatusmessut-jarjestetaan-espoon-dipolissa-9-10-125487dcb855/index.html": "04a93423b04f5556f06fa1f6b127eeb3f9201d97672015061e4576e5c8fc8c2b",
-    "uutiset/viikatepuiston-suunnitteluun-haetaan-asukkaiden-nakemyksia-d8d916de41e0/index.html": "e99a9cfe6fdb0b44a687b35f31f3d5ed888e8fa2afb6133d7b29e9c43eadeb82",
+    "uutiset/fortumin-yritysasiakkaalle-suositettu-hyvitysta-45c3d38688f1/index.html": "05d49f59edb08ba80c5d08e873d82dde2cd11e43a515444ccdb01c4d8f14e972",
+    "uutiset/fredrikintorin-remontti-viivastyy-arviolta-vuoden-loppuun-2a57e16b0903/index.html": "f84f219dda1e963fae844de5cc1d07309b66c3c1be0fcc8383b3c2a596e3ee93",
+    "uutiset/hakansbolen-kartanomuseo-kutsuu-syysloman-tapahtumiin-2684ca78ebd5/index.html": "664f8decf1fce96599e286b3e9c2ff063cbd2f47699c6c607042f7be4542cc9f",
+    "uutiset/hakkanen-vieraili-libanonissa-israelissa-265e1c050023/index.html": "5e8552940406af735c491028045a060011da08632a498e566d9f5446e40d26d0",
+    "uutiset/hallitus-ehdottaa-saaristolain-uudistamista-kausiasukkaat-2a902aa7df9e/index.html": "93418b380ea20c9314c49034421ade699a22f6f7ffb02b7faa7f2097fdcba9f6",
+    "uutiset/hallitus-esittaa-koulutukseen-joustoja-hairiotilanteissa-dbd531c56a76/index.html": "536b064028c859170cad0d7ac2e0da28a860ea82653daa8896a355f017624357",
+    "uutiset/hallitus-esittaa-lvm-n-budjetiksi-3-73-miljardia-b7dcd94bbbf9/index.html": "16e3a8af914326846ce03194421be95070639e63f91db4de4bec24eb87b7d1f8",
+    "uutiset/hallitus-esittaa-mahdollisuutta-jattaa-kelan-f3971ff28482/index.html": "ba350c165fecf5ae92e269d15637c346eebc36988c2c8392ffc5a3c974524360",
+    "uutiset/hallitus-esittaa-muutoksia-sote-lakien-palveluhankintaan-8e7e3e585fec/index.html": "a7e66b650f1c11cc7780f0206cdd7e91855b842a10577e8424a9fdda275b8a44",
+    "uutiset/hallitus-esittaa-poliisille-laajempia-valtuuksia-puuttua-90375dd8de77/index.html": "21aff6759ed5eb0e8498317e086806e6f09e734995da93b1d7a3d8bd3bd2e2e0",
+    "uutiset/hallitus-esittaa-tyottomyysvakuutusmaksujen-laskua-2027-f97bcef965b5/index.html": "97fc4c3367b1343c1589b3b2f858bf70098c088c4c2c1e7144b75eaba5b67ae9",
+    "uutiset/hallitus-esittaa-uusia-maksuja-erikoissairaanhoitoon-1009344e322c/index.html": "7e3bab268504edad41c708e71015544107d94cb022ab60f60d6f50e8d04dd982",
+    "uutiset/haruspuistossa-kaadetaan-noin-100-puuta-lokakuussa-c3e242101b0c/index.html": "b440a080df03b0072ed814f8797db8db9a359b3852a50525056472127c1c442b",
+    "uutiset/havikkiviikko-kannustaa-kouluja-vahentamaan-ruokahavikkia-61b3c101e925/index.html": "54df30f29f0936cee0f4b9f2bece111bf852bfca6e942b262b73d789b91dbdd5",
+    "uutiset/helsingin-elinkeinojaosto-kuuli-tonttitarjonnan-katsauksen-8f7bf8135bb7/index.html": "ea734f4cd4dfd28d4b9d4d4e16e925436694141e27b84813d320a17578461de7",
+    "uutiset/helsingin-konsernijaosto-puoltaa-raitiovaunuhankintojen-38c33234e1a7/index.html": "f053dd782f96c24de4f10f52a1487f355cacb4c904edec04c4420a1e3b949358",
+    "uutiset/helsingin-kyselyssa-myonteisia-arvioita-etahoidosta-ff4aa5e086dc/index.html": "f57870d8d07770ffcf5643e862d2f9b779b35b44628c0085a963ad2b9e05b2c5",
+    "uutiset/helsingin-liikunnan-avustukset-uudistuvat-vuonna-2027-728af67d1511/index.html": "0609964ebda315d2efdc4f928127025f386abf3e559a05ef574f44589b3d6755",
+    "uutiset/helsingin-pienituloisuus-yleistyi-vuonna-2024-333a8e11bac1/index.html": "7c143522f974223ee5ed9f36d77a34373911beb5109aaac77c9941d8a243c665",
+    "uutiset/helsingin-rakennusjarjestyksen-uusiminen-eteni-c5f827f0eb7b/index.html": "ceb5ef1fe223152bf3d35a93b650560368dc772102676c5994b2ce4e799b87b2",
+    "uutiset/helsingin-silakkamarkkinoille-uusi-ravintola-alue-lokakuussa-8919f3311ee7/index.html": "61eb569bf99cb69f3eefb4eb185f2eff6b680d0ee5e466ddf872c29d3a66c7be",
+    "uutiset/helsinki-itiksen-symppis-siirtyy-turunlinnantielle-2f05494ef557/index.html": "5be11f0b8790622d9aeb59cd875d75889df692bc3804ad0e31ba948fee1aa0f2",
+    "uutiset/helsinki-jarjestaa-vauvan-unta-kasittelevan-verkkoinfon-24-23759dbb8476/index.html": "0ff3a066151fa5b57d837d8b47a59c726de9b1a4323f36e8582e03b1b92bad33",
+    "uutiset/helsinki-kertoo-paivittaneensa-ymparistotavoitteensa-e15ca37246a1/index.html": "107d43bf073af5bb1b104a9dba205e828ad2b1fc379edfe6538a6cef120061aa",
+    "uutiset/helsinki-kertoo-sinisen-talouden-yritysohjelmasta-2a8b2adee4b6/index.html": "9e4df72bfd4212c4292fbb4fa762d3478a2ed0f76bc65b7d3c13d06ff1524977",
+    "uutiset/helsinki-kiristaa-ajoneuvohankintojensa-ymparistokriteerit-52aae0fe9233/index.html": "4cc380bfa365a5185ec0fb71cd9fb6039d37686116292c6ad9f08380c93e9f3c",
+    "uutiset/helsinki-kytkee-yk-n-kestavan-kehityksen-tavoitteet-tyohonsa-66ca79131373/index.html": "8a1a1e7616e12f16155b1967350b065b811d6f24aa4c4b2fb22355a0a87c8862",
+    "uutiset/helsinki-otti-kayttoon-turvallisemman-tilan-periaatteet-ea2b1f992164/index.html": "7859edc34f2a44f0adcb6d9f880125af6d4a1bf3640f00fc7daf8060f81154ec",
+    "uutiset/helsinki-poistaa-syksylla-kaytosta-noin-35-pysakoinnin-d6f4493ba6e8/index.html": "01c8a88357a6d0969d79ed945b7af3973bb1ab0cc0c0f105e2a674079ff9c64d",
+    "uutiset/helsinki-pyytaa-kommentteja-suunnitellun-kansallisen-bd71b526d449/index.html": "395ac385fa3d23d7f60cbe16044cfe8bc42a6dae3ba4bd82b386532d8ff2dea9",
+    "uutiset/helsinki-tallinna-tunneli-esilla-ministeritapaamisessa-78287132895f/index.html": "9a58e2b7bd023cce3bdc79fef77b3c1fb67b4fd65cd99c4dcb1ad48feb0047c5",
+    "uutiset/helsinki-tavoittelee-pyorailyverkkoa-valmiiksi-vuoteen-2029-56c04677f3b3/index.html": "3b9843a4e585385a7f2249ba536e682a91722423d9ffceab5be39575092f1f94",
+    "uutiset/helsinki-ykkoseksi-kolmannen-kerran-gds-kestavyysvertailussa-2c5050d14dd8/index.html": "cee5fe2185f8d0d31c4453ff49075184c2689596124fb67cea88e4ef31796065",
+    "uutiset/helsinki-yrjonkatu-avautuu-liikenteelle-28-syyskuuta-e7bd28796feb/index.html": "db8d60a97b400da853c2ba97a059f432f078ea21f67724e445008591b15136cd",
+    "uutiset/heteniitynkentan-peruskorjaus-valmistuu-syksylla-2027-893508c01462/index.html": "bd1a3b56c1b4aa10f112ccb12aa069a34f7c1a52515e34658e6b99e9bd773de1",
+    "uutiset/hoas-rakentaa-174-opiskelija-asuntoa-itakeskukseen-04f5e7c23aea/index.html": "b6da8b2d9efee3b29ee8f3c28eaba6ce7f700ee13d8222fb56c26903dac65426",
+    "uutiset/huippukokkien-club-des-chefs-des-chefs-vieraili-suomessa-f9ea85f1e6d7/index.html": "0fdbf2d27ca3c98a6615dfc46e75cd8699733acb1dc4cca7a27d41cd48e91fa3",
+    "uutiset/hurrikaani-polo-toiseksi-voimakkain-tyynenmeren-itaosassa-df134e357787/index.html": "9fcb56d59c8ce3b77480f67ce0ee4d81a50e3eb7b77ae21a72bbe222823e22b4",
+    "uutiset/hyvinvointialueiden-rahoitus-27-5-miljardia-euroa-2027-57e39fbd0a4b/index.html": "97637468503d40dd418e7fc36d0926887604e8cd624c18eb18f9d395ec93e1d9",
+    "uutiset/ikonen-kuntien-ohjaus-esilla-pohjoismaisessa-kokouksessa-6be99b8cbd81/index.html": "25a44a7a9243ffd6cd5778aaeb310a3da956838411451fd06dc816961a7ba1eb",
+    "uutiset/indonesian-palojen-savu-nakyy-satelliittikuvassa-kuivuus-5e19146e4f51/index.html": "7f266a30c8eafabc13005da45d766d6a756abb17083ee84dd0d7b5c0fb53e597",
+    "uutiset/inflaatio-nousi-elokuussa-2-2-prosenttiin-hinnat-laskivat-ba164fa2011d/index.html": "3493ce84f269c74d4780081fc95b28a6e3aa0b18c58114c8a33fa7d4a2211cba",
+    "uutiset/isabel-schnabel-jattaa-ekp-n-siirtyy-imf-aan-86fcec1077e9/index.html": "c5b81c7ebf8c9c1d0d5f65c12fb2584f4307cc3cc4b642c2bba935a3534729c2",
+    "uutiset/itakeskuksen-terminaalista-arkkitehtuurikilpailu-bc32d0e7e97e/index.html": "7260f36e3870e187fa07bf648e7a406cff600889df66329e4a0a945b7c065c52",
+    "uutiset/jakomaen-vaaralan-lampialue-kunnostetaan-lammet-koira-17f3a9e55a5d/index.html": "bc86393644d9b3f3f84996b9ee72d5715c04b4462b9cdc9783e26bac43c4e409",
+    "uutiset/julkishallinto-vauhdittaa-tekoalyn-kayttoonottoa-231d1af5e7f4/index.html": "40fc686779285e92794b370f834a269d70b6623b1002c4dfed818498023218f7",
+    "uutiset/julkisyhteisojen-alijaama-0-5-miljardia-huhti-kesakuussa-4065dbc091a8/index.html": "6fddf2c24a0f2a8cad143244e6cb12e3b48d5a1d70f67c5540a1ef1baab80ae1",
+    "uutiset/julkisyhteisojen-velka-nousi-259-6-miljardiin-euroon-a24ef4286ebe/index.html": "ceaf2355a676fd21b362c745fb61b962bc47bd8b77c3c5700ca1392113f95861",
+    "uutiset/jynkanvuoren-kavely-pyoravaylaa-kunnostetaan-kuopiossa-1b809e5df98a/index.html": "b5f5a2be7ef69b1cec3e02de2bdd0c79bb5c51626bb42512d55d1670ce990e14",
+    "uutiset/kampin-terveys-hyvinvointikeskuksen-rakennus-valmistui-b6bddd1a6fb9/index.html": "83318d5605eebebec8c23f7f24512e56f64a14f2ff96b64da880b714d402348c",
+    "uutiset/karamzininrannan-uudistus-toolonlahdella-etenee-kivityot-55e6e217d134/index.html": "578dde635e725ff80424b1adb87e21c87e3496ee80566e421b45118ddb2bd684",
+    "uutiset/karjalan-lennoston-harjoitus-voi-sulkea-teita-lokakuussa-9f5082949d65/index.html": "1e2de911aaa1ef9859e2925da79ea9a755f1f905aadb605f2ef19bd1b3e8c402",
+    "uutiset/kaupan-liikevaihto-kasvoi-elokuussa-7-9-prosenttia-0172ab418392/index.html": "79a29543b37a86e6ee45e8e3f019922b332985fa07bf33130dfd7d29fd52983c",
+    "uutiset/korean-niemimaan-sedimentti-erottuu-nasan-kuvassa-b25d7a241a77/index.html": "68cf377099cd01626dcc2c06ff45939088069090a5cd7d9b0bdf2eeabd3f25ee",
+    "uutiset/korkeakoulut-solmivat-yhteistyosopimuksia-kiinassa-e9296ac693e9/index.html": "21f69541e047f77759f58b3962620d9a8e3ee4f5157057e6bb2dd92ffbe01807",
+    "uutiset/korson-uimahalli-sulkeutuu-2027-hakunilassa-remontti-402abbd6fcc3/index.html": "ee45ce4905a0090120fcd50b46ce95933d2cd3593d12e8592bb721da345ecc5b",
+    "uutiset/kotilon-lastenkulttuurinayttelyyn-voi-tutustua-verkossa-ed01e64009e6/index.html": "5a15f651a64c069fe8649c9f6f6274187b9875e4e0f1a08ac33a1bb2fdafe6e4",
+    "uutiset/kulttuuripankki-kokoaa-14-maakunnan-taidepalvelut-9f85a9249ff4/index.html": "4e5b2ab30ef535083ae5299b5c2a2d1af4d5c15270a4111f99406b1c965c6745",
+    "uutiset/kuluttajahintojen-vuosinousu-syyskuussa-ennakolta-2-6-2e846b3cf176/index.html": "f8d60542e9d67f31f75cd8463e9b72fccf2cfe76cb92866b6d25f4fc993a6353",
+    "uutiset/kuntaliitto-ehdottaa-valitusoikeuden-maaraaikaista-rajausta-fe92f910b26a/index.html": "5787c59dd81e7bb31a11d8e29a59d23ad7c836f877698f366105faae25491f80",
+    "uutiset/kuntaliitto-tyollisyyspalvelujen-asiakasmaara-kasvoi-10e9a01ad0d6/index.html": "db0bfd7ef6f672f987b38fdca31664fc418d2005b10ca3f845f7a15c0c91d4aa",
+    "uutiset/kuntapaattajakysely-tavoittaa-valtuutetut-viranhaltijat-0dadd1c7a542/index.html": "f0d78fafea656f0b1e556f89f19ce26d5d0a15a514c7aa9eadec66d13a4ce772",
+    "uutiset/kuntatalous-heikkenee-vuonna-2027-valtionosuudet-pienenevat-4c28a63affcd/index.html": "ac9ebafd16e225be89c08287e438d496b6a4b0ddc71cb9658dae5da1c296c504",
+    "uutiset/kuopio-ennustaa-8-5-miljoonan-euron-ylijaamaa-414e3cacf805/index.html": "b23a0d286e06bda70eaca4877f8bda868182f72bf8d2ddacbecf2220e797219e",
+    "uutiset/kuopio-etsii-kuntalaisilta-ideoita-896aafea7d4a/index.html": "aea676e674a98daf4005016bd9b90f25786ad7180e72a7d9d5cf663ec91dd681",
+    "uutiset/kuopio-eurooppalaiseen-johtamiskoulutukseen-aa9ec5a14b3a/index.html": "10532bcec659872e6dc19ed24ec3d0a3e545c9146d5f1e2d54e633eed8be27b5",
+    "uutiset/kuopio-julkisti-vanhustenviikon-ohjelman-lokakuulle-1b86dc585a62/index.html": "b8e15c5d5b20abfe1535777007de2944ac832dfbee42958b8a6fdeea510ee33d",
+    "uutiset/kuopio-kertoo-osallistuvansa-lvv26-harjoitukseen-7026a3950494/index.html": "502d73aadd9da9aa4dec2bf09511c0860dddcd7ec65db0c7e4b2fde058370200",
+    "uutiset/kuopio-palkkaa-syksylla-viisi-tyotonta-nuorta-ensi-vuoden-9daf662c054b/index.html": "3713bd47e2349a7955d0b23e138e3bf2456555990173d7a03dce3072228531b2",
+    "uutiset/kuopio-tarkentaisi-esiopetuksen-oppilaaksiottoa-b883b041affa/index.html": "e9c2f07b15cb4b3c0cb1a490b5d23724fc0974b2cd7b36eb7d9d92f80587ff14",
+    "uutiset/kuopio-uudistaa-turvallisuustekopalkinnon-0135c0ae3ae2/index.html": "958bf67a6bb57202d7ab9b0e8a5fd2c43476de5f70fa8680c285fd439f40ef02",
+    "uutiset/kuopio-valmistelee-sarkiniemen-paivakodin-tilaratkaisuja-a5bce1875201/index.html": "4732ff080905ed9c533318ef957113ae0da39c6c48f71f85e583deea6c309e4a",
+    "uutiset/kuopion-blogi-ajan-puute-yleisin-este-liikkumiselle-9497221470f7/index.html": "f3a7124c7c1f0cc0138d42503eff03d548f7013e15bc34c8d7605bb3ab5d41c5",
+    "uutiset/kuopion-johtamismalli-nojaa-kolmeen-arvopariin-6caece9cc4b0/index.html": "c6e5f7e7eb9700b505a935410a544336bbf10555cc78612f756c1bff26f16809",
+    "uutiset/kuopion-kaupunginorkesteri-svang-yhteiskonserttiin-abb6da8fa71d/index.html": "41ca968dcaf6f783bc4d60e413e07968fcac53053d85502437af525d2ac1881f",
+    "uutiset/kuopion-kaupunki-taideviikot-jatkuvat-lokakuulle-8a665fa35d3d/index.html": "b58fa36108daa23f78fa28abdda424ce8775da72e1549bd67cdb665e0c4211c9",
+    "uutiset/kuopion-keskustan-liikkumiskysely-avoinna-31-10-saakka-b8d212c57650/index.html": "75c9a365c45e6720a12c0947ace142786449c6a01f5c3914b0d9693b38913c41",
+    "uutiset/kuopion-museo-saa-samurai-nayttelyn-toukokuussa-2027-f6062bf646e6/index.html": "ab3ea19b9948f9692c15fa4494de476c5b436f86013c8746e403c408d8ee647b",
+    "uutiset/kuopion-taidelukio-lumit-saa-eu-n-opetuspalkinnon-5302e5201e17/index.html": "70f3fdead09b95d7a59abbaa9796906784b7ef313282e69880924d46fce62297",
+    "uutiset/kuopion-talousarvioesitys-niukasti-ylijaamainen-8e994b485511/index.html": "0ecd87e567986eab5df612394746b43b1163e657bce88387d73b39c054c64cf1",
+    "uutiset/kuopion-tyoelamailta-kasittelee-tyontekijan-oikeuksia-f6aeaa0e7a76/index.html": "4732a3d62b81bad95b8fd5a1d65f67595e36fa2e89ca7e4d8046e11e7ede6250",
+    "uutiset/kuopion-vakiluku-kasvoi-396-hengella-alkuvuonna-2cd7ce2136f0/index.html": "a2b612b4c349ea89793a4b08c6c64fb8242bcc170964ae86ef15008abb4210dd",
+    "uutiset/kuopion-vanhustenviikko-tuo-kulttuuria-kohtaamisia-5cd5fcd61b42/index.html": "f6d81e7467939045d3380dd875e78da918e4f0f7c67fc9cca867fb395b0ac67a",
+    "uutiset/kuopion-welcome-to-kuopio-tapahtuma-20-lokakuuta-a050cd8361c0/index.html": "304b44a9d3cad918c7d0996ef85bac633e101ff1d2493fe492ec718611a83163",
+    "uutiset/kuopion-ymparistopaallikko-lahiluonto-kaupungin-kasvun-3728f0b0d62c/index.html": "b2e042c92bec075a14def3341b4d2b6302c0c1516d79a2c7d08df05edc8e27a5",
+    "uutiset/kuopiossa-asfaltoidaan-pyoronkaarta-jynkanvuoren-vaylaa-8cacb894e21b/index.html": "1aac1d999c0d0c1479c2ec35d6c1dbb0aac6091de96c3bc2d254e11b7ba9cbd5",
+    "uutiset/kuopiossa-kokeiltiin-koulunkayntia-vaestonsuojassa-bfb80bbc6d7e/index.html": "2e70c28045a2125c5d2694aaeaccf93c1c75ed36b0fe4fb9b2a83fb65ca2bc3b",
+    "uutiset/kuusijarven-saunakapasiteetti-pienenee-valiaikaisesti-ac11a9d263e5/index.html": "7a8b7fd2181252e5abdd27c55b771e620cbe0976885e9972283805ca988669bf",
+    "uutiset/kuusijarven-savusaunat-voittivat-arkkitehtuurin-finlandian-f7ba9ee3717d/index.html": "fb1369ad781513fcdf43a814910e89c9151aa59124cd3c5ac664ae13b2f27026",
+    "uutiset/kuusijarven-savusaunoille-arkkitehtuurin-finlandia-2205f6bc9b0b/index.html": "7b9eaf196c50b022801425f6f764331033dc12c05396fc5ab0ef41978324fb74",
+    "uutiset/kuusijarven-wc-tilat-kayttoon-12-lokakuuta-c2bc4a29129d/index.html": "caabce59344d2a62acd59c8f82f851350da6246e5c2da455f705c2898e85279a",
+    "uutiset/laajasalon-palvelukeskus-vie-kohtaamiskahvilan-saareen-c12a889800ff/index.html": "3f253c8ff8c96af7dbc89903164804fc23c42c85d722e205c264491946a906fb",
+    "uutiset/lammitysenergia-kallistui-kesakuussa-vuodentakaisesta-849661688f3c/index.html": "7c3505cea064bef07ec360ec69bc6f186cbf7aaf1520e66ad9e003dee43298a8",
+    "uutiset/lansimaen-koirapuistoon-tulossa-kayttokatko-torstaiaamuna-133493c7588f/index.html": "2f67e8f5ba89f42c2c056e7ae71f889dd0e106f12a8985a0cd4df425cb2f45c0",
+    "uutiset/lansisataman-pikaraitiotien-hankesuunnitelma-hyvaksyttiin-743604e52b6d/index.html": "d10c37abc615290ad38677c0387eda51fc7dedf6c090d80fa95006132f5bd859",
+    "uutiset/lapinlahden-peruskorjauksen-valmistelu-jatkuu-esitys-86f1d633295b/index.html": "c2dec70d213b3856d8f79c4d817927591e74a52867a86eab31cabcaf3e56d277",
+    "uutiset/lemmenkujan-jalankulku-pyoraily-yhteys-kiertoreitille-b72bfc87ea57/index.html": "124547f9546a7f72528bd8737126b6d94aa69d163d47e5226240a2a9cd711c0c",
+    "uutiset/lemmenkujan-kiertoreitti-kaytossa-viela-viikon-41-9379acd25d35/index.html": "9aec22dbad18c4fa93ce15ac8ebd9f9a6939eadfe0dda33ab09610464837e249",
+    "uutiset/lentokenttien-matkustajamaara-kasvoi-2-elokuussa-e4e3315600c7/index.html": "ee2fc7914b27785bdac0d25f8614d19ad0dd6369efcd644da6687e60f88c4244",
+    "uutiset/lintulahdenkadun-rakennustyot-alkavat-lehtoniemessa-b2fc857c6685/index.html": "a7b6eda6462a29d3cdee87cd8a6bd5d2efb0e5586648a6009d1268d22f36b36c",
+    "uutiset/luottolaitosten-rahoituskate-pieneni-7-1-prosenttia-81e510f0302f/index.html": "7707c4bb908d650ec7633e3df08a6c4ef55edb8bb917b49b46c731719eae2fd2",
+    "uutiset/maa-metsatalousministerion-budjetti-2027-2-6-miljardia-f4660882883d/index.html": "baecac8ce1c7b61bb8ca55d37035ca23a278808da8838e49e348351ed7acca9f",
+    "uutiset/maarakennusalan-kustannukset-nousivat-6-4-elokuussa-7a59abbcb656/index.html": "462d0a95de311e532129247c00ca044957e981b48ee5518ad6f143e83d6d896f",
+    "uutiset/maarit-raja-aho-tutustui-myyrmaen-kunnossapitoon-379dbddb774b/index.html": "64c471566ffee68915140059164544acea67fe73bc162a007078576a7e696d73",
+    "uutiset/maatalouden-tuotantovalineet-kallistuivat-heinakuussa-5-8-aca81b732a64/index.html": "28c39f5934147d87c4924ab14a17d4d4f2258124947845fb8c703dfaa221c262",
+    "uutiset/maatalouden-tuottajahinnat-heinakuussa-vuoden-takaista-43d7e9f8a735/index.html": "9c33084a26ec3ca7833c6867dad8c211568084aacbf218b3ed9c4aa57b750038",
+    "uutiset/maavoimille-hankitaan-trackx-tela-ajoneuvojen-esisarja-4e34402bf900/index.html": "b169b1b3f611a137875456553ac1702310b3760b4387455b567fde1a127c38a8",
+    "uutiset/maksullisten-tutkintojen-vaikutuksia-tarkennettava-530d03529b18/index.html": "b105b2a57fd386476616b10dd0dd0e06e8569b0afc792ddd93565c1d90971623",
+    "uutiset/malmin-novaan-suunnitellaan-laajennusta-asukkaiden-6643e2b67fc8/index.html": "38d7ee140e027a841aa51a973878bccfbfd25652824de7fb0d7a01c73c5bf0db",
+    "uutiset/matkaviestinverkkojen-uusia-toimilupia-valmistellaan-1fc73b45c172/index.html": "2b1dbbfe98256213d0516c7434276aeea2640736d032b98f050f2a40c3701801",
+    "uutiset/meriteollisuusstrategia-tahtaa-viennin-kasvuun-d6f58ecba065/index.html": "04ef7a6fe02b946ec2cbfbfa5615e0df6b5ed5d6b4bf47c67a74fc3a50055289",
+    "uutiset/ministerio-valmistelee-karhun-kiintiometsastyksen-804377534929/index.html": "4eced30ad3838d3c18d2af2bce87c3992530966d4fdb6fb27e5eb25b3ba7d4d4",
+    "uutiset/minna-canth-palkinnon-ehdotusaika-paattyy-29-9-2742b84a5738/index.html": "7ee01711b80ceacdfb1cc439696b2ebada1909b436e74835e0889a381ec6278d",
+    "uutiset/multala-hakee-saksasta-yhteistyota-vetytalouteen-dacb24d664ef/index.html": "e4e5a6f34c6a86a9016645951f391364e03d085ca4b0ba4d69c7fdfadc91d1c5",
+    "uutiset/nasa-aqua-satelliitti-kuvasi-doverinsalmen-76d26ccc835a/index.html": "d8f2dc7b477545c95040c5aaa5084467bb8c8fab13ef0213d89760601f256c0d",
+    "uutiset/nasa-julkaisi-satelliittikuvan-australian-spencerinlahdesta-69f08f8012cf/index.html": "fab9de0b98b6a22646e3e324833f473eece40c8149bcff71a8717f23c96a90ae",
+    "uutiset/nasa-julkaisi-terra-satelliitin-adirondack-kuvan-893d279b6ca6/index.html": "0a0e1da2f83899020ef196e8fd09a123851882b37453845dc310777e1278e44a",
+    "uutiset/nasa-satelliitti-maastopalot-levisivat-etoshan-suolapannun-3e3118902b27/index.html": "9c382687b2a520ff5f7863bf23ce014a18a8175e2f0c933c7a2bcbfcdbef0cb6",
+    "uutiset/neulamaessa-vedenlaatuhairiot-mahdollisia-keskiviikkona-cadc5e300307/index.html": "7d1c9cb41e6f34ab39f2f7251a1a9bda06c1aff44b6a3ba708243d4b1989c87c",
+    "uutiset/neulamaessa-voi-esiintya-vesihairioita-28-syyskuuta-6f6c31f5cf96/index.html": "08181f2f21c0e07d97269b95da13bf45dbd676dd9563b64213c801fc4311de42",
+    "uutiset/nolo-toi-rankkasateita-havaijille-nasan-58795708c3dd/index.html": "fe9309b0f5e9bfec83abbd8d806266c198ec8f45b8c429464c216180d21ccae6",
+    "uutiset/nuorten-nurkka-avautuu-pekurissa-12-lokakuuta-75f6dca5be2e/index.html": "30cdcc6ab3dd35e53ea8dcee74643986d622c3ccc9a5452e5cc86ca9468be5a7",
+    "uutiset/oikeusministerio-julkaisi-oppaan-lasten-nuorten-f9615094ff17/index.html": "bf2b6652ba9974dc190bd94f0deed41f55eb2faa2c30fe4394c9d5d7d51e0014",
+    "uutiset/oikeusministerio-pyytaa-lausuntoja-lapsirauharikoksesta-7d6a15176a04/index.html": "8e8387c5dbd9259208a04e8809a6010f656a187165528445f6f8ef5f2586c7cb",
+    "uutiset/oikeuspalveluviraston-toimipaikat-vahenevat-158-sta-38-aan-c3565ca130d6/index.html": "d73d62087ac1f5e0311ed8e95893daba5b0d05ad29b12134d65888012b350024",
+    "uutiset/oregonin-maastopalot-jatkuivat-syyskuun-lopulla-c79a7f054313/index.html": "6139487fbaafc3584229c39edd7173345790e9d726232da22e2ee2316643c5c9",
+    "uutiset/orpo-sai-katsauksen-kansanedustajien-turvallisuudesta-41eea6aee980/index.html": "6f1ab6bd974184b8671e26ce413d1816b2f1fd78e433d94133c13f58267b098e",
+    "uutiset/osaamistilin-kokeilussa-harkitaan-tekoalykoulutuksen-96de6f5ec840/index.html": "a16897079befefa25bdc9ae4c767a792b6590693f772c1ffdfa29679287814e6",
+    "uutiset/oulu-keraa-asukkailta-nakemyksia-sivistysohjelmaan-c8956407ecbb/index.html": "6cd50f2264811a624667f257fd144ef82befcd39fdd0613cc50d076379362f42",
+    "uutiset/oulu-kertoo-johtavansa-suurten-kaupunkien-liikuntavertailua-84215ac70cf4/index.html": "d4111e966871a8743718ceda17bc9d215e262fe01b693380d719e527e3c07a83",
+    "uutiset/oulu-kertoo-osallistuvansa-valmiusharjoitukseen-97ffa58ef1b1/index.html": "a798cc228822b3f6fad6771424d0330d7c00275f48a40fe3b82da1bd467fb569",
+    "uutiset/oulu-kysyy-asukkailta-sivistysohjelmasta-lokakuussa-a16a2aa7f71d/index.html": "338a296af0674f8ff2f2d7eb0d62718fee0f38faf80160e886e267fc70892893",
+    "uutiset/oulu-sai-hyvat-arviot-katuvalaistuksesta-talvihoidosta-fc37e26d3a19/index.html": "6312b2cd38616e08fedd97a9ebbaa1cb2adf9823ed72b3607851192f61715f32",
+    "uutiset/oulu-uudistaa-kainuuntien-katuvalaistuksen-fc12a9cde34d/index.html": "98d05b0e0907b98b47301dbbaa658728ef44b1fab935748dbb071136a1e65a11",
+    "uutiset/oulu-valmistelee-ravander-korttelin-kaavamuutosta-f9a3d7c0d980/index.html": "b057c2329b14c82207297d56413c5b248ab53b8567fb6983b6b35ec918ecc5e5",
+    "uutiset/oulun-greco-n-ryhma-arvioi-kaupungin-hallintoa-0dec2b39d891/index.html": "5d1b52005f6cc7f9f11ea40328384252621452dddf4b364d06f77a11e17d71d0",
+    "uutiset/oulun-kaupungin-vaihteen-numero-poistuu-kaytosta-8-10-c5e10b449ff6/index.html": "d05e6b6a7e2beaa60a1c6fd1b8066ad3aebd581c6853add424813682e2c9d872",
+    "uutiset/oulun-kaupunginhallitus-hylkasi-oikaisuvaatimuksen-6425b16e5671/index.html": "45a88935c131783054890053b20b21f12ee8a61ac287c6924717c7e875ef5990",
+    "uutiset/oulun-kaupunki-jaalinmajan-uimaranta-vaihtaa-yllapitajaa-e5a0f5bea8dc/index.html": "5800e5d3f0b40da389cb11bf4fb9ca9224bb5922aed803a6393191a14c69b8bf",
+    "uutiset/oulun-kaupunki-kertoo-ymparistoterveyden-valvonnasta-c05f7df9e539/index.html": "c08ae8c28b52132e6d1297b539c5cec8514e3c52e2554e89eb83886b1486f187",
+    "uutiset/oulun-kaupunki-lastenkulttuurifoorumi-kasittelee-mediaa-bc357262eb3f/index.html": "e9e173e3f5597a77eb3a1fc8eb9f1c6dacd526fe6c2e71593f31cd85709930c4",
+    "uutiset/oulun-kaupunki-russt-teos-asennettiin-oulu10b-hen-7320b219279d/index.html": "7cd0826841634f16be3ec6a1bdd128c4ed06066f712cd735e7197663d65dcbfc",
+    "uutiset/oulun-kulttuuripaakaupunkivuosi-esilla-eu-vierailulla-288034a2f477/index.html": "da5a86138d8ceb2f1ce9adfb121824bca42c1c3b61fb0384dbabc61498ac4088",
+    "uutiset/oulun-osallistuvan-budjetoinnin-aanestys-paattyy-sunnuntaina-b46385fe582c/index.html": "5956d1e6535a307736530cf309c667e155f96d7e9f98b3cb8e242a6c055764ef",
+    "uutiset/oulun-seudun-tyollistamisseteli-noin-kaksi-miljoonaa-euroa-ffb5e853ea4b/index.html": "198deb40db8d8aab9d788ef695e77eafb7738a3305218aefb5c86e0de3428f70",
+    "uutiset/oulun-talousarvioesitys-2027-ssa-23-miljoonan-alijaama-5fef23277802/index.html": "b0943b0fd24fa2d7164483593cf225c0f5c3e994fd80bc89f6c166c3839d82a9",
+    "uutiset/oulun-valtuusto-hyvaksyi-paivitetyn-konserniohjeen-6b274c9cef7a/index.html": "765dc2cb646b9e87565a167fabb27abd0ca225b9a8e36207cb7850bd676fc60b",
+    "uutiset/oulussa-jarjestetaan-kaatumisten-ehkaisyn-tapahtumia-ab7243f61af1/index.html": "2cb97fcf79100182475538e659ead9c502f4c22c4b52667736b4d8b15ab5585c",
+    "uutiset/packalen-rantala-kilpinen-esiintyvat-yhdessa-kuopiossa-482c01da18bf/index.html": "8ea52ccc2212fd0e23d5e175f59701d25fbecf6cfdb8c17c971013f199a45217",
+    "uutiset/pakistanin-ylla-nakyi-harmaa-hiukkasusva-f6d6d00e00a6/index.html": "c44ce458d0c26d564c72c0003d12fccf4745571e4aa501c03ff33d299b241f72",
+    "uutiset/palkkasumma-kasvoi-elokuussa-3-4-prosenttia-vuodessa-8c742b4b56b8/index.html": "d5b4376f1d0ab2cb9aee264925fda06999eaa29e0b12d68f8ffa9038f9ca0ec3",
+    "uutiset/paloristi-kahdeksalle-pelastustoimen-ansioituneelle-cd562eb1e32c/index.html": "d649bd9b2757837ccc7ca86b63297fa02f02f075459348aabda85f39e0d534d9",
+    "uutiset/pihlajasaaren-kehittaminen-kaynnistyy-vuonna-2027-64aa1785598d/index.html": "b7e7c4cb1e5219a0388b44854d91d7b0549b18a2ea941f0e485a4942a60a76a2",
+    "uutiset/pk-yritysbarometri-odotukset-kohenevat-investointi-7bc4c26f61fa/index.html": "dc7b834b319e11746465f812a16f403ce742db12a635a003e28ec89ae76d1866",
+    "uutiset/poikien-elinajanodote-nousi-ensimmaista-kertaa-80-vuoteen-54a3a84f0d82/index.html": "734c26d19743d6dd87ec3cc4aa5a4d62058c7da58aaf01ae8340fe6cef48e43a",
+    "uutiset/puolustusministerio-jussi-toivanen-kenraalin-virkaan-sauli-2912317fbc92/index.html": "a1667c3e358297c940220a52558df6ab40a679adc11007658dfa39387bd837da",
+    "uutiset/puolustusvoimien-kansainvalinen-yhteistoiminta-lausunnolle-2e5b6f771351/index.html": "a581e9b4f85be19f3366b79fde0898dd127b282a4f9657e8511e241a63fb9f79",
+    "uutiset/rachel-hurrikaani-kulki-baja-californian-etelapuolella-59edc2fdcd34/index.html": "82c4ef00a7d738a3b4f80c1b5e13a066d272bfdac8df104594b65849db190873",
+    "uutiset/rahastojen-verotukseen-ehdotetaan-lapivirtausmallia-822144960788/index.html": "2dbea38f7cb3a4973ff849bf3a0eac7b7607147a27d272e4ad6f2aef4bbd9509",
+    "uutiset/rakentamisluvat-kasvoivat-16-heinakuussa-2026-3f76041fe5ad/index.html": "ad902adc4cbc49ea232ef232c41f13c11daeefffb5b641b75a21205b2fe0dc65",
+    "uutiset/rautatientorin-metroaseman-perusparannus-valtuustoon-8dd79400fd98/index.html": "d64a9d608fce09c193f66606e08df020c764bd66110b328c82bca6a45da5f778",
+    "uutiset/rautatientorin-metroaseman-remontti-etenee-valtuustoon-58b84ada8648/index.html": "0f71cee809609c797cd6c9d313b3a5764e1bcc8d2c82944b5ab310d90150a492",
+    "uutiset/reservilaispalkkojen-korotus-alkaa-lokakuussa-fb7f0f0b3e59/index.html": "07e14ac5207aa16f33d114c64c969addd29c4c64c419bef07d8991c84ef5c226",
+    "uutiset/rivieranraitin-louhinta-valmistuu-vantaan-763dffd702f2/index.html": "5a24f44b98b12b3270665b6eaa08319c2191a0bf4945f7b087c00ea1113f6e02",
+    "uutiset/sahkon-hintasaantelyyn-kaivataan-tarkempaa-vaikutusarviota-3201487f4521/index.html": "2dc2652a33204d5c16ad4c264881e4ed95bedaf928972dd3d12dbf1cf6e099c9",
+    "uutiset/sahkopotkulautojen-kaytto-vaheni-helsingissa-81f29c83f795/index.html": "861d0d24e824c2326f6218501a66350bd37aa61ced761dfbcfc7f4df30edb323",
+    "uutiset/sahkoverkkoon-liittamiselle-esitetaan-etusijamenettelya-b88d52aa579e/index.html": "bfc59b9cb62836e62e7f30ffa17add4f6e8ce958e7cf790da29bcbd51c846d3c",
+    "uutiset/savilahden-tutkimuksesta-halutaan-lisaa-liiketoimintaa-4410ea6cee46/index.html": "fab457b5e89925e9bc503a0eb3f220f92d86cee87434b8786c14d8ea2b69a0a0",
+    "uutiset/sdg-liputuspaiva-muistuttaa-yk-n-tavoitteista-ed4545bb087d/index.html": "1183b20e3de3b4aeb778fd6cf0f04090fbf468c63e89d79a8675263c6ceea934",
+    "uutiset/seure-omistus-etenee-helsingin-paatoksentekoon-0eef129b805c/index.html": "7b9bf2a7f541f56862022e7d4a577b5f5d7ed282dfcd17b4df5ac1292aba8366",
+    "uutiset/sijaishuollosta-poissa-olevien-lasten-etsintaohje-uudistui-ccde11681bc6/index.html": "729f57e3ba2f45b982ddd9f5bd09435c27c71d9e2aa9ff66f9afd9b83cf07a3d",
+    "uutiset/sisaministerio-lahetti-ulkomaalaislain-muutokset-4c675026386a/index.html": "a58d2295a716024993f41c2e489a8294cef360c77eaade4c747b02309d50bfde",
+    "uutiset/sisaministerio-pelastustoimen-palvelutarpeiden-arviointiin-2c46131fe163/index.html": "d0ad23362de12734639e14c820dc74000a422ae055a00987623e58140c4c2356",
+    "uutiset/sisaministerio-suomi-lahettaa-asiantuntijan-gronlantiin-c5e976469083/index.html": "a9ca4fddb18699f0a143e1005ae88b81a0de7de4b969dc1545d4ec28f51f0f35",
+    "uutiset/siviili-ilmailun-onnettomuussuunnitelma-lausunnoille-009bd8338513/index.html": "207f21af6d804e5efe810daaec69b98513544b481f9b054ab008697e7bae8262",
+    "uutiset/siviilipalvelus-kytkettaisiin-kokonaisturvallisuuteen-60ae5103baea/index.html": "673c6a7eb456d298cc758c1c19a51ce912b4472b6b98fcebca8dd5131d57ae1f",
+    "uutiset/sprinkleritestit-voivat-heikentaa-veden-laatua-kuopiossa-602baae68d92/index.html": "0636df596690be852cf6b1bfeef382da8f7a91a8620e610cca129e855001211e",
+    "uutiset/stm-avasi-huoltajille-kyselyn-lasten-somekaytosta-da0191af3831/index.html": "16fbe834eb10164d6a2720a0a703943ecd9962ba7057e36c954ca0f9fda7f8b6",
+    "uutiset/stm-laakehoidon-kustannusvastuun-selvittely-jatkuu-2218f9c8bbde/index.html": "fc69d9bc9fa557dd99d1e8cea3225cb74d5e3362ea3c784021ce048042c02e51",
+    "uutiset/strand-kos-keskustelivat-eu-n-laajentumisesta-edc2082a22d2/index.html": "555b234bd8c8884e6b58dc2754a57b163fb917b9c41d8bf1cc8e7cb72eb13d2b",
+    "uutiset/stubb-st-re-tekoaly-pidettava-ihmisten-hallinnassa-f912fe343766/index.html": "563b3fbf97085f94abe70594af027241ca12c2ee10edcce43b10e2a9cdac857d",
+    "uutiset/suomi-kalifornia-allekirjoittivat-yhteistyopoytakirjan-f3d38d6cc848/index.html": "9febe634ce84f74aa9452f64c88e030f0459d18d45e2e426faa10fe4dd85aa12",
+    "uutiset/suomi-mukana-maatalouden-eurooppalaisessa-digikonsortiossa-6b30890419a1/index.html": "6f373b246bf26b7981c097e5beabc38550737db33e91bbb6cc556e0d5198fb42",
+    "uutiset/suomi-tukee-eu-n-pankkisaantelyn-yksinkertaistamista-c0ed3784ff13/index.html": "fff89c4e6d02afffa5110a8dc907b12e401ba299ad911c1792cc616b5377fc82",
+    "uutiset/suomi-ukraina-allekirjoittivat-droonidiilin-404c67dcc0c9/index.html": "b1e461ddbab9ef0da298d15c49f1412cc14bf98d58e930ed3f42c1b323d62906",
+    "uutiset/suomi-valmistelee-sosiaaliturvasopimusta-ukrainan-c00b055093de/index.html": "f5635f0ba856478a43f641f5d122a5455085aa8a72f7a2b8999b3829bc0978b3",
+    "uutiset/suorat-sijoitukset-suomeen-kasvoivat-9-8-mrd-euroa-d3a1b3daea40/index.html": "6d838eebd9d2c9ad1852708fdf25ff37d3749b906938fb00a5152dedc71e644b",
+    "uutiset/suuntimopuistoon-suunnitellaan-nuorisotaloa-asukkaiden-a421e685a2cb/index.html": "e01963dbcc29f59afc533558a27eade05415b8ffec94586e79ae72c67fd3dabc",
+    "uutiset/suvilahti-diy-skeittiparkin-purkua-lykataan-uuden-puiston-f2a3b9da8395/index.html": "4eb4d199052d6f6b179edbce576ecb2b9b61c4993b193470a4288c4221754a52",
+    "uutiset/syopastrategialle-tiekartta-vuosille-2026-2031-2f0dda6d3c53/index.html": "2b7f741d01be9946d1ee2f6cc875b47b5f38d79f5f29f7ef98a248f1adc3e15f",
+    "uutiset/taifuuni-dujuan-kaantyy-koilliseen-kohti-japania-12ba6b5b591e/index.html": "e4ae11731903cc719d301258ae989529c1725bd4bcff9dd0296b9e42b353e463",
+    "uutiset/tayssahkoautojen-ensirekisteroinnit-kasvoivat-syyskuussa-cb48c97676be/index.html": "283ee39a8c3a5d778465d35428e2b0c7155d089d0bfc4ad7e1bd0b6cd0a5e7f6",
+    "uutiset/tem-pyytaa-lausuntoja-yritystukien-kriteerien-muuttamisesta-df3aa3cca842/index.html": "7cec76c4419640297d359fd789b0ea3368d6c9fff41f117c632e793f497262ea",
+    "uutiset/tiibetin-ylangolle-satoi-runsaasti-lunta-nasan-06fea975771b/index.html": "89bb1fb8d6aacbea0bca643a07451e4698a31bd613deba8180582e8000c6659d",
+    "uutiset/tikkuraitin-kavelyreitit-siirtyvat-etelareunaan-21-9-83ff62c717c4/index.html": "66043104afb1fbf814a3e592f0f3782ab5850bcc352588320d0108f2cc935f3e",
+    "uutiset/tilastokeskus-kotimaan-vapaa-ajanmatkat-kasvoivat-bc811a1e0b85/index.html": "b41c371dcbc93669a2cf5d7cac9b277dbad32121b11edfb93483a325b493ff41",
+    "uutiset/tilastokeskus-kuluttajaluottamus-heikkeni-syyskuussa-0b8385ef2ec4/index.html": "1cbe9b10acc33c03acd1eb557c46671daf57fde3fd607182dfdbeade91fa8dc6",
+    "uutiset/tilastokeskus-kuorma-autojen-tavaramaara-kasvoi-15-54f3c629fbec/index.html": "f0ad969a93b86457ecda4ca71b7e14c8c7d6f1385fdc5ac873450636495f565a",
+    "uutiset/tilastokeskus-rautateiden-rahtimaara-vaheni-6-prosenttia-5c7038698aab/index.html": "81e64146a76c24a20caa03052582873ddf60a28c5502e9ad728d15c4157d2288",
+    "uutiset/tilastokeskus-saastamisaste-4-bkt-kasvoi-0-3-62a3efa8b32a/index.html": "1e8778e84f4707f8ebc77c76485f04a6e4ff4042022b307597fcd2c004e58fb8",
+    "uutiset/tilastokeskus-suomalaisten-paastot-laskivat-4-655a35755963/index.html": "5b78b11cc42440c7e7d338ab8906b0f7e68fbb488beca4813d43bc4da7e275c3",
+    "uutiset/tilastokeskus-tuotanto-kasvoi-elokuussa-2-3-prosenttia-9b023452fb72/index.html": "97f1800187ff329d630115bd3f7a70af669ce432bd81a62c8d77305599b3eb0a",
+    "uutiset/tilastokeskus-tuottajahinnat-nousivat-7-3-prosenttia-0d04d24d7fe2/index.html": "b31c5602d0622fbf08e3e29792c6d0d9176ce3468659581505df31c09a440168",
+    "uutiset/tilastokeskus-tyollisia-34-000-enemman-kuin-vuosi-sitten-c9ed2d317f03/index.html": "340c5573b8236afb98bcea7b67c20cda0864eb9f001a28353ba82d97b2525f8a",
+    "uutiset/tilastokeskus-tyotunti-maksoi-tyonantajalle-38-7-euroa-f733c3e47c8c/index.html": "96d6a8278c91109618ae051cdee75cf5ebc6e5f83f9401dccd1ef6c21f867d3b",
+    "uutiset/toolonlahden-tulvasuojelutyomaa-palkittiin-helsingissa-c8d9df28ef8c/index.html": "14087a3e010c6e39622381b5b73b241fe3ce23a904da159ed89b4f9c037d0376",
+    "uutiset/toolonlahdenpuistoon-suunnitellaan-aalto-skeittipoolia-d0725b324ab4/index.html": "3201fc2c3c90a12bde2db105e5ab327d41474ef7592461775e714fe3a894f237",
+    "uutiset/tp-utva-kasitteli-ukrainan-tukea-kiina-suhdetta-aac41588a8b4/index.html": "7d5e80e037e5294704ff702531e7e389b82391f0dd1c3c7d424a4ee12f0903cb",
+    "uutiset/tp-utva-kasitteli-ukrainan-tukemista-persianlahden-abd979348665/index.html": "bf693068c754ba42dea79a0de4b178edeb0828b1bb11776a3e8aadafbfbfec45",
+    "uutiset/tsahkna-vierailee-helsingissa-kertoo-ulkoministerio-c1124443e572/index.html": "9140463d385f57cf41d9632ca7b1eef4d16f8c4606ce122a7a30ce016f62d3ed",
+    "uutiset/tukkutorin-suunnitteluperiaatteet-areenasta-luovutaan-66b21dd4363f/index.html": "66c0aa82418e193642c8231887e728509a067954a285b6d4687a192dbabd2b79",
+    "uutiset/tyoryhma-ehdottaa-vapaan-sivistystyon-rahoituksen-b2545a689479/index.html": "8551384da59061d0a40573152f819a1c780078becdf7485b1531bbb39274e81b",
+    "uutiset/ulkoministerio-roy-eriksson-muncheniin-perustettavan-20e36c0252e9/index.html": "8553bb77ebe00f3c3394fb19ecacaf76d19c8bd466752bab7fc9d7823c0a0bf3",
+    "uutiset/ulkoministerio-tavio-vierailee-tallinnassa-kauppayhteistyon-94c6d93ffe07/index.html": "9d3ce7d2a88eec9eb7ab573aa1a71fc3575361407704644688e5cffdceb0d7db",
+    "uutiset/um-lehtinen-yk-n-hataapurahaston-ryhmaan-fbe5ec9a52b1/index.html": "696d37535ebee32dc09bb9d289ce73929ff7d3d94245e16469cf699847f88084",
+    "uutiset/uudenmaan-vieraskielisten-maara-voi-tuplaantua-2045-mennessa-260f179f793f/index.html": "8ed33f5fb8b59fcfb4785556610874206fb7236188a6a0290358edd3d4c31fad",
+    "uutiset/vaaralan-bussipysakit-siirtyvat-6-lokakuuta-5fca6d55d831/index.html": "59a5ed2fa2a5d31cb0f0078b1f78187b455411238d6788ce68b381fdeb446de4",
+    "uutiset/vaaralan-varikon-louhinnat-valmistuvat-murskaus-jatkuu-9b9c4b59f7f1/index.html": "5b55d483488544eaf7d2fc110841c5077cb148afcfb03f8c3b27cdbcf449f456",
+    "uutiset/vaihtotase-1-3-miljardia-euroa-ylijaamainen-f047738905a4/index.html": "d5f77b180f17904af9aea981f636c6bd2e0058560d2e635b55e5c77416d0b629",
+    "uutiset/valinnanvapauskokeiluun-fysioterapia-kuusi-laakarikayntia-7f1c353a070a/index.html": "5eb1832260f45703e8b863065e612c900c2761f06aa7a7077dd4a7450cc9cb48",
+    "uutiset/valtioneuvosto-eu-neuvosto-linjasi-kalatalousrahoitusta-092c43fb123e/index.html": "1ef9bf6465b3e0d05ea8d9867bc0cf6bd60ea28bd59ef065227d6f2486120d64",
+    "uutiset/valtionhallinnolle-uusi-luontotyon-johtamisen-malli-802f22d74986/index.html": "931b09c45afbcf461b07967f59fe8afc691ec262e4237ca7f100e4801f30b73e",
+    "uutiset/valtionosuusprosentti-laskee-25-05-prosenttiin-vuonna-2027-37ed852a27c6/index.html": "584f215a5eaa45cb8485413fda858432ea36cf2f813debc95fb4b79ac7644ffc",
+    "uutiset/valtiovarainministerio-kasvu-nopeutuu-alijaama-syvenee-34fd8ffc3b62/index.html": "901aab7026c5af468c8d461882fa035b5a0c20530de85c9f35c1612ebc1ba31e",
+    "uutiset/valtonen-arktinen-yhteistyo-vahvistaa-turvallisuutta-95ad2d8ee611/index.html": "861f9e73261d5a40b88220e80224724d579564df75bf2d727dbdb8d95aca2674",
+    "uutiset/valvesalille-vaistotiloja-oulun-vanhasta-vankilasta-55b598f4b18d/index.html": "fa79ceec62e4edd030696fdfdf4f2b4677d8787de7005b10035d49d47d2e1921",
+    "uutiset/vantaa-haastaa-kunnat-luontoterveysvuoteen-2027-31c76d776a4f/index.html": "d33d0c31d599268b1da9e534fb236c18c677f357f1d0f2cd4175961c1c829283",
+    "uutiset/vantaa-harjoitteli-vaestonsiirtoon-varautumista-12c4d486d6af/index.html": "1ec4ad09b32ef2265d1e6a48e9c80275d752d8d155b4316a8a42f660b4d411f9",
+    "uutiset/vantaa-jarjestaa-vaikuttamistapahtuman-30-syyskuuta-e524270d4616/index.html": "b802d6d0a31518d5e16a3d99bdd036aa0697c9ba634357faf7484f97d4fd82ea",
+    "uutiset/vantaa-keraa-tyonhakijoilta-palautetta-palveluista-5a635efaca1d/index.html": "0c5bf57a65917c2667d81df4a98ec219e40e91c5e635e0314486a7e73ab4f059",
+    "uutiset/vantaa-kertoi-liputtaneensa-kestavan-kehityksen-puolesta-c190474290f6/index.html": "6891c8e5ecf13a0d3176297021d72cffdf876238edd3a784dbb9c890206a66c9",
+    "uutiset/vantaa-kertoo-aamu-iltapaivatoiminnan-kilpailutuksesta-32dddf9b3ee9/index.html": "39584c2ff914e3485ea887e5dcdd3632e287cd20158d376e1ebe41ef54e68471",
+    "uutiset/vantaa-kyytitien-pontitustyo-alkaa-1-lokakuuta-c88460bedac1/index.html": "732139ff913f6a966a1e31a33b88cc5dc53ee97f59e3f279b7bc90e8ae162c66",
+    "uutiset/vantaa-kyytitien-pontitustyo-alkaa-1-lokakuuta-ef9f7920c011/index.html": "1af58d1e0306cd323ea8a3788e29151a8391cfb781a97f57cfe0ca4fb18c54e5",
+    "uutiset/vantaa-lahettaa-kiinteistonomistajille-tiedotteet-uudesta-ed3b01a4297a/index.html": "4ff9b6e6e6a80b6b19f15fc86269c1e975fe81022ed14f6909acb173d018a4de",
+    "uutiset/vantaa-mittaa-toimitilojensa-radonia-talvella-2026-2027-e34055926556/index.html": "3bde9a26a9e4fe8c06020bbeebf0cf7aa9942d7a46cfd549e147622f6652231c",
+    "uutiset/vantaa-osuustien-ratikkatyomaa-laajenee-28b2b9770662/index.html": "721b574b9ed9f3ea2a00bcd8ffe45993107bfde2f913f11d7bee8b8572b0a7b1",
+    "uutiset/vantaa-porvoonvaylan-kaistoja-levennetaan-d838076e2c08/index.html": "267c30eeca57c6f52a80f4c90fcaa9f471fa6dd44edf4d9fa3b1ee7e996d2e59",
+    "uutiset/vantaa-valmistelee-yhteista-suunnitelmaa-palveluille-6851893ce6d2/index.html": "9f40af3c4890cb8858cb59d4ea0be77761a060edce7b704ecb5fd6fc75270b43",
+    "uutiset/vantaan-hiekkaharjun-golfliput-maksavat-viisi-euroa-8d0312b9b940/index.html": "2c22ef0b76ff1df33283b82f03c82d7fffe4348c92e8ea55ea341a7f1b26568c",
+    "uutiset/vantaan-historian-museo-hakee-avajaisiin-vapaaehtoisia-d96705192438/index.html": "5823dfaf50714da9fdddde01e1c0195c449b8e33e25b73179612f20999a35202",
+    "uutiset/vantaan-keihastien-jarjestelyt-muuttuvat-28cb5bdd8d54/index.html": "5504a9aae2757cc746017f36300f169b0ed7147662f32ebcfa928357ac542b9c",
+    "uutiset/vantaan-leppakorven-liikuntahalli-valmistuu-alkuvuonna-2027-b1ea3401e43a/index.html": "f5b8f83f31fe6677ae30f4537209aba2f0708318a7eeb413ec322a4de4ec2db2",
+    "uutiset/vantaan-monikielinen-neuvonta-auttaa-myos-pitkaan-asuneita-8244199fd98e/index.html": "eeece1b57e7099c1600d9bf7fa42ea27c9e91224986f2514b03af791c3ccb4cd",
+    "uutiset/vantaan-musiikkiopiston-isanpaivakonserttiin-vapaa-paasy-004a6e9a6859/index.html": "bddb4a294c554712b5c001ffcdce9f7389c3da8fce18c383dedb93ddd840872d",
+    "uutiset/vantaan-osa-kaappisangyista-poistetaan-kaytosta-17fb53caf5e1/index.html": "2c7844a10654b753d183368c568873f6b7704d70f82644cc6342e04d2315748d",
+    "uutiset/vantaan-paivakotikaavat-etenevat-valtuuston-hyvaksyttaviksi-3879659d8f8a/index.html": "4949307e78484f6594c5cc3bc651c825aeb13f685ea583d9dfb0ab8d97ef4a13",
+    "uutiset/vantaan-ratikan-tunneli-etenee-tikkurilan-aseman-alle-1ca8188892bb/index.html": "aa567f36905972ebd534f4faf810879bc8849e6edc835e5c3cea45dc2e745ec0",
+    "uutiset/vantaan-syyslomassa-taidepajoja-kartanon-kekri-f1f023667c0f/index.html": "5bf5d852b3f661c761476433df89be85ee29da1379fba701fad0e65929d4f56e",
+    "uutiset/vantaan-valtuusto-hyvaksyi-ratikan-vaunuhankinnan-takauksen-f3cdd3704bdf/index.html": "b0001089a36fc49eb6a9d1efafcf7eec2eb016c2287eafbd8fbba37ff550f8cd",
+    "uutiset/vantaan-valtuutettu-tutustui-ristipuron-paivakodin-arkeen-24780c2c9ea2/index.html": "c4a6f70d6b1178f6836a3fc05a05c4ba8110ca981b2ddac9096e9a2eb6641fd3",
+    "uutiset/vantaan-yty-akatemian-ideat-etenevat-tyoryhmaan-ba96b94ee71f/index.html": "10bf6964db93e97e6c661cb6073b69b828cfe50f10449942ba8869ec2ea55772",
+    "uutiset/varhaiskasvatusmessut-jarjestetaan-espoon-dipolissa-9-10-125487dcb855/index.html": "8019bd67fab85c15ede87df29c2759832f1c37b106542c6842adbcc8175d4e62",
+    "uutiset/viikatepuiston-suunnitteluun-haetaan-asukkaiden-nakemyksia-d8d916de41e0/index.html": "d7f8280f103969626c82034de5e4ca3137e31f5a992d9bc8b5687b3c8a8aa498",
     "uutiset/vilkun-matkustajamaarat-kasvoivat-kuopion-14d59935c7b1/index.html": "39639f0e8fc8c640dcc84578f68264205f6c4364073cd9c19e4f4144ee8a2863",
-    "uutiset/vireille-pantujen-konkurssien-maara-kasvoi-elokuussa-7b0f24284b3c/index.html": "52c846aafd690f3df7570eec3131b33a78309a1cd691d670c7a0be5e22639f89",
-    "uutiset/yksityistielossien-avustusosuus-olisi-80-prosenttia-6bfa940e77d2/index.html": "8b8ed53a2ea399de2eb464aeada16786d0d72582c2dbcf4d7272c9adaf6b24aa",
-    "uutiset/ymparistoministerio-esittaa-157666854560/index.html": "daec51ff5eef17df760a33d6fdce4b86de50808314147bb5169c986be5b859be",
-    "uutiset/yosemiten-dome-fire-kasvanut-1-177-eekkeriin-pysaytysaste-2f32562eed60/index.html": "bcabdc47fd31277f98f7c28537e7d44de2c65e8c60140d5c9b65bd8ca3bd0cee",
-    "uutiset/yrityksia-lopetti-enemman-kuin-aloitti-huhti-kesakuussa-2026-a4a923e9509d/index.html": "0b90355c1e349079edbb8ba62d584857bb11f711de92f3c10acce195d8106395"
+    "uutiset/vireille-pantujen-konkurssien-maara-kasvoi-elokuussa-7b0f24284b3c/index.html": "8ad34ac73875eb287c2d125517064cb0c383a0b5a2a16fa2d7428f3db5e7210b",
+    "uutiset/yksityistielossien-avustusosuus-olisi-80-prosenttia-6bfa940e77d2/index.html": "2b6cd5b64421b6f72db50f0e2b888c20600409caa8ce3ce1f8d2d92b133595d7",
+    "uutiset/ymparistoministerio-esittaa-157666854560/index.html": "75d9b58e9b3ff87c328d7d7be80a92bbe856426a76fcfb327eb0680b3e89397f",
+    "uutiset/yosemiten-dome-fire-kasvanut-1-177-eekkeriin-pysaytysaste-2f32562eed60/index.html": "515d3a1eb2399798ad5ba949409b4965143b8b39ca88b50a68004f8e03f7df0e",
+    "uutiset/yrityksia-lopetti-enemman-kuin-aloitti-huhti-kesakuussa-2026-a4a923e9509d/index.html": "fb4cf2ee432be8c022ebdf78c59ed61088137d86bb606ce013456e7e99e8959c"
   },
   "schema_version": 2,
   "packet": {
     "fixture": false,
     "image": {
-      "alt": "AI-generoitu kuva: Kaksi arkkitehtonista piirustusta vaalealla puupöydällä, joista toinen esittää pohjapiirrosta ja toinen rakennuksen julkisivua.",
-      "attempts": 1,
-      "caption": "AI-generoitu kuva. Ei valokuva tapahtumasta.",
+      "alt": "Arkistokuva: Lähikuva valkoisen henkilöauton etulokasuojasta ja pyörästä, latauskaapeli on kytketty auton latausporttiin.",
+      "caption": "Arkistokuva artikkelin aiheesta.",
       "classifier_output": {
-        "category": "Kotimaa",
+        "category": "Talous",
         "concepts": [
           {
-            "depictable_scene": "Todellinen valokuva Helsingin kaupungintalon julkisivusta kaupunkiaukion laidalla. Rakennus on kuvan pääkohde, eikä kuva esitä tiettyä kokousta.",
+            "depictable_scene": "Muutama uusi sähköhenkilöauto rinnakkain nimettömän autoliikkeen siistissä esittelytilassa. Etualan auton avoin latausluukku ja siihen kytketty latausjohto näkyvät selvästi. Tilassa ei ole ihmisiä.",
             "must_avoid": [
-              "Presenting the photograph as the October 5 meeting",
-              "Substituting another building for Helsinki City Hall"
+              "Ihmiset ja ruumiinosat",
+              "Keksityt automerkkien logot tai luettava teksti",
+              "Tietyn oikean autoliikkeen jäljittely"
             ],
             "must_show": [
-              "Actual Helsinki City Hall exterior"
+              "New passenger cars in a showroom",
+              "Visible charging connection on the foreground car"
             ],
             "rank": 1,
-            "safe_to_generate": false,
+            "safe_to_generate": true,
             "search_queries": [
-              "Helsingin kaupungintalo julkisivu",
-              "Helsinki City Hall exterior",
-              "Helsingin kaupungintalo Kauppatori"
+              "uudet sähköautot autoliike",
+              "sähköautot esittelytila",
+              "electric cars showroom",
+              "new electric cars dealership Finland"
             ],
-            "subject": "Helsingin kaupungintalo rakennusjärjestyksen uudistamista koskevan päätöksenteon kuvituksena"
+            "subject": "Uusia henkilöautoja autoliikkeen sähköautovalikoimassa"
           },
           {
-            "depictable_scene": "Lähikuva tyhjällä työpöydällä olevista rakennuspiirustuksista, joissa näkyy yleisluonteinen rakennuksen pohjapiirros ja julkisivupiirros ilman luettavaa tekstiä. Piirustukset eivät esitä mitään nimettyä rakennusta tai kaupungin todellista asiakirjaa.",
+            "depictable_scene": "Rajattu lähikuva pysäköidyn henkilöauton kyljestä, avoimesta latausluukusta ja latausporttiin kytketystä pistokkeesta. Latauskaapeli jatkuu kuvan ulkopuolelle, eikä kuvassa näy ihmisiä tai tunnistettavaa paikkaa.",
             "must_avoid": [
-              "People or body parts",
-              "Readable text or logos",
-              "Identifiable real buildings",
-              "Presenting drawings as actual Helsinki proposal documents or evidence of specific rule changes"
+              "Ihmiset ja ruumiinosat",
+              "Polttoainepistooli latauspistokkeen sijasta",
+              "Keksityt logot tai luettava teksti"
             ],
             "must_show": [
-              "Architectural floor plan and elevation drawings"
+              "Charging plug connected to a passenger car",
+              "Open charging flap"
             ],
             "rank": 2,
             "safe_to_generate": true,
             "search_queries": [
-              "rakennuspiirustukset pöydällä",
-              "architectural drawings desk",
-              "building floor plan elevation"
+              "sähköauton latauspistoke lähikuva",
+              "henkilöauton latausliitäntä",
+              "electric car charging connector",
+              "plugged in car charging port closeup"
             ],
-            "subject": "Rakennuspiirustukset rakennusjärjestyksen uusimisen kuvituksena"
+            "subject": "Ladattavia autoja kuvaava latausliitännän lähikuva"
           }
         ],
         "version": "article-first-v1"
       },
-      "credit": "AI-kuvitus",
-      "depicted": "Two architectural drawings are laid out on a light wooden desk. The drawing in the foreground shows a floor plan with multiple rooms, doors, and a staircase. The drawing in the background shows the elevation of a building with windows and a garage.",
-      "generated": true,
-      "license": "AI-generated image",
-      "license_url": "https://uutistenlukija.fi/ai-kuvat/",
-      "local_path": "media/835ccab54252c5231b7b9a53cab945026aa17a6d38d616db2ad17c03198731a7.jpg",
-      "model": "codex-oauth:gpt-image-2",
+      "credit": "Photo by Rathaphon Nanthapreecha on Pexels",
+      "depicted": "The image shows the front left side of a white car, likely an electric or hybrid vehicle, with a charging cable plugged into its port. The charging port is open, revealing a black interior with a blue and black charging connector inserted. A bright yellow cable extends downwards from the connector. Below the charging port, a black circular cap is visible. The car's front fender and a portion of the hood are visible, reflecting overhead lights. Part of the front wheel, with a multi-spoke silver r",
+      "generated": false,
+      "hotlink": false,
+      "license": "Pexels License",
+      "license_evidence": {
+        "image_path": "/photos/3846205/pexels-photo-3846205.jpeg",
+        "license": "Pexels License",
+        "license_code": "Pexels",
+        "license_url": "https://www.pexels.com/license/",
+        "photo_id": "3846205",
+        "photo_url": "https://www.pexels.com/photo/white-car-charging-3846205/",
+        "photographer": "Rathaphon Nanthapreecha",
+        "photographer_url": "https://www.pexels.com/@bank",
+        "response_sha256": "db86cc7f5cddb95a61d7345535ccdbdddd5d82424eb9e32e351f4311733411a1",
+        "retrieved_at": "2026-10-06T10:40:49.960410+00:00",
+        "transport": "jina_reader",
+        "version": 1
+      },
+      "license_url": "https://www.pexels.com/license/",
+      "local_path": "media/70aa7b5b2e3e76ff06b24780dc44ffedd3b830d7ce620f17d304c9250bb6febb.jpg",
       "pixel_review": {
-        "alt_fi": "Kaksi arkkitehtonista piirustusta vaalealla puupöydällä, joista toinen esittää pohjapiirrosta ja toinen rakennuksen julkisivua.",
+        "alt_fi": "Lähikuva valkoisen henkilöauton etulokasuojasta ja pyörästä, latauskaapeli on kytketty auton latausporttiin.",
         "approved": true,
-        "article_text_sha256": "3a5e6c42d2cf92a29f047829e8f9bffa4e1b70dc30162bbe35d31a592516e8c2",
-        "concept_sha256": "996f5117ed4a278d3f999bdba24d1690a39c182372d554a6d5d0166249d57fa8",
-        "description": "Two architectural drawings are laid out on a light wooden desk. The drawing in the foreground shows a floor plan with multiple rooms, doors, and a staircase. The drawing in the background shows the elevation of a building with windows and a garage.",
-        "fit_score": 10,
-        "image_sha256": "835ccab54252c5231b7b9a53cab945026aa17a6d38d616db2ad17c03198731a7",
+        "article_text_sha256": "269f3cf46cb4bfcc17aec2f5c099ec57c708eb469eeacda16c8909174b17778c",
+        "concept_sha256": "478d90d3738fdd2740b3c8593bd210b4fa04c46ebedafa2cbfd8b49f2b0b42af",
+        "description": "A close-up view of the front fender and wheel of a white car, with a charging cable plugged into the car's charging port. The charging port cover is open.",
+        "fit_score": 9,
+        "image_sha256": "70aa7b5b2e3e76ff06b24780dc44ffedd3b830d7ce620f17d304c9250bb6febb",
         "model": "google:gemini-2.5-flash",
         "must_show_visible": [
+          true,
           true
         ],
         "no_people": true,
-        "reason": "The image directly depicts architectural floor plan and elevation drawings, which perfectly match the selected concept for illustrating the article about the renewal of building regulations. The drawings are generic and do not contain any readable text or identifiable real buildings, adhering to the 'must_avoid' criteria.",
-        "reviewed_at": "2026-10-06T03:35:35.925696+00:00",
-        "text_audit": {
-          "examples": [],
-          "readable_text_present": false
-        }
+        "reason": "The image clearly shows a charging electric car, which directly illustrates the article's subject of increasing electric car registrations. The visible charging connection on the foreground car is present, and the car appears new, fitting the concept of new passenger cars in a showroom, even if the full showroom is not visible.",
+        "reviewed_at": "2026-10-06T10:40:51.875954+00:00"
       },
       "pixels": {
-        "height": 1024,
+        "height": 627,
         "mode": "RGB",
-        "variance": 3032.4,
-        "width": 1536
+        "variance": 23935.5,
+        "width": 940
       },
-      "prompt_sha256": "f37dbb062e0d41d8e342f6f9742e98a48105ebfc66d4b870b51b04ce18631599",
-      "prompt_version": "imagery-v4-article-first-exact-concept",
       "relevance_check": {
         "accepted": true,
-        "evidence": "Lähikuva tyhjällä työpöydällä olevista rakennuspiirustuksista, joissa näkyy yleisluonteinen rakennuksen pohjapiirros ja julkisivupiirros ilman luettavaa tekstiä. Piirustukset eivät esitä mitään nimettyä rakennusta tai kaupungin todellista asiakirjaa.",
+        "evidence": "A close-up view of the front fender and wheel of a white car, with a charging cable plugged into the car's charging port. The charging port cover is open.",
         "matched": [
-          "Architectural floor plan and elevation drawings"
+          "car",
+          "charging"
         ],
-        "method": "generation",
-        "reason": "generated from the accepted scene"
+        "method": "vision",
+        "reason": "Exact-pixel full-article score meets the 8/10 threshold"
       },
-      "review_note": "Tekoälyn tuottama kuva vastaa valittua konkreettista aihetta. Artikkeli kertoo selvästi, ettei kuva ole valokuva tapahtumasta. Kuva ei esitä tunnistettavaa todellista henkilöä.",
       "selection_evidence": {
-        "article_text_sha256": "3a5e6c42d2cf92a29f047829e8f9bffa4e1b70dc30162bbe35d31a592516e8c2",
-        "decision_sha256": "2135e01e51ef170d7a6ae232e38e4b3ff32b1e03a5730486bd21f6a5d73f3aee",
+        "article_text_sha256": "269f3cf46cb4bfcc17aec2f5c099ec57c708eb469eeacda16c8909174b17778c",
+        "decision_sha256": "71d922718f62c0c29e150badf823990fc043884b511563ba81db2d793cb6f932",
         "minimum_real_fit": 8,
         "searches": [
           {
-            "candidates": [],
-            "concept_rank": 1,
-            "outcome": "no_qualifying_candidate",
-            "provider": "source-news",
-            "queries": [
-              "cited source image"
-            ]
-          },
-          {
-            "candidates": [],
-            "concept_rank": 1,
-            "outcome": "no_qualifying_candidate",
-            "provider": "wikimedia",
-            "queries": [
-              "Helsingin kaupungintalo julkisivu",
-              "Helsinki City Hall exterior",
-              "Helsingin kaupungintalo Kauppatori"
-            ]
-          },
-          {
-            "candidates": [],
-            "concept_rank": 1,
-            "outcome": "no_qualifying_candidate",
-            "provider": "pexels",
-            "queries": [
-              "Helsingin kaupungintalo julkisivu",
-              "Helsinki City Hall exterior",
-              "Helsingin kaupungintalo Kauppatori"
-            ]
-          },
-          {
-            "candidates": [],
-            "concept_rank": 1,
-            "outcome": "no_qualifying_candidate",
-            "provider": "unsplash",
-            "queries": [
-              "Helsingin kaupungintalo julkisivu",
-              "Helsinki City Hall exterior",
-              "Helsingin kaupungintalo Kauppatori"
-            ]
-          },
-          {
-            "candidates": [],
-            "concept_rank": 1,
-            "outcome": "no_qualifying_candidate",
-            "provider": "google",
-            "queries": [
-              "Helsingin kaupungintalo julkisivu",
-              "Helsinki City Hall exterior",
-              "Helsingin kaupungintalo Kauppatori"
-            ]
-          },
-          {
-            "candidates": [],
-            "concept_rank": 2,
-            "outcome": "no_qualifying_candidate",
-            "provider": "source-news",
-            "queries": [
-              "cited source image"
-            ]
-          },
-          {
             "candidates": [
               {
                 "approved": false,
                 "fit_score": 6,
-                "image_sha256": "9ecbc841c3086bcfa2f2a25e7cb708b2415db0b78f913a57bd4ea4c1f56d89aa",
-                "license": "CC0",
-                "reason": "The image shows architectural drawings, but they are highly detailed profiles of moldings, not general building floor plans or elevation drawings as required by the concept. The article discusses the renewal of Helsinki's building code, and while architectural drawings are broadly related, these specific drawings do not fit the concept's requiremen",
-                "source_url": "https://commons.wikimedia.org/wiki/File:Moldings%20for%20Desk%20and%20Bookcase,%20from%20Chippendale%20Drawings,%20Vol.%20II%20MET%20DP118260.jpg"
+                "image_sha256": "3e403c726ebd6a96fefe848fe64ddb601d8d44f528053277e0a7629c08af9b75",
+                "license": "Pexels License",
+                "reason": "The image shows a person charging an electric car outdoors, which is relevant to the article's topic of electric car registrations. However, the selected concept specifically requires 'New passenger cars in a showroom' and 'Visible charging connection on the foreground car'. This image does not depict a showroom setting, nor does it show multiple n",
+                "source_url": "https://www.pexels.com/photo/person-charging-electric-car-outdoors-34800929/"
               },
               {
-                "approved": false,
-                "fit_score": 0,
-                "image_sha256": "5684868f2ac4146834b974150ea62d9415450e5a6859c7d00e0200773e883f58",
-                "license": "CC0",
-                "reason": "The image depicts a drawing of a piece of furniture, not architectural floor plans or elevation drawings of a building. It does not fit the selected concept of 'Architectural floor plan and elevation drawings' for illustrating building regulations. One or more required concept elements are not visible.",
-                "source_url": "https://commons.wikimedia.org/wiki/File:Desk%20and%20Bookcase,%20from%20Chippendale%20Drawings,%20Vol.%20II%20MET%20DP104295.jpg"
-              },
-              {
-                "approved": false,
-                "fit_score": 0,
-                "image_sha256": "03bb9823093ab9638ae464db32936feb5916ecbd78d07eb9e4d3d459d0088104",
-                "license": "CC0",
-                "reason": "The image depicts a drawing of a piece of furniture, specifically a desk and bookcase. The article discusses the renewal of Helsinki's building regulations. The selected concept requires architectural floor plan and elevation drawings of a building. The visible subject in the image is not an architectural drawing of a building, nor does it show a f",
-                "source_url": "https://commons.wikimedia.org/wiki/File:Desk%20and%20Bookcase,%20from%20Chippendale%20Drawings,%20Vol.%20II%20MET%20DP104296.jpg"
+                "approved": true,
+                "fit_score": 9,
+                "image_sha256": "70aa7b5b2e3e76ff06b24780dc44ffedd3b830d7ce620f17d304c9250bb6febb",
+                "license": "Pexels License",
+                "reason": "The image clearly shows a charging electric car, which directly illustrates the article's subject of increasing electric car registrations. The visible charging connection on the foreground car is present, and the car appears new, fitting the concept of new passenger cars in a showroom, even if the full showroom is not visible.",
+                "source_url": "https://www.pexels.com/photo/white-car-charging-3846205/"
               }
             ],
-            "concept_rank": 2,
-            "outcome": "no_qualifying_candidate",
-            "provider": "wikimedia",
-            "queries": [
-              "rakennuspiirustukset pöydällä",
-              "architectural drawings desk",
-              "building floor plan elevation"
-            ]
-          },
-          {
-            "candidates": [
-              {
-                "approved": false,
-                "fit_score": 4,
-                "image_sha256": "18ed9fbaaf6b8752a8e0caf33c9ef2625a3e03838538a04f0c19123e2d544e35",
-                "license": "Pexels License",
-                "reason": "The image shows sketches and drafting tools, which are related to design and drawing. However, the concept specifically requires architectural floor plan and elevation drawings. The visible drawings are clearly not architectural plans but rather product or furniture design sketches. Therefore, it does not meet the 'must_show' requirement for archit",
-                "source_url": "https://www.pexels.com/photo/white-printer-paper-1113839/"
-              },
-              {
-                "approved": false,
-                "fit_score": 6,
-                "image_sha256": "646ed7ecaf68eea3fa26faa6bffb735e9ea2ab728d10e8868217ecd350d836b3",
-                "license": "Pexels License",
-                "reason": "The image shows a floor plan drawing, which aligns with the 'Architectural floor plan and elevation drawings' must_show element. However, the concept explicitly states 'Lähikuva tyhjällä työpöydällä olevista rakennuspiirustuksista' (Close-up of architectural drawings on an empty desk) and 'must_avoid': ['People or body parts']. The image clearly sh",
-                "source_url": "https://www.pexels.com/photo/person-holding-a-floor-plan-9052461/"
-              }
-            ],
-            "concept_rank": 2,
-            "outcome": "no_qualifying_candidate",
+            "concept_rank": 1,
+            "outcome": "accepted",
             "provider": "pexels",
             "queries": [
-              "rakennuspiirustukset pöydällä",
-              "architectural drawings desk",
-              "building floor plan elevation"
+              "uudet sähköautot autoliike",
+              "sähköautot esittelytila",
+              "electric cars showroom"
             ]
           },
           {
             "candidates": [
               {
-                "approved": false,
-                "fit_score": 7,
-                "image_sha256": "4a5a7f80f66d8b83c6e610e587f899afa68ec36d2a2430020e373eab7cfa9299",
-                "license": "Unsplash License",
-                "reason": "The image contains readable text and logos on the drawings and pens, which violates the 'must_avoid' criteria. Specifically, 'SECOND LEVEL SCALE 1/8\"=1'-0\"' is clearly visible on the floor plan, and brand names are visible on the pens and lead refills.",
-                "source_url": "https://unsplash.com/photos/architectural-blueprints-with-drafting-tools-Yn8D5B8C-eY?utm_source=uutistenlukija&utm_medium=referral"
-              },
-              {
-                "approved": false,
-                "fit_score": 4,
-                "image_sha256": "c32748b1718856db4f4656e534cffb83f659b7aa3247a189f7b71f2c130db276",
-                "license": "Unsplash License",
-                "reason": "The article discusses the renewal of Helsinki's building regulations, and the concept specifies architectural floor plan and elevation drawings. The visible drawings in the image are technical drawings for mechanical parts, not architectural plans, and therefore do not fit the concept's 'must_show' element. The image also contains a laptop and othe",
-                "source_url": "https://unsplash.com/photos/desk-with-laptop-blueprints-and-tools-0dhIl78b__o?utm_source=uutistenlukija&utm_medium=referral"
-              },
-              {
-                "approved": false,
-                "fit_score": 0,
-                "image_sha256": "a5cfdc2a3090c047f7dcd6125e26b2c5f56ecb08f8db2f5e78bd71034fda63de",
-                "license": "Unsplash License",
-                "reason": "The image shows a laptop being opened, which is unrelated to architectural drawings or building regulations. The article discusses the renewal of Helsinki's building regulations, and the selected concept specifies architectural drawings as the subject. This image does not depict any architectural drawings. One or more required concept elements are ",
-                "source_url": "https://unsplash.com/photos/a-person-using-a-laptop-computer-on-a-desk-LghRYlgIgFg?utm_source=uutistenlukija&utm_medium=referral"
+                "approved": true,
+                "fit_score": 9,
+                "image_sha256": "8638cc566590cd469bd3c2aa0a4b3f2df5c755abf462e21910acaa0a9b093079",
+                "license": "Pexels License",
+                "reason": "The image clearly depicts a charging plug connected to a passenger car and an open charging flap, directly matching the 'must_show' elements of the selected concept. The subject of a charging electric car is highly relevant to the article about the increase in electric car registrations.",
+                "source_url": "https://www.pexels.com/photo/close-up-shot-of-an-electirc-car-charging-9799729/"
               }
             ],
             "concept_rank": 2,
-            "outcome": "no_qualifying_candidate",
-            "provider": "unsplash",
+            "outcome": "accepted",
+            "provider": "pexels",
             "queries": [
-              "rakennuspiirustukset pöydällä",
-              "architectural drawings desk",
-              "building floor plan elevation"
-            ]
-          },
-          {
-            "candidates": [],
-            "concept_rank": 2,
-            "outcome": "no_qualifying_candidate",
-            "provider": "google",
-            "queries": [
-              "rakennuspiirustukset pöydällä",
-              "architectural drawings desk",
-              "building floor plan elevation"
+              "sähköauton latauspistoke lähikuva",
+              "henkilöauton latausliitäntä",
+              "electric car charging connector"
             ]
           }
         ],
         "selected": {
-          "concept_rank": 2,
-          "fit_score": 10,
-          "image_sha256": "835ccab54252c5231b7b9a53cab945026aa17a6d38d616db2ad17c03198731a7",
-          "kind": "generated"
+          "concept_rank": 1,
+          "fit_score": 9,
+          "image_sha256": "70aa7b5b2e3e76ff06b24780dc44ffedd3b830d7ce620f17d304c9250bb6febb",
+          "kind": "real"
         },
         "version": "article-first-v1"
       },
-      "sha256": "835ccab54252c5231b7b9a53cab945026aa17a6d38d616db2ad17c03198731a7",
-      "source_url": "https://uutistenlukija.fi/ai-kuvat/",
-      "subject": "Rakennuspiirustukset rakennusjärjestyksen uusimisen kuvituksena",
-      "url": "https://uutistenlukija.fi/media/835ccab54252c5231b7b9a53cab945026aa17a6d38d616db2ad17c03198731a7.jpg"
+      "sha256": "70aa7b5b2e3e76ff06b24780dc44ffedd3b830d7ce620f17d304c9250bb6febb",
+      "source_url": "https://www.pexels.com/photo/white-car-charging-3846205/",
+      "stock_provenance": {
+        "image_url": "https://images.pexels.com/photos/3846205/pexels-photo-3846205.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+        "photo_id": "3846205",
+        "photo_url": "https://www.pexels.com/photo/white-car-charging-3846205/",
+        "photographer": "Rathaphon Nanthapreecha",
+        "photographer_url": "https://www.pexels.com/@bank",
+        "provider": "pexels",
+        "query": "uudet sähköautot autoliike",
+        "retrieved_at": "2026-10-06T10:40:49Z"
+      },
+      "stock_provenance_sha256": "8d04745331dbd01586b576674888a2ea5bb85bd0ceff48f5947b251094d39e62",
+      "url": "https://uutistenlukija.fi/media/70aa7b5b2e3e76ff06b24780dc44ffedd3b830d7ce620f17d304c9250bb6febb.jpg"
     },
     "publication_basis": {
       "policy": "official-text-v1",
       "policy_sha256": "901a881c0ed60542e137b124a671a87d2fb07b251a12312d96053f5d4a134e1e",
-      "provider": "helsinki",
+      "provider": "stat",
       "related_sources": 0,
-      "source_fields_sha256": "cc0c70b0cfd45ac8f8b71cb5ad4ebabe03290b7c87ae2fa56d68ed08c645b0e7",
-      "source_sha256": "2000688dccbb023729dfbfc09626f76bfe2c8f3feae8407085a7b237397d7666"
+      "source_fields_sha256": "bf9b050c67abc259bfb3138a7c2f2a947ca2cf070358d9a90378b2784d072720",
+      "source_sha256": "c50e763f325b853b55fab3c5ef117e62f5c2772f71c8ed5762c1d3520ba0fd07"
     },
     "sources": [
       {
         "id": "A",
-        "published_at": "2026-10-05T17:32:43+0300",
-        "publisher": "Helsingin kaupunki",
+        "published_at": "2026-10-06T05:00:00+00:00",
+        "publisher": "Tilastokeskus",
         "reuse": {
           "changes": "Itsenäinen suomenkielinen uutisteksti; lähteen tietoja on tiivistetty.",
-          "license": "Helsinki Region Infoshare -käyttöehdot (Espoo, Helsinki, Vantaa, Kauniainen): laaja käyttöoikeus Creative Commons Nimeä 4.0 mukaisesti; sekä ei-kaupallisiin että kaupallisiin tarkoituksiin",
+          "license": "Creative Commons Nimeä 4.0 Kansainvälinen (CC BY 4.0): kopiointi, muokkaus ja edelleenjako sallittu, myös kaupallisiin tarkoituksiin; koskee tekstejä, taulukoita ja tilastokuvioita; lähde merkittävä (Lähde: Tilastokeskus)",
           "license_url": "https://creativecommons.org/licenses/by/4.0/",
-          "url": "https://hri.fi/data/fi/dataset/helsingin-hel-fi-sivuston-avoin-rajapinta-uutisille"
+          "url": "https://stat.fi/fi/tietoa-meista/tutustu-tilastokeskukseen/lainsaadanto/kayttoehdot"
         },
-        "text": "Kaupunginhallitus käsitteli 5. lokakuuta kokouksessaan valtuutettujen aloitteita ja hyväksyi osaltaan Helsingin kaupungin rakennusjärjestyksen uusimisen.\nHelsingin kaupungin edellinen rakennusjärjestys on tullut voimaan kesäkuussa 2023. Rakennusjärjestys tulee uusia vastaamaan 1.1.2025 voimaan tullutta rakentamislakia. Lopullisen päätöksen rakennusjärjestyksen uusimisesta tekee kaupunginvaltuusto.\nLisäksi kaupunginhallitus palautti Arabianbaanan hankesuunnitelman uudelleen valmisteluun.\nKaikki kaupunginhallituksen päätökset ja mahdolliset äänestykset löytyvät päätöstiedotteesta. Päätöstiedote julkaistaan kaupunginhallituksen asiakirjat -sivulla.\nSeuraavan kerran kaupunginhallitus kokoontuu 19. lokakuuta.",
-        "title": "Kaupunginhallitus käsitteli aloitteita ja hyväksyi osaltaan Helsingin rakennusjärjestyksen uusimisen",
-        "url": "https://www.hel.fi/fi/uutiset/kaupunginhallitus-kasitteli-aloitteita-ja-hyvaksyi-osaltaan-helsingin-rakennusjarjestyksen-uusimisen"
+        "text": "Tilastokeskuksen mukaan syyskuussa 2026 rekisteröitiin uusia henkilöautoja 6 984, mikä oli 16 % enemmän kuin vuotta aiemmin. Kaiken kaikkiaan syyskuussa rekisteröitiin 11 346 uutta ajoneuvoa. Ensirekisteröinnit kasvoivat 8 % edellisvuoden vastaavaan kuukauteen verrattuna.\nSisältöä ladataan\nKeskeisiä poimintoja\nTammi-syyskuussa 2026 ensirekisteröitiin 56 932 uutta henkilöautoa, mikä oli 6 % enemmän kuin vuotta aiemmin.\nSyyskuussa 2026 ensirekisteröidyistä henkilöautoista 62 % oli täyssähköautoja, joita rekisteröitiin 4 338 eli 67 % enemmän kuin vuotta aiemmin.\nUusia bensiinikäyttöisiä henkilöautoja rekisteröitiin syyskuussa yhteensä 1 737, mikä oli 17 % vähemmän kuin vuotta aiemmin.\nEnsirekisteröidyistä henkilöautoista lähes kolme neljäsosaa ladattavia\nSyyskuussa 2026 rekisteröidyistä uusista henkilöautoista 62 % oli täyssähköautoja ja 11 % ladattavia hybridejä. Niitä rekisteröitiin yhteensä 5 103, eli 38 % enemmän edellisvuoteen verrattuna. Täyssähköisistä henkilöautoista 52 % rekisteröitiin Uudenmaan maakuntaan.\nBensiinikäyttöisten henkilöautojen ensirekisteröinnit laskivat syyskuussa 17 % ja dieselkäyttöisten laskivat 30 % edellisvuodesta. Dieselkäyttöisiä henkilöautoja ensirekisteröitiin syyskuussa yhteensä vain 144. Henkilöautoista 3 007 rekisteröitiin yritysten ja yhteisöjen käyttöön, mikä oli 43 % kaikista henkilöautojen ensirekisteröinneistä syyskuussa.\nAjoneuvojen ensirekisteröinneissä kasvua\nTammi-syyskuussa 2026 ensirekisteröitiin yhteensä 97 669 ajoneuvoa. Kasvua edellisvuoteen oli 3 %. Uusia mopoja rekisteröitiin 22 % enemmän kuin edellisvuonna. Myös moottoripyöriä, traktoreita sekä linja-autoja ensirekisteröitiin tammi-syyskuussa enemmän kuin vuotta aiemmin. Sen sijaan muun muassa pakettiautojen ja moottorikelkkojen ensirekisteröinnit ovat laskeneet edellisvuodesta.\nAlueellisesti eniten kasvua ajoneuvojen ensirekisteröinneissä tammi-syyskuussa oli Pirkanmaalla sekä Varsinais-Suomessa. Laskua oli eniten Lapissa sekä Keski-Pohjanmaalla.",
+        "title": "Syyskuussa 2026 ensirekisteröitiin 6 984 uutta henkilöautoa",
+        "url": "https://stat.fi/fi/julkaisu/cmfl6i4lip5sp07ulyfh8f2ny"
       }
     ],
-    "story_key": "url:https://www.hel.fi/fi/uutiset/kaupunginhallitus-kasitteli-aloitteita-ja-hyvaksyi-osaltaan-helsingin-rakennusjarjestyksen-uusimisen",
+    "story_key": "url:https://stat.fi/fi/julkaisu/cmfl6i4lip5sp07ulyfh8f2ny",
     "supporting_documents": [
       {
         "id": "RIGHTS",
         "purpose": "text reuse permission; not news or image evidence",
-        "retrieved_at": "2026-10-06T03:30:22.620245+00:00",
-        "sha256": "25298a6f5ea51c2feedb7fb29e91e99547f5685fc3ad059551bc9639900a8477",
-        "text": "Helsingin kaupungin hel.fi-sivuston kaikki uutiset ovat saatavissa avoimena datana RSS-syötteenä. Sivuston sisällöstä vastaa Helsingin kaupunginkanslian viestintä.\nSyötteen sisältöä voi muokata uutissivulla olevilla suodattimilla. Räätälöity RSS-syöte muodostetaan automaattisesti valittujen suodattimien pohjalta ja sen voi tilata uutissivulta.\nHuomioitavaa: Helsingin kaupungilla on uutisissa käytettyihin kuviin kaikki oikeudet. Kuvaa / kuvia saa käyttää ainoastaan siihen liittyvän uutisen yhteydessä. Kuvien käyttäminen tähän tarkoitukseen on käyttäjälle ilmaista. Kuvan käyttö tai siirto muihin tarkoituksiin on kielletty. Kuvia käytettäessä on ehdottomasti mainittava kuvien lähde ja kuvaaja.\nhttps://creativecommons.org/licenses/by/4.0/",
-        "url": "https://hri.fi/data/fi/dataset/helsingin-hel-fi-sivuston-avoin-rajapinta-uutisille"
+        "retrieved_at": "2026-10-06T09:04:20.570548+00:00",
+        "sha256": "1127b0a21ee43cdafd8520d598e3e9477430638063196d1d1a67324a1cd6dba1",
+        "text": "Käyttöehdot\nMiten voit käyttää Tilastokeskuksen tietoja?\nPääperiaate: Voit käyttää Tilastokeskuksen tilastotietoja ja tekstejä, kunhan mainitset lähteeksi Tilastokeskuksen.\nTilastokeskuksen avoimen datan aineistoja ja verkkopalvelun julkisia sisältöjä koskee Creative Commons Nimeä 4.0 Kansainvälinen -käyttölupa. Luvan mukaisesti saat kopioida, muokata ja jakaa näitä aineistojamme edelleen joko alkuperäisessä tai muokatussa muodossa. Saat myös yhdistää aineistoja muihin aineistoihin ja käyttää aineistoja myös kaupallisiin tarkoituksiin. Tämä lupa koskee esimerkiksi tekstejä, taulukoita ja tilastokuvioita.\nKun käytät näitä aineistoja tai jaat niitä eteenpäin, merkitse lähteeksi vähintään Tilastokeskus (Lähde: Tilastokeskus).\nLisätietoa CC BY Nimeä 4.0 Kansainvälinen -käyttöluvasta (creativecommons.org)\nMitä lupa ei koske?\nLupa ei koske\nTilastokeskuksen sivuilla julkaistavia muiden organisaatioiden tuottamia tietoja. Ne ovat kunkin tiedontuottajan omien käyttöehtojen alaisia.\nvalokuvien ja kuvituskuvien käyttöä. Niiden tekijänoikeudet ovat joko kuvien tekijöillä tai Tilastokeskuksella. Tällaisen materiaalin käytöstä on aina sovittava erikseen.\ntoimeksiantoina ja maksullisina palveluina tuotettavia tietoja. Niiden käyttöehdot ovat sopimuskohtaisia.\nAineistojen oikeudet\nTilastokeskus on aineistojen tuottaja ja tekijänoikeuden haltija, ellei tuotteen, tiedon tai palvelun yhteydessä erikseen toisin ilmoiteta.\nMiten voit viitata aineistoon?\nLähdeviittauksen laajuus riippuu käyttöyhteydestä. Mainitse kuitenkin aina vähintään Tilastokeskus.\nKunkin tilaston sivulla on yksityiskohtainen kopioitava viittausohje kyseiseen tilastoon.\nKatso viittausohje-esimerkki väestörakennetilaston sivulta.\nEsimerkkejä viittaustavoista\nLähde: Tilastokeskus\nLähde: Tilastokeskus, väestörakenne\nSuomen virallinen tilasto (SVT): Kotimaan vesiliikenne [verkkojulkaisu]. Viiteajankohta: 2022, syyskuu. ISSN=2670-1952. Helsinki: Tilastokeskus [Viitattu: 21.5.2025]. Saantitapa: https://www.stat.fi/julkaisu/cktyfj0i028h80b50qy1up5dz\nSuomen virallinen tilasto (SVT): Väestörakenne [verkkojulkaisu]. ISSN = 1797-5379. Taulukko: 11rc -- Väestö iän (5-v.) ja sukupuolen mukaan, 1865-2024. Helsinki: Tilastokeskus [Viitattu 21.5.2025]. Saantitapa: https://pxdata.stat.fi/PxWeb/pxweb/fi/StatFin/StatFin__vaerak/statfin_vaerak_pxt_11rc.px/\nPostinumeroaluerajat, Tilastokeskus. Aineisto on ladattu Tilastokeskuksen rajapintapalvelusta 13.10.2024 lisenssillä CC BY 4.0.\nhttps://creativecommons.org/licenses/by/4.0/deed.fi",
+        "url": "https://stat.fi/fi/tietoa-meista/tutustu-tilastokeskukseen/lainsaadanto/kayttoehdot"
       }
     ]
   },
   "draft": {
-    "category": "Kotimaa",
+    "category": "Talous",
     "image": {
-      "alt": "AI-generoitu kuva: Kaksi arkkitehtonista piirustusta vaalealla puupöydällä, joista toinen esittää pohjapiirrosta ja toinen rakennuksen julkisivua.",
-      "attempts": 1,
-      "caption": "AI-generoitu kuva. Ei valokuva tapahtumasta.",
+      "alt": "Arkistokuva: Lähikuva valkoisen henkilöauton etulokasuojasta ja pyörästä, latauskaapeli on kytketty auton latausporttiin.",
+      "caption": "Arkistokuva artikkelin aiheesta.",
       "classifier_output": {
-        "category": "Kotimaa",
+        "category": "Talous",
         "concepts": [
           {
-            "depictable_scene": "Todellinen valokuva Helsingin kaupungintalon julkisivusta kaupunkiaukion laidalla. Rakennus on kuvan pääkohde, eikä kuva esitä tiettyä kokousta.",
+            "depictable_scene": "Muutama uusi sähköhenkilöauto rinnakkain nimettömän autoliikkeen siistissä esittelytilassa. Etualan auton avoin latausluukku ja siihen kytketty latausjohto näkyvät selvästi. Tilassa ei ole ihmisiä.",
             "must_avoid": [
-              "Presenting the photograph as the October 5 meeting",
-              "Substituting another building for Helsinki City Hall"
+              "Ihmiset ja ruumiinosat",
+              "Keksityt automerkkien logot tai luettava teksti",
+              "Tietyn oikean autoliikkeen jäljittely"
             ],
             "must_show": [
-              "Actual Helsinki City Hall exterior"
+              "New passenger cars in a showroom",
+              "Visible charging connection on the foreground car"
             ],
             "rank": 1,
-            "safe_to_generate": false,
+            "safe_to_generate": true,
             "search_queries": [
-              "Helsingin kaupungintalo julkisivu",
-              "Helsinki City Hall exterior",
-              "Helsingin kaupungintalo Kauppatori"
+              "uudet sähköautot autoliike",
+              "sähköautot esittelytila",
+              "electric cars showroom",
+              "new electric cars dealership Finland"
             ],
-            "subject": "Helsingin kaupungintalo rakennusjärjestyksen uudistamista koskevan päätöksenteon kuvituksena"
+            "subject": "Uusia henkilöautoja autoliikkeen sähköautovalikoimassa"
           },
           {
-            "depictable_scene": "Lähikuva tyhjällä työpöydällä olevista rakennuspiirustuksista, joissa näkyy yleisluonteinen rakennuksen pohjapiirros ja julkisivupiirros ilman luettavaa tekstiä. Piirustukset eivät esitä mitään nimettyä rakennusta tai kaupungin todellista asiakirjaa.",
+            "depictable_scene": "Rajattu lähikuva pysäköidyn henkilöauton kyljestä, avoimesta latausluukusta ja latausporttiin kytketystä pistokkeesta. Latauskaapeli jatkuu kuvan ulkopuolelle, eikä kuvassa näy ihmisiä tai tunnistettavaa paikkaa.",
             "must_avoid": [
-              "People or body parts",
-              "Readable text or logos",
-              "Identifiable real buildings",
-              "Presenting drawings as actual Helsinki proposal documents or evidence of specific rule changes"
+              "Ihmiset ja ruumiinosat",
+              "Polttoainepistooli latauspistokkeen sijasta",
+              "Keksityt logot tai luettava teksti"
             ],
             "must_show": [
-              "Architectural floor plan and elevation drawings"
+              "Charging plug connected to a passenger car",
+              "Open charging flap"
             ],
             "rank": 2,
             "safe_to_generate": true,
             "search_queries": [
-              "rakennuspiirustukset pöydällä",
-              "architectural drawings desk",
-              "building floor plan elevation"
+              "sähköauton latauspistoke lähikuva",
+              "henkilöauton latausliitäntä",
+              "electric car charging connector",
+              "plugged in car charging port closeup"
             ],
-            "subject": "Rakennuspiirustukset rakennusjärjestyksen uusimisen kuvituksena"
+            "subject": "Ladattavia autoja kuvaava latausliitännän lähikuva"
           }
         ],
         "version": "article-first-v1"
       },
-      "credit": "AI-kuvitus",
-      "depicted": "Two architectural drawings are laid out on a light wooden desk. The drawing in the foreground shows a floor plan with multiple rooms, doors, and a staircase. The drawing in the background shows the elevation of a building with windows and a garage.",
-      "generated": true,
-      "license": "AI-generated image",
-      "license_url": "https://uutistenlukija.fi/ai-kuvat/",
-      "local_path": "media/835ccab54252c5231b7b9a53cab945026aa17a6d38d616db2ad17c03198731a7.jpg",
-      "model": "codex-oauth:gpt-image-2",
+      "credit": "Photo by Rathaphon Nanthapreecha on Pexels",
+      "depicted": "The image shows the front left side of a white car, likely an electric or hybrid vehicle, with a charging cable plugged into its port. The charging port is open, revealing a black interior with a blue and black charging connector inserted. A bright yellow cable extends downwards from the connector. Below the charging port, a black circular cap is visible. The car's front fender and a portion of the hood are visible, reflecting overhead lights. Part of the front wheel, with a multi-spoke silver r",
+      "generated": false,
+      "hotlink": false,
+      "license": "Pexels License",
+      "license_evidence": {
+        "image_path": "/photos/3846205/pexels-photo-3846205.jpeg",
+        "license": "Pexels License",
+        "license_code": "Pexels",
+        "license_url": "https://www.pexels.com/license/",
+        "photo_id": "3846205",
+        "photo_url": "https://www.pexels.com/photo/white-car-charging-3846205/",
+        "photographer": "Rathaphon Nanthapreecha",
+        "photographer_url": "https://www.pexels.com/@bank",
+        "response_sha256": "db86cc7f5cddb95a61d7345535ccdbdddd5d82424eb9e32e351f4311733411a1",
+        "retrieved_at": "2026-10-06T10:40:49.960410+00:00",
+        "transport": "jina_reader",
+        "version": 1
+      },
+      "license_url": "https://www.pexels.com/license/",
+      "local_path": "media/70aa7b5b2e3e76ff06b24780dc44ffedd3b830d7ce620f17d304c9250bb6febb.jpg",
       "pixel_review": {
-        "alt_fi": "Kaksi arkkitehtonista piirustusta vaalealla puupöydällä, joista toinen esittää pohjapiirrosta ja toinen rakennuksen julkisivua.",
+        "alt_fi": "Lähikuva valkoisen henkilöauton etulokasuojasta ja pyörästä, latauskaapeli on kytketty auton latausporttiin.",
         "approved": true,
-        "article_text_sha256": "3a5e6c42d2cf92a29f047829e8f9bffa4e1b70dc30162bbe35d31a592516e8c2",
-        "concept_sha256": "996f5117ed4a278d3f999bdba24d1690a39c182372d554a6d5d0166249d57fa8",
-        "description": "Two architectural drawings are laid out on a light wooden desk. The drawing in the foreground shows a floor plan with multiple rooms, doors, and a staircase. The drawing in the background shows the elevation of a building with windows and a garage.",
-        "fit_score": 10,
-        "image_sha256": "835ccab54252c5231b7b9a53cab945026aa17a6d38d616db2ad17c03198731a7",
+        "article_text_sha256": "269f3cf46cb4bfcc17aec2f5c099ec57c708eb469eeacda16c8909174b17778c",
+        "concept_sha256": "478d90d3738fdd2740b3c8593bd210b4fa04c46ebedafa2cbfd8b49f2b0b42af",
+        "description": "A close-up view of the front fender and wheel of a white car, with a charging cable plugged into the car's charging port. The charging port cover is open.",
+        "fit_score": 9,
+        "image_sha256": "70aa7b5b2e3e76ff06b24780dc44ffedd3b830d7ce620f17d304c9250bb6febb",
         "model": "google:gemini-2.5-flash",
         "must_show_visible": [
+          true,
           true
         ],
         "no_people": true,
-        "reason": "The image directly depicts architectural floor plan and elevation drawings, which perfectly match the selected concept for illustrating the article about the renewal of building regulations. The drawings are generic and do not contain any readable text or identifiable real buildings, adhering to the 'must_avoid' criteria.",
-        "reviewed_at": "2026-10-06T03:35:35.925696+00:00",
-        "text_audit": {
-          "examples": [],
-          "readable_text_present": false
-        }
+        "reason": "The image clearly shows a charging electric car, which directly illustrates the article's subject of increasing electric car registrations. The visible charging connection on the foreground car is present, and the car appears new, fitting the concept of new passenger cars in a showroom, even if the full showroom is not visible.",
+        "reviewed_at": "2026-10-06T10:40:51.875954+00:00"
       },
       "pixels": {
-        "height": 1024,
+        "height": 627,
         "mode": "RGB",
-        "variance": 3032.4,
-        "width": 1536
+        "variance": 23935.5,
+        "width": 940
       },
-      "prompt_sha256": "f37dbb062e0d41d8e342f6f9742e98a48105ebfc66d4b870b51b04ce18631599",
-      "prompt_version": "imagery-v4-article-first-exact-concept",
       "relevance_check": {
         "accepted": true,
-        "evidence": "Lähikuva tyhjällä työpöydällä olevista rakennuspiirustuksista, joissa näkyy yleisluonteinen rakennuksen pohjapiirros ja julkisivupiirros ilman luettavaa tekstiä. Piirustukset eivät esitä mitään nimettyä rakennusta tai kaupungin todellista asiakirjaa.",
+        "evidence": "A close-up view of the front fender and wheel of a white car, with a charging cable plugged into the car's charging port. The charging port cover is open.",
         "matched": [
-          "Architectural floor plan and elevation drawings"
+          "car",
+          "charging"
         ],
-        "method": "generation",
-        "reason": "generated from the accepted scene"
+        "method": "vision",
+        "reason": "Exact-pixel full-article score meets the 8/10 threshold"
       },
-      "review_note": "Tekoälyn tuottama kuva vastaa valittua konkreettista aihetta. Artikkeli kertoo selvästi, ettei kuva ole valokuva tapahtumasta. Kuva ei esitä tunnistettavaa todellista henkilöä.",
       "selection_evidence": {
-        "article_text_sha256": "3a5e6c42d2cf92a29f047829e8f9bffa4e1b70dc30162bbe35d31a592516e8c2",
-        "decision_sha256": "2135e01e51ef170d7a6ae232e38e4b3ff32b1e03a5730486bd21f6a5d73f3aee",
+        "article_text_sha256": "269f3cf46cb4bfcc17aec2f5c099ec57c708eb469eeacda16c8909174b17778c",
+        "decision_sha256": "71d922718f62c0c29e150badf823990fc043884b511563ba81db2d793cb6f932",
         "minimum_real_fit": 8,
         "searches": [
           {
-            "candidates": [],
-            "concept_rank": 1,
-            "outcome": "no_qualifying_candidate",
-            "provider": "source-news",
-            "queries": [
-              "cited source image"
-            ]
-          },
-          {
-            "candidates": [],
-            "concept_rank": 1,
-            "outcome": "no_qualifying_candidate",
-            "provider": "wikimedia",
-            "queries": [
-              "Helsingin kaupungintalo julkisivu",
-              "Helsinki City Hall exterior",
-              "Helsingin kaupungintalo Kauppatori"
-            ]
-          },
-          {
-            "candidates": [],
-            "concept_rank": 1,
-            "outcome": "no_qualifying_candidate",
-            "provider": "pexels",
-            "queries": [
-              "Helsingin kaupungintalo julkisivu",
-              "Helsinki City Hall exterior",
-              "Helsingin kaupungintalo Kauppatori"
-            ]
-          },
-          {
-            "candidates": [],
-            "concept_rank": 1,
-            "outcome": "no_qualifying_candidate",
-            "provider": "unsplash",
-            "queries": [
-              "Helsingin kaupungintalo julkisivu",
-              "Helsinki City Hall exterior",
-              "Helsingin kaupungintalo Kauppatori"
-            ]
-          },
-          {
-            "candidates": [],
-            "concept_rank": 1,
-            "outcome": "no_qualifying_candidate",
-            "provider": "google",
-            "queries": [
-              "Helsingin kaupungintalo julkisivu",
-              "Helsinki City Hall exterior",
-              "Helsingin kaupungintalo Kauppatori"
-            ]
-          },
-          {
-            "candidates": [],
-            "concept_rank": 2,
-            "outcome": "no_qualifying_candidate",
-            "provider": "source-news",
-            "queries": [
-              "cited source image"
-            ]
-          },
-          {
             "candidates": [
               {
                 "approved": false,
                 "fit_score": 6,
-                "image_sha256": "9ecbc841c3086bcfa2f2a25e7cb708b2415db0b78f913a57bd4ea4c1f56d89aa",
-                "license": "CC0",
-                "reason": "The image shows architectural drawings, but they are highly detailed profiles of moldings, not general building floor plans or elevation drawings as required by the concept. The article discusses the renewal of Helsinki's building code, and while architectural drawings are broadly related, these specific drawings do not fit the concept's requiremen",
-                "source_url": "https://commons.wikimedia.org/wiki/File:Moldings%20for%20Desk%20and%20Bookcase,%20from%20Chippendale%20Drawings,%20Vol.%20II%20MET%20DP118260.jpg"
+                "image_sha256": "3e403c726ebd6a96fefe848fe64ddb601d8d44f528053277e0a7629c08af9b75",
+                "license": "Pexels License",
+                "reason": "The image shows a person charging an electric car outdoors, which is relevant to the article's topic of electric car registrations. However, the selected concept specifically requires 'New passenger cars in a showroom' and 'Visible charging connection on the foreground car'. This image does not depict a showroom setting, nor does it show multiple n",
+                "source_url": "https://www.pexels.com/photo/person-charging-electric-car-outdoors-34800929/"
               },
               {
-                "approved": false,
-                "fit_score": 0,
-                "image_sha256": "5684868f2ac4146834b974150ea62d9415450e5a6859c7d00e0200773e883f58",
-                "license": "CC0",
-                "reason": "The image depicts a drawing of a piece of furniture, not architectural floor plans or elevation drawings of a building. It does not fit the selected concept of 'Architectural floor plan and elevation drawings' for illustrating building regulations. One or more required concept elements are not visible.",
-                "source_url": "https://commons.wikimedia.org/wiki/File:Desk%20and%20Bookcase,%20from%20Chippendale%20Drawings,%20Vol.%20II%20MET%20DP104295.jpg"
-              },
-              {
-                "approved": false,
-                "fit_score": 0,
-                "image_sha256": "03bb9823093ab9638ae464db32936feb5916ecbd78d07eb9e4d3d459d0088104",
-                "license": "CC0",
-                "reason": "The image depicts a drawing of a piece of furniture, specifically a desk and bookcase. The article discusses the renewal of Helsinki's building regulations. The selected concept requires architectural floor plan and elevation drawings of a building. The visible subject in the image is not an architectural drawing of a building, nor does it show a f",
-                "source_url": "https://commons.wikimedia.org/wiki/File:Desk%20and%20Bookcase,%20from%20Chippendale%20Drawings,%20Vol.%20II%20MET%20DP104296.jpg"
+                "approved": true,
+                "fit_score": 9,
+                "image_sha256": "70aa7b5b2e3e76ff06b24780dc44ffedd3b830d7ce620f17d304c9250bb6febb",
+                "license": "Pexels License",
+                "reason": "The image clearly shows a charging electric car, which directly illustrates the article's subject of increasing electric car registrations. The visible charging connection on the foreground car is present, and the car appears new, fitting the concept of new passenger cars in a showroom, even if the full showroom is not visible.",
+                "source_url": "https://www.pexels.com/photo/white-car-charging-3846205/"
               }
             ],
-            "concept_rank": 2,
-            "outcome": "no_qualifying_candidate",
-            "provider": "wikimedia",
-            "queries": [
-              "rakennuspiirustukset pöydällä",
-              "architectural drawings desk",
-              "building floor plan elevation"
-            ]
-          },
-          {
-            "candidates": [
-              {
-                "approved": false,
-                "fit_score": 4,
-                "image_sha256": "18ed9fbaaf6b8752a8e0caf33c9ef2625a3e03838538a04f0c19123e2d544e35",
-                "license": "Pexels License",
-                "reason": "The image shows sketches and drafting tools, which are related to design and drawing. However, the concept specifically requires architectural floor plan and elevation drawings. The visible drawings are clearly not architectural plans but rather product or furniture design sketches. Therefore, it does not meet the 'must_show' requirement for archit",
-                "source_url": "https://www.pexels.com/photo/white-printer-paper-1113839/"
-              },
-              {
-                "approved": false,
-                "fit_score": 6,
-                "image_sha256": "646ed7ecaf68eea3fa26faa6bffb735e9ea2ab728d10e8868217ecd350d836b3",
-                "license": "Pexels License",
-                "reason": "The image shows a floor plan drawing, which aligns with the 'Architectural floor plan and elevation drawings' must_show element. However, the concept explicitly states 'Lähikuva tyhjällä työpöydällä olevista rakennuspiirustuksista' (Close-up of architectural drawings on an empty desk) and 'must_avoid': ['People or body parts']. The image clearly sh",
-                "source_url": "https://www.pexels.com/photo/person-holding-a-floor-plan-9052461/"
-              }
-            ],
-            "concept_rank": 2,
-            "outcome": "no_qualifying_candidate",
+            "concept_rank": 1,
+            "outcome": "accepted",
             "provider": "pexels",
             "queries": [
-              "rakennuspiirustukset pöydällä",
-              "architectural drawings desk",
-              "building floor plan elevation"
+              "uudet sähköautot autoliike",
+              "sähköautot esittelytila",
+              "electric cars showroom"
             ]
           },
           {
             "candidates": [
               {
-                "approved": false,
-                "fit_score": 7,
-                "image_sha256": "4a5a7f80f66d8b83c6e610e587f899afa68ec36d2a2430020e373eab7cfa9299",
-                "license": "Unsplash License",
-                "reason": "The image contains readable text and logos on the drawings and pens, which violates the 'must_avoid' criteria. Specifically, 'SECOND LEVEL SCALE 1/8\"=1'-0\"' is clearly visible on the floor plan, and brand names are visible on the pens and lead refills.",
-                "source_url": "https://unsplash.com/photos/architectural-blueprints-with-drafting-tools-Yn8D5B8C-eY?utm_source=uutistenlukija&utm_medium=referral"
-              },
-              {
-                "approved": false,
-                "fit_score": 4,
-                "image_sha256": "c32748b1718856db4f4656e534cffb83f659b7aa3247a189f7b71f2c130db276",
-                "license": "Unsplash License",
-                "reason": "The article discusses the renewal of Helsinki's building regulations, and the concept specifies architectural floor plan and elevation drawings. The visible drawings in the image are technical drawings for mechanical parts, not architectural plans, and therefore do not fit the concept's 'must_show' element. The image also contains a laptop and othe",
-                "source_url": "https://unsplash.com/photos/desk-with-laptop-blueprints-and-tools-0dhIl78b__o?utm_source=uutistenlukija&utm_medium=referral"
-              },
-              {
-                "approved": false,
-                "fit_score": 0,
-                "image_sha256": "a5cfdc2a3090c047f7dcd6125e26b2c5f56ecb08f8db2f5e78bd71034fda63de",
-                "license": "Unsplash License",
-                "reason": "The image shows a laptop being opened, which is unrelated to architectural drawings or building regulations. The article discusses the renewal of Helsinki's building regulations, and the selected concept specifies architectural drawings as the subject. This image does not depict any architectural drawings. One or more required concept elements are ",
-                "source_url": "https://unsplash.com/photos/a-person-using-a-laptop-computer-on-a-desk-LghRYlgIgFg?utm_source=uutistenlukija&utm_medium=referral"
+                "approved": true,
+                "fit_score": 9,
+                "image_sha256": "8638cc566590cd469bd3c2aa0a4b3f2df5c755abf462e21910acaa0a9b093079",
+                "license": "Pexels License",
+                "reason": "The image clearly depicts a charging plug connected to a passenger car and an open charging flap, directly matching the 'must_show' elements of the selected concept. The subject of a charging electric car is highly relevant to the article about the increase in electric car registrations.",
+                "source_url": "https://www.pexels.com/photo/close-up-shot-of-an-electirc-car-charging-9799729/"
               }
             ],
             "concept_rank": 2,
-            "outcome": "no_qualifying_candidate",
-            "provider": "unsplash",
+            "outcome": "accepted",
+            "provider": "pexels",
             "queries": [
-              "rakennuspiirustukset pöydällä",
-              "architectural drawings desk",
-              "building floor plan elevation"
-            ]
-          },
-          {
-            "candidates": [],
-            "concept_rank": 2,
-            "outcome": "no_qualifying_candidate",
-            "provider": "google",
-            "queries": [
-              "rakennuspiirustukset pöydällä",
-              "architectural drawings desk",
-              "building floor plan elevation"
+              "sähköauton latauspistoke lähikuva",
+              "henkilöauton latausliitäntä",
+              "electric car charging connector"
             ]
           }
         ],
         "selected": {
-          "concept_rank": 2,
-          "fit_score": 10,
-          "image_sha256": "835ccab54252c5231b7b9a53cab945026aa17a6d38d616db2ad17c03198731a7",
-          "kind": "generated"
+          "concept_rank": 1,
+          "fit_score": 9,
+          "image_sha256": "70aa7b5b2e3e76ff06b24780dc44ffedd3b830d7ce620f17d304c9250bb6febb",
+          "kind": "real"
         },
         "version": "article-first-v1"
       },
-      "sha256": "835ccab54252c5231b7b9a53cab945026aa17a6d38d616db2ad17c03198731a7",
-      "source_url": "https://uutistenlukija.fi/ai-kuvat/",
-      "subject": "Rakennuspiirustukset rakennusjärjestyksen uusimisen kuvituksena",
-      "url": "https://uutistenlukija.fi/media/835ccab54252c5231b7b9a53cab945026aa17a6d38d616db2ad17c03198731a7.jpg"
+      "sha256": "70aa7b5b2e3e76ff06b24780dc44ffedd3b830d7ce620f17d304c9250bb6febb",
+      "source_url": "https://www.pexels.com/photo/white-car-charging-3846205/",
+      "stock_provenance": {
+        "image_url": "https://images.pexels.com/photos/3846205/pexels-photo-3846205.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+        "photo_id": "3846205",
+        "photo_url": "https://www.pexels.com/photo/white-car-charging-3846205/",
+        "photographer": "Rathaphon Nanthapreecha",
+        "photographer_url": "https://www.pexels.com/@bank",
+        "provider": "pexels",
+        "query": "uudet sähköautot autoliike",
+        "retrieved_at": "2026-10-06T10:40:49Z"
+      },
+      "stock_provenance_sha256": "8d04745331dbd01586b576674888a2ea5bb85bd0ceff48f5947b251094d39e62",
+      "url": "https://uutistenlukija.fi/media/70aa7b5b2e3e76ff06b24780dc44ffedd3b830d7ce620f17d304c9250bb6febb.jpg"
     },
     "paragraphs": [
       {
         "source_ids": [
           "A"
         ],
-        "text": "Helsingin kaupungin tiedotteen mukaan kaupunginhallitus käsitteli rakennusjärjestyksen uusimista 5. lokakuuta ja hyväksyi sen omalta osaltaan. Uudistus tarvitsee vielä kaupunginvaltuuston päätöksen."
+        "text": "Syyskuussa ensirekisteröitiin Tilastokeskuksen mukaan 4 338 täyssähköistä henkilöautoa. Kun mukaan lasketaan ladattavat hybridit, ladattavia autoja rekisteröitiin 5 103 eli lähes kolme neljäsosaa kaikista uusista henkilöautoista. Ladattavien autojen määrä kasvoi 38 prosenttia vuoden takaisesta."
       },
       {
         "source_ids": [
           "A"
         ],
-        "text": "Nykyinen rakennusjärjestys tuli kaupungin mukaan voimaan kesäkuussa 2023. Uusimisen syynä on 1. tammikuuta 2025 voimaan tullut rakentamislaki, jota rakennusjärjestyksen on vastattava."
+        "text": "Uusia henkilöautoja ensirekisteröitiin kaikkiaan 6 984, mikä oli Tilastokeskuksen mukaan 16 prosenttia enemmän kuin syyskuussa 2025. Bensiiniautojen rekisteröinnit vähenivät 17 prosenttia ja dieselautojen 30 prosenttia. Bensiiniautoja rekisteröitiin 1 737 ja dieselautoja 144."
       },
       {
         "source_ids": [
           "A"
         ],
-        "text": "Samassa kokouksessa kaupunginhallitus palautti kaupungin mukaan Arabianbaanan hankesuunnitelman uudelleen valmisteltavaksi. Tiedotteessa ei kerrota palautuksen perusteluja eikä rakennusjärjestykseen ehdotettujen muutosten sisältöä."
+        "text": "Tilastokeskuksen tilastossa yritysten ja yhteisöjen käyttöön rekisteröitiin 3 007 henkilöautoa eli 43 prosenttia syyskuun henkilöautojen ensirekisteröinneistä. Täyssähköautoista 52 prosenttia rekisteröitiin Uudellemaalle."
+      },
+      {
+        "source_ids": [
+          "A"
+        ],
+        "text": "Tammi–syyskuussa 2026 uusien henkilöautojen ensirekisteröintejä kertyi Tilastokeskuksen mukaan 56 932, kuusi prosenttia enemmän kuin vuotta aiemmin. Kaikkien ajoneuvojen ensirekisteröinnit kasvoivat samalla ajanjaksolla kolme prosenttia ja olivat yhteensä 97 669."
       }
     ],
-    "summary": "Kaupungin mukaan kaupunginhallitus hyväksyi osaltaan rakennusjärjestyksen uudistamisen vastaamaan uutta rakentamislakia. Lopullinen päätös kuuluu kaupunginvaltuustolle.",
-    "title": "Helsingin rakennusjärjestyksen uusiminen eteni"
+    "summary": "Tilastokeskuksen mukaan täyssähköautojen ensirekisteröinnit lisääntyivät syyskuussa 2026 vuotta aiemmasta 67 prosenttia. Niiden osuus uusista henkilöautoista oli 62 prosenttia, kun bensiini- ja dieselautojen rekisteröinnit vähenivät.",
+    "title": "Täyssähköautojen ensirekisteröinnit kasvoivat syyskuussa"
   },
   "review": {
     "approved": true,
-    "draft_sha256": "cd3ce48107ae9443f8b4f1cb0f5d00e9f387096913b7b9ff971a65d66ca63576",
+    "draft_sha256": "af71cb48d3d1a378ac04f6db217b8cd423a68066a3092adbdc6f9a30637434e9",
     "reasons": [
-      "Otsikko on 46 merkkiä eli alle 60 merkin tavoitteen. Helsingin rakennusjärjestys on alussa, ja etenemistä koskeva väite vastaa lähteen A kuvaamaa kaupunginhallituksen osittaista hyväksyntää. Ingressi ei väitä uudistusta lopullisesti hyväksytyksi, vaan kertoo kaupunginvaltuuston päätösvallasta.",
-      "Lähde A tukee kaikkien kolmen kappaleen source_ids-merkintöjä: kaupunginhallituksen käsittelyä 5. lokakuuta, hyväksyntää omalta osaltaan, kaupunginvaltuuston lopullista päätöstä, rakennusjärjestyksen voimaantuloa kesäkuussa 2023 sekä rakentamislain voimaantuloa 1.1.2025. Lakiin mukautuminen on lähteessä nimenomaisesti mainittu uusimisen syy.",
-      "Lähde A tukee myös Arabianbaanan hankesuunnitelman palauttamista uudelleen valmisteluun samassa kokouksessa. Annettu tiedoteteksti ei kerro palautuksen perusteluja eikä rakennusjärjestyksen muutosten sisältöä; luonnos rajaa tämän puutteen oikein tiedotteeseen eikä väitä tietoja yleisesti olemattomiksi.",
-      "Helsingin kaupungin 5.10.2026 julkaisema tiedote on arviointiajankohtaan nähden tuore ja riittää tämän rajatun kunnallista päätöksentekoa koskevan uutisen lähteeksi. Kaupungin väitteet on erotettu riippumattomasta vahvistuksesta lähdeattribuutioilla. Kotimaa-luokitus sopii aiheeseen, eikä tekstissä tehdä valtakunnallisia yleistyksiä. Muotoilu on omaa, neutraalia ja ymmärrettävää; RIGHTS-aineisto tukee tekstin uudelleenkäyttöä, ei uutisväitteitä tai kuvan oikeuksia.",
-      "Luonnoksen koko kuvatietue vastaa lähdepaketin kuvatietuetta. Paketissa on kaksi järjestettyä kuvakonseptia ja haut molemmille. Valittu rakennuspiirustuskuvitus vastaa korkeimmalle sijoitettua turvallisesti generoitavaa konseptia. Erillisen mallin tarkka pikseliarvio on sidottu valitun kuvan SHA-256-tunnisteeseen ja artikkelitekstin tunnisteeseen; sen mukaan kuvassa näkyvät yleisluonteiset pohja- ja julkisivupiirustukset ilman henkilöitä, luettavaa tekstiä tai tunnistettavia todellisia rakennuksia. Kuvateksti on täsmälleen 'AI-generoitu kuva. Ei valokuva tapahtumasta.' ja kuvaajamerkintä 'AI-kuvitus'. Kuvitusta ei esitetä Helsingin aitona asiakirjana tai todisteena uudistuksen sisällöstä, eikä sen käyttöä perustella kaupungin tekstilisenssillä."
+      "Otsikko on alle 60 merkkiä ja nostaa tärkeimmän asian alkuun. Lähde A tukee otsikon kasvuväitettä sekä ingressin syyskuuta 2026 koskevia tietoja: täyssähköautojen ensirekisteröinnit kasvoivat 67 prosenttia ja niiden osuus oli 62 prosenttia. Myös bensiini- ja dieselautojen väheneminen on lähteessä.",
+      "Ensimmäisen ja toisen kappaleen source_ids-merkinnät vastaavat lähdettä A: täyssähköautoja 4 338, ladattavia henkilöautoja yhteensä 5 103 ja niiden kasvu 38 prosenttia; uusia henkilöautoja yhteensä 6 984 ja kasvua 16 prosenttia syyskuusta 2025. Ladattavien osuus on noin 73 prosenttia, joten ilmaus lähes kolme neljäsosaa on perusteltu. Bensiiniautojen 1 737 rekisteröintiä ja 17 prosentin lasku sekä dieselautojen 144 rekisteröintiä ja 30 prosentin lasku vastaavat lähdettä.",
+      "Kolmannen ja neljännen kappaleen tiedot ovat lähteestä A: yrityksille ja yhteisöille rekisteröitiin 3 007 henkilöautoa eli 43 prosenttia, ja täyssähköautoista 52 prosenttia rekisteröitiin Uudellemaalle. Tammi–syyskuun 2026 henkilöautojen määrä 56 932 ja kuuden prosentin kasvu sekä kaikkien ajoneuvojen määrä 97 669 ja kolmen prosentin kasvu ovat oikein. Ajanjaksoja ja maantieteellistä soveltamisalaa ei ole laajennettu lähteen ulkopuolelle.",
+      "Lähde A on 6.10.2026 julkaistu ajankohtainen Tilastokeskuksen tilastojulkaisu ja riittää tämän rajatun tilastouutisen pohjaksi. Teksti esittää tiedot Tilastokeskuksen tietoina, ei riippumattomasti vahvistettuina havaintoina, eikä lisää perusteettomia syy-seuraussuhteita. Talous-luokitus on asianmukainen, suomi neutraalia ja ymmärrettävää ja teksti tiivistetty omin sanoin. RIGHTS-asiakirja tukee tekstin uudelleenkäyttöä lähdemaininnalla, ei uutisväitteitä tai valokuvan oikeuksia.",
+      "Luonnoksen koko kuvatietue vastaa lähdepaketin kuvatietuetta. Kuvakohtainen Pexels-oikeustietue yksilöi valokuvan 3846205, kuvaajan Rathaphon Nanthapreechan ja Pexels-lisenssin. Molemmille järjestetyille kuvakonsepteille on dokumentoitu hakuja, ja valitun kuvan tarkkaan kuvatunnisteeseen sidottu koko artikkelin soveltuvuusarvio on 9/10. Kuvauksessa näkyvät henkilöauto, avoin latausluukku ja kytketty latauspistoke liittyvät konkreettisesti jutun täyssähköautoja ja ladattavia hybridejä koskeviin tietoihin. Useiden autojen tai esittelytilan puuttuminen ei tässä estä relevanssia. Kuvateksti ja vaihtoehtoinen teksti osoittavat kuvan arkistokuvaksi eivätkä väitä sen esittävän syyskuun 2026 rekisteröintejä; kuvauksessa ei ole turvarajojen vastaisia ihmisiä tai muita kohteita."
     ]
   }
 }
