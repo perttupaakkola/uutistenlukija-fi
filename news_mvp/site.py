@@ -225,14 +225,42 @@ def _topic_words(packet, draft):
 """Individually reviewed directed-edge removals; no ranking changes or refill."""
 # Review of complete articles: scooter use does not continue in floodworks or
 # diplomacy. Municipal appeal rights do not continue in education/archipelago law.
-# Apply AFTER the ordinary top-three selection. Never refill removed slots.
+# The sports-partnership origin also has three independently reviewed non-sports
+# selections. Apply every edge AFTER the ordinary top-three selection. Never refill.
 _REVIEWED_RELATED_EXCLUSIONS = frozenset({
     ('81f29c83f79538d5fd9b01f974a798f551b47e58a0dff7cbce29db5efbb8bc7c', 'c8d9df28ef8ce7fe87450dd4498c914257cb037e3bc627f0e9cbad83925278bd'),
     ('81f29c83f79538d5fd9b01f974a798f551b47e58a0dff7cbce29db5efbb8bc7c', '61f60677da98a8254ef83ba6702da6b22a68af50845c8a32a1d95fce0e852a30'),
     ('81f29c83f79538d5fd9b01f974a798f551b47e58a0dff7cbce29db5efbb8bc7c', 'c1124443e5729a96eed55f2422fec75a1aeaf45a6040452b8a2103551b937c30'),
     ('fe92f910b26aac13d8b676d93310d1f190e2382d7084b1dd2f7afeaa6e319148', 'b2545a6894798b253700c72456987a124b4060a0820afeda4eec13e48028fd9d'),
     ('fe92f910b26aac13d8b676d93310d1f190e2382d7084b1dd2f7afeaa6e319148', '2a902aa7df9e34ae63e77bb635eadbc1dd101069705453301a65c5650c023598'),
+    ('ecf85fae35c2030e53ecf87a2489e7876027137199936bebe0c85989dce60440', 'f9615094ff1726f6b3f50457d7dbc12c15dd70b8d6982689b5c08a756fef9517'),
+    ('ecf85fae35c2030e53ecf87a2489e7876027137199936bebe0c85989dce60440', '45d3e3c1610bb940a2ba807ea2824966867423a0821f5e1ef237c5d992abc56a'),
+    ('ecf85fae35c2030e53ecf87a2489e7876027137199936bebe0c85989dce60440', 'ccde11681bc6ee07fc9d97ebb6d6c5747a3d3adb2ca13105cfeec63613733648'),
 })
+
+# SHA-256 of title, summary and every paragraph joined by a literal newline.
+# These pins bind the round-1 exclusions to the exact complete texts reviewed by
+# Hermes; a changed stored text must be reviewed again rather than inheriting them.
+_ROUND1_RELATED_TEXT_SHA256 = {
+    'ecf85fae35c2030e53ecf87a2489e7876027137199936bebe0c85989dce60440': '15847e11aba83ea49e8c361bafb401f1b72eb563d7dba89ba370cee15d463f33',
+    'f9615094ff1726f6b3f50457d7dbc12c15dd70b8d6982689b5c08a756fef9517': 'c53b05480f1a4b99a81133f6848e42611d0eaa8fca0e5fd6a5de780135768012',
+    '45d3e3c1610bb940a2ba807ea2824966867423a0821f5e1ef237c5d992abc56a': '53e006443dc404c4544b4934c03d1604e0465918cc2b0dfe37baf643033157b9',
+    'ccde11681bc6ee07fc9d97ebb6d6c5747a3d3adb2ca13105cfeec63613733648': '6820a5d4a9744cde5d8f49a1edc2b526c0b32e562c777c44b7cde476b1c8a0eb',
+}
+
+
+def _reviewed_text_sha256(draft):
+    values = [draft.get('title', ''), draft.get('summary', '')]
+    values.extend(paragraph.get('text', '') for paragraph in draft.get('paragraphs', []))
+    return hashlib.sha256('\n'.join(values).encode()).hexdigest()
+
+
+def validate_round1_related_text_pins(articles):
+    """Fail closed if any present round-1 reviewed article text has changed."""
+    for job, _packet, draft, _review in articles:
+        expected = _ROUND1_RELATED_TEXT_SHA256.get(job['id'])
+        if expected and _reviewed_text_sha256(draft) != expected:
+            raise ValueError(f"Round-1 related text pin changed: {job['id']}")
 
 
 def reviewed_related_picks(job, picks):
@@ -612,6 +640,52 @@ def related_story_html(job, draft, state_dir, output_dir, assets):
             f'{thumbnail}<span class="related-story__title">{esc(draft["title"])}</span></a></li>')
 
 
+def article_context_html(job, draft, articles, related_ids=()):
+    """Truthful section and recency routes, distinct from evidence-based related news."""
+    excluded = {job["id"], *related_ids}
+
+    def visible(candidate):
+        candidate_job, candidate_packet, candidate_draft, _review = candidate
+        status = candidate_packet.get("article_status")
+        return (candidate_job["id"] not in excluded and
+                not (isinstance(status, dict) and status.get("kind") == "withdrawn") and
+                candidate_draft.get("title"))
+
+    candidates = [candidate for candidate in articles if visible(candidate)]
+    desk_slug = category_page_slug(draft.get("category"))
+    same_desk = [candidate for candidate in candidates
+                 if category_page_slug(candidate[2].get("category")) == desk_slug][:3]
+    excluded.update(candidate[0]["id"] for candidate in same_desk)
+    newest = [candidate for candidate in candidates if candidate[0]["id"] not in excluded][:4]
+
+    def story_rows(values):
+        rows = []
+        for candidate_job, _packet, candidate_draft, _review in values:
+            href = "/" + article_path(candidate_job)
+            rows.append(
+                f'<li><a href="{href}"><span class="article-context__title">'
+                f'{esc(candidate_draft["title"])}</span>'
+                f'<span class="article-context__meta">{esc(category_display(candidate_draft.get("category")))}'
+                f'<span aria-hidden="true"> · </span>{time_html(candidate_job["created_at"])}</span></a></li>')
+        return "".join(rows)
+
+    blocks = []
+    if same_desk:
+        blocks.append(
+            '<section class="article-context__block">'
+            '<div class="article-context__head"><h2>Samasta osastosta</h2>'
+            f'<a href="{esc(category_route(draft.get("category")))}">Kaikki {esc(category_display(draft.get("category"))).lower()}-uutiset</a></div>'
+            f'<ul>{story_rows(same_desk)}</ul></section>')
+    if newest:
+        blocks.append(
+            '<section class="article-context__block">'
+            f'<div class="article-context__head"><h2>Uusimmat</h2><a href="{LATEST_PATH}">Koko uutisvirta</a></div>'
+            f'<ul>{story_rows(newest)}</ul></section>')
+    if not blocks:
+        return ""
+    return '<aside class="article-context" aria-label="Jatka lukemista">' + "".join(blocks) + '</aside>'
+
+
 def image_rights_html(image):
     """Image credit/caption/licence/source section, rendered next to the sources.
 
@@ -696,43 +770,68 @@ def reuse_rights_html(sources):
             f'<ul>{"".join(rows)}</ul></section>')
 
 
-def article_actions_html(link, category, public):
-    """Working reader actions with no unverified email destination."""
-    share = ""
+def article_actions_html(link, category, public, title=""):
+    """Working reader actions with no unverified account or email destination."""
+    reader_tools = ""
     if public:
         canonical = SITE_URL.rstrip("/") + link
-        share = (f'<button class="article-share" type="button" data-share-url="{esc(canonical)}" '
-                 'aria-describedby="share-feedback">Jaa tai kopioi linkki</button>'
-                 '<span id="share-feedback" class="article-share__feedback" aria-live="polite"></span>')
+        reader_tools = (
+            f'<button class="article-save" type="button" data-save-url="{esc(canonical)}" '
+            f'data-save-title="{esc(title)}" data-save-category="{esc(category_display(category))}" '
+            'aria-pressed="false" aria-describedby="save-feedback">'
+            '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" '
+            'stroke-width="1.9" aria-hidden="true"><path d="M6 4h12v17l-6-4-6 4z"/></svg>'
+            '<span>Tallenna</span></button>'
+            f'<button class="article-share" type="button" data-share-url="{esc(canonical)}" '
+            'aria-describedby="share-feedback">'
+            '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" '
+            'stroke-width="1.9" aria-hidden="true"><circle cx="18" cy="5" r="2.5"/>'
+            '<circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="19" r="2.5"/>'
+            '<path d="m8.2 10.8 7.6-4.5M8.2 13.2l7.6 4.5"/></svg>'
+            '<span>Jaa tai kopioi linkki</span></button>'
+            '<span id="save-feedback" class="article-action-feedback" aria-live="polite"></span>'
+            '<span id="share-feedback" class="article-action-feedback" aria-live="polite"></span>')
     return ('<nav class="article-actions" aria-label="Jutun toiminnot">'
+            '<div class="article-actions__primary">'
             f'<a class="article-section-return" href="{esc(category_route(category))}">'
-            f'Lisää aiheesta {esc(category_display(category))}</a>'
+            f'<span aria-hidden="true">←</span> Osaston uutiset: {esc(category_display(category))}</a>'
+            f'{reader_tools}</div>'
+            '<div class="article-actions__secondary">'
             + (f'<a class="article-latest-return" href="{LATEST_PATH}">Lue seuraavaksi tuoreimmat uutiset</a>' if public else '')
-            + f'<a href="{ABOUT_PATH}#korjaukset">Korjauskäytäntö</a>{share}</nav>')
+            + f'<a href="{ABOUT_PATH}#korjaukset">Korjauskäytäntö</a></div></nav>')
 
 
-def listing_feed_html(items, empty_text, recovery_html=""):
-    """Text rows for a category/latest page in the native portal feed markup."""
+def listing_feed_html(items, empty_text, recovery_html="", featured=False):
+    """Article rows with an optional, truthful newest-story feature treatment."""
     rows = []
-    for job, draft, link, date, fixture, image, image_url in items:
+    for index, (job, draft, link, date, fixture, image, image_url) in enumerate(items):
         modifier = "" if image else " portal-feed-item--no-image"
+        if featured and index == 0:
+            modifier += " portal-feed-item--featured"
         thumb = listing_image_slot(image, image_url, "portal-feed-item__thumb", link, draft["title"]) if image else ""
         rows.append(f'<article class="portal-feed-item{modifier}">'
                     f'<div class="portal-feed-item__body">'
+                    + ('<span class="portal-feed-item__flag">Osaston uusin</span>'
+                       if featured and index == 0 else '')
+                    +
                     f'<p class="portal-feed-item__meta"><a href="{esc(category_route(draft.get("category")))}">'
                     f'{esc(category_display(draft.get("category")))}</a><span aria-hidden="true"> · </span>'
                     f'Julkaistu {time_html(job["created_at"], "portal-feed-item__time")}</p>'
                     f'<h2><a href="{link}">{esc(draft["title"])}</a></h2>'
                     f'<p>{esc(draft["summary"])}</p></div>{thumb}{fixture}</article>')
+        if featured and index == 0 and len(items) > 1:
+            rows.append('<div class="portal-list-feed__divider" role="heading" aria-level="2">'
+                        '<span>Uutisarkisto</span><small>Uusimmasta vanhimpaan</small></div>')
     if not rows:
         return (f'<div class="portal-list-feed portal-list-feed--empty">'
                 f'<p class="empty">{esc(empty_text)}</p>{recovery_html}</div>')
-    return f'<div class="portal-list-feed">{"".join(rows)}</div>'
+    modifier = " portal-list-feed--featured" if featured else ""
+    return f'<div class="portal-list-feed{modifier}">{"".join(rows)}</div>'
 
 
 def category_page_body(title, note, items, empty_text, page_number=1, page_count=1,
-                       base_path=None, total_count=None, recovery_html=""):
-    """Native portal-list page: header plus a feed of text rows, never a card grid."""
+                       base_path=None, total_count=None, recovery_html="", featured=False):
+    """Newspaper desk header and finite archive, with only the newest item featured."""
     slug = category_page_slug(title)
     modifier = f' portal-list-header--{esc(slug)}' if slug else ''
     total = len(items) if total_count is None else total_count
@@ -740,9 +839,10 @@ def category_page_body(title, note, items, empty_text, page_number=1, page_count
     page_label = f" · sivu {page_number}/{page_count}" if page_count > 1 else ""
     pager = pagination_nav(page_number, page_count, base_path) if base_path else ""
     return (f'<div class="portal-list-page">'
-            f'<header class="portal-list-header{modifier}"><h1>{esc(title)}</h1><p>{esc(note)}</p>'
-            f'<p class="archive-count">{esc(count_label + page_label)}</p></header>'
-            f'{listing_feed_html(items, empty_text, recovery_html)}{pager}</div>')
+            f'<header class="portal-list-header{modifier}"><p class="portal-list-header__eyebrow">Uutisosasto</p>'
+            f'<div class="portal-list-header__title"><h1>{esc(title)}</h1>'
+            f'<p class="archive-count">{esc(count_label + page_label)}</p></div><p>{esc(note)}</p></header>'
+            f'{listing_feed_html(items, empty_text, recovery_html, featured=featured)}{pager}</div>')
 
 
 def recovery_links_html():
@@ -846,9 +946,22 @@ def homepage_topic_strip(items, exclude_ids=None):
     if not cards:
         return ""
     return (f'<section class="portal-topic-strip" aria-labelledby="front-topics-title">'
-            f'<div class="portal-module-head"><h2 id="front-topics-title">Aiheet</h2>'
+            f'<div class="portal-module-head"><h2 id="front-topics-title">Osastot</h2>'
             f'<a href="{LATEST_PATH}">Kaikki uutiset</a></div>'
             f'<div class="portal-topic-strip__grid">{"".join(cards)}</div></section>')
+
+
+def homepage_edition_html(page_items):
+    """A compact edition identity grounded in the newest stored publication time."""
+    latest = (f'<span>Viimeisin julkaisu {time_html(page_items[0][0]["created_at"])}</span>'
+              if page_items else '<span>Ei vielä tarkastettuja uutisia</span>')
+    return ('<header class="portal-edition" aria-labelledby="front-edition-title">'
+            '<div class="portal-edition__title"><p>Uutistenlukija</p>'
+            '<h1 id="front-edition-title">Uutiset nyt</h1></div>'
+            f'<div class="portal-edition__meta">{latest}'
+            '<nav aria-label="Etusivun oikopolut">'
+            f'<a href="{LATEST_PATH}">Koko uutisvirta</a>'
+            f'<a href="{SOURCES_PATH}">Lähteet</a><a href="/rss.xml">RSS</a></nav></div></header>')
 
 
 def listing_page_html(page_items, page_number, page_count, archive_items=None, snapshot=None):
@@ -929,8 +1042,8 @@ def listing_page_html(page_items, page_number, page_count, archive_items=None, s
     if not is_homepage:
         return "".join(rows) + pagination_nav(page_number, page_count)
     center = (f'<div class="portal-center-list" aria-labelledby="front-top-stories-title">'
-              f'<div class="portal-mobile-section-head"><span>Etusivu</span>'
-              f'<h2 id="front-top-stories-title">Uusimmat otsikot</h2></div>'
+              f'<div class="portal-mobile-section-head"><span>Juuri nyt</span>'
+              f'<h2 id="front-top-stories-title">Pääuutiset</h2></div>'
               f'{"".join(rows)}</div>') if rows else ""
     rail = ('<aside class="portal-right-rail" aria-label="Sivupalkki">'
             '<section class="portal-newsletter"><h2>Seuraa uutisia</h2>'
@@ -949,7 +1062,8 @@ def listing_page_html(page_items, page_number, page_count, archive_items=None, s
     river = ""
     if river_rows:
         river = (f'<section class="portal-river" aria-labelledby="front-latest-title">'
-                 f'<div class="portal-module-head"><h2 id="front-latest-title">Kronologinen uutisvirta</h2>'
+                 f'<div class="portal-module-head"><div><span class="portal-module-head__eyebrow">Uusimmasta vanhimpaan</span>'
+                 f'<h2 id="front-latest-title">Lisää uutisia</h2></div>'
                  f'<a href="{LATEST_PATH}">Avaa koko arkisto</a></div>'
                  f'<div class="portal-river__grid">{"".join(river_rows)}</div></section>')
     archive = archive_items if archive_items is not None else page_items
@@ -1072,6 +1186,16 @@ def page(title, body, canonical_path=None, head_meta="", readability_present=Tru
                    '<svg class="theme-icon theme-icon--light" xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>')
     theme_button = (f'<button id="theme-toggle" data-theme-toggle="header" class="portal-icon-button theme-toggle-btn" type="button" aria-label="Vaihda teema" aria-pressed="false">{theme_icons}</button>')
     menu_theme_button = (f'<button id="theme-toggle-menu" data-theme-toggle="menu" class="theme-toggle-btn" type="button" aria-label="Vaihda teema" aria-pressed="false">{theme_icons}<span>Vaihda teema</span></button>')
+    saved_button = ('<button class="portal-action portal-action--desktop portal-saved-toggle" '
+                    'data-saved-toggle type="button" aria-haspopup="dialog" '
+                    'aria-controls="saved-stories-dialog">Tallennetut '
+                    '<span class="saved-count" data-saved-count aria-label="0 tallennettua juttua">0</span></button>'
+                    if public else '')
+    menu_saved_button = ('<li class="saved-menu-item"><button class="menu-saved-toggle" '
+                         'data-saved-toggle type="button" aria-haspopup="dialog" '
+                         'aria-controls="saved-stories-dialog">Tallennetut '
+                         '<span class="saved-count" data-saved-count aria-label="0 tallennettua juttua">0</span>'
+                         '</button></li>' if public else '')
     full_menu = ('<div class="menu-directory" aria-label="Koko valikko">'
                  '<div class="menu-directory__head"><strong>Valikko</strong>'
                  '<button id="menu-close" class="menu-close" type="button">Sulje valikko</button></div>'
@@ -1085,8 +1209,18 @@ def page(title, body, canonical_path=None, head_meta="", readability_present=Tru
                  + ('<li><a href="/rss.xml">RSS-syöte</a></li>' if public else '') + '</ul></div>'
                  '<div class="menu-directory__group"><p class="menu-directory__title">Asetukset</p><ul>'
                  f'<li class="theme-menu-item">{menu_theme_button}</li>'
+                 + menu_saved_button
                  + ('<li><button class="menu-consent-settings" data-consent-settings type="button">Evästeasetukset</button></li>' if public else '')
                  + '</ul></div></div>')
+    saved_dialog = ('<dialog id="saved-stories-dialog" class="saved-stories" aria-labelledby="saved-stories-title">'
+                    '<div class="saved-stories__inner"><div class="saved-stories__head">'
+                    '<div><span class="saved-stories__eyebrow">Tällä laitteella</span>'
+                    '<h2 id="saved-stories-title">Tallennetut jutut</h2></div>'
+                    '<button class="saved-stories__close" data-saved-close type="button" aria-label="Sulje tallennetut jutut">Sulje</button>'
+                    '</div><p class="saved-stories__note">Tallennukset säilyvät vain tämän selaimen omassa muistissa.</p>'
+                    '<p id="saved-stories-empty" class="saved-stories__empty">Et ole vielä tallentanut juttuja.</p>'
+                    '<ul id="saved-stories-list" class="saved-stories__list"></ul></div></dialog>'
+                    if public else '')
     return f'''<!doctype html>
 <html lang="fi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 {head}<title>{esc(title)} · Uutistenlukija</title>
@@ -1109,6 +1243,7 @@ def page(title, body, canonical_path=None, head_meta="", readability_present=Tru
 <div class="portal-actions" aria-label="Pikatoiminnot">
 {frontpage.weather(snapshot)}
 <a class="portal-action portal-action--desktop" href="{SOURCES_PATH}">Lähteet</a>
+{saved_button}
 {theme_button}
 <button id="hamburger" class="portal-icon-button hamburger-btn" type="button" aria-label="Avaa valikko" aria-expanded="false" aria-controls="main-nav-menu"><svg class="portal-menu-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><span class="portal-mobile-label">Valikko</span></button>
 </div>
@@ -1126,6 +1261,7 @@ def page(title, body, canonical_path=None, head_meta="", readability_present=Tru
 <div class="site-footer-copyright"><div class="container"><p>{footer_tagline}</p></div></div>
 </footer>
 {consent}
+{saved_dialog}
 {frontpage.data_script(snapshot)}
 <script src="{asset_url(assets, 'portal.js')}" defer></script>
 </body></html>'''
@@ -1200,7 +1336,7 @@ def missing_page(archive_path="/"):
 
 def render_paginated_archive(output_dir, base_path, items, heading, page_title, note,
                              empty_text, public, snapshot=None, active_section=None,
-                             recovery_html=""):
+                             recovery_html="", featured=False):
     """Write one finite category/latest archive and remove only retired page children."""
     # Call the shared path validator before deriving a filesystem location. These
     # values are renderer-owned constants, but keeping the boundary explicit makes
@@ -1221,6 +1357,7 @@ def render_paginated_archive(output_dir, base_path, items, heading, page_title, 
             heading, note, page_items, empty_text,
             page_number=page_number, page_count=page_count, base_path=base_path,
             total_count=len(items), recovery_html=recovery_html,
+            featured=featured and page_number == 1,
         )
         head_meta = (homepage_head_meta(
             page_items, path=path, page_title=title,
@@ -1262,6 +1399,7 @@ def render_site(store, output_dir, state_dir=None, public=False, include_ids=Non
         if not review["approved"]:
             raise ValueError("Unapproved record cannot be rendered")
         articles.append((job, packet, draft, review))
+    validate_round1_related_text_pins(articles)
     # Listing cards are collected while the article pages are written, then split into
     # pages of at most PAGE_SIZE stories. Page 1 promotes its newest story to a lead
     # (the lead counts toward that page's 30); later pages need no promoted lead.
@@ -1299,6 +1437,7 @@ def render_site(store, output_dir, state_dir=None, public=False, include_ids=Non
         image_note = "" if image else '<p class="image-note">Ei kuvaa: tekstiversion yksityinen esikatselu.</p>'
         image_rights = image_rights_html(image)
         picks = reviewed_related_picks(job, related_for[job["id"]])
+        related_ids = {related_job["id"] for related_job, _related_draft in picks}
         related_html = ""
         if picks:
             related_items = "".join(related_story_html(j, d, state_dir, output_dir, assets) for j, d in picks)
@@ -1328,17 +1467,24 @@ def render_site(store, output_dir, state_dir=None, public=False, include_ids=Non
             raise ValueError("Article status cannot predate publication")
         source_count = len(packet["sources"])
         source_label = "1 uutislähde" if source_count == 1 else f"{source_count} uutislähdettä"
-        actions = article_actions_html(link, draft["category"], public)
-        story_content = "" if withdrawn else (f'{figure}{image_note}<div class="content">{paragraphs}</div>'
-                                                 f'<section class="sources"><h2>Lähteet</h2>'
-                                                 f'<p class="source-count">{esc(source_label)}</p><ol>{source_list}</ol></section>'
-                                                 f'{reuse_rights}{method_line}{image_rights}{actions}{related_html}')
+        actions = article_actions_html(link, draft["category"], public, draft["title"])
+        context = article_context_html(job, draft, articles, related_ids | duplicate_ids)
+        reading = f'{figure}{image_note}<div class="content">{paragraphs}</div>'
+        afterword = (f'<div class="article-afterword"><div class="article-evidence">'
+                     f'<section class="sources"><h2>Lähteet</h2>'
+                     f'<p class="source-count">{esc(source_label)}</p><ol>{source_list}</ol></section>'
+                     f'{reuse_rights}{method_line}{image_rights}</div>{related_html}</div>')
+        story_content = "" if withdrawn else (
+            f'{actions}<div class="article-reading-grid"><div class="article-reading-main">'
+            f'{reading}</div>{context}{afterword}</div>')
         if withdrawn:
             story_content = f'{actions}'
         deck = "" if withdrawn else f'<p class="lead">{esc(draft["summary"])}</p>'
+        reading_time = (f'<span class="article-reading-time">{reading_time_minutes(draft)} min lukuaika</span>'
+                        if not withdrawn else "")
         body = f'''<article class="story single-article">{breadcrumb}{fixture}
 <h1>{esc(draft["title"])}</h1>
-<p class="article-meta" data-category="{esc(draft["category"])}">{"Luonnos · " if not public else ""}Julkaistu {time_html(job["created_at"])}</p>
+<p class="article-meta" data-category="{esc(draft["category"])}"><span>{"Luonnos · " if not public else ""}Julkaistu {time_html(job["created_at"])}</span>{reading_time}</p>
 {status}{deck}{story_content}</article>'''
         # --- SEO metadata ---------------------------------------------------
         # Built only for the public build; the private preview stays noindex.
@@ -1382,9 +1528,10 @@ def render_site(store, output_dir, state_dir=None, public=False, include_ids=Non
         listing = listing_page_html(
             page_items, page_number, page_count,
             archive_items=listing_items if page_number == 1 else None, snapshot=snapshot)
-        intro_class = "intro homepage-intro visually-hidden" if page_number == 1 else "intro"
-        body = f'''<section class="{intro_class}"><h1>{esc(page_title)}</h1></section>
-{listing}'''
+        if page_number == 1:
+            body = homepage_edition_html(page_items) + listing
+        else:
+            body = f'<section class="intro"><h1>{esc(page_title)}</h1></section>{listing}'
         # JSON-LD/OG describe this page's own slice and URL; the private preview keeps none.
         head_meta = homepage_head_meta(page_items, path=path, page_title=page_title,
                                        start_position=(page_number - 1) * PAGE_SIZE + 1) if public else ""
@@ -1406,6 +1553,7 @@ def render_site(store, output_dir, state_dir=None, public=False, include_ids=Non
             "Ei vielä tarkastettuja uutisia tässä kategoriassa.",
             public, snapshot=snapshot, active_section=path,
             recovery_html=recovery_links_html(),
+            featured=True,
         )
     latest_path = LATEST_PATH
     latest_title = "Tuoreimmat uutiset"

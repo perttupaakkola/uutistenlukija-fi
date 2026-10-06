@@ -18,7 +18,7 @@ class LatestContinuation(unittest.TestCase):
         self.assertNotIn('article-latest-return',actions()('/uutiset/example/','kulttuuri',False))
     def test_existing_category_correction_share_unchanged(self):
         text=actions()('/uutiset/example/','kulttuuri',True)
-        for value in ['Lisää aiheesta Kulttuuri','/categories/kulttuuri/','Korjauskäytäntö','Jaa tai kopioi linkki','https://uutistenlukija.fi/uutiset/example/']:self.assertIn(value,text)
+        for value in ['Osaston uutiset: Kulttuuri','/categories/kulttuuri/','Korjauskäytäntö','Jaa tai kopioi linkki','https://uutistenlukija.fi/uutiset/example/']:self.assertIn(value,text)
     def test_no_tracking_or_script_added(self):
         text=actions()('/uutiset/example/','kulttuuri',True)
         self.assertNotIn('<script',text);self.assertNotIn('utm_',text);self.assertNotIn('onclick',text)
