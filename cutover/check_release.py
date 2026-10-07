@@ -15,6 +15,12 @@ def check(root, receipt):
     if receipt.get('origin') != 'https://uutistenlukija.fi' or receipt.get('ga4_id') != 'G-35XERS8V6J':
         raise ValueError('Canonical site/analytics identity changed')
     binding=receipt_media(receipt)
+    canonical = None
+    if receipt.get('schema_version') == 3:
+        canonical = binding['amendment']['public_metadata']['canonical']
+        article_file = canonical.removeprefix('https://uutistenlukija.fi/').rstrip('/')+'/index.html'
+        if receipt.get('new_article_files') != [article_file] or article_file not in receipt.get('files', {}):
+            raise ValueError('Amendment requires exact nonempty canonical article list')
     # Historical text-only receipts remain readable by release_contract, but the
     # deployment entrypoint may never authorize a new text-only publication.
     if receipt.get('schema_version') == 2 and not receipt['draft'].get('image'):
@@ -37,9 +43,10 @@ def check(root, receipt):
         image='mvp-assets/'+binding['image_sha256']+'.jpg'
         if image not in files or files[image]!=binding['image_sha256']:
             raise ValueError('Required reviewed image missing from bundle')
-    if receipt.get('schema_version')==2:
+    if receipt.get('schema_version') in (2, 3):
         for name in receipt['new_article_files']:
-            check_article((root/name).read_text(),receipt['packet'],receipt['draft'])
+            check_article((root/name).read_text(),receipt['packet'],receipt['draft'],
+                          canonical=canonical if receipt.get('schema_version') == 3 else None)
     def related_target(href):
         name = href.lstrip('/')+'index.html'
         if name not in files:

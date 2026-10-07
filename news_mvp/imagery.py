@@ -1052,8 +1052,17 @@ def validate_selection_evidence(image, draft=None):
 
 
 def _build_image_article_first(draft, state_dir, category, model, attempts, decision,
-                               allow_open_sources, require_pixel_review, packet):
+                               allow_open_sources, require_pixel_review, packet, *,
+                               amendment_evidence=None, amendment_preparation_bytes=None,
+                               amendment_selection_rejection_bytes=None,
+                               amendment_prior_selection_bytes=None):
     """Search every ranked concept, compare exact pixels, then generate concept one."""
+    rejection_supplied = (amendment_selection_rejection_bytes is not None or
+                          amendment_prior_selection_bytes is not None)
+    if rejection_supplied and (amendment_evidence is None or
+            amendment_preparation_bytes is None):
+        return None
+    rejected_selection = frozenset()
     from pathlib import Path
     from .image_providers import candidate_event
     from .release_contract import stock_binding
@@ -1063,15 +1072,66 @@ def _build_image_article_first(draft, state_dir, category, model, attempts, deci
         return None
     if not require_pixel_review:
         return None
-    used_images = _other_article_images(draft, state_dir) | _rejected_image_hashes(state_dir)
-    municipal = ((packet or {}).get('publication_basis') or {}).get('provider') in {
+    retained_sha = None
+    provider_packet = packet
+    if amendment_evidence is None and amendment_preparation_bytes is None:
+        used_images = _other_article_images(draft, state_dir) | _rejected_image_hashes(state_dir)
+    else:
+        import dataclasses
+        import sqlite3
+        from .amendments import AmendmentEvidence
+        from .amendment_review import build_review_envelope
+        from .amendment_image_identity import retained_image_identity
+        if (type(amendment_evidence) is not AmendmentEvidence or
+                type(amendment_preparation_bytes) is not bytes):
+            return None
+        db = None
+        try:
+            amendment_evidence.__post_init__()
+            envelope = build_review_envelope(amendment_preparation_bytes)
+            # Structural integrity only: no source/rights reconstruction or approval.
+            # Dedicated same-publisher envelope, not an ordinary source packet.
+            if (envelope['preparation']['evidence'] != dataclasses.asdict(amendment_evidence) or
+                    draft != envelope['final_draft'] or packet != envelope or
+                    envelope['source_relationship']['same_publisher'] is not True or
+                    not isinstance((draft.get('image') or {}).get('stock_provenance'), dict)):
+                return None
+            if rejection_supplied:
+                from .amendment_selection_rejection import validate_amendment_selection_rejection
+                rejected_selection = validate_amendment_selection_rejection(
+                    rejection_bytes=amendment_selection_rejection_bytes,
+                    prior_selection_bytes=amendment_prior_selection_bytes,
+                    preparation_bytes=amendment_preparation_bytes,
+                    draft=draft, decision=decision)
+                # Owner-provided assessment only, never rights or approval.
+                # Keep this concept-scoped inventory separate from global exclusions.
+            # Frozen original capture routes providers only; not combined intake.
+            provider_packet = envelope['preparation']['captures']['original']['packet']
+            uri = (Path(state_dir) / 'jobs.sqlite').resolve().as_uri() + '?mode=ro'
+            db = sqlite3.connect(uri, uri=True, timeout=10)
+            db.execute('BEGIN')
+            identity = retained_image_identity(db, amendment_evidence, draft.get('image'), state_dir)
+            # Keep every rejected/other-job exclusion. The helper's historical
+            # unhashed-hotlink gap remains non-exhaustive; never invent hashes.
+            used_images = set(identity['excluded_image_sha256'])
+            retained_sha = identity['image_sha256']
+        except (sqlite3.Error, OSError, TypeError, ValueError, KeyError):
+            return None
+        finally:
+            if db is not None:
+                try:
+                    db.rollback()
+                finally:
+                    db.close()
+    municipal = ((provider_packet or {}).get('publication_basis') or {}).get('provider') in {
         'helsinki', 'oulu', 'kuopio', 'vantaa'}
     searches, qualifying = [], []
     for concept in decision['concepts']:
         single = concept_decision(decision, concept)
         rank = concept['rank']
         providers = []
-        existing = (packet or {}).get('image')
+        existing = ((packet or {}).get('final_image') if amendment_evidence is not None
+                    else (packet or {}).get('image'))
         if (isinstance(existing, dict) and existing.get('generated') is not True and
                 existing == draft.get('image')):
             providers.append(('archive-image', lambda accept, image=existing: accept(image)))
@@ -1099,6 +1159,7 @@ def _build_image_article_first(draft, state_dir, category, model, attempts, deci
             providers.append(('google', lambda accept, d=single:
                 fetch_google(draft, state_dir, decision=d, accept=accept,
                              article_review_fallback=True)))
+
         for provider, fetch_candidate in providers:
             attempt = {'concept_rank':rank, 'provider':provider,
                 'queries':(['already deployed rights-pinned image'] if provider=='archive-image'
@@ -1113,11 +1174,20 @@ def _build_image_article_first(draft, state_dir, category, model, attempts, deci
                     raise RuntimeError('Article concept candidate limit reached')
                 image_sha = None
                 try:
+                    # This envelope does not authorize non-stock source intake.
+                    if amendment_evidence is not None and not isinstance(stock.get('stock_provenance'), dict):
+                        return None
                     raw = ((Path(state_dir)/stock['local_path']).read_bytes()
                            if stock.get('local_path') else _get_external_bytes(stock['url']))
                     image_sha = hashlib.sha256(raw).hexdigest()
+                    if provider == 'archive-image' and retained_sha is not None and image_sha != retained_sha:
+                        candidate_event(stock, image_sha, 'retained_identity_mismatch')
+                        return None
                     if image_sha in used_images:
                         candidate_event(stock, image_sha, 'duplicate_refused')
+                        return None
+                    if (rank, image_sha) in rejected_selection:
+                        candidate_event(stock, image_sha, 'amendment_selection_rejected')
                         return None
                     context = _record_pixel_context(stock)
                     review = review_pixels(raw, draft, generated=False, concept=single,
@@ -1186,6 +1256,10 @@ def _build_image_article_first(draft, state_dir, category, model, attempts, deci
             media({**packet, 'image': chosen}, {**draft, 'image': chosen})
             _verify_attached_source_image(packet, state_dir)
         return chosen
+    if amendment_evidence is not None:
+        # Stock-only amendment scope: generation recomputes ordinary text-based
+        # exclusions and cannot honor this immutable ownership inventory.
+        return None
     safest = next(concept for concept in decision['concepts'] if concept['safe_to_generate'])
     best = concept_decision(decision, safest)
     generated = _build_image(draft, state_dir, category, model, attempts, best,

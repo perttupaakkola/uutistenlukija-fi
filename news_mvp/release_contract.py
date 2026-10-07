@@ -470,7 +470,180 @@ def stock_binding(image):
     return deepcopy(image)
 
 
+AMENDMENT_RELEASE = 'published-amendment-release-v1'
+
+
+def _amendment_media(packet, draft, policy_gate):
+    """Pure candidate contract; no intake reconstruction, authority or CAS.
+
+    Raw JSON strings retain capture/preparation byte identities. Only the
+    installed review-envelope shape is supported; unknown projections refuse.
+    """
+    from .amendment_review import build_review_envelope
+    from .editorial import encode
+    from .amendment_preparation import _object
+    from .imagery import validate_pixel_review, validate_selection_evidence
+
+    fields = {'schema', 'preparation_json', 'capture_json', 'selection', 'selection_json',
+              'reviewer_prompt', 'final_review_input', 'final_review_result', 'version'}
+    if set(packet) != fields:
+        raise ValueError('Unsupported amendment release fields')
+    raw = packet['preparation_json']
+    if not isinstance(raw, str) or len(raw.encode()) > 256 * 1024:
+        raise ValueError('Unbounded amendment preparation')
+    envelope = build_review_envelope(raw.encode())
+    artifact = envelope['preparation']
+    captures = packet['capture_json']
+    if not isinstance(captures, dict) or set(captures) != {'original', 'update'}:
+        raise ValueError('Missing exact amendment capture bytes')
+    for role, capture in artifact['captures'].items():
+        values = captures[role]
+        if not isinstance(values, dict) or set(values) != {'packet', 'receipt'}:
+            raise ValueError('Missing capture packet/receipt bytes')
+        for key in ('packet', 'receipt'):
+            value = values[key]
+            if (not isinstance(value, str) or len(value.encode()) > 64 * 1024 or
+                    hashlib.sha256(value.encode()).hexdigest() != capture['binding'][key+'_sha256'] or
+                    _object(value.encode()) != capture[key]):
+                raise ValueError('Amendment capture bytes changed')
+        validation = capture['validation_draft']
+        captured_packet = capture['packet']
+        if (captured_packet.get('publication_basis', {}).get('provider') != 'vantaa' or
+                captured_packet.get('image') is not None or
+                captured_packet.get('schema') == AMENDMENT_RELEASE):
+            raise ValueError('Only ordinary image-null Vantaa captures are supported')
+        if 'image' not in validation or validation['image'] is not None:
+            raise ValueError('Capture validation requires explicit null image')
+        media(captured_packet, validation, policy_gate=policy_gate)
+    if (artifact['predecessor']['job']['status'] != 'rendered' or
+            artifact['predecessor']['publication']['status'] != 'deployed' or
+            artifact['captures']['original']['packet']['story_key'] != artifact['identity']['story_key'] or
+            artifact['captures']['original']['packet']['sources'][0]['url'] ==
+            artifact['captures']['update']['packet']['sources'][0]['url']):
+        raise ValueError('Unsupported amendment predecessor/capture identity')
+    selection = packet['selection']
+    if (not isinstance(selection, dict) or selection.get('status') != 'selection_completed' or
+            selection.get('draft_sha256') != digest(envelope['final_draft'])):
+        raise ValueError('Amendment selection predecessor draft mismatch')
+    selection_raw = packet['selection_json']
+    if (not isinstance(selection_raw, str) or len(selection_raw.encode()) > 128 * 1024 or
+            _object(selection_raw.encode()) != selection or
+            selection.get('preparation_sha256') != hashlib.sha256(raw.encode()).hexdigest() or
+            any(selection.get(key) is not False for key in ('activation', 'release_authorization'))):
+        raise ValueError('Amendment raw selection/preparation binding mismatch')
+    selection_bytes_sha = hashlib.sha256(selection_raw.encode()).hexdigest()
+    image = stock_binding(selection.get('image'))
+    if selection.get('selected_image_sha256') != image.get('sha256'):
+        raise ValueError('Amendment selected image binding mismatch')
+    if image['stock_provenance']['provider'] in ('helsinki', 'statfi'):
+        raise ValueError('Amendment source-image relation is unsupported')
+    final = deepcopy(envelope['final_draft'])
+    final['image'] = image
+    validate_pixel_review(image, final)
+    validate_selection_evidence(image, final)
+    sources = []
+    for citation in artifact['citations']:
+        source = deepcopy(citation['capture_source'])
+        source['id'] = citation['id']
+        sources.append(source)
+    # Validator view only, not an ordinary corroboration/intake packet.
+    validate_draft(final, {'sources': sources, 'image': image})
+    envelope['final_draft'] = final
+    envelope['final_image'] = deepcopy(image)
+    envelope['bindings']['final_draft_sha256'] = digest(final)
+    envelope['bindings']['final_image_sha256'] = digest(image)
+    request = packet['final_review_input']
+    if not isinstance(request, dict) or set(request) != {'source_packet', 'context', 'draft', 'draft_sha256'}:
+        raise ValueError('Amendment final review wrapper required')
+    reviewed = request['source_packet']
+    if not isinstance(reviewed, dict):
+        raise ValueError('Amendment review envelope required')
+    assessment = reviewed.get('independent_image_assessment')
+    if (not isinstance(assessment, dict) or len(encode(assessment).encode()) > 8192 or
+            assessment.get('selected_sha256') != image['sha256'] or
+            assessment.get('independent_pixel_verdict') != 'ACCEPTED_FOR_ARCHIVAL_MANOR_CONTEXT_ONLY' or
+            assessment.get('local_image_sha256_verified') is not True or
+            type(assessment.get('fit_score')) is not int or not 8 <= assessment['fit_score'] <= 10 or
+            any(assessment.get(k) is not False for k in ('activation', 'normal_approval', 'release')) or
+            type(assessment.get('reader_exposure_actions')) is not int or assessment['reader_exposure_actions'] != 0):
+        raise ValueError('Unsupported independent combined image assessment')
+    envelope['schema'] = 'private-amendment-combined-review-envelope-v1'
+    envelope['scope'] = 'COMBINED FINAL TEXT AND IMAGE REVIEW; NO ACTIVATION OR RELEASE AUTHORITY'
+    envelope['validation']['capture_reconstruction'] = 'Both exact original captures passed media(policy_gate=True) and verify_intake in this execution'
+    envelope['validation']['exact_final_image_execution'] = 'Fresh installed article-first selection and pixel review, validated against complete final draft; exact local image SHA verified'
+    # Preserve the observations actually reviewed, never manufacture a replacement.
+    envelope['independent_image_assessment'] = deepcopy(assessment)
+    envelope['selection_bytes_sha256'] = selection_bytes_sha
+    context = {'operation': 'published_amendment_combined_review',
+               'review_envelope_sha256': digest(envelope),
+               'original_canonical': envelope['public_metadata']['canonical'],
+               'source_relationship': envelope['source_relationship'],
+               'actual_diff': envelope['actual_diff'],
+               'normal_activation': False, 'release_authorization': False}
+    if (draft != final or request != {'source_packet': envelope, 'context': context,
+                                     'draft': final, 'draft_sha256': digest(final)}):
+        raise ValueError('Amendment final draft/review envelope changed')
+    result = packet['final_review_result']
+    if (not isinstance(result, dict) or result.get('status') != 'completed' or
+            result.get('combined_model_approval') is not True or
+            result.get('final_draft_sha256') != digest(final) or
+            result.get('preparation_sha256') != hashlib.sha256(raw.encode()).hexdigest() or
+            result.get('selection_bytes_sha256') != selection_bytes_sha or
+            result.get('image_sha256') != image['sha256'] or
+            result.get('review_envelope_sha256') != digest(envelope) or
+            any(result.get(key) is not False for key in (
+                'activation', 'release_authorization', 'production_state_writes',
+                'normal_approval_installed')) or
+            not validate_review(result.get('review'), final)['approved']):
+        raise ValueError('Unapproved or relabeled amendment review result')
+    # Narrow historical source pin. Supplied UTF-8 bytes are immutable under this
+    # pin; no git execution, environment files or credential-bearing loader.
+    # This proves receipt consistency, NOT cryptographic model authentication or
+    # source-HTML/intake verification. Caller-created matching receipts remain
+    # forgeable without an independently authenticated execution attestation.
+    prompt = packet['reviewer_prompt']
+    source_ref = '35b2f5a812e4de81621d928c48528b0ea9c83710'
+    prompt_sha = 'b9e9f4e1e4aa2a38fca7e4e089f0b9ed818be86c83693ea6d35cba82f71f5269'
+    if (not isinstance(prompt, dict) or set(prompt) != {'source_ref', 'text', 'sha256'} or
+            prompt['source_ref'] != source_ref or result.get('source_ref') != source_ref or
+            not isinstance(prompt['text'], str) or len(prompt['text'].encode()) > 32 * 1024 or
+            prompt['sha256'] != prompt_sha or hashlib.sha256(prompt['text'].encode()).hexdigest() != prompt_sha):
+        raise ValueError('Amendment reviewer prompt source pin mismatch')
+    call = result.get('same_call_receipt')
+    expected_prompt = hashlib.sha256((prompt['text']+'\n\nINPUT JSON:\n'+encode(request)).encode()).hexdigest()
+    if (not isinstance(call, dict) or call.get('role') != 'reviewer' or
+            type(call.get('exit_code')) is not int or call['exit_code'] != 0 or
+            not isinstance(call.get('session_id'), str) or not call['session_id'].strip() or
+            len(call['session_id']) > 256 or call.get('prompt_sha256') != expected_prompt or
+            call.get('response_sha256') != digest(result['review'])):
+        raise ValueError('Missing or foreign amendment same-call receipt')
+    evidence = artifact['evidence']
+    predecessor = {key: evidence[key] for key in (
+        'predecessor_packet_sha256', 'predecessor_draft_sha256',
+        'predecessor_publication_sha256')}
+    content = {'job_id': evidence['job_id'], 'predecessor': predecessor,
+               'preparation_sha256': hashlib.sha256(raw.encode()).hexdigest(),
+               'captures': {role: deepcopy(c['binding']) for role, c in artifact['captures'].items()},
+               'selection_sha256': digest(selection), 'selection_bytes_sha256': selection_bytes_sha,
+               'review_input_sha256': digest(request),
+               'review_result_sha256': digest(result), 'draft_sha256': digest(final),
+               'image_sha256': digest(image), 'public_metadata': deepcopy(envelope['public_metadata'])}
+    version = packet['version']
+    if (not isinstance(version, dict) or set(version) != {'id', 'content_sha256', 'predecessor'} or
+            version['predecessor'] != predecessor or version['content_sha256'] != digest(content) or
+            version['id'] != 'sha256:'+digest(content)):
+        raise ValueError('Amendment version/predecessor binding mismatch')
+    return {'image_sha256': image.get('sha256') or image['pixel_review']['image_sha256'],
+            'stock_image': image, 'amendment': {'schema': AMENDMENT_RELEASE,
+                'version': deepcopy(version), **content}}
+
+
 def media(packet, draft, policy_gate=True):
+    if packet.get('schema') == AMENDMENT_RELEASE:
+        return _amendment_media(packet, draft, policy_gate)
+    if any(key in packet for key in ('preparation_json', 'capture_json', 'final_review_input',
+                                     'final_review_result', 'version')):
+        raise ValueError('Amendment release marker missing or unsupported')
     validate_draft(draft, packet)
     if packet.get('fixture') is not False or packet.get('private_only') is True:
         raise ValueError('Fixture/private-only packet cannot be public')
@@ -681,8 +854,32 @@ def receipt_media(receipt):
         if set(receipt)!=legacy or not isinstance(sha,str) or not re.fullmatch(SHA,sha):
             raise ValueError('Ambiguous or invalid legacy receipt')
         return {'image_sha256':sha}
-    if type(receipt['schema_version']) is not int or receipt['schema_version']!=2:
+    if type(receipt['schema_version']) is not int or receipt['schema_version'] not in (2, 3):
         raise ValueError('Unknown receipt schema version')
+    if receipt['schema_version'] == 3:
+        required = {'packet', 'draft', 'review', 'packet_sha256', 'draft_sha256',
+                    'image_sha256', 'stock_image', 'amendment', 'job_id'}
+        if not required <= receipt.keys() or receipt['packet'].get('schema') != AMENDMENT_RELEASE:
+            raise ValueError('Missing explicit v3 amendment contract')
+        packet, draft = receipt['packet'], receipt['draft']
+        if receipt['packet_sha256'] != digest(packet) or receipt['draft_sha256'] != digest(draft):
+            raise ValueError('Receipt packet/draft mismatch')
+        # media() pins the historic reviewer prompt/source inside the packet.
+        # source_commit is instead the actual bundle-building checkout, emitted
+        # by public_bundle; equality would falsely relabel every later build as
+        # the old review source. This format check is not commit authentication.
+        expected = media(packet, draft)
+        actual = {key: receipt[key] for key in ('image_sha256', 'stock_image', 'amendment')}
+        if (expected != actual or receipt['job_id'] != expected['amendment']['job_id'] or
+                not isinstance(receipt.get('source_commit'), str) or
+                not re.fullmatch(r'[0-9a-f]{40}', receipt['source_commit']) or
+                receipt['review'] != packet['final_review_result']['review'] or
+                not validate_review(receipt['review'], draft)['approved'] or
+                any(key in receipt for key in ('text_only', 'text_provenance', 'image_backfill'))):
+            raise ValueError('Receipt amendment/version mismatch')
+        return expected
+    if ('amendment' in receipt or receipt.get('packet', {}).get('schema') == AMENDMENT_RELEASE):
+        raise ValueError('Amendment receipt downgrade')
     required={'packet','draft','review','packet_sha256','draft_sha256','image_sha256'}
     if not required <= receipt.keys():
         raise ValueError('Missing v2 receipt fields')
@@ -1054,6 +1251,279 @@ def check_related_thumbnails(html, target_pages=None):
                 raise ValueError('Related thumbnail differs from destination hero')
 
 
+class _AmendmentMarkup(HTMLParser):
+    """Strict bounded tree for the amendment renderer contract only."""
+
+    def __init__(self, html):
+        super().__init__(convert_charrefs=True)
+        self.root = ['document', {}, []]
+        self.stack = [self.root]
+        self.feed(html)
+        self.close()
+        if len(self.stack) != 1:
+            raise ValueError('Unclosed amendment markup')
+
+    def handle_starttag(self, tag, attrs):
+        if len(dict(attrs)) != len(attrs) or len(self.stack) > 100:
+            raise ValueError('Duplicate attributes or excessive amendment nesting')
+        node = [tag, dict(attrs), []]
+        self.stack[-1][2].append(node)
+        if tag not in _HTML_VOID_ELEMENTS:
+            self.stack.append(node)
+
+    def handle_startendtag(self, tag, attrs):
+        self.handle_starttag(tag, attrs)
+        if tag not in _HTML_VOID_ELEMENTS:
+            self.handle_endtag(tag)
+
+    def handle_endtag(self, tag):
+        if len(self.stack) == 1 or self.stack[-1][0] != tag:
+            raise ValueError('Malformed amendment markup')
+        self.stack.pop()
+
+    def handle_data(self, data):
+        self.stack[-1][2].append(data)
+
+
+def _amendment_nodes(node):
+    for child in node[2]:
+        if isinstance(child, list):
+            yield child
+            yield from _amendment_nodes(child)
+
+
+def _amendment_one(nodes, tag, cls=None):
+    found = [n for n in nodes if n[0] == tag and
+             (cls is None or cls in n[1].get('class', '').split())]
+    if len(found) != 1:
+        raise ValueError('Amendment requires unique '+(cls or tag))
+    return found[0]
+
+
+def _amendment_signature(node):
+    # Protected subtrees match the real renderer, including inline-link semantics.
+    # Timestamp spellings may differ only when they represent the same instant.
+    from .site import timestamp
+    from datetime import timezone
+    attrs = dict(node[1])
+    if node[0] == 'time' and 'datetime' in attrs:
+        attrs['datetime'] = timestamp(attrs['datetime']).astimezone(timezone.utc).isoformat()
+    return (node[0], attrs, tuple(_amendment_signature(c) if isinstance(c, list) else c
+                               for c in node[2]))
+
+
+def _amendment_fragment(html):
+    return _AmendmentMarkup(html).root
+
+
+def _check_amendment_article(html, packet, draft, canonical):
+    from copy import deepcopy
+    from html import escape
+    from . import site, seo
+    binding = media(packet, draft)
+    envelope = packet['final_review_input']['source_packet']
+    metadata = binding['amendment']['public_metadata']
+    expected_canonical = metadata['canonical']
+    if canonical is not None and canonical != expected_canonical:
+        raise ValueError('Amendment canonical argument mismatch')
+    sources = []
+    for citation in envelope['preparation']['citations']:
+        source = deepcopy(citation['capture_source'])
+        source['id'] = citation['id']
+        sources.append(source)
+    if len(html) > 2_000_000:
+        raise ValueError('Amendment article exceeds bounded markup limit')
+    tree = _amendment_fragment(html)
+    all_nodes = list(_amendment_nodes(tree))
+    article = _amendment_one(all_nodes, 'article', 'single-article')
+    if 'story' not in article[1].get('class', '').split():
+        raise ValueError('Missing amendment story class')
+    # This is a bounded markup contract, not a universal CSS visibility proof.
+    # The current renderer emits external CSS, never inline stylesheets. Refuse
+    # unsolicited inline rules rather than attempting to interpret arbitrary CSS.
+    if any(n[0] == 'style' for n in all_nodes):
+        raise ValueError('Untrusted amendment inline stylesheet')
+    ancestors = [n for n in all_nodes if any(c is article for c in _amendment_nodes(n))]
+    if (len([n for n in ancestors if n[0] == 'body']) != 1 or
+            any(n[0] == 'head' for n in ancestors)):
+        raise ValueError('Amendment article must be inside body, not head')
+    # Scripts/templates cannot provide the article's reviewed visible text.
+    for node in _amendment_nodes(article):
+        if node[0] in ('script', 'template'):
+            raise ValueError('Hidden amendment article content')
+    descendants = list(_amendment_nodes(article))
+    direct = [n for n in article[2] if isinstance(n, list)]
+    def equal(actual, expected):
+        if _amendment_signature(actual) != _amendment_signature(expected):
+            raise ValueError('Amendment rendered structure/content mismatch')
+    def fragment_node(markup):
+        return next(_amendment_nodes(_amendment_fragment(markup)))
+    h1 = _amendment_one(all_nodes, 'h1')
+    lead = _amendment_one(all_nodes, 'p', 'lead')
+    if h1 not in direct or lead not in direct:
+        raise ValueError('Relocated amendment headline/lead')
+    equal(h1, fragment_node('<h1>'+escape(draft['title'])+'</h1>'))
+    equal(lead, fragment_node('<p class="lead">'+escape(draft['summary'])+'</p>'))
+    main = _amendment_one(descendants, 'div', 'article-reading-main')
+    content = _amendment_one(all_nodes, 'div', 'content')
+    if content not in main[2]:
+        raise ValueError('Relocated amendment body')
+    numbers = {s['id']: i+1 for i, s in enumerate(sources)}
+    route = expected_canonical.removeprefix('https://uutistenlukija.fi')
+    paragraphs = ''.join('<p>'+site._paragraph_text_html(route, p, sources)+' <span class="citations">'+
+        ' '.join(f'<a href="#lahde-{numbers[s]}">[{numbers[s]}]</a>' for s in p['source_ids'])+
+        '</span></p>' for p in draft['paragraphs'])
+    equal(content, fragment_node('<div class="content">'+paragraphs+'</div>'))
+    meta = _amendment_one(all_nodes, 'p', 'article-meta')
+    if meta not in direct or meta[1].get('data-category') != draft['category']:
+        raise ValueError('Amendment publication metadata mismatch')
+    spans = [n for n in meta[2] if isinstance(n, list) and n[0] == 'span']
+    if not spans:
+        raise ValueError('Missing visible publication label')
+    equal(spans[0], fragment_node('<span>Julkaistu '+site.time_html(metadata['datePublished'])+'</span>'))
+    times = [n for n in _amendment_nodes(meta) if n[0] == 'time']
+    equal(_amendment_one(times, 'time'), fragment_node(site.time_html(metadata['datePublished'])))
+    status = _amendment_one(all_nodes, 'section', 'article-status')
+    if status not in direct:
+        raise ValueError('Relocated amendment status')
+    equal(status, fragment_node(site.article_status_html(metadata['notice'])))
+    source_section = _amendment_one(all_nodes, 'section', 'sources')
+    if source_section not in descendants:
+        raise ValueError('Relocated amendment sources')
+    equal(_amendment_one(list(_amendment_nodes(source_section)), 'ol'),
+          fragment_node('<ol>'+site.source_list_html(sources)+'</ol>'))
+    reuse = site.reuse_rights_html(sources)
+    if reuse:
+        rights = _amendment_one(all_nodes, 'section', 'source-reuse')
+        if rights not in descendants:
+            raise ValueError('Relocated text rights')
+        equal(rights, fragment_node(reuse))
+    image = draft['image']
+    _check_rendered_stock(html, stock_binding(image))
+    rights = _amendment_one(all_nodes, 'section', 'image-rights')
+    if rights not in descendants:
+        raise ValueError('Relocated image rights')
+    equal(rights, fragment_node(site.image_rights_html(site.display_image(image))))
+    hero = _amendment_one(descendants, 'figure', 'article-hero')
+    equal(hero, fragment_node(site.article_hero_figure(site.display_image(image),
+        '/mvp-assets/'+binding['image_sha256']+'.jpg')))
+    protected = [article, h1, lead, main, content, meta, status, source_section, rights, hero]
+    protected += [n for n in descendants if n[0] == 'section' and
+                  'source-reuse' in n[1].get('class', '').split()]
+    for node in all_nodes:
+        if any(node is target or any(child is target for child in _amendment_nodes(node))
+               for target in protected):
+            if ('hidden' in node[1] or 'inert' in node[1] or 'style' in node[1] or
+                    (node[1].get('aria-hidden') or '').strip().lower() == 'true' or
+                    node[0] in ('head', 'template', 'noscript', 'script') or
+                    (node[0] == 'details' and 'open' not in node[1])):
+                raise ValueError('Hidden amendment article ancestor')
+    grid = _amendment_one(descendants, 'div', 'article-reading-grid')
+    hero = _amendment_one(descendants, 'figure', 'article-hero')
+    main_children = [n for n in main[2] if isinstance(n, list)]
+    if main_children != [hero, content] or any(isinstance(n, str) and n.strip() for n in main[2]):
+        raise ValueError('Amendment reading main has extra or relocated prose/image')
+    evidence = _amendment_one(descendants, 'div', 'article-evidence')
+    reuse_nodes = [n for n in descendants if n[0] == 'section' and
+                   'source-reuse' in n[1].get('class', '').split()]
+    evidence_children = [n for n in evidence[2] if isinstance(n, list)]
+    if (source_section not in evidence_children or rights not in evidence_children or
+            any(n not in evidence_children for n in reuse_nodes) or
+            evidence_children.index(source_section) >= evidence_children.index(rights)):
+        raise ValueError('Amendment evidence/rights structure mismatch')
+    if grid not in direct or main not in grid[2] or not (
+            direct.index(h1) < direct.index(meta) < direct.index(status) <
+            direct.index(lead) < direct.index(grid)):
+        raise ValueError('Amendment article structure is out of order')
+    def children(node):
+        if any(isinstance(c, str) and c.strip() for c in node[2]):
+            raise ValueError('Unreviewed direct amendment prose')
+        return [c for c in node[2] if isinstance(c, list)]
+    def optional(node, tag, cls):
+        found = [c for c in children(node) if c[0] == tag and cls in c[1].get('class', '').split()]
+        if len(found) > 1:
+            raise ValueError('Duplicate amendment adjunct '+cls)
+        return found
+    # Publication metadata has only the authentic label and optional renderer
+    # reading-time badge; no free trailing strings or arbitrary extra spans.
+    meta_children = children(meta)
+    badge = optional(meta, 'span', 'article-reading-time')
+    if badge:
+        equal(badge[0], fragment_node('<span class="article-reading-time">'+
+            str(site.reading_time_minutes(draft))+' min lukuaika</span>'))
+    if meta_children != [spans[0]] + badge:
+        raise ValueError('Unexpected amendment publication metadata')
+    breadcrumb = optional(article, 'nav', 'article-breadcrumb')
+    if breadcrumb:
+        equal(breadcrumb[0], fragment_node('<nav class="article-breadcrumb" aria-label="Murupolku"><ol>'
+            '<li><a href="/">Etusivu</a></li><li><a href="'+escape(site.category_route(draft['category']))+'">'+
+            escape(site.category_display(draft['category']))+'</a></li><li aria-current="page">Juttu</li></ol></nav>'))
+    actions = optional(article, 'nav', 'article-actions')
+    if actions:
+        equal(actions[0], fragment_node(site.article_actions_html(route, draft['category'], True, draft['title'])))
+    if children(article) != breadcrumb + [h1, meta, status, lead] + actions + [grid]:
+        raise ValueError('Unexpected amendment article prose/module')
+    afterword = _amendment_one(descendants, 'div', 'article-afterword')
+    context = optional(grid, 'aside', 'article-context')
+    if children(grid) != [main] + context + [afterword]:
+        raise ValueError('Unexpected amendment reading-grid prose/module')
+    related = optional(afterword, 'section', 'related')
+    if children(afterword) != [evidence] + related:
+        raise ValueError('Unexpected amendment afterword prose/module')
+    production = optional(evidence, 'section', 'article-production')
+    if production:
+        publishers = list(dict.fromkeys(s['publisher'] for s in sources if s.get('publisher')))
+        equal(production[0], fragment_node('<section class="article-production"><h2>Tuotantotiedot</h2>'
+            '<p>Teksti on tuotettu tekoälyn avulla ja tarkastettu erillisessä '
+            'lähdetarkistuksessa. Lähdetarkistus ja julkaisuportit ovat automatisoituja; '
+            'sivusto ei väitä jutun olevan ihmisen ennakkotarkistama.'+
+            (' Lähdetietojen julkaisijat: '+', '.join(escape(p) for p in publishers)+'.' if publishers else '')+
+            ' <a href="'+site.ABOUT_PATH+'#prosessi">Lue tuotantoprosessista</a>.</p></section>'))
+    if children(evidence) != [source_section] + reuse_nodes + production + [rights]:
+        raise ValueError('Unexpected amendment evidence prose/module')
+    source_children = children(source_section)
+    count = optional(source_section, 'p', 'source-count')
+    if count:
+        label = '1 uutislähde' if len(sources) == 1 else str(len(sources))+' uutislähdettä'
+        equal(count[0], fragment_node('<p class="source-count">'+label+'</p>'))
+    heading = fragment_node('<h2>Lähteet</h2>')
+    if not source_children:
+        raise ValueError('Missing amendment source heading')
+    equal(source_children[0], heading)
+    if source_children != [source_children[0]] + count + [_amendment_one(list(_amendment_nodes(source_section)), 'ol')]:
+        raise ValueError('Unexpected amendment source prose/module')
+    links = [n for n in all_nodes if n[0] == 'link' and 'canonical' in n[1].get('rel', '').split()]
+    if len(links) != 1 or links[0][1].get('href') != expected_canonical:
+        raise ValueError('Amendment canonical link mismatch')
+    json_nodes = [n for n in all_nodes if n[0] == 'script' and n[1].get('type') == 'application/ld+json']
+    expected = seo.news_article_jsonld(draft['title'], seo.meta_description(draft['summary'],
+        [p['text'] for p in draft['paragraphs']]), route,
+        published=site.timestamp(metadata['datePublished']).isoformat(),
+        modified=site.timestamp(metadata['dateModified']).isoformat(), category=draft.get('category'),
+        image_url='/mvp-assets/'+binding['image_sha256']+'.jpg', sources=sources)
+    expected_node = fragment_node(expected)
+    def unique_keys(pairs):
+        result = {}
+        for key, value in pairs:
+            if key in result:
+                raise ValueError('Duplicate amendment JSON-LD key')
+            result[key] = value
+        return result
+    if len(json_nodes) != 1:
+        raise ValueError('Amendment requires unique NewsArticle metadata')
+    actual_json = json.loads(''.join(json_nodes[0][2]), object_pairs_hook=unique_keys)
+    expected_json = json.loads(''.join(expected_node[2]))
+    from datetime import timezone
+    for key in ('datePublished', 'dateModified'):
+        if (not isinstance(actual_json, dict) or key not in actual_json or
+                not isinstance(actual_json[key], str)):
+            raise ValueError('Missing amendment JSON-LD date')
+        actual_json[key] = site.timestamp(actual_json[key]).astimezone(timezone.utc).isoformat()
+        expected_json[key] = site.timestamp(expected_json[key]).astimezone(timezone.utc).isoformat()
+    if actual_json != expected_json:
+        raise ValueError('Amendment NewsArticle metadata mismatch')
+
+
 def check_article(html,packet,draft,canonical=None):
     """Same reviewed content contract for bundle validation and canonical readback."""
     from html import escape
@@ -1063,6 +1533,11 @@ def check_article(html,packet,draft,canonical=None):
     # checks reviewed content rather than proxy rewriting.
     html=_denormalize_cdn_email_obfuscation(html)
     check_related_thumbnails(html)
+    if packet.get('schema') == AMENDMENT_RELEASE:
+        return _check_amendment_article(html, packet, draft, canonical)
+    if any(key in packet for key in ('preparation_json', 'capture_json', 'final_review_input',
+                                      'final_review_result', 'version')):
+        raise ValueError('Amendment article marker missing or unsupported')
     required=[draft['title'],draft['summary']]+[p['text'] for p in draft['paragraphs']]
     for source in packet['sources']:
         required.append(source['url'])

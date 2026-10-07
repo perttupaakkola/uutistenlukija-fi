@@ -248,7 +248,31 @@ def public_bundle(store,job,state):
     ids.update(r['job_id'] for r in corrections)
     packet,draft=json.loads(job['packet']),json.loads(job['draft'])
     binding=media(packet,draft)
-    if packet.get('publication_basis') is not None:verify_intake(packet,state,archive_image_only=bool(corrections))
+    from .release_contract import AMENDMENT_RELEASE
+    amendment_mod = {}
+    # Reconstruct archived amendments too: an ordinary next release must not
+    # silently drop their authenticated lastmod or exempt captured policy drift.
+    amendment_rows = {row['id']: row for row in store.articles() if row['id'] in ids}
+    amendment_rows[job['id']] = job
+    for row in amendment_rows.values():
+        row_packet = json.loads(row['packet'])
+        if row_packet.get('schema') != AMENDMENT_RELEASE:
+            continue
+        if corrections:
+            raise ValueError('Amendment and image backfill cannot share a release')
+        row_binding = media(row_packet, json.loads(row['draft']), policy_gate=True)
+        if json.loads(row['review']) != row_packet['final_review_result']['review']:
+            raise ValueError('Amendment row review differs from combined review')
+        from .amendment_preparation import _reconstruct
+        preparation = row_packet['final_review_input']['source_packet']['preparation']
+        for role in ('original', 'update'):
+            capture = preparation['captures'][role]
+            raw = row_packet['capture_json'][role]
+            _reconstruct(capture['packet'], capture['validation_draft'],
+                         raw['packet'].encode(), raw['receipt'].encode(), state)
+        amendment_mod[row['id']] = row_binding['amendment']['public_metadata']['dateModified']
+    if 'amendment' not in binding and packet.get('publication_basis') is not None:
+        verify_intake(packet,state,archive_image_only=bool(corrections))
     site=Path(state)/'live-site'  # Never reads or overlays the abandoned public-history tree.
     # The reviewed legacy demand inventory is loaded before anything is written: a missing
     # or malformed inventory fails the release closed rather than producing a bundle whose
@@ -292,6 +316,7 @@ def public_bundle(store,job,state):
         title_by_id[row['id']]=row['draft']
         try: article_mod[row['id']]=timestamp(row['created_at']).astimezone(timezone.utc).strftime('%Y-%m-%dT%H:%M:%S+00:00')
         except Exception: pass
+    article_mod.update(amendment_mod)
     def _slug_for(identifier):
         # title_by_id maps id->raw draft; a NULL draft must still yield a valid slug
         # rather than crashing the whole publish (regression: 2026-09-17).
@@ -404,7 +429,9 @@ def public_bundle(store,job,state):
         'draft_sha256':digest(draft),**binding,
         'new_article_files':[article_path(job)+'index.html'],
         'files':{str(p.relative_to(site)):hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(site.rglob('*')) if p.is_file()}}
-    if binding.get('text_only') or binding.get('text_provenance'):
+    if 'amendment' in binding:
+        receipt.update(schema_version=3,packet=packet,draft=draft,review=json.loads(job['review']))
+    elif binding.get('text_only') or binding.get('text_provenance'):
         receipt.update(schema_version=2,packet=packet,draft=draft,review=json.loads(job['review']))
     if corrections:
         receipt.update(image_backfill=corrections,image_backfill_sha256=digest(corrections))

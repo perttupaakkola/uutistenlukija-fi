@@ -3,6 +3,7 @@ import html
 import hashlib
 import json
 import re
+from copy import deepcopy
 from datetime import timezone
 from difflib import SequenceMatcher
 from email.utils import format_datetime
@@ -1377,24 +1378,67 @@ def render_site(store, output_dir, state_dir=None, public=False, include_ids=Non
     assets = "mvp-assets" if public else "assets"
     # Re-check stored decisions before writing any page; source-derived HTML is always escaped.
     articles = []
+    amendments = {}
+    from .release_contract import AMENDMENT_RELEASE, check_article, media
     for job in jobs:
         packet, draft, review = (json.loads(job[k]) for k in ("packet", "draft", "review"))
-        validate_draft(draft, packet)
-        if public:
-            if not display_image(draft.get('image')):
-                raise ValueError('Published article requires a reviewed relevant image')
-            # The policy gate is a PUBLISH-time check: it binds a packet to the policy in force
-            # when it is released, via an exact policy digest. Re-running it for articles that
-            # were already released against an earlier policy would fail every historical page,
-            # so adding a source would brick the whole archive and block all future publishing.
-            # verify_policy_ids names the articles being published now; those get the full gate.
-            # Everything else is already bound to its captured bytes by verify_intake at release
-            # time, and is re-checked structurally by validate_draft above.
-            from .release_contract import media
-            if verify_policy_ids is None or job["id"] in verify_policy_ids:
+        if packet.get("schema") == AMENDMENT_RELEASE:
+            # The composite remains the authentication object. Only this local view is
+            # shaped like an ordinary packet for established rendering/scoring helpers.
+            binding = media(packet, draft, policy_gate=True)
+            envelope = packet["final_review_input"]["source_packet"]
+            metadata = binding["amendment"]["public_metadata"]
+            predecessor = envelope["preparation"]["predecessor"]["job"]
+            predecessor_link = "/" + article_path(predecessor)
+            current_link = "/" + article_path(job)
+            if (job["id"] != binding["amendment"]["job_id"] or
+                    job["id"] != predecessor["id"] or
+                    job["created_at"] != predecessor["created_at"] or
+                    metadata.get("datePublished") != predecessor["created_at"] or
+                    metadata.get("canonical") != SITE_URL.rstrip("/") + predecessor_link or
+                    current_link != predecessor_link):
+                raise ValueError("Amendment predecessor/public identity mismatch")
+            notice = metadata.get("notice")
+            if (not isinstance(notice, dict) or
+                    notice.get("at") != metadata.get("dateModified")):
+                raise ValueError("Amendment notice/dateModified mismatch")
+            sources = []
+            for citation in envelope["preparation"]["citations"]:
+                source = deepcopy(citation["capture_source"])
+                source["id"] = citation["id"]
+                sources.append(source)
+            render_packet = {
+                "sources": sources,
+                "image": deepcopy(envelope["final_image"]),
+                "article_status": deepcopy(notice),
+            }
+            validate_draft(draft, render_packet)
+            if review != packet["final_review_result"]["review"]:
+                raise ValueError("Amendment row review differs from combined review")
+            amendments[job["id"]] = (packet, metadata["canonical"])
+            packet = render_packet
+        else:
+            # Amendment-shaped packets never fall through as ordinary records when
+            # their required marker is missing or unsupported.
+            if any(key in packet for key in ("preparation_json", "capture_json",
+                                             "final_review_input", "final_review_result",
+                                             "version")):
                 media(packet, draft)
-            else:
-                media(packet, draft, policy_gate=False)
+            validate_draft(draft, packet)
+            if public:
+                # The policy gate is a PUBLISH-time check: it binds a packet to the policy in force
+                # when it is released, via an exact policy digest. Re-running it for articles that
+                # were already released against an earlier policy would fail every historical page,
+                # so adding a source would brick the whole archive and block all future publishing.
+                # verify_policy_ids names the articles being published now; those get the full gate.
+                # Everything else is already bound to its captured bytes by verify_intake at release
+                # time, and is re-checked structurally by validate_draft above.
+                if verify_policy_ids is None or job["id"] in verify_policy_ids:
+                    media(packet, draft)
+                else:
+                    media(packet, draft, policy_gate=False)
+        if public and not display_image(draft.get('image')):
+            raise ValueError('Published article requires a reviewed relevant image')
         validate_review(review, draft)
         if not review["approved"]:
             raise ValueError("Unapproved record cannot be rendered")
@@ -1513,9 +1557,13 @@ def render_site(store, output_dir, state_dir=None, public=False, include_ids=Non
                 image_url=image_for_meta,
                 sources=packet["sources"],
             )
-        atomic_write(output_dir / article_path(job) / "index.html",
-                     page(draft["title"], body, link if public else None, head_meta=head_meta,
-                          snapshot=snapshot, active_section=category_route(draft["category"])))
+        rendered_page = page(draft["title"], body, link if public else None, head_meta=head_meta,
+                             snapshot=snapshot, active_section=category_route(draft["category"]))
+        amendment = amendments.get(job["id"])
+        if public and amendment is not None:
+            original_packet, canonical = amendment
+            check_article(rendered_page, original_packet, draft, canonical=canonical)
+        atomic_write(output_dir / article_path(job) / "index.html", rendered_page)
         if job["id"] not in duplicate_ids and not withdrawn:
             listing_items.append((job, draft, link, date, fixture, image, image_url))
     pages = [listing_items[offset:offset + PAGE_SIZE] for offset in range(0, len(listing_items), PAGE_SIZE)] or [[]]
