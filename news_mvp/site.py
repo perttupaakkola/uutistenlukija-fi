@@ -1647,6 +1647,20 @@ def render_site(store, output_dir, state_dir=None, public=False, include_ids=Non
     guides_body = category_page_body("Oppaat", guides_note,
                                      guides_items, "Oppaita ei ole vielä julkaistu.",
                                      recovery_html=recovery_links_html())
+    guides_body += (
+        '<section class="portal-list-page" aria-labelledby="oppaat-lisaa-title">'
+        '<header class="portal-list-header">'
+        '<p class="portal-list-header__eyebrow">'
+        'Linkki kaupungin palvelusivulle – ei Uutistenlukijan uutisjuttu.</p>'
+        '<div class="portal-list-header__title">'
+        '<h2 id="oppaat-lisaa-title">Lisää syyslomatekemistä</h2></div>'
+        '<p>Oulu: kaupungin Fiilis-sivulle on koottu lasten ja nuorten toimintaa '
+        'syyslomalle 19.–23.10.2026. Tarkista tapahtumien ikärajat, hinnat ja '
+        'ilmoittautuminen kaupungin sivulta.</p>'
+        '<p class="empty-recovery"><a href="https://www.ouka.fi/fiilis" rel="noopener noreferrer">'
+        'Oulun kaupungin syyslomatoiminta</a></p>'
+        '</header></section>'
+    )
     guides_meta = (homepage_head_meta(
         guides_items, path=OPPAAT_PATH, page_title=guides_title,
         description=guides_note,

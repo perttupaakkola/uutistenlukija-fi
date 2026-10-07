@@ -1,13 +1,26 @@
 """Focused, secret-free checks for the curated Oppaat discovery route."""
 import json
 import re
+import tempfile
 import unittest
+from pathlib import Path
+from unittest.mock import patch
 
 from news_mvp import site
+from news_mvp.editorial import digest
 
 
 HELSINKI_ID = "9c818b9e83818ccf047a7fce9a4c2657f551f5abe743370f60b812af3bd5ed56"
 VANTAA_ID = "f1f023667c0fcb8fd1fc1a0b600cb91c32c7d5717e765892463169e1c4aedcfa"
+OULU_URL = "https://www.ouka.fi/fiilis"
+OULU_HEADING = "Lisää syyslomatekemistä"
+OULU_DESCRIPTION = (
+    "Oulu: kaupungin Fiilis-sivulle on koottu lasten ja nuorten toimintaa "
+    "syyslomalle 19.–23.10.2026. Tarkista tapahtumien ikärajat, hinnat ja "
+    "ilmoittautuminen kaupungin sivulta."
+)
+OULU_LABEL = "Linkki kaupungin palvelusivulle – ei Uutistenlukijan uutisjuttu."
+OULU_ANCHOR = "Oulun kaupungin syyslomatoiminta"
 
 
 def listing_item(job_id, label):
@@ -24,7 +37,75 @@ def listing_item(job_id, label):
     return (job, draft, link, date, "", image, image_url)
 
 
+def rendered_job(job_id, label):
+    image = {
+        "url": f"https://example.invalid/image-{label}.jpg",
+        "source_url": f"https://example.invalid/source-{label}",
+        "license_url": "https://example.invalid/image-terms",
+        "license": "Synthetic test terms",
+        "credit": "Synthetic test credit",
+        "alt": f"Synthetic guide image {label}",
+        "width": 640,
+        "height": 480,
+    }
+    packet = {
+        "fixture": True,
+        "story_key": f"guides-route-{label}",
+        "sources": [{
+            "id": "A",
+            "url": f"https://example.invalid/source-{label}",
+            "publisher": f"Synthetic publisher {label}",
+            "title": f"Synthetic source {label}",
+            "published_at": f"2026-10-0{label}T08:00:00+00:00",
+        }],
+        "image": image,
+    }
+    draft = {
+        "category": "Kulttuuri",
+        "title": f"Alkuperäinen otsikko {label}",
+        "summary": f"Alkuperäinen tiivistelmä {label}",
+        "paragraphs": [
+            {"text": f"Ensimmäinen synteettinen kappale {label}.", "source_ids": ["A"]},
+            {"text": f"Toinen synteettinen kappale {label}.", "source_ids": ["A"]},
+        ],
+        "image": image,
+    }
+    review = {
+        "approved": True,
+        "draft_sha256": digest(draft),
+        "reasons": ["Synthetic route regression fixture."],
+    }
+    return {
+        "id": job_id,
+        "created_at": f"2026-10-0{label}T10:0{label}:00+00:00",
+        "packet": json.dumps(packet),
+        "draft": json.dumps(draft),
+        "review": json.dumps(review),
+    }
+
+
+class FakeStore:
+    def __init__(self, jobs):
+        self.jobs = jobs
+
+    def articles(self):
+        return list(self.jobs)
+
+    def mark_rendered(self, _ids):
+        pass
+
+
 class GuidesDiscoveryRoute(unittest.TestCase):
+    def render_guides(self, jobs):
+        with tempfile.TemporaryDirectory() as directory:
+            output = Path(directory) / "site"
+            with patch("news_mvp.release_contract.media"):
+                site.render_site(FakeStore(jobs), output, public=True)
+            return (
+                (output / "oppaat/index.html").read_text(encoding="utf-8"),
+                (output / "rss.xml").read_text(encoding="utf-8"),
+            )
+
     def test_exact_reviewed_ids_are_selected_in_supplied_order_without_mutation(self):
         vantaa = listing_item(VANTAA_ID, 1)
         old_conflicting = listing_item("2684ca78-unresolved-old-story", 2)
@@ -94,6 +175,77 @@ class GuidesDiscoveryRoute(unittest.TestCase):
             ],
         )
         self.assertFalse(any(payload.get("@type") == "NewsArticle" for payload in payloads))
+
+    def test_rendered_route_keeps_oulun_reference_outside_two_article_inventory(self):
+        vantaa = rendered_job(VANTAA_ID, 1)
+        unrelated = rendered_job("unrelated-story", 2)
+        helsinki = rendered_job(HELSINKI_ID, 3)
+
+        page, rss = self.render_guides([vantaa, unrelated, helsinki])
+        original_links = ["/" + site.article_path(job) for job in (vantaa, helsinki)]
+
+        self.assertIn('<p class="archive-count">2 juttua</p>', page)
+        self.assertEqual(page.count('<article class="portal-feed-item'), 2)
+        self.assertLess(page.index(original_links[0]), page.index(original_links[1]))
+        for link in original_links:
+            self.assertIn(f'href="{link}"', page)
+        self.assertEqual(page.count(f'href="{OULU_URL}"'), 1)
+        self.assertIn(
+            f'<a href="{OULU_URL}" rel="noopener noreferrer">{OULU_ANCHOR}</a>', page
+        )
+        self.assertEqual(page.count(OULU_HEADING), 1)
+        self.assertEqual(page.count(OULU_DESCRIPTION), 1)
+        self.assertEqual(page.count(OULU_LABEL), 1)
+        self.assertLess(page.index(original_links[1]), page.index(OULU_HEADING))
+
+        payloads = [
+            json.loads(raw) for raw in re.findall(
+                r'<script type="application/ld\+json">(.*?)</script>', page
+            )
+        ]
+        self.assertEqual([payload.get("@type") for payload in payloads], ["WebSite", "ItemList"])
+        item_list = payloads[1]["itemListElement"]
+        self.assertEqual(
+            [item["url"] for item in item_list],
+            [site.SITE_URL.rstrip("/") + link for link in original_links],
+        )
+        self.assertNotIn(OULU_URL, json.dumps(payloads))
+        self.assertNotIn(OULU_URL, rss)
+
+    def test_rendered_reference_stays_separate_with_zero_or_one_selected_article(self):
+        unrelated = rendered_job("unrelated-story", 2)
+        helsinki = rendered_job(HELSINKI_ID, 3)
+
+        for jobs, expected_count in (([unrelated], 0), ([unrelated, helsinki], 1)):
+            with self.subTest(selected=expected_count):
+                page, _rss = self.render_guides(jobs)
+                self.assertIn(
+                    f'<p class="archive-count">{expected_count} '
+                    f'{"juttu" if expected_count == 1 else "juttua"}</p>',
+                    page,
+                )
+                self.assertEqual(page.count('<article class="portal-feed-item'), expected_count)
+                self.assertEqual(page.count(f'href="{OULU_URL}"'), 1)
+                self.assertIn(
+                    '</div><section class="portal-list-page" '
+                    'aria-labelledby="oppaat-lisaa-title">',
+                    page,
+                )
+                if expected_count == 0:
+                    self.assertLess(page.index('class="empty-recovery"'), page.index(OULU_HEADING))
+                else:
+                    original_link = "/" + site.article_path(helsinki)
+                    self.assertLess(page.index(original_link), page.index(OULU_HEADING))
+                payloads = [
+                    json.loads(raw) for raw in re.findall(
+                        r'<script type="application/ld\+json">(.*?)</script>', page
+                    )
+                ]
+                item_lists = [payload for payload in payloads if payload.get("@type") == "ItemList"]
+                self.assertEqual(len(item_lists), 1)
+                self.assertEqual(len(item_lists[0]["itemListElement"]), expected_count)
+                self.assertFalse(any(payload.get("@type") == "NewsArticle" for payload in payloads))
+                self.assertNotIn(OULU_URL, json.dumps(payloads))
 
     def test_empty_and_single_match_remain_truthful(self):
         unrelated = listing_item("unrelated-story", 3)
