@@ -4,30 +4,280 @@
   "origin": "https://uutistenlukija.fi",
   "ga4_id": "G-35XERS8V6J",
   "source_commit": "a033288a8ea9e63ef9ddbcf7d8c0700afeb13d99",
-  "job_id": "a2e251cb68266c3b8a19bdbd21bb5b3f9ff01785f21b6cc2bea5d8c13c878466",
-  "packet_sha256": "4de61d114e406a0e9a27a3ef4bd22dcc65f7a8b6fe862b49b4e441b715e03209",
-  "draft_sha256": "66beeb956ae882c8a374cdbda7a0d16a8a4856b66126c6929d15fd6742df4d3d",
-  "image_sha256": "8b4f02be9b040339c074b00d2ccbaa716df6c836dda30154798f44ed1a60f24b",
+  "job_id": "3f2b1780904da9d841fc8204760e56d35d211fd7999ef320d173e5556424e4a3",
+  "packet_sha256": "6af8ca60e320c064c8deccf5937c2058ee7840a7743800e42007546fd1679ef2",
+  "draft_sha256": "686efacf9288faf934cbe9fb2584ee1db6a04475edcdf9da1d1d1b77036aa9b2",
+  "image_sha256": "1d3f581bc1be716725709434c3066b9bdb110ed5dbdd96cf0c7a9bc0d1410baf",
   "text_only": {
     "policy": "official-text-v1",
     "policy_sha256": "901a881c0ed60542e137b124a671a87d2fb07b251a12312d96053f5d4a134e1e",
-    "provenance_sha256": "757c68acd27b44c442fe46f3f0eae71ce0befe752abe3986a5f886efd3e97cd0"
+    "provenance_sha256": "f5d2c46d6c6c2c98604c88e6909d9d584c061dbe876087176ab3f00de4ec4877"
+  },
+  "stock_image": {
+    "alt": "Arkistokuva: Avoin musta kansio, jossa on valkoisia papereita ja kaksi talonkuvalla varustettua muistilappua, on tummalla pinnalla avainnipun kanssa.",
+    "caption": "Arkistokuva artikkelin aiheesta.",
+    "classifier_output": {
+      "category": "Kotimaa",
+      "concepts": [
+        {
+          "depictable_scene": "Todellinen valokuva Antti Häkkäsestä puhujakorokkeen ääressä, mikrofonit hänen edessään. Kuva esittää päätöksistä vastaavan ministerin, eikä sen tarvitse olla juuri näiden lupapäätösten julkistamisesta.",
+          "must_avoid": [
+            "Invented likeness of the minister",
+            "Presenting an unrelated photograph as the announcement of these six decisions"
+          ],
+          "must_show": [
+            "Antti Häkkänen",
+            "Lectern with microphones"
+          ],
+          "rank": 1,
+          "safe_to_generate": false,
+          "search_queries": [
+            "Antti Häkkänen puolustusministeri",
+            "Antti Häkkänen puhujakoroke",
+            "Antti Häkkänen lectern microphones"
+          ],
+          "subject": "Puolustusministeri Antti Häkkänen"
+        },
+        {
+          "depictable_scene": "Pöydällä on avoin asiakirjakansio paperiarkkeineen ja sen vieressä kiinteistön avainnippu. Paperit näkyvät viistosti siten, että niiden tekstialueet jäävät epätarkoiksi.",
+          "must_avoid": [
+            "People, faces, hands or other body parts",
+            "Fabricated readable text, official seals or logos",
+            "Rejection stamps suggesting a final legally binding decision"
+          ],
+          "must_show": [
+            "Paper documents in a folder",
+            "Property keys"
+          ],
+          "rank": 2,
+          "safe_to_generate": true,
+          "search_queries": [
+            "kiinteistökauppa asiakirjat avaimet",
+            "lupahakemus asiakirjakansio",
+            "property documents keys",
+            "paper folder keys"
+          ],
+          "subject": "kiinteistöhankinnoista tehtävien lupapäätösten asiakirjat"
+        }
+      ],
+      "version": "article-first-v1"
+    },
+    "credit": "Photo by Jakub Zerdzicki on Pexels",
+    "depicted": "The image shows a close-up, slightly elevated view of a black binder, open and filled with papers, on a dark surface. On top of the papers, there are two sticky notes: one yellow and one pink, both with a simple outline drawing of a house. A set of keys, including one green key and two black keys, along with a black house-shaped keychain, are resting on the sticky notes. To the right of the binder, a collection of small, house-shaped figurines are arranged in rows. Most of these figurines are da",
+    "generated": false,
+    "hotlink": false,
+    "license": "Pexels License",
+    "license_evidence": {
+      "image_path": "/photos/34135038/pexels-photo-34135038.jpeg",
+      "license": "Pexels License",
+      "license_code": "Pexels",
+      "license_url": "https://www.pexels.com/license/",
+      "photo_id": "34135038",
+      "photo_url": "https://www.pexels.com/photo/real-estate-keys-and-documents-with-house-models-34135038/",
+      "photographer": "Jakub Zerdzicki",
+      "photographer_url": "https://www.pexels.com/@jakubzerdzicki",
+      "response_sha256": "1e4c3e8e24f8967fe58abd05b69551f0c3244097ef56058a0263b64f2adda7b3",
+      "retrieved_at": "2026-10-07T09:28:26.587367+00:00",
+      "transport": "jina_reader",
+      "version": 1
+    },
+    "license_url": "https://www.pexels.com/license/",
+    "local_path": "media/1d3f581bc1be716725709434c3066b9bdb110ed5dbdd96cf0c7a9bc0d1410baf.jpg",
+    "pixel_review": {
+      "alt_fi": "Avoin musta kansio, jossa on valkoisia papereita ja kaksi talonkuvalla varustettua muistilappua, on tummalla pinnalla avainnipun kanssa.",
+      "approved": true,
+      "article_text_sha256": "aa3755aa7cf218a1c675741cb3210573ef3dd5d44c2e069cdba59972fbe50900",
+      "concept_sha256": "d9448691a84e02d3f300ea6489c5b89cabfd030f4102a05ecc597b633a749234",
+      "description": "An open black folder with white papers and two sticky notes with house drawings is on a dark surface. A set of keys is on top of the sticky notes. In the background, there are many small house models in black, grey, pink, and orange.",
+      "fit_score": 9,
+      "image_sha256": "1d3f581bc1be716725709434c3066b9bdb110ed5dbdd96cf0c7a9bc0d1410baf",
+      "model": "google:gemini-2.5-flash",
+      "must_show_visible": [
+        true,
+        true
+      ],
+      "no_people": true,
+      "reason": "The image clearly depicts paper documents in a folder and property keys, which are the must-show elements for the selected concept. The overall scene of documents and keys directly relates to the article's subject of property acquisition decisions. The small house models in the background add to the theme of properties without detracting from the main subject.",
+      "reviewed_at": "2026-10-07T09:28:29.932151+00:00",
+      "text_audit": {
+        "examples": [],
+        "readable_text_present": false
+      }
+    },
+    "pixels": {
+      "height": 627,
+      "mode": "RGB",
+      "variance": 9083.5,
+      "width": 940
+    },
+    "relevance_check": {
+      "accepted": true,
+      "evidence": "An open black folder with white papers and two sticky notes with house drawings is on a dark surface. A set of keys is on top of the sticky notes. In the background, there are many small house models in black, grey, pink, and orange.",
+      "matched": [
+        "folder",
+        "keys"
+      ],
+      "method": "vision",
+      "reason": "Exact-pixel full-article score meets the 8/10 threshold"
+    },
+    "selection_evidence": {
+      "article_text_sha256": "aa3755aa7cf218a1c675741cb3210573ef3dd5d44c2e069cdba59972fbe50900",
+      "decision_sha256": "07379aacfe6b459472c636b741da52ea420b240c8e1b46682c1b6062221f9bb5",
+      "minimum_real_fit": 8,
+      "searches": [
+        {
+          "candidates": [
+            {
+              "approved": false,
+              "fit_score": 4,
+              "image_sha256": "1fc9636cacaa589d2f81800b6e3dd13a4a68e727b5a1199de134ad20a5da574a",
+              "license": "Pexels License",
+              "reason": "The article is about decisions made by Defense Minister Antti Häkkänen. The selected concept specifically requests a photograph of Antti Häkkänen at a lectern with microphones. The provided image shows microphones and a table, which could be part of a press conference setup, but Antti Häkkänen is not visible. Therefore, it does not meet the core re",
+              "source_url": "https://www.pexels.com/photo/podcast-studio-setup-with-microphones-32007691/"
+            },
+            {
+              "approved": false,
+              "fit_score": 4,
+              "image_sha256": "0a62201a152396a228f4f5911f6d30ccd95ee68ed6d1c63c7c526e1f228b970a",
+              "license": "Pexels License",
+              "reason": "The article is about the Minister of Defence, Antti Häkkänen, and his decisions regarding real estate acquisitions. The selected concept specifically requires a photograph of Antti Häkkänen at a lectern with microphones. The provided image shows only two microphones, without any person or a lectern. Therefore, it does not depict the concrete subjec",
+              "source_url": "https://www.pexels.com/photo/close-up-of-two-wireless-microphones-20802525/"
+            }
+          ],
+          "concept_rank": 1,
+          "outcome": "no_qualifying_candidate",
+          "provider": "pexels",
+          "queries": [
+            "Antti Häkkänen puolustusministeri",
+            "Antti Häkkänen puhujakoroke",
+            "Antti Häkkänen lectern microphones"
+          ]
+        },
+        {
+          "candidates": [],
+          "concept_rank": 1,
+          "outcome": "no_qualifying_candidate",
+          "provider": "unsplash",
+          "queries": [
+            "Antti Häkkänen puolustusministeri",
+            "Antti Häkkänen puhujakoroke",
+            "Antti Häkkänen lectern microphones"
+          ]
+        },
+        {
+          "candidates": [
+            {
+              "approved": false,
+              "fit_score": 0,
+              "image_sha256": "358fa4be1981ced392363943b7ab4710a95e18ec213843435ef49fa5909cdf50",
+              "license": "CC BY-SA 2.0",
+              "reason": "The article is about Defense Minister Antti Häkkänen and his decisions. The selected concept specifically requests a photograph of Antti Häkkänen at a lectern with microphones. The visible subject in the image is a young man, who does not appear to be Antti Häkkänen, and he is not at a lectern with microphones. The image is completely unrelated to ",
+              "source_url": "https://commons.wikimedia.org/wiki/File:2017-10%20Antti%20H%C3%A4kk%C3%A4nen%202.jpg"
+            },
+            {
+              "approved": false,
+              "fit_score": 7,
+              "image_sha256": "aeb55c1c74273a39b7e043be79898bc6591a5793ec25be1ab0ba99ad5dc24ad9",
+              "license": "CC BY-SA 2.0",
+              "reason": "The article is about Defense Minister Antti Häkkänen. The selected concept requires a photograph of Antti Häkkänen at a lectern with microphones. The image shows a man who could be Antti Häkkänen, but he is not at a lectern with microphones. Therefore, it does not meet the 'must_show' criteria. One or more required concept elements are not visible.",
+              "source_url": "https://commons.wikimedia.org/wiki/File:2017-10%20Antti%20H%C3%A4kk%C3%A4nen%201.jpg"
+            },
+            {
+              "approved": false,
+              "fit_score": 6,
+              "image_sha256": "e2c035c749c85ea3cbb0f8ff33ef0d10e10b3e4c95dd41ea3888559c7a9a6805",
+              "license": "CC BY-SA 2.0",
+              "reason": "The article discusses decisions made by Defense Minister Antti Häkkänen. The selected concept requires a photograph of Antti Häkkänen at a lectern with microphones. While the image shows a man who could be Antti Häkkänen, it does not show him at a lectern with microphones, which are explicit 'must_show' elements. Therefore, the image does not fit t",
+              "source_url": "https://commons.wikimedia.org/wiki/File:2017-10%20Antti%20H%C3%A4kk%C3%A4nen%201%20(cropped).jpg"
+            },
+            {
+              "approved": false,
+              "fit_score": 7,
+              "image_sha256": "cc2d346d64849085bbefa04ea5c1f6fa5837218747a653d50c270135e36efd7d",
+              "license": "CC BY 4.0",
+              "reason": "The image clearly shows Antti Häkkänen, which is one of the 'must_show' elements. However, the second 'must_show' element, 'Lectern with microphones', is not present in the image. The image is a portrait and does not depict him at a lectern or with microphones. Therefore, it only partially fits the selected concept, limiting the fit score to 7 and ",
+              "source_url": "https://commons.wikimedia.org/wiki/File:Antti-H%C3%A4kk%C3%A4nen-01.jpg"
+            }
+          ],
+          "concept_rank": 1,
+          "outcome": "unavailable",
+          "provider": "wikimedia",
+          "queries": [
+            "Antti Häkkänen puolustusministeri",
+            "Antti Häkkänen puhujakoroke",
+            "Antti Häkkänen lectern microphones"
+          ]
+        },
+        {
+          "candidates": [],
+          "concept_rank": 1,
+          "outcome": "no_qualifying_candidate",
+          "provider": "google",
+          "queries": [
+            "Antti Häkkänen puolustusministeri",
+            "Antti Häkkänen puhujakoroke",
+            "Antti Häkkänen lectern microphones"
+          ]
+        },
+        {
+          "candidates": [
+            {
+              "approved": true,
+              "fit_score": 9,
+              "image_sha256": "1d3f581bc1be716725709434c3066b9bdb110ed5dbdd96cf0c7a9bc0d1410baf",
+              "license": "Pexels License",
+              "reason": "The image clearly depicts paper documents in a folder and property keys, which are the must-show elements for the selected concept. The overall scene of documents and keys directly relates to the article's subject of property acquisition decisions. The small house models in the background add to the theme of properties without detracting from the m",
+              "source_url": "https://www.pexels.com/photo/real-estate-keys-and-documents-with-house-models-34135038/"
+            }
+          ],
+          "concept_rank": 2,
+          "outcome": "accepted",
+          "provider": "pexels",
+          "queries": [
+            "kiinteistökauppa asiakirjat avaimet",
+            "lupahakemus asiakirjakansio",
+            "property documents keys"
+          ]
+        }
+      ],
+      "selected": {
+        "concept_rank": 2,
+        "fit_score": 9,
+        "image_sha256": "1d3f581bc1be716725709434c3066b9bdb110ed5dbdd96cf0c7a9bc0d1410baf",
+        "kind": "real"
+      },
+      "version": "article-first-v1"
+    },
+    "sha256": "1d3f581bc1be716725709434c3066b9bdb110ed5dbdd96cf0c7a9bc0d1410baf",
+    "source_url": "https://www.pexels.com/photo/real-estate-keys-and-documents-with-house-models-34135038/",
+    "stock_provenance": {
+      "image_url": "https://images.pexels.com/photos/34135038/pexels-photo-34135038.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "photo_id": "34135038",
+      "photo_url": "https://www.pexels.com/photo/real-estate-keys-and-documents-with-house-models-34135038/",
+      "photographer": "Jakub Zerdzicki",
+      "photographer_url": "https://www.pexels.com/@jakubzerdzicki",
+      "provider": "pexels",
+      "query": "kiinteistökauppa asiakirjat avaimet",
+      "retrieved_at": "2026-10-07T09:28:26Z"
+    },
+    "stock_provenance_sha256": "e7c2d60fc8380e48511a80877962bca9f3900dd52c01e92d6a1d1d6e338ecf3d",
+    "url": "https://uutistenlukija.fi/media/1d3f581bc1be716725709434c3066b9bdb110ed5dbdd96cf0c7a9bc0d1410baf.jpg"
   },
   "new_article_files": [
-    "uutiset/tyottomyysturvan-kannustimista-kaynnistyy-selvitys-a2e251cb6826/index.html"
+    "uutiset/hakkanen-epasi-luvat-kuudelta-kiinteistohankinnalta-3f2b1780904d/index.html"
   ],
   "files": {
     "0bce47347326f83e8507a46c6b0c3bdb.txt": "f1a2b584ad8690f8447736e1c18c93360e63182fd2e6fe49ec7359a97c9b40c5",
     "404.html": "2702996724078e2b0cad1a5f79fc644f91c93b6d9d1fa94589315ea4510ea6eb",
-    "_redirects": "4d36ae4c5683b1cc48c9edb4dcfaa62dd84d9c6c4fe629ae377fc2a8eac046e3",
+    "_redirects": "0b9e0112e966b89167cd5eb184c621ce9b671e49fa97b46fa4ec5e4d8194e69f",
     "ai-kuvat/index.html": "e1afb326b95595f93e2264121b8f6ecf0e2d44f941dfee8a3e9c2722817275ba",
-    "categories/kotimaa/index.html": "0d6fe8e6fc6849f3f00737952d021e40f23b5edd28f39fe30e6a5de331f5863f",
-    "categories/kotimaa/sivu/2/index.html": "706af62472cc5b4e46e8de98108f92df2c1d660b052c03ccf898f419d7d40c07",
-    "categories/kotimaa/sivu/3/index.html": "4abe311603e1fa53f955cd856f1db591bc7ba60707ca254764346bc8ede31199",
-    "categories/kotimaa/sivu/4/index.html": "cf4a9c951cfc5c4ff67d33a7fd7618027e3969d5657c0368029998006b6843c2",
-    "categories/kotimaa/sivu/5/index.html": "4cb13880031ebdca5c28267163b3b9d42cff780455960a313dd511165e1c3b5f",
-    "categories/kotimaa/sivu/6/index.html": "054383342b05ce6fb6434657e9da4b635b716b828e3584d09dbf531d4bb35636",
-    "categories/kotimaa/sivu/7/index.html": "0b3f110f154abd2f514e5380ffc140d96737d0b8dd9da0e4e27ddc4c422972ef",
+    "categories/kotimaa/index.html": "a7c4a8461db7052e089e5f4f0cb27b3dc649e1919cfa5b1de317a3bd3245c361",
+    "categories/kotimaa/sivu/2/index.html": "fdd078c37e4022a30282b500276a6c1b6b85c0f0bf8346d645f8e75475f1d61d",
+    "categories/kotimaa/sivu/3/index.html": "7a351217a81a01fc9ec2de5a0af2e4069b5d526861c2c12a102198e15ff60b07",
+    "categories/kotimaa/sivu/4/index.html": "bb6424c417d0cb2bedb40266e2955668a9d7ece0d6a25cbe8b9cefe3ab55fc02",
+    "categories/kotimaa/sivu/5/index.html": "035c593441fe60ed990a217af3d70e1c945e7a7ed1acadd9e9cf95097accb258",
+    "categories/kotimaa/sivu/6/index.html": "28503c98cbc16674fd540c21007faf636c12183c351f66298276a8d6d1b44182",
+    "categories/kotimaa/sivu/7/index.html": "4b4b1b76e75ea1047795793b8f995b1071a5c386abb5e69b8ab76afce0f8f511",
     "categories/kulttuuri/index.html": "63bf8bea841d99045f39e51b4259fac8a77e48c1fb37bf470107e77f63e85a5b",
     "categories/talous/index.html": "9b7e8f686fb759f98b35833b3b98f6d2377af66b59fc411ce795f6fbad12f330",
     "categories/talous/sivu/2/index.html": "870c95eb56412c080c69eed8ec54800915fd195706dbee1b9f49c00abf425f45",
@@ -36,7 +286,7 @@
     "categories/tiede/index.html": "025397dfbbfb4d5f8898a5e514df7730a10ccbec902faf5497634cf96216e644",
     "categories/ulkomaat/index.html": "3baa22b16b9cd75d64c15e9044758d3711ece0f3a09d0990b818d4aa138d56a5",
     "categories/urheilu/index.html": "9e811de5881cf67f0a6191288f4562cec16e73ae97f32b2d9e72c87b6790db0f",
-    "index.html": "8e6c1668fa952231e58a223a5243bc06bba84fe4583c2e0f1f58b4bd826e9cc0",
+    "index.html": "04401d948cbd27ade52075ade06ed912b0f08cb10eb9aa95eace2a1a0da6a4b2",
     "lahteet/index.html": "da48420a92af869a0305d93d7028da09ec12aa5046565a77644be7c75544b8c2",
     "mvp-assets/01867736718078bcdabb739dcb8fd7b1e6d2aade84bf3e81f0cf68b8004971a5.jpg": "01867736718078bcdabb739dcb8fd7b1e6d2aade84bf3e81f0cf68b8004971a5",
     "mvp-assets/01b79a7a532c0a287fefc6792135f4f5a246ba352d5efc6131385157b1a9316d.jpg": "01b79a7a532c0a287fefc6792135f4f5a246ba352d5efc6131385157b1a9316d",
@@ -90,6 +340,7 @@
     "mvp-assets/1c781628eac399e7c991ee6813942f949d304edcd2a827695e390b5ba0ecadf5.jpg": "1c781628eac399e7c991ee6813942f949d304edcd2a827695e390b5ba0ecadf5",
     "mvp-assets/1c8f818dbe4e714d5d13fbb0977cf83d0d9f3a34672d6bb388fb106d27dbb36c.jpg": "1c8f818dbe4e714d5d13fbb0977cf83d0d9f3a34672d6bb388fb106d27dbb36c",
     "mvp-assets/1c9d525590f462f9bbf2ca7e72f778322c4c690611253573d73674c8e6ed2394.jpg": "1c9d525590f462f9bbf2ca7e72f778322c4c690611253573d73674c8e6ed2394",
+    "mvp-assets/1d3f581bc1be716725709434c3066b9bdb110ed5dbdd96cf0c7a9bc0d1410baf.jpg": "1d3f581bc1be716725709434c3066b9bdb110ed5dbdd96cf0c7a9bc0d1410baf",
     "mvp-assets/1da6bbc3f9a603f5386d90f01289f56a5b810eb78ec6c49c8f87298a7617391e.jpg": "1da6bbc3f9a603f5386d90f01289f56a5b810eb78ec6c49c8f87298a7617391e",
     "mvp-assets/1de817fb256b66baf8844e782080d3befe0ab8468466d0a28edb37181178c5bc.jpg": "1de817fb256b66baf8844e782080d3befe0ab8468466d0a28edb37181178c5bc",
     "mvp-assets/1df011742791f35c21d8dd08a966ceb18b0a1d206c738b149f2d61f8ea6ae424.jpg": "1df011742791f35c21d8dd08a966ceb18b0a1d206c738b149f2d61f8ea6ae424",
@@ -611,31 +862,31 @@
     "mvp-assets/style.css": "bdb068db7d88aaf97614531492d911577103124e7a7249df0e0b0d33a0ee7e05",
     "oppaat/index.html": "2d68269ad70c2868269532b9fc47b16c1f7e4102a7904b9211fbcc08a504230a",
     "robots.txt": "6dc23d5568c5bc8604aa1f40cc531e4ba269d6434cad28e660c4d327f2527a13",
-    "rss.xml": "6054f09d085ecc889dda92b9be86ae7a164732783e186ca60cbcc8edf47714d5",
-    "sitemap.xml": "7f419f5b3e0b47b86581aeb13fbffbde3e667394bdef7dd69235d4d3c8579f45",
-    "sivu/10/index.html": "29b4dbd8f501b7d8ba8df53d023c64310a3a38d691c129c4b429f32f08d55126",
-    "sivu/11/index.html": "b8f79782739692bf3d30b63be7de1e0e84e6b2eb96a1732ff325401e2a803386",
-    "sivu/2/index.html": "41ee58c43a18c3738504e0ccbb565f36946ecc70e5b2c417c98f2c560a350f85",
-    "sivu/3/index.html": "a5b1a076b2e5bd86a6f1c4cc18dc6ee4717b6f7aa32eb6efa3ab575ad865b13e",
-    "sivu/4/index.html": "f24a8be12886ae4a4646685cd7c8a4f5b66312e1e1394c147afb1804d9f3dee1",
-    "sivu/5/index.html": "8b0700b37f1e15f2106d5b7bbaaa413460f7c5afc7fc61a1d49e47120daa025f",
-    "sivu/6/index.html": "47bf4f6ddc6748f7743b71fab488c75878b98b0b4285882d41d664b767019cf0",
-    "sivu/7/index.html": "8c24f08a0cb1ea720901e7fb2eb4cea736a842776760b8a9b72a41f1d3b834c4",
-    "sivu/8/index.html": "1a7dddc43b984408d9a639cbe33614b29cd0c5330dd58c9e73f48080216894b4",
-    "sivu/9/index.html": "fa305ab31088dfeae18091c7870f67e0dbde6aad5d4473cefd5dca7058cf428e",
+    "rss.xml": "13372bf37a9436b70124916ee4f06617cf8fea64ca7fcb9a7115089ee58530db",
+    "sitemap.xml": "fcdd697c6fce9058c125fc7eac98aa2a836f1c9b0d1779a10e6e12c77f2b1ab1",
+    "sivu/10/index.html": "2afc89770f1b22adc0337f0f8740e1a6f28908e6701dff2a3d6f611837a9883f",
+    "sivu/11/index.html": "4c7b509e3013cdc7cb25cdb1f1d6e072b8baab1f1abdc1a2440d56c36e246413",
+    "sivu/2/index.html": "ededee97e0f53da9c0b272d901547c75b8b923e995a46911b2d68151d796f094",
+    "sivu/3/index.html": "a39152ba5fdf5592c9b0ee6020ca248c8512bf6f4db8a4713f499e5dc4827a06",
+    "sivu/4/index.html": "1bce3ed2b11da4572e853b6583a5509522bf5f3e140538763d6feada5e81c57d",
+    "sivu/5/index.html": "6e6d3493a0e445fd4166808e800290a0a372302c5dc8cccdfb3f0b614f9fdec7",
+    "sivu/6/index.html": "b83a1e0c4ee6fc6c19a38f1db088613fbef328fd5ce754cf53e2ed2c5a5d4a4d",
+    "sivu/7/index.html": "ca44a5331e0badfbf22eeaf1308875b8ff1dce5bbe559aa5cdab96036c1146c0",
+    "sivu/8/index.html": "2519f9c71ce448afe26f139a69f635ce9fcac97abee8a2c0bf321b0539735575",
+    "sivu/9/index.html": "60272cbc4e68c14ee33ec3fa30b1a522c61aea3e64750c5a340e1d1843e70101",
     "tietoja/index.html": "465aa9e367cedee5abc5761ce84737d236f31b5b99b43bafaa47503cee42c033",
     "tietosuoja/index.html": "e36c6cf345c359da31e199cd3039159e622a572327b9344d74811b41b6c44bb5",
-    "tuoreimmat/index.html": "4bddb7d2d96b79dd37a4e4bd781fb0e54f069cc3fec538e71ca8963001b2914e",
-    "tuoreimmat/sivu/10/index.html": "d69464336b82c4d3d7d6407a7ea8dab335537402c87b84d9a489a4eab6b051d2",
-    "tuoreimmat/sivu/11/index.html": "f8b0fe6153a4bae0c0ccb2828a0fc6c52ff8b8daedea20c06a156498467c0c51",
-    "tuoreimmat/sivu/2/index.html": "2582b15e122980ecfe8ed2910744a07d3a37af43a3ec2c2bdd3cf191226dee48",
-    "tuoreimmat/sivu/3/index.html": "50e9e0ddf1b09de53124227036ca32eaea8af9717c9cebb36006ce1e56079ce7",
-    "tuoreimmat/sivu/4/index.html": "d4740f09369aca43d845902631413773edc03ff131aae1b7bdda12d08a4d588c",
-    "tuoreimmat/sivu/5/index.html": "c4dacbcbed5191dc22d299a2487e7a5249a6a3fce385db5a9fafc509e03418a3",
-    "tuoreimmat/sivu/6/index.html": "2edf2b0f892d092d42924b6b30109684c54035e3a2d088faeeb000d4488de8b4",
-    "tuoreimmat/sivu/7/index.html": "be20fb100f99f5f0b5a4b67b200418c3525fa2b3b0419efd39f050a7e019f109",
-    "tuoreimmat/sivu/8/index.html": "731cc4044bb5f2f9c9ab2dd2f0b248e28948da422553383bab437968b6123121",
-    "tuoreimmat/sivu/9/index.html": "8ffe08540d7a2ed845a358cfb8af5d9749fd8ba0ad56c7e9692448dbb0d14866",
+    "tuoreimmat/index.html": "dfbc51cc5d818e60c25cfd14ab87b6a67aed99d4338c555963bf7582b5c5e684",
+    "tuoreimmat/sivu/10/index.html": "c1c0d76dfb6f5f636ce7efcbd2df735388b996a3633716fd1ec795ae687b5ac9",
+    "tuoreimmat/sivu/11/index.html": "d6810efacc2b0330c9209a8067828b50f255a369f062125ca643f81c828fc1e9",
+    "tuoreimmat/sivu/2/index.html": "1ec9d8222679cde3b57da9fba84112870e7af430fd3d392456525160359dc07a",
+    "tuoreimmat/sivu/3/index.html": "f12346d81658daddf6b9e55c7fbbfb8b43295c6264c4896b4ba95da27b3346e6",
+    "tuoreimmat/sivu/4/index.html": "9f97f7259f0058cbaa9af37fa1f63f4334e540f274fa3b65e70264342ada2f14",
+    "tuoreimmat/sivu/5/index.html": "06bc902e7a51277c5e05f5a2a1ff4b41e173b217baa5cf6d2b1c669cbe9b8272",
+    "tuoreimmat/sivu/6/index.html": "db98d93712921b0a2babaee483bdb0cdd4bba1a37a14bb945ab99a20fa1216c4",
+    "tuoreimmat/sivu/7/index.html": "a5043d0c0024438fab31aee2a8648a25af73843e66296a13f5a96f56a5bb6fe7",
+    "tuoreimmat/sivu/8/index.html": "d4a4da69b9516e305f97303af8eabd1b91bf1fc04e93c667b439bc34f16efb89",
+    "tuoreimmat/sivu/9/index.html": "661c372e1ee110f0a98c7d5be0a455ebbce5c7fb281ec35ac1c2a1a0fad70ef3",
     "uutiset/17f3a9e55a5d4d88935f20a8572a23b2522e0894cb422211d2e7f4022b290d36/index.html": "f8bba59d140818710fd0b40e5ea2acd3f6d2506cbd877d3547afff9fc7ca7049",
     "uutiset/23759dbb8476ae59710577bdfd0d4cba3960e107147aed62bf13cbb38659c5c1/index.html": "4e8b636f577e02f15669e12445b1ab4b6ea95f13bc60ac86179b39f96ce0dc64",
     "uutiset/38c33234e1a7981b6f66bfd1545876e5e55061ef2fe11e6664dfa123c3800986/index.html": "1b3db1560585175d085bebc71afb133498c294c57a408510c54ed527f8695b68",
@@ -649,450 +900,478 @@
     "uutiset/8d2082f784a9a0de37af7b186eadc015dba2533fe40674e1a1611cf1043b8ce5/index.html": "1cb85356dcd175739ce8c9bf44cb8cb8a79adee3c6a7dc127047e9862dc736f2",
     "uutiset/a421e685a2cb7e31e84256cb4a854b3444d0da5b5b6a72f6237d68e661b7bc3c/index.html": "684ff134eb4e9a603fecc0d74812e11b8165fa360bc080912793e1fc4da12765",
     "uutiset/a4a923e9509dfb822f648accd35235cd5aad2c5bf178814c20d4d03815c24edf/index.html": "8ae96cfe2f8047c21368e608be8e758e8596c1451d4eaacb30e6790c339b6b01",
-    "uutiset/aanekosken-paijat-hameen-irtisanotuille-haetaan-eu-tukea-df471ee2bb29/index.html": "75db87614ad9b36fbc298af998ed9e04ecf047a5437c9dc8ce1be137827530ef",
+    "uutiset/aanekosken-paijat-hameen-irtisanotuille-haetaan-eu-tukea-df471ee2bb29/index.html": "9a035e2a4bf3836519964b60aaab7c0d2711f5d6bc4fbf07f30585dd4ba76f83",
     "uutiset/aca81b732a644936757bd14b1304352fed52be190ee17d8c8156524918f1666c/index.html": "efe169f0142a65166fc1bdab4505a05ace7fec8db6961d9a32f9fa52ff9c231d",
-    "uutiset/ala-malmin-puisto-sai-uuden-suihkulahdeveistoksen-0d056879bf6c/index.html": "489b95268c9d66656c4bbcacf754be25e11ef0ebbb6a2f18caa70697c0eebc0b",
-    "uutiset/alueellisen-tieverkon-korjausvelka-kasvaa-selvityksen-b7a9132e4a52/index.html": "ba43002acbbd7267a4d61e182165cbc69dce0d1d1cd8db9650c96b3c61e55ad1",
-    "uutiset/ammatillisen-koulutuksen-opiskelijamaara-vaheni-8-prosenttia-2e69fc7fe0b1/index.html": "bbab36632fd2b445f3a54b55ef819ce67d3dab97efb03825aea7d5798f0eba96",
-    "uutiset/annefredin-siltatyomaa-kaventaa-tuusulanvaylaa-9d1e28e3e034/index.html": "ff0faba0c99609bd5ad4f8c36ed00598416e24bb683c29ae7e8161c1cb8fdd3c",
-    "uutiset/arctic-open-alkaa-vantaalla-6-lokakuuta-07b41b9ba608/index.html": "162766c7eaa67ba346c264fcbdd1dc9f4f9472e2293e3301f12aee4db869b958",
-    "uutiset/arkadiankadun-uusi-silta-valmis-katutyot-jatkuvat-5bc3d1cb671d/index.html": "f3c978c750d33df508335fc586c8e1597dd029d21b6cd9450bfb6020fec8a3d4",
-    "uutiset/arviointineuvosto-suosittelee-tarkennuksia-paasykiellosta-fe62074fc0be/index.html": "abc292ee287ed3d9ea1ab77a031f12471926c9d271009fe4767dbaa2a589b842",
-    "uutiset/arviointineuvosto-vakivaltalakiehdotusta-tarkennettava-fb1552eb887b/index.html": "e51e113ecb90bacb98d87d7728f9c82e95f428670079be30d7892b9ab0fcd236",
-    "uutiset/asunto-osakeyhtiolaki-uudistuu-lokakuun-alussa-d62554b951bb/index.html": "7a2e8b2fe5ddbdcbc15e53348a18830e64808556848c027d44f9486c07effdd2",
-    "uutiset/aurinkorinteen-koulun-yrittajyysopintoihin-tulee-oman-d40abfad061f/index.html": "7b35f0fa8f26cc3570ce1dd55735ce3d88f6f93686e3d07205be17fda4d7f42d",
-    "uutiset/avaruusasemalta-otettu-kuva-nayttaa-monterreyn-vuorten-8d2082f784a9/index.html": "794ef230901ffcd34674463550e9d107d779fd1baf45633e4bf080727280d06d",
+    "uutiset/ala-malmin-puisto-sai-uuden-suihkulahdeveistoksen-0d056879bf6c/index.html": "3fc7a215a46864741b7d5ec17848ad7178bbf9a4d0a3e80f5ee022d439d98af6",
+    "uutiset/alueellisen-tieverkon-korjausvelka-kasvaa-selvityksen-b7a9132e4a52/index.html": "d3a753816eb3012018a8d84373fd7bf33e101bee8c3acb71ae04663622fc899d",
+    "uutiset/ammatillisen-koulutuksen-opiskelijamaara-vaheni-8-prosenttia-2e69fc7fe0b1/index.html": "e90b79b68d69bae685ba34fc7958a7b98f2d49052b2d0274ce07fbd5adf3bd67",
+    "uutiset/annefredin-siltatyomaa-kaventaa-tuusulanvaylaa-9d1e28e3e034/index.html": "3933e435bab71a974209db3e3bb1571763b0449d3a97f6dabea2528adf1a7b7d",
+    "uutiset/arctic-open-alkaa-vantaalla-6-lokakuuta-07b41b9ba608/index.html": "98c0df44368b51a93c133e015637c12c596e77f66e059b5723ea043d3b0667d7",
+    "uutiset/arkadiankadun-uusi-silta-valmis-katutyot-jatkuvat-5bc3d1cb671d/index.html": "e99d606a5eba9eeadf27f5260b7fd20492377903d6a2515310c82386aaa9713f",
+    "uutiset/arviointineuvosto-suosittelee-tarkennuksia-paasykiellosta-fe62074fc0be/index.html": "afa42f003d1e708a798916b8e2d9b67c239460487dc2cae2b48ba5a3c0a08511",
+    "uutiset/arviointineuvosto-vakivaltalakiehdotusta-tarkennettava-fb1552eb887b/index.html": "9c010972e82576677e9b170228a11376deebafbc1316e5873ce48a9531b11fdc",
+    "uutiset/asunto-osakeyhtiolaki-uudistuu-lokakuun-alussa-d62554b951bb/index.html": "72c6344a11b8799f988c0ceacf4f13493605bd23adbcf47d36753d06d9204361",
+    "uutiset/aurinkorinteen-koulun-yrittajyysopintoihin-tulee-oman-d40abfad061f/index.html": "f7cc73a22bf09fafb45ee32b1fe371d350df1faf41d67f64a7633febeadc3d8d",
+    "uutiset/avaruusasemalta-otettu-kuva-nayttaa-monterreyn-vuorten-8d2082f784a9/index.html": "63cfcdf15e4f772cba08b0392699aabec441e15004d920a38ca10a8f76861452",
     "uutiset/ba164fa2011db8e10425ba41ff1894f9a21b08a25cc3ca021990d84f2ff72682/index.html": "1b44aa7f1b9ad73f8a73ce558f8a1b3fd90017fcb316ccb8210fe379bd099733",
     "uutiset/bd71b526d449ca4df522726b9a909fdca71f16d10555ba06d9338bb03b18652f/index.html": "edb6fbb6d9c6b15e875208ddd92315feb06a96f111f73fcb0924d20882419cdf",
-    "uutiset/bolivian-suola-aavikot-satelliitin-vaaravarikuvassa-0924ef34c6ba/index.html": "24246605c208ec62fb46bf76095ddcb3180481792ae795dbdb86e23198ec0686",
-    "uutiset/bristol-bayn-syysmaisema-nakyy-satelliittikuvassa-350921f18f95/index.html": "73e9ad24c9c8c671361ab186a38a875febfd7f272b23bb68ba04309b026c58b1",
-    "uutiset/businessoulu-aloittaa-tyonhakusarjan-nuorille-210c711e2099/index.html": "90c38cadb7ec31cc9adaec6d7db5cf35a7f56bb6730e225fcf111d3577f11895",
-    "uutiset/cygnaeus-palkinto-tulevaisuususkoa-vahvistavalle-mallille-37cc7ff33cb5/index.html": "b44918dbcf7f7545166bdedf64c4ff8d70f19432dfc3c9a465bb77c6eb073fc7",
+    "uutiset/bolivian-suola-aavikot-satelliitin-vaaravarikuvassa-0924ef34c6ba/index.html": "bdf84ce132deff98e0efd9770ef3801f4e2caab7f7393c6275a586974667a8b6",
+    "uutiset/bristol-bayn-syysmaisema-nakyy-satelliittikuvassa-350921f18f95/index.html": "6602aa37805946de553320cccca6e7e55efeb1943598d7e3f58a01d3bb3aa4f4",
+    "uutiset/businessoulu-aloittaa-tyonhakusarjan-nuorille-210c711e2099/index.html": "5150932d1859ef8d086f151e97a51155549708743b595722ed3c83bc2a7b7be7",
+    "uutiset/cygnaeus-palkinto-tulevaisuususkoa-vahvistavalle-mallille-37cc7ff33cb5/index.html": "8f10b1fc407cee06533c225ac3e5bd8f30838b889ad7d0752922be090e30c782",
     "uutiset/d6f4493ba6e8fe544637229380dbba892bb87f002f66bba68c536b146eca957c/index.html": "2042bfcf42321a5ac1a22be704d48ccb31c389e62869b3d0449179e93e8d05f0",
-    "uutiset/dixin-kuormaa-siirretaan-ratikkatunnelin-tielta-4989a6476536/index.html": "0999c8b86ce81c278dea9082381caa70b52a3fb3e685c9feefa1991184714621",
+    "uutiset/dixin-kuormaa-siirretaan-ratikkatunnelin-tielta-4989a6476536/index.html": "75995ef08b0d49144292827b0a89bd0674fda9991ab2b0218a39e1b3fbda3799",
     "uutiset/ea2b1f992164639a89e76eafa9b96141479b9461b17aee281ace2296550b41cf/index.html": "9c8e902884769e236d62b984ad6fd52f72a52e44804195e0e09dc6c5f3902512",
-    "uutiset/eevil-stoo-avaa-lumoklubin-korsossa-kaupunki-kertoo-37f8679698b3/index.html": "ee7f394043a5a6fd278e79c18460ba8fcad63e41d87899153ff61879feadcdd0",
-    "uutiset/ehkaisyneuvonta-muuttaa-kruununhakaan-24-syyskuuta-7e5c6325a332/index.html": "a3ae2b56e8b43870932662100e1835789694b42d313769b9cdfad09dd059f980",
-    "uutiset/ekp-n-palkkaseuranta-viittaa-2-7-prosentin-sopimuspalkkojen-8552d795654a/index.html": "48070de983dd61817a83388afe31eec0cdd38390904736fe7621cb872edec95f",
-    "uutiset/ekp-uudistaa-eurojarjestelman-vakuussaantoja-de3982a6e85c/index.html": "b6e21cc08ad7c6942a30bc10bbfa3bce46b0d3f3b326e58b14d333e1edb905e8",
-    "uutiset/ekp-uusista-euroseteleista-lahes-10-miljoonaa-vastausta-b4a58ddabbcb/index.html": "c745ace6facc2081a223dc8ff54334a7368b673a9c42bd12fef1b3165f90dd41",
-    "uutiset/energian-kulutus-kasvoi-6-tammi-kesakuussa-8d4dcbd44943/index.html": "292c720631daba10a8637ffd79b40d64b3f8ad2c7f7bbbd593c9a63137aae18f",
-    "uutiset/energiansaastoviikko-kaynnistyi-30-kerran-da961501d33f/index.html": "4c9d14c64baf9bed2b949b996e2b5e8424d05c5d8698b4ccae6b1c63a02d7e9f",
-    "uutiset/energiatuonnin-arvo-kasvoi-ennakkotietojen-50-59c33e8be2a0/index.html": "5088a9ef2801bd6cce9603f8e1ba3d3d4a44d98e0319d9ef7bb27659c3f639d9",
-    "uutiset/esa-kohtamaelle-sivistyksen-suunta-palkinto-131bf1f10bae/index.html": "cfbe55122b6ea70646f356b283e3604495e55502dc77337c2fba8d725511e442",
-    "uutiset/esplanadien-kaavaehdotus-suojelisi-puiston-arvot-c35acc4fb9b9/index.html": "164776d7da8cfad48e3250b7579b8d4b44c77f95655681374a36de8d14c5c727",
-    "uutiset/etela-koivurinteeseen-suunnitellaan-noin-135-uutta-1f3d2b8cfef3/index.html": "c7b01657addd664201fe431d5e1c350e818b70249b3a9b2ca496a668fccfb66c",
-    "uutiset/etelaesplanadin-pyoratietyomaalla-tehdaan-yotoita-a659c4d75a68/index.html": "c391164867e1fddb2133a80c7e55c2ca7fc882762a4076a13b95258e4df28697",
-    "uutiset/eu-ministerivaliokunta-linjasi-kantoja-eu-uudistuksiin-b69ef715fc50/index.html": "17d7f02bc361632f0a440878d14a6e60446f9f021156d21cda1b391d50ac6d07",
-    "uutiset/eu-n-laajentumiskomissaari-kos-vierailee-helsingissa-61f60677da98/index.html": "e7a7b7a85c676c484aa0c19e4278200ad465a212e4dc5763902ddad2fce22f5b",
-    "uutiset/eu-n-puolustusministerit-koolla-brysselissa-1fca2d498635/index.html": "28223135b28be3f34a2932a67d8cd05e374d07a013b6d0e79bce759e33ea99cc",
-    "uutiset/eu-rahoituskehys-suomi-pitaa-komission-tasoa-liian-korkeana-518eb0208bf9/index.html": "2b9c82738229bdd2999223ec7ad3c5115744502846176fd5378a4f6de4e6827b",
+    "uutiset/eevil-stoo-avaa-lumoklubin-korsossa-kaupunki-kertoo-37f8679698b3/index.html": "af9468d7ef8ae00ab54d33ea883b5e9ba16ec24f426529d49a499005e2acd784",
+    "uutiset/ehkaisyneuvonta-muuttaa-kruununhakaan-24-syyskuuta-7e5c6325a332/index.html": "c30d91784bec9b57bf3dfdc199196d821194f0cb13a6b784baca3adbec3ae861",
+    "uutiset/ekp-n-palkkaseuranta-viittaa-2-7-prosentin-sopimuspalkkojen-8552d795654a/index.html": "5d53f7336606ab478fe7897ee76c99fdd6dd5190717ca005d3f320c10fc4835d",
+    "uutiset/ekp-uudistaa-eurojarjestelman-vakuussaantoja-de3982a6e85c/index.html": "c148888340012573e1939c99d82f9f886f023beb7d3444657dcaee046962a4e1",
+    "uutiset/ekp-uusista-euroseteleista-lahes-10-miljoonaa-vastausta-b4a58ddabbcb/index.html": "4d8eacf17e2d77c12c454d426d6e4fcfc7770bc87d3610647a2c9873f55961c0",
+    "uutiset/energian-kulutus-kasvoi-6-tammi-kesakuussa-8d4dcbd44943/index.html": "6b2bd0ca9bd1eb20b853ac2ccda725d9c2df8668d2058ea03234b7756ed9efcd",
+    "uutiset/energiansaastoviikko-kaynnistyi-30-kerran-da961501d33f/index.html": "3107316a9d9c001f07a05ac3c721e5f4220375cf65fdeaa4f71c90df0b7556c5",
+    "uutiset/energiatuonnin-arvo-kasvoi-ennakkotietojen-50-59c33e8be2a0/index.html": "4efcf3d99a9b84463bdb2e06eca5dfc5d44229245f272a11a94d38000b4cf7d6",
+    "uutiset/esa-kohtamaelle-sivistyksen-suunta-palkinto-131bf1f10bae/index.html": "b317c4523d5e9dbb1321aea36cd29c5507c01ec3f913e6a8e815a50d15ca59e6",
+    "uutiset/esplanadien-kaavaehdotus-suojelisi-puiston-arvot-c35acc4fb9b9/index.html": "d115b34489a2d718c9be96c77e73f9701194b17992309aecaf3dd27a3a077877",
+    "uutiset/etela-koivurinteeseen-suunnitellaan-noin-135-uutta-1f3d2b8cfef3/index.html": "eb8e130645ebf78d6710abdc972ac11e5115e73e21f35eea70914e804ae3da12",
+    "uutiset/etelaesplanadin-pyoratietyomaalla-tehdaan-yotoita-a659c4d75a68/index.html": "b7bb51ae25b26110c1f671c241aecd22b702c9d8373b755075adb3d36b525673",
+    "uutiset/eu-ministerivaliokunta-linjasi-kantoja-eu-uudistuksiin-b69ef715fc50/index.html": "6b6994eb590cb6db7bb7762ab21b304a0bece9d9aa0caea43821db71438104ec",
+    "uutiset/eu-n-laajentumiskomissaari-kos-vierailee-helsingissa-61f60677da98/index.html": "943b8bec7b42f068e0cb99ac3d29222d5a5b5ae5280e3148b33148ae0230e8fa",
+    "uutiset/eu-n-puolustusministerit-koolla-brysselissa-1fca2d498635/index.html": "be2987c5c22f01c4acbff2720bb634909b17cd36f025cb02029d0ecfd781bef4",
+    "uutiset/eu-rahoituskehys-suomi-pitaa-komission-tasoa-liian-korkeana-518eb0208bf9/index.html": "5e0d63877c1c657b8c0e83377070adcccc69012320b7c61e6f7e333adb2f27e3",
     "uutiset/f2a3b9da839589d46ac72b039229620a9aa0e0d265327182362d25f7859b7803/index.html": "326338149b0d119ba4ec4744333a40cdd6448d7d0cafe8ee46624fa06b92a9e6",
-    "uutiset/fay-palasi-trooppiseksi-myrskyksi-modis-julkaisun-0a4d65b77061/index.html": "ed27367928be6a67ffc7cd035cde3e0d811f877599ca67059bd9008e5e0c20af",
+    "uutiset/fay-palasi-trooppiseksi-myrskyksi-modis-julkaisun-0a4d65b77061/index.html": "4516a640a52e0fc200bf6e11077d9188cfbb856f7682c2d2407892453d2ca9b0",
     "uutiset/ff4aa5e086dcd4a698701c61ddaf9f81c2e7746fccda531c05e280c20527d5c7/index.html": "9c890be988d60f74aa1937309960317346d13acfa84124e5a90dd18b196ae17c",
-    "uutiset/fortumin-yritysasiakkaalle-suositettu-hyvitysta-45c3d38688f1/index.html": "a9d577d406a76c56c6577fe69a0a6e73eb2b54dca3f17dcfc819f01486d80e1a",
-    "uutiset/fredrikintorin-remontti-viivastyy-arviolta-vuoden-loppuun-2a57e16b0903/index.html": "292a9a39a2881594901d3847412ab0c9e232b800ea5597505e1f119b97d0feee",
-    "uutiset/hakansbolen-kartanomuseo-kutsuu-syysloman-tapahtumiin-2684ca78ebd5/index.html": "73a8d9778d98279ca3ca250bb87acfc5182e958cbb59fac5acad003ccba337cc",
-    "uutiset/hakkanen-vieraili-libanonissa-israelissa-265e1c050023/index.html": "6faba0907b2a203e3ccaf60aad1b4799b3e029aa21c037396cba9ef23c183b2b",
-    "uutiset/hallitus-ehdottaa-saaristolain-uudistamista-kausiasukkaat-2a902aa7df9e/index.html": "6b3a9a18ff10046649d3688493209b75175e1e9a66436035ed21aff30474498a",
-    "uutiset/hallitus-esittaa-koulutukseen-joustoja-hairiotilanteissa-dbd531c56a76/index.html": "0ef77a7214b46f5e07873ece15fc3212d9857007b014376a0137d84bbcc68a8e",
-    "uutiset/hallitus-esittaa-lvm-n-budjetiksi-3-73-miljardia-b7dcd94bbbf9/index.html": "b2fd0e2dc76db19d6fe380a7245d7b0e1007a936e93a53f49fbd4ea1a4557ca3",
-    "uutiset/hallitus-esittaa-mahdollisuutta-jattaa-kelan-f3971ff28482/index.html": "06c37627228d6f625815b64761002dac700358ff7851acb229910dcc5a980cfd",
-    "uutiset/hallitus-esittaa-muutoksia-sote-lakien-palveluhankintaan-8e7e3e585fec/index.html": "008b4e8ba35bb74fd2e0f09b4d7b92be2b4dbb01f6139ca2de2d1ce724708212",
-    "uutiset/hallitus-esittaa-poliisille-laajempia-valtuuksia-puuttua-90375dd8de77/index.html": "691c4ff35ee5ec81eb1d0d73ee19c21e36df14e0bd010b7d3c617c1baf6e8d0c",
-    "uutiset/hallitus-esittaa-tyottomyysvakuutusmaksujen-laskua-2027-f97bcef965b5/index.html": "560b0287740de267e2a9db13d6468553fdfcddc50966e46aceffa6ccc1ac8776",
-    "uutiset/hallitus-esittaa-uusia-maksuja-erikoissairaanhoitoon-1009344e322c/index.html": "c217624b138a3e73daab945f9361e7d0e3957063cf3ee99f16db1b35cb2b7a8a",
-    "uutiset/hanasaaren-kilpailun-maara-alkaa-marraskuussa-e09856b12eb2/index.html": "8aeb488d4bbee78fe114f3e3fd0265e865dc1fdaeebf19679edeb2c3290a4aec",
-    "uutiset/haruspuistossa-kaadetaan-noin-100-puuta-lokakuussa-c3e242101b0c/index.html": "e78e9ae910d3ddeffda91b9b24b0df51b80a0bf64b02224d81779e12688774d7",
-    "uutiset/havikkiviikko-kannustaa-kouluja-vahentamaan-ruokahavikkia-61b3c101e925/index.html": "2ab7695ccf297b48abf38237dc813877103ebe46a5f8304e10df598075ce02b3",
-    "uutiset/helsingin-ammattiopiskelijoiden-tuen-tarpeet-vaihtelevat-3f8d7edb9391/index.html": "e788ff6a3cac1d7c3c994a8686d228233c2f15cbd1a58420c0a3ac433af02148",
-    "uutiset/helsingin-elinkeinojaosto-kuuli-tonttitarjonnan-katsauksen-8f7bf8135bb7/index.html": "c28ba3188cfbecf7b8ae0eab03922b8ac74d28fb4f5f528f723f4b8f3a6945d0",
-    "uutiset/helsingin-kaupungintalon-yleisopaasya-rajataan-6-10-b27c5cae7ccb/index.html": "9de2c1c83bbf7420554e8632f9941916e4424aede92a6a0c3b8b5057c3dd8a89",
-    "uutiset/helsingin-konsernijaosto-puoltaa-raitiovaunuhankintojen-38c33234e1a7/index.html": "b49f9d70d6cec510db2a3bb2c6de62ab08d548db81bce083a4e26d14bbd5047e",
-    "uutiset/helsingin-kyselyssa-myonteisia-arvioita-etahoidosta-ff4aa5e086dc/index.html": "67474af88ac67a73fbfe39a2980349212f565e8a4896d016896b61fb761dc7ac",
-    "uutiset/helsingin-liikunnan-avustukset-uudistuvat-vuonna-2027-728af67d1511/index.html": "a34c940a5b5b9eb0ab683d4311bd436b8831639ba35ff6d7427c89a12ff4079d",
-    "uutiset/helsingin-pienituloisuus-yleistyi-vuonna-2024-333a8e11bac1/index.html": "6c48b0f84d15904bfe94881f183b4a73bfc0c82a97c005274c5f15d25a88460a",
-    "uutiset/helsingin-rakennusjarjestyksen-uusiminen-eteni-c5f827f0eb7b/index.html": "b5712ae623e2984b482ce01f4f4a87ed00ca295810195c7b28d659145f4e9b0b",
-    "uutiset/helsingin-rokotukset-alkoivat-75-vuotta-tayttaneille-a733ecffde70/index.html": "7d87b5b3672fdb2fc706a8ce689ce6f0f70733d7a9f89a322bafcbbff9c56d41",
-    "uutiset/helsingin-senioripalveluissa-vietetaan-toiveruokaviikkoa-09127be39732/index.html": "b896d7406ab7e7471220e5e3b04a25f66f5941d41c2bb6a364d9fd820488a224",
-    "uutiset/helsingin-silakkamarkkinoille-uusi-ravintola-alue-lokakuussa-8919f3311ee7/index.html": "c912d9bf094ac7507f1498dd6cb82097530c1416d282d3cf9fb0bae604cb0f17",
-    "uutiset/helsingin-sote-palveluissa-ilmoittautuminen-laajenee-4ae0c6acec61/index.html": "284cadbbf58fa0f39c1ad9d7e684c1faba887310c16c8449af03297c2eb4baa8",
-    "uutiset/helsingin-vammaispalvelujen-asukasilta-20-lokakuuta-981c39c98000/index.html": "e6012bf60ecc93d24776049d1f991a753d1d5bbc9e2dc17789f4b19601688adb",
-    "uutiset/helsinki-avaa-alle-65-vuotiaiden-rokotusajanvarauksen-302cb85288a8/index.html": "b14ac9f361e4b6082c2d1ad8da30f30524b141f836e9de538e26f62f5088c860",
-    "uutiset/helsinki-itiksen-symppis-siirtyy-turunlinnantielle-2f05494ef557/index.html": "067c3d5b2c9effb4e1c86112d9b6fe32d582cfece7e332ba436a3e7167d92500",
-    "uutiset/helsinki-jarjestaa-vauvan-unta-kasittelevan-verkkoinfon-24-23759dbb8476/index.html": "2bf050f870591d31cb98cb27fde30a51c38360e96b0da96b432b087e8c5ccc11",
-    "uutiset/helsinki-kertoo-paivittaneensa-ymparistotavoitteensa-e15ca37246a1/index.html": "9a439c686e97ffb65bd8d2e07a0a2892595b3b32fb05973547782a8bfca83217",
-    "uutiset/helsinki-kertoo-sinisen-talouden-yritysohjelmasta-2a8b2adee4b6/index.html": "97e2a764e8725db1a0a166e31bc1876cf5834100583e2f7e765565429d5eb9a8",
-    "uutiset/helsinki-kiristaa-ajoneuvohankintojensa-ymparistokriteerit-52aae0fe9233/index.html": "550699b15d9d3eb44f7fce2c794f6e798e893815e16f72fe3c4cfc01720dfd9e",
-    "uutiset/helsinki-kytkee-yk-n-kestavan-kehityksen-tavoitteet-tyohonsa-66ca79131373/index.html": "bae38b6d8a777a63b99eca0743e760a46894674cb18076b7f84c84ea367deba3",
-    "uutiset/helsinki-otti-kayttoon-turvallisemman-tilan-periaatteet-ea2b1f992164/index.html": "78063aa2a1ee56ed13692d2aff5e3cdcf1643de1143ba6779395c130c1689ee1",
-    "uutiset/helsinki-poistaa-syksylla-kaytosta-noin-35-pysakoinnin-d6f4493ba6e8/index.html": "3a8f23fc0c7f3840ac835a8dc259f9cd747064d2fb33ec33f5475aa1c86a2246",
-    "uutiset/helsinki-pyytaa-kommentteja-suunnitellun-kansallisen-bd71b526d449/index.html": "9aef39a2e94317b5b9469b2f2598189c4fadda75e638db8cbb028b0942a4a476",
-    "uutiset/helsinki-sopi-lasten-nuorten-liikuntayhteistyosta-ecf85fae35c2/index.html": "14a4fea6826cde9103228367918ced0cc39d4382582ab461915c6d16cb4abc19",
-    "uutiset/helsinki-suunnittelee-lisaa-hintakilpailuja-tonteille-af3a61406e8d/index.html": "20cd369df1f64d5c78dcb5b3e6e95fc369dff1b44342e78c5a59353a16acafe0",
-    "uutiset/helsinki-tallinna-tunneli-esilla-ministeritapaamisessa-78287132895f/index.html": "608fe7df9f6ee55587c1931e6b441dea03497fb7b24b06208a4cd96446b9dd31",
-    "uutiset/helsinki-tarjoaa-syyslomatekemista-lapsille-nuorille-9c818b9e8381/index.html": "bdce254a330891e10b86e6f7e00b2a14d0addba3b28a24e21e0b0eff1bd37b7e",
-    "uutiset/helsinki-tavoittelee-pyorailyverkkoa-valmiiksi-vuoteen-2029-56c04677f3b3/index.html": "62c033a113e459713bf91f901d131c39ca15bcce8a25f7a2108849d4ff0a0b57",
-    "uutiset/helsinki-ykkoseksi-kolmannen-kerran-gds-kestavyysvertailussa-2c5050d14dd8/index.html": "478bffc5d1365b0d1c4a7a9d183a9cb1303498c664c4b503f6c06fc917ffac06",
-    "uutiset/helsinki-yrjonkatu-avautuu-liikenteelle-28-syyskuuta-e7bd28796feb/index.html": "a6b9e2a7dffe7d54ff34469b2b47efbfdd3cdffa58bfbd5cf84760b9fbe06c69",
-    "uutiset/heteniitynkentan-peruskorjaus-valmistuu-syksylla-2027-893508c01462/index.html": "a32fd774d3ccdf3ebbd9fbeac125e627e57817184cdfd9fd12506916725a0b05",
-    "uutiset/hoas-rakentaa-174-opiskelija-asuntoa-itakeskukseen-04f5e7c23aea/index.html": "182a397f5cb097938700e35eedc00a4dea28aa9b1f0c363da7cfb9c8dc4206a3",
-    "uutiset/huippukokkien-club-des-chefs-des-chefs-vieraili-suomessa-f9ea85f1e6d7/index.html": "10527139359b9f2035abc7c5563a6391752582ea84edf162766bbb6268e767c0",
-    "uutiset/hurrikaani-polo-toiseksi-voimakkain-tyynenmeren-itaosassa-df134e357787/index.html": "6c54d783907f9d9ef515395c7b8ac3fed06e13e2c020da25390ce0ddb4fa3a16",
-    "uutiset/hyvinvointialueiden-rahoitus-27-5-miljardia-euroa-2027-57e39fbd0a4b/index.html": "8317e5df5648789a2ea2ce7f2ff5e52065a581e3d5d082a1187550635e4178ad",
-    "uutiset/ikonen-kuntien-ohjaus-esilla-pohjoismaisessa-kokouksessa-6be99b8cbd81/index.html": "b5d84141be60aa78fb37d4b5fad8b0d5f89f3c4cf2bd520c76c670f8a041fc61",
-    "uutiset/indonesian-palojen-savu-nakyy-satelliittikuvassa-kuivuus-5e19146e4f51/index.html": "431eac10abeee3fa1c3ff940a173296c2b1a0ba92219af43d30818c3aafc0dc1",
-    "uutiset/inflaatio-nousi-elokuussa-2-2-prosenttiin-hinnat-laskivat-ba164fa2011d/index.html": "868fea7f960181c64e97f588a05268a5691aea9ee3d5a86c076bd3420fcb99bb",
-    "uutiset/isabel-schnabel-jattaa-ekp-n-siirtyy-imf-aan-86fcec1077e9/index.html": "34193f4c1076374c63b371e4dafb759b6cfd379c2413f27aedbf3540844a7f2b",
-    "uutiset/itakeskuksen-terminaalista-arkkitehtuurikilpailu-bc32d0e7e97e/index.html": "81adefa5a666715fbf60b22f4b87fbd1fbaccc3368a0a3d57c8da699c96af58e",
-    "uutiset/jakomaen-vaaralan-lampialue-kunnostetaan-lammet-koira-17f3a9e55a5d/index.html": "a14f0d236abba47b65219f273af68982930e707cb86a295802156858eb0b9686",
-    "uutiset/julkishallinto-vauhdittaa-tekoalyn-kayttoonottoa-231d1af5e7f4/index.html": "c155cf05e8854892b57bfc8028480fd4c62b1431e346b076e2ce8b26421ec84d",
-    "uutiset/julkisyhteisojen-alijaama-0-5-miljardia-huhti-kesakuussa-4065dbc091a8/index.html": "9ef59e623b0e2bc57dc0cd9472dce6b0a7ddb0f081ecf09f7718494fb8722aae",
-    "uutiset/julkisyhteisojen-velka-nousi-259-6-miljardiin-euroon-a24ef4286ebe/index.html": "84a00276f8b637624ed8e7fa10689e0106e15a948c8bd6dd1c4fbebf81f62d07",
-    "uutiset/jynkanvuoren-kavely-pyoravaylaa-kunnostetaan-kuopiossa-1b809e5df98a/index.html": "50779c782accb2abba73f409fbbd5ca2aea7b80e093d774bb87e38834f156927",
-    "uutiset/kampin-terveys-hyvinvointikeskuksen-rakennus-valmistui-b6bddd1a6fb9/index.html": "e6104bc4161500a9bc6fb0bb45ac648c48dfdd5fe271a0766cea1ff671b363a9",
-    "uutiset/karamzininrannan-uudistus-toolonlahdella-etenee-kivityot-55e6e217d134/index.html": "ad1c7ac5467b724cffd15ca16cc6c993069499a0812a3dae797cdd14e2a04644",
-    "uutiset/karjalan-lennoston-harjoitus-voi-sulkea-teita-lokakuussa-9f5082949d65/index.html": "506fc7cc683d9c944045876db8d3df053bf8d7d32ac63587ffebe0a6507a14ce",
-    "uutiset/kaupan-liikevaihto-kasvoi-elokuussa-7-9-prosenttia-0172ab418392/index.html": "7a3d5c2a7a5a2b5af4db739c3987260f30b43933a70e8f1addcb04abdee5c623",
-    "uutiset/korean-niemimaan-sedimentti-erottuu-nasan-kuvassa-b25d7a241a77/index.html": "b4a1eaaba2acacfc989faccddf5e9b087d3075ec07ec5bdbdbdff9f4f3b20b4a",
-    "uutiset/korkeakoulut-solmivat-yhteistyosopimuksia-kiinassa-e9296ac693e9/index.html": "c651a198f4a0e019f12972e831fa1cba23f831a3a1951c4441445f5efe7269e4",
-    "uutiset/korson-uimahalli-sulkeutuu-2027-hakunilassa-remontti-402abbd6fcc3/index.html": "bb87f8a9e5651b999459cb4780857519b8e237ed105a7c6026c5dc129149484a",
-    "uutiset/kotilon-lastenkulttuurinayttelyyn-voi-tutustua-verkossa-ed01e64009e6/index.html": "595473ebc654484dbf4a03797e5cc907491a67332410283846a704e670a68d78",
-    "uutiset/kulttuuripankki-kokoaa-14-maakunnan-taidepalvelut-9f85a9249ff4/index.html": "d68075f8a1afaf00aa76f59d463d178c34a390838c6653a763cbf75fd5470427",
-    "uutiset/kuluttajahintojen-vuosinousu-syyskuussa-ennakolta-2-6-2e846b3cf176/index.html": "6f8a8ce752a9edd844991d2c22fead69668b35aa12287c9153a7e30037a1ac10",
-    "uutiset/kuntaliitto-ehdottaa-valitusoikeuden-maaraaikaista-rajausta-fe92f910b26a/index.html": "7bad264f0ea35d8f86466ff2d5dc09a37d921e63a2d1b78205fffb3b0762ee72",
-    "uutiset/kuntaliitto-tyollisyyspalvelujen-asiakasmaara-kasvoi-10e9a01ad0d6/index.html": "fd16b2c4ff143db9e408e279e27beed3cfdcb271722d6c1fabc38cd9ad419520",
-    "uutiset/kuntapaattajakysely-tavoittaa-valtuutetut-viranhaltijat-0dadd1c7a542/index.html": "44223b43fdd5a40c2e953f5f6057290bfd48f6ac2a8029e84001925330992798",
-    "uutiset/kuntatalous-heikkenee-vuonna-2027-valtionosuudet-pienenevat-4c28a63affcd/index.html": "c793af457c80411666dbae46809c3784ed952f2f9c3261cc2a44bca399a42a9f",
-    "uutiset/kuopio-ennustaa-8-5-miljoonan-euron-ylijaamaa-414e3cacf805/index.html": "b185f1a33de2f2753e9bc7b9980aac8e5150e7fc68a14f1df12dccf2f28ff7f7",
-    "uutiset/kuopio-etsii-kuntalaisilta-ideoita-896aafea7d4a/index.html": "be15bbea6ffeaa261be416e816b3d751334cf57521407f416e3aebe646f548a2",
-    "uutiset/kuopio-eurooppalaiseen-johtamiskoulutukseen-aa9ec5a14b3a/index.html": "cf743ef6a048fc1e9fe1d39cbb3dc5981e75aca8c7002a9268d8d78dfabc059d",
-    "uutiset/kuopio-julkisti-vanhustenviikon-ohjelman-lokakuulle-1b86dc585a62/index.html": "e77db69c83c92256dfeff3d274851807f055addab303971eaec268da818ae873",
-    "uutiset/kuopio-kertoo-osallistuvansa-lvv26-harjoitukseen-7026a3950494/index.html": "fa71858b2fc64230880e856366bf9e031a6b3f98d609fca99cd37591935c9384",
-    "uutiset/kuopio-palkkaa-syksylla-viisi-tyotonta-nuorta-ensi-vuoden-9daf662c054b/index.html": "319a7eb3fe3e86eb22ce21aa7d96e5012541e6ed440a09955344f550a14216ac",
-    "uutiset/kuopio-tarkentaisi-esiopetuksen-oppilaaksiottoa-b883b041affa/index.html": "1ec1efbbd20db6806028ced30c0ba1cac37f2145e5dfd0b48c7e3d495d6eadc4",
-    "uutiset/kuopio-uudistaa-turvallisuustekopalkinnon-0135c0ae3ae2/index.html": "45caa02e671df32c517ef5b2ea1bdb6890d9480ec8fb8c7cb79d6488ede6c032",
-    "uutiset/kuopio-valmistelee-sarkiniemen-paivakodin-tilaratkaisuja-a5bce1875201/index.html": "573724063128a104fe0f6cc1b5e39ef85d6447842167729dd0bedd0eb48624ef",
-    "uutiset/kuopion-blogi-ajan-puute-yleisin-este-liikkumiselle-9497221470f7/index.html": "47b292e360b2e07626bb8342078101f74bc9e940310200fb12d58acaf813303a",
-    "uutiset/kuopion-johtamismalli-nojaa-kolmeen-arvopariin-6caece9cc4b0/index.html": "d7dc622e655ddebf5e73ec5340e5d2c527bae6b46e6884457e61eab5724abcca",
-    "uutiset/kuopion-kaupunginorkesteri-svang-yhteiskonserttiin-abb6da8fa71d/index.html": "7849937194cfe85f1a48c1bef14cf9a02171eba9122b257a367759e386bcee8d",
-    "uutiset/kuopion-kaupunki-taideviikot-jatkuvat-lokakuulle-8a665fa35d3d/index.html": "46afdb13dfb5cf460b4f65625c463388769ed4a0077846a11b3909e3e00cc27c",
-    "uutiset/kuopion-keskustan-liikkumiskysely-avoinna-31-10-saakka-b8d212c57650/index.html": "ecaf7d6a7f860d9797a2374aa634821f72dd09eb898003f3d8621e8bf3106f7a",
-    "uutiset/kuopion-museo-saa-samurai-nayttelyn-toukokuussa-2027-f6062bf646e6/index.html": "557a103b5c03cb30e7072fec4266ef2dca2373875fb43f983b6f46d0df321729",
-    "uutiset/kuopion-taidelukio-lumit-saa-eu-n-opetuspalkinnon-5302e5201e17/index.html": "5baf37dc5af5c57cd84f3c573e6ec138396e4e50cb79e82ba7b46fbd5998da21",
-    "uutiset/kuopion-talousarvioesitys-niukasti-ylijaamainen-8e994b485511/index.html": "ed881e00f09857b27cc805430a9b19fb053434524d0f572dde88a73a5f1cdaee",
-    "uutiset/kuopion-tyoelamailta-kasittelee-tyontekijan-oikeuksia-f6aeaa0e7a76/index.html": "b52b10d96abdeb5d4d4900275e20bc746f203a83e523915f5eb7044f56b14923",
-    "uutiset/kuopion-vakiluku-kasvoi-396-hengella-alkuvuonna-2cd7ce2136f0/index.html": "a0c2eaa4c13622ea5e5044d95c891490f92c154fd38c51ae6dda107c5eefa525",
-    "uutiset/kuopion-vanhustenviikko-tuo-kulttuuria-kohtaamisia-5cd5fcd61b42/index.html": "8110bfd0af25c2e44304b8f11f3714cd68cc7f552331671ca02adfb942e9889f",
-    "uutiset/kuopion-welcome-to-kuopio-tapahtuma-20-lokakuuta-a050cd8361c0/index.html": "78fb2f795d4dab93497d5102ce876abda1441e1289aec411906108f17710ef26",
-    "uutiset/kuopion-ymparistopaallikko-lahiluonto-kaupungin-kasvun-3728f0b0d62c/index.html": "f607489fec897ec2d4cd2e111bee176d960bef83d8396b6ad3d8ff454e526792",
-    "uutiset/kuopiossa-asfaltoidaan-pyoronkaarta-jynkanvuoren-vaylaa-8cacb894e21b/index.html": "dd2cb1f009a82ad1df121483d5641fb086b4ab35776955d6e401404f17012c76",
-    "uutiset/kuopiossa-kokeiltiin-koulunkayntia-vaestonsuojassa-bfb80bbc6d7e/index.html": "a549c4d7622627752b73ead8a4b37c43c0d58598bee34476a2545fac7cc3f0ea",
-    "uutiset/kuusijarven-saunakapasiteetti-pienenee-valiaikaisesti-ac11a9d263e5/index.html": "e4825daf792ad06a250d4731fb0ca0a22aaa8b1458854328d9c90fae569bc839",
-    "uutiset/kuusijarven-savusaunat-voittivat-arkkitehtuurin-finlandian-f7ba9ee3717d/index.html": "a1ab44cf99c781ab87f8ecb0e7697a4db5c3cef5edea6644f7ca22a8191f3829",
-    "uutiset/kuusijarven-savusaunoille-arkkitehtuurin-finlandia-2205f6bc9b0b/index.html": "1086dde09026ae84844f841c7e430328e63bd9a36b842682cdd6c91d17e23ff6",
-    "uutiset/kuusijarven-wc-tilat-kayttoon-12-lokakuuta-c2bc4a29129d/index.html": "409e09900dc0952000e3b011d0e7fa34109683973854b6082fe78419f85b86b4",
-    "uutiset/laajasalon-palvelukeskus-vie-kohtaamiskahvilan-saareen-c12a889800ff/index.html": "3da36d4bb6c09102ef9c9ca997b7b1b96981a4d7d1cfba551842a10905203fad",
-    "uutiset/lammitysenergia-kallistui-kesakuussa-vuodentakaisesta-849661688f3c/index.html": "abbf6269c8fb4aa176999ca7ce893facba073cf2a1b939b2b7b33e07d1447899",
-    "uutiset/lansimaen-koirapuistoon-tulossa-kayttokatko-torstaiaamuna-133493c7588f/index.html": "0e84d0bf109d7768555452f61f9778e6f3ba601b589d653e13db43adb0deff89",
-    "uutiset/lansisataman-pikaraitiotien-hankesuunnitelma-hyvaksyttiin-743604e52b6d/index.html": "d0497c14763d350e51ce1f93c4b4f4bacdf4935b050d580b2e94b399874ef482",
-    "uutiset/lapinlahden-peruskorjauksen-valmistelu-jatkuu-esitys-86f1d633295b/index.html": "e7b678d60c19de666eb68378a5a4f6d919a64b045c38abf4291ad709d7fa2a18",
-    "uutiset/lemmenkujan-jalankulku-pyoraily-yhteys-kiertoreitille-b72bfc87ea57/index.html": "252fbd04ac398a0df01b325f6c5f561e9a0074cf8867ecaef3dd1647fe5d9a21",
-    "uutiset/lemmenkujan-kiertoreitti-kaytossa-viela-viikon-41-9379acd25d35/index.html": "bea900abff222c679319f7015f06bda8d00a4d07a95bffb2f91dc660c7de4d15",
-    "uutiset/lentokenttien-matkustajamaara-kasvoi-2-elokuussa-e4e3315600c7/index.html": "5439f8230c2a34220a77bcec44c78332e567d1507da6780d38cccb3e54f4d409",
-    "uutiset/lintulahdenkadun-rakennustyot-alkavat-lehtoniemessa-b2fc857c6685/index.html": "a5a988a5841697f7e770b89d482b6c6181a55d6562ff810ec5e6752cbdeb7de5",
-    "uutiset/luottolaitosten-rahoituskate-pieneni-7-1-prosenttia-81e510f0302f/index.html": "65a13167eb3ef426bc70701ecb8326339d6b3711aa510aaf76a9fc868ddd39c0",
-    "uutiset/maa-metsatalousministerion-budjetti-2027-2-6-miljardia-f4660882883d/index.html": "c2c39464adfe8f3ad45fd35be734b267cb2c1d4cfd29d093baae699705dc892c",
-    "uutiset/maaherrankadulle-suunnitellaan-viikonlopun-liikennekatkoa-a3824f561396/index.html": "001cb7d6ea4b45dfaf63d2cef30bcaa2a4786accd217c5362758b4521cd62943",
-    "uutiset/maarakennusalan-kustannukset-nousivat-6-4-elokuussa-7a59abbcb656/index.html": "e23f0a34c9fcc8599645317f60830aa0fc8919e92367d8fb0046608650a6bbd2",
-    "uutiset/maarit-raja-aho-tutustui-myyrmaen-kunnossapitoon-379dbddb774b/index.html": "bff0aee731c5d914a61c04899c96a6640600d8b8018016e54e2e60a383c55317",
-    "uutiset/maatalouden-tuotantovalineet-kallistuivat-heinakuussa-5-8-aca81b732a64/index.html": "ed115c206015bcdd3fce1fce4d011eeee2a9519d4dd9af7ec4162b97431efed2",
-    "uutiset/maatalouden-tuottajahinnat-heinakuussa-vuoden-takaista-43d7e9f8a735/index.html": "c912010f33fe5ce60e73dac0d1a5bd7ee5635935c0b704c67b377688df9f7d17",
-    "uutiset/maavoimille-hankitaan-trackx-tela-ajoneuvojen-esisarja-4e34402bf900/index.html": "a466dcb041103706668dd1118608dfd024ead5a42ecb1515bcfb32ad4cbcbc39",
-    "uutiset/maksullisten-tutkintojen-vaikutuksia-tarkennettava-530d03529b18/index.html": "0dcb5af578a1d8490ef91190048c67be2025b46a90de53967a3ef706b4165c1e",
-    "uutiset/malmin-novaan-suunnitellaan-laajennusta-asukkaiden-6643e2b67fc8/index.html": "36b6c50b884f04eec80c21416b807c0b522cd4b9c0dbd46bdeff03e510137e89",
-    "uutiset/matkaviestinverkkojen-uusia-toimilupia-valmistellaan-1fc73b45c172/index.html": "ca1de6e0f1bb32c3b488e906117ee268c8ebf856518759e110566a5f85a139fc",
-    "uutiset/meri-rastilaan-suunnitellaan-koteja-noin-770-asukkaalle-f7722347c89f/index.html": "c05734a4b9924489e29c546c597d52284405a2f90f863ee25f0c34ed66b4fcc5",
-    "uutiset/merikuljetukset-vahenivat-elokuussa-8-prosenttia-4c10eecaaa8e/index.html": "57c5a816c940b04f963ee12f64efc6d8e43c73b6778b08ba56048f9f3de7b28c",
-    "uutiset/meriteollisuusstrategia-tahtaa-viennin-kasvuun-d6f58ecba065/index.html": "bfb4b405e77ee5c0b1f93099f294b6f72b007ba0f55b0877a9283bd1e235ccf8",
-    "uutiset/metsanhoidon-tuen-hakuaika-pitenee-rajoitustilanteissa-4ccf0693154e/index.html": "b885a755f6e5e0142819342bcbf795777f953c31d5e272990ac1da625cad591a",
-    "uutiset/ministerio-valmistelee-karhun-kiintiometsastyksen-804377534929/index.html": "8295b5552ea88a382442b382fc8ce88dfea41e6ceed3a297e5259484f4a373f3",
-    "uutiset/ministeriot-julkaisivat-nelja-venaja-skenaariota-146a0925e84a/index.html": "d0356edb3ac6ba5ecaf3e4f09f79f452e064155d3052247de4f50ed13cce17d0",
-    "uutiset/minna-canth-palkinnon-ehdotusaika-paattyy-29-9-2742b84a5738/index.html": "034cedc3d5f8f4024d220db2c9d19017f063c0cfa823563c7b6a347092f238ad",
-    "uutiset/multala-hakee-saksasta-yhteistyota-vetytalouteen-dacb24d664ef/index.html": "6c11d68e1e372921f0b766ed990899e02d5ef4fa3c5a7b4ea88de33cb69b1cc7",
-    "uutiset/myyrmaen-uudistussuunnitelmat-etenivat-lautakunnassa-47b252d5f81c/index.html": "3dac572720549b322ddbf6b388aa0bda773eb17f4d0f00918d5e599979afe4c9",
-    "uutiset/nasa-aqua-satelliitti-kuvasi-doverinsalmen-76d26ccc835a/index.html": "5b88ef36b1701f0236548616b50a19d9040ede69a32086afd187847118a1db0f",
-    "uutiset/nasa-julkaisi-satelliittikuvan-australian-spencerinlahdesta-69f08f8012cf/index.html": "7cc5251f638ae0e4861a522377a30024a5066757819e705c98266c88fa0c9bcb",
-    "uutiset/nasa-julkaisi-terra-satelliitin-adirondack-kuvan-893d279b6ca6/index.html": "7ef87f8cb98f4e9b56000f58825c70d6f92dc7062e743b06931e18e847f4a54b",
-    "uutiset/nasa-satelliitti-maastopalot-levisivat-etoshan-suolapannun-3e3118902b27/index.html": "0bdf1afc2d086d97d023782345767c7b07177c1fcc646ed9286bad8da79feae1",
-    "uutiset/neulamaessa-vedenlaatuhairiot-mahdollisia-keskiviikkona-cadc5e300307/index.html": "92d9e29a41a948b511c06b4adff32d59a7a83200dec135fe46ea7ab21d04b2ea",
-    "uutiset/neulamaessa-voi-esiintya-vesihairioita-28-syyskuuta-6f6c31f5cf96/index.html": "78c440f0b8fbe10accc2fbccbd4867ad73c7f93475c072ea1d68b1a8486aa46b",
-    "uutiset/nolo-toi-rankkasateita-havaijille-nasan-58795708c3dd/index.html": "bcbd4f422e9bebf472db61777f47482651f594ab1a0b04772249e796c5444160",
-    "uutiset/nuorten-nurkka-avautuu-pekurissa-12-lokakuuta-75f6dca5be2e/index.html": "853d5ae79cdb14962ac5f0d5c35fb4096f673e7f52738ab7a85877e17f4b8b9c",
-    "uutiset/nuorten-tyollistamisseteli-kaytossa-vuoden-loppuun-24628afbd844/index.html": "318a6f66e426321d98149fe6b231d9cbb8274c0a559a6fead87b1c4a196f3672",
-    "uutiset/oikeusministerio-julkaisi-oppaan-lasten-nuorten-f9615094ff17/index.html": "d970c52e438c4004aa8b7421dc6a40421bb2ac5ef44fae2ae70e423412058768",
-    "uutiset/oikeusministerio-pyytaa-lausuntoja-lapsirauharikoksesta-7d6a15176a04/index.html": "16f3976728e2ec1eba5921675c72512240de93181bf2c6777e4caf8eb440b41b",
-    "uutiset/oikeuspalveluviraston-toimipaikat-vahenevat-158-sta-38-aan-c3565ca130d6/index.html": "e9cb0a91dd01ef149be4bcafc6e44e82158f70f29b5ef7e40661e3feb3fad565",
-    "uutiset/oregonin-maastopalot-jatkuivat-syyskuun-lopulla-c79a7f054313/index.html": "12a99dbbd835c3c1ac0a43fc62e116d5ee0c838b268a2c08ad80423e3ca2f29b",
-    "uutiset/orpo-sai-katsauksen-kansanedustajien-turvallisuudesta-41eea6aee980/index.html": "0ef3622fd9651fa4b2e9e95278917f70b10977c88c4f451165e0dbfc157b4c8b",
-    "uutiset/osaamistilin-kokeilussa-harkitaan-tekoalykoulutuksen-96de6f5ec840/index.html": "d968eb694ca9cada117b3bcd4373b57ae04f236a2688faa398d6fc899e3db0be",
-    "uutiset/oulu-jatkaa-ikaihmisten-aurausvallien-poistoa-3e79d37338eb/index.html": "0c2f8540807d70e52223611790dc7031cc3e51e227d30926df6869b8593ea733",
-    "uutiset/oulu-keraa-asukkailta-nakemyksia-sivistysohjelmaan-c8956407ecbb/index.html": "7c1d833ab3b3a9467869f7f79b6160f8bc48867b738b5ad250865e5b2716f633",
-    "uutiset/oulu-kertoo-johtavansa-suurten-kaupunkien-liikuntavertailua-84215ac70cf4/index.html": "1d335f07112fe2366832f70129bca696ace1c37b0084ac611eccd9fd9ef904bb",
-    "uutiset/oulu-kertoo-osallistuvansa-valmiusharjoitukseen-97ffa58ef1b1/index.html": "b41d8aad82112442695db36519cdd7a248cf481eaafd9d598ca32306492140dc",
-    "uutiset/oulu-kysyy-asukkailta-sivistysohjelmasta-lokakuussa-a16a2aa7f71d/index.html": "d4cbf1670d1cd8500182254ae76e2686d3e8b8f8afa9970e4529526dda18755b",
-    "uutiset/oulu-opiston-senioriteatteri-palaa-lavalle-marraskuussa-8c9c6c7d7ddd/index.html": "5d8f4cb6e0c0fd588fe03295c6eb68e03de12d84bef935d294766f173115874f",
-    "uutiset/oulu-sai-hyvat-arviot-katuvalaistuksesta-talvihoidosta-fc37e26d3a19/index.html": "fd80b964b7bc75ab380a7280f36895fd02db6a114f735e73c27099c1288d4ecd",
-    "uutiset/oulu-uudistaa-kainuuntien-katuvalaistuksen-fc12a9cde34d/index.html": "7c23d6ab731da3b6c9e6fe96d7a0c51ac8b460e1a6b6bf959e29825589de395a",
-    "uutiset/oulu-valmistelee-ravander-korttelin-kaavamuutosta-f9a3d7c0d980/index.html": "781c6058284c19cca43e15df21876ffd252417461c856f36653c34c9516ac6f7",
-    "uutiset/oulun-greco-n-ryhma-arvioi-kaupungin-hallintoa-0dec2b39d891/index.html": "aece8eaab4a752c7d82f18b7b72c245e22e3659422fbf19e7c24ba6541b33f11",
-    "uutiset/oulun-kaupungin-vaihteen-numero-poistuu-kaytosta-8-10-c5e10b449ff6/index.html": "357f1f49a066d9268e432ef94fe9161fc47e8d48b92b35de030089eedd1cd407",
-    "uutiset/oulun-kaupunginhallitus-hylkasi-oikaisuvaatimuksen-6425b16e5671/index.html": "0a81f6e96409fa1138d60b7babf62cc166dcb8f176ba29ffb4bfb254372762a0",
-    "uutiset/oulun-kaupunki-jaalinmajan-uimaranta-vaihtaa-yllapitajaa-e5a0f5bea8dc/index.html": "82c4cfb07b5269f8b525493da206767b398651e71555bbaff76217944f83995f",
-    "uutiset/oulun-kaupunki-kertoo-ymparistoterveyden-valvonnasta-c05f7df9e539/index.html": "dfc87d3fbd5cfdf55cc0baa75a5d4abe662ebaffc80c22d100296e9839bd0204",
-    "uutiset/oulun-kaupunki-lastenkulttuurifoorumi-kasittelee-mediaa-bc357262eb3f/index.html": "a426be9ff7b6127bcd23a8c3841e257190eae798c186be6ab1a28a7ff169fc07",
-    "uutiset/oulun-kaupunki-russt-teos-asennettiin-oulu10b-hen-7320b219279d/index.html": "86531dbb6d1a977b7b1c0aed6ff1f2df442c75a347ffb776f9beec75c11f03d3",
-    "uutiset/oulun-kulttuuripaakaupunkivuosi-esilla-eu-vierailulla-288034a2f477/index.html": "edfa88b0d443ffc1d2074972bd04d9c544a614179676d32c6b7016dc4cdca4d7",
-    "uutiset/oulun-osallistuvan-budjetoinnin-aanestys-paattyy-sunnuntaina-b46385fe582c/index.html": "0973cff8e22580174807d18a69e52f5de4608ad778e901e3474c6e4f3c17dc39",
-    "uutiset/oulun-seudun-tyollistamisseteli-noin-kaksi-miljoonaa-euroa-ffb5e853ea4b/index.html": "6c1a666e51bfcef88f613673855fc0b16dcd04a518cc8026d41c831b73f8b8b3",
-    "uutiset/oulun-talousarvioesitys-2027-ssa-23-miljoonan-alijaama-5fef23277802/index.html": "1991a07d6653784d147d59ab39f93a921dfbeca1659a5990af6fa00635778cb3",
-    "uutiset/oulun-uusi-tapahtumasarja-tukee-nuorten-tyonhakua-45d3e3c1610b/index.html": "58e0410c13a7d4dc30cba8327e20d856a1017eefb5fa58d3928c0deb9adea5cc",
-    "uutiset/oulun-valtuusto-hyvaksyi-paivitetyn-konserniohjeen-6b274c9cef7a/index.html": "7e675f4fd4a870f1990cb0008f9ea72ce9d483566f5de153b91b685d63943509",
-    "uutiset/oulussa-jarjestetaan-kaatumisten-ehkaisyn-tapahtumia-ab7243f61af1/index.html": "f08e3315efbe7d8f7d58bb597e3f4b423acd50c8be32bc043b43155c3c577661",
-    "uutiset/packalen-rantala-kilpinen-esiintyvat-yhdessa-kuopiossa-482c01da18bf/index.html": "80757a1660ece201c9431578f842f03aa6b930edcff359ba65f4f33d5a266312",
-    "uutiset/pakistanin-ylla-nakyi-harmaa-hiukkasusva-f6d6d00e00a6/index.html": "41743a78a10cb1ea7783285198120b6db8fa026a677ef0d98b29d6070bd02531",
-    "uutiset/palkkasumma-kasvoi-elokuussa-3-4-prosenttia-vuodessa-8c742b4b56b8/index.html": "145f5cbad45f5814131b8621128d8068c876e065f0ea740a7419851d6d9c47b4",
-    "uutiset/paloristi-kahdeksalle-pelastustoimen-ansioituneelle-cd562eb1e32c/index.html": "fe1086e945d97c8ce58057ab9b27ca92a04eb60ecea25f395a8f7f1b429c43c2",
-    "uutiset/petra-pieska-partasen-erityisavustajaksi-sijaisuuden-ajaksi-8da9ce9b3589/index.html": "2a3505b1697bee2676f10e02c880ee623656726e2b2dc9a55bb54cfd13e78fff",
-    "uutiset/pihlajasaaren-kehittaminen-kaynnistyy-vuonna-2027-64aa1785598d/index.html": "64e7cbf79d88fec680c3a743b9ffa5fb9bc3655d295e356626aa5f29e9f9e4dd",
-    "uutiset/pk-yritysbarometri-odotukset-kohenevat-investointi-7bc4c26f61fa/index.html": "8428a69bffbc89826c22d1e885625479fd6fd87b7f11ed865289c8bf93535d88",
-    "uutiset/poikien-elinajanodote-nousi-ensimmaista-kertaa-80-vuoteen-54a3a84f0d82/index.html": "b691bf5b410bd9943dde98a1f45531c3da7ff1f5ea8361d8cd5331fe654797a6",
-    "uutiset/puolustusministerio-jussi-toivanen-kenraalin-virkaan-sauli-2912317fbc92/index.html": "3bc4f92b79b448d92024490c2d70804e6a566386b1fe719b973a912fe0f2ae4e",
-    "uutiset/puolustusvoimien-kansainvalinen-yhteistoiminta-lausunnolle-2e5b6f771351/index.html": "7bbf708f0aae48ede7de3c386037169a622f150ec1af392f384c816de24eefcd",
-    "uutiset/puurakentamisen-tutkimushankkeille-1-7-miljoonaa-euroa-e74a2539a028/index.html": "22bc02c792425a10368b85350f059526b5c86e8dbb2dcac41d1082cb9fe58692",
-    "uutiset/rachel-hurrikaani-kulki-baja-californian-etelapuolella-59edc2fdcd34/index.html": "23ddba8f7498612100f7f965bd4e8fd3e11012475afea54a52da2717bb814edb",
-    "uutiset/rahastojen-verotukseen-ehdotetaan-lapivirtausmallia-822144960788/index.html": "a249931cb8d04cfa0796fc9d9bed5aa5699f2466896e71923a97511d2f61241e",
-    "uutiset/rakentamisluvat-kasvoivat-16-heinakuussa-2026-3f76041fe5ad/index.html": "8ed44a402d138b4811bbde2cb1de1e3873a7db885f703a4cf14f09bc066d0e1d",
-    "uutiset/rautatientorin-metroaseman-perusparannus-valtuustoon-8dd79400fd98/index.html": "9f0605a7bd7496b6511f3934d6f13d77b92bbb8141aa39895218387878f3c23b",
-    "uutiset/rautatientorin-metroaseman-remontti-etenee-valtuustoon-58b84ada8648/index.html": "0da86a53285b750846d4ac77d848d806556e4cc21026f48d2fbc60a23ba4d5de",
-    "uutiset/reservilaispalkkojen-korotus-alkaa-lokakuussa-fb7f0f0b3e59/index.html": "ab5dbf02d0509e98b1c55941067bf43adaa72565c9a86e25e227079596c4d2a2",
-    "uutiset/rivieranraitin-louhinta-valmistuu-vantaan-763dffd702f2/index.html": "855c77774d9ba63df3b7f1841afa1d5d7bde497e196c0f8a8826b75e5bd696c5",
-    "uutiset/sahkon-hintasaantelyyn-kaivataan-tarkempaa-vaikutusarviota-3201487f4521/index.html": "07fca8d1ca3ed72d314948be997261ececd3ece111dcca099aab4995d9647421",
-    "uutiset/sahkopotkulautojen-kaytto-vaheni-helsingissa-81f29c83f795/index.html": "3fe808e452f2f66c53f7c14c8fdfcd85c3fd9d04fe57d531cde52ca8836b5208",
-    "uutiset/sahkoverkkoon-liittamiselle-esitetaan-etusijamenettelya-b88d52aa579e/index.html": "2024c778045faf225493ee563cec84d36daeae4f1ca96e9abf479f40afd2966a",
-    "uutiset/savilahden-tutkimuksesta-halutaan-lisaa-liiketoimintaa-4410ea6cee46/index.html": "eadc67e3251957a2c0379b82f0947dc6fa7b8639839e1a469096d1b4df184c6d",
-    "uutiset/sdg-liputuspaiva-muistuttaa-yk-n-tavoitteista-ed4545bb087d/index.html": "3f6096786955fcf055f13dd1d0df3178d3d25d8a4e14518b2e3275e7ddd6160c",
-    "uutiset/seure-omistus-etenee-helsingin-paatoksentekoon-0eef129b805c/index.html": "04d47c8d59364f3ffbce450f9129b494af5360d0bdea56d8318cb7dbcbf4ed38",
-    "uutiset/sijaishuollosta-poissa-olevien-lasten-etsintaohje-uudistui-ccde11681bc6/index.html": "240208cc1a0efda2d63d9dbe690e836e399884df8dc1c5e104735f4a6ed8a5cf",
-    "uutiset/sisaministerio-lahetti-ulkomaalaislain-muutokset-4c675026386a/index.html": "6791efc4447579efbdb139ab195baa4a626cba5026a828d08e1c204b494d0534",
-    "uutiset/sisaministerio-pelastustoimen-palvelutarpeiden-arviointiin-2c46131fe163/index.html": "7a248713175c04775ffab198ad003cbebae417725e92e46a5eabf139b4708a78",
-    "uutiset/sisaministerio-suomi-lahettaa-asiantuntijan-gronlantiin-c5e976469083/index.html": "f46e171d79a89f65be3d4b62f778eea74aa21bc3b741ff1560254d1d041d9b8e",
-    "uutiset/siviili-ilmailun-onnettomuussuunnitelma-lausunnoille-009bd8338513/index.html": "c2b5f52e24433bea1d735f227e2627cd314e0305a36e7ec9d825a35e98f1b2dc",
-    "uutiset/siviilipalvelus-kytkettaisiin-kokonaisturvallisuuteen-60ae5103baea/index.html": "6cca7fe5b04d83f105a0cc523474db3dacfcbd4dcabbf78bd9ee232fe4ab38ee",
-    "uutiset/sprinkleritestit-voivat-heikentaa-veden-laatua-kuopiossa-602baae68d92/index.html": "cec1d9d780f4fdf45971b1bd324f8e1758819cabc29f05f5b58af3c0af6c580d",
-    "uutiset/stm-avasi-huoltajille-kyselyn-lasten-somekaytosta-da0191af3831/index.html": "c75d89be7650c306fb537e34ee5d69c170c91a549c10f542e915842f8d137ea4",
-    "uutiset/stm-laakehoidon-kustannusvastuun-selvittely-jatkuu-2218f9c8bbde/index.html": "e9520c96dca0d6135207a198e29d003c80ee62a91018e49c3053ebb8d32c3e39",
-    "uutiset/strand-kos-keskustelivat-eu-n-laajentumisesta-edc2082a22d2/index.html": "a4e60140d56c7971bfa5f2febf4b7d52b65de39cc808289d2620779ecae3292f",
-    "uutiset/stubb-st-re-tekoaly-pidettava-ihmisten-hallinnassa-f912fe343766/index.html": "621be3096d70d50b3d3b27c13db82752678d5202060554ba3747bb6fa2189548",
-    "uutiset/suomi-kalifornia-allekirjoittivat-yhteistyopoytakirjan-f3d38d6cc848/index.html": "37943d55686c810a2ecf94a43da6c46a557a6952bd2890ace836624104dd6cbd",
-    "uutiset/suomi-mukana-maatalouden-eurooppalaisessa-digikonsortiossa-6b30890419a1/index.html": "e6d858ec9d51174a344055e468487739a44e5e078845520e0aa473f6a618a78c",
-    "uutiset/suomi-tukee-eu-n-pankkisaantelyn-yksinkertaistamista-c0ed3784ff13/index.html": "0007f28ac1057ecb5f6004aeb64c79fe46d0327a2a0c81b1da1118bd4609e191",
-    "uutiset/suomi-ukraina-allekirjoittivat-droonidiilin-404c67dcc0c9/index.html": "84d83a2650c6af53d801f33d95f3c98550d6f8a895a7aa4d930e31403b76ac50",
-    "uutiset/suomi-valmistelee-sosiaaliturvasopimusta-ukrainan-c00b055093de/index.html": "ac9dd8e877e93d31e0a166525854b20706fc025fd12638a16d7db711a396a219",
-    "uutiset/suorat-sijoitukset-suomeen-kasvoivat-9-8-mrd-euroa-d3a1b3daea40/index.html": "f4bf6013ff96d0abee42e14769ade07ed5c26bbf3eefd4f9113caf1acba5ee9b",
-    "uutiset/suuntimopuistoon-suunnitellaan-nuorisotaloa-asukkaiden-a421e685a2cb/index.html": "8c60e9ae0eb646992df83c0acd25c61d4616d0d9701ff1ba9d6fe170cd3c301e",
-    "uutiset/suvilahti-diy-skeittiparkin-purkua-lykataan-uuden-puiston-f2a3b9da8395/index.html": "cfef362809137901551a01051e608e45ef9e3f02975947f9a4853ac5af231592",
-    "uutiset/syopastrategialle-tiekartta-vuosille-2026-2031-2f0dda6d3c53/index.html": "f3b7648f6a734c7eeff24694772957ddabdd6052afdc0497dbce3a18c5f6efb5",
-    "uutiset/taifuuni-dujuan-kaantyy-koilliseen-kohti-japania-12ba6b5b591e/index.html": "b5f74844e84581c9bc018a29b248b3069adfe18978ae26a834408bda21003d6e",
-    "uutiset/tayssahkoautojen-ensirekisteroinnit-kasvoivat-syyskuussa-cb48c97676be/index.html": "3c12e50fd7c34dcd2b485b81fd0f2a8460266601c4892e82ea9081f77d739c63",
-    "uutiset/tem-pyytaa-lausuntoja-yritystukien-kriteerien-muuttamisesta-df3aa3cca842/index.html": "c9247b8c74dd6812499184317d204169af787783a0db0e89f074c580f8165847",
-    "uutiset/terra-satelliitti-kuvasi-ruskaa-yhdysvaltain-koillisosissa-95fb791ce8c4/index.html": "29a65d5346c5db8cf84ae1fb668a1113d45259e7caa113b03f8fffe7d51709f1",
-    "uutiset/tiibetin-ylangolle-satoi-runsaasti-lunta-nasan-06fea975771b/index.html": "ae8693860a033339050a4cdd0a22541a1cd97d75edfd1e7943a100288b25471c",
-    "uutiset/tikkuraitin-kavelyreitit-siirtyvat-etelareunaan-21-9-83ff62c717c4/index.html": "ebbf360c2be1a6aeb10de9ab957f22311e3f247e96c494ae682846c288ff4e2f",
-    "uutiset/tilastokeskus-kotimaan-vapaa-ajanmatkat-kasvoivat-bc811a1e0b85/index.html": "c7438c2f52a5c1aefefbc1d203c795f829db22f4ce16c4e25b4d58451a084514",
-    "uutiset/tilastokeskus-kuluttajaluottamus-heikkeni-syyskuussa-0b8385ef2ec4/index.html": "eea898874880427b0b555bb4525338e5b6c5a7dafc8d04a71cd4275805f4259a",
-    "uutiset/tilastokeskus-kuorma-autojen-tavaramaara-kasvoi-15-54f3c629fbec/index.html": "1753f39bc2ab30bcde73cfe303d2e1a2a842348ce6b62711825f471f6011e3a7",
-    "uutiset/tilastokeskus-rautateiden-rahtimaara-vaheni-6-prosenttia-5c7038698aab/index.html": "242e2d5dcb6ada7da30ff48ef89de3f2c435562ad93b8144bec1c4ba5076bd86",
-    "uutiset/tilastokeskus-saastamisaste-4-bkt-kasvoi-0-3-62a3efa8b32a/index.html": "7e6aeecda71ce28ee42a44c7b84b65a8d995ede74788e20ef9ce1e0907940847",
-    "uutiset/tilastokeskus-suomalaisten-paastot-laskivat-4-655a35755963/index.html": "3aed9e8c17819ddb0f757621f7a4f224f3c73929e4fcbb2408c6f9f508601dff",
-    "uutiset/tilastokeskus-tuotanto-kasvoi-elokuussa-2-3-prosenttia-9b023452fb72/index.html": "275b550ecce077aa8943bf0c11d688179302d35a777dcfc26767e7f429abd5d5",
-    "uutiset/tilastokeskus-tuottajahinnat-nousivat-7-3-prosenttia-0d04d24d7fe2/index.html": "088f07683ea7aae3bc1826bb97cbc89e6355e2440319ec504a7f9d994307a999",
-    "uutiset/tilastokeskus-tyollisia-34-000-enemman-kuin-vuosi-sitten-c9ed2d317f03/index.html": "240e86b9d383ddb894f3a77762d8ee8e1befe3a1c292cca98996da870e1743f5",
-    "uutiset/tilastokeskus-tyotunti-maksoi-tyonantajalle-38-7-euroa-f733c3e47c8c/index.html": "9e11e8ec08cae75fac120d3e73abe487a1092023f02a758a9c2f6b853946f0d4",
-    "uutiset/toolon-rubinen-lisaa-ruotsinkielisia-hoivapaikkoja-c2173e19a9c8/index.html": "2467c76c26bacd8982e371528b42e3eb8704540ac3c401d59351485106fe7858",
-    "uutiset/toolonlahden-tulvasuojelutyomaa-palkittiin-helsingissa-c8d9df28ef8c/index.html": "a8159f3b8739997a2ec752b92869436cb957955769453f8ea745f3d1c9349b11",
-    "uutiset/toolonlahdenpuistoon-suunnitellaan-aalto-skeittipoolia-d0725b324ab4/index.html": "2a75176146990ff3348be6d38af53c637c099eaa406bd3c18b7226053ef8cb3b",
-    "uutiset/tp-utva-kasitteli-ukrainan-tukea-kiina-suhdetta-aac41588a8b4/index.html": "f71d973996255ae35c1b99b2350eb1719a03babe07d63bf58cb820b402990e34",
-    "uutiset/tp-utva-kasitteli-ukrainan-tukemista-persianlahden-abd979348665/index.html": "d3b24f8f94f8711d7d4a56ad60149e1b5f45af89cb20a3c760494067211bf9f2",
-    "uutiset/tsahkna-vierailee-helsingissa-kertoo-ulkoministerio-c1124443e572/index.html": "3f9d86903b488deb978c26304010949eae73113de42e63f4b8c43b9518223132",
-    "uutiset/tukkutorin-suunnitteluperiaatteet-areenasta-luovutaan-66b21dd4363f/index.html": "ba3a602aac1094fa6a52e093ca940ca151df8dec442a1d3d59fae0d793a7da8c",
-    "uutiset/tyoryhma-ehdottaa-vapaan-sivistystyon-rahoituksen-b2545a689479/index.html": "80905dd2d5cdc0c4c58721ebb5a47ea39c47222dfae322e7351fe0e1a8479899",
-    "uutiset/tyottomyysturvan-kannustimista-kaynnistyy-selvitys-a2e251cb6826/index.html": "85932c9e080f177bcf0d9afdfe6a024a88de97de950d931fcb94fe31f8316cd3",
-    "uutiset/ulkoministerio-roy-eriksson-muncheniin-perustettavan-20e36c0252e9/index.html": "da21dfd5ea4ee3242d385a7db66ecf21557db2ab0a57a69c112d6c4e25e03eff",
-    "uutiset/ulkoministerio-tavio-vierailee-tallinnassa-kauppayhteistyon-94c6d93ffe07/index.html": "a4fbee38093d5266dc451da8cf7d852c8f02517203f8e9d122b41bebfffc0747",
-    "uutiset/um-lehtinen-yk-n-hataapurahaston-ryhmaan-fbe5ec9a52b1/index.html": "dd3a561c6dc847bda69811e6c339c7c4684e083cb35b57e1e2b30f7e0dfe96ca",
-    "uutiset/uudenmaan-vieraskielisten-maara-voi-tuplaantua-2045-mennessa-260f179f793f/index.html": "8a719310fafa383d4268b1bfedb7a22fa1233bea79f4432775b9ea6916a266db",
-    "uutiset/vaaralan-bussipysakit-siirtyvat-6-lokakuuta-5fca6d55d831/index.html": "d086853e9f6d26213eb03579d9faff48c90d3c216b5df638334742eb957c586e",
-    "uutiset/vaaralan-varikon-louhinnat-valmistuvat-murskaus-jatkuu-9b9c4b59f7f1/index.html": "77d32e06e13816e265545dbbb4e6a5ba489ffd0d28f8f4c193471d429de2983a",
-    "uutiset/vaihtotase-1-3-miljardia-euroa-ylijaamainen-f047738905a4/index.html": "6a204027b53654e20020655c0fc66c05d7a3a57b628b6311c9c71445a72e9be8",
-    "uutiset/valinnanvapauskokeiluun-fysioterapia-kuusi-laakarikayntia-7f1c353a070a/index.html": "ef4481094a35074c1b1804ed5734351ba1f9310305d6dd538092e2a386061439",
-    "uutiset/valtioneuvosto-eu-neuvosto-linjasi-kalatalousrahoitusta-092c43fb123e/index.html": "eceb2deacdfca818d63b527e24393e49bcb37516ffb444202b3e34fd65e6b59c",
-    "uutiset/valtionhallinnolle-uusi-luontotyon-johtamisen-malli-802f22d74986/index.html": "1ea8dc434c36c8eefaf6476b8448fa0c25c6148251a6fed69192d51c65f02dab",
-    "uutiset/valtionosuusprosentti-laskee-25-05-prosenttiin-vuonna-2027-37ed852a27c6/index.html": "ae25d3c2135eb9e0fe25308fc34a146fb265a07d895265da7d26377df2a784e1",
-    "uutiset/valtiovarainministerio-kasvu-nopeutuu-alijaama-syvenee-34fd8ffc3b62/index.html": "b9721488182cf99e7c74ac62b0eb797e5d8ae5981fb34c131394ae5565a067c5",
-    "uutiset/valtonen-arktinen-yhteistyo-vahvistaa-turvallisuutta-95ad2d8ee611/index.html": "16a6991203c5610596fb2d88278fcb966b273140255886fa1437a793c77223c6",
-    "uutiset/valvesalille-vaistotiloja-oulun-vanhasta-vankilasta-55b598f4b18d/index.html": "22d80e44dea59dbdccc37fd4fa59f12fa01547e9b1a37357818478ff1f560d06",
-    "uutiset/vantaa-haastaa-kunnat-luontoterveysvuoteen-2027-31c76d776a4f/index.html": "98fe78b34af0fe751956703a8ceaa30b4206ee7d5c49c8a3040bf231a960d2aa",
-    "uutiset/vantaa-harjoitteli-vaestonsiirtoon-varautumista-12c4d486d6af/index.html": "aeb940b842e1462b1d1d675ed9a39ca5e221411159f862893f8430bc362b4cc0",
-    "uutiset/vantaa-jarjestaa-vaikuttamistapahtuman-30-syyskuuta-e524270d4616/index.html": "9028860a16b636141bf671d1a7a1c556c5896640f5f6222f777e37af9f19084a",
-    "uutiset/vantaa-keraa-tyonhakijoilta-palautetta-palveluista-5a635efaca1d/index.html": "9dcaa39331f56ed082f14b46801e238c7ce947ae87f86453b671c5db0d5144da",
-    "uutiset/vantaa-kertoi-liputtaneensa-kestavan-kehityksen-puolesta-c190474290f6/index.html": "44f7f9779f5ac2ee4ae62672dddbeb7c3adb611527e73a250d56428ef99fafb4",
-    "uutiset/vantaa-kertoo-aamu-iltapaivatoiminnan-kilpailutuksesta-32dddf9b3ee9/index.html": "85d640e736cc3eb6f88dafeef83a9a4b5a375a9fbb3f8e5f81ea225ace9450ba",
-    "uutiset/vantaa-kyytitien-pontitustyo-alkaa-1-lokakuuta-c88460bedac1/index.html": "d40ab72b666380098dd176b9c10f17297935de8d363ae4445d64c31a60fb687a",
-    "uutiset/vantaa-kyytitien-pontitustyo-alkaa-1-lokakuuta-ef9f7920c011/index.html": "b44f1a6d5ccb2d81407a40e6c2e993f6617e83882cdc14ca05707fd647a331ca",
-    "uutiset/vantaa-lahettaa-kiinteistonomistajille-tiedotteet-uudesta-ed3b01a4297a/index.html": "cf3ec8fa3cea6cc7b60b9abbe159614f0a0ab25fdafc92f0867f2e8e1c90d210",
-    "uutiset/vantaa-mittaa-toimitilojensa-radonia-talvella-2026-2027-e34055926556/index.html": "6963fac947b491acd3f0c568cbc1ab6be61a29129444daf67876bfe5e8221671",
-    "uutiset/vantaa-osuustien-ratikkatyomaa-laajenee-28b2b9770662/index.html": "c4f166541c633afb1ca7c796852efa85c0e32fb107cb50cd4a64e2081cbfa635",
-    "uutiset/vantaa-porvoonvaylan-kaistoja-levennetaan-d838076e2c08/index.html": "666712cd629d8b6e9e6b4e13725dd85e6ef51c935eb3b1f184861b20068d93aa",
-    "uutiset/vantaa-uudistaa-esiopetuksen-kielivaihtoehtoja-2027-19702eda7825/index.html": "2b04e290eba98dfe80e6790874d155a2218cee0a1a1c9d566e455a5369f9c572",
-    "uutiset/vantaa-valmistelee-yhteista-suunnitelmaa-palveluille-6851893ce6d2/index.html": "12ab63a467fde3fbcbdeee8a591a414846c6e0aac92afa03540aaf0a4150a9e6",
-    "uutiset/vantaan-hiekkaharjun-golfliput-maksavat-viisi-euroa-8d0312b9b940/index.html": "f0528645ef6c92a38ac6d33d7f72c1d3832a0e05413ddaad714bdc2f4f03e6d7",
-    "uutiset/vantaan-historian-museo-hakee-avajaisiin-vapaaehtoisia-d96705192438/index.html": "7fc1a040661d5e380757bd1bb2673f1b19f43a90893dc9d615cee21b38811ebf",
-    "uutiset/vantaan-keihastien-jarjestelyt-muuttuvat-28cb5bdd8d54/index.html": "e6addc07cfef6eab2bccf01f8600b975401686645c7daae6dc4d55e675cf2b0a",
-    "uutiset/vantaan-leppakorven-liikuntahalli-valmistuu-alkuvuonna-2027-b1ea3401e43a/index.html": "2a63701a1706e1b8219acc77f4b185514bb2a3675fd2e2d9a9e3c503e0dedfc7",
-    "uutiset/vantaan-liikunta-avustusten-ehdot-muuttuvat-marraskuussa-81d0e0959168/index.html": "fe5dbff17fe89bb31f35b64f597bda32e4ee5d3e9523b66d47b96cdeefdb07d6",
-    "uutiset/vantaan-monikielinen-neuvonta-auttaa-myos-pitkaan-asuneita-8244199fd98e/index.html": "3aac5262358517ccc7e7f980bbd4264c974b3890457e196764a4bee4c37f5a89",
-    "uutiset/vantaan-musiikkiopiston-isanpaivakonserttiin-vapaa-paasy-004a6e9a6859/index.html": "5471dd2e05ca05de0e2af98ee9e233e43e06102c1bc34d2e4cd29f6971104a18",
-    "uutiset/vantaan-osa-kaappisangyista-poistetaan-kaytosta-17fb53caf5e1/index.html": "c26c7058d3914000765f8d9cd2707d5a31a6b3fc78eb4297d4d40ce8c9c00f27",
-    "uutiset/vantaan-paivakotikaavat-etenevat-valtuuston-hyvaksyttaviksi-3879659d8f8a/index.html": "855271a5536550cab5ddc6e4cfdd6044c3c0f9ee57996f70c2c66af87782b903",
-    "uutiset/vantaan-ratikan-tunneli-etenee-tikkurilan-aseman-alle-1ca8188892bb/index.html": "e20cc26c6f8f960f51b5ebe86586a525586bd9af397587ca1b9759258f76f971",
-    "uutiset/vantaan-syyslomassa-taidepajoja-kartanon-kekri-f1f023667c0f/index.html": "fcb9cacf951d0260051014181cd80cbaf387eb857fad41b21723b7adf44ee8c3",
-    "uutiset/vantaan-valtuusto-hyvaksyi-ratikan-vaunuhankinnan-takauksen-f3cdd3704bdf/index.html": "f3e0b20802b07226ef377eb256ce6a339fe89edea8ffbea131d8a7271a8b77af",
-    "uutiset/vantaan-valtuutettu-tutustui-ristipuron-paivakodin-arkeen-24780c2c9ea2/index.html": "97cf3c9b1f4406fb62c95344f80170e3f9bf71ec25a620ae00579466243223c6",
-    "uutiset/vantaan-yty-akatemian-ideat-etenevat-tyoryhmaan-ba96b94ee71f/index.html": "85f268a26cbd6cae8be1c690bf0926960fcf57c89bc17dd548d729ec06b12728",
-    "uutiset/varhaiskasvatusmessut-jarjestetaan-espoon-dipolissa-9-10-125487dcb855/index.html": "c152ee08698834120d8e9974d5d39fe3cf3d3276fd3a88d499e1b166b14d1495",
-    "uutiset/viikatepuiston-suunnitteluun-haetaan-asukkaiden-nakemyksia-d8d916de41e0/index.html": "dc2875546ae998a896d6a8eeec86a965309e52c8af8aa40cc1d2d0e30b1665a0",
+    "uutiset/fortumin-yritysasiakkaalle-suositettu-hyvitysta-45c3d38688f1/index.html": "e8059b6e71e25196f5cf1316fb84db10f1695ec35f5c4c0295442fd7d08d7ad8",
+    "uutiset/fredrikintorin-remontti-viivastyy-arviolta-vuoden-loppuun-2a57e16b0903/index.html": "07c5f1ce4e73648f6c565bc09064408718d940f6ece5ad07fb34a6fbb8c15ed6",
+    "uutiset/hakansbolen-kartanomuseo-kutsuu-syysloman-tapahtumiin-2684ca78ebd5/index.html": "e58d962b062f527d36244e89c82dfd62730e3def365250e75a44baea29fe8f24",
+    "uutiset/hakkanen-epasi-luvat-kuudelta-kiinteistohankinnalta-3f2b1780904d/index.html": "8048463a3433ae187fd0e68e6f463ba49720b14607549baad81c92930ca28c9d",
+    "uutiset/hakkanen-vieraili-libanonissa-israelissa-265e1c050023/index.html": "1a651289fd2f54054cdf6e04e839f7392032e097d84a5c8893db31ea6e21a9ed",
+    "uutiset/hallitus-ehdottaa-saaristolain-uudistamista-kausiasukkaat-2a902aa7df9e/index.html": "5c84e286e674ae11ed9ff4997de17dba5e46906fabdabb2754617e7fc3771a03",
+    "uutiset/hallitus-esittaa-koulutukseen-joustoja-hairiotilanteissa-dbd531c56a76/index.html": "20d9421ebe7cc1daae55511ad22ab5709c243b1938a62fb41b0d6f1e4e92efca",
+    "uutiset/hallitus-esittaa-lvm-n-budjetiksi-3-73-miljardia-b7dcd94bbbf9/index.html": "bb49d2a977ae408e839a121c06be4eeb7a0ca6b37efd7c1135a91410a75dfd03",
+    "uutiset/hallitus-esittaa-mahdollisuutta-jattaa-kelan-f3971ff28482/index.html": "ddbd6bb6be5f56387d9bf1bb5dab42e02b5f2f1908850593fb32c93a44973d68",
+    "uutiset/hallitus-esittaa-muutoksia-sote-lakien-palveluhankintaan-8e7e3e585fec/index.html": "d40a5066e2dae1b9cb6b10d4788e942c6c2ae2bf2577c5c030b5e8cd913e9a07",
+    "uutiset/hallitus-esittaa-poliisille-laajempia-valtuuksia-puuttua-90375dd8de77/index.html": "4560fc33e87aa040ada1a62e0682073d535733b039a2b0a24e3d2d22927e0abc",
+    "uutiset/hallitus-esittaa-tyottomyysvakuutusmaksujen-laskua-2027-f97bcef965b5/index.html": "cc37477a30418a16e3fd7d38d74089eb21995d0ad1dcdbc85b1c0e8a30b3701e",
+    "uutiset/hallitus-esittaa-uusia-maksuja-erikoissairaanhoitoon-1009344e322c/index.html": "598b151387c2e5ceb2d7a8a23d75d459bd1bcbfdac052030e209c23f5a5082c9",
+    "uutiset/hanasaaren-kilpailun-maara-alkaa-marraskuussa-e09856b12eb2/index.html": "abf93595546af783eea4d369b5da1906dc281d6da07a060233c149d61c3b6054",
+    "uutiset/haruspuistossa-kaadetaan-noin-100-puuta-lokakuussa-c3e242101b0c/index.html": "7cd1e9fa9085eaeef12236f8837dcfb026edb697b8267450f696d98144cf69c6",
+    "uutiset/havikkiviikko-kannustaa-kouluja-vahentamaan-ruokahavikkia-61b3c101e925/index.html": "71a39eee8bcf0939e396b321b3faa2c7ba5b7c42968961815c11d4fd1b465c6f",
+    "uutiset/helsingin-ammattiopiskelijoiden-tuen-tarpeet-vaihtelevat-3f8d7edb9391/index.html": "84c0c9882a5477f8e9903bbb9de1aeaa01412a5012e898f3796a7629d8ea3a6b",
+    "uutiset/helsingin-elinkeinojaosto-kuuli-tonttitarjonnan-katsauksen-8f7bf8135bb7/index.html": "6cf8c444fb6f761ea97c6b010a1ea2f4245794369b22f35b7de5565ea8b62a00",
+    "uutiset/helsingin-kaupungintalon-yleisopaasya-rajataan-6-10-b27c5cae7ccb/index.html": "0011e12dd17f2caa81fb4dd3add4121f6cf5e50b738ff8fa2f9db906fa5a7544",
+    "uutiset/helsingin-konsernijaosto-puoltaa-raitiovaunuhankintojen-38c33234e1a7/index.html": "e4474d09ee7d93d1c17f1a04a145dade0185d7c808252a3a57b4e01e5a68fddd",
+    "uutiset/helsingin-kyselyssa-myonteisia-arvioita-etahoidosta-ff4aa5e086dc/index.html": "e3855b08eb7e239085ae78e3344236d8c4f6155d5d95c99cc807fe8442783960",
+    "uutiset/helsingin-liikunnan-avustukset-uudistuvat-vuonna-2027-728af67d1511/index.html": "45eda8116f57e8127e9ed1a7423bb170ec62608b08b79b1f011f6b494c0cb6c1",
+    "uutiset/helsingin-pienituloisuus-yleistyi-vuonna-2024-333a8e11bac1/index.html": "d1b652cfb2c3510d94b7ee8898f612307b0e36d17c4be01a2dc71b3f6443efd7",
+    "uutiset/helsingin-rakennusjarjestyksen-uusiminen-eteni-c5f827f0eb7b/index.html": "4117b171d9d2d87cc313bac8c04ff27a90801e75fd99eff244a18653853499f1",
+    "uutiset/helsingin-rokotukset-alkoivat-75-vuotta-tayttaneille-a733ecffde70/index.html": "9310aa5c176974894cbe5de9677bfda175c5a7f31d31ba55005c9192d521ce1a",
+    "uutiset/helsingin-senioripalveluissa-vietetaan-toiveruokaviikkoa-09127be39732/index.html": "a1c1e8d5b72a742166b1fd497db0bba111a2ed969754a153e22df85945daeb78",
+    "uutiset/helsingin-silakkamarkkinoille-uusi-ravintola-alue-lokakuussa-8919f3311ee7/index.html": "3397b8a4bdc46bfea76e57f01cc3feae6a70c559f4a2588257e919e43c239616",
+    "uutiset/helsingin-sote-palveluissa-ilmoittautuminen-laajenee-4ae0c6acec61/index.html": "1bad5cdba1d1f5b0b04766d853eb66df468ba91cb35c952d559339eebbf43b8a",
+    "uutiset/helsingin-vammaispalvelujen-asukasilta-20-lokakuuta-981c39c98000/index.html": "4a23a043a98bc1ba5f80a02cc4adbe0dd62274536a777a7e052d373973620aba",
+    "uutiset/helsinki-avaa-alle-65-vuotiaiden-rokotusajanvarauksen-302cb85288a8/index.html": "276419cd73fd6b4966632ce0c95e0cb025d1e41575d1a712c976bc20dde3730b",
+    "uutiset/helsinki-itiksen-symppis-siirtyy-turunlinnantielle-2f05494ef557/index.html": "b68071a2d7a4cca6c90defc408552d96cf62fd27961a8d181a6123d30c8bca07",
+    "uutiset/helsinki-jarjestaa-vauvan-unta-kasittelevan-verkkoinfon-24-23759dbb8476/index.html": "f80e055c7e72bd10f46725d3f797f0e5e030968e2f4548d9142aee0eeefb3c04",
+    "uutiset/helsinki-kertoo-paivittaneensa-ymparistotavoitteensa-e15ca37246a1/index.html": "256c30d4b0a6e6f3f462f72fba5777ba40b18f4ed8f4d4a6aa1a7e08f5a910fd",
+    "uutiset/helsinki-kertoo-sinisen-talouden-yritysohjelmasta-2a8b2adee4b6/index.html": "1eb5b7840e3a494483cb1e6de224cceae336886e7d6d1dfcd2e0e55e5d75ecb7",
+    "uutiset/helsinki-kiristaa-ajoneuvohankintojensa-ymparistokriteerit-52aae0fe9233/index.html": "2f18ebf5832a5f7f31b27db7c212f28789ae79cf44c4c896d8dc8efc490d5fb5",
+    "uutiset/helsinki-kytkee-yk-n-kestavan-kehityksen-tavoitteet-tyohonsa-66ca79131373/index.html": "554c9985a82a7f8dcf610f367e5a801cb54632020b3cc83b90bc4fde9da8cb4a",
+    "uutiset/helsinki-otti-kayttoon-turvallisemman-tilan-periaatteet-ea2b1f992164/index.html": "5041ad9754034c02395fda7167d37a03f33ee1d8050eb8a0c1c28ed6980d73cf",
+    "uutiset/helsinki-poistaa-syksylla-kaytosta-noin-35-pysakoinnin-d6f4493ba6e8/index.html": "8a05e5f5fa7582bbd7d6328ab44a918219d7df7be2b7d9a3881b28780f171914",
+    "uutiset/helsinki-pyytaa-kommentteja-suunnitellun-kansallisen-bd71b526d449/index.html": "12627d03d0bcbeaad16f7d0d89c7caf7eda7117bdfc485ef4ca473cc4f7fcbe6",
+    "uutiset/helsinki-sopi-lasten-nuorten-liikuntayhteistyosta-ecf85fae35c2/index.html": "47b6e316089602149d310cf291f8021a088d83a4f3d5867eaff9323b7e0a5733",
+    "uutiset/helsinki-suunnittelee-lisaa-hintakilpailuja-tonteille-af3a61406e8d/index.html": "fa19f8e5b49554af2bce4d1f87258e925e1958dc2a6f46e673d08e14a3b4b410",
+    "uutiset/helsinki-tallinna-tunneli-esilla-ministeritapaamisessa-78287132895f/index.html": "4f44dc1ad08da4393f872410d48c6f8cc9af3254f0fef2f43738f86a4847161b",
+    "uutiset/helsinki-tarjoaa-syyslomatekemista-lapsille-nuorille-9c818b9e8381/index.html": "fae3798efee9d3092c9bb95fe2b2c3eec15347126292f21322bcd0e186493608",
+    "uutiset/helsinki-tavoittelee-pyorailyverkkoa-valmiiksi-vuoteen-2029-56c04677f3b3/index.html": "51126974bd8d7fa6b953d38e23b3fd001b70720eb6383567825acb1d1cfe50c9",
+    "uutiset/helsinki-ykkoseksi-kolmannen-kerran-gds-kestavyysvertailussa-2c5050d14dd8/index.html": "d861ed52949148f970cbec190730ccadf3a7c931df719a4280bbd668a4e1c62d",
+    "uutiset/helsinki-yrjonkatu-avautuu-liikenteelle-28-syyskuuta-e7bd28796feb/index.html": "0fe104400414521457c2c67d225fb284f7d33d0c0b11291d89081f3be31dc30d",
+    "uutiset/heteniitynkentan-peruskorjaus-valmistuu-syksylla-2027-893508c01462/index.html": "507928522fbdc775450635fa97b7cf2814a1a13e6251da23ad7b45b738b2e095",
+    "uutiset/hoas-rakentaa-174-opiskelija-asuntoa-itakeskukseen-04f5e7c23aea/index.html": "10ff87a3007b5486382bf98e14382cfa05e575e44eaf43bcee84db2e317bab2b",
+    "uutiset/huippukokkien-club-des-chefs-des-chefs-vieraili-suomessa-f9ea85f1e6d7/index.html": "78494b32f7b10f530bdcb1e08307fabace6fdfc664973b831b0ddea809f08383",
+    "uutiset/hurrikaani-polo-toiseksi-voimakkain-tyynenmeren-itaosassa-df134e357787/index.html": "df7cafaa1cc06e5b9abfdb6365b52119fddeaaf08a2c39a2870a69f549028ff9",
+    "uutiset/hyvinvointialueiden-rahoitus-27-5-miljardia-euroa-2027-57e39fbd0a4b/index.html": "0430c06e254d28f4c48f715a4abd60b6a4d91ef35d9122d821b860f095cbb691",
+    "uutiset/ikonen-kuntien-ohjaus-esilla-pohjoismaisessa-kokouksessa-6be99b8cbd81/index.html": "4b5473ac7a5a254809099a3fcca66a71a4aaa61ad14d4a06fbeb38f3b20f24d0",
+    "uutiset/indonesian-palojen-savu-nakyy-satelliittikuvassa-kuivuus-5e19146e4f51/index.html": "dcf81798bd9652f830962b93b9376df0a78764a13fa144b0098faeaf5115d0e1",
+    "uutiset/inflaatio-nousi-elokuussa-2-2-prosenttiin-hinnat-laskivat-ba164fa2011d/index.html": "aa9e24e4ec0ec647108b19c6561602bcad9f7a285b447a527ca9d9b5a3a7b10a",
+    "uutiset/isabel-schnabel-jattaa-ekp-n-siirtyy-imf-aan-86fcec1077e9/index.html": "49a8ec9983a630deb558fd0959a09261e89f6d5eec7caead5a7b697128e3cffa",
+    "uutiset/itakeskuksen-terminaalista-arkkitehtuurikilpailu-bc32d0e7e97e/index.html": "b48d6ac3b10642090fc6cce358d0d80c55ba5570c8a092420c4c8bce71493eb8",
+    "uutiset/jakomaen-vaaralan-lampialue-kunnostetaan-lammet-koira-17f3a9e55a5d/index.html": "5a88fcddff04c8e8653d872a1753b9abcfbe99b2208017156041bae504b4b855",
+    "uutiset/julkishallinto-vauhdittaa-tekoalyn-kayttoonottoa-231d1af5e7f4/index.html": "f9a75c93f80e47f9cbe716254015200ead2f6f78bf005db99705ec435acdc3c8",
+    "uutiset/julkisyhteisojen-alijaama-0-5-miljardia-huhti-kesakuussa-4065dbc091a8/index.html": "44154359c29940a12133262b42b9398e7cfbf319a9e32fe29397cc168b200748",
+    "uutiset/julkisyhteisojen-velka-nousi-259-6-miljardiin-euroon-a24ef4286ebe/index.html": "6ffeb74058ed4320379a275c55ef62e563ead01c24f8453793b3ae2ad0b83668",
+    "uutiset/jynkanvuoren-kavely-pyoravaylaa-kunnostetaan-kuopiossa-1b809e5df98a/index.html": "30ea0194608cd8c97dd954c7e1aaa0d3831002f6ad537dab9d25a084d94168ee",
+    "uutiset/kampin-terveys-hyvinvointikeskuksen-rakennus-valmistui-b6bddd1a6fb9/index.html": "fc839d2912931efabd19c2807b5bb92b5c50bed9c61bbc54d3bb66d37617a0e1",
+    "uutiset/karamzininrannan-uudistus-toolonlahdella-etenee-kivityot-55e6e217d134/index.html": "dc010cb75d44142f91e4ad3d2458f363e7018b7b5b69704d69b94edc8bc3f1c2",
+    "uutiset/karjalan-lennoston-harjoitus-voi-sulkea-teita-lokakuussa-9f5082949d65/index.html": "f1c277ac7cf80ab34dcd38845e2574570b764274b7abee6157a57211ffbc645a",
+    "uutiset/kaupan-liikevaihto-kasvoi-elokuussa-7-9-prosenttia-0172ab418392/index.html": "89dfd3db99d39c8b25bb2f61a206e47374abbaea1786849c38dfa396e6614b92",
+    "uutiset/korean-niemimaan-sedimentti-erottuu-nasan-kuvassa-b25d7a241a77/index.html": "532e041c0c94798aca23528dd4d681058ee5e95f21bcbe84953ae0f14283ed6b",
+    "uutiset/korkeakoulut-solmivat-yhteistyosopimuksia-kiinassa-e9296ac693e9/index.html": "b914f9dbf85360a9f77140e2b78e7559bef197f1c57fea3367a754a65544f554",
+    "uutiset/korson-uimahalli-sulkeutuu-2027-hakunilassa-remontti-402abbd6fcc3/index.html": "8aa9e97a36db42ee8321b93383f34caef98eaa7aae5107bfb68835bcde6be82b",
+    "uutiset/kotilon-lastenkulttuurinayttelyyn-voi-tutustua-verkossa-ed01e64009e6/index.html": "246ac56f49e10c1d16a47f80b3824976dffc47ebbe0d82a6aae8d24d792bc4eb",
+    "uutiset/kulttuuripankki-kokoaa-14-maakunnan-taidepalvelut-9f85a9249ff4/index.html": "bfefe63a572c332a5a7ebd6efecffd957f84971068d8a8237195e4cf59f20019",
+    "uutiset/kuluttajahintojen-vuosinousu-syyskuussa-ennakolta-2-6-2e846b3cf176/index.html": "9ad927790bbdc53e3a8839c320a709368fd77c2634e048cbccaa3ea10af5d388",
+    "uutiset/kuntaliitto-ehdottaa-valitusoikeuden-maaraaikaista-rajausta-fe92f910b26a/index.html": "2e1cac320466c85cb2f655f9849417643583cf3a042e1bd3293656997df092d8",
+    "uutiset/kuntaliitto-tyollisyyspalvelujen-asiakasmaara-kasvoi-10e9a01ad0d6/index.html": "7a695cb36df2e3856974631ac229e61e0c7b93eca9e6ca9cbbf463816b63e1ad",
+    "uutiset/kuntapaattajakysely-tavoittaa-valtuutetut-viranhaltijat-0dadd1c7a542/index.html": "1ef549b202006169b3fda15da16b480112f4f421509685e0e96c16320804815d",
+    "uutiset/kuntatalous-heikkenee-vuonna-2027-valtionosuudet-pienenevat-4c28a63affcd/index.html": "96f21095c8e125a0bb7381b3cb90b7d83031f897b86182d1772f8620cad296aa",
+    "uutiset/kuopio-ennustaa-8-5-miljoonan-euron-ylijaamaa-414e3cacf805/index.html": "604575a58f276fd61b0127f9cbef122355ed8959eb62695394ec769dd00041ba",
+    "uutiset/kuopio-etsii-kuntalaisilta-ideoita-896aafea7d4a/index.html": "585a5f60ec2d2362c4dd0dd783a17275afbd7609d9e7a29553bb8d6feb866ca6",
+    "uutiset/kuopio-eurooppalaiseen-johtamiskoulutukseen-aa9ec5a14b3a/index.html": "3c4383a71586f4857cef1b3308ea203fc6e35d24b690440b07070074646c3bec",
+    "uutiset/kuopio-julkisti-vanhustenviikon-ohjelman-lokakuulle-1b86dc585a62/index.html": "ee18281dd1237d5b43008556c958ee6c475b08d681a946050917ad22b8f601dc",
+    "uutiset/kuopio-kertoo-osallistuvansa-lvv26-harjoitukseen-7026a3950494/index.html": "28fbae6b41a50ffd1509c4ac16d82b73966e7efaf0b21b4abf3a8f21e97924c9",
+    "uutiset/kuopio-palkkaa-syksylla-viisi-tyotonta-nuorta-ensi-vuoden-9daf662c054b/index.html": "a0abb940a0f8a9a7597ebc0c90dfddb749db09ec744fb9f50044c6b6c46d944f",
+    "uutiset/kuopio-tarkentaisi-esiopetuksen-oppilaaksiottoa-b883b041affa/index.html": "763a19522604581f01f2d124a46b00122e1f0c3660131c884b8f863488ec857d",
+    "uutiset/kuopio-uudistaa-turvallisuustekopalkinnon-0135c0ae3ae2/index.html": "9432d344b75d926f49e9567b09a2384c30110799e44a7376cd383da0f98181c6",
+    "uutiset/kuopio-valmistelee-sarkiniemen-paivakodin-tilaratkaisuja-a5bce1875201/index.html": "5fa7e74b383fbf79bd47ef87b6dd4dab930805e318652d04993577f3f1f22d2c",
+    "uutiset/kuopion-blogi-ajan-puute-yleisin-este-liikkumiselle-9497221470f7/index.html": "3f27eff548a9947d59d950ac7af12669c9c56a14c21e854e49c572004cd41272",
+    "uutiset/kuopion-johtamismalli-nojaa-kolmeen-arvopariin-6caece9cc4b0/index.html": "9921e3f1c9e2703b927c955cc120bc7cd04b4a08170665cf35e4a68b5a95254d",
+    "uutiset/kuopion-kaupunginorkesteri-svang-yhteiskonserttiin-abb6da8fa71d/index.html": "e008db5a87769781b7d7fe35f23dab0fb312eae25c84b2ce2d985c76fb9a3681",
+    "uutiset/kuopion-kaupunki-taideviikot-jatkuvat-lokakuulle-8a665fa35d3d/index.html": "f0130127db389844f12c246dcb9f70f25460e7d20057d38bc8b7a598f76b9fe6",
+    "uutiset/kuopion-keskustan-liikkumiskysely-avoinna-31-10-saakka-b8d212c57650/index.html": "52be8326af73882fc5ec3d03d4a04cc1c6963814ba2c2aebbe5d06b163f6adb5",
+    "uutiset/kuopion-museo-saa-samurai-nayttelyn-toukokuussa-2027-f6062bf646e6/index.html": "5ed5c410369ebcd17a5cf6718743ad941dd9602c16189b1cf5d6d4e49cc4cf39",
+    "uutiset/kuopion-taidelukio-lumit-saa-eu-n-opetuspalkinnon-5302e5201e17/index.html": "2dc614f17a8bd111456f345e9a9f94bd330bff3a7c047d19a474d362da2ba760",
+    "uutiset/kuopion-talousarvioesitys-niukasti-ylijaamainen-8e994b485511/index.html": "2190397204dd2fc68bbe58e3596f0f2c3d83d214d9a6ce0a7cd25fce36a9e1d9",
+    "uutiset/kuopion-tyoelamailta-kasittelee-tyontekijan-oikeuksia-f6aeaa0e7a76/index.html": "5ba17cd72be5194ad24f697664d9db8bf151fc1596a0cf54e10b382cab88fefd",
+    "uutiset/kuopion-vakiluku-kasvoi-396-hengella-alkuvuonna-2cd7ce2136f0/index.html": "0b320231c0e027642735d513310cd0d20ae32e8e1b15d70eb952abbc5566c6b1",
+    "uutiset/kuopion-vanhustenviikko-tuo-kulttuuria-kohtaamisia-5cd5fcd61b42/index.html": "c88bfbe8889c1bf27969a5b9975d9a45e8219a67f61935830d9907e464df1e01",
+    "uutiset/kuopion-welcome-to-kuopio-tapahtuma-20-lokakuuta-a050cd8361c0/index.html": "40683d30619f4fc535494f45c842a34c6c4d212f834fbd4263c3fe2e39ee955d",
+    "uutiset/kuopion-ymparistopaallikko-lahiluonto-kaupungin-kasvun-3728f0b0d62c/index.html": "29de61ea2ba146444ce7884e035dce1b1264a79e33caf2e80f2b22f207fa1714",
+    "uutiset/kuopiossa-asfaltoidaan-pyoronkaarta-jynkanvuoren-vaylaa-8cacb894e21b/index.html": "202b051d077f9dbb33430bd01c3989f73f7e124fb0db8abd3bf9c26fba667002",
+    "uutiset/kuopiossa-kokeiltiin-koulunkayntia-vaestonsuojassa-bfb80bbc6d7e/index.html": "3c02b3bc01ca344762613bd48132280d924a21014c8c771800e797c6ef6db26d",
+    "uutiset/kuusijarven-saunakapasiteetti-pienenee-valiaikaisesti-ac11a9d263e5/index.html": "eeb83ad1ba150ee2141daa26f715c31beb0069777f1210bddc3f6887db4dd8d2",
+    "uutiset/kuusijarven-savusaunat-voittivat-arkkitehtuurin-finlandian-f7ba9ee3717d/index.html": "2b905d2bc212371316712bc6f4cdaceccae83886d88b3accae067c80ecae42d8",
+    "uutiset/kuusijarven-savusaunoille-arkkitehtuurin-finlandia-2205f6bc9b0b/index.html": "f39a8bf6d7971abacc44bb3d2c0d2482fe1bd6c7f569e0f63caa3f3d3e9bef5f",
+    "uutiset/kuusijarven-wc-tilat-kayttoon-12-lokakuuta-c2bc4a29129d/index.html": "c06c7e767e64f82d3e3c1c4bf9c69b3b4ea15e661d272d7ce50bf677294dbf05",
+    "uutiset/laajasalon-palvelukeskus-vie-kohtaamiskahvilan-saareen-c12a889800ff/index.html": "da8baaf37a6d79bc565fb16140bec5aa0eacbd1dcd5966f31ec9257603766d6a",
+    "uutiset/lammitysenergia-kallistui-kesakuussa-vuodentakaisesta-849661688f3c/index.html": "ff5c2325f3ed07f556525ad30519e844d1abb4ea91cfbcf0d6db5237784c2b7c",
+    "uutiset/lansimaen-koirapuistoon-tulossa-kayttokatko-torstaiaamuna-133493c7588f/index.html": "1244f11484b7df26a6edca4c29b7b23ca2734f9ce8d57a7272d8fb7b82f398ae",
+    "uutiset/lansisataman-pikaraitiotien-hankesuunnitelma-hyvaksyttiin-743604e52b6d/index.html": "f967ab3fd28b2795c05e053d300607b2bc8ead1bca2b7286d9ce4ea1561ea11e",
+    "uutiset/lapinlahden-peruskorjauksen-valmistelu-jatkuu-esitys-86f1d633295b/index.html": "a717c4a4f8143f7bd7933506b47c85dd08b9a701a5a01b6cbe4d46831d1742f8",
+    "uutiset/lemmenkujan-jalankulku-pyoraily-yhteys-kiertoreitille-b72bfc87ea57/index.html": "e004750e25c2a1ce41f1cf298031c984c415044f9eb4984083229b9ce510b0b1",
+    "uutiset/lemmenkujan-kiertoreitti-kaytossa-viela-viikon-41-9379acd25d35/index.html": "13dcf72987c96935a79483a69ac1b1e91a239e21b72d7d9011e282c02281dcee",
+    "uutiset/lentokenttien-matkustajamaara-kasvoi-2-elokuussa-e4e3315600c7/index.html": "7af7045b729ba9de70dea55de7c07888fdb5c69a89f43511ed2fbc030042c424",
+    "uutiset/lintulahdenkadun-rakennustyot-alkavat-lehtoniemessa-b2fc857c6685/index.html": "db5e8e3b397ee4d022cfe035ae6b3f7794f6638856b67b1a76a542ee849a6cbe",
+    "uutiset/luottolaitosten-rahoituskate-pieneni-7-1-prosenttia-81e510f0302f/index.html": "f9a0a2856a66265e608a4559829a381ed4229b7f5b179a81d54ca904bba114c4",
+    "uutiset/maa-metsatalousministerion-budjetti-2027-2-6-miljardia-f4660882883d/index.html": "c0b56e780c3ae85c3b8746b2a1aa2f4ab5820030cba9da8ca89a84f120ddc7c8",
+    "uutiset/maaherrankadulle-suunnitellaan-viikonlopun-liikennekatkoa-a3824f561396/index.html": "48d28c931a5c929ffb0d7515ed15c8dfef1716a9ab29c2bbbeec2dfdf60e4f5b",
+    "uutiset/maarakennusalan-kustannukset-nousivat-6-4-elokuussa-7a59abbcb656/index.html": "a72df943543b06569d47f7bd8e9f22b98b241dc6acf0999fa737b61819c0e95d",
+    "uutiset/maarit-raja-aho-tutustui-myyrmaen-kunnossapitoon-379dbddb774b/index.html": "934129b023ca0690e58822b4d84a76396d0c4d94c9c1cd8d029d8d235272024a",
+    "uutiset/maatalouden-tuotantovalineet-kallistuivat-heinakuussa-5-8-aca81b732a64/index.html": "4b7b8c8ecb75e4d6db23d5dca30a3f3683fe3f41361fe4a529fcf815acb2dc11",
+    "uutiset/maatalouden-tuottajahinnat-heinakuussa-vuoden-takaista-43d7e9f8a735/index.html": "cedd144e593640be934dec1dbb8ab32bd5aad9813b4499c1535fb6d353bc7cb8",
+    "uutiset/maavoimille-hankitaan-trackx-tela-ajoneuvojen-esisarja-4e34402bf900/index.html": "4a14449ed6235686e1edcaf4cb4428012b82a165dc0352ca0c092fc4c0040270",
+    "uutiset/maksullisten-tutkintojen-vaikutuksia-tarkennettava-530d03529b18/index.html": "4b099e8b569678e73e9821c0e87ba618002c21330b1537e227f66027cf68babf",
+    "uutiset/malmin-novaan-suunnitellaan-laajennusta-asukkaiden-6643e2b67fc8/index.html": "c08646f7a5ccdf22f917208410a722bfd0e1e40048400f0bb83f2b01b9e0095e",
+    "uutiset/matkaviestinverkkojen-uusia-toimilupia-valmistellaan-1fc73b45c172/index.html": "a7e247e12d4746cd14db16befffeb5c1e869267c3cd1af059cce402b8990f109",
+    "uutiset/meri-rastilaan-suunnitellaan-koteja-noin-770-asukkaalle-f7722347c89f/index.html": "9bc906c0a931fc96d6f096f8d494de5ec741b936eece0a8193ebdccb2fdb80f0",
+    "uutiset/merikuljetukset-vahenivat-elokuussa-8-prosenttia-4c10eecaaa8e/index.html": "f597d4a0ef0d7ce16cdfd459b79eeea2b4b9a68a27e2ed599bba0337e7578226",
+    "uutiset/meriteollisuusstrategia-tahtaa-viennin-kasvuun-d6f58ecba065/index.html": "2671306cfaf80e39f5d514098ee7c8c2eb947b31ea911ee86992e1ecd9d618e9",
+    "uutiset/metsanhoidon-tuen-hakuaika-pitenee-rajoitustilanteissa-4ccf0693154e/index.html": "eefb686f0b6028b72ba7cf50f3d037e16a1e24df9427acdda819ae41042d733c",
+    "uutiset/ministerio-valmistelee-karhun-kiintiometsastyksen-804377534929/index.html": "03e7b373bb69ba940429e4a1f85a1d6207b8f7f07fed5f557e609127562e6862",
+    "uutiset/ministeriot-julkaisivat-nelja-venaja-skenaariota-146a0925e84a/index.html": "77ac275231439d0ee047177f184b6350c1e15e8a506f0f9f5ae28ae1ba22f5e5",
+    "uutiset/minna-canth-palkinnon-ehdotusaika-paattyy-29-9-2742b84a5738/index.html": "eb13a8ec77be76012caa493512bd0bc96455e558a959d93f8c2bec688e4f336e",
+    "uutiset/multala-hakee-saksasta-yhteistyota-vetytalouteen-dacb24d664ef/index.html": "3cca0c549a547b886d68dd445a8029def042390ea9b1c740f39e022988226210",
+    "uutiset/myyrmaen-uudistussuunnitelmat-etenivat-lautakunnassa-47b252d5f81c/index.html": "456b38b1ac8aa23a0ae5cc84ea62a2408798f0e2b931c3d3d147065bf306ee76",
+    "uutiset/nasa-aqua-satelliitti-kuvasi-doverinsalmen-76d26ccc835a/index.html": "902cdcd5055a2a549bbf874eeaefb20524bf5292f98b3654f3862db66d3dac99",
+    "uutiset/nasa-julkaisi-satelliittikuvan-australian-spencerinlahdesta-69f08f8012cf/index.html": "fa8c74c266c46411c4cebadf798bcb1ec183d4a06a0d0ae26e2fc10e606448a0",
+    "uutiset/nasa-julkaisi-terra-satelliitin-adirondack-kuvan-893d279b6ca6/index.html": "86829b389458b966afe33a0e58bac5a1fdceb1d00a88ef44fc7839966ee0f3e8",
+    "uutiset/nasa-satelliitti-maastopalot-levisivat-etoshan-suolapannun-3e3118902b27/index.html": "691bcd95b4ccb3ef3b7dfac7459832a96718dd1a2b481ccf2b489718e9ecf7db",
+    "uutiset/neulamaessa-vedenlaatuhairiot-mahdollisia-keskiviikkona-cadc5e300307/index.html": "76f13bf15117a4900e3ed6cb972d6fb9f7cd28afeffacdd202adcd2e8127f351",
+    "uutiset/neulamaessa-voi-esiintya-vesihairioita-28-syyskuuta-6f6c31f5cf96/index.html": "7a020d1f79a581d4a1d1b162b042975cf95a2c83955046acfa25ef8bdc72e5ea",
+    "uutiset/nolo-toi-rankkasateita-havaijille-nasan-58795708c3dd/index.html": "9e182cbdab13b880d1e34332aca587c12bef89565877686007936e7e47fb6597",
+    "uutiset/nuorten-nurkka-avautuu-pekurissa-12-lokakuuta-75f6dca5be2e/index.html": "4fd22e5ea3209d187a0e2eff1e4a951192c51560cb70fc703d12959d31ab4b2a",
+    "uutiset/nuorten-tyollistamisseteli-kaytossa-vuoden-loppuun-24628afbd844/index.html": "1d8d5a23a20dc4a88976ec6b15a534ce983e3ec66ff164510748b460498cfba2",
+    "uutiset/oikeusministerio-julkaisi-oppaan-lasten-nuorten-f9615094ff17/index.html": "32cf97cc1fdcf5854fc253ddc933eb1f84c040f9521bb7d8b4e6c11eff836748",
+    "uutiset/oikeusministerio-pyytaa-lausuntoja-lapsirauharikoksesta-7d6a15176a04/index.html": "3308c9e21d09c0ce8eeaf3d99ab57e6c874df0115928c2b78774e53044379bab",
+    "uutiset/oikeuspalveluviraston-toimipaikat-vahenevat-158-sta-38-aan-c3565ca130d6/index.html": "c1d3f7dc5491c32bb4a3da995c940e8b5508eab67f38f87d6c51e5389753b7bd",
+    "uutiset/oregonin-maastopalot-jatkuivat-syyskuun-lopulla-c79a7f054313/index.html": "b26a201f77b2a55a854fd04f232c9ec05e579e720df0eadf0e784072453703c4",
+    "uutiset/orpo-sai-katsauksen-kansanedustajien-turvallisuudesta-41eea6aee980/index.html": "941f3e36112c01e454e44f2fd64ca5ba14fc4babeaea82d04c04bf09ba45226a",
+    "uutiset/osaamistilin-kokeilussa-harkitaan-tekoalykoulutuksen-96de6f5ec840/index.html": "0e628c98ea61f47eb2ab0fbb74d81736d9155b1f04082e8cbeb5cc0eaf1a3274",
+    "uutiset/oulu-jatkaa-ikaihmisten-aurausvallien-poistoa-3e79d37338eb/index.html": "5807c0bcad612de79fe0477f36bcb16966b1ebc8c9707a7e74d88d1e6c15333f",
+    "uutiset/oulu-keraa-asukkailta-nakemyksia-sivistysohjelmaan-c8956407ecbb/index.html": "3d48ab6c36358e29a02d7e7e225d3a9ae997f3934c7730d8fff4368af809707e",
+    "uutiset/oulu-kertoo-johtavansa-suurten-kaupunkien-liikuntavertailua-84215ac70cf4/index.html": "a5c56c15006a7021f0f20014ca7b482340baae309da0315402ec452b5edef26f",
+    "uutiset/oulu-kertoo-osallistuvansa-valmiusharjoitukseen-97ffa58ef1b1/index.html": "1e4a009986ceb0acc447edcc5674e8f5d0dd05ade81cdbc2dd1002ecb5a9ce0a",
+    "uutiset/oulu-kysyy-asukkailta-sivistysohjelmasta-lokakuussa-a16a2aa7f71d/index.html": "2f76972d99b2dea92aae1082f71b75d397c088cc859626f163dbaab198395e6a",
+    "uutiset/oulu-opiston-senioriteatteri-palaa-lavalle-marraskuussa-8c9c6c7d7ddd/index.html": "bf40d1478430eabdeba20d993c77568db0d05fcae9fe83f762e27a69cb6679a1",
+    "uutiset/oulu-sai-hyvat-arviot-katuvalaistuksesta-talvihoidosta-fc37e26d3a19/index.html": "b308cb7b56b3ec2d1ade3c84099a7ec44c506616003dfc23b32f3a75e8d123a1",
+    "uutiset/oulu-uudistaa-kainuuntien-katuvalaistuksen-fc12a9cde34d/index.html": "f60e66fbfb02e3e0983fb19405986b67e169bf486777598dcf68f367f931b521",
+    "uutiset/oulu-valmistelee-ravander-korttelin-kaavamuutosta-f9a3d7c0d980/index.html": "32d4b6e06fdfe9f462a755457e24d184f26ece9a080658a46e08bb03a234f2a3",
+    "uutiset/oulun-greco-n-ryhma-arvioi-kaupungin-hallintoa-0dec2b39d891/index.html": "048a9753a5cbcd5df8ccd65d77299381056091e5ccd46486f04ff2a54cd669fa",
+    "uutiset/oulun-kaupungin-vaihteen-numero-poistuu-kaytosta-8-10-c5e10b449ff6/index.html": "97a1679cf0ab5cda5b0b1d0143bc36e15180a33a4d0dd34b16b1c3cb0be953da",
+    "uutiset/oulun-kaupunginhallitus-hylkasi-oikaisuvaatimuksen-6425b16e5671/index.html": "d2ec5816ae1436bf795aef1313edd4a72d3e94dcd03f0f856cf061ac3a89a5bd",
+    "uutiset/oulun-kaupunki-jaalinmajan-uimaranta-vaihtaa-yllapitajaa-e5a0f5bea8dc/index.html": "59f46cb1e636406fd24b9db203617ba586391e505cd060c0cd7c8e2e69008f5e",
+    "uutiset/oulun-kaupunki-kertoo-ymparistoterveyden-valvonnasta-c05f7df9e539/index.html": "a0efcd98787067e82915688505f293dc1f50dfce62c1a3b5cd55d507c568ecc2",
+    "uutiset/oulun-kaupunki-lastenkulttuurifoorumi-kasittelee-mediaa-bc357262eb3f/index.html": "174bcfdc6214307690cd93d5d87e4fd6f0a336c7faaa6db7b3a51e0df6f6a083",
+    "uutiset/oulun-kaupunki-russt-teos-asennettiin-oulu10b-hen-7320b219279d/index.html": "0c3caf18d368f994d039a41f5df5367bbb0e53dbe3eb4cd50acf441a97cba52f",
+    "uutiset/oulun-kulttuuripaakaupunkivuosi-esilla-eu-vierailulla-288034a2f477/index.html": "21972850d785611b5f392155dfe9f16240e5587ce13bdd49fc43feb11d8b8de9",
+    "uutiset/oulun-osallistuvan-budjetoinnin-aanestys-paattyy-sunnuntaina-b46385fe582c/index.html": "aba0e33cf521fb1f4a112536e0fcb2245e5a8b4f923200bab062d0c948a7b72f",
+    "uutiset/oulun-seudun-tyollistamisseteli-noin-kaksi-miljoonaa-euroa-ffb5e853ea4b/index.html": "a5da29c6b82f717894fa83508c8937cd4243edf6ef0ec0c435374f040d81ee5f",
+    "uutiset/oulun-talousarvioesitys-2027-ssa-23-miljoonan-alijaama-5fef23277802/index.html": "4e2d91246381f7163659f2369450827f126d6281396487d3007d45609e02aad2",
+    "uutiset/oulun-uusi-tapahtumasarja-tukee-nuorten-tyonhakua-45d3e3c1610b/index.html": "4fd567eb4cce27c892f7424d4be4288a4ffd2f354263ca40e74b2f378b4d59a9",
+    "uutiset/oulun-valtuusto-hyvaksyi-paivitetyn-konserniohjeen-6b274c9cef7a/index.html": "8268a58a6c806b66fcbc9ab528a0a237bbfce3dae63999829d0bd0a55a49d8f0",
+    "uutiset/oulussa-jarjestetaan-kaatumisten-ehkaisyn-tapahtumia-ab7243f61af1/index.html": "72f3f164efd8776569b87553c15abc09948d13b166e34d5273a1245c97a276fb",
+    "uutiset/packalen-rantala-kilpinen-esiintyvat-yhdessa-kuopiossa-482c01da18bf/index.html": "16fc7737046f9b35a90be162d126bbfae9a165f310c1ccb77c7ff5419c6e2e68",
+    "uutiset/pakistanin-ylla-nakyi-harmaa-hiukkasusva-f6d6d00e00a6/index.html": "6120ce42ef5ed7b81c7765a03cea403f102944acc65a29e40845d4600bd446f5",
+    "uutiset/palkkasumma-kasvoi-elokuussa-3-4-prosenttia-vuodessa-8c742b4b56b8/index.html": "7a751395edf26b6ddb7953187b86fac8b075a90ae4af4aab94357836a15404d0",
+    "uutiset/paloristi-kahdeksalle-pelastustoimen-ansioituneelle-cd562eb1e32c/index.html": "c6a43b32e55a810d9644d5eb1f9694475a16e47769e2b91e8cd66d979be77562",
+    "uutiset/petra-pieska-partasen-erityisavustajaksi-sijaisuuden-ajaksi-8da9ce9b3589/index.html": "9e130a9241457b208c1aaa56a10e21e24e77e46dda9bd39ed497bbba7a744ba8",
+    "uutiset/pihlajasaaren-kehittaminen-kaynnistyy-vuonna-2027-64aa1785598d/index.html": "2f3a85b92f1a4b668689e277e6b8da3e0682c93957648b8313c67cd413c5f644",
+    "uutiset/pk-yritysbarometri-odotukset-kohenevat-investointi-7bc4c26f61fa/index.html": "cc92a9fd2518c9fa03e804f6b638a87132946c6109b75b420d0ed791ad4c754f",
+    "uutiset/poikien-elinajanodote-nousi-ensimmaista-kertaa-80-vuoteen-54a3a84f0d82/index.html": "a72a13fdae9780e5e462ac77d10e763296abc7212da3009d6744851a367254ae",
+    "uutiset/puolustusministerio-jussi-toivanen-kenraalin-virkaan-sauli-2912317fbc92/index.html": "5a94f0af6397395a1ca690e3a5794bc1cb632fe1f4d6c1c4e768fe9695efefb0",
+    "uutiset/puolustusvoimien-kansainvalinen-yhteistoiminta-lausunnolle-2e5b6f771351/index.html": "eec0e3240c0594d575b136863bb4fa3894b4b848d2f21bda04625d0181401277",
+    "uutiset/puurakentamisen-tutkimushankkeille-1-7-miljoonaa-euroa-e74a2539a028/index.html": "2e35d50f7af067076322d6ffaf2c2e6c1cc4111f350b7ece2e434f94c17a3854",
+    "uutiset/rachel-hurrikaani-kulki-baja-californian-etelapuolella-59edc2fdcd34/index.html": "83f7263dca59a7482b7c8f8ddec6a670570ce7bf4dcd4724e989bfd0b97d72a6",
+    "uutiset/rahastojen-verotukseen-ehdotetaan-lapivirtausmallia-822144960788/index.html": "b1a07a3377780ea10cf0961cdd7d22aef4477e54596e13c7d4dcfb9e0e0662d5",
+    "uutiset/rakentamisluvat-kasvoivat-16-heinakuussa-2026-3f76041fe5ad/index.html": "8009d74288895f53d191bd06c5d19b70f9373fa3d2840f73d2dcb92f0ebbfaf2",
+    "uutiset/rautatientorin-metroaseman-perusparannus-valtuustoon-8dd79400fd98/index.html": "92bec8665b0ab61467eb7029637bfd1b7d5405d437fa98dc260f8cc92a7e071b",
+    "uutiset/rautatientorin-metroaseman-remontti-etenee-valtuustoon-58b84ada8648/index.html": "2321a8946e1fe2e7e658a8eb1c6595000b8546939f3a5ec162a0a202e8ef6209",
+    "uutiset/reservilaispalkkojen-korotus-alkaa-lokakuussa-fb7f0f0b3e59/index.html": "87c0d1fc0dff4b04d9ad5c5efd8741fd24ef37705a20085b47fef5b1049e855f",
+    "uutiset/rivieranraitin-louhinta-valmistuu-vantaan-763dffd702f2/index.html": "c155ac9d1e2931347a536ab3fd4b77b58df1313eff1258ada07b04291bc1eeec",
+    "uutiset/sahkon-hintasaantelyyn-kaivataan-tarkempaa-vaikutusarviota-3201487f4521/index.html": "d67280734f08d6dc6f67544f1dad132e81f62926039a23bf7486e3de68537795",
+    "uutiset/sahkopotkulautojen-kaytto-vaheni-helsingissa-81f29c83f795/index.html": "7b6fd365b79fe457c2607b69b43208d86364541a1029b7112b9fd51437281c27",
+    "uutiset/sahkoverkkoon-liittamiselle-esitetaan-etusijamenettelya-b88d52aa579e/index.html": "33ea128191240ed9e3e03e1b8d1ef699a403b5809eca919009d92e51206341df",
+    "uutiset/savilahden-tutkimuksesta-halutaan-lisaa-liiketoimintaa-4410ea6cee46/index.html": "b745502d7863c4076cddc4e94bb230b23f45c0313469b25b12ffbe6617ecf2f2",
+    "uutiset/sdg-liputuspaiva-muistuttaa-yk-n-tavoitteista-ed4545bb087d/index.html": "1782607412d6d4c445b730edf0abe91280ec7ec5bd1759ed9656720a5504d1bf",
+    "uutiset/seure-omistus-etenee-helsingin-paatoksentekoon-0eef129b805c/index.html": "85a9f45dce0983a223fccbbb3dd522bc7f4227ea126b63d88cf311dcd2586c55",
+    "uutiset/sijaishuollosta-poissa-olevien-lasten-etsintaohje-uudistui-ccde11681bc6/index.html": "d237165ed1c67305906510c8845c88909dce660e8fc3ecde779838b814848947",
+    "uutiset/sisaministerio-lahetti-ulkomaalaislain-muutokset-4c675026386a/index.html": "7901015e187fb7471f50cab469aa806b6562d0e3b7ac35e91cef357067e0d536",
+    "uutiset/sisaministerio-pelastustoimen-palvelutarpeiden-arviointiin-2c46131fe163/index.html": "16d164f2ab3d77e61c312a07dc4b73869562929503ff2b3efa1344bff11485a7",
+    "uutiset/sisaministerio-suomi-lahettaa-asiantuntijan-gronlantiin-c5e976469083/index.html": "d4dc5a34f9d0ca709d526be5bfe3a6fb60827446ddb920900946472f6f98b166",
+    "uutiset/siviili-ilmailun-onnettomuussuunnitelma-lausunnoille-009bd8338513/index.html": "36c6a9d9d5072e6f3c23b359a143d020c708ac8273c6025388c15c38f2ea8a52",
+    "uutiset/siviilipalvelus-kytkettaisiin-kokonaisturvallisuuteen-60ae5103baea/index.html": "bc222ba2dd317d800ece779a0e9b09a312b30f987bdacb75eeb99ea8ddd73662",
+    "uutiset/sprinkleritestit-voivat-heikentaa-veden-laatua-kuopiossa-602baae68d92/index.html": "fbf5ce29ba03eaad5aaac531b313e93cd583184ed6bb42c2b8c7903405d4b416",
+    "uutiset/stm-avasi-huoltajille-kyselyn-lasten-somekaytosta-da0191af3831/index.html": "d38c5e161b32879f25c9ec1345e00d22d6ce2e7c813d6a9b940d2106deb1b3ec",
+    "uutiset/stm-laakehoidon-kustannusvastuun-selvittely-jatkuu-2218f9c8bbde/index.html": "cfbcfd3456ef7af2945f586e9544319080d564a7992448465f5be8b0e8061cd9",
+    "uutiset/strand-kos-keskustelivat-eu-n-laajentumisesta-edc2082a22d2/index.html": "f692ae125673b8b8552df45670fb1b3178e24126d63f21ce2e7011da4e5d46e1",
+    "uutiset/stubb-st-re-tekoaly-pidettava-ihmisten-hallinnassa-f912fe343766/index.html": "d313af809adbe2e4b0bbaf4d2afa13eb9d62ec80b88bd78c810c818213256f1f",
+    "uutiset/suomi-kalifornia-allekirjoittivat-yhteistyopoytakirjan-f3d38d6cc848/index.html": "661b444265e634806cc82fced5c5449c2e426e0e0bf9c85e739108c0c9cfc273",
+    "uutiset/suomi-mukana-maatalouden-eurooppalaisessa-digikonsortiossa-6b30890419a1/index.html": "85e72c89e0614b08379bd28372481e87f5377fcc9ed95e6d68680f08b2992f75",
+    "uutiset/suomi-tukee-eu-n-pankkisaantelyn-yksinkertaistamista-c0ed3784ff13/index.html": "d62dada94eecabcd74e30fa3290ca7c19396be4b4433a2ffe959e0ee01c74dbf",
+    "uutiset/suomi-ukraina-allekirjoittivat-droonidiilin-404c67dcc0c9/index.html": "f95309af019b7f38b4f3ea2992067850657b520cefc31bb8bf0dea9e79ce8f00",
+    "uutiset/suomi-valmistelee-sosiaaliturvasopimusta-ukrainan-c00b055093de/index.html": "0a6f93286b3fa4cd7ca451269d134f715f3f86ae1f6e95aa45377f83aa3b81b0",
+    "uutiset/suorat-sijoitukset-suomeen-kasvoivat-9-8-mrd-euroa-d3a1b3daea40/index.html": "9315994f05ef940657664d8ef89e849035aaff84619d706f973346a7788fc674",
+    "uutiset/suuntimopuistoon-suunnitellaan-nuorisotaloa-asukkaiden-a421e685a2cb/index.html": "4bda24b5c7c2df80c223de30b5e36287450d3b60be6af765168b121816522a76",
+    "uutiset/suvilahti-diy-skeittiparkin-purkua-lykataan-uuden-puiston-f2a3b9da8395/index.html": "61b47324f94455576188134e605b8fb388931279c03a8da30750804a71b5ce12",
+    "uutiset/syopastrategialle-tiekartta-vuosille-2026-2031-2f0dda6d3c53/index.html": "612292f6034d609200ec8e15b36056da9517fd76c604a7457abc48c648317043",
+    "uutiset/taifuuni-dujuan-kaantyy-koilliseen-kohti-japania-12ba6b5b591e/index.html": "101decfd8930db6b19b96c83f3150419e04e4920fcfaf07055cca5eea71e3749",
+    "uutiset/tayssahkoautojen-ensirekisteroinnit-kasvoivat-syyskuussa-cb48c97676be/index.html": "31014b50994a0d61f699cf39eaa8a1fa426987100259352036faaae2c5338e3d",
+    "uutiset/tem-pyytaa-lausuntoja-yritystukien-kriteerien-muuttamisesta-df3aa3cca842/index.html": "68a124c8c541829d417da4cd216d502ba8e3cbc9d633e8e79d84cea0d78006c2",
+    "uutiset/terra-satelliitti-kuvasi-ruskaa-yhdysvaltain-koillisosissa-95fb791ce8c4/index.html": "098700506abdf9bfcaeb12adbaacfaccb2fc13bcde685cf30e7b9dd5d44291bc",
+    "uutiset/tiibetin-ylangolle-satoi-runsaasti-lunta-nasan-06fea975771b/index.html": "2b490f50bcc770adb55dd02ae74a1f7f4dbc2eb60a06589cae8793abb373f072",
+    "uutiset/tikkuraitin-kavelyreitit-siirtyvat-etelareunaan-21-9-83ff62c717c4/index.html": "3b05222e7cbf551d3470173911f7d9e11b9f44d5ba40e0b13ad3101cd56b9e89",
+    "uutiset/tilastokeskus-kotimaan-vapaa-ajanmatkat-kasvoivat-bc811a1e0b85/index.html": "e82e396835ce964537207a666a92de302edc57b603c5327c395da57589e4121a",
+    "uutiset/tilastokeskus-kuluttajaluottamus-heikkeni-syyskuussa-0b8385ef2ec4/index.html": "1d577eabd31c30817389c5fb0989dde118f6dbd0fb10159b8eca13a69f3f89f1",
+    "uutiset/tilastokeskus-kuorma-autojen-tavaramaara-kasvoi-15-54f3c629fbec/index.html": "fedd657eed0dad0ab58decba77aad72a6643a6854578b36af8b6d2e97aa15825",
+    "uutiset/tilastokeskus-rautateiden-rahtimaara-vaheni-6-prosenttia-5c7038698aab/index.html": "1689affea12427e994af3e41c244d93df21dcebc0fd685519e1b06a5deaa1533",
+    "uutiset/tilastokeskus-saastamisaste-4-bkt-kasvoi-0-3-62a3efa8b32a/index.html": "a7bc71e12db57b08bc0e79eede45b20f94ea9d7450705fa4495ef17a0d38785c",
+    "uutiset/tilastokeskus-suomalaisten-paastot-laskivat-4-655a35755963/index.html": "29db4b262ff5f5c499f5296f93271da8f9ded3371b484f764c08c741436abf7c",
+    "uutiset/tilastokeskus-tuotanto-kasvoi-elokuussa-2-3-prosenttia-9b023452fb72/index.html": "6c2e7826e7cbc6f5103bfd2f30ce815fc3c965b876a16d0b5275c0b9911e49da",
+    "uutiset/tilastokeskus-tuottajahinnat-nousivat-7-3-prosenttia-0d04d24d7fe2/index.html": "d8e53954ce0ff33e4614f005541a0c50a8b58535294c9b3a573544dac05692a8",
+    "uutiset/tilastokeskus-tyollisia-34-000-enemman-kuin-vuosi-sitten-c9ed2d317f03/index.html": "b446cdc97c5e9094132b0be6c60717602dfa603891fb279d4fd318c9fbf5a1bd",
+    "uutiset/tilastokeskus-tyotunti-maksoi-tyonantajalle-38-7-euroa-f733c3e47c8c/index.html": "d1524c425d9797c26442bb43299d3246a5c65aa24293bca4f8c8fe4174a2b414",
+    "uutiset/toolon-rubinen-lisaa-ruotsinkielisia-hoivapaikkoja-c2173e19a9c8/index.html": "68bc6ecd2e508046da6dcfcbf5ce85f315686a8b696183bcd5fc14c27a5d6cdf",
+    "uutiset/toolonlahden-tulvasuojelutyomaa-palkittiin-helsingissa-c8d9df28ef8c/index.html": "dc87d5a97f110116983f9f0b35c2161811a52a31e78c2768f3613e43ca5a869d",
+    "uutiset/toolonlahdenpuistoon-suunnitellaan-aalto-skeittipoolia-d0725b324ab4/index.html": "5d662f694beaf410371b0e261a63defd700caa59eae8e55ce36fe53818d2608a",
+    "uutiset/tp-utva-kasitteli-ukrainan-tukea-kiina-suhdetta-aac41588a8b4/index.html": "e3bdb89937975aaed28e41dd0e5db58b9deaef611cd2cd99d77917b7e784d2d7",
+    "uutiset/tp-utva-kasitteli-ukrainan-tukemista-persianlahden-abd979348665/index.html": "5e8724e763b1e17ec12cf04c75d66cac95ceb322538228549f8ac026a44c22cc",
+    "uutiset/tsahkna-vierailee-helsingissa-kertoo-ulkoministerio-c1124443e572/index.html": "2777a4b69c978871f5fe6e40ba8842ca671b5e5469f945d0a6b54a1389c34b5d",
+    "uutiset/tukkutorin-suunnitteluperiaatteet-areenasta-luovutaan-66b21dd4363f/index.html": "b686e7f0e8526b3f6e675fb0166bccfa9269d4e5718a9c1a15bce8a2a3d4be9d",
+    "uutiset/tyoryhma-ehdottaa-vapaan-sivistystyon-rahoituksen-b2545a689479/index.html": "9d4b2f893509bcbc421e55a923b4dd795f4111ac19aa443284f83d340f1d34c9",
+    "uutiset/tyottomyysturvan-kannustimista-kaynnistyy-selvitys-a2e251cb6826/index.html": "826a1341b505a1a37ab8d754536b9343d7292385c1c38c139859c6a086d9ef37",
+    "uutiset/ulkoministerio-roy-eriksson-muncheniin-perustettavan-20e36c0252e9/index.html": "bf9a0935dbb2cbb66bba8ec3031a75ddfe38f4b1f133e0645b3f5b583038ecfe",
+    "uutiset/ulkoministerio-tavio-vierailee-tallinnassa-kauppayhteistyon-94c6d93ffe07/index.html": "b751b5a19bc176f9a62c089831e95613cf00f49c4071fc248f777b37816debeb",
+    "uutiset/um-lehtinen-yk-n-hataapurahaston-ryhmaan-fbe5ec9a52b1/index.html": "da2b89eafeb62408a4d2cfeb57410a692655c6cf581799418f3a18c9bf5daa29",
+    "uutiset/uudenmaan-vieraskielisten-maara-voi-tuplaantua-2045-mennessa-260f179f793f/index.html": "90d255a087a6f764c450bfcdb8c6c1ac82438bda42ef69e695777f242b6d22d5",
+    "uutiset/vaaralan-bussipysakit-siirtyvat-6-lokakuuta-5fca6d55d831/index.html": "2777afbe0bf6c34846b5354071058c55d900cf341079c31371462d53474c00a1",
+    "uutiset/vaaralan-varikon-louhinnat-valmistuvat-murskaus-jatkuu-9b9c4b59f7f1/index.html": "66a81248fcbd6abc1b07a8bd37382e9c866c0af22ad866fd9e90983c03d4e4fe",
+    "uutiset/vaihtotase-1-3-miljardia-euroa-ylijaamainen-f047738905a4/index.html": "2b01c8609ad75a44011ee3a6f849b3d7b9931c9185131a6d861a3b1d2f647321",
+    "uutiset/valinnanvapauskokeiluun-fysioterapia-kuusi-laakarikayntia-7f1c353a070a/index.html": "f25d07a8555fcb6d9d974e2d979c4e7e5c69347b7203cb27cd95e599b18ba09e",
+    "uutiset/valtioneuvosto-eu-neuvosto-linjasi-kalatalousrahoitusta-092c43fb123e/index.html": "6ddbf5d7400871a95cfc8e3a0ab282878e53c6ae21f1ed87bdb290eaca853c95",
+    "uutiset/valtionhallinnolle-uusi-luontotyon-johtamisen-malli-802f22d74986/index.html": "7777f32e3cde7bc52263b16a1a40e0b4d0b903b67b47de6bbb99f96fd20afbcf",
+    "uutiset/valtionosuusprosentti-laskee-25-05-prosenttiin-vuonna-2027-37ed852a27c6/index.html": "c01fde23a152dc53735542c586afa6a8552121b15ec7ab6f69f931187e4adb16",
+    "uutiset/valtiovarainministerio-kasvu-nopeutuu-alijaama-syvenee-34fd8ffc3b62/index.html": "0540feb1570f454be83e69f59e0477bc4b08ad16960cb8f23285ca31d111379d",
+    "uutiset/valtonen-arktinen-yhteistyo-vahvistaa-turvallisuutta-95ad2d8ee611/index.html": "fa7f62e337dd3acc54f4789abca773d668d1f56624839c1ed814679596d6b95a",
+    "uutiset/valvesalille-vaistotiloja-oulun-vanhasta-vankilasta-55b598f4b18d/index.html": "32c53fe7fe1a741bff460434998ee1cc07f85841c13432b21498fccfc529aa43",
+    "uutiset/vantaa-haastaa-kunnat-luontoterveysvuoteen-2027-31c76d776a4f/index.html": "5a14f68d5a43636a6450e5de30124f659285f56b28325f7d4585520c298c3c0f",
+    "uutiset/vantaa-harjoitteli-vaestonsiirtoon-varautumista-12c4d486d6af/index.html": "fb23521660a7d84fd98d3443b8a81fc332c9d20067dd5553a93c27c9fa3b941d",
+    "uutiset/vantaa-jarjestaa-vaikuttamistapahtuman-30-syyskuuta-e524270d4616/index.html": "63b9defdc7a9f7f52c6b8d3d3b2477c40ab4cff51af56fa618edb6391af0c21d",
+    "uutiset/vantaa-keraa-tyonhakijoilta-palautetta-palveluista-5a635efaca1d/index.html": "f836ab634394b49642fbd778c5ad3e1079b558354691723e16c235079e74ef7f",
+    "uutiset/vantaa-kertoi-liputtaneensa-kestavan-kehityksen-puolesta-c190474290f6/index.html": "9b4301f6219f389950e588056c1e83c76de5aa900d3c6b72fcd1902a76a4f3bd",
+    "uutiset/vantaa-kertoo-aamu-iltapaivatoiminnan-kilpailutuksesta-32dddf9b3ee9/index.html": "fa9516b8415f17b70d00ff0e317bfe940cc26a8abd07d2cf07ca5ca1c6360300",
+    "uutiset/vantaa-kyytitien-pontitustyo-alkaa-1-lokakuuta-c88460bedac1/index.html": "5090ca0d73f84b4c67f682470e8af336aaac73ad7958f3539f5e08f22d94d0ee",
+    "uutiset/vantaa-kyytitien-pontitustyo-alkaa-1-lokakuuta-ef9f7920c011/index.html": "17d38db95d8a672af9721b52c9c7fe395c4b70c58f53442d191096a922ad99e1",
+    "uutiset/vantaa-lahettaa-kiinteistonomistajille-tiedotteet-uudesta-ed3b01a4297a/index.html": "04f29acf4959c43c2bfc869c857c0a9eb0a3a546509db94084ef7f2d8687edd2",
+    "uutiset/vantaa-mittaa-toimitilojensa-radonia-talvella-2026-2027-e34055926556/index.html": "e6bf1fff78b48827e50494c7d816788bc28fb2a26b73f274ab68eb1f3645e78b",
+    "uutiset/vantaa-osuustien-ratikkatyomaa-laajenee-28b2b9770662/index.html": "e95aa2e321aa0c402f058d5f2af44bc43313a2aa882043c1eb9e1bd2a748466e",
+    "uutiset/vantaa-porvoonvaylan-kaistoja-levennetaan-d838076e2c08/index.html": "a6004348a3b32f8ba786896758b3060383ebf2639b254c2ec5011fa4a0d8a0ae",
+    "uutiset/vantaa-uudistaa-esiopetuksen-kielivaihtoehtoja-2027-19702eda7825/index.html": "f4c6c2fd2cfdad2aac566f91e561c22fff49a3d7115cd07bdfa87d5d0acf5264",
+    "uutiset/vantaa-valmistelee-yhteista-suunnitelmaa-palveluille-6851893ce6d2/index.html": "fb301d1472515851a4ca6d6f8b0fb1b3076a88bdd9a3d4eac8fb2e2ae2b24f8b",
+    "uutiset/vantaan-hiekkaharjun-golfliput-maksavat-viisi-euroa-8d0312b9b940/index.html": "d8fa4d97a6c06629cef33b781d48c52a9c542af74f2da591adf44b442069492e",
+    "uutiset/vantaan-historian-museo-hakee-avajaisiin-vapaaehtoisia-d96705192438/index.html": "fbd045f288c8dd79f87a768b0d1a4a89ca81939a044081c92a45c68519683c97",
+    "uutiset/vantaan-keihastien-jarjestelyt-muuttuvat-28cb5bdd8d54/index.html": "9614d923ab9c4839f76abe8a2757e0d97b985c765be1e55c4d6343a33eb9a7b5",
+    "uutiset/vantaan-leppakorven-liikuntahalli-valmistuu-alkuvuonna-2027-b1ea3401e43a/index.html": "0088675e101891e989727a9a96ae6cc62661ea8adc8e697b17305f79e328a038",
+    "uutiset/vantaan-liikunta-avustusten-ehdot-muuttuvat-marraskuussa-81d0e0959168/index.html": "00ec85bd4d66285dc2461e2204c55c5cbdf03e6509a144a8efe5a0aeec14ef9f",
+    "uutiset/vantaan-monikielinen-neuvonta-auttaa-myos-pitkaan-asuneita-8244199fd98e/index.html": "651e4280e33a79a4a10edc6b368f7b4579454d7d6eac226937b63ab52907b2fe",
+    "uutiset/vantaan-musiikkiopiston-isanpaivakonserttiin-vapaa-paasy-004a6e9a6859/index.html": "31aca3a8dfa824b31860440b8d01e1ca22b1fd20bd956a98e50df463214f872c",
+    "uutiset/vantaan-osa-kaappisangyista-poistetaan-kaytosta-17fb53caf5e1/index.html": "e466a951399f63d1c754c81d5339696b4157806f6f9126ca62be0d19bc1fd289",
+    "uutiset/vantaan-paivakotikaavat-etenevat-valtuuston-hyvaksyttaviksi-3879659d8f8a/index.html": "a0ca05637650870d6938acdc68eb4cfa06c3594632f636647321f88bc801c961",
+    "uutiset/vantaan-ratikan-tunneli-etenee-tikkurilan-aseman-alle-1ca8188892bb/index.html": "b5e71b2865b46ca6b7df7a27c9a1c74c92442c3741296904e137a65e4450a013",
+    "uutiset/vantaan-syyslomassa-taidepajoja-kartanon-kekri-f1f023667c0f/index.html": "f5ec47a4e8275c739c2db623ef2bf3ebc20aa10cafa22b5291f47e1521d5a682",
+    "uutiset/vantaan-valtuusto-hyvaksyi-ratikan-vaunuhankinnan-takauksen-f3cdd3704bdf/index.html": "af2d55a054bd6413c064525fa3348fa3402447096ea340d1ccfbaf2f7632eb6b",
+    "uutiset/vantaan-valtuutettu-tutustui-ristipuron-paivakodin-arkeen-24780c2c9ea2/index.html": "9a4d87bc91d187f3b208eb9ba29798fa0a5e8cd636c36f09a1650aeb314f89e5",
+    "uutiset/vantaan-yty-akatemian-ideat-etenevat-tyoryhmaan-ba96b94ee71f/index.html": "cc1c5a260578505fca960f2b47e089bd0fbdcc3753371e0bce07fdfac3d3e9fe",
+    "uutiset/varhaiskasvatusmessut-jarjestetaan-espoon-dipolissa-9-10-125487dcb855/index.html": "1b505f52eb8b8aee94da7dd8fbbadacf1aea592c791788b5c3bf81f48927de7c",
+    "uutiset/viikatepuiston-suunnitteluun-haetaan-asukkaiden-nakemyksia-d8d916de41e0/index.html": "d3fe3f4bbdf0df042a6c656c3427acde5a2e85ccbeb9c4b5997cd79143fe6ed8",
     "uutiset/vilkun-matkustajamaarat-kasvoivat-kuopion-14d59935c7b1/index.html": "39639f0e8fc8c640dcc84578f68264205f6c4364073cd9c19e4f4144ee8a2863",
-    "uutiset/vireille-pantujen-konkurssien-maara-kasvoi-elokuussa-7b0f24284b3c/index.html": "fff2f6fe794d2321814e6c0a0d07626b7d80d1399f4ad2f6f80c766abea50bc7",
-    "uutiset/yksityistielossien-avustusosuus-olisi-80-prosenttia-6bfa940e77d2/index.html": "7ac81571310de1d708954f077d8ceeb0a628a505ffc261fd1ea784e2f6e39c0b",
-    "uutiset/ymparistoministerio-esittaa-157666854560/index.html": "d856e439d3a0c04a4aa27b7772b70732fd0b954b8a2fe870621dbb5cbae09509",
-    "uutiset/yosemiten-dome-fire-kasvanut-1-177-eekkeriin-pysaytysaste-2f32562eed60/index.html": "4415363ea20ec528907d5267c0261b23b77d831f07fba363f05c4207f0f39ce5",
-    "uutiset/yrityksia-lopetti-enemman-kuin-aloitti-huhti-kesakuussa-2026-a4a923e9509d/index.html": "2ec2682c6153c079eae05069bc0e2e485a0002ef7da929057e1c9cc274c1bf86"
+    "uutiset/vireille-pantujen-konkurssien-maara-kasvoi-elokuussa-7b0f24284b3c/index.html": "904946fa91e22a7a719fb14d3226f14cf806f47eaa328ab4e9403fc1ac1623ca",
+    "uutiset/yksityistielossien-avustusosuus-olisi-80-prosenttia-6bfa940e77d2/index.html": "9c5ca44dfe159c9c87c6412d2812a26c695d841c9aa05b6d3efc925f3d9fbb79",
+    "uutiset/ymparistoministerio-esittaa-157666854560/index.html": "c0d02a3d12ac8f1c665026529b0e18274022947f52c0be1425befa4d7f4f6e7f",
+    "uutiset/yosemiten-dome-fire-kasvanut-1-177-eekkeriin-pysaytysaste-2f32562eed60/index.html": "659cfcf867221f98a4b538ea2e4e1590a897ade1e6f2f512c4de8e6104fcbd55",
+    "uutiset/yrityksia-lopetti-enemman-kuin-aloitti-huhti-kesakuussa-2026-a4a923e9509d/index.html": "1186d7fb112089cfa618479b3d6cbb78bafe0d393ccfb6a204ae547f8040bc60"
   },
   "schema_version": 2,
   "packet": {
     "fixture": false,
     "image": {
-      "alt": "AI-generoitu kuva: Vaalealla puupöydällä on pino valkoisia paperiarkkeja ja niiden vieressä musta laskin.",
-      "attempts": 1,
-      "caption": "AI-generoitu kuva. Ei valokuva tapahtumasta.",
+      "alt": "Arkistokuva: Avoin musta kansio, jossa on valkoisia papereita ja kaksi talonkuvalla varustettua muistilappua, on tummalla pinnalla avainnipun kanssa.",
+      "caption": "Arkistokuva artikkelin aiheesta.",
       "classifier_output": {
         "category": "Kotimaa",
         "concepts": [
           {
-            "depictable_scene": "Todellinen valokuva sosiaali- ja terveysministeriön käytössä olevan rakennuksen julkisivusta ja sisäänkäynnistä.",
+            "depictable_scene": "Todellinen valokuva Antti Häkkäsestä puhujakorokkeen ääressä, mikrofonit hänen edessään. Kuva esittää päätöksistä vastaavan ministerin, eikä sen tarvitse olla juuri näiden lupapäätösten julkistamisesta.",
             "must_avoid": [
-              "Misidentified government building",
-              "Fabricated ministry architecture"
+              "Invented likeness of the minister",
+              "Presenting an unrelated photograph as the announcement of these six decisions"
             ],
             "must_show": [
-              "Actual Ministry of Social Affairs and Health building",
-              "Building facade or entrance"
+              "Antti Häkkänen",
+              "Lectern with microphones"
             ],
             "rank": 1,
             "safe_to_generate": false,
             "search_queries": [
-              "sosiaali- ja terveysministeriö julkisivu",
-              "sosiaali- ja terveysministeriö sisäänkäynti",
-              "Finnish social affairs ministry building"
+              "Antti Häkkänen puolustusministeri",
+              "Antti Häkkänen puhujakoroke",
+              "Antti Häkkänen lectern microphones"
             ],
-            "subject": "Selvityksen valmistelua johtava sosiaali- ja terveysministeriö"
+            "subject": "Puolustusministeri Antti Häkkänen"
           },
           {
-            "depictable_scene": "Toimistopöydällä on paperiarkkeja ja laskin. Kuva rajautuu asiakirjoihin, laskimeen ja pöydän pintaan neutraalissa päivänvalossa.",
+            "depictable_scene": "Pöydällä on avoin asiakirjakansio paperiarkkeineen ja sen vieressä kiinteistön avainnippu. Paperit näkyvät viistosti siten, että niiden tekstialueet jäävät epätarkoiksi.",
             "must_avoid": [
               "People, faces, hands or other body parts",
-              "Readable text, benefit amounts or proposed policy changes",
-              "Logos or official seals"
+              "Fabricated readable text, official seals or logos",
+              "Rejection stamps suggesting a final legally binding decision"
             ],
             "must_show": [
-              "Paper documents on an office desk",
-              "Calculator beside the documents"
+              "Paper documents in a folder",
+              "Property keys"
             ],
             "rank": 2,
             "safe_to_generate": true,
             "search_queries": [
-              "työttömyysturva asiakirjat laskin",
-              "selvitystyö paperit laskin",
-              "paper documents calculator",
-              "office desk paperwork calculator"
+              "kiinteistökauppa asiakirjat avaimet",
+              "lupahakemus asiakirjakansio",
+              "property documents keys",
+              "paper folder keys"
             ],
-            "subject": "työttömyysturvan sovittelua käsittelevän selvityksen asiakirjatyö"
+            "subject": "kiinteistöhankinnoista tehtävien lupapäätösten asiakirjat"
           }
         ],
         "version": "article-first-v1"
       },
-      "credit": "AI-kuvitus",
-      "depicted": "A stack of white paper sheets lies on a light wooden desk next to a black calculator. The image is taken from a slightly elevated angle, showing the top surface of the desk, the papers, and the calculator.",
-      "generated": true,
-      "license": "AI-generated image",
-      "license_url": "https://uutistenlukija.fi/ai-kuvat/",
-      "local_path": "media/8b4f02be9b040339c074b00d2ccbaa716df6c836dda30154798f44ed1a60f24b.jpg",
-      "model": "codex-oauth:gpt-image-2",
+      "credit": "Photo by Jakub Zerdzicki on Pexels",
+      "depicted": "The image shows a close-up, slightly elevated view of a black binder, open and filled with papers, on a dark surface. On top of the papers, there are two sticky notes: one yellow and one pink, both with a simple outline drawing of a house. A set of keys, including one green key and two black keys, along with a black house-shaped keychain, are resting on the sticky notes. To the right of the binder, a collection of small, house-shaped figurines are arranged in rows. Most of these figurines are da",
+      "generated": false,
+      "hotlink": false,
+      "license": "Pexels License",
+      "license_evidence": {
+        "image_path": "/photos/34135038/pexels-photo-34135038.jpeg",
+        "license": "Pexels License",
+        "license_code": "Pexels",
+        "license_url": "https://www.pexels.com/license/",
+        "photo_id": "34135038",
+        "photo_url": "https://www.pexels.com/photo/real-estate-keys-and-documents-with-house-models-34135038/",
+        "photographer": "Jakub Zerdzicki",
+        "photographer_url": "https://www.pexels.com/@jakubzerdzicki",
+        "response_sha256": "1e4c3e8e24f8967fe58abd05b69551f0c3244097ef56058a0263b64f2adda7b3",
+        "retrieved_at": "2026-10-07T09:28:26.587367+00:00",
+        "transport": "jina_reader",
+        "version": 1
+      },
+      "license_url": "https://www.pexels.com/license/",
+      "local_path": "media/1d3f581bc1be716725709434c3066b9bdb110ed5dbdd96cf0c7a9bc0d1410baf.jpg",
       "pixel_review": {
-        "alt_fi": "Vaalealla puupöydällä on pino valkoisia paperiarkkeja ja niiden vieressä musta laskin.",
+        "alt_fi": "Avoin musta kansio, jossa on valkoisia papereita ja kaksi talonkuvalla varustettua muistilappua, on tummalla pinnalla avainnipun kanssa.",
         "approved": true,
-        "article_text_sha256": "1d59d6d5fe4cc58526a2075d3af9becb357fb94b33afbcf4571dea5c223dec71",
-        "concept_sha256": "2c6d303f9f716ae536a76d22e529687512970ff7b2146325faf6d144727cc4d6",
-        "description": "A stack of white paper sheets lies on a light wooden desk next to a black calculator. The image is taken from a slightly elevated angle, showing the top surface of the desk, the papers, and the calculator.",
-        "fit_score": 10,
-        "image_sha256": "8b4f02be9b040339c074b00d2ccbaa716df6c836dda30154798f44ed1a60f24b",
+        "article_text_sha256": "aa3755aa7cf218a1c675741cb3210573ef3dd5d44c2e069cdba59972fbe50900",
+        "concept_sha256": "d9448691a84e02d3f300ea6489c5b89cabfd030f4102a05ecc597b633a749234",
+        "description": "An open black folder with white papers and two sticky notes with house drawings is on a dark surface. A set of keys is on top of the sticky notes. In the background, there are many small house models in black, grey, pink, and orange.",
+        "fit_score": 9,
+        "image_sha256": "1d3f581bc1be716725709434c3066b9bdb110ed5dbdd96cf0c7a9bc0d1410baf",
         "model": "google:gemini-2.5-flash",
         "must_show_visible": [
           true,
           true
         ],
         "no_people": true,
-        "reason": "The image directly depicts paper documents and a calculator on an office desk, which perfectly matches the selected concept of 'työttömyysturvan sovittelua käsittelevän selvityksen asiakirjatyö' and the article's theme of a social security review. The visible elements are generic and do not contain any forbidden content like readable text or people.",
-        "reviewed_at": "2026-10-07T08:54:16.242192+00:00",
+        "reason": "The image clearly depicts paper documents in a folder and property keys, which are the must-show elements for the selected concept. The overall scene of documents and keys directly relates to the article's subject of property acquisition decisions. The small house models in the background add to the theme of properties without detracting from the main subject.",
+        "reviewed_at": "2026-10-07T09:28:29.932151+00:00",
         "text_audit": {
           "examples": [],
           "readable_text_present": false
         }
       },
       "pixels": {
-        "height": 1024,
+        "height": 627,
         "mode": "RGB",
-        "variance": 6444.5,
-        "width": 1536
+        "variance": 9083.5,
+        "width": 940
       },
-      "prompt_sha256": "1883be7b5894b92ee4a21bb36f8ae8b40b704380a50d1210bc0d661b5665a5a7",
-      "prompt_version": "imagery-v4-article-first-exact-concept",
       "relevance_check": {
         "accepted": true,
-        "evidence": "Toimistopöydällä on paperiarkkeja ja laskin. Kuva rajautuu asiakirjoihin, laskimeen ja pöydän pintaan neutraalissa päivänvalossa.",
+        "evidence": "An open black folder with white papers and two sticky notes with house drawings is on a dark surface. A set of keys is on top of the sticky notes. In the background, there are many small house models in black, grey, pink, and orange.",
         "matched": [
-          "Paper documents on an office desk",
-          "Calculator beside the documents"
+          "folder",
+          "keys"
         ],
-        "method": "generation",
-        "reason": "generated from the accepted scene"
+        "method": "vision",
+        "reason": "Exact-pixel full-article score meets the 8/10 threshold"
       },
-      "review_note": "Tekoälyn tuottama kuva vastaa valittua konkreettista aihetta. Artikkeli kertoo selvästi, ettei kuva ole valokuva tapahtumasta. Kuva ei esitä tunnistettavaa todellista henkilöä.",
       "selection_evidence": {
-        "article_text_sha256": "1d59d6d5fe4cc58526a2075d3af9becb357fb94b33afbcf4571dea5c223dec71",
-        "decision_sha256": "7b064de52ecd2b9e52744752216ec072fa6b1a69ef21aca3720a0d46bf6983f0",
+        "article_text_sha256": "aa3755aa7cf218a1c675741cb3210573ef3dd5d44c2e069cdba59972fbe50900",
+        "decision_sha256": "07379aacfe6b459472c636b741da52ea420b240c8e1b46682c1b6062221f9bb5",
         "minimum_real_fit": 8,
         "searches": [
           {
-            "candidates": [],
+            "candidates": [
+              {
+                "approved": false,
+                "fit_score": 4,
+                "image_sha256": "1fc9636cacaa589d2f81800b6e3dd13a4a68e727b5a1199de134ad20a5da574a",
+                "license": "Pexels License",
+                "reason": "The article is about decisions made by Defense Minister Antti Häkkänen. The selected concept specifically requests a photograph of Antti Häkkänen at a lectern with microphones. The provided image shows microphones and a table, which could be part of a press conference setup, but Antti Häkkänen is not visible. Therefore, it does not meet the core re",
+                "source_url": "https://www.pexels.com/photo/podcast-studio-setup-with-microphones-32007691/"
+              },
+              {
+                "approved": false,
+                "fit_score": 4,
+                "image_sha256": "0a62201a152396a228f4f5911f6d30ccd95ee68ed6d1c63c7c526e1f228b970a",
+                "license": "Pexels License",
+                "reason": "The article is about the Minister of Defence, Antti Häkkänen, and his decisions regarding real estate acquisitions. The selected concept specifically requires a photograph of Antti Häkkänen at a lectern with microphones. The provided image shows only two microphones, without any person or a lectern. Therefore, it does not depict the concrete subjec",
+                "source_url": "https://www.pexels.com/photo/close-up-of-two-wireless-microphones-20802525/"
+              }
+            ],
             "concept_rank": 1,
             "outcome": "no_qualifying_candidate",
             "provider": "pexels",
             "queries": [
-              "sosiaali- ja terveysministeriö julkisivu",
-              "sosiaali- ja terveysministeriö sisäänkäynti",
-              "Finnish social affairs ministry building"
+              "Antti Häkkänen puolustusministeri",
+              "Antti Häkkänen puhujakoroke",
+              "Antti Häkkänen lectern microphones"
             ]
           },
           {
@@ -1101,9 +1380,9 @@
             "outcome": "no_qualifying_candidate",
             "provider": "unsplash",
             "queries": [
-              "sosiaali- ja terveysministeriö julkisivu",
-              "sosiaali- ja terveysministeriö sisäänkäynti",
-              "Finnish social affairs ministry building"
+              "Antti Häkkänen puolustusministeri",
+              "Antti Häkkänen puhujakoroke",
+              "Antti Häkkänen lectern microphones"
             ]
           },
           {
@@ -1111,19 +1390,43 @@
               {
                 "approved": false,
                 "fit_score": 0,
-                "image_sha256": "a6955dcb160766b41357af77bf3fb7f8eb8811fd1bc3da3238904955c81114a6",
+                "image_sha256": "358fa4be1981ced392363943b7ab4710a95e18ec213843435ef49fa5909cdf50",
+                "license": "CC BY-SA 2.0",
+                "reason": "The article is about Defense Minister Antti Häkkänen and his decisions. The selected concept specifically requests a photograph of Antti Häkkänen at a lectern with microphones. The visible subject in the image is a young man, who does not appear to be Antti Häkkänen, and he is not at a lectern with microphones. The image is completely unrelated to ",
+                "source_url": "https://commons.wikimedia.org/wiki/File:2017-10%20Antti%20H%C3%A4kk%C3%A4nen%202.jpg"
+              },
+              {
+                "approved": false,
+                "fit_score": 7,
+                "image_sha256": "aeb55c1c74273a39b7e043be79898bc6591a5793ec25be1ab0ba99ad5dc24ad9",
+                "license": "CC BY-SA 2.0",
+                "reason": "The article is about Defense Minister Antti Häkkänen. The selected concept requires a photograph of Antti Häkkänen at a lectern with microphones. The image shows a man who could be Antti Häkkänen, but he is not at a lectern with microphones. Therefore, it does not meet the 'must_show' criteria. One or more required concept elements are not visible.",
+                "source_url": "https://commons.wikimedia.org/wiki/File:2017-10%20Antti%20H%C3%A4kk%C3%A4nen%201.jpg"
+              },
+              {
+                "approved": false,
+                "fit_score": 6,
+                "image_sha256": "e2c035c749c85ea3cbb0f8ff33ef0d10e10b3e4c95dd41ea3888559c7a9a6805",
+                "license": "CC BY-SA 2.0",
+                "reason": "The article discusses decisions made by Defense Minister Antti Häkkänen. The selected concept requires a photograph of Antti Häkkänen at a lectern with microphones. While the image shows a man who could be Antti Häkkänen, it does not show him at a lectern with microphones, which are explicit 'must_show' elements. Therefore, the image does not fit t",
+                "source_url": "https://commons.wikimedia.org/wiki/File:2017-10%20Antti%20H%C3%A4kk%C3%A4nen%201%20(cropped).jpg"
+              },
+              {
+                "approved": false,
+                "fit_score": 7,
+                "image_sha256": "cc2d346d64849085bbefa04ea5c1f6fa5837218747a653d50c270135e36efd7d",
                 "license": "CC BY 4.0",
-                "reason": "The article discusses a project led by the Ministry of Social Affairs and Health. The selected concept requires an actual photograph of the facade or entrance of the Ministry of Social Affairs and Health building. The image shows people placing flowers and stuffed animals on the ground, with a generic building in the background. There is no visible",
-                "source_url": "https://commons.wikimedia.org/wiki/File:Destructions%20in%20Kyiv%20after%20Russian%20attack,%202025-04-24%20(9923).webp"
+                "reason": "The image clearly shows Antti Häkkänen, which is one of the 'must_show' elements. However, the second 'must_show' element, 'Lectern with microphones', is not present in the image. The image is a portrait and does not depict him at a lectern or with microphones. Therefore, it only partially fits the selected concept, limiting the fit score to 7 and ",
+                "source_url": "https://commons.wikimedia.org/wiki/File:Antti-H%C3%A4kk%C3%A4nen-01.jpg"
               }
             ],
             "concept_rank": 1,
-            "outcome": "no_qualifying_candidate",
+            "outcome": "unavailable",
             "provider": "wikimedia",
             "queries": [
-              "sosiaali- ja terveysministeriö julkisivu",
-              "sosiaali- ja terveysministeriö sisäänkäynti",
-              "Finnish social affairs ministry building"
+              "Antti Häkkänen puolustusministeri",
+              "Antti Häkkänen puhujakoroke",
+              "Antti Häkkänen lectern microphones"
             ]
           },
           {
@@ -1132,115 +1435,67 @@
             "outcome": "no_qualifying_candidate",
             "provider": "google",
             "queries": [
-              "sosiaali- ja terveysministeriö julkisivu",
-              "sosiaali- ja terveysministeriö sisäänkäynti",
-              "Finnish social affairs ministry building"
+              "Antti Häkkänen puolustusministeri",
+              "Antti Häkkänen puhujakoroke",
+              "Antti Häkkänen lectern microphones"
             ]
           },
           {
             "candidates": [
               {
-                "approved": false,
-                "fit_score": 6,
-                "image_sha256": "4852d9e811aac65b9c717fdd117e3d9ca4cad004cf903b6272200bf2d810d12d",
+                "approved": true,
+                "fit_score": 9,
+                "image_sha256": "1d3f581bc1be716725709434c3066b9bdb110ed5dbdd96cf0c7a9bc0d1410baf",
                 "license": "Pexels License",
-                "reason": "The image contains a hand, which is explicitly listed in the 'must_avoid' criteria. Although it shows documents and a calculator (on a phone), the presence of the hand makes it unsuitable for the selected concept.",
-                "source_url": "https://www.pexels.com/photo/a-person-writing-on-yellow-sticky-note-8927682/"
+                "reason": "The image clearly depicts paper documents in a folder and property keys, which are the must-show elements for the selected concept. The overall scene of documents and keys directly relates to the article's subject of property acquisition decisions. The small house models in the background add to the theme of properties without detracting from the m",
+                "source_url": "https://www.pexels.com/photo/real-estate-keys-and-documents-with-house-models-34135038/"
               }
             ],
             "concept_rank": 2,
-            "outcome": "no_qualifying_candidate",
+            "outcome": "accepted",
             "provider": "pexels",
             "queries": [
-              "työttömyysturva asiakirjat laskin",
-              "selvitystyö paperit laskin",
-              "paper documents calculator"
-            ]
-          },
-          {
-            "candidates": [
-              {
-                "approved": false,
-                "fit_score": 6,
-                "image_sha256": "845b18ec4e0af1296ff3e79db1313893b3e838ffa0a387c4b9def420b84cd0c1",
-                "license": "Unsplash License",
-                "reason": "The image shows only fanned-out paper sheets, which partially fulfills the 'Paper documents on an office desk' requirement. However, it completely lacks a calculator, which is a mandatory element ('Calculator beside the documents'). The abstract nature of the image also does not clearly depict an 'office desk' or 'documents' in a typical work conte",
-                "source_url": "https://unsplash.com/photos/white-paper-on-gray-surface-tp0BLGIv4dU?utm_source=uutistenlukija&utm_medium=referral"
-              },
-              {
-                "approved": false,
-                "fit_score": 6,
-                "image_sha256": "7b1117f78e5e3d2e16dc1a44e1c429b4f0efcc6cc6460564ca9c0b140aad8354",
-                "license": "Unsplash License",
-                "reason": "The image shows paper documents, which partially fits the concept of 'Paper documents on an office desk'. However, it completely lacks a calculator, which is a 'must_show' element. The purple discoloration on one of the papers also detracts from the neutral and professional tone implied by the concept. One or more required concept elements are not ",
-                "source_url": "https://unsplash.com/photos/a-pile-of-white-paper-sitting-on-top-of-a-table-WTNs14KF64I?utm_source=uutistenlukija&utm_medium=referral"
-              },
-              {
-                "approved": false,
-                "fit_score": 3,
-                "image_sha256": "6608817c56d2eb141c4fff3507175ce4f9b2243bd7b6da5e65afafff399568d2",
-                "license": "Unsplash License",
-                "reason": "The article discusses a government project concerning unemployment benefits and incentives, focusing on official documents and calculations. The image shows old envelopes with stamps and handwritten text, which are not related to modern official documents or calculations. The visible content does not match the concept of 'Paper documents on an offi",
-                "source_url": "https://unsplash.com/photos/white-printer-paper-RaUUoAnVgcA?utm_source=uutistenlukija&utm_medium=referral"
-              }
-            ],
-            "concept_rank": 2,
-            "outcome": "no_qualifying_candidate",
-            "provider": "unsplash",
-            "queries": [
-              "työttömyysturva asiakirjat laskin",
-              "selvitystyö paperit laskin",
-              "paper documents calculator"
-            ]
-          },
-          {
-            "candidates": [],
-            "concept_rank": 2,
-            "outcome": "no_qualifying_candidate",
-            "provider": "wikimedia",
-            "queries": [
-              "työttömyysturva asiakirjat laskin",
-              "selvitystyö paperit laskin",
-              "paper documents calculator"
-            ]
-          },
-          {
-            "candidates": [],
-            "concept_rank": 2,
-            "outcome": "no_qualifying_candidate",
-            "provider": "google",
-            "queries": [
-              "työttömyysturva asiakirjat laskin",
-              "selvitystyö paperit laskin",
-              "paper documents calculator"
+              "kiinteistökauppa asiakirjat avaimet",
+              "lupahakemus asiakirjakansio",
+              "property documents keys"
             ]
           }
         ],
         "selected": {
           "concept_rank": 2,
-          "fit_score": 10,
-          "image_sha256": "8b4f02be9b040339c074b00d2ccbaa716df6c836dda30154798f44ed1a60f24b",
-          "kind": "generated"
+          "fit_score": 9,
+          "image_sha256": "1d3f581bc1be716725709434c3066b9bdb110ed5dbdd96cf0c7a9bc0d1410baf",
+          "kind": "real"
         },
         "version": "article-first-v1"
       },
-      "sha256": "8b4f02be9b040339c074b00d2ccbaa716df6c836dda30154798f44ed1a60f24b",
-      "source_url": "https://uutistenlukija.fi/ai-kuvat/",
-      "subject": "työttömyysturvan sovittelua käsittelevän selvityksen asiakirjatyö",
-      "url": "https://uutistenlukija.fi/media/8b4f02be9b040339c074b00d2ccbaa716df6c836dda30154798f44ed1a60f24b.jpg"
+      "sha256": "1d3f581bc1be716725709434c3066b9bdb110ed5dbdd96cf0c7a9bc0d1410baf",
+      "source_url": "https://www.pexels.com/photo/real-estate-keys-and-documents-with-house-models-34135038/",
+      "stock_provenance": {
+        "image_url": "https://images.pexels.com/photos/34135038/pexels-photo-34135038.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+        "photo_id": "34135038",
+        "photo_url": "https://www.pexels.com/photo/real-estate-keys-and-documents-with-house-models-34135038/",
+        "photographer": "Jakub Zerdzicki",
+        "photographer_url": "https://www.pexels.com/@jakubzerdzicki",
+        "provider": "pexels",
+        "query": "kiinteistökauppa asiakirjat avaimet",
+        "retrieved_at": "2026-10-07T09:28:26Z"
+      },
+      "stock_provenance_sha256": "e7c2d60fc8380e48511a80877962bca9f3900dd52c01e92d6a1d1d6e338ecf3d",
+      "url": "https://uutistenlukija.fi/media/1d3f581bc1be716725709434c3066b9bdb110ed5dbdd96cf0c7a9bc0d1410baf.jpg"
     },
     "publication_basis": {
       "policy": "official-text-v1",
       "policy_sha256": "901a881c0ed60542e137b124a671a87d2fb07b251a12312d96053f5d4a134e1e",
       "provider": "valtioneuvosto",
       "related_sources": 0,
-      "source_fields_sha256": "781e14957977de0ffedef6cc5f48e8e71a381885947c2b7bf1305a7dc194ec95",
-      "source_sha256": "a7c0d7cffa35d414bdd82eb5ae9b527a037cc3eb77dcdf6cca520f625ae1d120"
+      "source_fields_sha256": "d4301c1faea611f232ee665627235f56f577946ce6065e5ba02afae523b23e48",
+      "source_sha256": "57a55b1022d859721c32f91769d2c81d98470196cc95063e398872269471d2a8"
     },
     "sources": [
       {
         "id": "A",
-        "published_at": "2026-10-07T09:47+0300",
+        "published_at": "2026-10-07T11:53+0300",
         "publisher": "Valtioneuvoston kanslia",
         "reuse": {
           "changes": "Itsenäinen suomenkielinen uutisteksti; lähteen tietoja on tiivistetty.",
@@ -1249,18 +1504,18 @@
           "notice": "Lähde: Valtioneuvosto. Tekstin uudelleenkäyttö sallittu lähde mainiten; kaupallinen käyttö vaatii erillisen sopimuksen.",
           "url": "https://valtioneuvosto.fi/tietoa-sivustosta"
         },
-        "text": "Julkaisuajankohta\n7.10.2026\n9.47\nTyyppi:Tiedote\nSosiaaliturvaministeri Karoliina Partanen on 6.10.2026 asettanut selvityshankkeen, jossa keskitytään osittaiseen työllistymiseen ja työllistymisen kannustimiin. Selvityksen tavoitteena on tarkastella osa-aikatyön, lisätyön ja kokoaikatyön vastaanottamisen kannustimia ja tehdä ehdotuksia niiden kehittämiseksi.\nTällä hallituskaudella työttömyysturvaa on uudistettu hallitusohjelman mukaisesti, jotta järjestelmä olisi julkisen talouden kannalta kestävämpi ja työhön kannustavampi.\n”Työn on oltava aina ensisijainen tapa turvata oma ja perheensä toimeentulo. Myös sosiaali- ja työttömyysturvan on kannustettava tähän. Työn, osa-aikaisenkin, vastaanottamisen pitää kannattaa aina. Käynnistämme nyt kattavan asiantuntijavalmistelun työttömyysturvan kehittämiseksi entistä kannustavammaksi,” sosiaaliturvaministeri Partanen toteaa.\nSelvityshankkeen tehtävänä on koota ajankohtaista tietoa muun muassa osittaisesta työllistymisestä, työttömyysturvan kannustimista sekä työllistymistä edistäviin palveluihin osallistumisesta. Lisäksi selvityksessä tarkastellaan työttömyysturvan sovittelua sekä tapoja vahvistaa osa-aikatyön ja lisätyötuntien vastaanottamisen sekä kokoaikatyöhön siirtymisen kannustimia.\n”Tällä hallituskaudella on tehty monia työhön kannustavia muutoksia sekä sosiaali- että työttömyysturvan puolella. Tätä työtä pitää jatkaa ja tuoda yhteen ajankohtaisin tutkimus- ja seurantatieto. Selvityshankkeelta odotamme uusia toimenpide-ehdotuksia jo tulevaa hallitusta varten. Olennaista on vahvistaa ihmisten kannustimia ottaa lisätyötä vastaan,” ministeri Partanen jatkaa.\nSelvityksessä huomioidaan nuoret ja pitkäaikaistyöttömät erityisryhminä. Tavoitteena on lopulta muodostaa ehdotus julkisen talouden ja työllisyyden kannalta kustannustehokkaista toimista työn vastaanottamisen kannustimien parantamiseksi.\nSelvitys valmistellaan virkatyönä sosiaali- ja terveysministeriön johdolla yhteistyössä valtiovarainministeriön kanssa. Hankkeen aikana kuullaan työ- ja elinkeinoministeriötä, Elinkeinoelämän keskusliittoa, Kunta- ja hyvinvointialuetyönantajia, Akavaa, Suomen Ammattiliittojen Keskusjärjestöä ja STTK:ta sekä Suomen Yrittäjiä.\nSelvityshankkeen toimikausi päättyy 31.3.2027. Selvityshanke toimii syötteenä seuraavaa hallitusta varten.\nOsittainen työllistyminen ja työttömyysturvan kannustimet, selvityshanke (Hankeikkuna)\nLisätietoja\nHallitusneuvos Marjaana Maisonlahti, p. 0295 163 288\nSosiaaliturvaministerin erityisavustaja Emmi Venäläinen, p. 050 355 7146",
-        "title": "Työttömyysturvan kannustavuudesta uusi selvityshanke",
-        "url": "https://valtioneuvosto.fi/-/1271139/tyottomyysturvan-kannustavuudesta-uusi-selvityshanke"
+        "text": "Julkaisuajankohta 7.10.2026 11.53\nTyyppi:Tiedote\nPuolustusministeri Antti Häkkänen on 7. lokakuuta 2026 tehnyt kuusi kielteistä lupapäätöstä EU- ja ETA-maiden ulkopuolelta tulevien ostajien kiinteistöhankinnoissa. Kielteisten päätösten kohteena olevat kiinteistöt sijaitsevat Kotkassa, Viitasaarella, Miehikkälässä ja Imatralla.\nKotkan, Viitasaaren ja Miehikkälän kiinteistökaupoissa luvanhakijat ovat Venäjän, Montenegron ja Israelin kansalaisia. Imatralla sijaitsevan kiinteistön hankkimiseen lupaa haki Italiaan rekisteröity yritys, jonka omistus on kuitenkin EU- ja ETA-maiden ulkopuolisella taholla. Kiinteistöt oli suunniteltu hankittavan eri käyttötarkoituksiin, kuten vuokraus- ja virkistystoimintaan.\nKotkan kiinteistökaupan tapauksessa puolustusministeriö perustelee kielteistä päätöstä sillä, että hankinnan voidaan arvioida vaarantavan kansallista turvallisuutta tai huoltovarmuutta. Päätös perustuu lakiin eräiden kiinteistöhankintojen luvanvaraisuudesta.\nViitasaaren, Miehikkälän ja Imatran kielteiset päätökset johtuvat siitä, että luvanhakijat eivät ole muistutuksista huolimatta toimittaneet puolustusministeriön pyytämiä tietoja tai lisäselvityksiä. Päätökset perustuvat lakiin eräiden kiinteistöhankintojen luvanvaraisuudesta sekä hallintolakiin.\n– Tiukalla kiinteistökontrollilla vähennämme Suomeen kohdistuvia turvallisuusriskejä. Estimme yhden kaupan, jossa kiinteistöllä voisi sijaintinsa puolesta olla vaikutusta Suomen turvallisuuteen. Muissa kielteisissä päätöksissä kyse oli siitä, että luvanhakijat laiminlöivät velvollisuutensa toimittaa puolustusministeriölle tarvittavat lisäselvitykset turvallisuusarviointia varten. Lisätietojen toimittamisen laiminlyönneillä ei voi kiertää lupaprosessia tai estää lupapäätöksen tekemistä, puolustusministeri Antti Häkkänen toteaa.\nPäätökset eivät ole vielä lainvoimaisia.\nMahdolliset median asiakirjapyynnöt pyydetään toimittamaan puolustusministeriön kirjaamoon, sähköpostiosoite kirjaamo.plm(at)gov.fi\nLisätiedot medialle puolustusministeriön viestinnältä sähköpostitse, osoite viestinta.plm(at)gov.fi\npäätökset turvallisuus",
+        "title": "Kuusi kielteistä päätöstä kiinteistökaupoissa",
+        "url": "https://valtioneuvosto.fi/-/236553176/kuusi-kielteista-paatosta-kiinteistokaupoissa-2"
       }
     ],
-    "story_key": "url:https://valtioneuvosto.fi/-/1271139/tyottomyysturvan-kannustavuudesta-uusi-selvityshanke",
+    "story_key": "url:https://valtioneuvosto.fi/-/236553176/kuusi-kielteista-paatosta-kiinteistokaupoissa-2",
     "supporting_documents": [
       {
         "id": "RIGHTS",
         "purpose": "text reuse permission; not news or image evidence",
-        "retrieved_at": "2026-10-07T08:47:59.841387+00:00",
-        "sha256": "cd1ced5598450b2cd9dd5fc0bc28ff39eaf06cb198e34fcbb3b3a32cfdc9ac80",
+        "retrieved_at": "2026-10-07T09:26:34.493152+00:00",
+        "sha256": "0f64459e550e02ebc5d6b2961b42d327685c6338c8ba7344bef0692ab920f70d",
         "text": "Tekijänoikeudet\nValtioneuvoston kanslialla tai muulla aineiston yhteydessä ilmoitetulla tiedontuottajalla on oikeudet sivustossa julkaistavaan teksti- ja kuva-aineistoon. Tekstiaineiston käyttö ja siihen linkitys on sallittu hyvän tavan mukaisissa asiayhteyksissä, kun lähde mainitaan. Aineiston käytöstä kaupalliseen tarkoitukseen on sovittava erikseen.\nValtioneuvoston kuvia välitetään Creative Commons -lisensseillä valtioneuvoston aineistopankissa ja Flickr-kuvapalvelussa. Niissä tarjottavat kuvat on tarkoitettu vapaaseen viestinnälliseen käyttöön. Kuvien tarkat käyttöehdot on ilmoitettu kunkin kuvan kohdalla.\n",
         "url": "https://valtioneuvosto.fi/tietoa-sivustosta"
       }
@@ -1269,116 +1524,143 @@
   "draft": {
     "category": "Kotimaa",
     "image": {
-      "alt": "AI-generoitu kuva: Vaalealla puupöydällä on pino valkoisia paperiarkkeja ja niiden vieressä musta laskin.",
-      "attempts": 1,
-      "caption": "AI-generoitu kuva. Ei valokuva tapahtumasta.",
+      "alt": "Arkistokuva: Avoin musta kansio, jossa on valkoisia papereita ja kaksi talonkuvalla varustettua muistilappua, on tummalla pinnalla avainnipun kanssa.",
+      "caption": "Arkistokuva artikkelin aiheesta.",
       "classifier_output": {
         "category": "Kotimaa",
         "concepts": [
           {
-            "depictable_scene": "Todellinen valokuva sosiaali- ja terveysministeriön käytössä olevan rakennuksen julkisivusta ja sisäänkäynnistä.",
+            "depictable_scene": "Todellinen valokuva Antti Häkkäsestä puhujakorokkeen ääressä, mikrofonit hänen edessään. Kuva esittää päätöksistä vastaavan ministerin, eikä sen tarvitse olla juuri näiden lupapäätösten julkistamisesta.",
             "must_avoid": [
-              "Misidentified government building",
-              "Fabricated ministry architecture"
+              "Invented likeness of the minister",
+              "Presenting an unrelated photograph as the announcement of these six decisions"
             ],
             "must_show": [
-              "Actual Ministry of Social Affairs and Health building",
-              "Building facade or entrance"
+              "Antti Häkkänen",
+              "Lectern with microphones"
             ],
             "rank": 1,
             "safe_to_generate": false,
             "search_queries": [
-              "sosiaali- ja terveysministeriö julkisivu",
-              "sosiaali- ja terveysministeriö sisäänkäynti",
-              "Finnish social affairs ministry building"
+              "Antti Häkkänen puolustusministeri",
+              "Antti Häkkänen puhujakoroke",
+              "Antti Häkkänen lectern microphones"
             ],
-            "subject": "Selvityksen valmistelua johtava sosiaali- ja terveysministeriö"
+            "subject": "Puolustusministeri Antti Häkkänen"
           },
           {
-            "depictable_scene": "Toimistopöydällä on paperiarkkeja ja laskin. Kuva rajautuu asiakirjoihin, laskimeen ja pöydän pintaan neutraalissa päivänvalossa.",
+            "depictable_scene": "Pöydällä on avoin asiakirjakansio paperiarkkeineen ja sen vieressä kiinteistön avainnippu. Paperit näkyvät viistosti siten, että niiden tekstialueet jäävät epätarkoiksi.",
             "must_avoid": [
               "People, faces, hands or other body parts",
-              "Readable text, benefit amounts or proposed policy changes",
-              "Logos or official seals"
+              "Fabricated readable text, official seals or logos",
+              "Rejection stamps suggesting a final legally binding decision"
             ],
             "must_show": [
-              "Paper documents on an office desk",
-              "Calculator beside the documents"
+              "Paper documents in a folder",
+              "Property keys"
             ],
             "rank": 2,
             "safe_to_generate": true,
             "search_queries": [
-              "työttömyysturva asiakirjat laskin",
-              "selvitystyö paperit laskin",
-              "paper documents calculator",
-              "office desk paperwork calculator"
+              "kiinteistökauppa asiakirjat avaimet",
+              "lupahakemus asiakirjakansio",
+              "property documents keys",
+              "paper folder keys"
             ],
-            "subject": "työttömyysturvan sovittelua käsittelevän selvityksen asiakirjatyö"
+            "subject": "kiinteistöhankinnoista tehtävien lupapäätösten asiakirjat"
           }
         ],
         "version": "article-first-v1"
       },
-      "credit": "AI-kuvitus",
-      "depicted": "A stack of white paper sheets lies on a light wooden desk next to a black calculator. The image is taken from a slightly elevated angle, showing the top surface of the desk, the papers, and the calculator.",
-      "generated": true,
-      "license": "AI-generated image",
-      "license_url": "https://uutistenlukija.fi/ai-kuvat/",
-      "local_path": "media/8b4f02be9b040339c074b00d2ccbaa716df6c836dda30154798f44ed1a60f24b.jpg",
-      "model": "codex-oauth:gpt-image-2",
+      "credit": "Photo by Jakub Zerdzicki on Pexels",
+      "depicted": "The image shows a close-up, slightly elevated view of a black binder, open and filled with papers, on a dark surface. On top of the papers, there are two sticky notes: one yellow and one pink, both with a simple outline drawing of a house. A set of keys, including one green key and two black keys, along with a black house-shaped keychain, are resting on the sticky notes. To the right of the binder, a collection of small, house-shaped figurines are arranged in rows. Most of these figurines are da",
+      "generated": false,
+      "hotlink": false,
+      "license": "Pexels License",
+      "license_evidence": {
+        "image_path": "/photos/34135038/pexels-photo-34135038.jpeg",
+        "license": "Pexels License",
+        "license_code": "Pexels",
+        "license_url": "https://www.pexels.com/license/",
+        "photo_id": "34135038",
+        "photo_url": "https://www.pexels.com/photo/real-estate-keys-and-documents-with-house-models-34135038/",
+        "photographer": "Jakub Zerdzicki",
+        "photographer_url": "https://www.pexels.com/@jakubzerdzicki",
+        "response_sha256": "1e4c3e8e24f8967fe58abd05b69551f0c3244097ef56058a0263b64f2adda7b3",
+        "retrieved_at": "2026-10-07T09:28:26.587367+00:00",
+        "transport": "jina_reader",
+        "version": 1
+      },
+      "license_url": "https://www.pexels.com/license/",
+      "local_path": "media/1d3f581bc1be716725709434c3066b9bdb110ed5dbdd96cf0c7a9bc0d1410baf.jpg",
       "pixel_review": {
-        "alt_fi": "Vaalealla puupöydällä on pino valkoisia paperiarkkeja ja niiden vieressä musta laskin.",
+        "alt_fi": "Avoin musta kansio, jossa on valkoisia papereita ja kaksi talonkuvalla varustettua muistilappua, on tummalla pinnalla avainnipun kanssa.",
         "approved": true,
-        "article_text_sha256": "1d59d6d5fe4cc58526a2075d3af9becb357fb94b33afbcf4571dea5c223dec71",
-        "concept_sha256": "2c6d303f9f716ae536a76d22e529687512970ff7b2146325faf6d144727cc4d6",
-        "description": "A stack of white paper sheets lies on a light wooden desk next to a black calculator. The image is taken from a slightly elevated angle, showing the top surface of the desk, the papers, and the calculator.",
-        "fit_score": 10,
-        "image_sha256": "8b4f02be9b040339c074b00d2ccbaa716df6c836dda30154798f44ed1a60f24b",
+        "article_text_sha256": "aa3755aa7cf218a1c675741cb3210573ef3dd5d44c2e069cdba59972fbe50900",
+        "concept_sha256": "d9448691a84e02d3f300ea6489c5b89cabfd030f4102a05ecc597b633a749234",
+        "description": "An open black folder with white papers and two sticky notes with house drawings is on a dark surface. A set of keys is on top of the sticky notes. In the background, there are many small house models in black, grey, pink, and orange.",
+        "fit_score": 9,
+        "image_sha256": "1d3f581bc1be716725709434c3066b9bdb110ed5dbdd96cf0c7a9bc0d1410baf",
         "model": "google:gemini-2.5-flash",
         "must_show_visible": [
           true,
           true
         ],
         "no_people": true,
-        "reason": "The image directly depicts paper documents and a calculator on an office desk, which perfectly matches the selected concept of 'työttömyysturvan sovittelua käsittelevän selvityksen asiakirjatyö' and the article's theme of a social security review. The visible elements are generic and do not contain any forbidden content like readable text or people.",
-        "reviewed_at": "2026-10-07T08:54:16.242192+00:00",
+        "reason": "The image clearly depicts paper documents in a folder and property keys, which are the must-show elements for the selected concept. The overall scene of documents and keys directly relates to the article's subject of property acquisition decisions. The small house models in the background add to the theme of properties without detracting from the main subject.",
+        "reviewed_at": "2026-10-07T09:28:29.932151+00:00",
         "text_audit": {
           "examples": [],
           "readable_text_present": false
         }
       },
       "pixels": {
-        "height": 1024,
+        "height": 627,
         "mode": "RGB",
-        "variance": 6444.5,
-        "width": 1536
+        "variance": 9083.5,
+        "width": 940
       },
-      "prompt_sha256": "1883be7b5894b92ee4a21bb36f8ae8b40b704380a50d1210bc0d661b5665a5a7",
-      "prompt_version": "imagery-v4-article-first-exact-concept",
       "relevance_check": {
         "accepted": true,
-        "evidence": "Toimistopöydällä on paperiarkkeja ja laskin. Kuva rajautuu asiakirjoihin, laskimeen ja pöydän pintaan neutraalissa päivänvalossa.",
+        "evidence": "An open black folder with white papers and two sticky notes with house drawings is on a dark surface. A set of keys is on top of the sticky notes. In the background, there are many small house models in black, grey, pink, and orange.",
         "matched": [
-          "Paper documents on an office desk",
-          "Calculator beside the documents"
+          "folder",
+          "keys"
         ],
-        "method": "generation",
-        "reason": "generated from the accepted scene"
+        "method": "vision",
+        "reason": "Exact-pixel full-article score meets the 8/10 threshold"
       },
-      "review_note": "Tekoälyn tuottama kuva vastaa valittua konkreettista aihetta. Artikkeli kertoo selvästi, ettei kuva ole valokuva tapahtumasta. Kuva ei esitä tunnistettavaa todellista henkilöä.",
       "selection_evidence": {
-        "article_text_sha256": "1d59d6d5fe4cc58526a2075d3af9becb357fb94b33afbcf4571dea5c223dec71",
-        "decision_sha256": "7b064de52ecd2b9e52744752216ec072fa6b1a69ef21aca3720a0d46bf6983f0",
+        "article_text_sha256": "aa3755aa7cf218a1c675741cb3210573ef3dd5d44c2e069cdba59972fbe50900",
+        "decision_sha256": "07379aacfe6b459472c636b741da52ea420b240c8e1b46682c1b6062221f9bb5",
         "minimum_real_fit": 8,
         "searches": [
           {
-            "candidates": [],
+            "candidates": [
+              {
+                "approved": false,
+                "fit_score": 4,
+                "image_sha256": "1fc9636cacaa589d2f81800b6e3dd13a4a68e727b5a1199de134ad20a5da574a",
+                "license": "Pexels License",
+                "reason": "The article is about decisions made by Defense Minister Antti Häkkänen. The selected concept specifically requests a photograph of Antti Häkkänen at a lectern with microphones. The provided image shows microphones and a table, which could be part of a press conference setup, but Antti Häkkänen is not visible. Therefore, it does not meet the core re",
+                "source_url": "https://www.pexels.com/photo/podcast-studio-setup-with-microphones-32007691/"
+              },
+              {
+                "approved": false,
+                "fit_score": 4,
+                "image_sha256": "0a62201a152396a228f4f5911f6d30ccd95ee68ed6d1c63c7c526e1f228b970a",
+                "license": "Pexels License",
+                "reason": "The article is about the Minister of Defence, Antti Häkkänen, and his decisions regarding real estate acquisitions. The selected concept specifically requires a photograph of Antti Häkkänen at a lectern with microphones. The provided image shows only two microphones, without any person or a lectern. Therefore, it does not depict the concrete subjec",
+                "source_url": "https://www.pexels.com/photo/close-up-of-two-wireless-microphones-20802525/"
+              }
+            ],
             "concept_rank": 1,
             "outcome": "no_qualifying_candidate",
             "provider": "pexels",
             "queries": [
-              "sosiaali- ja terveysministeriö julkisivu",
-              "sosiaali- ja terveysministeriö sisäänkäynti",
-              "Finnish social affairs ministry building"
+              "Antti Häkkänen puolustusministeri",
+              "Antti Häkkänen puhujakoroke",
+              "Antti Häkkänen lectern microphones"
             ]
           },
           {
@@ -1387,9 +1669,9 @@
             "outcome": "no_qualifying_candidate",
             "provider": "unsplash",
             "queries": [
-              "sosiaali- ja terveysministeriö julkisivu",
-              "sosiaali- ja terveysministeriö sisäänkäynti",
-              "Finnish social affairs ministry building"
+              "Antti Häkkänen puolustusministeri",
+              "Antti Häkkänen puhujakoroke",
+              "Antti Häkkänen lectern microphones"
             ]
           },
           {
@@ -1397,19 +1679,43 @@
               {
                 "approved": false,
                 "fit_score": 0,
-                "image_sha256": "a6955dcb160766b41357af77bf3fb7f8eb8811fd1bc3da3238904955c81114a6",
+                "image_sha256": "358fa4be1981ced392363943b7ab4710a95e18ec213843435ef49fa5909cdf50",
+                "license": "CC BY-SA 2.0",
+                "reason": "The article is about Defense Minister Antti Häkkänen and his decisions. The selected concept specifically requests a photograph of Antti Häkkänen at a lectern with microphones. The visible subject in the image is a young man, who does not appear to be Antti Häkkänen, and he is not at a lectern with microphones. The image is completely unrelated to ",
+                "source_url": "https://commons.wikimedia.org/wiki/File:2017-10%20Antti%20H%C3%A4kk%C3%A4nen%202.jpg"
+              },
+              {
+                "approved": false,
+                "fit_score": 7,
+                "image_sha256": "aeb55c1c74273a39b7e043be79898bc6591a5793ec25be1ab0ba99ad5dc24ad9",
+                "license": "CC BY-SA 2.0",
+                "reason": "The article is about Defense Minister Antti Häkkänen. The selected concept requires a photograph of Antti Häkkänen at a lectern with microphones. The image shows a man who could be Antti Häkkänen, but he is not at a lectern with microphones. Therefore, it does not meet the 'must_show' criteria. One or more required concept elements are not visible.",
+                "source_url": "https://commons.wikimedia.org/wiki/File:2017-10%20Antti%20H%C3%A4kk%C3%A4nen%201.jpg"
+              },
+              {
+                "approved": false,
+                "fit_score": 6,
+                "image_sha256": "e2c035c749c85ea3cbb0f8ff33ef0d10e10b3e4c95dd41ea3888559c7a9a6805",
+                "license": "CC BY-SA 2.0",
+                "reason": "The article discusses decisions made by Defense Minister Antti Häkkänen. The selected concept requires a photograph of Antti Häkkänen at a lectern with microphones. While the image shows a man who could be Antti Häkkänen, it does not show him at a lectern with microphones, which are explicit 'must_show' elements. Therefore, the image does not fit t",
+                "source_url": "https://commons.wikimedia.org/wiki/File:2017-10%20Antti%20H%C3%A4kk%C3%A4nen%201%20(cropped).jpg"
+              },
+              {
+                "approved": false,
+                "fit_score": 7,
+                "image_sha256": "cc2d346d64849085bbefa04ea5c1f6fa5837218747a653d50c270135e36efd7d",
                 "license": "CC BY 4.0",
-                "reason": "The article discusses a project led by the Ministry of Social Affairs and Health. The selected concept requires an actual photograph of the facade or entrance of the Ministry of Social Affairs and Health building. The image shows people placing flowers and stuffed animals on the ground, with a generic building in the background. There is no visible",
-                "source_url": "https://commons.wikimedia.org/wiki/File:Destructions%20in%20Kyiv%20after%20Russian%20attack,%202025-04-24%20(9923).webp"
+                "reason": "The image clearly shows Antti Häkkänen, which is one of the 'must_show' elements. However, the second 'must_show' element, 'Lectern with microphones', is not present in the image. The image is a portrait and does not depict him at a lectern or with microphones. Therefore, it only partially fits the selected concept, limiting the fit score to 7 and ",
+                "source_url": "https://commons.wikimedia.org/wiki/File:Antti-H%C3%A4kk%C3%A4nen-01.jpg"
               }
             ],
             "concept_rank": 1,
-            "outcome": "no_qualifying_candidate",
+            "outcome": "unavailable",
             "provider": "wikimedia",
             "queries": [
-              "sosiaali- ja terveysministeriö julkisivu",
-              "sosiaali- ja terveysministeriö sisäänkäynti",
-              "Finnish social affairs ministry building"
+              "Antti Häkkänen puolustusministeri",
+              "Antti Häkkänen puhujakoroke",
+              "Antti Häkkänen lectern microphones"
             ]
           },
           {
@@ -1418,141 +1724,94 @@
             "outcome": "no_qualifying_candidate",
             "provider": "google",
             "queries": [
-              "sosiaali- ja terveysministeriö julkisivu",
-              "sosiaali- ja terveysministeriö sisäänkäynti",
-              "Finnish social affairs ministry building"
+              "Antti Häkkänen puolustusministeri",
+              "Antti Häkkänen puhujakoroke",
+              "Antti Häkkänen lectern microphones"
             ]
           },
           {
             "candidates": [
               {
-                "approved": false,
-                "fit_score": 6,
-                "image_sha256": "4852d9e811aac65b9c717fdd117e3d9ca4cad004cf903b6272200bf2d810d12d",
+                "approved": true,
+                "fit_score": 9,
+                "image_sha256": "1d3f581bc1be716725709434c3066b9bdb110ed5dbdd96cf0c7a9bc0d1410baf",
                 "license": "Pexels License",
-                "reason": "The image contains a hand, which is explicitly listed in the 'must_avoid' criteria. Although it shows documents and a calculator (on a phone), the presence of the hand makes it unsuitable for the selected concept.",
-                "source_url": "https://www.pexels.com/photo/a-person-writing-on-yellow-sticky-note-8927682/"
+                "reason": "The image clearly depicts paper documents in a folder and property keys, which are the must-show elements for the selected concept. The overall scene of documents and keys directly relates to the article's subject of property acquisition decisions. The small house models in the background add to the theme of properties without detracting from the m",
+                "source_url": "https://www.pexels.com/photo/real-estate-keys-and-documents-with-house-models-34135038/"
               }
             ],
             "concept_rank": 2,
-            "outcome": "no_qualifying_candidate",
+            "outcome": "accepted",
             "provider": "pexels",
             "queries": [
-              "työttömyysturva asiakirjat laskin",
-              "selvitystyö paperit laskin",
-              "paper documents calculator"
-            ]
-          },
-          {
-            "candidates": [
-              {
-                "approved": false,
-                "fit_score": 6,
-                "image_sha256": "845b18ec4e0af1296ff3e79db1313893b3e838ffa0a387c4b9def420b84cd0c1",
-                "license": "Unsplash License",
-                "reason": "The image shows only fanned-out paper sheets, which partially fulfills the 'Paper documents on an office desk' requirement. However, it completely lacks a calculator, which is a mandatory element ('Calculator beside the documents'). The abstract nature of the image also does not clearly depict an 'office desk' or 'documents' in a typical work conte",
-                "source_url": "https://unsplash.com/photos/white-paper-on-gray-surface-tp0BLGIv4dU?utm_source=uutistenlukija&utm_medium=referral"
-              },
-              {
-                "approved": false,
-                "fit_score": 6,
-                "image_sha256": "7b1117f78e5e3d2e16dc1a44e1c429b4f0efcc6cc6460564ca9c0b140aad8354",
-                "license": "Unsplash License",
-                "reason": "The image shows paper documents, which partially fits the concept of 'Paper documents on an office desk'. However, it completely lacks a calculator, which is a 'must_show' element. The purple discoloration on one of the papers also detracts from the neutral and professional tone implied by the concept. One or more required concept elements are not ",
-                "source_url": "https://unsplash.com/photos/a-pile-of-white-paper-sitting-on-top-of-a-table-WTNs14KF64I?utm_source=uutistenlukija&utm_medium=referral"
-              },
-              {
-                "approved": false,
-                "fit_score": 3,
-                "image_sha256": "6608817c56d2eb141c4fff3507175ce4f9b2243bd7b6da5e65afafff399568d2",
-                "license": "Unsplash License",
-                "reason": "The article discusses a government project concerning unemployment benefits and incentives, focusing on official documents and calculations. The image shows old envelopes with stamps and handwritten text, which are not related to modern official documents or calculations. The visible content does not match the concept of 'Paper documents on an offi",
-                "source_url": "https://unsplash.com/photos/white-printer-paper-RaUUoAnVgcA?utm_source=uutistenlukija&utm_medium=referral"
-              }
-            ],
-            "concept_rank": 2,
-            "outcome": "no_qualifying_candidate",
-            "provider": "unsplash",
-            "queries": [
-              "työttömyysturva asiakirjat laskin",
-              "selvitystyö paperit laskin",
-              "paper documents calculator"
-            ]
-          },
-          {
-            "candidates": [],
-            "concept_rank": 2,
-            "outcome": "no_qualifying_candidate",
-            "provider": "wikimedia",
-            "queries": [
-              "työttömyysturva asiakirjat laskin",
-              "selvitystyö paperit laskin",
-              "paper documents calculator"
-            ]
-          },
-          {
-            "candidates": [],
-            "concept_rank": 2,
-            "outcome": "no_qualifying_candidate",
-            "provider": "google",
-            "queries": [
-              "työttömyysturva asiakirjat laskin",
-              "selvitystyö paperit laskin",
-              "paper documents calculator"
+              "kiinteistökauppa asiakirjat avaimet",
+              "lupahakemus asiakirjakansio",
+              "property documents keys"
             ]
           }
         ],
         "selected": {
           "concept_rank": 2,
-          "fit_score": 10,
-          "image_sha256": "8b4f02be9b040339c074b00d2ccbaa716df6c836dda30154798f44ed1a60f24b",
-          "kind": "generated"
+          "fit_score": 9,
+          "image_sha256": "1d3f581bc1be716725709434c3066b9bdb110ed5dbdd96cf0c7a9bc0d1410baf",
+          "kind": "real"
         },
         "version": "article-first-v1"
       },
-      "sha256": "8b4f02be9b040339c074b00d2ccbaa716df6c836dda30154798f44ed1a60f24b",
-      "source_url": "https://uutistenlukija.fi/ai-kuvat/",
-      "subject": "työttömyysturvan sovittelua käsittelevän selvityksen asiakirjatyö",
-      "url": "https://uutistenlukija.fi/media/8b4f02be9b040339c074b00d2ccbaa716df6c836dda30154798f44ed1a60f24b.jpg"
+      "sha256": "1d3f581bc1be716725709434c3066b9bdb110ed5dbdd96cf0c7a9bc0d1410baf",
+      "source_url": "https://www.pexels.com/photo/real-estate-keys-and-documents-with-house-models-34135038/",
+      "stock_provenance": {
+        "image_url": "https://images.pexels.com/photos/34135038/pexels-photo-34135038.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+        "photo_id": "34135038",
+        "photo_url": "https://www.pexels.com/photo/real-estate-keys-and-documents-with-house-models-34135038/",
+        "photographer": "Jakub Zerdzicki",
+        "photographer_url": "https://www.pexels.com/@jakubzerdzicki",
+        "provider": "pexels",
+        "query": "kiinteistökauppa asiakirjat avaimet",
+        "retrieved_at": "2026-10-07T09:28:26Z"
+      },
+      "stock_provenance_sha256": "e7c2d60fc8380e48511a80877962bca9f3900dd52c01e92d6a1d1d6e338ecf3d",
+      "url": "https://uutistenlukija.fi/media/1d3f581bc1be716725709434c3066b9bdb110ed5dbdd96cf0c7a9bc0d1410baf.jpg"
     },
     "paragraphs": [
       {
         "source_ids": [
           "A"
         ],
-        "text": "Sosiaaliturvaministeri Karoliina Partanen asetti selvityshankkeen 6. lokakuuta 2026. Valtioneuvoston tiedotteen mukaan hankkeen toimikausi päättyy 31. maaliskuuta 2027."
+        "text": "Puolustusministeri Antti Häkkänen teki 7. lokakuuta kuusi kielteistä lupapäätöstä kiinteistöhankinnoista, kertoo Valtioneuvoston tiedote. Kiinteistöt sijaitsevat Kotkassa, Viitasaarella, Miehikkälässä ja Imatralla. Hankinnat koskevat EU- ja ETA-alueen ulkopuolisia ostajia tai omistusta."
       },
       {
         "source_ids": [
           "A"
         ],
-        "text": "Selvityksessä tarkastellaan työttömyysturvan sovittelua ja kootaan tietoa osittaisesta työllistymisestä, työttömyysturvan kannustimista sekä työllistymistä edistäviin palveluihin osallistumisesta. Tiedotteen mukaan nuoriin ja pitkäaikaistyöttömiin kiinnitetään huomiota erityisryhminä."
+        "text": "Kotkan hankinnassa puolustusministeriö arvioi, että kauppa voisi vaarantaa kansallista turvallisuutta tai huoltovarmuutta. Viitasaaren, Miehikkälän ja Imatran päätösten perusteena taas on tiedotteen mukaan se, etteivät hakijat toimittaneet pyydettyjä tietoja tai lisäselvityksiä muistutuksista huolimatta."
       },
       {
         "source_ids": [
           "A"
         ],
-        "text": "Tiedotteen mukaan tavoitteena on ehdottaa toimia, jotka parantaisivat työn vastaanottamisen kannustimia kustannustehokkaasti julkisen talouden ja työllisyyden näkökulmasta. Kyse on selvityksen tavoitteesta, eikä tiedotteessa esitellä vielä konkreettisia muutosehdotuksia."
+        "text": "Kotkan, Viitasaaren ja Miehikkälän lupahakijoiden joukossa on tiedotteen mukaan Venäjän, Montenegron ja Israelin kansalaisia. Imatran kiinteistöä tavoitteli Italiaan rekisteröity yritys, jonka omistus on EU- ja ETA-alueen ulkopuolisella taholla. Kiinteistöille suunniteltuihin käyttötarkoituksiin kuului vuokraus- ja virkistystoimintaa."
       },
       {
         "source_ids": [
           "A"
         ],
-        "text": "Valmistelua johtaa tiedotteen mukaan sosiaali- ja terveysministeriö yhteistyössä valtiovarainministeriön kanssa. Työn aikana kuullaan työ- ja elinkeinoministeriötä sekä työnantaja-, palkansaaja- ja yrittäjäjärjestöjä."
+        "text": "Tiedotteen mukaan kielteiset päätökset perustuvat kiinteistöhankintojen luvanvaraisuutta koskevaan lakiin ja puuttuvien selvitysten tapauksissa myös hallintolakiin. Päätökset eivät ole vielä lainvoimaisia."
       }
     ],
-    "summary": "Valtioneuvoston tiedotteen mukaan selvityksessä etsitään keinoja parantaa osa-aikatyön ja lisätyön vastaanottamisen sekä kokoaikatyöhön siirtymisen kannustimia. Ehdotuksia valmistellaan seuraavaa hallitusta varten.",
-    "title": "Työttömyysturvan kannustimista käynnistyy selvitys"
+    "summary": "Valtioneuvoston tiedotteen mukaan yksi kielteinen päätös perustuu arvioituun turvallisuus- tai huoltovarmuusriskiin ja muut puuttuviin selvityksiin. Päätökset eivät ole vielä lainvoimaisia.",
+    "title": "Häkkänen epäsi luvat kuudelta kiinteistöhankinnalta"
   },
   "review": {
     "approved": true,
-    "draft_sha256": "66beeb956ae882c8a374cdbda7a0d16a8a4856b66126c6929d15fd6742df4d3d",
+    "draft_sha256": "686efacf9288faf934cbe9fb2584ee1db6a04475edcdf9da1d1d1b77036aa9b2",
     "reasons": [
-      "Otsikko on 50 merkkiä pitkä, joten se alittaa 60 merkin tavoitteen. Työttömyysturvan kannustimet ovat alussa, ja selvityksen käynnistyminen saa tuen lähteestä A.",
-      "Lähde A tukee ingressin osa-aikatyötä, lisätyötä, kokoaikatyöhön siirtymistä ja seuraavaa hallitusta koskevia tietoja sekä kaikkien neljän kappaleen source_ids-merkintöjä. Ministerin nimi Karoliina Partanen, asettamispäivä 6.10.2026 ja toimikauden päättyminen 31.3.2027 vastaavat lähdettä. Myös erityisryhmät, valmisteluvastuut ja kuultavien järjestöjen ryhmittely ovat lähteen mukaisia.",
-      "Lähteen A tiedote on julkaistu 7.10.2026 eli arviointipäivänä. Yksi ensisijainen viranomaislähde riittää tämän rajatun hankkeen käynnistämistä koskevan uutisen pohjaksi. Luonnos ei väitä riippumatonta vahvistusta, toteutuneita työllisyysvaikutuksia tai päätettyjä etuusmuutoksia, vaan erottaa tavoitteet tuloksista. Kotimaa-luokitus ja valtakunnallinen aihepiiri ovat perusteltuja; teksti on neutraalia, ymmärrettävää ja itsenäisesti tiivistettyä.",
-      "Kuvatietue on sama luonnoksessa ja lähdepaketissa. Paketissa on kaksi järjestettyä kuvakonseptia ja haut kummastakin. Generoitu paperien ja laskimen kuva vastaa korkeimmalle sijoitettua turvallisesti generoitavaa konseptia; erillisen arviointimallin pikseliarvio kohdistuu valitun kuvan samaan SHA256-tunnisteeseen, antaa sopivuudeksi 10/10 eikä ilmoita ihmisiä tai luettavaa tekstiä. Kuvateksti on täsmälleen 'AI-generoitu kuva. Ei valokuva tapahtumasta.' Kuva havainnollistaa selvitystyötä eikä väitä esittävänsä todellista tapahtumaa tai asiakirjoja.",
-      "RIGHTS-asiakirja tukee lähdemaininnallista tekstin käyttöä, mutta edellyttää kaupalliseen käyttöön erillistä sopimusta. Sitä ei ole käytetty uutisväitteiden tai kuvan oikeuksien todisteena. Hyväksyntä koskee annettua luonnosta ja aineistoa, ei lähteen tietojen riippumatonta todentamista tai julkaisulupaa."
+      "Otsikko on alle 60 merkkiä ja kertoo keskeisen päätösuutisen heti. Lähde A tukee Häkkäsen tekemiä kuutta kielteistä lupapäätöstä; otsikko ei väitä päätöksiä lainvoimaisiksi, ja niiden keskeneräinen oikeudellinen asema kerrotaan ingressissä ja viimeisessä kappaleessa.",
+      "Lähde A, julkaistu 7.10.2026 klo 11.53 Suomen aikaa, tukee ensimmäisen kappaleen päätöspäivää, ministerin nimeä, päätösten määrää sekä Kotkan, Viitasaaren, Miehikkälän ja Imatran sijainteja. EU- ja ETA-alueen ulkopuolinen ostaja tai omistus vastaa lähteen erottelua. Ajankohta on arviointipäivän mukainen ja Kotimaa-luokitus perusteltu.",
+      "Ingressin ja toisen kappaleen perusteet vastaavat lähdettä A: yhdessä Kotkan tapauksessa kyse on ministeriön arviosta kansallisen turvallisuuden tai huoltovarmuuden vaarantumisesta, muissa puuttuvista tiedoista tai lisäselvityksistä muistutuksista huolimatta. Luonnos ei esitä arvioitua riskiä toteutuneena vahinkona tai kaikkien päätösten syynä.",
+      "Lähde A tukee kolmannen kappaleen kansalaisuuksia, Italiaan rekisteröidyn yrityksen EU- ja ETA-alueen ulkopuolista omistusta sekä vuokraus- ja virkistyskäyttöä. Kansalaisuuksia ei perusteettomasti kohdisteta yksittäisiin paikkakuntiin. Neljännen kappaleen lakiperusteet ja lainvoimaisuuden puuttuminen ovat myös lähteessä A. Kaikkien kappaleiden source_ids-merkinnät ovat asianmukaiset.",
+      "Yksi ajantasainen viranomaistiedote riittää tähän rajattuun päätösuutiseen. Teksti nimeää tiedotteen lähteekseen eikä väitä riippumatonta vahvistusta. Muotoilu on itsenäistä, neutraalia ja ymmärrettävää eikä sisällä lähteettömiä turvallisuuspäätelmiä tai valtakunnallisia yleistyksiä. RIGHTS-asiakirjaa käytetään vain käyttöehtojen näyttönä; mahdollisen kaupallisen käytön erillinen sopimusvaatimus jää voimaan.",
+      "Luonnoksen koko kuvatietue vastaa lähdepaketin tietuetta. Kahdelle järjestetylle kuvakonseptille on kirjattu haut. Valitun valokuvan asiakirjakansio, kiinteistöavaimet ja talomallit liittyvät konkreettisesti jutun kiinteistöhankintoihin ja lupamenettelyyn, eivät vain Kotimaa-kategoriaan. Kuvateksti ei väitä kuvaa näiden päätösten tapahtumakuvaksi. Kuvakohtainen Pexels-tunniste, alkuperäosoite, kuvaaja ja lisenssin hakutiedot tukevat käyttöoikeutta; samaan kuvatunnisteeseen sidottu koko artikkelin pikseliarvio on 9/10. Tietueen mukaan kuvassa ei ole henkilöitä, luettavaa keksittyä tekstiä tai lopullista hylkäystä esittäviä leimoja. Arvio perustuu toimitettuun aineistoon, ei ulkoiseen kuva- tai lähdevarmennukseen."
     ]
   }
 }
