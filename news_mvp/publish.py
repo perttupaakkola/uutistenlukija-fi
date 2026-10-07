@@ -504,6 +504,13 @@ def matching_runs(commit):
                          '--event','workflow_dispatch','--limit','10','--json','databaseId,status,conclusion,headSha'))
 
 
+def check_deployment_amendment(live, binding):
+    """Hosted evidence must carry exactly the amendment binding, or neither does."""
+    if (('amendment' in live) != ('amendment' in binding) or
+            live.get('amendment') != binding.get('amendment')):
+        raise ValueError('Deployment amendment binding mismatch')
+
+
 def publish(store,job,state,config_path):
     ensure_table(store);guard(config_path)
     packet,draft=json.loads(job['packet']),json.loads(job['draft'])
@@ -512,6 +519,17 @@ def publish(store,job,state,config_path):
         return {'status': 'image_pending', 'job_id': job['id'], 'retryable': True}
     binding=media(packet,draft)
     if not validate_review(json.loads(job['review']),draft)['approved']:raise ValueError('Unapproved publication')
+    from .release_contract import AMENDMENT_RELEASE
+    if packet.get('schema') == AMENDMENT_RELEASE:
+        predecessor = store.db.execute('SELECT * FROM publications WHERE job_id=?', (job['id'],)).fetchone()
+        if predecessor is not None and (
+                predecessor['packet_sha'] != digest(packet) or
+                predecessor['draft_sha'] != digest(draft) or
+                predecessor['image_sha'] != binding['image_sha256']):
+            raise ValueError('Publication packet changed')
+        # The job-keyed row cannot own an append-only amendment version. Refuse
+        # both admission and reconciliation before insert, dispatch or idle/deployed.
+        raise ValueError('Amendment publication version ownership is not installed')
     if store.db.execute('SELECT 1 FROM publications WHERE job_id=?',(job['id'],)).fetchone() is None:
         validate_packet(packet,datetime.now(timezone.utc),48)
     if packet.get('publication_basis') is not None:
@@ -564,6 +582,7 @@ def publish(store,job,state,config_path):
             cmd('gh','run','download',str(run['databaseId']),'--repo',REPO,'--name','live-deployment','--dir',str(receipt_dir))
         live=json.loads((receipt_dir/'live-deployment.json').read_text())
         assert live['remote_commit']==row['remote_commit'] and live['packet_sha256']==row['packet_sha'] and live['draft_sha256']==row['draft_sha'] and live['image_sha256']==row['image_sha']
+        check_deployment_amendment(live, binding)
         if (('stock_image' in live) != ('stock_image' in binding) or
                 live.get('stock_image') != binding.get('stock_image')):
             raise ValueError('Deployment stock binding mismatch')

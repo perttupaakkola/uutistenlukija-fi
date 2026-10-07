@@ -76,6 +76,10 @@ def _depicts_people(scene):
         r'\b(?:ilman|without|no)\s+(?:ihmi\w*|henkil\w*|people|persons?|'
         r'kasvo\w*|faces?|laps\w*|last\w*|children|hands?|k(?:ä|a)si\w*)\b',
         '', scene, flags=re.I)
+    # These two observed full-token plural forms denote tools, not hands.
+    # Never suppress the käs* root or compounds/agents such as käsityöläinen.
+    without_exclusion = re.sub(
+        r'\bkäsityökalu(?:t|ja)\b', '', without_exclusion, flags=re.I)
     # A bounded singular adjective/noun agreement contract, not a nuor* whitelist.
     # Full tokens preserve human compounds and unmatched/ambiguous uses fail closed.
     forest_cases = (
