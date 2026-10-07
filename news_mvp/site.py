@@ -1666,6 +1666,12 @@ def render_site(store, output_dir, state_dir=None, public=False, include_ids=Non
         '<p class="empty-recovery"><a href="https://www.turku.fi/ajankohtaista/'
         'turussa-tapahtuu-syyslomalla-joka-paiva" rel="noopener noreferrer">'
         'Turun kaupungin syyslomaohjelma</a></p>'
+        '<p class="portal-list-header__eyebrow">'
+        'Linkki kaupungin ohjelmakoosteeseen – ei Uutistenlukijan uutisjuttu.</p>'
+        '<p>Jyväskylän Lomalokki kokoaa syyslomatekemistä lapsille, nuorille ja perheille. '
+        'Tarkista järjestäjän ohjelmasta ikärajat, hinnat ja ilmoittautuminen.</p>'
+        '<p class="empty-recovery"><a href="https://www.jyvaskyla.fi/harrastukset/lomalokki" '
+        'rel="noopener noreferrer">Jyväskylän kaupungin Lomalokki</a></p>'
         '</header></section>'
     )
     guides_meta = (homepage_head_meta(
