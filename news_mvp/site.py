@@ -1685,6 +1685,13 @@ def render_site(store, output_dir, state_dir=None, public=False, include_ids=Non
         'Tarkista ohjelmasta ikärajat, maksut ja ilmoittautumisen määräajat.</p>'
         '<p class="empty-recovery"><a href="https://www.espoo.fi/fi/lomatekemista" '
         'rel="noopener noreferrer">Espoon kaupungin lomaohjelma</a></p>'
+        '<p class="portal-list-header__eyebrow">'
+        'Linkki Tampereen kaupungin syyslomaohjelmaan – ei Uutistenlukijan uutisjuttu.</p>'
+        '<p>Tampereen kaupungin sivulle on koottu syyslomatekemistä lapsille, nuorille ja perheille. '
+        'Tarkista järjestäjiltä ikärajat, hinnat ja ilmoittautuminen.</p>'
+        '<p class="empty-recovery"><a href="https://www.tampere.fi/ajankohtaista/'
+        'syyslomalla-tapahtuu-2026" rel="noopener noreferrer">'
+        'Tampereen kaupungin syyslomaohjelma</a></p>'
         '</header></section>'
     )
     guides_meta = (homepage_head_meta(
