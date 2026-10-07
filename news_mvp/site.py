@@ -1672,6 +1672,13 @@ def render_site(store, output_dir, state_dir=None, public=False, include_ids=Non
         'Tarkista järjestäjän ohjelmasta ikärajat, hinnat ja ilmoittautuminen.</p>'
         '<p class="empty-recovery"><a href="https://www.jyvaskyla.fi/harrastukset/lomalokki" '
         'rel="noopener noreferrer">Jyväskylän kaupungin Lomalokki</a></p>'
+        '<p class="portal-list-header__eyebrow">'
+        'Linkki kaupungin tapahtumakalenteriin – ei Uutistenlukijan uutisjuttu.</p>'
+        '<p>Kuopion kaupungin tapahtumakalenterista löytyy syyslomatekemistä lapsille ja nuorille. '
+        'Tarkista tapahtuman ikärajat, hinnat ja ilmoittautuminen järjestäjältä.</p>'
+        '<p class="empty-recovery"><a href="https://www.kuopionseina.fi/tapahtumat/'
+        '?event-search-s=Supersyysloma" rel="noopener noreferrer">'
+        'Kuopion kaupungin syyslomakalenteri</a></p>'
         '</header></section>'
     )
     guides_meta = (homepage_head_meta(
