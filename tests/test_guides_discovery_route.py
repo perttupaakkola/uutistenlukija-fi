@@ -45,6 +45,13 @@ KUOPIO_DESCRIPTION = (
 )
 KUOPIO_LABEL = "Linkki kaupungin tapahtumakalenteriin – ei Uutistenlukijan uutisjuttu."
 KUOPIO_ANCHOR = "Kuopion kaupungin syyslomakalenteri"
+ESPOO_URL = "https://www.espoo.fi/fi/lomatekemista"
+ESPOO_DESCRIPTION = (
+    "Espoon kaupungin sivulta löytyy lomatekemistä lapsille ja nuorille. "
+    "Tarkista ohjelmasta ikärajat, maksut ja ilmoittautumisen määräajat."
+)
+ESPOO_LABEL = "Linkki Espoon kaupungin lomaohjelmaan – ei Uutistenlukijan uutisjuttu."
+ESPOO_ANCHOR = "Espoon kaupungin lomaohjelma"
 
 
 def listing_item(job_id, label):
@@ -252,6 +259,16 @@ class GuidesDiscoveryRoute(unittest.TestCase):
         self.assertEqual(page.count(KUOPIO_DESCRIPTION), 1)
         self.assertEqual(page.count(KUOPIO_LABEL), 1)
         self.assertLess(page.index(JYVASKYLA_ANCHOR), page.index(KUOPIO_ANCHOR))
+        self.assertEqual(page.count(f'href="{ESPOO_URL}"'), 1)
+        self.assertEqual(
+            page.count(
+                f'<a href="{ESPOO_URL}" rel="noopener noreferrer">{ESPOO_ANCHOR}</a>'
+            ),
+            1,
+        )
+        self.assertEqual(page.count(ESPOO_DESCRIPTION), 1)
+        self.assertEqual(page.count(ESPOO_LABEL), 1)
+        self.assertLess(page.index(KUOPIO_ANCHOR), page.index(ESPOO_LABEL))
 
         payloads = [
             json.loads(raw) for raw in re.findall(
@@ -268,10 +285,12 @@ class GuidesDiscoveryRoute(unittest.TestCase):
         self.assertNotIn(TURKU_URL, json.dumps(payloads))
         self.assertNotIn(JYVASKYLA_URL, json.dumps(payloads))
         self.assertNotIn(KUOPIO_URL, json.dumps(payloads))
+        self.assertNotIn(ESPOO_URL, json.dumps(payloads))
         self.assertNotIn(OULU_URL, rss)
         self.assertNotIn(TURKU_URL, rss)
         self.assertNotIn(JYVASKYLA_URL, rss)
         self.assertNotIn(KUOPIO_URL, rss)
+        self.assertNotIn(ESPOO_URL, rss)
 
     def test_rendered_reference_stays_separate_with_zero_or_one_selected_article(self):
         unrelated = rendered_job("unrelated-story", 2)
@@ -290,11 +309,20 @@ class GuidesDiscoveryRoute(unittest.TestCase):
                 self.assertEqual(page.count(f'href="{TURKU_URL}"'), 1)
                 self.assertEqual(page.count(f'href="{JYVASKYLA_URL}"'), 1)
                 self.assertEqual(page.count(f'href="{KUOPIO_URL}"'), 1)
+                self.assertEqual(page.count(f'href="{ESPOO_URL}"'), 1)
                 self.assertEqual(page.count(TURKU_ANCHOR), 1)
                 self.assertEqual(page.count(JYVASKYLA_ANCHOR), 1)
                 self.assertEqual(page.count(KUOPIO_ANCHOR), 1)
+                self.assertEqual(
+                    page.count(
+                        f'<a href="{ESPOO_URL}" rel="noopener noreferrer">'
+                        f'{ESPOO_ANCHOR}</a>'
+                    ),
+                    1,
+                )
                 self.assertEqual(page.count(JYVASKYLA_LABEL), 2)
                 self.assertEqual(page.count(KUOPIO_LABEL), 1)
+                self.assertEqual(page.count(ESPOO_LABEL), 1)
                 self.assertIn(
                     '</div><section class="portal-list-page" '
                     'aria-labelledby="oppaat-lisaa-title">',
@@ -318,6 +346,7 @@ class GuidesDiscoveryRoute(unittest.TestCase):
                 self.assertNotIn(TURKU_URL, json.dumps(payloads))
                 self.assertNotIn(JYVASKYLA_URL, json.dumps(payloads))
                 self.assertNotIn(KUOPIO_URL, json.dumps(payloads))
+                self.assertNotIn(ESPOO_URL, json.dumps(payloads))
 
     def test_empty_and_single_match_remain_truthful(self):
         unrelated = listing_item("unrelated-story", 3)

@@ -1679,6 +1679,12 @@ def render_site(store, output_dir, state_dir=None, public=False, include_ids=Non
         '<p class="empty-recovery"><a href="https://www.kuopionseina.fi/tapahtumat/'
         '?event-search-s=Supersyysloma" rel="noopener noreferrer">'
         'Kuopion kaupungin syyslomakalenteri</a></p>'
+        '<p class="portal-list-header__eyebrow">'
+        'Linkki Espoon kaupungin lomaohjelmaan – ei Uutistenlukijan uutisjuttu.</p>'
+        '<p>Espoon kaupungin sivulta löytyy lomatekemistä lapsille ja nuorille. '
+        'Tarkista ohjelmasta ikärajat, maksut ja ilmoittautumisen määräajat.</p>'
+        '<p class="empty-recovery"><a href="https://www.espoo.fi/fi/lomatekemista" '
+        'rel="noopener noreferrer">Espoon kaupungin lomaohjelma</a></p>'
         '</header></section>'
     )
     guides_meta = (homepage_head_meta(
