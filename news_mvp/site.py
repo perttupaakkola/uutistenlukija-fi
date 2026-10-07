@@ -465,7 +465,8 @@ def home_item_list_jsonld(articles, start_position=1):
     }
 
 
-def homepage_head_meta(articles, path="/", page_title="Uusimmat uutiset", start_position=1):
+def homepage_head_meta(articles, path="/", page_title="Uusimmat uutiset", start_position=1,
+                       description=HOME_DESCRIPTION):
     """Description/OG/Twitter/JSON-LD block for one public listing page.
 
     `path` is that page's own URL and `articles` is exactly the slice rendered on it,
@@ -483,15 +484,15 @@ def homepage_head_meta(articles, path="/", page_title="Uusimmat uutiset", start_
                       f'<meta name="twitter:image" content="{esc(absolute_image)}">')
     twitter_card = "summary_large_image" if lead_image else "summary"
     metas = (
-        f'<meta name="description" content="{esc(HOME_DESCRIPTION)}">'
+        f'<meta name="description" content="{esc(description)}">'
         f'<meta property="og:site_name" content="{esc(SITE_NAME)}">'
         f'<meta property="og:type" content="website">'
         f'<meta property="og:title" content="{esc(title)}">'
         f'<meta property="og:url" content="{esc(url)}">'
-        f'<meta property="og:description" content="{esc(HOME_DESCRIPTION)}">'
+        f'<meta property="og:description" content="{esc(description)}">'
         f'<meta name="twitter:card" content="{twitter_card}">'
         f'<meta name="twitter:title" content="{esc(title)}">'
-        f'<meta name="twitter:description" content="{esc(HOME_DESCRIPTION)}">'
+        f'<meta name="twitter:description" content="{esc(description)}">'
     ) + image_meta
     return metas + jsonld_script(website_jsonld()) + jsonld_script(home_item_list_jsonld(articles, start_position))
 
@@ -576,6 +577,20 @@ CATEGORY_ALIASES = {"maailma": "ulkomaat"}
 LATEST_PATH = "/tuoreimmat/"
 OPPAAT_PATH = "/oppaat/"
 SOURCES_PATH = "/lahteet/"
+GUIDES_DESCRIPTION = (
+    "Syysloman 2026 tapahtumajutut Helsingistä ja Vantaalta. "
+    "Tarkista ajantasaiset ohjelmat jutun lähteistä."
+)
+GUIDES_JOB_IDS = frozenset({
+    "9c818b9e83818ccf047a7fce9a4c2657f551f5abe743370f60b812af3bd5ed56",
+    "f1f023667c0fcb8fd1fc1a0b600cb91c32c7d5717e765892463169e1c4aedcfa",
+})
+GUIDES_SINGLE_DESCRIPTIONS = {
+    "9c818b9e83818ccf047a7fce9a4c2657f551f5abe743370f60b812af3bd5ed56":
+        "Syysloman 2026 tapahtumajuttu Helsingistä. Tarkista ajantasainen ohjelma jutun lähteestä.",
+    "f1f023667c0fcb8fd1fc1a0b600cb91c32c7d5717e765892463169e1c4aedcfa":
+        "Syysloman 2026 tapahtumajuttu Vantaalta. Tarkista ajantasainen ohjelma jutun lähteestä.",
+}
 
 
 def category_page_slug(category):
@@ -601,6 +616,21 @@ def category_display(category):
         if page_slug == slug:
             return display
     return str(category or "").strip()
+
+
+def guides_listing_items(listing_items):
+    """Select only the reviewed guide stories, preserving archive order and data."""
+    return [item for item in listing_items if item[0].get("id") in GUIDES_JOB_IDS]
+
+
+def guides_description(items):
+    """Describe only the guide cities represented by the selected listing items."""
+    ids = {item[0].get("id") for item in items}
+    if ids == GUIDES_JOB_IDS:
+        return GUIDES_DESCRIPTION
+    if len(ids) == 1:
+        return GUIDES_SINGLE_DESCRIPTIONS[next(iter(ids))]
+    return "Toimitukselliset oppaat ja taustat."
 
 
 def article_hero_figure(image, image_url):
@@ -1612,10 +1642,15 @@ def render_site(store, output_dir, state_dir=None, public=False, include_ids=Non
         active_section=LATEST_PATH, recovery_html=recovery_links_html(),
     )
     guides_title = "Oppaat"
-    guides_body = category_page_body("Oppaat", "Toimitukselliset oppaat ja taustat.",
-                                     [], "Oppaita ei ole vielä julkaistu.",
+    guides_items = guides_listing_items(listing_items)
+    guides_note = guides_description(guides_items)
+    guides_body = category_page_body("Oppaat", guides_note,
+                                     guides_items, "Oppaita ei ole vielä julkaistu.",
                                      recovery_html=recovery_links_html())
-    guides_meta = homepage_head_meta([], path=OPPAAT_PATH, page_title=guides_title) if public else ""
+    guides_meta = (homepage_head_meta(
+        guides_items, path=OPPAAT_PATH, page_title=guides_title,
+        description=guides_note,
+    ) if public else "")
     atomic_write(output_dir / "oppaat/index.html",
                  page(guides_title, guides_body, OPPAAT_PATH if public else None, head_meta=guides_meta, snapshot=snapshot))
     sources_title = "Lähteet ja toimitus"
