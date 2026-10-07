@@ -1659,6 +1659,13 @@ def render_site(store, output_dir, state_dir=None, public=False, include_ids=Non
         'ilmoittautuminen kaupungin sivulta.</p>'
         '<p class="empty-recovery"><a href="https://www.ouka.fi/fiilis" rel="noopener noreferrer">'
         'Oulun kaupungin syyslomatoiminta</a></p>'
+        '<p class="portal-list-header__eyebrow">'
+        'Linkki kaupungin ohjelmakoosteeseen – ei Uutistenlukijan uutisjuttu.</p>'
+        '<p>Turku: kaupungin ohjelmakoosteessa on tekemistä lasten ja nuorten syyslomalle '
+        '12.–18.10.2026. Tarkista maksut, ikärajat ja ennakkovaraukset tapahtuman tiedoista.</p>'
+        '<p class="empty-recovery"><a href="https://www.turku.fi/ajankohtaista/'
+        'turussa-tapahtuu-syyslomalla-joka-paiva" rel="noopener noreferrer">'
+        'Turun kaupungin syyslomaohjelma</a></p>'
         '</header></section>'
     )
     guides_meta = (homepage_head_meta(

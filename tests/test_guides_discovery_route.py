@@ -21,6 +21,16 @@ OULU_DESCRIPTION = (
 )
 OULU_LABEL = "Linkki kaupungin palvelusivulle – ei Uutistenlukijan uutisjuttu."
 OULU_ANCHOR = "Oulun kaupungin syyslomatoiminta"
+TURKU_URL = (
+    "https://www.turku.fi/ajankohtaista/"
+    "turussa-tapahtuu-syyslomalla-joka-paiva"
+)
+TURKU_DESCRIPTION = (
+    "Turku: kaupungin ohjelmakoosteessa on tekemistä lasten ja nuorten syyslomalle "
+    "12.–18.10.2026. Tarkista maksut, ikärajat ja ennakkovaraukset tapahtuman tiedoista."
+)
+TURKU_LABEL = "Linkki kaupungin ohjelmakoosteeseen – ei Uutistenlukijan uutisjuttu."
+TURKU_ANCHOR = "Turun kaupungin syyslomaohjelma"
 
 
 def listing_item(job_id, label):
@@ -176,7 +186,7 @@ class GuidesDiscoveryRoute(unittest.TestCase):
         )
         self.assertFalse(any(payload.get("@type") == "NewsArticle" for payload in payloads))
 
-    def test_rendered_route_keeps_oulun_reference_outside_two_article_inventory(self):
+    def test_rendered_route_keeps_curated_references_outside_two_article_inventory(self):
         vantaa = rendered_job(VANTAA_ID, 1)
         unrelated = rendered_job("unrelated-story", 2)
         helsinki = rendered_job(HELSINKI_ID, 3)
@@ -197,6 +207,16 @@ class GuidesDiscoveryRoute(unittest.TestCase):
         self.assertEqual(page.count(OULU_DESCRIPTION), 1)
         self.assertEqual(page.count(OULU_LABEL), 1)
         self.assertLess(page.index(original_links[1]), page.index(OULU_HEADING))
+        self.assertEqual(page.count(f'href="{TURKU_URL}"'), 1)
+        self.assertEqual(
+            page.count(
+                f'<a href="{TURKU_URL}" rel="noopener noreferrer">{TURKU_ANCHOR}</a>'
+            ),
+            1,
+        )
+        self.assertEqual(page.count(TURKU_DESCRIPTION), 1)
+        self.assertEqual(page.count(TURKU_LABEL), 1)
+        self.assertLess(page.index(OULU_ANCHOR), page.index(TURKU_LABEL))
 
         payloads = [
             json.loads(raw) for raw in re.findall(
@@ -210,7 +230,9 @@ class GuidesDiscoveryRoute(unittest.TestCase):
             [site.SITE_URL.rstrip("/") + link for link in original_links],
         )
         self.assertNotIn(OULU_URL, json.dumps(payloads))
+        self.assertNotIn(TURKU_URL, json.dumps(payloads))
         self.assertNotIn(OULU_URL, rss)
+        self.assertNotIn(TURKU_URL, rss)
 
     def test_rendered_reference_stays_separate_with_zero_or_one_selected_article(self):
         unrelated = rendered_job("unrelated-story", 2)
@@ -226,6 +248,8 @@ class GuidesDiscoveryRoute(unittest.TestCase):
                 )
                 self.assertEqual(page.count('<article class="portal-feed-item'), expected_count)
                 self.assertEqual(page.count(f'href="{OULU_URL}"'), 1)
+                self.assertEqual(page.count(f'href="{TURKU_URL}"'), 1)
+                self.assertEqual(page.count(TURKU_ANCHOR), 1)
                 self.assertIn(
                     '</div><section class="portal-list-page" '
                     'aria-labelledby="oppaat-lisaa-title">',
@@ -246,6 +270,7 @@ class GuidesDiscoveryRoute(unittest.TestCase):
                 self.assertEqual(len(item_lists[0]["itemListElement"]), expected_count)
                 self.assertFalse(any(payload.get("@type") == "NewsArticle" for payload in payloads))
                 self.assertNotIn(OULU_URL, json.dumps(payloads))
+                self.assertNotIn(TURKU_URL, json.dumps(payloads))
 
     def test_empty_and_single_match_remain_truthful(self):
         unrelated = listing_item("unrelated-story", 3)
