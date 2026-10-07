@@ -90,7 +90,7 @@ def live_tick(config_path):
             retry = None
             for candidate in store.db.execute(
                     "SELECT id,packet FROM jobs WHERE status='ready' AND next_attempt<=? "
-                    "AND attempts<? ORDER BY created_at, id",
+                    "AND attempts<? ORDER BY next_attempt, created_at, id",
                     (time.time(), config['max_attempts'])):
                 try:
                     fixture = json.loads(candidate['packet']).get('fixture') is True

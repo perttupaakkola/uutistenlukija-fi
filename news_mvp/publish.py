@@ -14,7 +14,7 @@ from cutover.check_release import check
 from .authorization import authorize
 from .diagnostics import safe_error
 from .editorial import ROOT, digest, timestamp, validate_review, validate_packet
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from .release_contract import media, verify_intake, check_article, load_legacy_redirects, legacy_redirect_lines
 from .site import (ABOUT_PATH, CATEGORY_PAGES, LATEST_PATH, OPPAAT_PATH, SOURCES_PATH,
                    atomic_write, article_path, esc, missing_page, page, render_site)
@@ -23,6 +23,8 @@ from . import slugs
 
 REPO='perttupaakkola/uutistenlukija-fi'
 WORKFLOW='246481423'
+NEWS_SITEMAP_NS='http://www.google.com/schemas/sitemap-news/0.9'
+NEWS_SITEMAP_LIMIT=1000
 
 
 def cmd(*args):
@@ -151,6 +153,91 @@ def _canonical_links(html):
     return parser.hrefs
 
 
+class _NewsPageMetadata(_CanonicalLinks):
+    """Collect canonical links and complete JSON-LD script bodies from one page."""
+
+    def __init__(self):
+        super().__init__()
+        self.jsonld=[]
+        self._jsonld_body=None
+        self.invalid_jsonld=False
+
+    def handle_starttag(self,tag,attrs):
+        super().handle_starttag(tag,attrs)
+        if tag!='script':return
+        types=[value for name,value in attrs if name.lower()=='type']
+        if not any(isinstance(value,str) and value.lower()=='application/ld+json'
+                   for value in types):
+            return
+        names=[name.lower() for name,_value in attrs]
+        if self._jsonld_body is not None or len(names)!=len(set(names)) or len(types)!=1:
+            self.invalid_jsonld=True
+        self._jsonld_body=[]
+
+    def handle_data(self,data):
+        if self._jsonld_body is not None:
+            self._jsonld_body.append(data)
+
+    def handle_endtag(self,tag):
+        if tag=='script' and self._jsonld_body is not None:
+            self.jsonld.append(''.join(self._jsonld_body))
+            self._jsonld_body=None
+
+
+def _published_news_metadata(site,path,title,published):
+    """News fields only when this exact rendered page binds them to the fresh row."""
+    index=_bundle_index(site,path)
+    if index is None:
+        return None
+    try:
+        html=index.read_text(encoding='utf-8')
+    except (OSError,UnicodeDecodeError):
+        return None
+    parser=_NewsPageMetadata()
+    try:
+        parser.feed(html)
+        parser.close()
+    except Exception:
+        return None
+    expected_url='https://uutistenlukija.fi/'+path
+    if (parser.hrefs!=[expected_url] or parser.invalid_jsonld
+            or parser._jsonld_body is not None):
+        return None
+
+    def unique_object(pairs):
+        result={}
+        for key,value in pairs:
+            if key in result:
+                raise ValueError('Duplicate JSON-LD key')
+            result[key]=value
+        return result
+
+    articles=[]
+    for raw in parser.jsonld:
+        try:
+            payload=json.loads(raw,object_pairs_hook=unique_object)
+        except (ValueError,TypeError):
+            return None
+        if isinstance(payload,dict) and payload.get('@type')=='NewsArticle':
+            articles.append(payload)
+    if len(articles)!=1:
+        return None
+    article=articles[0]
+    rendered_date=article.get('datePublished')
+    if (article.get('headline')!=title
+            or article.get('mainEntityOfPage')!={'@type':'WebPage','@id':expected_url}
+            or not isinstance(rendered_date,str)):
+        return None
+    try:
+        if timestamp(rendered_date)!=published:
+            return None
+    except (ValueError,TypeError,OverflowError):
+        return None
+    if not _valid_xml_text(rendered_date):
+        return None
+    return {'publication_date':rendered_date,'title':article['headline']}
+
+
 def _bundle_index(site,path):
     """The real `index.html` for a bundle-relative `path`, or None when there is none.
 
@@ -187,6 +274,69 @@ def _published_page(site,path):
     except (OSError,UnicodeDecodeError):
         return False
     return _canonical_links(html)==['https://uutistenlukija.fi/'+path]
+
+
+def _valid_xml_text(value):
+    """Whether a string can be emitted as XML 1.0 character data."""
+    return isinstance(value,str) and all(
+        char in '\t\n\r' or '\x20' <= char <= '\ud7ff'
+        or '\ue000' <= char <= '\ufffd' or '\U00010000' <= char <= '\U0010ffff'
+        for char in value)
+
+
+def _recent_news_metadata(site,eligible_ids,rows,now):
+    """Recent, rendered article metadata, deterministically capped for Google News."""
+    cutoff=now-timedelta(hours=48)
+    candidates=[]
+    for row in rows:
+        identifier=row['id']
+        if identifier not in eligible_ids:
+            continue
+        try:
+            published=timestamp(row['created_at'])
+            raw_draft=row['draft']
+            draft=json.loads(raw_draft) if isinstance(raw_draft,(str,bytes)) else raw_draft
+            title=draft['title']
+            path=article_path({'id':identifier,'draft':raw_draft})
+            if (published < cutoff or published > now or not _valid_xml_text(title)
+                    or not title.strip() or len(title)>160):
+                continue
+            metadata=_published_news_metadata(site,path,title,published)
+        except (ValueError,TypeError,KeyError,AttributeError,OverflowError):
+            continue
+        if metadata is not None:
+            candidates.append((published,identifier,metadata))
+    candidates.sort(key=lambda item:(item[0],item[1]),reverse=True)
+    return {identifier:metadata
+            for _published,identifier,metadata in candidates[:NEWS_SITEMAP_LIMIT]}
+
+
+def _sitemap_url_entry(url,lastmod=None,news=None):
+    body='<loc>'+esc(url)+'</loc>'
+    if lastmod:
+        body+='<lastmod>'+esc(lastmod)+'</lastmod>'
+    if news:
+        body+=('<news:news><news:publication>'
+               '<news:name>Uutistenlukija</news:name><news:language>fi</news:language>'
+               '</news:publication><news:publication_date>'+esc(news['publication_date'])+
+               '</news:publication_date><news:title>'+esc(news['title'])+
+               '</news:title></news:news>')
+    return '<url>'+body+'</url>'
+
+
+def _article_sitemap_entries(identifiers,title_by_id,article_mod,news_by_id):
+    """All ordinary article URLs, with news metadata on only the selected subset."""
+    entries=[]
+    for identifier in sorted(identifiers):
+        # A NULL/unparsed draft still retains the historical id-only ordinary URL.
+        draft=title_by_id.get(identifier)
+        if draft is not None and not isinstance(draft,(str,bytes,dict)):
+            draft=None
+        path=article_path({'id':identifier,'draft':draft})
+        entries.append(_sitemap_url_entry('https://uutistenlukija.fi/'+path,
+                                           article_mod.get(identifier),
+                                           news_by_id.get(identifier)))
+    return entries
 
 
 def _bundle_content(site):
@@ -309,29 +459,24 @@ def public_bundle(store,job,state):
         if not _published_page(site, retired_terms):
             raise ValueError('Retired image terms page has an unexpected identity')
         retired_index.unlink()
-    # One pass over the store builds the slug/mtime maps used by the sitemap and redirects.
+    # One pass over the store builds the slug/mtime maps used by the sitemap. The
+    # timezone-aware clock is sampled once for this bundle's 48-hour news window.
+    news_now=datetime.now(timezone.utc)
     article_mod={}
     title_by_id={}
-    for row in store.db.execute('SELECT id,created_at,draft FROM jobs'):
+    job_rows=list(store.db.execute('SELECT id,created_at,draft FROM jobs'))
+    for row in job_rows:
         title_by_id[row['id']]=row['draft']
         try: article_mod[row['id']]=timestamp(row['created_at']).astimezone(timezone.utc).strftime('%Y-%m-%dT%H:%M:%S+00:00')
         except Exception: pass
     article_mod.update(amendment_mod)
-    def _slug_for(identifier):
-        # title_by_id maps id->raw draft; a NULL draft must still yield a valid slug
-        # rather than crashing the whole publish (regression: 2026-09-17).
-        draft = title_by_id.get(identifier)
-        if draft is not None and not isinstance(draft, (str, bytes, dict)):
-            draft = None
-        return article_path({'id': identifier, 'draft': draft})
-    def _url_entry(u,mod=None):
-        return '<url><loc>'+esc(u)+'</loc>'+(('<lastmod>'+esc(mod)+'</lastmod>') if mod else '')+'</url>'
-    entries=[_url_entry('https://uutistenlukija.fi/'),
-             _url_entry('https://uutistenlukija.fi/tietosuoja/'),
-             _url_entry('https://uutistenlukija.fi'+ABOUT_PATH),
-             _url_entry('https://uutistenlukija.fi'+SOURCES_PATH),
-             _url_entry('https://uutistenlukija.fi/ai-kuvat/')]
-    entries+= [_url_entry('https://uutistenlukija.fi/'+_slug_for(i), article_mod.get(i)) for i in sorted(ids)]
+    news_by_id=_recent_news_metadata(site,ids,job_rows,news_now)
+    entries=[_sitemap_url_entry('https://uutistenlukija.fi/'),
+             _sitemap_url_entry('https://uutistenlukija.fi/tietosuoja/'),
+             _sitemap_url_entry('https://uutistenlukija.fi'+ABOUT_PATH),
+             _sitemap_url_entry('https://uutistenlukija.fi'+SOURCES_PATH),
+             _sitemap_url_entry('https://uutistenlukija.fi/ai-kuvat/')]
+    entries+=_article_sitemap_entries(ids,title_by_id,article_mod,news_by_id)
     # Rendered archive pages are published pages too; the sitemap must list them.
     # Symlinked roots/directories/index files and nonnumeric or leading-zero names are not pages.
     archive_root=site/'sivu'
@@ -348,7 +493,7 @@ def public_bundle(store,job,state):
     # names the newest listing, and names /sivu/2/ only when that archive page really
     # exists in this bundle, judged by the same archive_pages validation the sitemap uses.
     atomic_write(site/'404.html',missing_page('/sivu/2/' if 2 in archive_pages else '/'))
-    entries+=[_url_entry('https://uutistenlukija.fi/sivu/'+str(n)+'/') for n in sorted(archive_pages)]
+    entries+=[_sitemap_url_entry('https://uutistenlukija.fi/sivu/'+str(n)+'/') for n in sorted(archive_pages)]
     # Category/latest/guides routes are sitemap entries only when the bundle really
     # contains a page whose canonical points back to that exact route. This keeps a
     # stale or tampered directory out without changing article/archive/legacy checks.
@@ -369,9 +514,9 @@ def public_bundle(store,job,state):
                 continue
             children.append(int(child.name))
         listing_paths += [root+'sivu/'+str(number)+'/' for number in sorted(children)]
-    entries += [_url_entry('https://uutistenlukija.fi/'+path)
+    entries += [_sitemap_url_entry('https://uutistenlukija.fi/'+path)
                 for path in listing_paths if _published_page(site, path)]
-    atomic_write(site/'sitemap.xml','<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+''.join(entries)+'</urlset>')
+    atomic_write(site/'sitemap.xml','<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="'+NEWS_SITEMAP_NS+'">'+''.join(entries)+'</urlset>')
     atomic_write(site/'robots.txt','User-agent: *\nAllow: /\nSitemap: https://uutistenlukija.fi/sitemap.xml\n')
     # --- Redirects: reviewed legacy mappings plus same-article hash aliases -----
     # Eligibility is what THIS render actually wrote: the current job plus deployed ids
@@ -625,7 +770,9 @@ def publish(store,job,state,config_path):
         # Best-effort search-engine ping; must never affect the publication outcome.
         try:
             from .indexing import ping
-            ping([url,'https://uutistenlukija.fi/'])
+            ping([url,'https://uutistenlukija.fi/'], result_callback=lambda result:
+                 atomic_write(receipt_dir/'indexnow-notification.json',
+                              json.dumps(result,indent=2)+'\n'))
         except Exception:
             pass
         return {'status':'deployed','job_id':job['id'],'run_id':run['databaseId'],'remote_commit':row['remote_commit'],'deployment_id':live['deployment_id']}

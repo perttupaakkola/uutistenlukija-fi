@@ -8,9 +8,129 @@ from datetime import datetime, timezone
 from pathlib import Path
 from unittest.mock import patch
 
-from news_mvp.editorial import ROOT, FixtureModel, HermesModel, current_default_model_args, parse_hermes_output
+from news_mvp.editorial import (ROOT, FixtureModel, HermesModel, current_default_model_args,
+                                parse_hermes_output)
 from news_mvp.intake import ArticleHTML, collect
 from news_mvp.history import preserve_article
+from news_mvp.live import live_tick
+from news_mvp.publish import ensure_table
+from news_mvp.store import database
+
+
+class RetryFairnessBoundary(unittest.TestCase):
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory()
+        self.addCleanup(self.tmp.cleanup)
+        self.root = Path(self.tmp.name)
+        self.state = self.root / 'state'
+        self.config_path = self.root / 'config.json'
+        self.config_path.write_text(json.dumps({
+            'enabled': True,
+            'backend': 'hermes',
+            'state_dir': str(self.state),
+            'output_dir': str(self.root / 'private'),
+            'source_recipes': [],
+            'discovery': {'family': 'nasa-modis'},
+            'max_attempts': 3,
+            'retry_seconds': 60,
+        }))
+
+    @staticmethod
+    def packet(name):
+        url = 'https://example.invalid/' + name
+        return {
+            'fixture': False,
+            'story_key': 'url:' + url,
+            'sources': [{'url': url}],
+        }
+
+    def admit(self, store, name, created_at):
+        return store.admit(self.packet(name), created_at)[0]
+
+    def test_live_retry_picker_yields_after_image_backoff(self):
+        base = 2_000_000_000.0
+        with database(self.state) as store:
+            older = self.admit(store, 'older-refusal', '2026-10-07T13:00:00+00:00')
+            newer = self.admit(store, 'newer-manuscript', '2026-10-07T13:01:00+00:00')
+            future = self.admit(store, 'future', '2026-10-07T13:02:00+00:00')
+            with store.db:
+                store.db.execute('UPDATE jobs SET next_attempt=? WHERE id=?',
+                                 (base + 2_000, future))
+
+        clock = [base]
+        selected = []
+
+        def defer_selected(_config_path, _already_locked=False, target_job_id=None,
+                           image_backfill_limit=None):
+            with database(self.state) as store:
+                job = store.claim(clock[0], 3, target_job_id)
+                self.assertIsNotNone(job)
+                self.assertEqual(job['id'], target_job_id)
+                selected.append(job['id'])
+                store.defer_image(job['id'], clock[0], 900, 'synthetic image refusal')
+
+        with patch('news_mvp.live.time.time', side_effect=lambda: clock[0]), \
+                patch('news_mvp.live.tick', side_effect=defer_selected), \
+                patch('news_mvp.live.discover', side_effect=AssertionError('due retry must win')), \
+                patch('news_mvp.live.collect', side_effect=AssertionError('no collection')), \
+                patch('news_mvp.live.publish', side_effect=AssertionError('no publication')):
+            first = live_tick(self.config_path)
+            clock[0] += 1_080
+            second = live_tick(self.config_path)
+
+        self.assertEqual((first['job_id'], second['job_id']), (older, newer))
+        self.assertEqual(selected, [older, newer])
+        with database(self.state) as store:
+            self.assertEqual(store.get(older)['next_attempt'], base + 900)
+            self.assertEqual(store.get(newer)['next_attempt'], base + 1_080 + 900)
+            self.assertEqual(store.get(future)['next_attempt'], base + 2_000)
+
+    def test_store_claim_keeps_target_due_limits_and_stable_ties(self):
+        now = 500.0
+        with database(self.state) as store:
+            earliest = self.admit(store, 'earliest', '2026-10-07T13:00:00+00:00')
+            target = self.admit(store, 'explicit-target', '2026-10-07T13:01:00+00:00')
+            tie_a = self.admit(store, 'tie-a', '2026-10-07T13:02:00+00:00')
+            tie_b = self.admit(store, 'tie-b', '2026-10-07T13:02:00+00:00')
+            future = self.admit(store, 'not-yet-due', '2026-10-07T12:00:00+00:00')
+            exhausted = self.admit(store, 'attempt-limit', '2026-10-07T12:00:00+00:00')
+            with store.db:
+                store.db.execute('UPDATE jobs SET next_attempt=10 WHERE id=?', (earliest,))
+                store.db.execute('UPDATE jobs SET next_attempt=20 WHERE id=?', (target,))
+                store.db.executemany('UPDATE jobs SET next_attempt=30 WHERE id=?',
+                                     [(tie_a,), (tie_b,)])
+                store.db.execute('UPDATE jobs SET next_attempt=? WHERE id=?', (now + 1, future))
+                store.db.execute('UPDATE jobs SET attempts=3 WHERE id=?', (exhausted,))
+
+            self.assertEqual(store.claim(now, 3, target)['id'], target)
+            self.assertIsNone(store.claim(now, 3, future))
+            self.assertIsNone(store.claim(now, 3, exhausted))
+            self.assertEqual(store.claim(now, 3)['id'], earliest)
+            tied = sorted((tie_a, tie_b))
+            self.assertEqual(store.claim(now, 3)['id'], tied[0])
+            self.assertEqual(store.claim(now, 3)['id'], tied[1])
+            self.assertIsNone(store.claim(now, 3))
+
+    def test_pending_publication_still_precedes_due_retry(self):
+        with database(self.state) as store:
+            due = self.admit(store, 'due-retry', '2026-10-07T13:00:00+00:00')
+            pending = self.admit(store, 'pending-publication',
+                                 '2026-10-07T13:01:00+00:00')
+            ensure_table(store)
+            with store.db:
+                store.db.execute(
+                    "INSERT INTO publications(job_id,packet_sha,draft_sha,image_sha,"
+                    "source_commit,status) VALUES(?,?,?,?,?,'prepared')",
+                    (pending, 'packet', 'draft', None, 'source'))
+
+        outcome = {'status': 'reconciled', 'job_id': pending}
+        with patch('news_mvp.live.publish', return_value=outcome) as publish, \
+                patch('news_mvp.live.tick', side_effect=AssertionError('retry must wait')), \
+                patch('news_mvp.live.discover', side_effect=AssertionError('discovery must wait')):
+            self.assertEqual(live_tick(self.config_path), outcome)
+        self.assertEqual(publish.call_args.args[1]['id'], pending)
+        with database(self.state) as store:
+            self.assertEqual(store.get(due)['status'], 'ready')
 
 
 class LiveBoundary(unittest.TestCase):

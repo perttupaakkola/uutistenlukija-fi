@@ -53,7 +53,8 @@ class Store:
     def claim(self, now, max_attempts, job_id=None):
         with self.db:
             row = self.db.execute("""SELECT * FROM jobs WHERE status='ready'
-                AND next_attempt<=? AND attempts<? AND (? IS NULL OR id=?) ORDER BY created_at, id LIMIT 1""",
+                AND next_attempt<=? AND attempts<? AND (? IS NULL OR id=?)
+                ORDER BY next_attempt, created_at, id LIMIT 1""",
                 (now, max_attempts, job_id, job_id)).fetchone()
             if row is None:
                 return None

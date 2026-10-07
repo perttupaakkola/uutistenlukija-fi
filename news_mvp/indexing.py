@@ -19,16 +19,44 @@ def key_name():
     return INDEXNOW_KEY + '.txt'
 
 
-def ping(urls, timeout=15):
-    """Submit URLs for indexing; returns True only on a 2xx answer. Never raises."""
+def ping(urls, timeout=15, result_callback=None):
+    """Best-effort submission; optional redacted receipt never affects the bool result."""
+    from datetime import datetime, timezone
+    import urllib.error
+
     urls = [u for u in urls if isinstance(u, str) and u.startswith('https://' + HOST + '/')]
-    if not urls:
-        return False
-    body = json.dumps({'host': HOST, 'key': INDEXNOW_KEY, 'urlList': urls}).encode()
-    request = urllib.request.Request(
-        ENDPOINT, data=body, headers={'Content-Type': 'application/json; charset=utf-8'})
-    try:
-        with urllib.request.urlopen(request, timeout=timeout) as response:
-            return 200 <= response.status < 300
-    except Exception:
-        return False
+    status = None
+    result_class = 'skipped'
+    error_class = None
+    success = False
+    if urls:
+        body = json.dumps({'host': HOST, 'key': INDEXNOW_KEY, 'urlList': urls}).encode()
+        request = urllib.request.Request(
+            ENDPOINT, data=body, headers={'Content-Type': 'application/json; charset=utf-8'})
+        try:
+            with urllib.request.urlopen(request, timeout=timeout) as response:
+                status = response.status
+                success = 200 <= status < 300
+                result_class = ('received200' if status == 200 else
+                                'validation_pending202' if status == 202 else
+                                'other2xx' if success else 'rejected')
+        except urllib.error.HTTPError as error:
+            success = False
+            status = error.code
+            result_class = 'rejected'
+            error_class = type(error).__name__
+        except Exception as error:
+            success = False
+            result_class = 'unknown'
+            error_class = type(error).__name__
+    if result_callback is not None:
+        try:
+            receipt = {'timestamp_utc': datetime.now(timezone.utc).isoformat(),
+                       'canonical_urls': urls, 'http_status': status,
+                       'result_class': result_class}
+            if error_class is not None:
+                receipt['error_class'] = error_class
+            result_callback(receipt)
+        except Exception:
+            pass
+    return success
