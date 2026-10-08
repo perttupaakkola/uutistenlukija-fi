@@ -200,6 +200,29 @@ process.stdout.write(JSON.stringify({
 '''
 
 
+class PhoneArticleHeadlineTypography(unittest.TestCase):
+    def test_phone_headline_clamp_preserves_wider_breakpoints(self):
+        rules = css_rules((site.ROOT / "static/style.css").read_text(encoding="utf-8"))
+        headline_sizes = [
+            (decls["font-size"], media)
+            for selector, decls, media in rules
+            if selector == ".single-article>h1" and "font-size" in decls
+        ]
+        # Keep the long Finnish word Varhaiskasvatukseen intact at phone widths
+        # without depending on browser Finnish hyphenation support.
+        self.assertEqual(headline_sizes, [
+            ("clamp(2.35rem,8.3vw,4.3rem)", ("@media(max-width:900px)",)),
+            ("clamp(2rem,10vw,2.8rem)", ("@media(max-width:620px)",)),
+        ])
+        desktop_fonts = [
+            decls["font"] for selector, decls, media in rules
+            if selector == ".single-article>h1" and "font" in decls and not media
+        ]
+        self.assertEqual(desktop_fonts, [
+            "700 clamp(2.7rem,5.7vw,5.4rem)/.94 var(--font-serif)",
+        ])
+
+
 class PortalShell(unittest.TestCase):
     def setUp(self):
         case = base.ReleaseV2("source_fetch")
