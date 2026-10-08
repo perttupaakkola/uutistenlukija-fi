@@ -1775,6 +1775,22 @@ def render_site(store, output_dir, state_dir=None, public=False, include_ids=Non
         'Traficomin ohje kesä- ja talvirenkaista</a></p>'
         '</header></section>'
     )
+    guides_body += (
+        '<section class="portal-list-page" aria-labelledby="oppaat-heijastin-title">'
+        '<header class="portal-list-header">'
+        '<p class="portal-list-header__eyebrow">'
+        'Liikenneturvan ohje ja havaintotesti – ei uusi uutisjuttu.</p>'
+        '<div class="portal-list-header__title">'
+        '<h2 id="oppaat-heijastin-title">Heijastin: näy pimeällä</h2></div>'
+        '<p>Pimeällä liikkuessa heijastin auttaa autoilijaa huomaamaan jalankulkijan. '
+        'Tarkista heijastimen sijoittaminen Liikenneturvan ohjeesta ja kokeile havaintotestissä, '
+        'miten heijastinliivi muuttaa näkyvyyttä.</p>'
+        '<p class="empty-recovery"><a href="https://www.liikenneturva.fi/liikenteessa/'
+        'heijastin/" rel="noopener noreferrer">Liikenneturvan heijastinohje</a></p>'
+        '<p class="empty-recovery"><a href="https://extrat.liikenneturva.fi/heijastin/" '
+        'rel="noopener noreferrer">Kokeile näkyvyyttä havaintotestissä</a></p>'
+        '</header></section>'
+    )
     guides_meta = (homepage_head_meta(
         guides_items, path=OPPAAT_PATH, page_title=guides_title,
         description=guides_note,

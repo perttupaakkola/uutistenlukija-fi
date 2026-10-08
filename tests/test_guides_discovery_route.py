@@ -85,6 +85,30 @@ TYRES_SECTION = (
     f'{TYRES_ANCHOR}</a></p>'
     '</header></section>'
 )
+REFLECTOR_GUIDE_URL = "https://www.liikenneturva.fi/liikenteessa/heijastin/"
+REFLECTOR_TEST_URL = "https://extrat.liikenneturva.fi/heijastin/"
+REFLECTOR_HEADING = "Heijastin: näy pimeällä"
+REFLECTOR_DESCRIPTION = (
+    "Pimeällä liikkuessa heijastin auttaa autoilijaa huomaamaan jalankulkijan. "
+    "Tarkista heijastimen sijoittaminen Liikenneturvan ohjeesta ja kokeile havaintotestissä, "
+    "miten heijastinliivi muuttaa näkyvyyttä."
+)
+REFLECTOR_LABEL = "Liikenneturvan ohje ja havaintotesti – ei uusi uutisjuttu."
+REFLECTOR_GUIDE_ANCHOR = "Liikenneturvan heijastinohje"
+REFLECTOR_TEST_ANCHOR = "Kokeile näkyvyyttä havaintotestissä"
+REFLECTOR_SECTION = (
+    '<section class="portal-list-page" aria-labelledby="oppaat-heijastin-title">'
+    '<header class="portal-list-header">'
+    f'<p class="portal-list-header__eyebrow">{REFLECTOR_LABEL}</p>'
+    '<div class="portal-list-header__title">'
+    f'<h2 id="oppaat-heijastin-title">{REFLECTOR_HEADING}</h2></div>'
+    f'<p>{REFLECTOR_DESCRIPTION}</p>'
+    f'<p class="empty-recovery"><a href="{REFLECTOR_GUIDE_URL}" '
+    f'rel="noopener noreferrer">{REFLECTOR_GUIDE_ANCHOR}</a></p>'
+    f'<p class="empty-recovery"><a href="{REFLECTOR_TEST_URL}" '
+    f'rel="noopener noreferrer">{REFLECTOR_TEST_ANCHOR}</a></p>'
+    '</header></section>'
+)
 
 
 def listing_item(job_id, label):
@@ -325,6 +349,27 @@ class GuidesDiscoveryRoute(unittest.TestCase):
             1,
         )
         self.assertLess(page.index(TAMPERE_ANCHOR), page.index(TYRES_SECTION))
+        self.assertEqual(page.count(REFLECTOR_SECTION), 1)
+        self.assertEqual(page.count(REFLECTOR_HEADING), 1)
+        self.assertEqual(page.count(REFLECTOR_DESCRIPTION), 1)
+        self.assertEqual(page.count(REFLECTOR_LABEL), 1)
+        self.assertEqual(page.count(f'href="{REFLECTOR_GUIDE_URL}"'), 1)
+        self.assertEqual(page.count(f'href="{REFLECTOR_TEST_URL}"'), 1)
+        self.assertEqual(
+            page.count(
+                f'<a href="{REFLECTOR_GUIDE_URL}" rel="noopener noreferrer">'
+                f'{REFLECTOR_GUIDE_ANCHOR}</a>'
+            ),
+            1,
+        )
+        self.assertEqual(
+            page.count(
+                f'<a href="{REFLECTOR_TEST_URL}" rel="noopener noreferrer">'
+                f'{REFLECTOR_TEST_ANCHOR}</a>'
+            ),
+            1,
+        )
+        self.assertLess(page.index(TYRES_SECTION), page.index(REFLECTOR_SECTION))
 
         payloads = [
             json.loads(raw) for raw in re.findall(
@@ -344,6 +389,8 @@ class GuidesDiscoveryRoute(unittest.TestCase):
         self.assertNotIn(ESPOO_URL, json.dumps(payloads))
         self.assertNotIn(TAMPERE_URL, json.dumps(payloads))
         self.assertNotIn(TYRES_URL, json.dumps(payloads))
+        self.assertNotIn(REFLECTOR_GUIDE_URL, json.dumps(payloads))
+        self.assertNotIn(REFLECTOR_TEST_URL, json.dumps(payloads))
         self.assertNotIn(OULU_URL, rss)
         self.assertNotIn(TURKU_URL, rss)
         self.assertNotIn(JYVASKYLA_URL, rss)
@@ -351,6 +398,8 @@ class GuidesDiscoveryRoute(unittest.TestCase):
         self.assertNotIn(ESPOO_URL, rss)
         self.assertNotIn(TAMPERE_URL, rss)
         self.assertNotIn(TYRES_URL, rss)
+        self.assertNotIn(REFLECTOR_GUIDE_URL, rss)
+        self.assertNotIn(REFLECTOR_TEST_URL, rss)
 
     def test_rendered_reference_stays_separate_with_zero_or_one_selected_article(self):
         unrelated = rendered_job("unrelated-story", 2)
@@ -396,6 +445,27 @@ class GuidesDiscoveryRoute(unittest.TestCase):
                 self.assertLess(page.index(ESPOO_ANCHOR), page.index(TAMPERE_LABEL))
                 self.assertEqual(page.count(TYRES_SECTION), 1)
                 self.assertLess(page.index(TAMPERE_ANCHOR), page.index(TYRES_SECTION))
+                self.assertEqual(page.count(REFLECTOR_SECTION), 1)
+                self.assertEqual(page.count(REFLECTOR_HEADING), 1)
+                self.assertEqual(page.count(REFLECTOR_DESCRIPTION), 1)
+                self.assertEqual(page.count(REFLECTOR_LABEL), 1)
+                self.assertEqual(page.count(f'href="{REFLECTOR_GUIDE_URL}"'), 1)
+                self.assertEqual(page.count(f'href="{REFLECTOR_TEST_URL}"'), 1)
+                self.assertEqual(
+                    page.count(
+                        f'<a href="{REFLECTOR_GUIDE_URL}" rel="noopener noreferrer">'
+                        f'{REFLECTOR_GUIDE_ANCHOR}</a>'
+                    ),
+                    1,
+                )
+                self.assertEqual(
+                    page.count(
+                        f'<a href="{REFLECTOR_TEST_URL}" rel="noopener noreferrer">'
+                        f'{REFLECTOR_TEST_ANCHOR}</a>'
+                    ),
+                    1,
+                )
+                self.assertLess(page.index(TYRES_SECTION), page.index(REFLECTOR_SECTION))
                 self.assertIn(
                     '</div><section class="portal-list-page" '
                     'aria-labelledby="oppaat-lisaa-title">',
@@ -422,7 +492,11 @@ class GuidesDiscoveryRoute(unittest.TestCase):
                 self.assertNotIn(ESPOO_URL, json.dumps(payloads))
                 self.assertNotIn(TAMPERE_URL, json.dumps(payloads))
                 self.assertNotIn(TYRES_URL, json.dumps(payloads))
+                self.assertNotIn(REFLECTOR_GUIDE_URL, json.dumps(payloads))
+                self.assertNotIn(REFLECTOR_TEST_URL, json.dumps(payloads))
                 self.assertNotIn(TYRES_URL, rss)
+                self.assertNotIn(REFLECTOR_GUIDE_URL, rss)
+                self.assertNotIn(REFLECTOR_TEST_URL, rss)
 
     def test_empty_and_single_match_remain_truthful(self):
         unrelated = listing_item("unrelated-story", 3)
