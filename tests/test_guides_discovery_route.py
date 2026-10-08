@@ -61,6 +61,28 @@ TAMPERE_LABEL = (
     "Linkki Tampereen kaupungin syyslomaohjelmaan – ei Uutistenlukijan uutisjuttu."
 )
 TAMPERE_ANCHOR = "Tampereen kaupungin syyslomaohjelma"
+RAIL_URL = "https://www.vr.fi/radalla/suunnitellut-ratatyot"
+RAIL_HEADING = "Junamatka syyslomalla: tarkista korvaava bussi ja lähtöpaikka"
+RAIL_DESCRIPTION = (
+    "Syyslomalla junalla pohjoiseen? VR korvaa osan Oulu–Rovaniemi–Kemijärvi-reitin "
+    "junista busseilla 13.–15. lokakuuta ja 20.–21. lokakuuta 2026. Oulussa korvaava "
+    "bussi lähtee linja-autoaseman tilausajolaiturista, noin 400 metrin päästä "
+    "rautatieasemalta. Tarkista oman matkan aikataulu lipusta ja VR:n ajantasaiselta "
+    "ratatyösivulta."
+)
+RAIL_LABEL = "VR:n ratatyötiedot – tarkista oman matkan ajantasainen aikataulu."
+RAIL_ANCHOR = "VR:n ratatyöt ja korvaavien bussien lähtöpaikat"
+RAIL_SECTION = (
+    '<section class="portal-list-page" aria-labelledby="oppaat-junamatka-title">'
+    '<header class="portal-list-header">'
+    f'<p class="portal-list-header__eyebrow">{RAIL_LABEL}</p>'
+    '<div class="portal-list-header__title">'
+    f'<h2 id="oppaat-junamatka-title">{RAIL_HEADING}</h2></div>'
+    f'<p>{RAIL_DESCRIPTION}</p>'
+    f'<p class="empty-recovery"><a href="{RAIL_URL}" rel="noopener noreferrer">'
+    f'{RAIL_ANCHOR}</a></p>'
+    '</header></section>'
+)
 TYRES_URL = (
     "https://www.traficom.fi/fi/autoilijat/"
     "vinkkeja-liikenteeseen/auton-kesa-ja-talvirenkaat"
@@ -280,6 +302,10 @@ class GuidesDiscoveryRoute(unittest.TestCase):
 
         self.assertIn('<p class="archive-count">2 juttua</p>', page)
         self.assertEqual(page.count('<article class="portal-feed-item'), 2)
+        for job in (vantaa, helsinki):
+            self.assertEqual(
+                page.count(site.time_html(job["created_at"], "portal-feed-item__time")), 1
+            )
         self.assertLess(page.index(original_links[0]), page.index(original_links[1]))
         for link in original_links:
             self.assertIn(f'href="{link}"', page)
@@ -343,6 +369,18 @@ class GuidesDiscoveryRoute(unittest.TestCase):
         self.assertEqual(page.count(TAMPERE_DESCRIPTION), 1)
         self.assertEqual(page.count(TAMPERE_LABEL), 1)
         self.assertLess(page.index(ESPOO_ANCHOR), page.index(TAMPERE_LABEL))
+        self.assertEqual(page.count(RAIL_SECTION), 1)
+        self.assertEqual(page.count(RAIL_HEADING), 1)
+        self.assertEqual(page.count(RAIL_DESCRIPTION), 1)
+        self.assertEqual(page.count(RAIL_LABEL), 1)
+        self.assertEqual(page.count(f'href="{RAIL_URL}"'), 1)
+        self.assertEqual(
+            page.count(
+                f'<a href="{RAIL_URL}" rel="noopener noreferrer">{RAIL_ANCHOR}</a>'
+            ),
+            1,
+        )
+        self.assertLess(page.index(TAMPERE_ANCHOR), page.index(RAIL_SECTION))
         self.assertEqual(page.count(TYRES_SECTION), 1)
         self.assertEqual(page.count(TYRES_HEADING), 1)
         self.assertEqual(page.count(TYRES_DESCRIPTION), 1)
@@ -354,7 +392,7 @@ class GuidesDiscoveryRoute(unittest.TestCase):
             ),
             1,
         )
-        self.assertLess(page.index(TAMPERE_ANCHOR), page.index(TYRES_SECTION))
+        self.assertLess(page.index(RAIL_SECTION), page.index(TYRES_SECTION))
         self.assertEqual(page.count(REFLECTOR_SECTION), 1)
         self.assertEqual(page.count(REFLECTOR_HEADING), 1)
         self.assertEqual(page.count(REFLECTOR_DESCRIPTION), 1)
@@ -394,6 +432,7 @@ class GuidesDiscoveryRoute(unittest.TestCase):
         self.assertNotIn(KUOPIO_URL, json.dumps(payloads))
         self.assertNotIn(ESPOO_URL, json.dumps(payloads))
         self.assertNotIn(TAMPERE_URL, json.dumps(payloads))
+        self.assertNotIn(RAIL_URL, json.dumps(payloads))
         self.assertNotIn(TYRES_URL, json.dumps(payloads))
         self.assertNotIn(REFLECTOR_GUIDE_URL, json.dumps(payloads))
         self.assertNotIn(REFLECTOR_TEST_URL, json.dumps(payloads))
@@ -403,6 +442,7 @@ class GuidesDiscoveryRoute(unittest.TestCase):
         self.assertNotIn(KUOPIO_URL, rss)
         self.assertNotIn(ESPOO_URL, rss)
         self.assertNotIn(TAMPERE_URL, rss)
+        self.assertNotIn(RAIL_URL, rss)
         self.assertNotIn(TYRES_URL, rss)
         self.assertNotIn(REFLECTOR_GUIDE_URL, rss)
         self.assertNotIn(REFLECTOR_TEST_URL, rss)

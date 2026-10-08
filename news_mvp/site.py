@@ -1760,6 +1760,23 @@ def render_site(store, output_dir, state_dir=None, public=False, include_ids=Non
         '</header></section>'
     )
     guides_body += (
+        '<section class="portal-list-page" aria-labelledby="oppaat-junamatka-title">'
+        '<header class="portal-list-header">'
+        '<p class="portal-list-header__eyebrow">'
+        'VR:n ratatyötiedot – tarkista oman matkan ajantasainen aikataulu.</p>'
+        '<div class="portal-list-header__title">'
+        '<h2 id="oppaat-junamatka-title">'
+        'Junamatka syyslomalla: tarkista korvaava bussi ja lähtöpaikka</h2></div>'
+        '<p>Syyslomalla junalla pohjoiseen? VR korvaa osan Oulu–Rovaniemi–Kemijärvi-reitin '
+        'junista busseilla 13.–15. lokakuuta ja 20.–21. lokakuuta 2026. Oulussa korvaava '
+        'bussi lähtee linja-autoaseman tilausajolaiturista, noin 400 metrin päästä '
+        'rautatieasemalta. Tarkista oman matkan aikataulu lipusta ja VR:n ajantasaiselta '
+        'ratatyösivulta.</p>'
+        '<p class="empty-recovery"><a href="https://www.vr.fi/radalla/suunnitellut-ratatyot" '
+        'rel="noopener noreferrer">VR:n ratatyöt ja korvaavien bussien lähtöpaikat</a></p>'
+        '</header></section>'
+    )
+    guides_body += (
         '<section class="portal-list-page" aria-labelledby="oppaat-talvirenkaat-title">'
         '<header class="portal-list-header">'
         '<p class="portal-list-header__eyebrow">Viranomaisen ohje – ei uusi uutisjuttu.</p>'
