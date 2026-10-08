@@ -784,21 +784,20 @@ def reuse_rights_html(sources):
         reuse = source.get("reuse")
         if not reuse:
             continue
-        license_label = str(reuse.get("license") or "").strip() or "Käyttöehdot: lähdekohtaiset"
+        license_url = reuse.get("license_url")
+        short_label = short_license_label(license_url)
+        license_label = short_label or "Käyttöehdot"
         body = (f'<strong>{esc(source["publisher"])}</strong>: '
-                f'<a href="{esc(reuse["url"])}">{esc(license_label)}</a>. '
-                f'{esc(reuse["changes"])}')
-        if reuse.get("license_url"):
-            terms_label = short_license_label(reuse["license_url"]) or license_label
-            body += f' · <a href="{esc(reuse["license_url"])}">{esc(terms_label)}</a>'
+                f'<a href="{esc(reuse["url"])}">Lähde</a> · '
+                f'<a href="{esc(license_url or reuse["url"])}">{esc(license_label)}</a>')
+        if short_label:
+            body += ' · Muokattu ja tiivistetty.'
         if reuse.get("notice"):
             body += f' · {esc(reuse["notice"])}'
         rows.append(f'<li>{body}</li>')
     if not rows:
         return ""
-    return ('<section class="source-reuse"><h2>Jakelu ja tekstin käyttöehdot</h2>'
-            '<p>Nämä tiedot kuvaavat jakelua tai tekstin käyttöä, eivät erillistä vahvistavaa lähdettä.</p>'
-            f'<ul>{"".join(rows)}</ul></section>')
+    return f'<section class="source-reuse"><ul>{"".join(rows)}</ul></section>'
 
 
 def article_actions_html(link, category, public, title=""):
@@ -913,6 +912,7 @@ def guides_contents_html(body):
         ("oppaat-junamatka-title", "Junamatka syyslomalla"),
         ("oppaat-kellojen-siirto-title", "Kellojen siirto 25. lokakuuta"),
         ("oppaat-sahkokatko-title", "Toiminta sähkökatkossa"),
+        ("oppaat-palovaroitin-title", "Palovaroittimen testinappi"),
     )
     links = [f'<li><a href="#{section}">{esc(label)}</a></li>'
              for section, label in entries if f'id="{section}"' in body]
@@ -973,7 +973,7 @@ def about_page_body():
             '<li>Erillinen automatisoitu tarkistus vertaa väitteitä lähteisiin ja vaatii kappalekohtaiset viitteet.</li>'
             '<li>Kuva valitaan ja tarkistetaan erillisillä relevanssi- ja käyttöoikeussäännöillä.</li>'
             '<li>Julkaisu tapahtuu vain, jos lähde-, rakenne-, kuva- ja julkaisuportit hyväksyvät saman tallennetun version.</li></ol>'
-            '<p>Automaatio ja lähteet voivat olla puutteellisia. Artikkelin lähteet, tuotantotiedot ja kuvan oikeudet '
+            '<p>Automaatio ja lähteet voivat olla puutteellisia. Artikkelin lähteet ja kuvan oikeudet '
             'auttavat arvioimaan yksittäistä juttua.</p>'
             '<h2 id="korjaukset">Korjaukset ja poistot</h2>'
             '<p>Vahvistettu olennainen korjaus merkitään juttuun päivämäärineen. Jos jutun julkaisemista ei voida enää '
@@ -1179,7 +1179,7 @@ def asset_url(assets, name):
 
 
 def page(title, body, canonical_path=None, head_meta="", readability_present=True, canonical=True,
-         snapshot=None, active_section=None):
+         snapshot=None, active_section=None, article_page=False):
     """Full public page shell. `canonical_path` alone selects the public build.
 
     `canonical=False` keeps the public shell (public assets and the consent/privacy
@@ -1217,7 +1217,8 @@ def page(title, body, canonical_path=None, head_meta="", readability_present=Tru
     # Public pages link their privacy notice and RSS feed; the private preview has
     # neither, so it must not advertise pages that were never published.
     if public:
-        footer_tagline = 'Uutistenlukija · automaattisesti tuotettu suomenkielinen uutispalvelu.'
+        footer_tagline = ('Uutistenlukija.' if article_page else
+                          'Uutistenlukija · automaattisesti tuotettu suomenkielinen uutispalvelu.')
         footer_columns = ('<div class="site-footer-col"><h3>Uutiset</h3><ul class="site-footer-links">'
                           f'<li><a href="{LATEST_PATH}">Tuoreimmat uutiset</a></li>'
                           '<li><a href="/categories/kotimaa/">Kotimaa</a></li>'
@@ -1315,9 +1316,9 @@ def page(title, body, canonical_path=None, head_meta="", readability_present=Tru
                        f"Haku on rajattu sivustoon {SEARCH_SITE}.")
         search_script = ""
     return f'''<!doctype html>
-<html lang="fi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="fi"{' class="reader-page"' if article_page else ""}><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 {head}<title>{esc(title)} · Uutistenlukija</title>
-{style_links}</head><body>
+{style_links}</head><body{' class="reader-page"' if article_page else ""}>
 <a class="skip skip-to-content" href="#sisalto">Siirry sisältöön</a>
 {banner}
 <header class="site-header" role="banner">
@@ -1627,20 +1628,6 @@ def render_site(store, output_dir, state_dir=None, public=False, include_ids=Non
         if picks:
             related_items = "".join(related_story_html(j, d, state_dir, output_dir, assets) for j, d in picks)
             related_html = f'<section class="related"><h2>Lue myös</h2><ul>{related_items}</ul></section>'
-        # Method disclosure: states plainly how the text was made and names the source
-        # publishers it was checked against, without inventing an editor or any metrics.
-        publishers = []
-        for source in packet["sources"]:
-            name = str(source.get("publisher") or "").strip()
-            if name and name not in publishers:
-                publishers.append(name)
-        publisher_list = ", ".join(esc(name) for name in publishers)
-        method_line = ('<section class="article-production"><h2>Tuotantotiedot</h2>'
-                       '<p>Teksti on tuotettu tekoälyn avulla ja tarkastettu erillisessä '
-                       'lähdetarkistuksessa. Lähdetarkistus ja julkaisuportit ovat automatisoituja; '
-                       'sivusto ei väitä jutun olevan ihmisen ennakkotarkistama.'
-                       + (f' Lähdetietojen julkaisijat: {publisher_list}.' if publisher_list else "")
-                       + f' <a href="{ABOUT_PATH}#prosessi">Lue tuotantoprosessista</a>.</p></section>')
         breadcrumb = (f'<nav class="article-breadcrumb" aria-label="Murupolku"><ol>'
                       f'<li><a href="/">Etusivu</a></li>'
                       f'<li><a href="{esc(category_route(draft["category"]))}">{esc(category_display(draft["category"]))}</a></li>'
@@ -1658,7 +1645,7 @@ def render_site(store, output_dir, state_dir=None, public=False, include_ids=Non
         afterword = (f'<div class="article-afterword"><div class="article-evidence">'
                      f'<section class="sources"><h2>Lähteet</h2>'
                      f'<p class="source-count">{esc(source_label)}</p><ol>{source_list}</ol></section>'
-                     f'{reuse_rights}{method_line}{image_rights}</div>{related_html}</div>')
+                     f'{reuse_rights}{image_rights}</div>{related_html}</div>')
         story_content = "" if withdrawn else (
             f'{actions}<div class="article-reading-grid"><div class="article-reading-main">'
             f'{reading}</div>{context}{afterword}</div>')
@@ -1699,7 +1686,7 @@ def render_site(store, output_dir, state_dir=None, public=False, include_ids=Non
                 sources=packet["sources"],
             )
         rendered_page = page(draft["title"], body, link if public else None, head_meta=head_meta,
-                             snapshot=snapshot, active_section=category_route(draft["category"]))
+                             snapshot=snapshot, active_section=category_route(draft["category"]), article_page=True)
         amendment = amendments.get(job["id"])
         if public and amendment is not None:
             original_packet, canonical = amendment
@@ -1822,22 +1809,7 @@ def render_site(store, output_dir, state_dir=None, public=False, include_ids=Non
         'rel="noopener noreferrer">VR:n ratatyöt ja korvaavien bussien lähtöpaikat</a></p>'
         '</header></section>'
     )
-    guides_body += (
-        '<section class="portal-list-page" aria-labelledby="oppaat-talvirenkaat-title">'
-        '<header class="portal-list-header">'
-        '<p class="portal-list-header__eyebrow">Viranomaisen ohje – ei uusi uutisjuttu.</p>'
-        '<div class="portal-list-header__title">'
-        '<h2 id="oppaat-talvirenkaat-title">'
-        'Talvirenkaat: tarkista sää, keli ja renkaiden kunto</h2></div>'
-        '<p>Henkilö- ja pakettiautoissa talvirenkaita on käytettävä marraskuusta maaliskuuhun, '
-        'jos sää tai keli sitä edellyttää. Nastarenkaita saa käyttää samana aikana ja muulloinkin, '
-        'kun sää tai keli sitä vaatii. Talvirenkaiden pääurien lakisääteinen vähimmäissyvyys on '
-        '3 mm; vaikeissa oloissa Traficom suosittelee vähintään 5 mm.</p>'
-        '<p class="empty-recovery"><a href="https://www.traficom.fi/fi/autoilijat/'
-        'vinkkeja-liikenteeseen/auton-kesa-ja-talvirenkaat" rel="noopener noreferrer">'
-        'Traficomin ohje kesä- ja talvirenkaista</a></p>'
-        '</header></section>'
-    )
+    guides_body += '<section class="portal-list-page" aria-labelledby="oppaat-talvirenkaat-title"><header class="portal-list-header"><p class="portal-list-header__eyebrow">Liikenneturvallisuus – lisätietoa Traficomin ohjeesta.</p><div class="portal-list-header__title"><h2 id="oppaat-talvirenkaat-title">Talvirenkaat: keli ratkaisee marraskuusta alkaen</h2></div><p>Henkilöautossa, jonka kokonaismassa on enintään 3,5 tonnia, sekä pakettiautossa on käytettävä talvirenkaita 1. marraskuuta–31. maaliskuuta, jos sää tai keli sitä edellyttää. Näissä ajoneuvoissa talvirenkaiden kulutuspinnan pääurien lakisääteinen vähimmäissyvyys on 3 millimetriä. Traficom suosittelee vaikeissa lumi- tai loskaoloissa vähintään 5 millimetrin kulutuspintaa. Henkilö- ja pakettiauton nastattomissa talvirenkaissa on oltava lumipitomerkintä; vaatimus on ollut voimassa 1. joulukuuta 2024 alkaen.</p><p class="empty-recovery"><a href="https://traficom.fi/fi/autoilijat/vinkkeja-liikenteeseen/auton-kesa-ja-talvirenkaat" rel="noopener noreferrer">Traficomin ohje auton renkaista</a></p></header></section>'
     guides_body += (
         '<section class="portal-list-page" aria-labelledby="oppaat-heijastin-title">'
         '<header class="portal-list-header">'
@@ -1857,6 +1829,7 @@ def render_site(store, output_dir, state_dir=None, public=False, include_ids=Non
     guides_body += clock_guide_html(ClockDateTime.now(timezone.utc))
     # Derive contents from rendered section IDs: retired guidance has no stale link.
     guides_body += '<section class="portal-list-page" aria-labelledby="oppaat-sahkokatko-title"><header class="portal-list-header"><p class="portal-list-header__eyebrow">VARAUTUMISOHJE – EI AJANKOHTAINEN HÄIRIÖILMOITUS.</p><div class="portal-list-header__title"><h2 id="oppaat-sahkokatko-title">Sähkökatko: katkaise virta laitteista ja tarkista paikalliset ohjeet</h2></div><p>72 tuntia -ohje neuvoo sammuttamaan sähkölaitteet katkon alettua. Veden ja wc:n käytössä seuraa oman vesihuoltolaitoksesi ohjeita. Tarkista toimintaohjeet alkuperäiseltä sivulta.</p><p class="empty-recovery"><a href="https://72tuntia.fi/sahkokatko/" rel="noopener noreferrer">72 tuntia: toiminta sähkökatkossa</a></p></header></section>'
+    guides_body += '<section class="portal-list-page" aria-labelledby="oppaat-palovaroitin-title">\n  <header class="portal-list-header">\n    <p class="portal-list-header__eyebrow">Kodin turvallisuus – lisätietoa Tukesin ohjeesta.</p>\n    <div class="portal-list-header__title"><h2 id="oppaat-palovaroitin-title">Palovaroittimen testinappi ei mittaa savuherkkyyttä</h2></div>\n    <p>Tarkista palovaroittimen valmistajan ilmoittama uusimisajankohta. Tukesin mukaan tieto löytyy yleensä laitteen pohjasta. Testinappi tarkistaa pariston ja hälytysäänen toiminnan, mutta ei sitä, havaitseeko varoitin savua.</p>\n    <p class="empty-recovery"><a href="https://tukes.fi/tuotteet-ja-palvelut/pelastustoimen-laitteet/palovaroittimet" rel="noopener noreferrer">Tukesin ohje palovaroittimista</a></p>\n  </header>\n</section>\n'
     contents = guides_contents_html(guides_body)
     guides_body = guides_body.replace('</header>', contents + '</header>', 1)
     guides_meta = (homepage_head_meta(

@@ -144,7 +144,7 @@ class SiteMetadata(unittest.TestCase):
         )
         article = self._read(output, self.job)
         self.assertIn("Helsingin kaupunki", article)
-        self.assertIn(
+        self.assertNotIn(
             "Teksti on tuotettu tekoälyn avulla ja tarkastettu erillisessä lähdetarkistuksessa.",
             article,
         )
@@ -224,7 +224,7 @@ class SiteMetadata(unittest.TestCase):
         output = self._render_public()
         reuse = self.packet["sources"][0]["reuse"]
         article = self._read(output, self.job)
-        self.assertIn(reuse["license"], article)
+        self.assertNotIn(reuse["license"], article)
         self.assertIn(reuse["license_url"], article)
         self.assertEqual(site.short_license_label(reuse["license_url"]), "CC BY 4.0")
         self.assertIn("CC BY 4.0", article)
@@ -236,7 +236,7 @@ class SiteMetadata(unittest.TestCase):
         variant["packet"] = json.dumps(packet)
         private_output = self._render_private(TinyStore(variant), "private-reuse")
         private = self._read(private_output, variant)
-        self.assertIn(government["license"], private)
+        self.assertNotIn(government["license"], private)
         self.assertIn(government["license_url"], private)
         self.assertEqual(site.short_license_label(government["license_url"]), "")
         # Header weather attribution is independent of article text reuse terms.

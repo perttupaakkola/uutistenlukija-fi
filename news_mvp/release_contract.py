@@ -1470,16 +1470,7 @@ def _check_amendment_article(html, packet, draft, canonical):
     related = optional(afterword, 'section', 'related')
     if children(afterword) != [evidence] + related:
         raise ValueError('Unexpected amendment afterword prose/module')
-    production = optional(evidence, 'section', 'article-production')
-    if production:
-        publishers = list(dict.fromkeys(s['publisher'] for s in sources if s.get('publisher')))
-        equal(production[0], fragment_node('<section class="article-production"><h2>Tuotantotiedot</h2>'
-            '<p>Teksti on tuotettu tekoälyn avulla ja tarkastettu erillisessä '
-            'lähdetarkistuksessa. Lähdetarkistus ja julkaisuportit ovat automatisoituja; '
-            'sivusto ei väitä jutun olevan ihmisen ennakkotarkistama.'+
-            (' Lähdetietojen julkaisijat: '+', '.join(escape(p) for p in publishers)+'.' if publishers else '')+
-            ' <a href="'+site.ABOUT_PATH+'#prosessi">Lue tuotantoprosessista</a>.</p></section>'))
-    if children(evidence) != [source_section] + reuse_nodes + production + [rights]:
+    if children(evidence) != [source_section] + reuse_nodes + [rights]:
         raise ValueError('Unexpected amendment evidence prose/module')
     source_children = children(source_section)
     count = optional(source_section, 'p', 'source-count')
@@ -1542,7 +1533,12 @@ def check_article(html,packet,draft,canonical=None):
     for source in packet['sources']:
         required.append(source['url'])
         if source.get('reuse'):
-            required += [source['reuse']['url'],source['reuse']['license'],source['reuse']['changes']]
+            required += [source['reuse']['url']]
+            from . import site
+            expected_reuse = site.reuse_rights_html([source])
+            expected_row = expected_reuse.split('<ul>', 1)[1].split('</ul>', 1)[0]
+            if expected_row not in html:
+                raise ValueError('Public article differs from reviewed reuse attribution')
             if 'notice' in source['reuse']: required.append(source['reuse']['notice'])
             if 'license_url' in source['reuse'] and ('href="'+esc(source['reuse']['license_url'])+'"') not in html:
                 raise ValueError('Missing direct reuse licence link')

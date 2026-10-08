@@ -101,7 +101,7 @@ class ArticleAndCategoryRendering(unittest.TestCase):
         self.assertIn(draft['title'],body);self.assertIn(draft['summary'],body)
         # Sources, method disclosure and the related-article rail all survive.
         self.assertIn('id="lahde-1"',body)
-        self.assertIn('Teksti on tuotettu tekoälyn avulla ja tarkastettu erillisessä',body)
+        self.assertNotIn('article-production',body)
         self.assertIn('Lue myös',body)
         self.assertIn(site.article_path(jobs[1]),body)
         # The prose container is the theme's own .content, not the legacy .story-body.

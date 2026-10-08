@@ -86,8 +86,8 @@ class PdfAuditRemediation(unittest.TestCase):
         hero = re.search(r'<figure class="article-hero">(.*?)</figure>', html, re.S).group(1)
         self.assertRegex(hero, rf'<img .*><figcaption class="article-hero-caption">{re.escape(CAPTION)}</figcaption>')
         lower = html.split('</figure>', 1)[1]
-        self.assertIn("Tuotantotiedot", lower)
-        self.assertIn("Lähdetarkistus ja julkaisuportit ovat automatisoituja", lower)
+        self.assertNotIn("Tuotantotiedot", lower)
+        self.assertNotIn("Lähdetarkistus ja julkaisuportit ovat automatisoituja", lower)
 
     def test_archive_pages_are_finite_canonical_and_stale_children_are_pruned(self):
         jobs = [self.clone(index) for index in range(65)]
@@ -149,7 +149,7 @@ class PdfAuditRemediation(unittest.TestCase):
         self.assertIn("1 uutislähde", sources)
         self.assertRegex(sources, r'Lähteen päiväys: <time datetime="[^"]+">\d{1,2}\.\d{1,2}\.\d{4} klo \d{2}\.\d{2}</time>')
         self.assertNotIn("Jakelu ja tekstin käyttöehdot", sources)
-        self.assertIn("eivät erillistä vahvistavaa lähdettä", reuse)
+        self.assertNotIn("eivät erillistä vahvistavaa lähdettä", reuse)
 
     def test_related_render_rejects_same_municipality_without_shared_topic(self):
         shared = {"publisher": "Oulun kaupunki", "category": "Kotimaa"}
