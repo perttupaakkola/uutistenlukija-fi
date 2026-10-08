@@ -61,6 +61,30 @@ TAMPERE_LABEL = (
     "Linkki Tampereen kaupungin syyslomaohjelmaan – ei Uutistenlukijan uutisjuttu."
 )
 TAMPERE_ANCHOR = "Tampereen kaupungin syyslomaohjelma"
+TYRES_URL = (
+    "https://www.traficom.fi/fi/autoilijat/"
+    "vinkkeja-liikenteeseen/auton-kesa-ja-talvirenkaat"
+)
+TYRES_HEADING = "Talvirenkaat: tarkista sää, keli ja renkaiden kunto"
+TYRES_DESCRIPTION = (
+    "Henkilö- ja pakettiautoissa talvirenkaita on käytettävä marraskuusta maaliskuuhun, "
+    "jos sää tai keli sitä edellyttää. Nastarenkaita saa käyttää samana aikana ja muulloinkin, "
+    "kun sää tai keli sitä vaatii. Talvirenkaiden pääurien lakisääteinen vähimmäissyvyys on "
+    "3 mm; vaikeissa oloissa Traficom suosittelee vähintään 5 mm."
+)
+TYRES_LABEL = "Viranomaisen ohje – ei uusi uutisjuttu."
+TYRES_ANCHOR = "Traficomin ohje kesä- ja talvirenkaista"
+TYRES_SECTION = (
+    '<section class="portal-list-page" aria-labelledby="oppaat-talvirenkaat-title">'
+    '<header class="portal-list-header">'
+    f'<p class="portal-list-header__eyebrow">{TYRES_LABEL}</p>'
+    '<div class="portal-list-header__title">'
+    f'<h2 id="oppaat-talvirenkaat-title">{TYRES_HEADING}</h2></div>'
+    f'<p>{TYRES_DESCRIPTION}</p>'
+    f'<p class="empty-recovery"><a href="{TYRES_URL}" rel="noopener noreferrer">'
+    f'{TYRES_ANCHOR}</a></p>'
+    '</header></section>'
+)
 
 
 def listing_item(job_id, label):
@@ -289,6 +313,18 @@ class GuidesDiscoveryRoute(unittest.TestCase):
         self.assertEqual(page.count(TAMPERE_DESCRIPTION), 1)
         self.assertEqual(page.count(TAMPERE_LABEL), 1)
         self.assertLess(page.index(ESPOO_ANCHOR), page.index(TAMPERE_LABEL))
+        self.assertEqual(page.count(TYRES_SECTION), 1)
+        self.assertEqual(page.count(TYRES_HEADING), 1)
+        self.assertEqual(page.count(TYRES_DESCRIPTION), 1)
+        self.assertEqual(page.count(TYRES_LABEL), 1)
+        self.assertEqual(page.count(f'href="{TYRES_URL}"'), 1)
+        self.assertEqual(
+            page.count(
+                f'<a href="{TYRES_URL}" rel="noopener noreferrer">{TYRES_ANCHOR}</a>'
+            ),
+            1,
+        )
+        self.assertLess(page.index(TAMPERE_ANCHOR), page.index(TYRES_SECTION))
 
         payloads = [
             json.loads(raw) for raw in re.findall(
@@ -307,12 +343,14 @@ class GuidesDiscoveryRoute(unittest.TestCase):
         self.assertNotIn(KUOPIO_URL, json.dumps(payloads))
         self.assertNotIn(ESPOO_URL, json.dumps(payloads))
         self.assertNotIn(TAMPERE_URL, json.dumps(payloads))
+        self.assertNotIn(TYRES_URL, json.dumps(payloads))
         self.assertNotIn(OULU_URL, rss)
         self.assertNotIn(TURKU_URL, rss)
         self.assertNotIn(JYVASKYLA_URL, rss)
         self.assertNotIn(KUOPIO_URL, rss)
         self.assertNotIn(ESPOO_URL, rss)
         self.assertNotIn(TAMPERE_URL, rss)
+        self.assertNotIn(TYRES_URL, rss)
 
     def test_rendered_reference_stays_separate_with_zero_or_one_selected_article(self):
         unrelated = rendered_job("unrelated-story", 2)
@@ -320,7 +358,7 @@ class GuidesDiscoveryRoute(unittest.TestCase):
 
         for jobs, expected_count in (([unrelated], 0), ([unrelated, helsinki], 1)):
             with self.subTest(selected=expected_count):
-                page, _rss = self.render_guides(jobs)
+                page, rss = self.render_guides(jobs)
                 self.assertIn(
                     f'<p class="archive-count">{expected_count} '
                     f'{"juttu" if expected_count == 1 else "juttua"}</p>',
@@ -356,6 +394,8 @@ class GuidesDiscoveryRoute(unittest.TestCase):
                 self.assertEqual(page.count(TAMPERE_DESCRIPTION), 1)
                 self.assertEqual(page.count(TAMPERE_LABEL), 1)
                 self.assertLess(page.index(ESPOO_ANCHOR), page.index(TAMPERE_LABEL))
+                self.assertEqual(page.count(TYRES_SECTION), 1)
+                self.assertLess(page.index(TAMPERE_ANCHOR), page.index(TYRES_SECTION))
                 self.assertIn(
                     '</div><section class="portal-list-page" '
                     'aria-labelledby="oppaat-lisaa-title">',
@@ -381,6 +421,8 @@ class GuidesDiscoveryRoute(unittest.TestCase):
                 self.assertNotIn(KUOPIO_URL, json.dumps(payloads))
                 self.assertNotIn(ESPOO_URL, json.dumps(payloads))
                 self.assertNotIn(TAMPERE_URL, json.dumps(payloads))
+                self.assertNotIn(TYRES_URL, json.dumps(payloads))
+                self.assertNotIn(TYRES_URL, rss)
 
     def test_empty_and_single_match_remain_truthful(self):
         unrelated = listing_item("unrelated-story", 3)

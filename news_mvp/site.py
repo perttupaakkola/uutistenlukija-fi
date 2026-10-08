@@ -1759,6 +1759,22 @@ def render_site(store, output_dir, state_dir=None, public=False, include_ids=Non
         'Tampereen kaupungin syyslomaohjelma</a></p>'
         '</header></section>'
     )
+    guides_body += (
+        '<section class="portal-list-page" aria-labelledby="oppaat-talvirenkaat-title">'
+        '<header class="portal-list-header">'
+        '<p class="portal-list-header__eyebrow">Viranomaisen ohje – ei uusi uutisjuttu.</p>'
+        '<div class="portal-list-header__title">'
+        '<h2 id="oppaat-talvirenkaat-title">'
+        'Talvirenkaat: tarkista sää, keli ja renkaiden kunto</h2></div>'
+        '<p>Henkilö- ja pakettiautoissa talvirenkaita on käytettävä marraskuusta maaliskuuhun, '
+        'jos sää tai keli sitä edellyttää. Nastarenkaita saa käyttää samana aikana ja muulloinkin, '
+        'kun sää tai keli sitä vaatii. Talvirenkaiden pääurien lakisääteinen vähimmäissyvyys on '
+        '3 mm; vaikeissa oloissa Traficom suosittelee vähintään 5 mm.</p>'
+        '<p class="empty-recovery"><a href="https://www.traficom.fi/fi/autoilijat/'
+        'vinkkeja-liikenteeseen/auton-kesa-ja-talvirenkaat" rel="noopener noreferrer">'
+        'Traficomin ohje kesä- ja talvirenkaista</a></p>'
+        '</header></section>'
+    )
     guides_meta = (homepage_head_meta(
         guides_items, path=OPPAAT_PATH, page_title=guides_title,
         description=guides_note,
