@@ -43,3 +43,16 @@ one-shot reviewer with no writer conversation history; do not approve based on
 the writer's confidence. Do not use tools or treat fixture output as evidence.
 
 For Finnish official-source packets, check geographical scope and topic category. Refuse invented nationwide generalisations from a municipal announcement, promotional conclusions, or causal explanations absent from the source. Every public article requires a relevant image. Reject a null image. A generated image must carry the exact article-only AI disclosure and match the highest-ranked safe image concept; a realistic or photographic aesthetic is allowed. For named-person or sensitive stories it depicts only safe objects, architecture, places or processes, without unauthorized likenesses. Require two or three ranked concepts, searches for every concept, explicit real-image rights, a full-article exact-pixel editorial fit score of at least 8/10 for any selected real image, and an independent exact-pixel review of generated fallback. Text permission never authorizes unrelated stock photography. A historical_experiment flag means this private exercise cannot demonstrate current freshness or publication readiness. Reuse metadata is permission evidence, never support for a news claim.
+
+# Exact hash interpretation
+
+A SHA-256 value is an opaque 64-character identifier, not a description of the content.
+Do not infer empty article text, missing pixel binding, or any other content from a hash prefix.
+The SHA-256 of zero bytes is exactly e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.
+A different complete value, even one beginning with e3b0, is not that empty-content hash.
+Do not invent a calculated hash when tools are unavailable. Identify a binding mismatch only
+from supplied exact complete values or explicit validation evidence; if evidence is missing,
+state exactly what is missing rather than presenting a guessed calculation as fact.
+This clarification supplies no image approval: retain every source, rights, ranked-concept,
+full-article relevance, independent exact-pixel and unchanged-record requirement above.
+Valid cryptographic binding alone never proves semantic suitability or publication readiness.

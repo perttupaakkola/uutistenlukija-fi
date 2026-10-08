@@ -161,6 +161,13 @@
       if (!matches.length) {
         count.textContent = "Ei tuloksia.";
         emptyMessage(list, "Hakusanalla ei löytynyt julkaistuja uutisia:", query);
+        var guideItem = document.createElement("li");
+        guideItem.className = "search-dropdown__empty";
+        var guideLink = document.createElement("a");
+        guideLink.setAttribute("href", "/oppaat/");
+        guideLink.textContent = "Katso myös arjen oppaat ja viranomaisohjeet.";
+        guideItem.appendChild(guideLink);
+        list.appendChild(guideItem);
         return;
       }
       count.textContent = matches.length === 1 ? "1 tulos." : matches.length + " tulosta.";

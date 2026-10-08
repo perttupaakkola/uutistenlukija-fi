@@ -143,7 +143,9 @@ async function run(search, payload, options) {
 
   const none = await run("?q=%3Cscript%3Ealert(1)%3C%2Fscript%3E", payload);
   assert.strictEqual(none.count.textContent, "Ei tuloksia.");
-  assert.strictEqual(none.list.children.length, 1);
+  assert.strictEqual(none.list.children.length, 2);
+  assert.deepStrictEqual(descendants(none.list, "a").map(link => link.getAttribute("href")), ["/oppaat/"]);
+  assert(textTree(none.list).includes("Katso myös arjen oppaat ja viranomaisohjeet."));
   assert(textTree(none.list).includes("<script>alert(1)</script>"));
   assert(!none.createdTags.includes("script"));
 
@@ -158,6 +160,8 @@ async function run(search, payload, options) {
 
   const failed = await run("?q=syysloma", [], { reject: true });
   assert.strictEqual(failed.count.textContent, "Haku ei ole juuri nyt käytettävissä.");
+  assert.strictEqual(descendants(failed.list, "a").length, 0);
+  assert.strictEqual(descendants(empty.list, "a").length, 0);
 
   process.stdout.write("PASS: empty, Enter/Back navigation, safe Finnish multiword, malformed index, no-hit, cap and fallback cases\n");
 })().catch((error) => {

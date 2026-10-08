@@ -470,7 +470,9 @@ def public_bundle(store,job,state):
         try: article_mod[row['id']]=timestamp(row['created_at']).astimezone(timezone.utc).strftime('%Y-%m-%dT%H:%M:%S+00:00')
         except Exception: pass
     article_mod.update(amendment_mod)
-    news_by_id=_recent_news_metadata(site,ids,job_rows,news_now)
+    # Optional news metadata is paused: build-time expiry cannot guarantee served
+    # 48-hour freshness while normal releases wait. Preserve all ordinary URLs.
+    news_by_id={}
     entries=[_sitemap_url_entry('https://uutistenlukija.fi/'),
              _sitemap_url_entry('https://uutistenlukija.fi/tietosuoja/'),
              _sitemap_url_entry('https://uutistenlukija.fi'+ABOUT_PATH),

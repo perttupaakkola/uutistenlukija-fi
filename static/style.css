@@ -583,3 +583,7 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid var(-
   .saved-stories__inner{padding:18px}
   .saved-stories h2{font-size:1.7rem}
 }
+
+/* Guide contents: distinct rows, established 44px link controls. */
+.guide-contents ul { display: block; }
+.guide-contents li + li { margin-top: 4px; }

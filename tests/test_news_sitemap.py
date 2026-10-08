@@ -145,7 +145,7 @@ class NewsSitemapHelpers(unittest.TestCase):
 
 
 class NewsSitemapBundleCallsite(unittest.TestCase):
-    def test_public_bundle_emits_rendered_headline_and_matching_datepublished(self):
+    def test_public_bundle_pauses_news_metadata_preserving_ordinary_date_and_url(self):
         case=base.ReleaseV2('source_fetch')
         case.setUp()
         self.addCleanup(case.doCleanups)
@@ -175,15 +175,8 @@ class NewsSitemapBundleCallsite(unittest.TestCase):
         article_url=next(url for url in root.findall('sm:url',NS)
                          if url.findtext('sm:loc',namespaces=NS)==wanted)
         news=article_url.find('news:news',NS)
-        self.assertIsNotNone(news)
-        self.assertEqual(news.findtext('news:title',namespaces=NS),draft['title'])
-
-        page=(site/article_path(job)/'index.html').read_text(encoding='utf-8')
-        payloads=[json.loads(raw) for raw in
-                  re.findall(r'<script[^>]*type="application/ld\+json"[^>]*>(.*?)</script>',page,re.S)]
-        rendered=next(payload for payload in payloads if payload.get('@type')=='NewsArticle')
-        self.assertEqual(news.findtext('news:publication_date',namespaces=NS),
-                         rendered['datePublished'])
+        self.assertIsNone(news)
+        self.assertEqual(root.findall('.//news:news',NS),[])
         self.assertEqual(article_url.findtext('sm:lastmod',namespaces=NS),
                          published.strftime('%Y-%m-%dT%H:%M:%S+00:00'))
         self.assertEqual(FrozenDateTime.calls,1)

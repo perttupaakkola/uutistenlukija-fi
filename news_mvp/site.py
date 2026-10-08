@@ -876,6 +876,51 @@ def category_page_body(title, note, items, empty_text, page_number=1, page_count
             f'{listing_feed_html(items, empty_text, recovery_html, featured=featured)}{pager}</div>')
 
 
+"""Private next guide candidate, not installed or served. Original synthesis of decree753/2001 §§1/3."""
+from datetime import datetime as ClockDateTime
+from zoneinfo import ZoneInfo as ClockZoneInfo
+HELSINKI=ClockZoneInfo('Europe/Helsinki')
+SECTION_ID='oppaat-kellojen-siirto-title'
+LABEL='Kellojen siirto 25. lokakuuta'
+SOURCE='https://www.finlex.fi/fi/lainsaadanto/2001/753'
+
+def clock_guide_html(now):
+    if now.tzinfo is None or now.utcoffset() is None:
+        raise ValueError('Aware current time required')
+    day=now.astimezone(HELSINKI).date()
+    if not (ClockDateTime(2026,10,8).date() <= day < ClockDateTime(2026,10,26).date()):
+        return ''
+    return (
+        '<section class="portal-list-page" aria-labelledby="oppaat-kellojen-siirto-title">'
+        '<header class="portal-list-header"><p class="portal-list-header__eyebrow">'
+        'Arjen ohje – ei uusi uutisjuttu.</p><div class="portal-list-header__title">'
+        '<h2 id="oppaat-kellojen-siirto-title">Kelloja siirretään sunnuntaina 25. lokakuuta 2026</h2></div>'
+        '<p>Suomessa kesäaika päättyy lokakuun viimeisenä sunnuntaina. '
+        'Vuonna 2026 päivä on 25. lokakuuta: kelloja siirretään aamulla neljästä kolmeen. '
+        'Tarkista tarvittaessa laitteen automaattinen aika-asetus.</p>'
+        '<p class="empty-recovery"><a href="https://www.finlex.fi/fi/lainsaadanto/2001/753" '
+        'rel="noopener noreferrer">Kesäaikaa koskeva asetus Finlexissä</a></p>'
+        '</header></section>'
+    )
+
+
+
+def guides_contents_html(body):
+    """Link only to guidance sections actually present in this rendered collection."""
+    entries = (
+        ("oppaat-talvirenkaat-title", "Talvirenkaat ja rengaskunto"),
+        ("oppaat-heijastin-title", "Heijastin ja näkyvyys"),
+        ("oppaat-junamatka-title", "Junamatka syyslomalla"),
+        ("oppaat-kellojen-siirto-title", "Kellojen siirto 25. lokakuuta"),
+    )
+    links = [f'<li><a href="#{section}">{esc(label)}</a></li>'
+             for section, label in entries if f'id="{section}"' in body]
+    if not links:
+        return ""
+    return ('<nav class="empty-recovery guide-contents" aria-label="Oppaiden sisältö">'
+            '<p><strong>Siirry ohjeeseen</strong></p><ul>' + "".join(links) + '</ul></nav>')
+
+
 def recovery_links_html():
     """Useful exits for a genuinely empty section; every target is always rendered."""
     links = [
@@ -1808,6 +1853,10 @@ def render_site(store, output_dir, state_dir=None, public=False, include_ids=Non
         'rel="noopener noreferrer">Kokeile näkyvyyttä havaintotestissä</a></p>'
         '</header></section>'
     )
+    guides_body += clock_guide_html(ClockDateTime.now(timezone.utc))
+    # Derive contents from rendered section IDs: retired guidance has no stale link.
+    contents = guides_contents_html(guides_body)
+    guides_body = guides_body.replace('</header>', contents + '</header>', 1)
     guides_meta = (homepage_head_meta(
         guides_items, path=OPPAAT_PATH, page_title=guides_title,
         description=guides_note,
