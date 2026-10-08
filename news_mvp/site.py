@@ -578,8 +578,8 @@ LATEST_PATH = "/tuoreimmat/"
 OPPAAT_PATH = "/oppaat/"
 SOURCES_PATH = "/lahteet/"
 GUIDES_DESCRIPTION = (
-    "Syysloman 2026 tapahtumajutut Helsingistä ja Vantaalta. "
-    "Tarkista ajantasaiset ohjelmat jutun lähteistä."
+    "Syysloman 2026 menovinkit ja linkit kaupunkien ohjelmiin sekä "
+    "viranomaisohjeita syksyn arkeen. Tarkista ajantasaiset tiedot alkuperäisistä lähteistä."
 )
 GUIDES_JOB_IDS = frozenset({
     "9c818b9e83818ccf047a7fce9a4c2657f551f5abe743370f60b812af3bd5ed56",
@@ -624,7 +624,7 @@ def guides_listing_items(listing_items):
 
 
 def guides_description(items):
-    """Describe only the guide cities represented by the selected listing items."""
+    """Describe the selected listing and, for the full set, supplementary references."""
     ids = {item[0].get("id") for item in items}
     if ids == GUIDES_JOB_IDS:
         return GUIDES_DESCRIPTION

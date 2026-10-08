@@ -235,6 +235,12 @@ class GuidesDiscoveryRoute(unittest.TestCase):
             listing_item(HELSINKI_ID, 4),
         ])
         description = site.guides_description(selected)
+        self.assertEqual(
+            description,
+            "Syysloman 2026 menovinkit ja linkit kaupunkien ohjelmiin sekä "
+            "viranomaisohjeita syksyn arkeen. Tarkista ajantasaiset tiedot "
+            "alkuperäisistä lähteistä.",
+        )
 
         metadata = site.homepage_head_meta(
             selected, path=site.OPPAAT_PATH, page_title="Oppaat",
@@ -514,8 +520,11 @@ class GuidesDiscoveryRoute(unittest.TestCase):
         selected = site.guides_listing_items([unrelated, only])
         self.assertEqual(selected, [only])
         description = site.guides_description(selected)
-        self.assertIn("Helsingistä", description)
-        self.assertNotIn("Vantaalta", description)
+        self.assertEqual(
+            description,
+            "Syysloman 2026 tapahtumajuttu Helsingistä. "
+            "Tarkista ajantasainen ohjelma jutun lähteestä.",
+        )
         one = site.category_page_body(
             "Oppaat", description, selected,
             "Oppaita ei ole vielä julkaistu.", recovery_html=site.recovery_links_html(),
