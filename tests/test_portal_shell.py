@@ -282,11 +282,13 @@ class PortalShell(unittest.TestCase):
             ' loading="eager" decoding="async" width="977" height="191">',
             home,
         )
-        # The one search is Google's, explicitly labelled and site-scoped.
+        # The public form is progressively enhanced, but its literal no-JS action
+        # remains an honestly described site-scoped Google search.
         self.assertIn('action="https://www.google.com/search"', home)
         self.assertIn('name="sitesearch" value="uutistenlukija.fi"', home)
-        self.assertIn("Hae sivustolta Googlesta", home)
-        self.assertIn("Tulokset avautuvat Googlen sivulla.", home)
+        self.assertIn('data-first-party-action="/haku/"', home)
+        self.assertIn("Hae julkaistuista uutisista", home)
+        self.assertIn("Ilman JavaScriptiä haku avautuu Googlessa", home)
         # Weather is stated as unavailable instead of showing an invented reading.
         self.assertIn("Sääennuste ei ole nyt saatavilla", home)
         self.assertNotIn("data-weather-widget", home)
@@ -365,6 +367,10 @@ class PortalShell(unittest.TestCase):
         self.assertEqual(
             (root / "mvp-assets/portal.js").read_bytes(),
             (static / "portal.js").read_bytes(),
+        )
+        self.assertEqual(
+            (root / "mvp-assets/search.js").read_bytes(),
+            (static / "search.js").read_bytes(),
         )
         self.assertFalse((static / "style-compat.css").exists())
         self.assertFalse((root / "mvp-assets/style-compat.css").exists())
@@ -454,7 +460,9 @@ class PortalShell(unittest.TestCase):
                 self.assertTrue(attrs["src"].startswith(prefix), tag)
             self.assertNotIn(forbidden, text)
         self.assertIn('src="/mvp-assets/portal.js?v=', public)
+        self.assertIn('src="/mvp-assets/search.js?v=', public)
         self.assertIn('src="/assets/portal.js?v=', private)
+        self.assertNotIn('/assets/search.js', private)
 
     def test_portal_js_initialises_resolved_theme_and_toggles(self):
         # First load with no stored choice follows the OS preference.

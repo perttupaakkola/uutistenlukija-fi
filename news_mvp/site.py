@@ -1252,6 +1252,22 @@ def page(title, body, canonical_path=None, head_meta="", readability_present=Tru
                     '<p id="saved-stories-empty" class="saved-stories__empty">Et ole vielä tallentanut juttuja.</p>'
                     '<ul id="saved-stories-list" class="saved-stories__list"></ul></div></dialog>'
                     if public else '')
+    if public:
+        search_form_extra = ' data-first-party-action="/haku/"'
+        search_label = "Hae julkaistuista uutisista"
+        search_placeholder = "Hae uutisista"
+        search_submit_label = "Hae uutisia"
+        search_note = ("Haku näyttää tämän sivuston julkaistut uutiset. Ilman JavaScriptiä "
+                       f"haku avautuu Googlessa ja rajataan sivustoon {SEARCH_SITE}.")
+        search_script = f'<script src="{asset_url(assets, "search.js")}" defer></script>'
+    else:
+        search_form_extra = ""
+        search_label = "Hae sivustolta Googlesta"
+        search_placeholder = "Hae sivustolta Googlesta"
+        search_submit_label = "Hae Googlesta"
+        search_note = ("Tulokset avautuvat Googlen sivulla. "
+                       f"Haku on rajattu sivustoon {SEARCH_SITE}.")
+        search_script = ""
     return f'''<!doctype html>
 <html lang="fi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 {head}<title>{esc(title)} · Uutistenlukija</title>
@@ -1263,13 +1279,13 @@ def page(title, body, canonical_path=None, head_meta="", readability_present=Tru
 <a class="portal-logo" href="/" aria-label="Uutistenlukija etusivulle"><img src="/{assets}/images/logo.png" alt="Uutistenlukija" class="portal-logo__image" loading="eager" decoding="async" width="977" height="191"></a>
 <div id="header-search" class="portal-search site-search site-search--collapsed">
 <button id="header-search-toggle" class="portal-icon-button search-toggle-btn" type="button" aria-label="Avaa haku" aria-expanded="false" aria-controls="header-search-form"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4.2-4.2"/></svg><span class="visually-hidden">Haku</span></button>
-<form id="header-search-form" class="site-search__form" action="{esc(SEARCH_ACTION)}" method="get" role="search" aria-label="Etsi uutisia" aria-describedby="header-search-note">
-<label class="site-search__label" for="header-search-input">Hae sivustolta Googlesta</label>
-<input id="header-search-input" class="site-search__input" type="search" name="q" placeholder="Hae sivustolta Googlesta" autocomplete="off">
+<form id="header-search-form" class="site-search__form" action="{esc(SEARCH_ACTION)}" method="get" role="search" aria-label="Etsi uutisia" aria-describedby="header-search-note"{search_form_extra}>
+<label class="site-search__label" for="header-search-input">{esc(search_label)}</label>
+<input id="header-search-input" class="site-search__input" type="search" name="q" placeholder="{esc(search_placeholder)}" autocomplete="off" maxlength="200">
 <input type="hidden" name="sitesearch" value="{esc(SEARCH_SITE)}">
-<button class="site-search__submit" type="submit" aria-label="Hae Googlesta"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4.2-4.2"/></svg></button>
+<button class="site-search__submit" type="submit" aria-label="{esc(search_submit_label)}"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4.2-4.2"/></svg></button>
 </form>
-<p id="header-search-note" class="search-note">Tulokset avautuvat Googlen sivulla. Haku on rajattu sivustoon {esc(SEARCH_SITE)}.</p>
+<p id="header-search-note" class="search-note">{esc(search_note)}</p>
 </div>
 <div class="portal-actions" aria-label="Pikatoiminnot">
 {frontpage.weather(snapshot)}
@@ -1295,14 +1311,17 @@ def page(title, body, canonical_path=None, head_meta="", readability_present=Tru
 {saved_dialog}
 {frontpage.data_script(snapshot)}
 <script src="{asset_url(assets, 'portal.js')}" defer></script>
+{search_script}
 </body></html>'''
 
 
-# The one place search is offered: Google, scoped to this site by default. The hidden
-# field is a fixed default scope, never caller text, and the visible label says plainly
-# which engine opens. No other search endpoint is advertised.
+# Search forms retain this literal, site-scoped Google action as their no-JavaScript
+# fallback. Public-page JavaScript progressively redirects those forms to /haku/.
+# The dedicated missing-page form intentionally remains Google-only.
 SEARCH_ACTION = "https://www.google.com/search"
 SEARCH_SITE = "uutistenlukija.fi"
+SEARCH_PATH = "/haku/"
+SEARCH_INDEX_PATH = "/assets/search-index.json"
 # Callers may name the archive listing the old link most plausibly belonged to. Only the
 # exact paths the renderer itself writes are accepted, so nothing else can be linked.
 ARCHIVE_PATH_RE = re.compile(r"/sivu/([0-9]+)/\Z")
@@ -1338,6 +1357,52 @@ def search_form_html():
             '<input type="hidden" name="sitesearch" value="' + esc(SEARCH_SITE) + '">'
             '<button type="submit">Hae Googlesta</button>'
             '<p id="missing-search-note" class="search-note visually-hidden">Haku avautuu Googlen omalla sivulla.</p></form>')
+
+
+def search_page_body():
+    """Small public search surface whose form remains useful without JavaScript."""
+    return (f'<section class="portal-list-page search-page" aria-labelledby="search-title">'
+            '<header class="portal-list-header"><p class="portal-list-header__eyebrow">Haku</p>'
+            '<div class="portal-list-header__title"><h1 id="search-title">Hae uutisia</h1></div>'
+            '<p>Haku kohdistuu julkaistujen uutisten otsikoihin ja tiivistelmiin. '
+            'Tulokset näytetään alkuperäisen julkaisuajan mukaan uusimmasta vanhimpaan. '
+            'Mukana voi olla vanhoja arkistojuttuja, joten tarkista näkyvä julkaisuaika.</p></header>'
+            f'<form id="search-page-form" class="search search-box" action="{esc(SEARCH_ACTION)}" '
+            'method="get" role="search" aria-label="Hae julkaistuista uutisista" '
+            'aria-describedby="search-fallback-note" data-first-party-action="/haku/">'
+            '<label for="search-input">Hakusanat</label><div class="search-box__controls">'
+            '<input id="search-input" type="search" name="q" autocomplete="off" maxlength="200" '
+            'placeholder="Hae uutisista">'
+            f'<input type="hidden" name="sitesearch" value="{esc(SEARCH_SITE)}">'
+            '<button class="search-box__submit" type="submit">Hae</button></div>'
+            '<p id="search-fallback-note" class="search-note">JavaScriptilla tulokset näytetään tällä '
+            'sivustolla. Ilman JavaScriptiä lomake avaa sivustoon rajatun Google-haun.</p></form>'
+            '<p id="search-count" class="search-count" role="status" aria-live="polite">'
+            'Kirjoita hakusana.</p><ol id="search-results" class="search-results"></ol></section>')
+
+
+def search_index_json(listing_items):
+    """Project exactly the already eligible public listing into the client index."""
+    rows = []
+    for job, draft, link, *_rest in listing_items:
+        published, _visible = semantic_datetime(job["created_at"])
+        rows.append({
+            "title": draft["title"],
+            "summary": draft["summary"],
+            "path": link,
+            "published": published,
+        })
+    return json.dumps(rows, ensure_ascii=False, separators=(",", ":")) + "\n"
+
+
+def render_search_surface(output_dir, listing_items, snapshot=None):
+    """Write the noindex search page and the exact eligible-listing projection."""
+    output_dir = Path(output_dir)
+    atomic_write(output_dir / "haku/index.html",
+                 page("Hae uutisia", search_page_body(), SEARCH_PATH,
+                      canonical=False, snapshot=snapshot))
+    atomic_write(output_dir / SEARCH_INDEX_PATH.lstrip("/"),
+                 search_index_json(listing_items))
 
 
 def missing_page(archive_path="/"):
@@ -1706,6 +1771,11 @@ def render_site(store, output_dir, state_dir=None, public=False, include_ids=Non
     about_title = "Tietoa Uutistenlukijasta"
     atomic_write(output_dir / "tietoja/index.html",
                  page(about_title, about_page_body(), ABOUT_PATH if public else None, snapshot=snapshot))
+    if public:
+        # This noindex page and its bounded four-field index are deliberately absent
+        # from the sitemap and RSS. `listing_items` already excludes withdrawn and
+        # conservatively detected duplicate records.
+        render_search_surface(output_dir, listing_items, snapshot=snapshot)
 
     # Shell assets. The imported theme and everything it loads relatively is copied
     # byte-for-byte into the current assets namespace, so the CSS keeps resolving its
@@ -1718,6 +1788,8 @@ def render_site(store, output_dir, state_dir=None, public=False, include_ids=Non
             relative = source_image.relative_to(static_root / "images")
             atomic_write(output_dir / assets / "images" / relative, source_image.read_bytes())
     atomic_write(output_dir / assets / "portal.js", (static_root / "portal.js").read_bytes())
+    if public:
+        atomic_write(output_dir / assets / "search.js", (static_root / "search.js").read_bytes())
     # Root /assets/style.css is the small compatibility layer (consent, skip/focus,
     # 44px controls) that loads after the imported theme sheets.
     atomic_write(output_dir / assets / "style.css", (static_root / "style.css").read_bytes())

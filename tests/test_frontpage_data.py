@@ -102,7 +102,7 @@ class FrontpageData(unittest.TestCase):
         import re
         first = site.page('T', 'Body', '/')
         urls = re.findall(r'(?:src|href)="([^"]+\.(?:css|js)[^"]*)"', first)
-        self.assertEqual(len(urls), 13)
+        self.assertEqual(len(urls), 14)
         self.assertTrue(all(re.search(r'\?v=[0-9a-f]{12}$', url) for url in urls))
         with tempfile.TemporaryDirectory() as temp:
             root = Path(temp)

@@ -14,6 +14,23 @@
   position: relative;
   margin-bottom: 1.5rem;
 }
+.search-box__controls {
+  display: flex;
+  align-items: stretch;
+  gap: 0.5rem;
+}
+.search-box__controls #search-input { flex: 1; min-width: 0; }
+.search-box__submit {
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0.7rem 1rem;
+  border: 0;
+  border-radius: 6px;
+  background: var(--accent);
+  color: #fff;
+  font: 700 0.9rem/1 var(--font-sans);
+  cursor: pointer;
+}
 #search-input {
   width: 100%;
   padding: 0.85rem 1.1rem;
@@ -44,6 +61,7 @@
   border-bottom: 1px solid var(--border);
 }
 .search-result:last-child { border-bottom: none; }
+.search-results { list-style: none; margin: 0; padding: 0; }
 .search-page .search-result-item {
   padding: 0;
   border-radius: 0;
