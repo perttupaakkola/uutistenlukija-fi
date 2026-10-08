@@ -912,6 +912,7 @@ def guides_contents_html(body):
         ("oppaat-heijastin-title", "Heijastin ja näkyvyys"),
         ("oppaat-junamatka-title", "Junamatka syyslomalla"),
         ("oppaat-kellojen-siirto-title", "Kellojen siirto 25. lokakuuta"),
+        ("oppaat-sahkokatko-title", "Toiminta sähkökatkossa"),
     )
     links = [f'<li><a href="#{section}">{esc(label)}</a></li>'
              for section, label in entries if f'id="{section}"' in body]
@@ -1855,6 +1856,7 @@ def render_site(store, output_dir, state_dir=None, public=False, include_ids=Non
     )
     guides_body += clock_guide_html(ClockDateTime.now(timezone.utc))
     # Derive contents from rendered section IDs: retired guidance has no stale link.
+    guides_body += '<section class="portal-list-page" aria-labelledby="oppaat-sahkokatko-title"><header class="portal-list-header"><p class="portal-list-header__eyebrow">VARAUTUMISOHJE – EI AJANKOHTAINEN HÄIRIÖILMOITUS.</p><div class="portal-list-header__title"><h2 id="oppaat-sahkokatko-title">Sähkökatko: katkaise virta laitteista ja tarkista paikalliset ohjeet</h2></div><p>72 tuntia -ohje neuvoo sammuttamaan sähkölaitteet katkon alettua. Veden ja wc:n käytössä seuraa oman vesihuoltolaitoksesi ohjeita. Tarkista toimintaohjeet alkuperäiseltä sivulta.</p><p class="empty-recovery"><a href="https://72tuntia.fi/sahkokatko/" rel="noopener noreferrer">72 tuntia: toiminta sähkökatkossa</a></p></header></section>'
     contents = guides_contents_html(guides_body)
     guides_body = guides_body.replace('</header>', contents + '</header>', 1)
     guides_meta = (homepage_head_meta(
