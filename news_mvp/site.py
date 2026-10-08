@@ -908,6 +908,7 @@ def guides_contents_html(body):
     """Link only to guidance sections actually present in this rendered collection."""
     entries = (
         ("oppaat-talvirenkaat-title", "Talvirenkaat ja rengaskunto"),
+        ("oppaat-ajokeli-title", "Ajokeli ja tiesää"),
         ("oppaat-heijastin-title", "Heijastin ja näkyvyys"),
         ("oppaat-junamatka-title", "Junamatka syyslomalla"),
         ("oppaat-kellojen-siirto-title", "Kellojen siirto 25. lokakuuta"),
@@ -1830,6 +1831,7 @@ def render_site(store, output_dir, state_dir=None, public=False, include_ids=Non
     # Derive contents from rendered section IDs: retired guidance has no stale link.
     guides_body += '<section class="portal-list-page" aria-labelledby="oppaat-sahkokatko-title"><header class="portal-list-header"><p class="portal-list-header__eyebrow">VARAUTUMISOHJE – EI AJANKOHTAINEN HÄIRIÖILMOITUS.</p><div class="portal-list-header__title"><h2 id="oppaat-sahkokatko-title">Sähkökatko: katkaise virta laitteista ja tarkista paikalliset ohjeet</h2></div><p>72 tuntia -ohje neuvoo sammuttamaan sähkölaitteet katkon alettua. Veden ja wc:n käytössä seuraa oman vesihuoltolaitoksesi ohjeita. Tarkista toimintaohjeet alkuperäiseltä sivulta.</p><p class="empty-recovery"><a href="https://72tuntia.fi/sahkokatko/" rel="noopener noreferrer">72 tuntia: toiminta sähkökatkossa</a></p></header></section>'
     guides_body += '<section class="portal-list-page" aria-labelledby="oppaat-palovaroitin-title">\n  <header class="portal-list-header">\n    <p class="portal-list-header__eyebrow">Kodin turvallisuus – lisätietoa Tukesin ohjeesta.</p>\n    <div class="portal-list-header__title"><h2 id="oppaat-palovaroitin-title">Palovaroittimen testinappi ei mittaa savuherkkyyttä</h2></div>\n    <p>Tarkista palovaroittimen valmistajan ilmoittama uusimisajankohta. Tukesin mukaan tieto löytyy yleensä laitteen pohjasta. Testinappi tarkistaa pariston ja hälytysäänen toiminnan, mutta ei sitä, havaitseeko varoitin savua.</p>\n    <p class="empty-recovery"><a href="https://tukes.fi/tuotteet-ja-palvelut/pelastustoimen-laitteet/palovaroittimet" rel="noopener noreferrer">Tukesin ohje palovaroittimista</a></p>\n  </header>\n</section>\n'
+    guides_body += '<section class="portal-list-page" aria-labelledby="oppaat-ajokeli-title"><header class="portal-list-header"><p class="portal-list-header__eyebrow">Fintrafficin palvelu – ei Uutistenlukijan oma keliennuste.</p><div class="portal-list-header__title"><h2 id="oppaat-ajokeli-title">Tarkista ajokeli ennen matkaa</h2></div><p>Fintrafficin Liikennetilanne-palvelussa voit tarkistaa ajokelin ja tiesääasemien tiedot. Valitse kartalta oman reittisi alue ja tarkista, mille ajankohdalle tieto on annettu. Palvelussa voi olla myös alueita, joista kelitietoa ei ole saatavilla.</p><p class="empty-recovery"><a href="https://liikennetilanne.fintraffic.fi/tie/saa_ja_keliolosuhteet/" rel="noopener noreferrer">Tarkista ajokeli Fintrafficin palvelussa</a></p></header></section>'
     contents = guides_contents_html(guides_body)
     guides_body = guides_body.replace('</header>', contents + '</header>', 1)
     guides_meta = (homepage_head_meta(
