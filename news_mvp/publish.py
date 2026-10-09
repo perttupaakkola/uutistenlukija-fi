@@ -502,7 +502,9 @@ def public_bundle(store,job,state):
     listing_paths = [f'categories/{slug}/' for slug, _display in CATEGORY_PAGES]
     listing_paths += [LATEST_PATH.lstrip('/'), OPPAAT_PATH.lstrip('/')]
     from .utility_guides import GUIDE_PATHS
+    from .holiday_reference import PATH as HOLIDAY_REFERENCE_PATH
     listing_paths += [path.lstrip('/') for path in GUIDE_PATHS]
+    listing_paths += [HOLIDAY_REFERENCE_PATH.lstrip('/')]
     # Category and latest archives use the same finite /sivu/N/ convention as the
     # homepage. Discover only real, canonical pages under renderer-owned roots;
     # numeric leftovers, links and mis-canonical files never enter the sitemap.
