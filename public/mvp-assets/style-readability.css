@@ -10,3 +10,11 @@
 
 /* Finnish compounds: break rather than force a horizontal scrollbar at 320px. */
 .story-body,.lead{overflow-wrap:break-word;hyphens:auto;-webkit-hyphens:auto}
+
+/* Private candidate only: keep visited links legible on desktop photo leads.
+   Phone, image-free leads, non-lead links and dark palette stay unchanged. */
+@media (min-width: 901px) {
+  .portal-front-grid:not(.portal-front-grid--image-free-lead) .portal-lead__body a:visited {
+    color: inherit;
+  }
+}
