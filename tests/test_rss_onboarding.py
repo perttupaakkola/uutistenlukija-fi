@@ -63,3 +63,7 @@ class RssOnboarding(unittest.TestCase):
         self.assertNotIn('type="email"',html)
         self.assertNotIn('front-shortcuts',html)
         self.assertIn('portal-lead',html)
+        self.assertIn('href="nntp://news.gwene.org/gwene.fi.uutistenlukija"',html)
+        self.assertIn('news.gwene.org',html)
+        self.assertIn('gwene.fi.uutistenlukija',html)
+        self.assertNotIn('type="email"',html)

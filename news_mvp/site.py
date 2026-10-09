@@ -1131,7 +1131,10 @@ def listing_page_html(page_items, page_number, page_count, archive_items=None, s
             '<p class="portal-rss-address">https://uutistenlukija.fi/rss.xml</p>'
             '<button type="button" class="portal-rss-copy" data-rss-copy-url="https://uutistenlukija.fi/rss.xml" '
             'aria-describedby="rss-copy-feedback" hidden>Kopioi syötteen osoite</button>'
-            '<p id="rss-copy-feedback" class="portal-rss-feedback" role="status" aria-live="polite"></p></section>'
+            '<p id="rss-copy-feedback" class="portal-rss-feedback" role="status" aria-live="polite"></p>'
+            '<p>Uutisryhmälukijalla voit seurata julkista '
+            '<a href="nntp://news.gwene.org/gwene.fi.uutistenlukija">Gwene-uutisryhmää</a>. '
+            'Palvelin: news.gwene.org. Ryhmä: gwene.fi.uutistenlukija.</p></section>'
             + frontpage.markets(snapshot) + '</aside>')
     grid_label = ' aria-labelledby="front-lead-title"' if lead_html else ""
     grid_class = "portal-front-grid"
