@@ -21,18 +21,24 @@ def digest(value):
 
 
 def current_default_model_args():
-    """Read the one current Hermes default at call time; never pin a profile-specific model."""
+    """Resolve the editorial model from the news profile that owns this website.
+
+    The personal assistant's default model is unrelated to publishing and may use a
+    provider plugin the isolated news-mvp profile cannot load; never inherit it.
+    """
     import yaml
 
-    config = yaml.safe_load((Path.home() / ".hermes/config.yaml").read_text()) or {}
+    path = Path.home() / ".hermes/profiles/news/config.yaml"
+    config = yaml.safe_load(path.read_text()) or {}
     model = config.get("model") or {}
     if not isinstance(model, dict):
-        raise ValueError("Hermes default model configuration is missing")
+        raise ValueError("News profile model configuration is missing")
     provider = str(model.get("provider") or "").strip()
     name = str(model.get("default") or model.get("model") or "").strip()
-    effort = str(model.get("reasoning_effort") or "").strip()
+    agent = config.get("agent") if isinstance(config.get("agent"), dict) else {}
+    effort = str(agent.get("reasoning_effort") or model.get("reasoning_effort") or "").strip()
     if not provider or not name:
-        raise ValueError("Hermes default model and provider must be configured")
+        raise ValueError("News profile model and provider must be configured")
     args = ["--model", name, "--provider", provider]
     if effort:
         args.extend(("--reasoning", effort))

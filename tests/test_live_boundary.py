@@ -142,11 +142,12 @@ class LiveBoundary(unittest.TestCase):
             with self.assertRaises(ValueError):
                 parse_hermes_output(value)
 
-    def test_editorial_profile_resolves_the_current_main_default_at_call_time(self):
+    def test_editorial_profile_resolves_the_news_profile_model_at_call_time(self):
         with tempfile.TemporaryDirectory() as temp:
             home = Path(temp)
-            (home / '.hermes').mkdir()
-            (home / '.hermes/config.yaml').write_text(
+            (home / '.hermes/profiles/news').mkdir(parents=True)
+            (home / '.hermes/config.yaml').write_text('model:\n  provider: personal-plugin\n  default: other\n')
+            (home / '.hermes/profiles/news/config.yaml').write_text(
                 'model:\n  provider: chosen-provider\n  default: chosen-model\n  reasoning_effort: chosen-effort\n'
             )
             with patch('news_mvp.editorial.Path.home', return_value=home):
@@ -169,7 +170,8 @@ class LiveBoundary(unittest.TestCase):
             home = Path(temp)
             (home / '.hermes/profiles/news-mvp').mkdir(parents=True)
             (home / '.hermes/profiles/news-mvp/config.yaml').write_text('{}\n')
-            (home / '.hermes/config.yaml').write_text(
+            (home / '.hermes/profiles/news').mkdir(parents=True)
+            (home / '.hermes/profiles/news/config.yaml').write_text(
                 'model:\n  provider: chosen-provider\n  default: chosen-model\n'
             )
             completed = subprocess.CompletedProcess([], 0, stdout='{"ok":true}', stderr='')
