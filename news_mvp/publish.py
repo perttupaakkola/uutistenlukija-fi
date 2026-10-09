@@ -501,6 +501,8 @@ def public_bundle(store,job,state):
     # stale or tampered directory out without changing article/archive/legacy checks.
     listing_paths = [f'categories/{slug}/' for slug, _display in CATEGORY_PAGES]
     listing_paths += [LATEST_PATH.lstrip('/'), OPPAAT_PATH.lstrip('/')]
+    from .utility_guides import GUIDE_PATHS
+    listing_paths += [path.lstrip('/') for path in GUIDE_PATHS]
     # Category and latest archives use the same finite /sivu/N/ convention as the
     # homepage. Discover only real, canonical pages under renderer-owned roots;
     # numeric leftovers, links and mis-canonical files never enter the sitemap.
