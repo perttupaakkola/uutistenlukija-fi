@@ -1678,7 +1678,7 @@ def render_site(store, output_dir, state_dir=None, public=False, include_ids=Non
         head_meta = ""
         if public:
             paragraph_text = [p["text"] for p in draft["paragraphs"]]
-            description = seo.meta_description(draft["summary"], paragraph_text)
+            description = seo.article_description(draft["title"], draft["summary"], paragraph_text)
             image_for_meta = image_url or None
             published_iso = timestamp(job["created_at"]).astimezone(timezone.utc).isoformat()
             modified_iso = published_iso

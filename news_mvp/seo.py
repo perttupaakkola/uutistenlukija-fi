@@ -53,6 +53,22 @@ def meta_description(summary, paragraphs=(), limit=DESCRIPTION_MAX):
     return (cut[:index] if index >= limit // 2 else cut).rstrip() + "…"
 
 
+
+def article_description(title, summary, paragraphs=()):
+    """One measured local-search snippet, supported by unchanged reviewed text.
+
+    Fall back if the exact story or its supporting facts change. This is search
+    metadata only: it does not amend the story or imply a new publication date.
+    """
+    deadline = "Kaavaluonnos on kaupungin ilmoituksen mukaan nähtävillä 18. syyskuuta–19. lokakuuta 2026."
+    if (title == "Oulu valmistelee Ravander-korttelin kaavamuutosta"
+            and "Vanhatullin Ravander-korttelin" in summary
+            and deadline in paragraphs):
+        return ("Oulun Vanhatullin Ravander-kortteliin suunnitellaan asuntoja, liike- ja "
+                "toimistotiloja. Kaavaluonnos on nähtävillä 18.9.–19.10.2026.")
+    return meta_description(summary, paragraphs)
+
+
 def meta_title(title, limit=TITLE_MAX):
     """Title for og/twitter where the brand suffix is appended by the consumer."""
     text = _plain(title)
