@@ -30,14 +30,14 @@ TURKU_DESCRIPTION = (
     "Turku: kaupungin ohjelmakoosteessa on tekemistä lasten ja nuorten syyslomalle "
     "12.–18.10.2026. Tarkista maksut, ikärajat ja ennakkovaraukset tapahtuman tiedoista."
 )
-TURKU_LABEL = "Kaupungin ohjelma"
+TURKU_LABEL = "Turku"
 TURKU_ANCHOR = "Turun kaupungin syyslomaohjelma"
 JYVASKYLA_URL = "https://www.jyvaskyla.fi/harrastukset/lomalokki"
 JYVASKYLA_DESCRIPTION = (
     "Jyväskylän Lomalokki kokoaa syyslomatekemistä lapsille, nuorille ja perheille. "
     "Tarkista järjestäjän ohjelmasta ikärajat, hinnat ja ilmoittautuminen."
 )
-JYVASKYLA_LABEL = "Kaupungin ohjelma"
+JYVASKYLA_LABEL = "Jyväskylä"
 JYVASKYLA_ANCHOR = "Jyväskylän kaupungin Lomalokki"
 KUOPIO_URL = "https://www.kuopionseina.fi/tapahtumat/?event-search-s=Supersyysloma"
 KUOPIO_DESCRIPTION = (
@@ -325,7 +325,7 @@ class GuidesDiscoveryRoute(unittest.TestCase):
             1,
         )
         self.assertEqual(page.count(TURKU_DESCRIPTION), 1)
-        self.assertEqual(page.count(EB + TURKU_LABEL), 2)
+        self.assertEqual(page.count(EB + TURKU_LABEL), 1)
         self.assertLess(page.index(OULU_ANCHOR), page.index(EB + TURKU_LABEL))
         self.assertEqual(page.count(f'href="{JYVASKYLA_URL}"'), 1)
         self.assertEqual(
@@ -336,7 +336,7 @@ class GuidesDiscoveryRoute(unittest.TestCase):
             1,
         )
         self.assertEqual(page.count(JYVASKYLA_DESCRIPTION), 1)
-        self.assertEqual(page.count(EB + JYVASKYLA_LABEL), 2)
+        self.assertEqual(page.count(EB + JYVASKYLA_LABEL), 1)
         self.assertLess(page.index(TURKU_ANCHOR), page.index(JYVASKYLA_ANCHOR))
         self.assertEqual(page.count(f'href="{KUOPIO_URL}"'), 1)
         self.assertEqual(
@@ -483,7 +483,7 @@ class GuidesDiscoveryRoute(unittest.TestCase):
                     ),
                     1,
                 )
-                self.assertEqual(page.count(EB + JYVASKYLA_LABEL), 2)
+                self.assertEqual(page.count(EB + JYVASKYLA_LABEL), 1)
                 self.assertEqual(page.count(EB + KUOPIO_LABEL), 1)
                 self.assertEqual(page.count(EB + ESPOO_LABEL), 1)
                 self.assertEqual(page.count(TAMPERE_DESCRIPTION), 1)
