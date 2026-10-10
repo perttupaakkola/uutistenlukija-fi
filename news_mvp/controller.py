@@ -16,10 +16,27 @@ from .store import database
 # Image provider calls are deliberately bounded per scheduler tick. A failed candidate remains
 # unpublished and can be retried by a later tick.
 IMAGE_BACKFILL_LIMIT = 3
+MAX_CORRECTION_ROUNDS = 2
 
 
 class ImagePending(RuntimeError):
     """Keep the saved draft retryable; never publish a missing image."""
+
+
+def archive_rejection(state_dir, job_id, packet, draft, review, round_number):
+    """Retain every rejected text version and its exact bound review for audit."""
+    from .site import atomic_write
+    directory = Path(state_dir) / 'revisions' / job_id
+    stem = digest(draft)
+    path = directory / (stem + '.json')
+    suffix = 2
+    while path.exists():
+        path = directory / f'{stem}-{suffix}.json'
+        suffix += 1
+    record = {'packet': packet, 'draft': draft, 'review': review,
+              'correction_round': round_number}
+    atomic_write(path, json.dumps(record, ensure_ascii=False, sort_keys=True) + '\n')
+    return path
 
 
 def load_config(path):
@@ -214,6 +231,19 @@ def _run_image_backfill(config, store, state_dir, model=None, limit=IMAGE_BACKFI
     return backfill_missing_images(store, state_dir, model, limit=limit)
 
 
+
+def _defer_image_only_rejection(store, config, job, packet, draft, review, model):
+    """Archive an image-only refusal, drop the image and defer the job for a new image."""
+    store.finish_review(job["id"], review)
+    from .site import atomic_write
+    history = Path(config['state_dir'])/'image-rejections'/job['id']/(digest(draft)+'.json')
+    atomic_write(history,json.dumps({'packet':packet,'draft':draft,'review':review},ensure_ascii=False)+'\n')
+    from .imagery import discard_generated_candidate
+    discard_generated_candidate(draft.get('image'), draft, config['state_dir'])
+    packet={**packet,'image':None};draft={**draft,'image':None}
+    store.save_packet(job['id'],packet);store.save_draft(job['id'],draft,model.name)
+    raise ImagePending('Image pending: editorial image-only rejection; candidate retained for audit')
+
 def article_first_image(draft, packet, state_dir, model):
     """Rank the final article before considering even an intake-supplied photograph."""
     from .imagery import build_image, classify_draft
@@ -313,17 +343,47 @@ def tick(config_path, model=None, now=None, _already_locked=False, target_job_id
                     # Save the draft and stop before starting an additional model call.
                     return {"status": "stopped", "id": job["id"]}
                 review = validate_review(model.call("reviewer", packet, draft), draft)
-                store.finish_review(job["id"], review)
                 if review.get('image_retryable') is True:
-                    # Retain the refused exact candidate and review before retrying imagery.
-                    from .site import atomic_write
-                    history = Path(config['state_dir'])/'image-rejections'/job['id']/(digest(draft)+'.json')
-                    atomic_write(history,json.dumps({'packet':packet,'draft':draft,'review':review},ensure_ascii=False)+'\n')
-                    from .imagery import discard_generated_candidate
-                    discard_generated_candidate(draft.get('image'), draft, config['state_dir'])
-                    packet={**packet,'image':None};draft={**draft,'image':None}
-                    store.save_packet(job['id'],packet);store.save_draft(job['id'],draft,model.name)
-                    raise ImagePending('Image pending: editorial image-only rejection; candidate retained for audit')
+                    _defer_image_only_rejection(store, config, job, packet, draft, review, model)
+                correction_round = 0
+                while not review['approved']:
+                    archive_rejection(config['state_dir'], job['id'], packet, draft, review,
+                                      correction_round)
+                    # A missing fixable field is deliberately the legacy, fail-closed case.
+                    if (review.get('fixable') is not True or
+                            correction_round >= MAX_CORRECTION_ROUNDS):
+                        break
+                    correction_round += 1
+                    revised = model.call('reviser', packet, draft, context={
+                        'review': review, 'correction_round': correction_round})
+                    if not isinstance(revised, dict):
+                        raise ValueError('Revised draft must be an object')
+                    revised = repair_title(model, packet, revised)
+                    if config.get("illustrations", True) and not packet.get("fixture", False):
+                        # Image reviews are bound to the exact article text, so a corrected
+                        # article needs its image chosen and pixel-reviewed again.
+                        try:
+                            illustration = article_first_image(revised, packet, config["state_dir"], model)
+                        except Exception as error:
+                            raise ImagePending('Image pending after correction: ' + safe_error(error)) from error
+                        if illustration is None:
+                            raise ImagePending('Image pending after correction: no reviewed candidate')
+                        packet = {**{k: v for k, v in packet.items() if k != "image_note"}, "image": illustration}
+                        job = {**job, "packet": json.dumps(packet)}
+                        store.save_packet(job["id"], packet)
+                        revised = {**revised, "image": illustration}
+                    validate_draft(revised, packet)
+                    draft = revised
+                    store.save_draft(job['id'], draft, model.name)
+                    if not load_config(config_path)['enabled']:
+                        # The corrected draft is durable; recovery can review this exact version.
+                        return {'status': 'stopped', 'id': job['id']}
+                    review = validate_review(model.call('reviewer', packet, draft), draft)
+                    if review.get('image_retryable') is True:
+                        # The corrected text passed; only the image was refused. Keep the
+                        # corrected text and retry imagery later instead of rejecting the story.
+                        _defer_image_only_rejection(store, config, job, packet, draft, review, model)
+                store.finish_review(job["id"], review)
             except ImagePending as error:
                 store.defer_image(job['id'], now.timestamp(), max(900, config['retry_seconds']), str(error))
                 return {'status': 'image_pending', 'id': job['id'], 'retryable': True}

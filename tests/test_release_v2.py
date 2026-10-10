@@ -162,7 +162,9 @@ class ReleaseV2(unittest.TestCase):
         self.assertEqual({r['url'] for r in rows},{'https://www.hel.fi/fi/uutiset/a5','https://www.hel.fi/fi/uutiset/a6','https://www.hel.fi/fi/uutiset/a7'})
         # Every non-Helsinki provider fails for its own reason; assert the set is exactly the
         # configured providers minus the one that answered.
-        self.assertEqual({e['provider'] for e in errors},set(official.PROVIDER_ORDER)-{'helsinki'})
+        inactive_police = set(official.POLICE_PROVIDERS) - official.active_police_providers(self.now)
+        self.assertEqual({e['provider'] for e in errors},
+                         set(official.PROVIDER_ORDER) - {'helsinki'} - inactive_police)
     def test_one_real_controller_editorial_sequence_only_one_admission(self):
         from test_generated_integrity import GeneratedIntegrity
         self.packet,self.draft=GeneratedIntegrity.generated(self)
@@ -198,7 +200,9 @@ class ReleaseV2(unittest.TestCase):
         with self.assertRaises(ValueError):check(site,receipt)
     def test_provider_rotation_and_source_failure_reports(self):
         with patch('news_mvp.discovery.fetch',side_effect=OSError('nasa outage')),patch.object(official,'response',side_effect=OSError('official outage')):
-            errors=[];self.assertEqual(discover(self.config,self.now,errors=errors),[]);self.assertEqual(len(errors),len(official.PROVIDER_ORDER))
+            errors=[];self.assertEqual(discover(self.config,self.now,errors=errors),[])
+            self.assertEqual(len(errors), len(official.PROVIDER_ORDER) -
+                             len(official.POLICE_PROVIDERS) + official.POLICE_FEEDS_PER_TICK)
         with patch('news_mvp.discovery.fetch',return_value=(b'not html','application/json','https://modis.gsfc.nasa.gov/gallery/showall.php')),patch.object(official,'response',return_value=b'<rss><channel/></rss>'):
             errors=[];discover(self.config,self.now,errors=errors);self.assertIn('nasa-modis',{e['provider'] for e in errors})
         nasa=b'<a href="individual.php?db_date='+self.now.date().isoformat().encode()+b'">story</a>'

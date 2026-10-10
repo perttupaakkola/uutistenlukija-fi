@@ -1,6 +1,7 @@
 """Exact captured institutional article and rights parsing for official intake."""
+import json
 import re
-from datetime import datetime
+from datetime import datetime, timezone
 from zoneinfo import ZoneInfo
 from .official import Page
 from .official import MAX_ARTICLE_CHARS
@@ -26,6 +27,25 @@ def canonical(url,provider):
  if not re.fullmatch(policy()['providers'][provider]['article_pattern'],url):raise ValueError('Unapproved article URL')
  return url
 def rights_text(raw,provider):
+ if provider.startswith('poliisi-'):
+  text=parse(raw,lambda t,a:t=='body').text()
+  start='Tekijänoikeudet tekstiin, kuviin ja muuhun sisältöön'
+  end='Henkilötietojen käsittely'
+  if text.count(start)!=1 or end not in text:raise ValueError('Missing exact Police reuse terms')
+  return text[text.index(start):text.index(end,text.index(start))]
+ if provider=='ec-press':
+  text=parse(raw,lambda t,a:t=='main').text()
+  start='Copyright notice';end='Related links'
+  if text.count(start)!=1 or end not in text:raise ValueError('Missing exact Commission reuse terms')
+  return text[text.index(start):text.index(end,text.index(start))]
+ if provider=='espoo':
+  text=parse(raw,lambda t,a:t=='main').text() or parse(raw,lambda t,a:t=='body').text()
+  start='Oikeudet';end='Vastuukysymykset'
+  if text.count(start)!=1 or end not in text:raise ValueError('Missing exact Espoo reuse terms')
+  section=text[text.index(start):text.index(end,text.index(start))]
+  if 'Lehdistötiedotteet, uutiset ja muu julkiseksi tarkoitettu materiaali on vapaata julkaistavaksi.' not in section:
+   raise ValueError('Espoo news publication grant missing')
+  return section
  if provider=='valtioneuvosto':
   # Exact reuse grant, captured verbatim: text reuse and linking permitted in good-faith
   # contexts with source attribution; commercial use requires a separate agreement. Perttu
@@ -67,9 +87,68 @@ def rights_text(raw,provider):
   start='Kuntaliitolla on tekijänoikeudet';end='\nKuntaliiton asiantuntijat'
  if text.count(start)!=1 or end not in text:raise ValueError('Missing exact rights section')
  return text[text.index(start):text.index(end,text.index(start))]
+def _ec_press_fields(raw,url):
+ try:data=json.loads(raw)
+ except (TypeError,ValueError) as error:raise ValueError('Invalid Commission article JSON') from error
+ match=re.fullmatch(r'https://ec\.europa\.eu/commission/presscorner/detail/fi/([a-z]+)_(\d{2})_(\d+)',url)
+ expected=f'{match.group(1).upper()}/{match.group(2)}/{match.group(3)}' if match else None
+ resource=data.get('docuLanguageResource') if isinstance(data,dict) else None
+ if (not expected or data.get('refCd')!=expected or not isinstance(resource,dict)
+     or resource.get('language')!='FI'):
+  raise ValueError('Commission article identity mismatch')
+ title=resource.get('title')
+ body=parse(str(resource.get('htmlContent','')).encode(),lambda t,a:True).text()
+ published=data.get('publishDate')
+ try:
+  if datetime.fromisoformat(published).date()!=datetime.fromisoformat(data.get('eventDate')).date():
+   raise ValueError('Commission publication date disagreement')
+ except (TypeError,ValueError) as error:raise ValueError('Missing Commission publication date') from error
+ if (not title or len(body)<200 or len(body)>MAX_ARTICLE_CHARS
+     or re.search(r'CC[- ]BY[- ]ND|CC[- ]BY[- ]NC|all rights reserved|copyright|©',body,re.I)):
+  raise ValueError('Missing text or third-party/restricted rights')
+ return {'id':'A','title':title,'published_at':published,'text':body}
+
+def _espoo_fields(raw,url):
+ page=Meta();page.feed(raw.decode())
+ title=page.one('og:title').removesuffix(' | Espoon kaupunki').strip()
+ heading=parse(raw,lambda t,a:t=='h1').text()
+ match=re.search(rb'<script[^>]+id="__NEXT_DATA__"[^>]*>(.*?)</script>',raw,re.S)
+ if not match:raise ValueError('Missing Espoo article data')
+ try:data=json.loads(match.group(1))
+ except (TypeError,ValueError) as error:raise ValueError('Invalid Espoo article data') from error
+ path=url.removeprefix('https://www.espoo.fi')
+ found=[]
+ def visit(value):
+  if isinstance(value,dict):
+   if isinstance(value.get('meta'),dict) and value['meta'].get('path')==path:
+    found.append(value)
+   for child in value.values():visit(child)
+  elif isinstance(value,list):
+   for child in value:visit(child)
+ visit(data)
+ if len(found)!=1:raise ValueError('Missing or ambiguous Espoo article identity')
+ news=found[0]
+ if news.get('title')!=title or heading!=title:raise ValueError('Article title mismatch/ambiguity')
+ parts=[news.get('lead','')]
+ for component in news.get('content',[]):
+  if not isinstance(component,dict) or component.get('type')!='TextParagraph':continue
+  for section in component.get('text',{}).get('structured',[]):
+   if section.get('heading'):parts.append(section['heading'])
+   parts.append(parse(str(section.get('htmlContent','')).encode(),lambda t,a:True).text())
+ body='\n'.join(part.strip() for part in parts if isinstance(part,str) and part.strip())
+ try:published=datetime.fromtimestamp(news['meta']['publishedTime'],timezone.utc).isoformat()
+ except (KeyError,TypeError,ValueError,OverflowError) as error:raise ValueError('Missing Espoo publication date') from error
+ day=datetime.fromisoformat(published)
+ if f'/{day:%Y/%m}/' not in url:raise ValueError('URL date mismatch')
+ if len(body)<200 or len(body)>MAX_ARTICLE_CHARS:raise ValueError('Missing substantive article text')
+ return {'id':'A','title':title,'published_at':published,'text':body}
+
 def source_fields(raw,provider,url):
- spec=policy()['providers'][provider];url=canonical(url,provider);meta=Meta();meta.feed(raw.decode())
- if provider=='valtioneuvosto':
+ spec=policy()['providers'][provider];url=canonical(url,provider)
+ if provider=='ec-press':return _ec_press_fields(raw,url)
+ if provider=='espoo':return _espoo_fields(raw,url)
+ meta=Meta();meta.feed(raw.decode())
+ if provider=='valtioneuvosto' or provider.startswith('poliisi-'):
   # This portal emits no <link rel=canonical> at all, so og:url is the self-reference and is
   # checked in the provider branch below. Requiring a canonical tag here would reject every
   # valid Valtioneuvosto article.
@@ -84,6 +163,19 @@ def source_fields(raw,provider,url):
  # different article in, and a heading that neither equals nor ends with it is still refused.
  if not title or (title!=heading and not heading.endswith(title)):
   raise ValueError('Article title mismatch/ambiguity')
+ if provider.startswith('poliisi-'):
+  if meta.one('og:type')!='article' or canonical(meta.one('og:url'),provider)!=url:
+   raise ValueError('Not an article page')
+  published=meta.one('article:published_time')
+  day=datetime.fromisoformat(published).date()
+  if day.strftime('%-d.%-m.%Y') not in parse(raw,lambda t,a:t=='body').text():
+   raise ValueError('Publication date disagreement')
+  body=parse(raw,lambda t,a:a.get('itemprop')=='articleBody').text()
+  if len(body)<200:raise ValueError('Missing substantive article text')
+  if len(body)>MAX_ARTICLE_CHARS:raise ValueError('Source is an aggregator/hub page, not a single article')
+  if re.search(r'CC[- ]BY[- ]ND|CC[- ]BY[- ]NC|all rights reserved|copyright|©|press agency|Reuters|Associated Press',body,re.I):
+   raise ValueError('Third-party/restricted rights on page')
+  return {'id':'A','title':title,'published_at':published,'text':body}
  if provider=='valtioneuvosto':
   # Liferay/portal site: og:url is the authoritative self-reference because the pages emit
   # no <link rel=canonical> at all. og:type=article and article:published_time are present.

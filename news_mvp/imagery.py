@@ -1128,7 +1128,7 @@ def _build_image_article_first(draft, state_dir, category, model, attempts, deci
                 finally:
                     db.close()
     municipal = ((provider_packet or {}).get('publication_basis') or {}).get('provider') in {
-        'helsinki', 'oulu', 'kuopio', 'vantaa'}
+        'helsinki', 'oulu', 'kuopio', 'vantaa', 'espoo'}
     searches, qualifying = [], []
     for concept in decision['concepts']:
         single = concept_decision(decision, concept)
@@ -1382,7 +1382,7 @@ def _build_image(draft, state_dir, category='', model=DEFAULT_MODEL, attempts=3,
     # For municipal stories, try file-licensed local/venue imagery before generic stock.
     # The exact file-level rights and pixels still pass the same independent gates.
     municipal = ((packet or {}).get('publication_basis') or {}).get('provider') in {
-        'helsinki', 'oulu', 'kuopio', 'vantaa'}
+        'helsinki', 'oulu', 'kuopio', 'vantaa', 'espoo'}
     if not skip_stock and municipal and model_decision and allow_open_sources:
         try:
             stock = fetch_wikimedia(draft, state_dir, decision=decision, accept=selected,

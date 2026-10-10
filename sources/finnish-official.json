@@ -53,6 +53,22 @@
       "rights_text_sha256": "57ee9d76934e9f5e84db28774d672a180db0ebea78a728fc7516212ada9482d9",
       "notice": "Alkuperäinen tieto on maksutta saatavilla EKP:n sivustolla."
     },
+    "ec-press": {
+      "publisher": "Euroopan komissio",
+      "index": "https://ec.europa.eu/commission/presscorner/api/rss?language=fi&pagesize=100",
+      "rights_url": "https://commission.europa.eu/legal-notice_en",
+      "hosts": [
+        "ec.europa.eu",
+        "commission.europa.eu"
+      ],
+      "article_pattern": "https://ec\\.europa\\.eu/commission/presscorner/detail/fi/[a-z]+_\\d{2}_\\d+",
+      "license": "European Commission legal notice: EU-owned content is licensed under Creative Commons Attribution 4.0 International (CC BY 4.0), with attribution and changes indicated; third-party and audiovisual content excluded",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "notice": "Lähde: Euroopan komissio. Tekstiä on muokattu ja tiivistetty.",
+      "timezone": "Europe/Brussels",
+      "text_only": true,
+      "rights_text_sha256": "d3a031072761d07494700d713a559e6d7074cbc415916c7d36357467e2ce22a4"
+    },
     "kuopio": {
       "publisher": "Kuopion kaupunki",
       "index": "https://www.kuopio.fi/feed/",
@@ -80,6 +96,18 @@
       "timezone": "Europe/Helsinki",
       "rights_text_sha256": "5daa42d6c78f42311fc609754559434d8926909d1da39fd262ecab75eb2abe2c",
       "license_url": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    "espoo": {
+      "publisher": "Espoon kaupunki",
+      "index": "https://www.espoo.fi/fi/rss/news",
+      "rights_url": "https://www.espoo.fi/fi/tietoa-espoofi-sivustosta",
+      "hosts": [
+        "www.espoo.fi"
+      ],
+      "article_pattern": "https://www\\.espoo\\.fi/fi/uutiset/\\d{4}/\\d{2}/[a-z0-9-]+",
+      "license": "Espoo.fi-sivuston oikeudet: lehdistötiedotteet, uutiset ja muu julkiseksi tarkoitettu materiaali on vapaata julkaistavaksi; lähde on hyvä mainita",
+      "timezone": "Europe/Helsinki",
+      "rights_text_sha256": "c21f464b4f5fea3dd7662333b19668d7c1f8499fb75435d5cc473c85f1823025"
     },
     "valtioneuvosto": {
       "publisher": "Valtioneuvoston kanslia",
@@ -110,6 +138,96 @@
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
       "timezone": "Europe/Helsinki",
       "rights_text_sha256": "9cadf922d527a6734affeb40b381c509ba776ef4929340341790dd9346d488b6"
+    },
+    "poliisi-helsinki": {
+      "publisher": "Poliisi / Helsingin poliisilaitos",
+      "index": "https://poliisi.fi/helsingin-poliisilaitos/-/asset_publisher/ZtAEeHB39Lxr/rss",
+      "rights_url": "https://poliisi.fi/tietoa-sivustosta",
+      "hosts": ["poliisi.fi"],
+      "timezone": "Europe/Helsinki",
+      "article_pattern": "https://poliisi\\.fi/-/[a-z0-9-]+",
+      "notice": "Lähde: Poliisi. Vain tekstiaineistoa; poliisin kuvia ei käytetä.",
+      "text_only": true,
+      "commercial_use": false,
+      "commercial_basis": "Poliisi.fi terms prohibit commercial and political use; enabled only for the approved non-commercial service.",
+      "rights_text_sha256": "d31a6899cd85c0172bc71f5bb19f1a2b85193ff8b1f1f6528d240470d0dae192",
+      "license": "Poliisi.fi-sivuston käyttöehdot: tekstiaineiston käyttö ja linkitys sallittu hyvän tavan mukaisissa asiayhteyksissä lähde mainiten; kaupallinen, poliittinen ja uskonnollinen käyttö kielletty; kuvien käyttö edellyttää lupaa",
+      "license_url": "https://poliisi.fi/tietoa-sivustosta"
+    },
+    "poliisi-ita-uusimaa": {
+      "publisher": "Poliisi / Itä-Uudenmaan poliisilaitos",
+      "index": "https://poliisi.fi/ita-uudenmaan-poliisilaitos/-/asset_publisher/ZtAEeHB39Lxr/rss",
+      "rights_url": "https://poliisi.fi/tietoa-sivustosta",
+      "hosts": ["poliisi.fi"],
+      "timezone": "Europe/Helsinki",
+      "article_pattern": "https://poliisi\\.fi/-/[a-z0-9-]+",
+      "notice": "Lähde: Poliisi. Vain tekstiaineistoa; poliisin kuvia ei käytetä.",
+      "text_only": true,
+      "commercial_use": false,
+      "commercial_basis": "Poliisi.fi terms prohibit commercial and political use; enabled only for the approved non-commercial service.",
+      "rights_text_sha256": "d31a6899cd85c0172bc71f5bb19f1a2b85193ff8b1f1f6528d240470d0dae192",
+      "license": "Poliisi.fi-sivuston käyttöehdot: tekstiaineiston käyttö ja linkitys sallittu hyvän tavan mukaisissa asiayhteyksissä lähde mainiten; kaupallinen, poliittinen ja uskonnollinen käyttö kielletty; kuvien käyttö edellyttää lupaa",
+      "license_url": "https://poliisi.fi/tietoa-sivustosta"
+    },
+    "poliisi-lansi-uusimaa": {
+      "publisher": "Poliisi / Länsi-Uudenmaan poliisilaitos",
+      "index": "https://poliisi.fi/lansi-uudenmaan-poliisilaitos/-/asset_publisher/NbhxOTjN3wK9/rss",
+      "rights_url": "https://poliisi.fi/tietoa-sivustosta",
+      "hosts": ["poliisi.fi"],
+      "timezone": "Europe/Helsinki",
+      "article_pattern": "https://poliisi\\.fi/-/[a-z0-9-]+",
+      "notice": "Lähde: Poliisi. Vain tekstiaineistoa; poliisin kuvia ei käytetä.",
+      "text_only": true,
+      "commercial_use": false,
+      "commercial_basis": "Poliisi.fi terms prohibit commercial and political use; enabled only for the approved non-commercial service.",
+      "rights_text_sha256": "d31a6899cd85c0172bc71f5bb19f1a2b85193ff8b1f1f6528d240470d0dae192",
+      "license": "Poliisi.fi-sivuston käyttöehdot: tekstiaineiston käyttö ja linkitys sallittu hyvän tavan mukaisissa asiayhteyksissä lähde mainiten; kaupallinen, poliittinen ja uskonnollinen käyttö kielletty; kuvien käyttö edellyttää lupaa",
+      "license_url": "https://poliisi.fi/tietoa-sivustosta"
+    },
+    "poliisi-sisa-suomi": {
+      "publisher": "Poliisi / Sisä-Suomen poliisilaitos",
+      "index": "https://poliisi.fi/sisa-suomen-poliisilaitos/-/asset_publisher/ZtAEeHB39Lxr/rss",
+      "rights_url": "https://poliisi.fi/tietoa-sivustosta",
+      "hosts": ["poliisi.fi"],
+      "timezone": "Europe/Helsinki",
+      "article_pattern": "https://poliisi\\.fi/-/[a-z0-9-]+",
+      "notice": "Lähde: Poliisi. Vain tekstiaineistoa; poliisin kuvia ei käytetä.",
+      "text_only": true,
+      "commercial_use": false,
+      "commercial_basis": "Poliisi.fi terms prohibit commercial and political use; enabled only for the approved non-commercial service.",
+      "rights_text_sha256": "d31a6899cd85c0172bc71f5bb19f1a2b85193ff8b1f1f6528d240470d0dae192",
+      "license": "Poliisi.fi-sivuston käyttöehdot: tekstiaineiston käyttö ja linkitys sallittu hyvän tavan mukaisissa asiayhteyksissä lähde mainiten; kaupallinen, poliittinen ja uskonnollinen käyttö kielletty; kuvien käyttö edellyttää lupaa",
+      "license_url": "https://poliisi.fi/tietoa-sivustosta"
+    },
+    "poliisi-lounais-suomi": {
+      "publisher": "Poliisi / Lounais-Suomen poliisilaitos",
+      "index": "https://poliisi.fi/lounais-suomen-poliisilaitos/-/asset_publisher/ZtAEeHB39Lxr/rss",
+      "rights_url": "https://poliisi.fi/tietoa-sivustosta",
+      "hosts": ["poliisi.fi"],
+      "timezone": "Europe/Helsinki",
+      "article_pattern": "https://poliisi\\.fi/-/[a-z0-9-]+",
+      "notice": "Lähde: Poliisi. Vain tekstiaineistoa; poliisin kuvia ei käytetä.",
+      "text_only": true,
+      "commercial_use": false,
+      "commercial_basis": "Poliisi.fi terms prohibit commercial and political use; enabled only for the approved non-commercial service.",
+      "rights_text_sha256": "d31a6899cd85c0172bc71f5bb19f1a2b85193ff8b1f1f6528d240470d0dae192",
+      "license": "Poliisi.fi-sivuston käyttöehdot: tekstiaineiston käyttö ja linkitys sallittu hyvän tavan mukaisissa asiayhteyksissä lähde mainiten; kaupallinen, poliittinen ja uskonnollinen käyttö kielletty; kuvien käyttö edellyttää lupaa",
+      "license_url": "https://poliisi.fi/tietoa-sivustosta"
+    },
+    "poliisi-oulu": {
+      "publisher": "Poliisi / Oulun poliisilaitos",
+      "index": "https://poliisi.fi/oulun-poliisilaitos/-/asset_publisher/ZtAEeHB39Lxr/rss",
+      "rights_url": "https://poliisi.fi/tietoa-sivustosta",
+      "hosts": ["poliisi.fi"],
+      "timezone": "Europe/Helsinki",
+      "article_pattern": "https://poliisi\\.fi/-/[a-z0-9-]+",
+      "notice": "Lähde: Poliisi. Vain tekstiaineistoa; poliisin kuvia ei käytetä.",
+      "text_only": true,
+      "commercial_use": false,
+      "commercial_basis": "Poliisi.fi terms prohibit commercial and political use; enabled only for the approved non-commercial service.",
+      "rights_text_sha256": "d31a6899cd85c0172bc71f5bb19f1a2b85193ff8b1f1f6528d240470d0dae192",
+      "license": "Poliisi.fi-sivuston käyttöehdot: tekstiaineiston käyttö ja linkitys sallittu hyvän tavan mukaisissa asiayhteyksissä lähde mainiten; kaupallinen, poliittinen ja uskonnollinen käyttö kielletty; kuvien käyttö edellyttää lupaa",
+      "license_url": "https://poliisi.fi/tietoa-sivustosta"
     }
   }
 }

@@ -106,8 +106,9 @@ def live_tick(config_path):
                 return _advance_job(store, store.get(retry['id']), config, config_path)
             recipes=[json.loads((ROOT/path).read_text()) for path in config.get('source_recipes',[])]
             errors=[]
+            collection_excluded=store.collection_failure_urls(time.time())
             if config.get('discovery',{}).get('family')=='news-reviewed-v2':
-                excluded={r[0] for r in store.db.execute("SELECT source_url FROM jobs WHERE status IN ('rejected','failed') OR id IN (SELECT job_id FROM publications WHERE status IN ('deployed','failed'))")}
+                excluded=collection_excluded|{r[0] for r in store.db.execute("SELECT source_url FROM jobs WHERE status IN ('rejected','failed') OR id IN (SELECT job_id FROM publications WHERE status IN ('deployed','failed'))")}
                 last=store.db.execute('SELECT packet FROM jobs ORDER BY created_at DESC,rowid DESC LIMIT 1').fetchone()
                 previous=json.loads(last[0]) if last else {}
                 after=previous.get('publication_basis',{}).get('provider') or ('nasa-modis' if previous.get('sources') and 'nasa.gov' in previous['sources'][0]['url'] else None)
@@ -122,6 +123,7 @@ def live_tick(config_path):
             else:recipes+=discover(config)
             seen=set()
             for recipe in recipes:
+                if web_url(recipe['url']) in collection_excluded:continue
                 job_id=digest('url:'+web_url(recipe['url']))
                 publication=store.db.execute('SELECT * FROM publications WHERE job_id=?',(job_id,)).fetchone()
                 if job_id in seen:continue
@@ -146,8 +148,12 @@ def live_tick(config_path):
                                 collector_options['search'] = searcher
                         packet,intake_receipt=collector(recipe,config['state_dir'],**collector_options)
                     except (ValueError,OSError) as error:
-                        errors.append({'provider':recipe.get('provider',recipe.get('family','explicit')),'stage':'collection','url':recipe['url'],'error':safe_error(error)})
+                        provider=recipe.get('provider',recipe.get('family','explicit'))
+                        detail=safe_error(error)
+                        store.record_collection_failure(recipe['url'],provider,detail,time.time())
+                        errors.append({'provider':provider,'stage':'collection','url':recipe['url'],'error':detail})
                         continue
+                    store.clear_collection_failure(recipe['url'])
                     admission=ingest(config,packet)
                     if admission['id']!=job_id:raise ValueError('Source identity mismatch')
                     job=store.get(job_id)

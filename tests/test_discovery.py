@@ -46,6 +46,37 @@ class Discovery(unittest.TestCase):
         with patch('news_mvp.live.discover',return_value=recipes),patch('news_mvp.live.collect',side_effect=lambda recipe,state,**kw:(self.fixture_packet(recipe['url']),{})) as collect,patch('news_mvp.live.tick',side_effect=self.render),patch('news_mvp.live.publish',return_value={'status':'dispatched'}):
             live_tick(self.path);self.assertEqual(collect.call_count,1)
         with database(self.config['state_dir']) as store:self.assertEqual(store.db.execute('select count(*) from jobs').fetchone()[0],1)
+
+    def test_permanent_collection_failure_is_remembered_and_expires(self):
+        url = 'https://example.invalid/stale'
+        recipe = {'url': url, 'provider': 'kuntaliitto'}
+        base = 2_000_000_000.0
+        with patch('news_mvp.live.discover', return_value=[recipe]), \
+                patch('news_mvp.live.collect', side_effect=ValueError('Source is stale or future-dated')) as collect, \
+                patch('news_mvp.live.time.time', return_value=base):
+            first = live_tick(self.path)
+            second = live_tick(self.path)
+        self.assertEqual(collect.call_count, 1)
+        self.assertEqual(first['source_errors'][0]['url'], url)
+        self.assertEqual(second['status'], 'idle')
+        with database(self.config['state_dir']) as store:
+            row = store.db.execute('SELECT * FROM collection_failures WHERE url=?', (url,)).fetchone()
+            self.assertEqual((row['provider'], row['count']), ('kuntaliitto', 1))
+            self.assertEqual(store.collection_failure_urls(base + 7 * 24 * 60 * 60 + 1), set())
+
+    def test_transient_collection_failure_retries_after_six_hours_then_gives_up(self):
+        from news_mvp.store import COLLECTION_BACKOFF_SECONDS, COLLECTION_FAILURE_TTL_SECONDS
+        url = 'https://example.invalid/timeout'
+        base = 2_000_000_000.0
+        with database(self.config['state_dir']) as store:
+            store.record_collection_failure(url, 'valtioneuvosto', 'TimeoutError: timed out', base)
+            self.assertEqual(store.collection_failure_urls(base + COLLECTION_BACKOFF_SECONDS - 1), {url})
+            self.assertEqual(store.collection_failure_urls(base + COLLECTION_BACKOFF_SECONDS + 1), set())
+            store.record_collection_failure(url, 'valtioneuvosto', 'OSError: HTTP 503', base + COLLECTION_BACKOFF_SECONDS + 1)
+            store.record_collection_failure(url, 'valtioneuvosto', 'OSError: HTTP 503', base + 2 * COLLECTION_BACKOFF_SECONDS + 2)
+            self.assertEqual(store.collection_failure_urls(base + 3 * COLLECTION_BACKOFF_SECONDS + 3), {url})
+            self.assertEqual(store.collection_failure_urls(
+                base + 2 * COLLECTION_BACKOFF_SECONDS + 2 + COLLECTION_FAILURE_TTL_SECONDS + 1), set())
     def test_due_ready_backlog_precedes_fresh_discovery(self):
         old='https://example.invalid/due-retry';identity=digest('url:'+old)
         with database(self.config['state_dir']) as store:

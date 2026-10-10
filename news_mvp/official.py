@@ -10,6 +10,7 @@ from email.utils import parsedate_to_datetime
 from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import urljoin
+from zoneinfo import ZoneInfo
 
 from .diagnostics import safe_error
 from .editorial import ROOT, digest, timestamp, validate_packet, web_url
@@ -27,14 +28,19 @@ DEPTH_PER_PROVIDER = 3
 MAX_ARTICLE_CHARS = 12000
 # Providers whose article extraction and rights capture live in official_additional.py.
 # Kept in one place so adding a source cannot leave a half-wired branch behind.
-ADDITIONAL_PROVIDERS = ('kuntaliitto', 'ecb', 'kuopio', 'vantaa', 'valtioneuvosto', 'oulu')
+POLICE_PROVIDERS = ('poliisi-helsinki', 'poliisi-ita-uusimaa', 'poliisi-lansi-uusimaa',
+                    'poliisi-sisa-suomi', 'poliisi-lounais-suomi', 'poliisi-oulu')
+POLICE_FEEDS_PER_TICK = 3
+ADDITIONAL_PROVIDERS = ('kuntaliitto', 'ecb', 'ec-press', 'kuopio', 'vantaa', 'espoo',
+                        'valtioneuvosto', 'oulu') + POLICE_PROVIDERS
 # Providers discovered from an RSS index (rather than an HTML link list).
-RSS_PROVIDERS = ('helsinki', 'ecb', 'kuopio', 'vantaa', 'valtioneuvosto', 'oulu')
+RSS_PROVIDERS = ('helsinki', 'ecb', 'ec-press', 'kuopio', 'vantaa', 'espoo',
+                 'valtioneuvosto', 'oulu') + POLICE_PROVIDERS
 
 # Publication order for round-robin discovery. Every provider in the policy must appear
 # here, or it is silently never discovered.
-PROVIDER_ORDER = ('nasa-modis', 'helsinki', 'stat', 'kuntaliitto', 'ecb', 'kuopio', 'vantaa',
-                  'valtioneuvosto', 'oulu')
+PROVIDER_ORDER = ('nasa-modis', 'helsinki', 'stat', 'kuntaliitto', 'ecb', 'ec-press',
+                  'kuopio', 'vantaa', 'espoo', 'valtioneuvosto', 'oulu') + POLICE_PROVIDERS
 
 VOID = {'area', 'base', 'br', 'col', 'embed', 'hr', 'img', 'input', 'link', 'meta', 'param', 'source', 'track', 'wbr'}
 
@@ -137,16 +143,71 @@ def rights_text(raw, provider):
     return page.text() + '\n' + licenses[0]
 
 
-def response(url, hosts, allow_pdf=False):
+def response(url, hosts, allow_pdf=False, allow_json=False):
     raw, mime, final = fetch(url, hosts)
     allowed = ('text/html', 'application/rss+xml', 'application/xml', 'text/xml')
     if allow_pdf:
         # Only the rights fetch may take a PDF (Kuopio publishes its licence that way), and
         # only by exact document hash. Article fetches never reach this path.
         allowed += ('application/pdf',)
+    if allow_json:
+        allowed += ('application/json',)
     if final != url or mime not in allowed:
         raise ValueError('Unexpected official source response')
     return raw
+
+
+def active_police_providers(now):
+    """Rotate the police feed budget in three-feed batches every scheduler interval."""
+    batches = [POLICE_PROVIDERS[i:i + POLICE_FEEDS_PER_TICK]
+               for i in range(0, len(POLICE_PROVIDERS), POLICE_FEEDS_PER_TICK)]
+    return set(batches[int(now.timestamp() // 900) % len(batches)])
+
+
+def kuntaliitto_candidates(raw, spec, now, excluded):
+    """Use teaser dates when Kuntaliitto supplies them; undated links fail closed later."""
+    blocks = re.findall(r'<article\b[^>]*\blisting-item\b.*?</article>',
+                        raw.decode('utf-8'), re.I | re.S)
+    rows = []
+    for block in blocks[:50]:
+        page = parse(block.encode('utf-8'), lambda tag, attrs: True)
+        links = [urljoin(spec['index'], link['href']) for link in page.links
+                 if re.fullmatch(spec['article_pattern'], urljoin(spec['index'], link['href']))]
+        dates = re.findall(r'\b\d{1,2}\.\d{1,2}\.\d{4}\b', page.text())
+        if dates:
+            if len(set(dates)) != 1:
+                continue
+            day = datetime.strptime(dates[0], '%d.%m.%Y')
+            published = day.replace(tzinfo=ZoneInfo(spec['timezone'])).astimezone(timezone.utc)
+            age = (now - published).total_seconds()
+            if not 0 <= age <= 48 * 3600:
+                continue
+        for url in links:
+            if url not in excluded:
+                rows.append({'family': 'finnish-official', 'provider': 'kuntaliitto',
+                             'url': url})
+    if blocks:
+        return rows
+    # If the publisher removes teaser dates/containers, retain the previous bounded link
+    # discovery and let collection failure memory prevent a hot retry loop.
+    page = parse(raw, lambda tag, attrs: tag == 'main')
+    for link in page.links[:500]:
+        url = urljoin(spec['index'], link['href'])
+        if url not in excluded and re.fullmatch(spec['article_pattern'], url):
+            rows.append({'family': 'finnish-official', 'provider': 'kuntaliitto',
+                         'url': url})
+    return rows[:50]
+
+
+def ec_press_api_url(url):
+    match = re.fullmatch(
+        r'https://ec\.europa\.eu/commission/presscorner/detail/fi/([a-z]+)_(\d{2})_(\d+)',
+        url)
+    if not match:
+        raise ValueError('Unapproved Commission Press Corner article URL')
+    reference = f'{match.group(1).upper()}/{match.group(2)}/{match.group(3)}'
+    return ('https://ec.europa.eu/commission/presscorner/api/documents?reference=' +
+            reference.replace('/', '%2F') + '&language=fi')
 
 
 def discover(config, now=None, excluded=(), errors=None, provider_only=None):
@@ -156,9 +217,12 @@ def discover(config, now=None, excluded=(), errors=None, provider_only=None):
     if type(limit) is not int or not 1 <= limit <= 5:
         raise ValueError('Discovery limit must be 1–5')
     now = now or datetime.now(timezone.utc)
+    active_police = (set(POLICE_PROVIDERS) if provider_only in POLICE_PROVIDERS
+                     else active_police_providers(now))
     pools = []
     for provider, spec in policy()['providers'].items():
         if provider_only is not None and provider != provider_only:continue
+        if provider in POLICE_PROVIDERS and provider not in active_police:continue
         try:
             raw = response(spec['index'], spec['hosts'])
         except (ValueError,OSError) as error:
@@ -182,6 +246,8 @@ def discover(config, now=None, excluded=(), errors=None, provider_only=None):
                     continue
                 if url not in excluded and 0 <= age <= 48*3600 and re.fullmatch(spec['article_pattern'], url):
                     rows.append({'family': 'finnish-official', 'provider': provider, 'url': url})
+        elif provider == 'kuntaliitto':
+            rows = kuntaliitto_candidates(raw, spec, now, excluded)
         else:
             page = parse(raw, lambda tag, a: tag == 'main')
             for a in [a for a in (page.links[:500] if provider == 'kuntaliitto' else page.links) if re.fullmatch(spec['article_pattern'],urljoin(spec['index'],a['href']))][:50]:
@@ -261,7 +327,10 @@ def collect(recipe, state_dir, now=None, search=None, *, primary_data=_AUTO_PRIM
     permission = rights_text(rights, provider)
     if hashlib.sha256(permission.encode()).hexdigest() != spec['rights_text_sha256']:
         raise ValueError('Source reuse terms changed; independent review required')
-    raw = response(url, spec['hosts'])
+    if provider == 'ec-press':
+        raw = response(ec_press_api_url(url), spec['hosts'], allow_json=True)
+    else:
+        raw = response(url, spec['hosts'])
     source = {**source_fields(raw, provider, url), 'url': url, 'publisher': spec['publisher'],
               'reuse': reuse(spec)}
     primary_binding = None

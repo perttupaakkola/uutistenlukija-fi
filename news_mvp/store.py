@@ -1,10 +1,20 @@
 """One local SQLite job table; saved drafts survive interrupted ticks."""
 import json
 import sqlite3
+import time
 from contextlib import contextmanager
 from pathlib import Path
 
 from .editorial import digest, encode, web_url
+
+
+COLLECTION_BACKOFF_SECONDS = 6 * 60 * 60
+COLLECTION_FAILURE_TTL_SECONDS = 7 * 24 * 60 * 60
+PERMANENT_COLLECTION_ERRORS = (
+    "stale or future-dated",
+    "aggregator/hub page",
+    "title mismatch",
+)
 
 
 @contextmanager
@@ -20,6 +30,11 @@ def database(state_dir):
         status TEXT NOT NULL DEFAULT 'ready', attempts INTEGER NOT NULL DEFAULT 0,
         next_attempt REAL NOT NULL DEFAULT 0, draft TEXT, review TEXT,
         adapter TEXT, created_at TEXT NOT NULL, error TEXT
+    )""")
+    db.execute("""CREATE TABLE IF NOT EXISTS collection_failures (
+        url TEXT PRIMARY KEY, provider TEXT NOT NULL, error TEXT NOT NULL,
+        first_seen REAL NOT NULL, last_seen REAL NOT NULL,
+        count INTEGER NOT NULL DEFAULT 1
     )""")
     db.commit()
     try:
@@ -43,6 +58,41 @@ class Store:
             row = self.db.execute("SELECT id FROM jobs WHERE story_key=? OR source_url=?",
                                   (packet["story_key"], primary)).fetchone()
         return row["id"], added
+
+    def record_collection_failure(self, url, provider, error, now=None):
+        """Remember a bounded collector failure even though no job could be admitted."""
+        now = time.time() if now is None else now
+        url = web_url(url)
+        with self.db:
+            self.db.execute(
+                """INSERT INTO collection_failures
+                   (url,provider,error,first_seen,last_seen,count) VALUES(?,?,?,?,?,1)
+                   ON CONFLICT(url) DO UPDATE SET provider=excluded.provider,
+                   error=excluded.error,last_seen=excluded.last_seen,count=count+1""",
+                (url, provider, error, now, now))
+
+    def clear_collection_failure(self, url):
+        with self.db:
+            self.db.execute("DELETE FROM collection_failures WHERE url=?", (web_url(url),))
+
+    def collection_failure_urls(self, now=None):
+        """URLs still in content quarantine or transient retry backoff.
+
+        Content failures are suppressed for seven days. Other failures retry after six
+        hours, but three failures enter the same seven-day quarantine. Expired rows are
+        removed so a mistaken classification can never hide a source permanently.
+        """
+        now = time.time() if now is None else now
+        with self.db:
+            self.db.execute("DELETE FROM collection_failures WHERE last_seen<=?",
+                            (now - COLLECTION_FAILURE_TTL_SECONDS,))
+        excluded = set()
+        for row in self.db.execute("SELECT url,error,last_seen,count FROM collection_failures"):
+            permanent = any(marker in row["error"].casefold()
+                            for marker in PERMANENT_COLLECTION_ERRORS)
+            if permanent or row["count"] >= 3 or now < row["last_seen"] + COLLECTION_BACKOFF_SECONDS:
+                excluded.add(row["url"])
+        return excluded
 
     def recover(self, max_attempts):
         # Called only after the controller has acquired the process lock.

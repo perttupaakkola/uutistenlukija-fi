@@ -137,8 +137,10 @@ def verify_modis_intake(packet, state_dir):
 
 
 def discover_mixed(config,now=None,excluded=(),errors=None,after_provider=None,recent_categories=()):
-    from .official import discover as official_discover, PROVIDER_ORDER
+    from .official import (discover as official_discover, PROVIDER_ORDER,
+                           POLICE_PROVIDERS, active_police_providers)
     errors=errors if errors is not None else []
+    now=now or datetime.now(timezone.utc)
     limit=config['discovery'].get('max_candidates',5)
     if type(limit) is not int or not 1<=limit<=5:raise ValueError('Discovery limit must be 1–5')
     # One shared order, so a newly registered provider cannot be silently skipped here.
@@ -146,7 +148,11 @@ def discover_mixed(config,now=None,excluded=(),errors=None,after_provider=None,r
     if after_provider in order:
         i=order.index(after_provider)+1;order=order[i:]+order[:i]
     pools={}
+    active_police=active_police_providers(now)
     for provider in order:
+        if provider in POLICE_PROVIDERS and provider not in active_police:
+            pools[provider]=[]
+            continue
         try:
             if provider=='nasa-modis':
                 pools[provider]=discover({**config,'discovery':{'family':'nasa-modis','max_candidates':max(limit,3)}},now,excluded)
@@ -159,7 +165,7 @@ def discover_mixed(config,now=None,excluded=(),errors=None,after_provider=None,r
     # civic stories, try any fresh statistical/science source before another municipal
     # one; collection, rights checks and the writer still decide whether it is usable.
     if tuple(recent_categories[:4]) == ('Kotimaa',) * 4:
-        alternate = [p for p in order if p in {'stat', 'ecb', 'nasa-modis'} and pools[p]]
+        alternate = [p for p in order if p in {'stat', 'ecb', 'ec-press', 'nasa-modis'} and pools[p]]
         order = alternate + [p for p in order if p not in alternate]
     # Same depth rationale as official.discover: the tick needs alternates to fall back to
     # when a candidate proves stale, so do not truncate the merged list to `limit`. The

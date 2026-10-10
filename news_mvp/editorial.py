@@ -149,27 +149,36 @@ def validate_review(review, draft):
         raise ValueError("Review needs a boolean decision")
     if review.get("draft_sha256") != digest(draft):
         raise ValueError("Review is not bound to this exact draft")
+    fixable = review.get('fixable', False)
+    if type(fixable) is not bool or (review['approved'] and fixable):
+        raise ValueError('Fixable requires an explicit text rejection')
     if 'image_retryable' in review and (type(review['image_retryable']) is not bool or
                                       (review['approved'] and review['image_retryable'])):
         raise ValueError('Image retry requires an explicit image-only rejection')
+    if fixable and review.get('image_retryable') is True:
+        raise ValueError('A rejection cannot be both text-fixable and image-only')
     reasons = review.get("reasons")
     if not isinstance(reasons, list) or not reasons:
         raise ValueError("Review must explain its source-grounded decision")
     for reason in reasons:
         text(reason, "review reason", 2000)
-    return review
+    # Old stored decisions predate this field; callers receive the explicit safe default
+    # without mutating the historic object whose digest may be part of other evidence.
+    return {**review, 'fixable': fixable}
 
 
 class FixtureModel:
     """Deterministic test double. Never presented as model/editorial evidence."""
     name = "fixture"
 
-    def call(self, role, packet, draft=None):
+    def call(self, role, packet, draft=None, *, context=None):
         if packet.get("fixture") is not True:
             raise ValueError("Fixture adapter refuses non-fixture packets")
         data = json.loads((ROOT / "fixtures/model-output.json").read_text())
         if role == "writer":
             return data["draft"]
+        if role == "reviser":
+            return draft
         if role == "titler":
             return {"title": data["draft"]["title"]}
         if role == "image_classifier":
