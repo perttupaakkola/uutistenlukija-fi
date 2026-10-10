@@ -87,5 +87,6 @@ def render(now, page, public, snapshot=None):
     guide = dict(path=PATH, title=title, answer=answer, description=answer,
                  source=SOURCES[0], source_label=SOURCE_LABELS[0], sections=sections,
                  related=(('/oppaat/talvirenkaat-2026/', 'Autolla syyslomalle: tarkista talvirengassäännöt'),
-                          ('/oppaat/#oppaat-ajokeli-title', 'Tarkista ajokeli ja tiesää ennen lähtöä')))
+                          ('/oppaat/#oppaat-ajokeli-title', 'Tarkista ajokeli ja tiesää ennen lähtöä'),
+                          ('/oppaat/kellojen-siirto-2026/', 'Loman lopussa kellot siirtyvät 25. lokakuuta')))
     return render_guide(guide, page, public, snapshot)
