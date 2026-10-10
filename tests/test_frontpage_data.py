@@ -81,7 +81,7 @@ class FrontpageData(unittest.TestCase):
         self.assertIn('11,2600', text)
         self.assertIn('0,8500', text)
         self.assertIn('1 euro', text)
-        self.assertIn('ei reaaliaikainen', text)
+        self.assertNotIn('ei reaaliaikainen', text)
         self.assertIn('Suomen inflaatio', text)
         self.assertIn('2,2 %', text)
         self.assertIn('Tilastokeskus', text)

@@ -19,7 +19,8 @@ OULU_DESCRIPTION = (
     "syyslomalle 19.–23.10.2026. Tarkista tapahtumien ikärajat, hinnat ja "
     "ilmoittautuminen kaupungin sivulta."
 )
-OULU_LABEL = "Linkki kaupungin palvelusivulle – ei Uutistenlukijan uutisjuttu."
+EB = '<p class="portal-list-header__eyebrow">'
+OULU_LABEL = "Oulu"
 OULU_ANCHOR = "Oulun kaupungin syyslomatoiminta"
 TURKU_URL = (
     "https://www.turku.fi/ajankohtaista/"
@@ -29,28 +30,28 @@ TURKU_DESCRIPTION = (
     "Turku: kaupungin ohjelmakoosteessa on tekemistä lasten ja nuorten syyslomalle "
     "12.–18.10.2026. Tarkista maksut, ikärajat ja ennakkovaraukset tapahtuman tiedoista."
 )
-TURKU_LABEL = "Linkki kaupungin ohjelmakoosteeseen – ei Uutistenlukijan uutisjuttu."
+TURKU_LABEL = "Kaupungin ohjelma"
 TURKU_ANCHOR = "Turun kaupungin syyslomaohjelma"
 JYVASKYLA_URL = "https://www.jyvaskyla.fi/harrastukset/lomalokki"
 JYVASKYLA_DESCRIPTION = (
     "Jyväskylän Lomalokki kokoaa syyslomatekemistä lapsille, nuorille ja perheille. "
     "Tarkista järjestäjän ohjelmasta ikärajat, hinnat ja ilmoittautuminen."
 )
-JYVASKYLA_LABEL = "Linkki kaupungin ohjelmakoosteeseen – ei Uutistenlukijan uutisjuttu."
+JYVASKYLA_LABEL = "Kaupungin ohjelma"
 JYVASKYLA_ANCHOR = "Jyväskylän kaupungin Lomalokki"
 KUOPIO_URL = "https://www.kuopionseina.fi/tapahtumat/?event-search-s=Supersyysloma"
 KUOPIO_DESCRIPTION = (
     "Kuopion kaupungin tapahtumakalenterista löytyy syyslomatekemistä lapsille ja nuorille. "
     "Tarkista tapahtuman ikärajat, hinnat ja ilmoittautuminen järjestäjältä."
 )
-KUOPIO_LABEL = "Linkki kaupungin tapahtumakalenteriin – ei Uutistenlukijan uutisjuttu."
+KUOPIO_LABEL = "Kuopio"
 KUOPIO_ANCHOR = "Kuopion kaupungin syyslomakalenteri"
 ESPOO_URL = "https://www.espoo.fi/fi/lomatekemista"
 ESPOO_DESCRIPTION = (
     "Espoon kaupungin sivulta löytyy lomatekemistä lapsille ja nuorille. "
     "Tarkista ohjelmasta ikärajat, maksut ja ilmoittautumisen määräajat."
 )
-ESPOO_LABEL = "Linkki Espoon kaupungin lomaohjelmaan – ei Uutistenlukijan uutisjuttu."
+ESPOO_LABEL = "Espoo"
 ESPOO_ANCHOR = "Espoon kaupungin lomaohjelma"
 TAMPERE_URL = "https://www.tampere.fi/ajankohtaista/syyslomalla-tapahtuu-2026"
 TAMPERE_DESCRIPTION = (
@@ -58,7 +59,7 @@ TAMPERE_DESCRIPTION = (
     "Tarkista järjestäjiltä ikärajat, hinnat ja ilmoittautuminen."
 )
 TAMPERE_LABEL = (
-    "Linkki Tampereen kaupungin syyslomaohjelmaan – ei Uutistenlukijan uutisjuttu."
+    "Tampere"
 )
 TAMPERE_ANCHOR = "Tampereen kaupungin syyslomaohjelma"
 RAIL_URL = "https://www.vr.fi/radalla/suunnitellut-ratatyot"
@@ -70,7 +71,7 @@ RAIL_DESCRIPTION = (
     "rautatieasemalta. Tarkista oman matkan aikataulu lipusta ja VR:n ajantasaiselta "
     "ratatyösivulta."
 )
-RAIL_LABEL = "VR:n ratatyötiedot – tarkista oman matkan ajantasainen aikataulu."
+RAIL_LABEL = "Junaliikenne"
 RAIL_ANCHOR = "VR:n ratatyöt ja korvaavien bussien lähtöpaikat"
 RAIL_SECTION = (
     '<section class="portal-list-page" aria-labelledby="oppaat-junamatka-title">'
@@ -115,7 +116,7 @@ REFLECTOR_DESCRIPTION = (
     "Tarkista heijastimen sijoittaminen Liikenneturvan ohjeesta ja kokeile havaintotestissä, "
     "miten heijastinliivi muuttaa näkyvyyttä."
 )
-REFLECTOR_LABEL = "Liikenneturvan ohje ja havaintotesti – ei uusi uutisjuttu."
+REFLECTOR_LABEL = "Jalankulku"
 REFLECTOR_GUIDE_ANCHOR = "Liikenneturvan heijastinohje"
 REFLECTOR_TEST_ANCHOR = "Kokeile näkyvyyttä havaintotestissä"
 REFLECTOR_SECTION = (
@@ -260,8 +261,7 @@ class GuidesDiscoveryRoute(unittest.TestCase):
         self.assertEqual(
             description,
             "Syysloman 2026 menovinkit ja linkit kaupunkien ohjelmiin sekä "
-            "viranomaisohjeita syksyn arkeen. Tarkista ajantasaiset tiedot "
-            "alkuperäisistä lähteistä.",
+            "viranomaisohjeita syksyn arkeen.",
         )
 
         metadata = site.homepage_head_meta(
@@ -315,7 +315,7 @@ class GuidesDiscoveryRoute(unittest.TestCase):
         )
         self.assertEqual(page.count(OULU_HEADING), 1)
         self.assertEqual(page.count(OULU_DESCRIPTION), 1)
-        self.assertEqual(page.count(OULU_LABEL), 1)
+        self.assertEqual(page.count(EB + OULU_LABEL), 1)
         self.assertLess(page.index(original_links[1]), page.index(OULU_HEADING))
         self.assertEqual(page.count(f'href="{TURKU_URL}"'), 1)
         self.assertEqual(
@@ -325,8 +325,8 @@ class GuidesDiscoveryRoute(unittest.TestCase):
             1,
         )
         self.assertEqual(page.count(TURKU_DESCRIPTION), 1)
-        self.assertEqual(page.count(TURKU_LABEL), 2)
-        self.assertLess(page.index(OULU_ANCHOR), page.index(TURKU_LABEL))
+        self.assertEqual(page.count(EB + TURKU_LABEL), 2)
+        self.assertLess(page.index(OULU_ANCHOR), page.index(EB + TURKU_LABEL))
         self.assertEqual(page.count(f'href="{JYVASKYLA_URL}"'), 1)
         self.assertEqual(
             page.count(
@@ -336,7 +336,7 @@ class GuidesDiscoveryRoute(unittest.TestCase):
             1,
         )
         self.assertEqual(page.count(JYVASKYLA_DESCRIPTION), 1)
-        self.assertEqual(page.count(JYVASKYLA_LABEL), 2)
+        self.assertEqual(page.count(EB + JYVASKYLA_LABEL), 2)
         self.assertLess(page.index(TURKU_ANCHOR), page.index(JYVASKYLA_ANCHOR))
         self.assertEqual(page.count(f'href="{KUOPIO_URL}"'), 1)
         self.assertEqual(
@@ -346,7 +346,7 @@ class GuidesDiscoveryRoute(unittest.TestCase):
             1,
         )
         self.assertEqual(page.count(KUOPIO_DESCRIPTION), 1)
-        self.assertEqual(page.count(KUOPIO_LABEL), 1)
+        self.assertEqual(page.count(EB + KUOPIO_LABEL), 1)
         self.assertLess(page.index(JYVASKYLA_ANCHOR), page.index(KUOPIO_ANCHOR))
         self.assertEqual(page.count(f'href="{ESPOO_URL}"'), 1)
         self.assertEqual(
@@ -356,8 +356,8 @@ class GuidesDiscoveryRoute(unittest.TestCase):
             1,
         )
         self.assertEqual(page.count(ESPOO_DESCRIPTION), 1)
-        self.assertEqual(page.count(ESPOO_LABEL), 1)
-        self.assertLess(page.index(KUOPIO_ANCHOR), page.index(ESPOO_LABEL))
+        self.assertEqual(page.count(EB + ESPOO_LABEL), 1)
+        self.assertLess(page.index(KUOPIO_ANCHOR), page.index(EB + ESPOO_LABEL))
         self.assertEqual(page.count(f'href="{TAMPERE_URL}"'), 1)
         self.assertEqual(
             page.count(
@@ -367,12 +367,12 @@ class GuidesDiscoveryRoute(unittest.TestCase):
             1,
         )
         self.assertEqual(page.count(TAMPERE_DESCRIPTION), 1)
-        self.assertEqual(page.count(TAMPERE_LABEL), 1)
-        self.assertLess(page.index(ESPOO_ANCHOR), page.index(TAMPERE_LABEL))
+        self.assertEqual(page.count(EB + TAMPERE_LABEL), 1)
+        self.assertLess(page.index(ESPOO_ANCHOR), page.index(EB + TAMPERE_LABEL))
         self.assertEqual(page.count(RAIL_SECTION), 1)
         self.assertEqual(page.count(RAIL_HEADING), 1)
         self.assertEqual(page.count(RAIL_DESCRIPTION), 1)
-        self.assertEqual(page.count(RAIL_LABEL), 1)
+        self.assertEqual(page.count(EB + RAIL_LABEL), 1)
         self.assertEqual(page.count(f'href="{RAIL_URL}"'), 1)
         self.assertEqual(
             page.count(
@@ -396,7 +396,7 @@ class GuidesDiscoveryRoute(unittest.TestCase):
         self.assertEqual(page.count(REFLECTOR_SECTION), 1)
         self.assertEqual(page.count(REFLECTOR_HEADING), 1)
         self.assertEqual(page.count(REFLECTOR_DESCRIPTION), 1)
-        self.assertEqual(page.count(REFLECTOR_LABEL), 1)
+        self.assertEqual(page.count(EB + REFLECTOR_LABEL), 1)
         self.assertEqual(page.count(f'href="{REFLECTOR_GUIDE_URL}"'), 1)
         self.assertEqual(page.count(f'href="{REFLECTOR_TEST_URL}"'), 1)
         self.assertEqual(
@@ -483,18 +483,18 @@ class GuidesDiscoveryRoute(unittest.TestCase):
                     ),
                     1,
                 )
-                self.assertEqual(page.count(JYVASKYLA_LABEL), 2)
-                self.assertEqual(page.count(KUOPIO_LABEL), 1)
-                self.assertEqual(page.count(ESPOO_LABEL), 1)
+                self.assertEqual(page.count(EB + JYVASKYLA_LABEL), 2)
+                self.assertEqual(page.count(EB + KUOPIO_LABEL), 1)
+                self.assertEqual(page.count(EB + ESPOO_LABEL), 1)
                 self.assertEqual(page.count(TAMPERE_DESCRIPTION), 1)
-                self.assertEqual(page.count(TAMPERE_LABEL), 1)
-                self.assertLess(page.index(ESPOO_ANCHOR), page.index(TAMPERE_LABEL))
+                self.assertEqual(page.count(EB + TAMPERE_LABEL), 1)
+                self.assertLess(page.index(ESPOO_ANCHOR), page.index(EB + TAMPERE_LABEL))
                 self.assertEqual(page.count(TYRES_SECTION), 1)
                 self.assertLess(page.index(TAMPERE_ANCHOR), page.index(TYRES_SECTION))
                 self.assertEqual(page.count(REFLECTOR_SECTION), 1)
                 self.assertEqual(page.count(REFLECTOR_HEADING), 1)
                 self.assertEqual(page.count(REFLECTOR_DESCRIPTION), 1)
-                self.assertEqual(page.count(REFLECTOR_LABEL), 1)
+                self.assertEqual(page.count(EB + REFLECTOR_LABEL), 1)
                 self.assertEqual(page.count(f'href="{REFLECTOR_GUIDE_URL}"'), 1)
                 self.assertEqual(page.count(f'href="{REFLECTOR_TEST_URL}"'), 1)
                 self.assertEqual(
@@ -562,8 +562,7 @@ class GuidesDiscoveryRoute(unittest.TestCase):
         description = site.guides_description(selected)
         self.assertEqual(
             description,
-            "Syysloman 2026 tapahtumajuttu Helsingistä. "
-            "Tarkista ajantasainen ohjelma jutun lähteestä.",
+            "Syysloman 2026 tapahtumajuttu Helsingistä.",
         )
         one = site.category_page_body(
             "Oppaat", description, selected,

@@ -21,7 +21,7 @@ class ClockGuide(unittest.TestCase):
 
     def test_original_guidance_matches_statute_and_calendar(self):
         html = site.clock_guide_html(datetime.fromisoformat('2026-10-08T14:00:00+03:00'))
-        self.assertIn('ei uusi uutisjuttu', html)
+        self.assertNotIn('uutisjuttu', html)
         self.assertIn('neljästä kolmeen', html)
         self.assertIn('https://www.finlex.fi/fi/lainsaadanto/2001/753', html)
         self.assertIn('25. lokakuuta 2026', html)

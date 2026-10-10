@@ -216,7 +216,7 @@ def markets(snapshot=None, now=None):
     rows = ''
     if current_markets(market, now):
         rows += ''.join(f'<div><dt>EUR / {symbol}</dt><dd>{fi_decimal(market["rates"][symbol], 4)}</dd></div>' for symbol in ('USD','SEK','GBP'))
-    label = ('EKP · 1 euro · ' + datetime.strptime(market['date'], '%Y-%m-%d').strftime('%d.%m.%Y') + ' · päiväkurssit, ei reaaliaikainen') if rows else 'Valuuttakurssit eivät ole nyt saatavilla.'
+    label = ('EKP · 1 euro · ' + datetime.strptime(market['date'], '%Y-%m-%d').strftime('%d.%m.%Y') + ' · päiväkurssit') if rows else 'Valuuttakurssit eivät ole nyt saatavilla.'
     if current_inflation(finnish, now):
         rows += f'<div><dt>Suomen inflaatio</dt><dd>{fi_decimal(finnish["value"], 1)} %</dd></div>'
         month_label = datetime.strptime(finnish['month'], '%YM%m').strftime('%m/%Y')

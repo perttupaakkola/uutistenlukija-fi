@@ -579,7 +579,7 @@ OPPAAT_PATH = "/oppaat/"
 SOURCES_PATH = "/lahteet/"
 GUIDES_DESCRIPTION = (
     "Syysloman 2026 menovinkit ja linkit kaupunkien ohjelmiin sekä "
-    "viranomaisohjeita syksyn arkeen. Tarkista ajantasaiset tiedot alkuperäisistä lähteistä."
+    "viranomaisohjeita syksyn arkeen."
 )
 GUIDES_JOB_IDS = frozenset({
     "9c818b9e83818ccf047a7fce9a4c2657f551f5abe743370f60b812af3bd5ed56",
@@ -587,9 +587,9 @@ GUIDES_JOB_IDS = frozenset({
 })
 GUIDES_SINGLE_DESCRIPTIONS = {
     "9c818b9e83818ccf047a7fce9a4c2657f551f5abe743370f60b812af3bd5ed56":
-        "Syysloman 2026 tapahtumajuttu Helsingistä. Tarkista ajantasainen ohjelma jutun lähteestä.",
+        "Syysloman 2026 tapahtumajuttu Helsingistä.",
     "f1f023667c0fcb8fd1fc1a0b600cb91c32c7d5717e765892463169e1c4aedcfa":
-        "Syysloman 2026 tapahtumajuttu Vantaalta. Tarkista ajantasainen ohjelma jutun lähteestä.",
+        "Syysloman 2026 tapahtumajuttu Vantaalta.",
 }
 
 
@@ -902,7 +902,7 @@ def clock_guide_html(now):
     return (
         '<section class="portal-list-page" aria-labelledby="oppaat-kellojen-siirto-title">'
         '<header class="portal-list-header"><p class="portal-list-header__eyebrow">'
-        'Arjen ohje – ei uusi uutisjuttu.</p><div class="portal-list-header__title">'
+        'Arjen ohje</p><div class="portal-list-header__title">'
         '<h2 id="oppaat-kellojen-siirto-title">Kelloja siirretään sunnuntaina 25. lokakuuta 2026</h2></div>'
         '<p>Suomessa kesäaika päättyy lokakuun viimeisenä sunnuntaina. '
         'Vuonna 2026 päivä on 25. lokakuuta: kelloja siirretään aamulla neljästä kolmeen. '
@@ -1245,8 +1245,7 @@ def page(title, body, canonical_path=None, head_meta="", readability_present=Tru
     # Public pages link their privacy notice and RSS feed; the private preview has
     # neither, so it must not advertise pages that were never published.
     if public:
-        footer_tagline = ('Uutistenlukija.' if article_page else
-                          'Uutistenlukija · automaattisesti tuotettu suomenkielinen uutispalvelu.')
+        footer_tagline = 'Uutistenlukija.'
         footer_columns = ('<div class="site-footer-col"><h3>Uutiset</h3><ul class="site-footer-links">'
                           f'<li><a href="{LATEST_PATH}">Tuoreimmat uutiset</a></li>'
                           '<li><a href="/categories/kotimaa/">Kotimaa</a></li>'
@@ -1330,16 +1329,12 @@ def page(title, body, canonical_path=None, head_meta="", readability_present=Tru
         search_label = "Hae julkaistuista uutisista"
         search_placeholder = "Hae uutisista"
         search_submit_label = "Hae uutisia"
-        search_note = ("Haku näyttää tämän sivuston julkaistut uutiset. Ilman JavaScriptiä "
-                       f"haku avautuu Googlessa ja rajataan sivustoon {SEARCH_SITE}.")
         search_script = f'<script src="{asset_url(assets, "search.js")}" defer></script>'
     else:
         search_form_extra = ""
         search_label = "Hae sivustolta Googlesta"
         search_placeholder = "Hae sivustolta Googlesta"
         search_submit_label = "Hae Googlesta"
-        search_note = ("Tulokset avautuvat Googlen sivulla. "
-                       f"Haku on rajattu sivustoon {SEARCH_SITE}.")
         search_script = ""
     return f'''<!doctype html>
 <html lang="fi"{' class="reader-page"' if article_page else ""}><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
@@ -1352,13 +1347,12 @@ def page(title, body, canonical_path=None, head_meta="", readability_present=Tru
 <a class="portal-logo" href="/" aria-label="Uutistenlukija etusivulle">{brand_images("portal-logo__image", "eager")}</a>
 <div id="header-search" class="portal-search site-search site-search--collapsed">
 <button id="header-search-toggle" class="portal-icon-button search-toggle-btn" type="button" aria-label="Avaa haku" aria-expanded="false" aria-controls="header-search-form"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4.2-4.2"/></svg><span class="visually-hidden">Haku</span></button>
-<form id="header-search-form" class="site-search__form" action="{esc(SEARCH_ACTION)}" method="get" role="search" aria-label="Etsi uutisia" aria-describedby="header-search-note"{search_form_extra}>
+<form id="header-search-form" class="site-search__form" action="{esc(SEARCH_ACTION)}" method="get" role="search" aria-label="Etsi uutisia"{search_form_extra}>
 <label class="site-search__label" for="header-search-input">{esc(search_label)}</label>
 <input id="header-search-input" class="site-search__input" type="search" name="q" placeholder="{esc(search_placeholder)}" autocomplete="off" maxlength="200">
 <input type="hidden" name="sitesearch" value="{esc(SEARCH_SITE)}">
 <button class="site-search__submit" type="submit" aria-label="{esc(search_submit_label)}"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4.2-4.2"/></svg></button>
 </form>
-<p id="header-search-note" class="search-note">{esc(search_note)}</p>
 </div>
 <div class="portal-actions" aria-label="Pikatoiminnot">
 {frontpage.weather(snapshot)}
@@ -1437,19 +1431,16 @@ def search_page_body():
     return (f'<section class="portal-list-page search-page" aria-labelledby="search-title">'
             '<header class="portal-list-header"><p class="portal-list-header__eyebrow">Haku</p>'
             '<div class="portal-list-header__title"><h1 id="search-title">Hae uutisia</h1></div>'
-            '<p>Haku kohdistuu julkaistujen uutisten otsikoihin ja tiivistelmiin. '
-            'Tulokset näytetään alkuperäisen julkaisuajan mukaan uusimmasta vanhimpaan. '
-            'Mukana voi olla vanhoja arkistojuttuja, joten tarkista näkyvä julkaisuaika.</p></header>'
+            '</header>'
             f'<form id="search-page-form" class="search search-box" action="{esc(SEARCH_ACTION)}" '
             'method="get" role="search" aria-label="Hae julkaistuista uutisista" '
-            'aria-describedby="search-fallback-note" data-first-party-action="/haku/">'
+            'data-first-party-action="/haku/">'
             '<label for="search-input">Hakusanat</label><div class="search-box__controls">'
             '<input id="search-input" type="search" name="q" autocomplete="off" maxlength="200" '
             'placeholder="Hae uutisista">'
             f'<input type="hidden" name="sitesearch" value="{esc(SEARCH_SITE)}">'
             '<button class="search-box__submit" type="submit">Hae</button></div>'
-            '<p id="search-fallback-note" class="search-note">JavaScriptilla tulokset näytetään tällä '
-            'sivustolla. Ilman JavaScriptiä lomake avaa sivustoon rajatun Google-haun.</p></form>'
+            '</form>'
             '<p id="search-count" class="search-count" role="status" aria-live="polite">'
             'Kirjoita hakusana.</p><ol id="search-results" class="search-results"></ol></section>')
 
@@ -1775,7 +1766,7 @@ def render_site(store, output_dir, state_dir=None, public=False, include_ids=Non
         '<section class="portal-list-page" aria-labelledby="oppaat-lisaa-title">'
         '<header class="portal-list-header">'
         '<p class="portal-list-header__eyebrow">'
-        'Linkki kaupungin palvelusivulle – ei Uutistenlukijan uutisjuttu.</p>'
+        'Oulu</p>'
         '<div class="portal-list-header__title">'
         '<h2 id="oppaat-lisaa-title">Lisää syyslomatekemistä</h2></div>'
         '<p>Oulu: kaupungin Fiilis-sivulle on koottu lasten ja nuorten toimintaa '
@@ -1784,33 +1775,33 @@ def render_site(store, output_dir, state_dir=None, public=False, include_ids=Non
         '<p class="empty-recovery"><a href="https://www.ouka.fi/fiilis" rel="noopener noreferrer">'
         'Oulun kaupungin syyslomatoiminta</a></p>'
         '<p class="portal-list-header__eyebrow">'
-        'Linkki kaupungin ohjelmakoosteeseen – ei Uutistenlukijan uutisjuttu.</p>'
+        'Kaupungin ohjelma</p>'
         '<p>Turku: kaupungin ohjelmakoosteessa on tekemistä lasten ja nuorten syyslomalle '
         '12.–18.10.2026. Tarkista maksut, ikärajat ja ennakkovaraukset tapahtuman tiedoista.</p>'
         '<p class="empty-recovery"><a href="https://www.turku.fi/ajankohtaista/'
         'turussa-tapahtuu-syyslomalla-joka-paiva" rel="noopener noreferrer">'
         'Turun kaupungin syyslomaohjelma</a></p>'
         '<p class="portal-list-header__eyebrow">'
-        'Linkki kaupungin ohjelmakoosteeseen – ei Uutistenlukijan uutisjuttu.</p>'
+        'Kaupungin ohjelma</p>'
         '<p>Jyväskylän Lomalokki kokoaa syyslomatekemistä lapsille, nuorille ja perheille. '
         'Tarkista järjestäjän ohjelmasta ikärajat, hinnat ja ilmoittautuminen.</p>'
         '<p class="empty-recovery"><a href="https://www.jyvaskyla.fi/harrastukset/lomalokki" '
         'rel="noopener noreferrer">Jyväskylän kaupungin Lomalokki</a></p>'
         '<p class="portal-list-header__eyebrow">'
-        'Linkki kaupungin tapahtumakalenteriin – ei Uutistenlukijan uutisjuttu.</p>'
+        'Kuopio</p>'
         '<p>Kuopion kaupungin tapahtumakalenterista löytyy syyslomatekemistä lapsille ja nuorille. '
         'Tarkista tapahtuman ikärajat, hinnat ja ilmoittautuminen järjestäjältä.</p>'
         '<p class="empty-recovery"><a href="https://www.kuopionseina.fi/tapahtumat/'
         '?event-search-s=Supersyysloma" rel="noopener noreferrer">'
         'Kuopion kaupungin syyslomakalenteri</a></p>'
         '<p class="portal-list-header__eyebrow">'
-        'Linkki Espoon kaupungin lomaohjelmaan – ei Uutistenlukijan uutisjuttu.</p>'
+        'Espoo</p>'
         '<p>Espoon kaupungin sivulta löytyy lomatekemistä lapsille ja nuorille. '
         'Tarkista ohjelmasta ikärajat, maksut ja ilmoittautumisen määräajat.</p>'
         '<p class="empty-recovery"><a href="https://www.espoo.fi/fi/lomatekemista" '
         'rel="noopener noreferrer">Espoon kaupungin lomaohjelma</a></p>'
         '<p class="portal-list-header__eyebrow">'
-        'Linkki Tampereen kaupungin syyslomaohjelmaan – ei Uutistenlukijan uutisjuttu.</p>'
+        'Tampere</p>'
         '<p>Tampereen kaupungin sivulle on koottu syyslomatekemistä lapsille, nuorille ja perheille. '
         'Tarkista järjestäjiltä ikärajat, hinnat ja ilmoittautuminen.</p>'
         '<p class="empty-recovery"><a href="https://www.tampere.fi/ajankohtaista/'
@@ -1822,7 +1813,7 @@ def render_site(store, output_dir, state_dir=None, public=False, include_ids=Non
         '<section class="portal-list-page" aria-labelledby="oppaat-junamatka-title">'
         '<header class="portal-list-header">'
         '<p class="portal-list-header__eyebrow">'
-        'VR:n ratatyötiedot – tarkista oman matkan ajantasainen aikataulu.</p>'
+        'Junaliikenne</p>'
         '<div class="portal-list-header__title">'
         '<h2 id="oppaat-junamatka-title">'
         'Junamatka syyslomalla: tarkista korvaava bussi ja lähtöpaikka</h2></div>'
@@ -1835,12 +1826,12 @@ def render_site(store, output_dir, state_dir=None, public=False, include_ids=Non
         'rel="noopener noreferrer">VR:n ratatyöt ja korvaavien bussien lähtöpaikat</a></p>'
         '</header></section>'
     )
-    guides_body += '<section class="portal-list-page" aria-labelledby="oppaat-talvirenkaat-title"><header class="portal-list-header"><p class="portal-list-header__eyebrow">Liikenneturvallisuus – lisätietoa Traficomin ohjeesta.</p><div class="portal-list-header__title"><h2 id="oppaat-talvirenkaat-title">Talvirenkaat: keli ratkaisee marraskuusta alkaen</h2></div><p>Henkilöautossa, jonka kokonaismassa on enintään 3,5 tonnia, sekä pakettiautossa on käytettävä talvirenkaita 1. marraskuuta–31. maaliskuuta, jos sää tai keli sitä edellyttää. Näissä ajoneuvoissa talvirenkaiden kulutuspinnan pääurien lakisääteinen vähimmäissyvyys on 3 millimetriä. Traficom suosittelee vaikeissa lumi- tai loskaoloissa vähintään 5 millimetrin kulutuspintaa. Henkilö- ja pakettiauton nastattomissa talvirenkaissa on oltava lumipitomerkintä; vaatimus on ollut voimassa 1. joulukuuta 2024 alkaen.</p><p class="empty-recovery"><a href="https://traficom.fi/fi/autoilijat/vinkkeja-liikenteeseen/auton-kesa-ja-talvirenkaat" rel="noopener noreferrer">Traficomin ohje auton renkaista</a></p></header></section>'
+    guides_body += '<section class="portal-list-page" aria-labelledby="oppaat-talvirenkaat-title"><header class="portal-list-header"><p class="portal-list-header__eyebrow">Liikenneturvallisuus</p><div class="portal-list-header__title"><h2 id="oppaat-talvirenkaat-title">Talvirenkaat: keli ratkaisee marraskuusta alkaen</h2></div><p>Henkilöautossa, jonka kokonaismassa on enintään 3,5 tonnia, sekä pakettiautossa on käytettävä talvirenkaita 1. marraskuuta–31. maaliskuuta, jos sää tai keli sitä edellyttää. Näissä ajoneuvoissa talvirenkaiden kulutuspinnan pääurien lakisääteinen vähimmäissyvyys on 3 millimetriä. Traficom suosittelee vaikeissa lumi- tai loskaoloissa vähintään 5 millimetrin kulutuspintaa. Henkilö- ja pakettiauton nastattomissa talvirenkaissa on oltava lumipitomerkintä; vaatimus on ollut voimassa 1. joulukuuta 2024 alkaen.</p><p class="empty-recovery"><a href="https://traficom.fi/fi/autoilijat/vinkkeja-liikenteeseen/auton-kesa-ja-talvirenkaat" rel="noopener noreferrer">Traficomin ohje auton renkaista</a></p></header></section>'
     guides_body += (
         '<section class="portal-list-page" aria-labelledby="oppaat-heijastin-title">'
         '<header class="portal-list-header">'
         '<p class="portal-list-header__eyebrow">'
-        'Liikenneturvan ohje ja havaintotesti – ei uusi uutisjuttu.</p>'
+        'Jalankulku</p>'
         '<div class="portal-list-header__title">'
         '<h2 id="oppaat-heijastin-title">Heijastin: näy pimeällä</h2></div>'
         '<p>Pimeällä liikkuessa heijastin auttaa autoilijaa huomaamaan jalankulkijan. '
@@ -1854,10 +1845,10 @@ def render_site(store, output_dir, state_dir=None, public=False, include_ids=Non
     )
     guides_body += clock_guide_html(ClockDateTime.now(timezone.utc))
     # Derive contents from rendered section IDs: retired guidance has no stale link.
-    guides_body += '<section class="portal-list-page" aria-labelledby="oppaat-sahkokatko-title"><header class="portal-list-header"><p class="portal-list-header__eyebrow">VARAUTUMISOHJE – EI AJANKOHTAINEN HÄIRIÖILMOITUS.</p><div class="portal-list-header__title"><h2 id="oppaat-sahkokatko-title">Sähkökatko: katkaise virta laitteista ja tarkista paikalliset ohjeet</h2></div><p>72 tuntia -ohje neuvoo sammuttamaan sähkölaitteet katkon alettua. Veden ja wc:n käytössä seuraa oman vesihuoltolaitoksesi ohjeita. Tarkista toimintaohjeet alkuperäiseltä sivulta.</p><p class="empty-recovery"><a href="https://72tuntia.fi/sahkokatko/" rel="noopener noreferrer">72 tuntia: toiminta sähkökatkossa</a></p></header></section>'
-    guides_body += '<section class="portal-list-page" aria-labelledby="oppaat-palovaroitin-title">\n  <header class="portal-list-header">\n    <p class="portal-list-header__eyebrow">Kodin turvallisuus – lisätietoa Tukesin ohjeesta.</p>\n    <div class="portal-list-header__title"><h2 id="oppaat-palovaroitin-title">Palovaroittimen testinappi ei mittaa savuherkkyyttä</h2></div>\n    <p>Tarkista palovaroittimen valmistajan ilmoittama uusimisajankohta. Tukesin mukaan tieto löytyy yleensä laitteen pohjasta. Testinappi tarkistaa pariston ja hälytysäänen toiminnan, mutta ei sitä, havaitseeko varoitin savua.</p>\n    <p class="empty-recovery"><a href="https://tukes.fi/tuotteet-ja-palvelut/pelastustoimen-laitteet/palovaroittimet" rel="noopener noreferrer">Tukesin ohje palovaroittimista</a></p>\n  </header>\n</section>\n'
-    guides_body += '<section class="portal-list-page" aria-labelledby="oppaat-ajokeli-title"><header class="portal-list-header"><p class="portal-list-header__eyebrow">Fintrafficin palvelu – ei Uutistenlukijan oma keliennuste.</p><div class="portal-list-header__title"><h2 id="oppaat-ajokeli-title">Tarkista ajokeli ennen matkaa</h2></div><p>Fintrafficin Liikennetilanne-palvelussa voit tarkistaa ajokelin ja tiesääasemien tiedot. Valitse kartalta oman reittisi alue ja tarkista, mille ajankohdalle tieto on annettu. Palvelussa voi olla myös alueita, joista kelitietoa ei ole saatavilla.</p><p class="empty-recovery"><a href="https://liikennetilanne.fintraffic.fi/tie/saa_ja_keliolosuhteet/" rel="noopener noreferrer">Tarkista ajokeli Fintrafficin palvelussa</a></p></header></section>'
-    guides_body += '<section class="portal-list-page" aria-labelledby="oppaat-saavaroitukset-title"><header class="portal-list-header"><p class="portal-list-header__eyebrow">Ilmatieteen laitoksen palvelu – ei Uutistenlukijan oma säävaroitus.</p><div class="portal-list-header__title"><h2 id="oppaat-saavaroitukset-title">Tarkista säävaroituksen alue ja voimassaoloaika</h2></div><p>Valitse Ilmatieteen laitoksen varoituskartasta päivä, jota haluat tarkastella. Avaa kartan alapuolelta oman alueesi tekstilaatikko ja tarkista varoituksen voimassaoloaika sekä vaikutuskuvaus. Pelkkä kartan väri ei kerro kaikkia varoituksen tietoja.</p><p>Varoitukset voivat muuttua. Tarkista ajantasainen tilanne Ilmatieteen laitoksen palvelusta ennen säälle altista toimintaa.</p><p class="empty-recovery"><a href="https://www.ilmatieteenlaitos.fi/varoitukset" rel="noopener noreferrer">Ilmatieteen laitoksen ajantasaiset säävaroitukset</a></p><p class="empty-recovery"><a href="https://www.ilmatieteenlaitos.fi/tietoa-varoituksista" rel="noopener noreferrer">Näin luet varoituskarttaa</a></p></header></section>'
+    guides_body += '<section class="portal-list-page" aria-labelledby="oppaat-sahkokatko-title"><header class="portal-list-header"><p class="portal-list-header__eyebrow">Varautuminen</p><div class="portal-list-header__title"><h2 id="oppaat-sahkokatko-title">Sähkökatko: katkaise virta laitteista ja tarkista paikalliset ohjeet</h2></div><p>72 tuntia -ohje neuvoo sammuttamaan sähkölaitteet katkon alettua. Veden ja wc:n käytössä seuraa oman vesihuoltolaitoksesi ohjeita. Tarkista toimintaohjeet alkuperäiseltä sivulta.</p><p class="empty-recovery"><a href="https://72tuntia.fi/sahkokatko/" rel="noopener noreferrer">72 tuntia: toiminta sähkökatkossa</a></p></header></section>'
+    guides_body += '<section class="portal-list-page" aria-labelledby="oppaat-palovaroitin-title">\n  <header class="portal-list-header">\n    <p class="portal-list-header__eyebrow">Kodin turvallisuus</p>\n    <div class="portal-list-header__title"><h2 id="oppaat-palovaroitin-title">Palovaroittimen testinappi ei mittaa savuherkkyyttä</h2></div>\n    <p>Tarkista palovaroittimen valmistajan ilmoittama uusimisajankohta. Tukesin mukaan tieto löytyy yleensä laitteen pohjasta. Testinappi tarkistaa pariston ja hälytysäänen toiminnan, mutta ei sitä, havaitseeko varoitin savua.</p>\n    <p class="empty-recovery"><a href="https://tukes.fi/tuotteet-ja-palvelut/pelastustoimen-laitteet/palovaroittimet" rel="noopener noreferrer">Tukesin ohje palovaroittimista</a></p>\n  </header>\n</section>\n'
+    guides_body += '<section class="portal-list-page" aria-labelledby="oppaat-ajokeli-title"><header class="portal-list-header"><p class="portal-list-header__eyebrow">Liikenne</p><div class="portal-list-header__title"><h2 id="oppaat-ajokeli-title">Tarkista ajokeli ennen matkaa</h2></div><p>Fintrafficin Liikennetilanne-palvelussa voit tarkistaa ajokelin ja tiesääasemien tiedot. Valitse kartalta oman reittisi alue ja tarkista, mille ajankohdalle tieto on annettu. Palvelussa voi olla myös alueita, joista kelitietoa ei ole saatavilla.</p><p class="empty-recovery"><a href="https://liikennetilanne.fintraffic.fi/tie/saa_ja_keliolosuhteet/" rel="noopener noreferrer">Tarkista ajokeli Fintrafficin palvelussa</a></p></header></section>'
+    guides_body += '<section class="portal-list-page" aria-labelledby="oppaat-saavaroitukset-title"><header class="portal-list-header"><p class="portal-list-header__eyebrow">Sää</p><div class="portal-list-header__title"><h2 id="oppaat-saavaroitukset-title">Tarkista säävaroituksen alue ja voimassaoloaika</h2></div><p>Valitse Ilmatieteen laitoksen varoituskartasta päivä, jota haluat tarkastella. Avaa kartan alapuolelta oman alueesi tekstilaatikko ja tarkista varoituksen voimassaoloaika sekä vaikutuskuvaus. Pelkkä kartan väri ei kerro kaikkia varoituksen tietoja.</p><p class="empty-recovery"><a href="https://www.ilmatieteenlaitos.fi/varoitukset" rel="noopener noreferrer">Ilmatieteen laitoksen ajantasaiset säävaroitukset</a></p><p class="empty-recovery"><a href="https://www.ilmatieteenlaitos.fi/tietoa-varoituksista" rel="noopener noreferrer">Näin luet varoituskarttaa</a></p></header></section>'
     from . import utility_guides, holiday_reference
     guide_now = ClockDateTime.now(timezone.utc)
     guides_body += utility_guides.discovery_html(guide_now)

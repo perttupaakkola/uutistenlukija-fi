@@ -48,7 +48,7 @@ class BundleMissingPage(unittest.TestCase):
         self.assertEqual(sorted(re.findall(r'<label\b[^>]*for="([^"]+)"',body)),
                          ['header-search-input','missing-search-input'])
         self.assertEqual(body.count('name="sitesearch" value="uutistenlukija.fi"'),2)
-        self.assertIn('aria-describedby="header-search-note"',body)
+        self.assertNotIn('header-search-note',body)
         self.assertIn('aria-describedby="missing-search-note"',body)
         self.assertIn('Siirry uusimpiin uutisiin',body)
         self.assertIn('Tätä osoitetta ei löytynyt',body)

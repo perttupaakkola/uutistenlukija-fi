@@ -315,7 +315,7 @@ class PortalShell(unittest.TestCase):
         self.assertIn('name="sitesearch" value="uutistenlukija.fi"', home)
         self.assertIn('data-first-party-action="/haku/"', home)
         self.assertIn("Hae julkaistuista uutisista", home)
-        self.assertIn("Ilman JavaScriptiä haku avautuu Googlessa", home)
+        self.assertNotIn("Ilman JavaScriptiä haku avautuu Googlessa", home)
         # Weather is stated as unavailable instead of showing an invented reading.
         self.assertIn("Sääennuste ei ole nyt saatavilla", home)
         self.assertNotIn("data-weather-widget", home)
@@ -331,7 +331,7 @@ class PortalShell(unittest.TestCase):
         self.assertIn('id="theme-toggle-menu"', home)
         self.assertIn('class="portal-search site-search site-search--collapsed"', home)
         self.assertIn('aria-controls="header-search-form"', home)
-        self.assertIn('aria-describedby="header-search-note"', home)
+        self.assertNotIn('header-search-note', home)
         self.assertIn('id="hamburger"', home)
         self.assertIn('aria-controls="main-nav-menu"', home)
         nav = NAV_RE.search(home)
