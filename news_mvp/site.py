@@ -841,37 +841,28 @@ def article_actions_html(link, category, public, title=""):
             + f'<a href="{ABOUT_PATH}#korjaukset">Korjauskäytäntö</a></div></nav>')
 
 
-def listing_feed_html(items, empty_text, recovery_html="", featured=False):
-    """Article rows with an optional, truthful newest-story feature treatment."""
+def listing_feed_html(items, empty_text, recovery_html=""):
+    """Text rows for a category/latest page in the native portal feed markup."""
     rows = []
-    for index, (job, draft, link, date, fixture, image, image_url) in enumerate(items):
+    for job, draft, link, date, fixture, image, image_url in items:
         modifier = "" if image else " portal-feed-item--no-image"
-        if featured and index == 0:
-            modifier += " portal-feed-item--featured"
         thumb = listing_image_slot(image, image_url, "portal-feed-item__thumb", link, draft["title"]) if image else ""
         rows.append(f'<article class="portal-feed-item{modifier}">'
                     f'<div class="portal-feed-item__body">'
-                    + ('<span class="portal-feed-item__flag">Osaston uusin</span>'
-                       if featured and index == 0 else '')
-                    +
                     f'<p class="portal-feed-item__meta"><a href="{esc(category_route(draft.get("category")))}">'
                     f'{esc(category_display(draft.get("category")))}</a><span aria-hidden="true"> · </span>'
                     f'Julkaistu {time_html(job["created_at"], "portal-feed-item__time")}</p>'
                     f'<h2><a href="{link}">{esc(draft["title"])}</a></h2>'
                     f'<p>{esc(draft["summary"])}</p></div>{thumb}{fixture}</article>')
-        if featured and index == 0 and len(items) > 1:
-            rows.append('<div class="portal-list-feed__divider" role="heading" aria-level="2">'
-                        '<span>Uutisarkisto</span><small>Uusimmasta vanhimpaan</small></div>')
     if not rows:
         return (f'<div class="portal-list-feed portal-list-feed--empty">'
                 f'<p class="empty">{esc(empty_text)}</p>{recovery_html}</div>')
-    modifier = " portal-list-feed--featured" if featured else ""
-    return f'<div class="portal-list-feed{modifier}">{"".join(rows)}</div>'
+    return f'<div class="portal-list-feed">{"".join(rows)}</div>'
 
 
 def category_page_body(title, note, items, empty_text, page_number=1, page_count=1,
-                       base_path=None, total_count=None, recovery_html="", featured=False):
-    """Newspaper desk header and finite archive, with only the newest item featured."""
+                       base_path=None, total_count=None, recovery_html=""):
+    """Native portal-list page: header plus a feed of text rows, never a card grid."""
     slug = category_page_slug(title)
     modifier = f' portal-list-header--{esc(slug)}' if slug else ''
     total = len(items) if total_count is None else total_count
@@ -879,10 +870,9 @@ def category_page_body(title, note, items, empty_text, page_number=1, page_count
     page_label = f" · sivu {page_number}/{page_count}" if page_count > 1 else ""
     pager = pagination_nav(page_number, page_count, base_path) if base_path else ""
     return (f'<div class="portal-list-page">'
-            f'<header class="portal-list-header{modifier}"><p class="portal-list-header__eyebrow">Uutisosasto</p>'
-            f'<div class="portal-list-header__title"><h1>{esc(title)}</h1>'
-            f'<p class="archive-count">{esc(count_label + page_label)}</p></div><p>{esc(note)}</p></header>'
-            f'{listing_feed_html(items, empty_text, recovery_html, featured=featured)}{pager}</div>')
+            f'<header class="portal-list-header{modifier}"><h1>{esc(title)}</h1><p>{esc(note)}</p>'
+            f'<p class="archive-count">{esc(count_label + page_label)}</p></header>'
+            f'{listing_feed_html(items, empty_text, recovery_html)}{pager}</div>')
 
 
 """Private next guide candidate, not installed or served. Original synthesis of decree753/2001 §§1/3."""
@@ -1035,22 +1025,9 @@ def homepage_topic_strip(items, exclude_ids=None):
     if not cards:
         return ""
     return (f'<section class="portal-topic-strip" aria-labelledby="front-topics-title">'
-            f'<div class="portal-module-head"><h2 id="front-topics-title">Osastot</h2>'
+            f'<div class="portal-module-head"><h2 id="front-topics-title">Aiheet</h2>'
             f'<a href="{LATEST_PATH}">Kaikki uutiset</a></div>'
             f'<div class="portal-topic-strip__grid">{"".join(cards)}</div></section>')
-
-
-def homepage_edition_html(page_items):
-    """A compact edition identity grounded in the newest stored publication time."""
-    latest = (f'<span>Viimeisin julkaisu {time_html(page_items[0][0]["created_at"])}</span>'
-              if page_items else '<span>Ei vielä tarkastettuja uutisia</span>')
-    return ('<header class="portal-edition" aria-labelledby="front-edition-title">'
-            '<div class="portal-edition__title"><p>Uutistenlukija</p>'
-            '<h1 id="front-edition-title">Uutiset nyt</h1></div>'
-            f'<div class="portal-edition__meta">{latest}'
-            '<nav aria-label="Etusivun oikopolut">'
-            f'<a href="{LATEST_PATH}">Koko uutisvirta</a>'
-            f'<a href="{SOURCES_PATH}">Lähteet</a><a href="/rss.xml">RSS</a></nav></div></header>')
 
 
 def listing_page_html(page_items, page_number, page_count, archive_items=None, snapshot=None):
@@ -1131,8 +1108,8 @@ def listing_page_html(page_items, page_number, page_count, archive_items=None, s
     if not is_homepage:
         return "".join(rows) + pagination_nav(page_number, page_count)
     center = (f'<div class="portal-center-list" aria-labelledby="front-top-stories-title">'
-              f'<div class="portal-mobile-section-head"><span>Juuri nyt</span>'
-              f'<h2 id="front-top-stories-title">Pääuutiset</h2></div>'
+              f'<div class="portal-mobile-section-head"><span>Etusivu</span>'
+              f'<h2 id="front-top-stories-title">Uusimmat otsikot</h2></div>'
               f'{"".join(rows)}</div>') if rows else ""
     rail = ('<aside class="portal-right-rail" aria-label="Sivupalkki">'
             '<section class="portal-newsletter"><h2>Seuraa uutisia</h2>'
@@ -1154,8 +1131,7 @@ def listing_page_html(page_items, page_number, page_count, archive_items=None, s
     river = ""
     if river_rows:
         river = (f'<section class="portal-river" aria-labelledby="front-latest-title">'
-                 f'<div class="portal-module-head"><div><span class="portal-module-head__eyebrow">Uusimmasta vanhimpaan</span>'
-                 f'<h2 id="front-latest-title">Lisää uutisia</h2></div>'
+                 f'<div class="portal-module-head"><h2 id="front-latest-title">Kronologinen uutisvirta</h2>'
                  f'<a href="{LATEST_PATH}">Avaa koko arkisto</a></div>'
                  f'<div class="portal-river__grid">{"".join(river_rows)}</div></section>')
     archive = archive_items if archive_items is not None else page_items
@@ -1496,7 +1472,7 @@ def missing_page(archive_path="/"):
 
 def render_paginated_archive(output_dir, base_path, items, heading, page_title, note,
                              empty_text, public, snapshot=None, active_section=None,
-                             recovery_html="", featured=False):
+                             recovery_html=""):
     """Write one finite category/latest archive and remove only retired page children."""
     # Call the shared path validator before deriving a filesystem location. These
     # values are renderer-owned constants, but keeping the boundary explicit makes
@@ -1517,7 +1493,6 @@ def render_paginated_archive(output_dir, base_path, items, heading, page_title, 
             heading, note, page_items, empty_text,
             page_number=page_number, page_count=page_count, base_path=base_path,
             total_count=len(items), recovery_html=recovery_html,
-            featured=featured and page_number == 1,
         )
         head_meta = (homepage_head_meta(
             page_items, path=path, page_title=title,
@@ -1721,10 +1696,9 @@ def render_site(store, output_dir, state_dir=None, public=False, include_ids=Non
         listing = listing_page_html(
             page_items, page_number, page_count,
             archive_items=listing_items if page_number == 1 else None, snapshot=snapshot)
-        if page_number == 1:
-            body = homepage_edition_html(page_items) + listing
-        else:
-            body = f'<section class="intro"><h1>{esc(page_title)}</h1></section>{listing}'
+        intro_class = "intro homepage-intro visually-hidden" if page_number == 1 else "intro"
+        body = f'''<section class="{intro_class}"><h1>{esc(page_title)}</h1></section>
+{listing}'''
         # JSON-LD/OG describe this page's own slice and URL; the private preview keeps none.
         head_meta = homepage_head_meta(page_items, path=path, page_title=page_title,
                                        start_position=(page_number - 1) * PAGE_SIZE + 1) if public else ""
@@ -1746,7 +1720,6 @@ def render_site(store, output_dir, state_dir=None, public=False, include_ids=Non
             "Ei vielä tarkastettuja uutisia tässä kategoriassa.",
             public, snapshot=snapshot, active_section=path,
             recovery_html=recovery_links_html(),
-            featured=True,
         )
     latest_path = LATEST_PATH
     latest_title = "Tuoreimmat uutiset"

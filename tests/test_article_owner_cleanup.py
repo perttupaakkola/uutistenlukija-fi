@@ -43,7 +43,8 @@ class OwnerCleanup(ArticleAndCategoryRendering):
         self.assertIn(':root.reader-page:not([data-theme="dark"]) body.reader-page', css)
         self.assertIn(':root.reader-page:not([data-theme="dark"]) .single-article{background:#fff}', css)
         self.assertNotIn('--bg:#f7f5f0;', css)  # owner rule: site stays white
-        self.assertIn(':root[data-theme="dark"]{\n  --bg:#101a1e;', css)
+        portal_css = (Path(site.__file__).parents[1] / 'static/css/portal-overhaul.css').read_text()
+        self.assertIn('[data-theme="dark"] {\n  --portal-bg: #101214;', portal_css)
 
 
 if __name__ == '__main__':

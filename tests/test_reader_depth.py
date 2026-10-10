@@ -1,4 +1,4 @@
-"""Focused contracts for the three-surface reader-depth redesign."""
+"""Contracts for the approved portal design and retained reader features."""
 
 import hashlib
 import unittest
@@ -23,28 +23,31 @@ def story(index, category="Kotimaa"):
 
 
 class ReaderDepthContracts(unittest.TestCase):
-    def test_home_has_one_edition_and_keeps_every_story_in_a_clear_role(self):
+    def test_home_uses_approved_headline_layout_and_keeps_every_story(self):
         items = [story(index, "Talous" if index % 2 else "Kotimaa") for index in range(12)]
-        text = site.homepage_edition_html(items) + site.listing_page_html(items, 1, 1, items)
-        self.assertEqual(text.count('<h1 id="front-edition-title">'), 1)
+        text = site.listing_page_html(items, 1, 1, items)
+        self.assertNotIn("portal-edition", text)
+        self.assertNotIn("Uutiset nyt", text)
+        self.assertIn("Uusimmat otsikot", text)
         self.assertEqual(text.count('<article class="portal-lead'), 1)
         self.assertEqual(text.count('<article class="portal-teaser'), site.HOMEPAGE_CENTER_ROWS)
         self.assertEqual(text.count('<article class="portal-row-card'),
                          len(items) - 1 - site.HOMEPAGE_CENTER_ROWS)
-        self.assertIn("Uusimmasta vanhimpaan", text)
+        self.assertIn("Kronologinen uutisvirta", text)
         for item in items:
             self.assertIn(item[2], text)
 
-    def test_category_features_only_the_newest_then_labels_the_archive(self):
+    def test_category_uses_uniform_approved_archive_rows(self):
         items = [story(index, "Kulttuuri") for index in range(4)]
         text = site.category_page_body(
             "Kulttuuri", "Kulttuurin ajankohtaiset uutiset.", items,
-            "Ei uutisia", total_count=4, featured=True,
+            "Ei uutisia", total_count=4,
         )
-        self.assertEqual(text.count("portal-feed-item--featured"), 1)
+        self.assertNotIn("portal-feed-item--featured", text)
+        self.assertNotIn("Osaston uusin", text)
+        self.assertNotIn("Uutisarkisto", text)
         self.assertEqual(text.count('<article class="portal-feed-item'), 4)
-        self.assertEqual(text.count("Osaston uusin"), 1)
-        self.assertIn("Uutisarkisto", text)
+        self.assertIn('<header class="portal-list-header portal-list-header--kulttuuri"><h1>Kulttuuri</h1>', text)
         self.assertIn("4 juttua", text)
 
     def test_article_continuation_is_truthful_and_excludes_related_items(self):
