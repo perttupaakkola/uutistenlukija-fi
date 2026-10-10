@@ -1,4 +1,5 @@
 import copy
+import os
 import hashlib
 import json
 import tempfile
@@ -142,19 +143,17 @@ class LiveBoundary(unittest.TestCase):
             with self.assertRaises(ValueError):
                 parse_hermes_output(value)
 
-    def test_editorial_profile_resolves_the_news_profile_model_at_call_time(self):
+    def test_editorial_model_is_pinned_and_ignores_profile_models(self):
         with tempfile.TemporaryDirectory() as temp:
             home = Path(temp)
-            (home / '.hermes/profiles/news').mkdir(parents=True)
+            (home / '.hermes').mkdir()
             (home / '.hermes/config.yaml').write_text('model:\n  provider: personal-plugin\n  default: other\n')
-            (home / '.hermes/profiles/news/config.yaml').write_text(
-                'model:\n  provider: chosen-provider\n  default: chosen-model\n  reasoning_effort: chosen-effort\n'
-            )
-            with patch('news_mvp.editorial.Path.home', return_value=home):
-                self.assertEqual(current_default_model_args(), [
-                    '--model', 'chosen-model', '--provider', 'chosen-provider',
-                    '--reasoning', 'chosen-effort',
-                ])
+            with patch('news_mvp.editorial.Path.home', return_value=home), patch.dict(os.environ, {}, clear=False):
+                os.environ.pop('UUTIS_EDITORIAL_MODEL', None)
+                self.assertEqual(current_default_model_args(),
+                                 ['--model', 'opus', '--provider', 'claude-subscription-directsdk-experimental', '--reasoning', 'high'])
+            with patch.dict(os.environ, {'UUTIS_EDITORIAL_MODEL': 'm,p'}):
+                self.assertEqual(current_default_model_args(), ['--model', 'm', '--provider', 'p'])
 
     def test_fixture_and_live_adapters_refuse_crossing_the_boundary(self):
         with patch('news_mvp.editorial.subprocess.run') as run:

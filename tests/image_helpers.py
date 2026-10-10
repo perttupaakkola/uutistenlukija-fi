@@ -5,6 +5,10 @@ from html.parser import HTMLParser
 BRANDING_SRCS = frozenset({
     "/mvp-assets/images/logo.png",
     "/assets/images/logo.png",
+    "/mvp-assets/images/logo-light.png",
+    "/assets/images/logo-light.png",
+    "/mvp-assets/images/logo-dark.png",
+    "/assets/images/logo-dark.png",
 })
 VOID_TAGS = frozenset({
     "area", "base", "br", "col", "embed", "hr", "img", "input", "link",

@@ -191,6 +191,18 @@ dialog button{font:inherit;min-height:44px;margin:0;padding:.7rem 1rem;border:1p
 .site-footer-brand__image{display:block;width:min(220px,100%);height:auto;filter:none;opacity:.94}
 .site-footer-brand-col{min-width:0}
 
+/* The manual html[data-theme] choice wins over the operating-system preference. */
+.theme-logo--light{display:block}
+.theme-logo--dark{display:none}
+:root[data-theme="light"] .theme-logo--light{display:block}
+:root[data-theme="light"] .theme-logo--dark{display:none}
+:root[data-theme="dark"] .theme-logo--light{display:none}
+:root[data-theme="dark"] .theme-logo--dark{display:block}
+@media(prefers-color-scheme:dark){
+  :root:not([data-theme="light"]) .theme-logo--light{display:none}
+  :root:not([data-theme="light"]) .theme-logo--dark{display:block}
+}
+
 /* Category/latest archives are a finite reading column, not a full-width card wall. */
 .portal-list-page{max-width:860px;margin-inline:auto}
 .portal-list-header{margin-bottom:10px}
@@ -283,11 +295,11 @@ dialog button{font:inherit;min-height:44px;margin:0;padding:.7rem 1rem;border:1p
 }
 
 /* Reader-depth edition ----------------------------------------------------
-   A calm Finnish newspaper system: warm paper, slate ink and one brick-red
+   A calm Finnish newspaper system: white page (owner rule), slate ink and one brick-red
    signal colour. These rules deliberately sit last so all three native
    surfaces share one hierarchy without changing the reviewed content. */
 :root,:root[data-theme="light"]{
-  --bg:#f7f5f0;
+  --bg:#fff;
   --text:#1c292e;
   --text-secondary:#5b696c;
   --text-muted:#667478;
@@ -295,7 +307,7 @@ dialog button{font:inherit;min-height:44px;margin:0;padding:.7rem 1rem;border:1p
   --surface-alt:#ecefeb;
   --border:#cfd5d2;
   --accent:#bd402a;
-  --portal-bg:#f7f5f0;
+  --portal-bg:#fff;
   --portal-card:#ffffff;
   --portal-ink:#142c34;
   --portal-text:#1c292e;

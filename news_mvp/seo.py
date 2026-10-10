@@ -55,7 +55,7 @@ def meta_description(summary, paragraphs=(), limit=DESCRIPTION_MAX):
 
 
 def article_description(title, summary, paragraphs=()):
-    """One measured local-search snippet, supported by unchanged reviewed text.
+    """Measured local-search snippets, supported by unchanged reviewed text.
 
     Fall back if the exact story or its supporting facts change. This is search
     metadata only: it does not amend the story or imply a new publication date.
@@ -66,6 +66,11 @@ def article_description(title, summary, paragraphs=()):
             and deadline in paragraphs):
         return ("Oulun Vanhatullin Ravander-kortteliin suunnitellaan asuntoja, liike- ja "
                 "toimistotiloja. Kaavaluonnos on nähtävillä 18.9.–19.10.2026.")
+    address = 'Itiksen Symppiksen uusi osoite on Turunlinnantie 12. Helsingin kaupungin mukaan toiminta alkaa peruskorjatuissa tiloissa rakennuksen ensimmäisessä kerroksessa, ja sisäänkäynti on Turunlinnantien puolelta.'
+    if (title == 'Helsinki: Itiksen Symppis siirtyy Turunlinnantielle'
+            and summary == 'Helsingin kaupungin mukaan matalan kynnyksen päiväkeskus aloittaa uusissa tiloissa 2. lokakuuta 2026 ja palvelee arkisin kello 10–15.30.'
+            and address in paragraphs):
+        return 'Itiksen Symppiksen uusi osoite on Turunlinnantie 12 Helsingissä. Kaupungin ilmoittama aukioloaika: arkisin klo 10–15.30.'
     return meta_description(summary, paragraphs)
 
 

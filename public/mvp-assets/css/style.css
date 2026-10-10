@@ -32,7 +32,7 @@ html {
 }
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 :root {
-  --bg: #fafaf8;
+  --bg: #fff;
   --text: #1a1a1a;
   --text-secondary: #555;
   --text-muted: #666;
@@ -71,10 +71,6 @@ html {
   :root:not([data-theme="light"]) .site-title a { color: #e8e6e3; }
   :root:not([data-theme="light"]) .author-box { background: var(--card-bg) !important; }
   :root:not([data-theme="light"]) .header-banner { opacity: 0.08; }
-  :root:not([data-theme="light"]) .logo-img {
-  filter: invert(1) hue-rotate(180deg);
-  mix-blend-mode: screen;
-}
   :root:not([data-theme="light"]) .scroll-to-top { background: #333; color: #e8e6e3; }
   :root:not([data-theme="light"]) .scroll-to-top:hover { background: #e74c3c; }
   :root:not([data-theme="light"]) #cookie-banner { background: #1e1e1e; border-top: 1px solid #333; }
@@ -148,14 +144,9 @@ img { max-width: 100%; height: auto; }
   align-items: center;
 }
 .logo-img {
-  mix-blend-mode: multiply;
   background-color: transparent;
   max-height: 40px;
   width: auto;
-}
-[data-theme="dark"] .logo-img {
-  filter: invert(1) hue-rotate(180deg);
-  mix-blend-mode: screen;
 }
 .site-title {
   font-family: var(--font-serif);
@@ -930,7 +921,6 @@ img { max-width: 100%; height: auto; }
   .main-nav a { font-size: 0.75rem; padding: 0.25rem 0.5rem; }
   .header-banner { height: 30px; }
   .logo-img {
-  mix-blend-mode: multiply;
   background-color: transparent;
   max-height: 40px;
   width: auto;

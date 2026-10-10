@@ -82,6 +82,21 @@ def ensure_table(store):
         _image_constraint(store,required=False)
 
 
+def ensure_site_refresh_table(store):
+    store.db.execute('''CREATE TABLE IF NOT EXISTS site_refreshes (
+        id TEXT PRIMARY KEY, source_commit TEXT NOT NULL, anchor_job_id TEXT NOT NULL,
+        remote_commit TEXT, run_id INTEGER, status TEXT NOT NULL, error TEXT,
+        created TEXT NOT NULL, style_sha256 TEXT NOT NULL)''')
+    store.db.commit()
+
+
+def unresolved_site_refreshes(store):
+    ensure_site_refresh_table(store)
+    return store.db.execute(
+        "SELECT * FROM site_refreshes WHERE status NOT IN ('deployed','failed') ORDER BY created,id"
+    ).fetchall()
+
+
 def _image_constraint(store,required):
     # Operator schema transition/rollback must hold the existing controller lock.
     expected=['job_id','packet_sha','draft_sha','image_sha','source_commit','remote_commit','run_id','status','attempts','error']
@@ -391,13 +406,15 @@ def _serves_public_content(source,files,pages):
     return any(path.startswith(source_path+'/') for path in files)
 
 
-def public_bundle(store,job,state):
+def public_bundle(store,job,state,*,site_refresh=False):
     ids={r[0] for r in store.db.execute("SELECT job_id FROM publications WHERE status='deployed'")}|{job['id']}
     from .backfill import release_records
     corrections = release_records(store,job['id'])
+    if site_refresh and corrections:
+        raise ValueError('Site refresh cannot own an archive correction')
     ids.update(r['job_id'] for r in corrections)
     packet,draft=json.loads(job['packet']),json.loads(job['draft'])
-    binding=media(packet,draft)
+    binding=media(packet,draft,policy_gate=not site_refresh)
     from .release_contract import AMENDMENT_RELEASE
     amendment_mod = {}
     # Reconstruct archived amendments too: an ordinary next release must not
@@ -433,7 +450,8 @@ def public_bundle(store,job,state):
     # was released under the policy in force then and is bound to its captured bytes.
     from .frontpage import load
     snapshot = load(state)
-    render_site(store,site,state,public=True,include_ids=ids,verify_policy_ids={job['id']},snapshot=snapshot)
+    render_site(store,site,state,public=True,include_ids=ids,
+                verify_policy_ids=set() if site_refresh else {job['id']},snapshot=snapshot)
     privacy='''<article class="story"><h1>Tietosuoja ja evästeet</h1><p>Voit käyttää uutispalvelua sallimatta analytiikkaa. Luvallasi käytämme Google Analyticsia sivuston käytön mittaamiseen. Emme käytä mainonnan evästeitä.</p><p>Suostumus tallennetaan selaimeesi. Voit muuttaa valintaasi sivun Evästeasetukset-painikkeella. Analytiikan poistaminen käytöstä poistaa tämän sivuston Google Analytics -evästeet selaimesta.</p><p>Palvelun tuotantotapa ja korjauskäytäntö kuvataan <a href="/tietoja/">Tietoa Uutistenlukijasta</a> -sivulla.</p></article>'''
     atomic_write(site/'tietosuoja/index.html',page('Tietosuoja ja evästeet',privacy,'/tietosuoja/',snapshot=snapshot))
     # Terms for AI images. This is the license_url/source_url of every generated article
@@ -580,7 +598,12 @@ def public_bundle(store,job,state):
         'draft_sha256':digest(draft),**binding,
         'new_article_files':[article_path(job)+'index.html'],
         'files':{str(p.relative_to(site)):hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(site.rglob('*')) if p.is_file()}}
-    if 'amendment' in binding:
+    if site_refresh:
+        receipt.update(schema_version=4,release_kind='site_refresh',anchor_job_id=job['id'],
+                       anchor_article_file=article_path(job)+'index.html',new_article_files=[],
+                       style_sha256=receipt['files']['mvp-assets/style.css'],packet=packet,
+                       draft=draft,review=json.loads(job['review']))
+    elif 'amendment' in binding:
         receipt.update(schema_version=3,packet=packet,draft=draft,review=json.loads(job['review']))
     elif binding.get('text_only') or binding.get('text_provenance'):
         receipt.update(schema_version=2,packet=packet,draft=draft,review=json.loads(job['review']))
@@ -646,13 +669,227 @@ def make_commit(site,receipt):
         raise UncommittedPreparationError(safe_error(error)) from error
     # Beyond this point an uncertain response must remain blocked. Never replay
     # a commit, ref update or workflow dispatch as a preparation retry.
-    return api('git/commits',{'message':'Fresh MVP reviewed article '+receipt['job_id'][:12], 'tree':tree,'parents':[parent],
+    message = ('Refresh Uutistenlukija site from '+receipt['source_commit'][:12]
+               if receipt.get('release_kind') == 'site_refresh'
+               else 'Fresh MVP reviewed article '+receipt['job_id'][:12])
+    return api('git/commits',{'message':message, 'tree':tree,'parents':[parent],
                             'author':{'name':'Uutistenlukija MVP','email':'news-mvp@localhost'}})['sha']
 
 
 def matching_runs(commit):
     return json.loads(cmd('gh','run','list','--repo',REPO,'--workflow',WORKFLOW,'--commit',commit,
                          '--event','workflow_dispatch','--limit','10','--json','databaseId,status,conclusion,headSha'))
+
+
+def _site_refresh_anchor(store):
+    row = store.db.execute(
+        "SELECT p.* FROM publications p JOIN jobs j ON j.id=p.job_id "
+        "WHERE p.status='deployed' ORDER BY j.created_at DESC,j.id DESC LIMIT 1"
+    ).fetchone()
+    if row is None:
+        raise ValueError('Site refresh requires an already-deployed article')
+    publication = dict(row)
+    job = store.get(publication['job_id'])
+    if job is None or not job.get('draft') or not job.get('review'):
+        raise ValueError('Site refresh anchor job is missing its reviewed draft')
+    packet, draft = json.loads(job['packet']), json.loads(job['draft'])
+    binding = media(packet, draft, policy_gate=False)
+    if (publication['packet_sha'] != digest(packet) or
+            publication['draft_sha'] != digest(draft) or
+            publication['image_sha'] != binding['image_sha256'] or
+            not validate_review(json.loads(job['review']), draft)['approved']):
+        raise ValueError('Site refresh anchor differs from its deployed publication')
+    return job, publication, binding
+
+
+def _read_live(url):
+    request = urllib.request.Request(url, headers={'User-Agent':'Mozilla/5.0'})
+    with urllib.request.urlopen(request, timeout=25) as response:
+        status = getattr(response, 'status', None)
+        if status is None and hasattr(response, 'getcode'):
+            status = response.getcode()
+        if status != 200:
+            raise ValueError('Live readback did not return HTTP 200')
+        return response.read()
+
+
+def site_refresh(config, config_path):
+    """Ship the committed renderer/assets with a deployed article as immutable anchor."""
+    state = config['state_dir']
+    guard(config_path)
+    site = receipt = None
+    with database(state) as store:
+        ensure_table(store)
+        ensure_site_refresh_table(store)
+        unresolved = store.db.execute(
+            "SELECT job_id,status FROM publications WHERE status NOT IN ('deployed','failed') "
+            "ORDER BY rowid"
+        ).fetchall()
+        if unresolved:
+            raise ValueError('Unresolved publications must be reconciled before site refresh')
+        active = unresolved_site_refreshes(store)
+        if len(active) > 1:
+            raise ValueError('Multiple unresolved site refreshes require operator reconciliation')
+
+        job, publication, binding = _site_refresh_anchor(store)
+        source_commit = cmd('git','rev-parse','HEAD')
+        refresh_id = digest({'release_kind':'site_refresh','source_commit':source_commit,
+                             'anchor_job_id':job['id']})
+        if active:
+            row = dict(active[0])
+            if row['id'] != refresh_id:
+                raise ValueError('An earlier site refresh must be reconciled first')
+        else:
+            previous = store.db.execute('SELECT * FROM site_refreshes WHERE id=?',
+                                        (refresh_id,)).fetchone()
+            if previous is not None:
+                row = dict(previous)
+                status = 'idle' if row['status'] == 'deployed' else row['status']
+                return {'status':status,'site_refresh_id':row['id'],
+                        'anchor_job_id':row['anchor_job_id'],
+                        'remote_commit':row['remote_commit'],'run_id':row['run_id']}
+            site, receipt = public_bundle(store, job, state, site_refresh=True)
+            if (receipt['source_commit'] != source_commit or
+                    receipt['packet_sha256'] != publication['packet_sha'] or
+                    receipt['draft_sha256'] != publication['draft_sha'] or
+                    receipt['image_sha256'] != publication['image_sha']):
+                raise ValueError('Site refresh receipt differs from its deployed anchor')
+            with store.db:
+                store.db.execute(
+                    "INSERT INTO site_refreshes VALUES(?,?,?,NULL,NULL,'preparing',NULL,?,?)",
+                    (refresh_id,source_commit,job['id'],datetime.now(timezone.utc).isoformat(),
+                     receipt['style_sha256']))
+            row = dict(store.db.execute('SELECT * FROM site_refreshes WHERE id=?',
+                                        (refresh_id,)).fetchone())
+
+        if row['status'] == 'deployed':
+            return {'status':'idle','site_refresh_id':row['id'],
+                    'anchor_job_id':row['anchor_job_id'],'remote_commit':row['remote_commit'],
+                    'run_id':row['run_id']}
+        if row['status'] == 'failed':
+            return {'status':'failed','site_refresh_id':row['id'],
+                    'anchor_job_id':row['anchor_job_id'],'error':row['error']}
+        if row['status'] == 'unknown' and not row['remote_commit']:
+            return {'status':'site_refresh_blocked','site_refresh_id':row['id'],
+                    'reason':'Unknown remote commit outcome'}
+        if row['status'] not in ('preparing','prepared','dispatching','dispatched','unknown'):
+            return {'status':'site_refresh_blocked','site_refresh_id':row['id'],
+                    'reason':'Unknown site refresh state'}
+
+        external_started = False
+        try:
+            if not row['remote_commit']:
+                if source_commit != row['source_commit']:
+                    raise ValueError('Site refresh source changed during preparation')
+                if receipt is None:
+                    site, receipt = public_bundle(store, job, state, site_refresh=True)
+                if receipt['style_sha256'] != row['style_sha256']:
+                    raise ValueError('Site refresh stylesheet changed during preparation')
+                guard(config_path)
+                external_started = True
+                remote_commit = make_commit(site, receipt)
+                with store.db:
+                    store.db.execute(
+                        "UPDATE site_refreshes SET remote_commit=?,status='prepared',error=NULL WHERE id=?",
+                        (remote_commit,row['id']))
+                row['remote_commit'], row['status'] = remote_commit, 'prepared'
+
+            guard(config_path)
+            current = api('git/ref/heads/main')['object']['sha']
+            if current != row['remote_commit']:
+                if row['status'] == 'unknown':
+                    return {'status':'site_refresh_blocked','site_refresh_id':row['id'],
+                            'reason':'Remote ref update outcome is unresolved',
+                            'remote_commit':row['remote_commit']}
+                external_started = True
+                api('git/refs/heads/main',{'sha':row['remote_commit'],'force':False},method='PATCH')
+
+            runs = matching_runs(row['remote_commit'])
+            if len(runs) > 1:
+                raise ValueError('Multiple deploy runs found for one site refresh')
+            if not runs:
+                if row['status'] in ('dispatching','dispatched','unknown'):
+                    return {'status':'awaiting_dispatch_visibility','site_refresh_id':row['id'],
+                            'remote_commit':row['remote_commit']}
+                guard(config_path)
+                cmd('gh','workflow','enable',WORKFLOW,'--repo',REPO)
+                with store.db:
+                    store.db.execute("UPDATE site_refreshes SET status='dispatching' WHERE id=?",
+                                     (row['id'],))
+                external_started = True
+                cmd('gh','workflow','run','deploy.yml','--repo',REPO,'--ref','main')
+                with store.db:
+                    store.db.execute("UPDATE site_refreshes SET status='dispatched' WHERE id=?",
+                                     (row['id'],))
+                return {'status':'dispatched','site_refresh_id':row['id'],
+                        'anchor_job_id':job['id'],'remote_commit':row['remote_commit']}
+
+            run = runs[0]
+            if run.get('headSha') not in (None, row['remote_commit']):
+                raise ValueError('Site refresh deploy run commit mismatch')
+            with store.db:
+                store.db.execute("UPDATE site_refreshes SET run_id=?,status='dispatched' WHERE id=?",
+                                 (run['databaseId'],row['id']))
+            if run['status'] != 'completed':
+                try:
+                    cmd('gh','run','watch',str(run['databaseId']),'--repo',REPO,'--exit-status')
+                except subprocess.CalledProcessError:
+                    pass
+                visible = [candidate for candidate in matching_runs(row['remote_commit'])
+                           if candidate['databaseId'] == run['databaseId']]
+                if visible:
+                    run = visible[0]
+                if run['status'] != 'completed':
+                    return {'status':'deploying','site_refresh_id':row['id'],
+                            'run_id':run['databaseId'],'remote_commit':row['remote_commit']}
+            if run['conclusion'] != 'success':
+                with store.db:
+                    store.db.execute(
+                        "UPDATE site_refreshes SET status='failed',error='ConfirmedCompletedRunFailure' WHERE id=?",
+                        (row['id'],))
+                raise ValueError('Site refresh deployment failed; no automatic redispatch')
+
+            receipt_dir = Path(state)/'site-refresh-deployments'/str(run['databaseId'])
+            receipt_dir.mkdir(parents=True,exist_ok=True)
+            artifact = receipt_dir/'live-deployment.json'
+            if not artifact.exists():
+                cmd('gh','run','download',str(run['databaseId']),'--repo',REPO,
+                    '--name','live-deployment','--dir',str(receipt_dir))
+            live = json.loads(artifact.read_text())
+            expected = {'release_kind':'site_refresh','remote_commit':row['remote_commit'],
+                        'source_commit':row['source_commit'],'anchor_job_id':row['anchor_job_id'],
+                        'job_id':row['anchor_job_id'],'packet_sha256':publication['packet_sha'],
+                        'draft_sha256':publication['draft_sha'],'image_sha256':publication['image_sha'],
+                        'style_sha256':row['style_sha256']}
+            if any(live.get(key) != value for key,value in expected.items()):
+                raise ValueError('Site refresh deployment artifact binding mismatch')
+            check_deployment_amendment(live,binding)
+            home = _read_live('https://uutistenlukija.fi/')
+            style = _read_live('https://uutistenlukija.fi/mvp-assets/style.css')
+            if hashlib.sha256(style).hexdigest() != row['style_sha256']:
+                raise ValueError('Live stylesheet differs from site refresh bundle')
+            live.update(live_home_sha256=hashlib.sha256(home).hexdigest(),
+                        live_style_sha256=hashlib.sha256(style).hexdigest())
+            atomic_write(receipt_dir/'live-readback.json',json.dumps(live,indent=2)+'\n')
+            with store.db:
+                store.db.execute("UPDATE site_refreshes SET status='deployed',error=NULL WHERE id=?",
+                                 (row['id'],))
+            return {'status':'deployed','site_refresh_id':row['id'],'anchor_job_id':job['id'],
+                    'run_id':run['databaseId'],'remote_commit':row['remote_commit'],
+                    'deployment_id':live['deployment_id']}
+        except Exception as error:
+            saved = store.db.execute('SELECT status,remote_commit FROM site_refreshes WHERE id=?',
+                                     (row['id'],)).fetchone()
+            if saved['status'] in ('failed','prepared','dispatching','dispatched'):
+                outcome = saved['status']
+            else:
+                outcome = 'unknown' if external_started or saved['remote_commit'] else 'failed'
+            if isinstance(error,UncommittedPreparationError) and not saved['remote_commit']:
+                outcome = 'preparing'
+            with store.db:
+                store.db.execute('UPDATE site_refreshes SET status=?,error=? WHERE id=?',
+                                 (outcome,safe_error(error),row['id']))
+            raise
 
 
 def check_deployment_amendment(live, binding):
@@ -664,6 +901,9 @@ def check_deployment_amendment(live, binding):
 
 def publish(store,job,state,config_path):
     ensure_table(store);guard(config_path)
+    if unresolved_site_refreshes(store):
+        return {'status':'publication_blocked',
+                'reason':'An unresolved site refresh requires operator reconciliation'}
     packet,draft=json.loads(job['packet']),json.loads(job['draft'])
     from .site import display_image
     if not display_image(draft.get('image')):

@@ -65,11 +65,17 @@ class HomepagePagination(unittest.TestCase):
                                          min(remaining,site.HOMEPAGE_CENTER_ROWS))
                         self.assertEqual(sum(cls.startswith('portal-row-card') for cls,_ in entries),
                                          max(0,remaining-site.HOMEPAGE_CENTER_ROWS))
-                        # Header and footer repeat the same approved brand mark; every
+                        # Header and footer repeat the two themed brand marks; every
                         # story uses its original native editorial-image slot.
-                        self.assertEqual(len(images_in(html)),2 + len(entries))
-                        self.assertEqual(images_in(html)[0],'/mvp-assets/images/logo.png')
-                        self.assertEqual(images_in(html)[-1],'/mvp-assets/images/logo.png')
+                        self.assertEqual(len(images_in(html)),4 + len(entries))
+                        self.assertEqual(images_in(html)[:2],[
+                            '/mvp-assets/images/logo-light.png',
+                            '/mvp-assets/images/logo-dark.png',
+                        ])
+                        self.assertEqual(images_in(html)[-2:],[
+                            '/mvp-assets/images/logo-light.png',
+                            '/mvp-assets/images/logo-dark.png',
+                        ])
                         if remaining>site.HOMEPAGE_CENTER_ROWS:
                             self.assertIn('portal-river',html)
                             self.assertIn('portal-river__grid',html)

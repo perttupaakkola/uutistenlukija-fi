@@ -7,9 +7,8 @@ was reviewed (asset bytes, dimensions, alt text, AI-illustration label, lazy rul
 and the private listing archive must stay unindexed and image-free.
 
 Image selection here excludes branding by exact identity only, never by URL prefix:
-the site logo is the one image allowed to appear outside the reviewed-image
-inventory, and it is dropped as ``/mvp-assets/images/logo.png`` (public) or
-``/assets/images/logo.png`` (private) alone. Every other ``<img>`` on the page -
+the themed site logos are the images allowed to appear outside the reviewed-image
+inventory under the public or private asset root. Every other ``<img>`` on the page -
 including one at a foreign URL - is editorial and must match the reviewed fixture's
 local asset, so a stray or private image can never hide behind a filter.
 """
@@ -135,7 +134,7 @@ class HomepageImages(unittest.TestCase):
         self.assertIn('portal-front-grid--image-free-lead',home)
         self.assertNotIn('Kuvassa', home)
         self.assertNotIn('front-shortcuts', home)
-        self.assertEqual(home.count('<img'),2)  # logo plus the one reviewed teaser image
+        self.assertEqual(home.count('<img'),3)  # two themed logos plus one reviewed teaser image
         self.assertEqual(home.count('portal-teaser__thumb'),1)
         self.assertNotIn('portal-row-card__thumb',home)
         self.assertNotIn('portal-teaser--no-image',entries[1][0])
@@ -196,9 +195,9 @@ class HomepageImages(unittest.TestCase):
         self.assertNotIn('<b>',home)
         self.assertNotIn('<i>',home)
         self.assertNotIn('<script>alert(1)</script>',home)
-        # Header and footer use the same approved brand asset; four reviewed story
+        # Header and footer use both approved theme assets; four reviewed story
         # images remain the only editorial images on the listing.
-        self.assertEqual(home.count('<img'),6)
+        self.assertEqual(home.count('<img'),8)
         parsed=scan(home)
         self.assertEqual([attrs['alt'] for attrs in editorial_images(parsed)],[alt]*4)
         self.assertEqual([attrs['src'] for attrs in editorial_images(parsed)],[f'/mvp-assets/{sha}.jpg']*4)
@@ -231,7 +230,8 @@ class HomepageImages(unittest.TestCase):
                 self.assertNotIn('og:',html)
                 self.assertNotIn('application/ld+json',html)
                 self.assertEqual([attrs['src'] for attrs in editorial_images(scan(html))],[])
-                self.assertEqual([attrs['src'] for attrs in scan(html).imgs],['/assets/images/logo.png'])
+                self.assertEqual([attrs['src'] for attrs in scan(html).imgs],[
+                    '/assets/images/logo-light.png', '/assets/images/logo-dark.png'])
         first,second=listing['index.html'],listing['sivu/2/index.html']
         entries_first=[(cls,body) for cls,body in ARTICLE_RE.findall(first)]
         entries_second=[(cls,body) for cls,body in ARTICLE_RE.findall(second)]

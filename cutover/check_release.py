@@ -15,6 +15,7 @@ def check(root, receipt):
     if receipt.get('origin') != 'https://uutistenlukija.fi' or receipt.get('ga4_id') != 'G-35XERS8V6J':
         raise ValueError('Canonical site/analytics identity changed')
     binding=receipt_media(receipt)
+    site_refresh = receipt.get('release_kind') == 'site_refresh'
     canonical = None
     if receipt.get('schema_version') == 3:
         canonical = binding['amendment']['public_metadata']['canonical']
@@ -23,7 +24,7 @@ def check(root, receipt):
             raise ValueError('Amendment requires exact nonempty canonical article list')
     # Historical text-only receipts remain readable by release_contract, but the
     # deployment entrypoint may never authorize a new text-only publication.
-    if receipt.get('schema_version') == 2 and not receipt['draft'].get('image'):
+    if not site_refresh and receipt.get('schema_version') == 2 and not receipt['draft'].get('image'):
         raise ValueError('Text-only publication is prohibited; image preparation must retry')
     files=receipt['files']
     if not files or 'index.html' not in files:
@@ -35,7 +36,17 @@ def check(root, receipt):
         file=root/name
         if not file.resolve().is_relative_to(root) or hashlib.sha256(file.read_bytes()).hexdigest()!=sha:
             raise ValueError('Release bytes changed: '+name)
-    for name in ['index.html']+receipt['new_article_files']:
+    article_files = receipt['new_article_files']
+    if site_refresh:
+        anchor = receipt['anchor_article_file']
+        if (receipt.get('schema_version') != 4 or article_files != [] or
+                anchor not in files or
+                receipt.get('style_sha256') != files.get('mvp-assets/style.css')):
+            raise ValueError('Site refresh requires its exact anchor and stylesheet')
+        article_files = [anchor]
+        if 'amendment' in binding:
+            canonical = binding['amendment']['public_metadata']['canonical']
+    for name in ['index.html']+article_files:
         data=(root/name).read_text()
         if any(s in data for s in ('noindex,nofollow','Yksityinen esikatselu','keksitty uutinen','example.invalid')):
             raise ValueError('Private or fixture page in public release')
@@ -43,10 +54,10 @@ def check(root, receipt):
         image='mvp-assets/'+binding['image_sha256']+'.jpg'
         if image not in files or files[image]!=binding['image_sha256']:
             raise ValueError('Required reviewed image missing from bundle')
-    if receipt.get('schema_version') in (2, 3):
-        for name in receipt['new_article_files']:
+    if receipt.get('schema_version') in (2, 3, 4):
+        for name in article_files:
             check_article((root/name).read_text(),receipt['packet'],receipt['draft'],
-                          canonical=canonical if receipt.get('schema_version') == 3 else None)
+                          canonical=canonical)
     def related_target(href):
         name = href.lstrip('/')+'index.html'
         if name not in files:

@@ -22,8 +22,12 @@ MAX_PACKET_SOURCES = 8
 BRANDING_LOGO_SRCS = frozenset({
     '/mvp-assets/images/logo.png',
     '/assets/images/logo.png',
+    '/mvp-assets/images/logo-light.png',
+    '/assets/images/logo-light.png',
+    '/mvp-assets/images/logo-dark.png',
+    '/assets/images/logo-dark.png',
 })
-BRANDING_LOGO_SRC = '/mvp-assets/images/logo.png'
+BRANDING_LOGO_SRC = '/mvp-assets/images/logo-light.png'
 GENERATED_READER_CREDIT = 'AI-kuvitus'
 _BRANDING_SECTIONS = ('header', 'footer')
 _HTML_VOID_ELEMENTS = frozenset({
@@ -846,6 +850,46 @@ def verify_intake(packet, state, *, archive_image_only=False):
 
 
 def receipt_media(receipt):
+    if receipt.get('release_kind') == 'site_refresh':
+        if receipt.get('schema_version') != 4:
+            raise ValueError('Unknown site-refresh receipt schema version')
+        required = {'public_release_authorized', 'hermes_step', 'origin', 'ga4_id',
+                    'source_commit', 'release_kind', 'schema_version', 'job_id',
+                    'anchor_job_id', 'anchor_article_file', 'packet_sha256',
+                    'draft_sha256', 'packet', 'draft', 'review', 'image_sha256',
+                    'new_article_files', 'style_sha256', 'files'}
+        if not required <= receipt.keys():
+            raise ValueError('Missing explicit site-refresh contract')
+        packet, draft, review = (receipt[key] for key in ('packet', 'draft', 'review'))
+        if (receipt['job_id'] != receipt['anchor_job_id'] or
+                receipt['new_article_files'] != [] or
+                receipt['packet_sha256'] != digest(packet) or
+                receipt['draft_sha256'] != digest(draft) or
+                not isinstance(receipt['source_commit'], str) or
+                not re.fullmatch(r'[0-9a-f]{40}', receipt['source_commit']) or
+                not validate_review(review, draft)['approved']):
+            raise ValueError('Site-refresh anchor identity mismatch')
+        expected = media(packet, draft, policy_gate=False)
+        actual = {'image_sha256': receipt['image_sha256']}
+        for key in ('stock_image', 'text_only', 'text_provenance', 'amendment'):
+            if key in receipt:
+                actual[key] = receipt[key]
+        if expected != actual:
+            raise ValueError('Site-refresh media binding mismatch')
+        if packet.get('schema') == AMENDMENT_RELEASE:
+            if (review != packet['final_review_result']['review'] or
+                    receipt['job_id'] != expected['amendment']['job_id']):
+                raise ValueError('Site-refresh amendment binding mismatch')
+        elif any(key in packet for key in ('preparation_json', 'capture_json',
+                                            'final_review_input', 'final_review_result',
+                                            'version')):
+            raise ValueError('Site-refresh amendment marker missing or unsupported')
+        allowed = required | set(expected)
+        if set(receipt) != allowed:
+            raise ValueError('Unexpected site-refresh receipt fields')
+        return expected
+    if 'release_kind' in receipt:
+        raise ValueError('Unknown release kind')
     # Absence is the original legacy schema; no v2 fields may leak into it.
     if 'schema_version' not in receipt:
         legacy={'public_release_authorized','hermes_step','origin','ga4_id','source_commit',
@@ -1594,6 +1638,9 @@ def deployment_record(receipt, deployment, commit):
             'canonical_origin':'https://uutistenlukija.fi','remote_commit':commit,
             'source_commit':receipt['source_commit'],'packet_sha256':receipt['packet_sha256'],
             'draft_sha256':receipt['draft_sha256'],'job_id':receipt['job_id'],**binding}
+    if receipt.get('release_kind') == 'site_refresh':
+        record.update(release_kind='site_refresh', anchor_job_id=receipt['anchor_job_id'],
+                      style_sha256=receipt['style_sha256'])
     if receipt.get('image_backfill'):
         if digest(receipt['image_backfill']) != receipt.get('image_backfill_sha256'):
             raise ValueError('Archive correction deployment binding mismatch')

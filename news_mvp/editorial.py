@@ -20,28 +20,21 @@ def digest(value):
     return hashlib.sha256(encode(value).encode()).hexdigest()
 
 
+# The editorial profile (news-mvp) is deliberately minimal and loads no provider plugins,
+# so it must use a built-in provider. Pin it here instead of inheriting any profile's
+# chat model: changing an assistant's model must never break article publishing.
+EDITORIAL_MODEL = ("opus", "claude-subscription-directsdk-experimental", "high")
+
+
 def current_default_model_args():
-    """Resolve the editorial model from the news profile that owns this website.
-
-    The personal assistant's default model is unrelated to publishing and may use a
-    provider plugin the isolated news-mvp profile cannot load; never inherit it.
-    """
-    import yaml
-
-    path = Path.home() / ".hermes/profiles/news/config.yaml"
-    config = yaml.safe_load(path.read_text()) or {}
-    model = config.get("model") or {}
-    if not isinstance(model, dict):
-        raise ValueError("News profile model configuration is missing")
-    provider = str(model.get("provider") or "").strip()
-    name = str(model.get("default") or model.get("model") or "").strip()
-    agent = config.get("agent") if isinstance(config.get("agent"), dict) else {}
-    effort = str(agent.get("reasoning_effort") or model.get("reasoning_effort") or "").strip()
-    if not provider or not name:
-        raise ValueError("News profile model and provider must be configured")
-    args = ["--model", name, "--provider", provider]
-    if effort:
-        args.extend(("--reasoning", effort))
+    """Model args for the editorial adapter. Override via UUTIS_EDITORIAL_MODEL=model,provider[,effort]."""
+    raw = os.environ.get("UUTIS_EDITORIAL_MODEL", "").strip()
+    parts = [p.strip() for p in raw.split(",")] if raw else list(EDITORIAL_MODEL)
+    if len(parts) < 2 or not parts[0] or not parts[1]:
+        raise ValueError("Editorial model must be model,provider[,effort]")
+    args = ["--model", parts[0], "--provider", parts[1]]
+    if len(parts) > 2 and parts[2]:
+        args.extend(("--reasoning", parts[2]))
     return args
 
 

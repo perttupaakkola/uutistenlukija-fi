@@ -301,8 +301,12 @@ class PortalShell(unittest.TestCase):
         self.assertIn('<header class="site-header" role="banner">', home)
         self.assertIn('class="portal-masthead"', home)
         self.assertIn(
-            '<img src="/mvp-assets/images/logo.png" alt="Uutistenlukija" class="portal-logo__image"'
+            '<img src="/mvp-assets/images/logo-light.png" alt="Uutistenlukija" class="portal-logo__image theme-logo theme-logo--light"'
             ' loading="eager" decoding="async" width="977" height="191">',
+            home,
+        )
+        self.assertIn(
+            '<img src="/mvp-assets/images/logo-dark.png" alt="" aria-hidden="true" class="portal-logo__image theme-logo theme-logo--dark"',
             home,
         )
         # The public form is progressively enhanced, but its literal no-JS action
@@ -549,7 +553,8 @@ class PortalShell(unittest.TestCase):
         self.assertNotIn("analytics.js", private)
         # The private shell still ships the ported assets, under /assets/.
         self.assertIn('/assets/css/portal-overhaul.css', private)
-        self.assertIn('/assets/images/logo.png', private)
+        self.assertIn('/assets/images/logo-light.png', private)
+        self.assertIn('/assets/images/logo-dark.png', private)
         self.assertIn('/assets/portal.js', private)
         public = site.page("T", "<p>x</p>", "/")
         self.assertIn('rel="canonical" href="https://uutistenlukija.fi/"', public)
@@ -558,6 +563,8 @@ class PortalShell(unittest.TestCase):
     def test_private_render_copies_assets_without_public_only_files(self):
         root = self._site_root(self._render_private("portal-private"))
         self.assertTrue((root / "assets/images/logo.png").is_file())
+        self.assertTrue((root / "assets/images/logo-light.png").is_file())
+        self.assertTrue((root / "assets/images/logo-dark.png").is_file())
         self.assertTrue((root / "assets/css/portal-overhaul.css").is_file())
         self.assertTrue((root / "assets/portal.js").is_file())
         self.assertFalse((root / "assets/analytics.js").exists())

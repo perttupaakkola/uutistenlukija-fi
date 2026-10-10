@@ -9,7 +9,7 @@ from .controller import (backfill_missing_images, has_missing_images, hermes_mod
 from .editorial import ROOT, digest, web_url
 from .intake import collect
 from .discovery import discover,collect_modis
-from .publish import ensure_table, publish, guard
+from .publish import ensure_table, publish, guard, unresolved_site_refreshes
 from .store import database
 
 _RELATED_SEARCHER = None
@@ -72,6 +72,9 @@ def live_tick(config_path):
             refresh(config['state_dir'])
         with database(config['state_dir']) as store:
             ensure_table(store)
+            if unresolved_site_refreshes(store):
+                return {'status':'site_refresh_pending',
+                        'reason':'Run the site-refresh operator command to reconcile it'}
             # Publication reconciliation owns the tick, even after its source disappears
             # or ages out. Never rotate providers while an outcome is unresolved.
             from .backfill import pending as pending_publications

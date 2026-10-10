@@ -42,7 +42,7 @@ class OwnerCleanup(ArticleAndCategoryRendering):
         self.assertIn(':root.reader-page:not([data-theme="dark"]){--bg:#fff;--portal-bg:#fff;background:#fff}', css)
         self.assertIn(':root.reader-page:not([data-theme="dark"]) body.reader-page', css)
         self.assertIn(':root.reader-page:not([data-theme="dark"]) .single-article{background:#fff}', css)
-        self.assertIn('--bg:#f7f5f0;', css)
+        self.assertNotIn('--bg:#f7f5f0;', css)  # owner rule: site stays white
         self.assertIn(':root[data-theme="dark"]{\n  --bg:#101a1e;', css)
 
 

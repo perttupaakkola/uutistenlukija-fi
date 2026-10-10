@@ -14,7 +14,7 @@ def main():
     parser = argparse.ArgumentParser(description="Fresh news MVP — local private workflow")
     sub = parser.add_subparsers(dest="command", required=True)
     for name in ("init", "ingest", "discover", "collect", "tick", "live-tick", "render", "status", "stop",
-                 "requeue-failed", "revise-manuscript"):
+                 "requeue-failed", "revise-manuscript", "site-refresh"):
         p = sub.add_parser(name)
         p.add_argument("--config", type=Path, required=True)
         if name == "ingest":
@@ -87,6 +87,12 @@ def main():
                     if not locked:
                         raise ValueError("Another tick is running; retry shortly")
                     result = requeue_failed(config, getattr(args, "job", None))
+            elif args.command == "site-refresh":
+                from .publish import site_refresh
+                with single_tick(config["state_dir"]) as locked:
+                    if not locked:
+                        raise ValueError("Another tick is running; retry shortly")
+                    result = site_refresh(config, args.config)
             elif args.command == "render":
                 with single_tick(config["state_dir"]) as locked:
                     if not locked:

@@ -35,7 +35,7 @@ class HolidayReference(unittest.TestCase):
             self.assertIn('<meta name="description"', text)
             for source in reference.SOURCES: self.assertIn('href="' + source + '"', text)
             for row in reference.ACTIVITIES: self.assertIn('<h2>' + row[0] + '</h2>', text)
-            self.assertEqual(text.count('<dl>'), 6)
+            self.assertEqual(text.count('<dl>'), 7)
             self.assertNotIn('<table', text)
             for fact in ('13.–15.10.2026 klo 13–15', 'alle kouluikäiset aikuisen seurassa',
                          'myyjäiset klo 11–15, konsertit klo 15.30 ja 17, lyhtyopastus klo 18',
@@ -62,8 +62,8 @@ class HolidayReference(unittest.TestCase):
             self.assertNotIn('https://uutistenlukija.fi/syysloma-2026/',(output/'sitemap.xml').read_text())
 
     def test_exact_expiry_and_honest_dated_archive(self):
-        before = datetime.fromisoformat('2026-10-18T20:58:59+00:00')
-        after = datetime.fromisoformat('2026-10-18T20:59:00+00:00')
+        before = datetime.fromisoformat('2026-10-22T11:59:59+00:00')
+        after = datetime.fromisoformat('2026-10-22T12:00:00+00:00')
         self.assertFalse(reference.archived(before))
         self.assertTrue(reference.archived(after))
         active = reference.render(before,site.page,True)
@@ -89,5 +89,12 @@ class HolidayReference(unittest.TestCase):
             self.assertIn('href="/oppaat/talvirenkaat-2026/"', text)
             self.assertIn('href="/oppaat/#oppaat-ajokeli-title"', text)
             self.assertIn('href="/oppaat/">Kaikki oppaat', text)
-            self.assertEqual(text.count('<dl>'), 6)
+            self.assertEqual(text.count('<dl>'), 7)
             self.assertIn('Tiedot tarkistettu 9.10.2026', text)
+
+    def test_oulu_offer_preserves_local_eligibility_and_exact_dates(self):
+        text = reference.render(NOW,site.page,True)
+        for fact in ('Oulu: Biitsiareena', '19.–22.10.2026 klo 9–15', 'Äimäkuja 6', 'oululaisille lapsiperheille', 'Oulun tiedot tarkistettu 10.10.2026', 'https://www.ouka.fi/fiilis', 'Päivämäärät ratkaisevat'):
+            self.assertIn(fact,text)
+        self.assertFalse(reference.archived(datetime.fromisoformat('2026-10-19T12:00:00+03:00')))
+        self.assertIn('seitsemää',reference.discovery_html(NOW))

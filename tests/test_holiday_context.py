@@ -12,7 +12,7 @@ class HolidayContext(unittest.TestCase):
             body = self.context(job_id)
             self.assertEqual(body.count('href="/syysloma-2026/"'), 1)
             self.assertIn("Syysloman opas", body)
-            self.assertIn("Helsinki, Vantaa ja Kuopio", body)
+            self.assertIn("Helsinki, Vantaa, Kuopio ja Oulu", body)
             self.assertNotIn("<time", body)
 
     def test_unrelated_and_prefix_stories_have_no_promotion(self):
@@ -21,7 +21,7 @@ class HolidayContext(unittest.TestCase):
 
     def test_expired_comparison_is_truthfully_labelled_archive(self):
         with patch("news_mvp.site.ClockDateTime") as clock:
-            clock.now.return_value = datetime(2026, 10, 19, tzinfo=timezone.utc)
+            clock.now.return_value = datetime(2026, 10, 23, tzinfo=timezone.utc)
             body = self.context(next(iter(site.GUIDES_JOB_IDS)))
         self.assertIn("maksuttoman tekemisen arkisto", body)
         self.assertNotIn("vertaile kuutta", body)

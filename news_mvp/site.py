@@ -704,12 +704,12 @@ def article_context_html(job, draft, articles, related_ids=()):
     if job.get("id") in GUIDES_JOB_IDS:
         from .holiday_reference import PATH as holiday_path, archived
         label = ("Syysloma 2026: maksuttoman tekemisen arkisto" if archived(ClockDateTime.now(timezone.utc))
-                 else "Syysloma 2026: vertaile kuutta maksutonta tekemistä")
+                 else "Syysloma 2026: vertaile seitsemää maksutonta tekemistä")
         blocks.append(
             '<section class="article-context__block">'
             '<div class="article-context__head"><h2>Syysloman opas</h2></div>'
             f'<ul><li><a href="{holiday_path}"><span class="article-context__title">{label}</span>'
-            '<span class="article-context__meta">Helsinki, Vantaa ja Kuopio · ajat, ikärajat ja ilmoittautuminen</span>'
+            '<span class="article-context__meta">Helsinki, Vantaa, Kuopio ja Oulu · ajat, ikärajat ja ilmoittautuminen</span>'
             '</a></li></ul></section>')
     if same_desk:
         blocks.append(
@@ -1214,6 +1214,19 @@ def page(title, body, canonical_path=None, head_meta="", readability_present=Tru
     # previews stay noindex and get none of it.
     head += head_meta if public else ""
     assets = "mvp-assets" if public else "assets"
+    icon_links = (
+        '<link rel="icon" href="/favicon.ico" sizes="any">'
+        f'<link rel="icon" type="image/png" sizes="32x32" href="/{assets}/images/favicon-32.png">'
+        f'<link rel="apple-touch-icon" sizes="180x180" href="/{assets}/images/apple-touch-icon.png">'
+    )
+
+    def brand_images(class_name, loading):
+        """Theme-selectable logos with one accessible text alternative."""
+        shared = (f'loading="{loading}" decoding="async" width="977" height="191"')
+        return (f'<img src="/{assets}/images/logo-light.png" alt="Uutistenlukija" '
+                f'class="{class_name} theme-logo theme-logo--light" {shared}>'
+                f'<img src="/{assets}/images/logo-dark.png" alt="" aria-hidden="true" '
+                f'class="{class_name} theme-logo theme-logo--dark" {shared}>')
     # The imported portal theme keeps its original sheet links and order; the assets
     # root then carries the small compatibility layer render_site writes, and the
     # reading-quality layer comes last so it can only add.
@@ -1256,9 +1269,7 @@ def page(title, body, canonical_path=None, head_meta="", readability_present=Tru
     # The public brand links home; the private preview must not advertise a published
     # destination it does not have, so there the brand is plain text.
     footer_brand = (f'<a class="site-footer-brand" href="/" aria-label="Uutistenlukija etusivulle">'
-                    f'<img src="/{assets}/images/logo.png" alt="Uutistenlukija" '
-                    f'class="site-footer-brand__image" loading="lazy" decoding="async" '
-                    f'width="977" height="191"></a>' if public else
+                    f'{brand_images("site-footer-brand__image", "lazy")}</a>' if public else
                     '<div class="site-footer-brand"><h2>Uutistenlukija</h2></div>')
     labels_by_slug = dict(CATEGORY_PAGES)
     nav_items = (("/", "Etusivu"),) + tuple(
@@ -1333,12 +1344,12 @@ def page(title, body, canonical_path=None, head_meta="", readability_present=Tru
     return f'''<!doctype html>
 <html lang="fi"{' class="reader-page"' if article_page else ""}><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 {head}<title>{esc(title)} · Uutistenlukija</title>
-{style_links}</head><body{' class="reader-page"' if article_page else ""}>
+{icon_links}{style_links}</head><body{' class="reader-page"' if article_page else ""}>
 <a class="skip skip-to-content" href="#sisalto">Siirry sisältöön</a>
 {banner}
 <header class="site-header" role="banner">
 <div class="portal-masthead">
-<a class="portal-logo" href="/" aria-label="Uutistenlukija etusivulle"><img src="/{assets}/images/logo.png" alt="Uutistenlukija" class="portal-logo__image" loading="eager" decoding="async" width="977" height="191"></a>
+<a class="portal-logo" href="/" aria-label="Uutistenlukija etusivulle">{brand_images("portal-logo__image", "eager")}</a>
 <div id="header-search" class="portal-search site-search site-search--collapsed">
 <button id="header-search-toggle" class="portal-icon-button search-toggle-btn" type="button" aria-label="Avaa haku" aria-expanded="false" aria-controls="header-search-form"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4.2-4.2"/></svg><span class="visually-hidden">Haku</span></button>
 <form id="header-search-form" class="site-search__form" action="{esc(SEARCH_ACTION)}" method="get" role="search" aria-label="Etsi uutisia" aria-describedby="header-search-note"{search_form_extra}>
@@ -1880,6 +1891,7 @@ def render_site(store, output_dir, state_dir=None, public=False, include_ids=Non
     # byte-for-byte into the current assets namespace, so the CSS keeps resolving its
     # own nested images and the built site ships the exact audited bytes.
     static_root = ROOT / "static"
+    atomic_write(output_dir / "favicon.ico", (static_root / "favicon.ico").read_bytes())
     for sheet in sorted((static_root / "css").glob("*.css")):
         atomic_write(output_dir / assets / "css" / sheet.name, sheet.read_bytes())
     for source_image in sorted((static_root / "images").rglob("*")):
