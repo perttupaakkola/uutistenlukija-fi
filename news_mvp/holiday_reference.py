@@ -79,5 +79,6 @@ def render(now, page, public, snapshot=None):
         answer = 'Vuoden 2026 ohjelma on päättynyt. Tämä päivätty arkisto säilyttää kuuden toiminnan vertailun Helsingistä, Vantaalta ja Kuopiosta; se ei ole tulevan loman ohjelma.'
     guide = dict(path=PATH, title=title, answer=answer, description=answer,
                  source=SOURCES[0], source_label=SOURCE_LABELS[0], sections=sections,
-                 related=(('/oppaat/', 'Syyslomaohjelmat ja muut käytännön oppaat'),))
+                 related=(('/oppaat/talvirenkaat-2026/', 'Autolla syyslomalle: tarkista talvirengassäännöt'),
+                          ('/oppaat/#oppaat-ajokeli-title', 'Tarkista ajokeli ja tiesää ennen lähtöä')))
     return render_guide(guide, page, public, snapshot)

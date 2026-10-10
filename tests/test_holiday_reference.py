@@ -82,3 +82,12 @@ class HolidayReference(unittest.TestCase):
         self.assertNotIn('rel="canonical"',text)
         self.assertNotIn('application/ld+json',text)
         self.assertEqual(utility_guides.GUIDE_PATHS,('/oppaat/kellojen-siirto-2026/','/oppaat/talvirenkaat-2026/','/oppaat/palovaroittimen-tarkistus/'))
+
+    def test_holiday_travel_links_discover_existing_guides_without_new_claims(self):
+        for now in (NOW, datetime.fromisoformat('2026-10-20T12:00:00+03:00')):
+            text = reference.render(now, site.page, True)
+            self.assertIn('href="/oppaat/talvirenkaat-2026/"', text)
+            self.assertIn('href="/oppaat/#oppaat-ajokeli-title"', text)
+            self.assertIn('href="/oppaat/">Kaikki oppaat', text)
+            self.assertEqual(text.count('<dl>'), 6)
+            self.assertIn('Tiedot tarkistettu 9.10.2026', text)
