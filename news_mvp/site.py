@@ -1124,6 +1124,7 @@ def listing_page_html(page_items, page_number, page_count, archive_items=None, s
             'Palvelin: news.gwene.org. Ryhmä: gwene.fi.uutistenlukija.</p></section>'
             + '<section class="portal-most-read portal-guides-rail" aria-labelledby="front-guides-title">'
             '<h2 id="front-guides-title">Ajankohtaiset oppaat</h2><ol>'
+            '<li><a href="/oppaat/influenssarokotus-2026/">Influenssarokotus 2026: alkamispäivät alueittain</a></li>'
             '<li><a href="/oppaat/kellojen-siirto-2026/">Kellojen siirto 25. lokakuuta 2026</a></li>'
             '<li><a href="/oppaat/talvirenkaat-2026/">Talvirenkaat 2026: milloin ne pitää vaihtaa?</a></li>'
             '<li><a href="/syysloma-2026/">Syysloma 2026: maksutonta tekemistä kaupungeittain</a></li>'
