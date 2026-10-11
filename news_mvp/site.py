@@ -1128,6 +1128,7 @@ def listing_page_html(page_items, page_number, page_count, archive_items=None, s
             '<li><a href="/oppaat/talvirenkaat-2026/">Talvirenkaat 2026: milloin ne pitää vaihtaa?</a></li>'
             '<li><a href="/syysloma-2026/">Syysloma 2026: maksutonta tekemistä kaupungeittain</a></li>'
             '<li><a href="/oppaat/palovaroittimen-tarkistus/">Palovaroittimen tarkistus</a></li>'
+            '<li><a href="/oppaat/liputuspaivat-2026/">Liputuspäivät loppuvuonna 2026</a></li>'
             '</ol></section>'
             + frontpage.markets(snapshot) + '</aside>')
     grid_label = ' aria-labelledby="front-lead-title"' if lead_html else ""
