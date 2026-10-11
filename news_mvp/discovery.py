@@ -139,12 +139,16 @@ def verify_modis_intake(packet, state_dir):
 def discover_mixed(config,now=None,excluded=(),errors=None,after_provider=None,recent_categories=()):
     from .official import (discover as official_discover, PROVIDER_ORDER,
                            POLICE_PROVIDERS, active_police_providers)
+    from .data_sources import FAMILIES as DATA_FAMILIES, discover_family
     errors=errors if errors is not None else []
     now=now or datetime.now(timezone.utc)
     limit=config['discovery'].get('max_candidates',5)
     if type(limit) is not int or not 1<=limit<=5:raise ValueError('Discovery limit must be 1–5')
     # One shared order, so a newly registered provider cannot be silently skipped here.
-    order=list(PROVIDER_ORDER)
+    # Structured families are separate round-robin members, but each performs exactly one
+    # bounded feed/API fetch.  Together they therefore add at most two discovery calls per
+    # tick and leave the reviewed global fetch ceiling unchanged.
+    order=list(PROVIDER_ORDER)+list(DATA_FAMILIES)
     if after_provider in order:
         i=order.index(after_provider)+1;order=order[i:]+order[:i]
     pools={}
@@ -156,6 +160,8 @@ def discover_mixed(config,now=None,excluded=(),errors=None,after_provider=None,r
         try:
             if provider=='nasa-modis':
                 pools[provider]=discover({**config,'discovery':{'family':'nasa-modis','max_candidates':max(limit,3)}},now,excluded)
+            elif provider in DATA_FAMILIES:
+                pools[provider]=discover_family(provider,now,excluded)
             else:
                 pools[provider]=official_discover(config,now,excluded,errors,provider_only=provider)
         except (ValueError,OSError) as error:

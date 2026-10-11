@@ -1,0 +1,55 @@
+{
+  "type": "FeatureCollection",
+  "dataUpdatedTime": "2026-10-08T18:59:11.217Z",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "situationId": "GUID50472054",
+        "situationType": "traffic announcement",
+        "trafficAnnouncementType": "general",
+        "version": 1,
+        "releaseTime": "2026-10-08T18:59:11.217Z",
+        "versionTime": "2026-10-08T18:59:11.203Z",
+        "announcements": [{
+          "language": "fi",
+          "title": "Tie 16, Lapua. Liikennetiedote. ",
+          "location": {"description": "Tie 16 välillä Ylistaro - Kyyjärvi, Lapua.\nTarkempi paikka: Paikasta Viemerö 6,3 km, vaikutusalue 5,6 km, suuntaan Lapua."},
+          "locationDetails": {"roadAddressLocation": {"primaryPoint": {"municipality": "Lapua", "province": "Etelä-Pohjanmaa", "country": "Suomi", "roadAddress": {"road": 16, "roadSection": 11, "distance": 12}}, "secondaryPoint": {"municipality": "Lapua", "province": "Etelä-Pohjanmaa", "country": "Suomi", "roadAddress": {"road": 16, "roadSection": 13, "distance": 1375}}, "direction": "unknown"}},
+          "features": [{"name": "Tie on suljettu liikenteeltä"}, {"name": "Tapahtumapaikalla on käytössä kiertotie"}],
+          "roadWorkPhases": [],
+          "comment": "Kiertotie käytössä Simpsiöntien kautta.",
+          "timeAndDuration": {"startTime": "2026-10-08T18:56:00.000Z", "estimatedDuration": {"minimum": "PT1H", "maximum": "PT3H", "informal": "1 - 3 tuntia"}},
+          "additionalInformation": "Liikenne- ja kelitiedot verkossa: https://liikennetilanne.fintraffic.fi/",
+          "sender": "Fintraffic Tieliikennekeskus"
+        }]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "situationId": "GUID50471971",
+        "situationType": "TRAFFIC_ANNOUNCEMENT",
+        "trafficAnnouncementType": "GENERAL",
+        "version": 1,
+        "releaseTime": "2026-10-07T07:16:37.191Z",
+        "versionTime": "2026-10-07T07:16:37.173Z",
+        "announcements": [{
+          "language": "FI",
+          "title": "Tie 1821, Turku. Liikennetiedote. ",
+          "location": {"description": "Tie 1821 välillä Uudenmaankatu - Kakskerta, Turku.\nTarkempi paikka: Välillä Hirvensalon silta - Perämiehenkatu. Hirvensalon puistotien ja Vähäheikkiläntien risteys."},
+          "locationDetails": {"roadAddressLocation": {"primaryPoint": {"municipality": "Turku", "province": "Varsinais-Suomi", "country": "Suomi", "roadAddress": {"road": 1821, "roadSection": 2, "distance": 0}}, "direction": "BOTH"}},
+          "features": [{"name": "Liikennejärjestelyt ovat muuttuneet"}, {"name": "Liikenne ruuhkautuu"}],
+          "roadWorkPhases": [],
+          "comment": "Tienrakennustyö.",
+          "timeAndDuration": {"startTime": "2026-10-07T07:00:00Z", "endTime": "2026-11-30T13:00:00Z"},
+          "additionalInformation": "Liikenne- ja kelitiedot verkossa: https://liikennetilanne.fintraffic.fi/",
+          "sender": "Fintraffic Tieliikennekeskus"
+        }],
+        "dataUpdatedTime": "2026-10-07T07:16:51Z"
+      }
+    }
+  ]
+}

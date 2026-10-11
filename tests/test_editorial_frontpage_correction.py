@@ -65,7 +65,8 @@ class EditorialFrontpageCorrection(unittest.TestCase):
         def official(*args,provider_only=None,**kwargs):
             return [{'provider':provider_only,'url':'https://example.test/'+provider_only}]
         with patch('news_mvp.official.discover',side_effect=official), patch(
-                'news_mvp.discovery.discover',return_value=[{'provider':'nasa-modis','url':'https://example.test/nasa'}]):
+                'news_mvp.discovery.discover',return_value=[{'provider':'nasa-modis','url':'https://example.test/nasa'}]), patch(
+                'news_mvp.data_sources.discover_family', return_value=[]):
             ordinary = discover_mixed(config,after_provider='nasa-modis')
             guarded = discover_mixed(config,after_provider='nasa-modis',recent_categories=['Kotimaa']*4)
         self.assertEqual(ordinary[0]['provider'],'helsinki')

@@ -9,6 +9,7 @@ from .controller import (backfill_missing_images, has_missing_images, hermes_mod
 from .editorial import ROOT, digest, web_url
 from .intake import collect
 from .discovery import discover,collect_modis
+from .data_sources import FAMILIES as DATA_FAMILIES, collect as collect_data
 from .publish import ensure_table, publish, guard, unresolved_site_refreshes
 from .store import database
 
@@ -109,6 +110,14 @@ def live_tick(config_path):
             collection_excluded=store.collection_failure_urls(time.time())
             if config.get('discovery',{}).get('family')=='news-reviewed-v2':
                 excluded=collection_excluded|{r[0] for r in store.db.execute("SELECT source_url FROM jobs WHERE status IN ('rejected','failed') OR id IN (SELECT job_id FROM publications WHERE status IN ('deployed','failed'))")}
+                # FMI groups share one reader-facing warning page, so URL-only exclusion
+                # would suppress every other date/type group after the first publication.
+                # Carry exact story keys as well; ordinary URL-keyed sources are unchanged.
+                for row in store.db.execute(
+                        "SELECT packet FROM jobs WHERE status IN ('rejected','failed') OR "
+                        "id IN (SELECT job_id FROM publications WHERE status IN ('deployed','failed'))"):
+                    try: excluded.add(json.loads(row[0])['story_key'])
+                    except (TypeError,ValueError,KeyError): pass
                 last=store.db.execute('SELECT packet FROM jobs ORDER BY created_at DESC,rowid DESC LIMIT 1').fetchone()
                 previous=json.loads(last[0]) if last else {}
                 after=previous.get('publication_basis',{}).get('provider') or ('nasa-modis' if previous.get('sources') and 'nasa.gov' in previous['sources'][0]['url'] else None)
@@ -123,8 +132,11 @@ def live_tick(config_path):
             else:recipes+=discover(config)
             seen=set()
             for recipe in recipes:
-                if web_url(recipe['url']) in collection_excluded:continue
-                job_id=digest('url:'+web_url(recipe['url']))
+                identity=recipe.get('story_key','url:'+web_url(recipe['url']))
+                failure_key=(recipe.get('failure_url',web_url(recipe['url']))
+                             if recipe.get('family') in DATA_FAMILIES else web_url(recipe['url']))
+                if failure_key in collection_excluded:continue
+                job_id=digest(identity)
                 publication=store.db.execute('SELECT * FROM publications WHERE job_id=?',(job_id,)).fetchone()
                 if job_id in seen:continue
                 seen.add(job_id)
@@ -136,7 +148,8 @@ def live_tick(config_path):
                     if config.get('authorization_mode','migration')=='migration' and cap is not None:
                         if store.db.execute("SELECT count(*) FROM publications WHERE status='deployed'").fetchone()[0]>=cap:continue
                     try:
-                        collector=collect_modis if recipe.get('family')=='nasa-modis' else collect
+                        collector=(collect_modis if recipe.get('family')=='nasa-modis' else
+                                   collect_data if recipe.get('family') in DATA_FAMILIES else collect)
                         # Related-coverage search turns the single-source packet into a
                         # multi-source one so the writer synthesises instead of restating one
                         # publisher. Best-effort by design: no searcher (or a failing one)
@@ -150,10 +163,10 @@ def live_tick(config_path):
                     except (ValueError,OSError) as error:
                         provider=recipe.get('provider',recipe.get('family','explicit'))
                         detail=safe_error(error)
-                        store.record_collection_failure(recipe['url'],provider,detail,time.time())
+                        store.record_collection_failure(failure_key,provider,detail,time.time())
                         errors.append({'provider':provider,'stage':'collection','url':recipe['url'],'error':detail})
                         continue
-                    store.clear_collection_failure(recipe['url'])
+                    store.clear_collection_failure(failure_key)
                     admission=ingest(config,packet)
                     if admission['id']!=job_id:raise ValueError('Source identity mismatch')
                     job=store.get(job_id)

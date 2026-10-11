@@ -16,6 +16,38 @@ PERMANENT_COLLECTION_ERRORS = (
     "title mismatch",
 )
 
+JOBS_SCHEMA = """(
+        id TEXT PRIMARY KEY, story_key TEXT NOT NULL UNIQUE,
+        source_url TEXT NOT NULL, packet TEXT NOT NULL,
+        status TEXT NOT NULL DEFAULT 'ready', attempts INTEGER NOT NULL DEFAULT 0,
+        next_attempt REAL NOT NULL DEFAULT 0, draft TEXT, review TEXT,
+        adapter TEXT, created_at TEXT NOT NULL, error TEXT
+    )"""
+
+
+def _allow_shared_source_urls(db):
+    """Remove the legacy URL uniqueness while preserving story-key deduplication.
+
+    Structured FMI groups intentionally cite the same official warning page.  Existing
+    URL-keyed sources remain deduplicated because their story key is ``url:<source>``.
+    """
+    unique_source = False
+    for index in db.execute("PRAGMA index_list('jobs')"):
+        if index[2] and [row[2] for row in db.execute(f"PRAGMA index_info('{index[1]}')")] == ['source_url']:
+            unique_source = True
+            break
+    if not unique_source:
+        return
+    if db.execute("SELECT 1 FROM sqlite_master WHERE name='jobs_shared_url_transition'").fetchone():
+        raise ValueError('Unresolved jobs source-URL migration')
+    with db:
+        db.execute('CREATE TABLE jobs_shared_url_transition '+JOBS_SCHEMA)
+        db.execute("INSERT INTO jobs_shared_url_transition "
+                   "(id,story_key,source_url,packet,status,attempts,next_attempt,draft,review,adapter,created_at,error) "
+                   "SELECT id,story_key,source_url,packet,status,attempts,next_attempt,draft,review,adapter,created_at,error FROM jobs")
+        db.execute('DROP TABLE jobs')
+        db.execute('ALTER TABLE jobs_shared_url_transition RENAME TO jobs')
+
 
 @contextmanager
 def database(state_dir):
@@ -24,13 +56,8 @@ def database(state_dir):
     db.row_factory = sqlite3.Row
     db.execute("PRAGMA journal_mode=WAL")
     db.execute("PRAGMA synchronous=FULL")
-    db.execute("""CREATE TABLE IF NOT EXISTS jobs (
-        id TEXT PRIMARY KEY, story_key TEXT NOT NULL UNIQUE,
-        source_url TEXT NOT NULL UNIQUE, packet TEXT NOT NULL,
-        status TEXT NOT NULL DEFAULT 'ready', attempts INTEGER NOT NULL DEFAULT 0,
-        next_attempt REAL NOT NULL DEFAULT 0, draft TEXT, review TEXT,
-        adapter TEXT, created_at TEXT NOT NULL, error TEXT
-    )""")
+    db.execute("CREATE TABLE IF NOT EXISTS jobs "+JOBS_SCHEMA)
+    _allow_shared_source_urls(db)
     db.execute("""CREATE TABLE IF NOT EXISTS collection_failures (
         url TEXT PRIMARY KEY, provider TEXT NOT NULL, error TEXT NOT NULL,
         first_seen REAL NOT NULL, last_seen REAL NOT NULL,
@@ -50,13 +77,20 @@ class Store:
     def admit(self, packet, created_at):
         identity = digest(packet["story_key"])
         primary = web_url(packet["sources"][0]["url"])
+        shared_fmi_page = (packet["story_key"].startswith('fmi-warning:') and
+                           primary == 'https://www.ilmatieteenlaitos.fi/varoitukset')
         with self.db:
-            self.db.execute("""INSERT OR IGNORE INTO jobs
+            row = self.db.execute(
+                "SELECT id FROM jobs WHERE story_key=? OR (?=0 AND source_url=?)",
+                (packet["story_key"], int(shared_fmi_page), primary)).fetchone()
+            if row is not None:
+                return row["id"], False
+            self.db.execute("""INSERT INTO jobs
                 (id, story_key, source_url, packet, created_at) VALUES (?, ?, ?, ?, ?)""",
                 (identity, packet["story_key"], primary, encode(packet), created_at))
-            added = self.db.execute("SELECT changes()").fetchone()[0] == 1
-            row = self.db.execute("SELECT id FROM jobs WHERE story_key=? OR source_url=?",
-                                  (packet["story_key"], primary)).fetchone()
+            added = True
+            row = self.db.execute("SELECT id FROM jobs WHERE story_key=?",
+                                  (packet["story_key"],)).fetchone()
         return row["id"], added
 
     def record_collection_failure(self, url, provider, error, now=None):

@@ -229,5 +229,41 @@
       "license": "Poliisi.fi-sivuston käyttöehdot: tekstiaineiston käyttö ja linkitys sallittu hyvän tavan mukaisissa asiayhteyksissä lähde mainiten; kaupallinen, poliittinen ja uskonnollinen käyttö kielletty; kuvien käyttö edellyttää lupaa",
       "license_url": "https://poliisi.fi/tietoa-sivustosta"
     }
+  },
+  "data_providers": {
+    "fmi-warnings": {
+      "publisher": "Ilmatieteen laitos",
+      "index": "https://alerts.fmi.fi/cap/feed/atom_fi-FI.xml",
+      "source_url": "https://www.ilmatieteenlaitos.fi/varoitukset",
+      "rights_url": "https://www.ilmatieteenlaitos.fi/avoin-data-lisenssi",
+      "hosts": [
+        "alerts.fmi.fi",
+        "www.ilmatieteenlaitos.fi"
+      ],
+      "article_pattern": "https://www\\.ilmatieteenlaitos\\.fi/varoitukset",
+      "story_key_pattern": "fmi-warning:\\d{4}-\\d{2}-\\d{2}:[A-Za-z0-9_-]+:(?:Minor|Moderate|Severe|Extreme)",
+      "rights_text_sha256": "f7d093c5b5f635c652eb42f7e98715163169b6ca14289745b8cfe9b7405ca838",
+      "license": "Creative Commons Nimeä 4.0 Kansainvälinen (CC BY 4.0)",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "notice": "Lähde: Ilmatieteen laitos, CC BY 4.0",
+      "text_only": true
+    },
+    "fintraffic-traffic": {
+      "publisher": "Fintraffic / Digitraffic",
+      "index": "https://tie.digitraffic.fi/api/traffic-message/v1/messages?situationType=TRAFFIC_ANNOUNCEMENT&inactiveHours=0",
+      "source_url_pattern": "https://tie\\.digitraffic\\.fi/api/traffic-message/v1/messages/[A-Za-z0-9_-]+",
+      "rights_url": "https://www.digitraffic.fi/kayttoehdot/",
+      "hosts": [
+        "tie.digitraffic.fi",
+        "www.digitraffic.fi"
+      ],
+      "article_pattern": "https://tie\\.digitraffic\\.fi/api/traffic-message/v1/messages/[A-Za-z0-9_-]+",
+      "story_key_pattern": "fintraffic-traffic:[A-Za-z0-9_-]+",
+      "rights_text_sha256": "ed4014c993a133c462cdf4fb66e2145c4cb1f918a9eaee1e02ab1232df8c3747",
+      "license": "Creative Commons 4.0 Nimeä (CC BY 4.0)",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "notice": "Liikennetietojen lähde Fintraffic / digitraffic.fi, lisenssi CC 4.0 BY",
+      "text_only": true
+    }
   }
 }

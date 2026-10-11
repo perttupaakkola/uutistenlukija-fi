@@ -707,7 +707,9 @@ def media(packet, draft, policy_gate=True):
         raise ValueError('Missing exact text-only policy')
     if basis.get('policy') != TEXT_POLICY:
         raise ValueError('Missing exact text-only policy')
-    provider = spec['providers'].get(basis.get('provider'))
+    provider_key = basis.get('provider')
+    provider = spec['providers'].get(provider_key) or spec.get('data_providers',{}).get(provider_key)
+    structured = provider_key in spec.get('data_providers',{})
     sources = packet.get('sources', [])
     if provider is None or not sources:
         raise ValueError('Unapproved text-only provider/source count')
@@ -721,8 +723,12 @@ def media(packet, draft, policy_gate=True):
     if 'primary_data' in basis:
         if basis['provider'] != 'stat': raise ValueError('Wrong primary-data provider')
         validate_binding(basis['primary_data'])
-    if (not re.fullmatch(provider['article_pattern'], source['url']) or
-        packet['story_key'] != 'url:'+source['url'] or source['publisher'] != provider['publisher']):
+    identity_ok = (packet['story_key'] == basis.get('story_key') and
+                   re.fullmatch(provider.get('story_key_pattern',''), packet['story_key'])) if structured else (
+                   packet['story_key'] == 'url:'+source['url'])
+    if (not re.fullmatch(provider['article_pattern'], source['url']) or not identity_ok or
+            source['publisher'] != provider['publisher'] or
+            (structured and basis.get('source_endpoint') != provider['index'])):
         raise ValueError('Source/reuse policy mismatch')
     # The reuse record is policy-coupled: it is generated from the provider's declared licence,
     # so editing a provider's terms (or adding one) changes it for every historical article.
@@ -825,6 +831,9 @@ def verify_intake(packet, state, *, archive_image_only=False):
     if (not directory.is_dir() and isinstance(packet.get('image'), dict) and
             (packet['image'].get('generated') is True or stock is not None)):
         directory, intake_packet = _original_intake(packet, Path(state)/'intake')
+    if provider in policy().get('data_providers', {}):
+        from .data_sources import verify_intake as verify_data_intake
+        return verify_data_intake(packet, directory, intake_packet)
     raw = (directory/'source.html').read_bytes();rights = (directory/'rights.html').read_bytes()
     if hashlib.sha256(raw).hexdigest() != basis['source_sha256'] or hashlib.sha256(rights).hexdigest() != packet['supporting_documents'][0]['sha256']:
         raise ValueError('Captured intake bytes changed')

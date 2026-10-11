@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Captured from FMI's Finnish fat Atom feed on 2026-10-10; polygons and non-Finnish info blocks omitted. -->
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="fi-FI">
+  <title>Ilmatieteen laitoksen varoitukset</title>
+  <link rel="related" href="https://www.ilmatieteenlaitos.fi/varoitukset" hreflang="fi-FI" />
+  <link rel="self" href="https://alerts.fmi.fi/cap/feed/atom_fi-FI.xml" />
+  <rights>Copyright Finnish Meteorological Institute. Licensed under Creative Commons BY 4.0</rights>
+  <updated>2026-10-10T21:16:19Z</updated>
+  <entry><content type="text/xml"><alert xmlns="urn:oasis:names:tc:emergency:cap:1.2">
+    <identifier>urn:oid:2.49.0.1.246.0.0.2026.24441379.16213915911002458925468585852291840498</identifier>
+    <sender>urn:oid:2.49.0.0.246.0</sender><sent>2026-10-11T00:16:19+03:00</sent><status>Actual</status><msgType>Update</msgType><scope>Public</scope>
+    <info><language>fi-FI</language><category>Met</category><event>Tuulivaroitus merelle</event><urgency>Future</urgency><severity>Moderate</severity><certainty>Likely</certainty>
+      <eventCode><valueName>profile:cap:https://alerts.fmi.fi/cap/profile/v1.1.0</valueName><value>seaWind</value></eventCode>
+      <onset>2026-10-11T18:00:00+03:00</onset><expires>2026-10-12T06:00:00+03:00</expires><senderName>Ilmatieteen laitos</senderName>
+      <headline>Keltainen tuulivaroitus merelle: Paikoin kaikki merialueet, su 18.00 - ma 6.00</headline>
+      <description>Kovan tuulen varoitus: Itätuulta illasta alkaen 14 m/s.</description><web>https://www.ilmatieteenlaitos.fi/varoitukset</web>
+      <parameter><valueName>color</valueName><value>yellow</value></parameter><parameter><valueName>typicalImpacts</valueName><value>Vaarallinen huviveneille.</value></parameter>
+      <area><areaDesc>Ahvenanmeri</areaDesc></area><area><areaDesc>Selkämeren eteläosa</areaDesc></area><area><areaDesc>Pohjois-Itämeren itäosa</areaDesc></area><area><areaDesc>Pohjois-Itämeren länsiosa</areaDesc></area>
+    </info>
+  </alert></content></entry>
+  <entry><content type="text/xml"><alert xmlns="urn:oasis:names:tc:emergency:cap:1.2">
+    <identifier>urn:oid:2.49.0.1.246.0.0.2026.24441379.324947462204479679472518381564433220258</identifier>
+    <sender>urn:oid:2.49.0.0.246.0</sender><sent>2026-10-11T00:16:19+03:00</sent><status>Actual</status><msgType>Update</msgType><scope>Public</scope>
+    <info><language>fi-FI</language><category>Met</category><event>Tuulivaroitus merelle</event><urgency>Future</urgency><severity>Moderate</severity><certainty>Likely</certainty>
+      <eventCode><valueName>profile:cap:https://alerts.fmi.fi/cap/profile/v1.1.0</valueName><value>seaWind</value></eventCode>
+      <onset>2026-10-11T08:00:00+03:00</onset><expires>2026-10-12T00:00:00+03:00</expires><senderName>Ilmatieteen laitos</senderName>
+      <headline>Keltainen tuulivaroitus merelle: Selkämeren pohjoisosa ja Merenkurkku, su 8.00 - ma 0.00</headline>
+      <description>Huomautus veneilijöille: Idän ja koillisen välistä tuulta aamusta alkaen 11 m/s.</description><web>https://www.ilmatieteenlaitos.fi/varoitukset</web>
+      <parameter><valueName>color</valueName><value>yellow</value></parameter><parameter><valueName>typicalImpacts</valueName><value>Mahdollisesti vaarallinen huviveneille.</value></parameter>
+      <area><areaDesc>Merenkurkku</areaDesc></area><area><areaDesc>Selkämeren pohjoisosa</areaDesc></area>
+    </info>
+  </alert></content></entry>
+  <entry><content type="text/xml"><alert xmlns="urn:oasis:names:tc:emergency:cap:1.2">
+    <identifier>urn:oid:2.49.0.1.246.0.0.2026.24441379.300152209304508914173479949241629927542</identifier>
+    <sender>urn:oid:2.49.0.0.246.0</sender><sent>2026-10-11T00:16:19+03:00</sent><status>Actual</status><msgType>Update</msgType><scope>Public</scope>
+    <info><language>fi-FI</language><category>Met</category><event>Liikennesää</event><urgency>Future</urgency><severity>Moderate</severity><certainty>Likely</certainty>
+      <eventCode><valueName>profile:cap:https://alerts.fmi.fi/cap/profile/v1.1.0</valueName><value>trafficWeather</value></eventCode>
+      <onset>2026-10-11T04:00:00+03:00</onset><expires>2026-10-11T12:00:00+03:00</expires><senderName>Ilmatieteen laitos</senderName>
+      <headline>Keltainen liikennesää: Etelä-Pohjanmaa, su 4.00 - 12.00</headline><description>Liikennesää: Ajokeli on huono aluksi räntäsateen vuoksi.</description>
+      <web>https://www.ilmatieteenlaitos.fi/varoitukset</web><parameter><valueName>color</valueName><value>yellow</value></parameter><area><areaDesc>Etelä-Pohjanmaa</areaDesc></area>
+    </info>
+  </alert></content></entry>
+  <entry><content type="text/xml"><alert xmlns="urn:oasis:names:tc:emergency:cap:1.2">
+    <identifier>urn:oid:2.49.0.1.246.0.0.2026.24441379.239678687074748973165834933843391247088</identifier>
+    <sender>urn:oid:2.49.0.0.246.0</sender><sent>2026-10-11T00:16:19+03:00</sent><status>Actual</status><msgType>Update</msgType><scope>Public</scope>
+    <info><language>fi-FI</language><category>Met</category><event>Tuulivaroitus merelle</event><urgency>Future</urgency><severity>Moderate</severity><certainty>Possible</certainty>
+      <eventCode><valueName>profile:cap:https://alerts.fmi.fi/cap/profile/v1.1.0</valueName><value>seaWind</value></eventCode>
+      <onset>2026-10-12T06:00:00+03:00</onset><expires>2026-10-12T21:00:00+03:00</expires><senderName>Ilmatieteen laitos</senderName>
+      <headline>Keltainen tuulivaroitus merelle: Suomenlahti, ma 6.00 - 21.00</headline><description>Kovan tuulen varoitus: Kovan idän ja koillisen välisen tuulen todennäköisyys on 30 % maanantaiaamusta maanantai-iltaan.</description>
+      <web>https://www.ilmatieteenlaitos.fi/varoitukset</web><parameter><valueName>color</valueName><value>yellow</value></parameter><area><areaDesc>Suomenlahden länsiosa</areaDesc></area><area><areaDesc>Suomenlahden itäosa</areaDesc></area>
+    </info>
+  </alert></content></entry>
+</feed>

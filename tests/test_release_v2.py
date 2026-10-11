@@ -157,7 +157,7 @@ class ReleaseV2(unittest.TestCase):
             # Helsinki serves a usable feed; every other provider has a source-local outage.
             if url=='https://www.hel.fi/fi/uutiset/rss':return raw
             raise OSError('source-local outage')
-        with patch('news_mvp.discovery.fetch',side_effect=OSError('NASA unavailable')),patch.object(official,'response',side_effect=response):rows=discover(self.config,self.now,excluded,errors,after_provider='stat')
+        with patch('news_mvp.discovery.fetch',side_effect=OSError('NASA unavailable')),patch.object(official,'response',side_effect=response),patch('news_mvp.data_sources.discover_family',return_value=[]):rows=discover(self.config,self.now,excluded,errors,after_provider='stat')
         self.assertEqual(rows[0]['url'],'https://www.hel.fi/fi/uutiset/a5')
         self.assertEqual({r['url'] for r in rows},{'https://www.hel.fi/fi/uutiset/a5','https://www.hel.fi/fi/uutiset/a6','https://www.hel.fi/fi/uutiset/a7'})
         # Every non-Helsinki provider fails for its own reason; assert the set is exactly the
@@ -186,7 +186,7 @@ class ReleaseV2(unittest.TestCase):
         with database(self.state) as store:
             store.db.execute("INSERT INTO publications(job_id,packet_sha,draft_sha,image_sha,source_commit,status) VALUES(?,?,?,NULL,?,'deployed')",(job['id'],digest(self.packet),digest(self.draft),COMMIT));store.db.commit()
         feed=('<rss><channel><item><link>'+self.url+'</link><pubDate>'+self.now.strftime('%a, %d %b %Y %H:%M:%S +0000')+'</pubDate></item></channel></rss>').encode()
-        with patch('news_mvp.publish.cmd',side_effect=self.shell([])),patch('news_mvp.discovery.fetch',return_value=(b'<html></html>','text/html','https://modis.gsfc.nasa.gov/gallery/showall.php')),patch.object(official,'response',side_effect=lambda url,hosts:feed if url.endswith('/rss') else b'<main></main>'),patch('news_mvp.controller.HermesModel',side_effect=AssertionError('duplicate model')),patch('news_mvp.live.publish',side_effect=AssertionError('duplicate publication')):
+        with patch('news_mvp.publish.cmd',side_effect=self.shell([])),patch('news_mvp.discovery.fetch',return_value=(b'<html></html>','text/html','https://modis.gsfc.nasa.gov/gallery/showall.php')),patch.object(official,'response',side_effect=lambda url,hosts:feed if url.endswith('/rss') else b'<main></main>'),patch('news_mvp.data_sources.discover_family',return_value=[]),patch('news_mvp.controller.HermesModel',side_effect=AssertionError('duplicate model')),patch('news_mvp.live.publish',side_effect=AssertionError('duplicate publication')):
             self.assertEqual(live_tick(self.cfg),{'status':'idle','publications':1})
     def test_actual_consumers_reject_wrong_policy_receipt_and_missing_image(self):
         job=self.ready()
@@ -199,15 +199,15 @@ class ReleaseV2(unittest.TestCase):
         (site/f'mvp-assets/{sha}.jpg').unlink()
         with self.assertRaises(ValueError):check(site,receipt)
     def test_provider_rotation_and_source_failure_reports(self):
-        with patch('news_mvp.discovery.fetch',side_effect=OSError('nasa outage')),patch.object(official,'response',side_effect=OSError('official outage')):
+        with patch('news_mvp.discovery.fetch',side_effect=OSError('nasa outage')),patch.object(official,'response',side_effect=OSError('official outage')),patch('news_mvp.data_sources.discover_family',side_effect=OSError('data outage')):
             errors=[];self.assertEqual(discover(self.config,self.now,errors=errors),[])
             self.assertEqual(len(errors), len(official.PROVIDER_ORDER) -
-                             len(official.POLICE_PROVIDERS) + official.POLICE_FEEDS_PER_TICK)
-        with patch('news_mvp.discovery.fetch',return_value=(b'not html','application/json','https://modis.gsfc.nasa.gov/gallery/showall.php')),patch.object(official,'response',return_value=b'<rss><channel/></rss>'):
+                             len(official.POLICE_PROVIDERS) + official.POLICE_FEEDS_PER_TICK + 2)
+        with patch('news_mvp.discovery.fetch',return_value=(b'not html','application/json','https://modis.gsfc.nasa.gov/gallery/showall.php')),patch.object(official,'response',return_value=b'<rss><channel/></rss>'),patch('news_mvp.data_sources.discover_family',return_value=[]):
             errors=[];discover(self.config,self.now,errors=errors);self.assertIn('nasa-modis',{e['provider'] for e in errors})
         nasa=b'<a href="individual.php?db_date='+self.now.date().isoformat().encode()+b'">story</a>'
         feed=('<rss><channel><item><link>'+self.url+'</link><pubDate>'+self.now.strftime('%a, %d %b %Y %H:%M:%S +0000')+'</pubDate></item></channel></rss>').encode()
-        with patch('news_mvp.discovery.fetch',return_value=(nasa,'text/html','https://modis.gsfc.nasa.gov/gallery/showall.php')),patch.object(official,'response',side_effect=lambda url,hosts:feed if url.endswith('/rss') else b'<a href="/fi/julkaisu/test">story</a>'):
+        with patch('news_mvp.discovery.fetch',return_value=(nasa,'text/html','https://modis.gsfc.nasa.gov/gallery/showall.php')),patch.object(official,'response',side_effect=lambda url,hosts:feed if url.endswith('/rss') else b'<a href="/fi/julkaisu/test">story</a>'),patch('news_mvp.data_sources.discover_family',return_value=[]):
             for after,expected in [('nasa-modis','helsinki'),('helsinki','stat'),('stat','nasa-modis')]:
                 rows=discover(self.config,self.now,after_provider=after);self.assertEqual(rows[0].get('provider',rows[0]['family']),expected)
 

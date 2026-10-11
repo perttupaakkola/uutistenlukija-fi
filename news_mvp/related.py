@@ -41,6 +41,9 @@ BLOCKED_DOMAINS = (
     "facebook.com", "twitter.com", "x.com", "instagram.com", "tiktok.com",
     "youtube.com", "pinterest.com", "linkedin.com", "reddit.com",
     "wikipedia.org",  # not a news source; often mirrors the same press release
+    # Scraper/mirror sites that republish other outlets' stories without being a source.
+    "europesays.com", "newsbreak.com", "newsnow.co.uk", "msn.com", "ground.news",
+    "head-topics.com", "headtopics.com", "newsnow.com", "flipboard.com", "inkl.com",
 )
 
 # Finnish stopwords for building a search query out of a headline.
