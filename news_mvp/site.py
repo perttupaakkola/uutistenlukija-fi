@@ -704,12 +704,12 @@ def article_context_html(job, draft, articles, related_ids=()):
     if job.get("id") in GUIDES_JOB_IDS:
         from .holiday_reference import PATH as holiday_path, archived
         label = ("Syysloma 2026: maksuttoman tekemisen arkisto" if archived(ClockDateTime.now(timezone.utc))
-                 else "Syysloma 2026: vertaile seitsemää maksutonta tekemistä")
+                 else "Syysloma 2026: vertaile 12 maksutonta tekemistä")
         blocks.append(
             '<section class="article-context__block">'
             '<div class="article-context__head"><h2>Syysloman opas</h2></div>'
             f'<ul><li><a href="{holiday_path}"><span class="article-context__title">{label}</span>'
-            '<span class="article-context__meta">Helsinki, Vantaa, Kuopio ja Oulu · ajat, ikärajat ja ilmoittautuminen</span>'
+            '<span class="article-context__meta">Helsinki, Espoo, Vantaa, Tampere, Turku, Kuopio ja Oulu · ajat, ikärajat ja ilmoittautuminen</span>'
             '</a></li></ul></section>')
     if same_desk:
         blocks.append(

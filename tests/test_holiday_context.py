@@ -12,7 +12,7 @@ class HolidayContext(unittest.TestCase):
             body = self.context(job_id)
             self.assertEqual(body.count('href="/syysloma-2026/"'), 1)
             self.assertIn("Syysloman opas", body)
-            self.assertIn("Helsinki, Vantaa, Kuopio ja Oulu", body)
+            self.assertIn("Helsinki, Espoo, Vantaa, Tampere, Turku, Kuopio ja Oulu", body)
             self.assertNotIn("<time", body)
 
     def test_unrelated_and_prefix_stories_have_no_promotion(self):

@@ -35,7 +35,7 @@ class HolidayReference(unittest.TestCase):
             self.assertIn('<meta name="description"', text)
             for source in reference.SOURCES: self.assertIn('href="' + source + '"', text)
             for row in reference.ACTIVITIES: self.assertIn('<h2>' + row[0] + '</h2>', text)
-            self.assertEqual(text.count('<dl>'), 7)
+            self.assertEqual(text.count('<dl>'), 12)
             self.assertNotIn('<table', text)
             for fact in ('13.–15.10.2026 klo 13–15', 'alle kouluikäiset aikuisen seurassa',
                          'myyjäiset klo 11–15, konsertit klo 15.30 ja 17, lyhtyopastus klo 18',
@@ -89,7 +89,7 @@ class HolidayReference(unittest.TestCase):
             self.assertIn('href="/oppaat/talvirenkaat-2026/"', text)
             self.assertIn('href="/oppaat/#oppaat-ajokeli-title"', text)
             self.assertIn('href="/oppaat/">Kaikki oppaat', text)
-            self.assertEqual(text.count('<dl>'), 7)
+            self.assertEqual(text.count('<dl>'), 12)
             self.assertIn('Tiedot tarkistettu 9.10.2026', text)
 
     def test_oulu_offer_preserves_local_eligibility_and_exact_dates(self):
@@ -97,4 +97,13 @@ class HolidayReference(unittest.TestCase):
         for fact in ('Oulu: Biitsiareena', '19.–22.10.2026 klo 9–15', 'Äimäkuja 6', 'oululaisille lapsiperheille', 'Oulun tiedot tarkistettu 10.10.2026', 'https://www.ouka.fi/fiilis', 'Päivämäärät ratkaisevat'):
             self.assertIn(fact,text)
         self.assertFalse(reference.archived(datetime.fromisoformat('2026-10-19T12:00:00+03:00')))
-        self.assertIn('seitsemää',reference.discovery_html(NOW))
+        self.assertIn('12 maksutonta',reference.discovery_html(NOW))
+
+
+class HolidayCityExpansion(unittest.TestCase):
+    def test_espoo_tampere_turku_offers_keep_conditions(self):
+        text = reference.render(NOW, site.page, True)
+        for fact in ('Espoo: kaupungin uimahallit 7–17-vuotiaille', 'alle 10-vuotiaalla', 'Tampere: Tallin Taideperjantai Haiharan kartanolla',
+                     '16.10.2026 klo 14–17', 'K7', 'Turku: jättikasvisnäyttely', '3,50 €', 'Espoon, Tampereen ja Turun tiedot tarkistettu 11.10.2026',
+                     'https://www.espoo.fi/fi/tapahtumat/espooevents:agqljabk5m'):
+            self.assertIn(fact, text)
