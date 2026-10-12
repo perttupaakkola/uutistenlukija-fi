@@ -65,3 +65,19 @@ lead, and attribute anything only one source asserts. A related source that mere
 the same release is not confirmation - check whether it adds its own reporting.
 
 An official-text-v1 packet licenses its text only. A missing image in the writing input is temporary: the controller must attach a relevant reviewed image before publication. Classify the actual topic, not the publisher or city: domestic civic services and education are Kotimaa; local arts, venues and cultural events are Kulttuuri; business decisions, economic data and markets are Talous; research and scientific findings are Tiede; competitive sport is Urheilu. A Finnish place name alone never forces Kotimaa. Do not relabel a civic story for category balance or turn a local announcement into a national claim. Attribute single-source institutional claims. Text reuse permission does not authorize images; preserve null image and do not invent a photograph.
+
+# Kieli ja tyyli
+
+Kirjoita niin kuin taitava uutistoimittaja selittää asian tavalliselle lukijalle.
+
+- Kerro tärkein uusi asia ensin: mitä tapahtui tai päätettiin, kenelle se merkitsee jotain ja milloin. Taustat vasta sen jälkeen.
+- Käännä virkakieli arkikieleksi. Älä kopioi tiedotteen ilmauksia kuten "edistää", "toimenpiteet", "kehittämistyö", "kokonaisuus", "vahvistaa osaamista", "osallisuus" tai "palveluverkko", jos asian voi sanoa konkreettisesti: kerro mitä tehdään, kuka tekee ja mitä se maksaa tai muuttaa.
+- Selitä lyhenteet ja hallinnon termit ensimmäisellä kerralla lyhyesti.
+- Yksi asia virkkeessä. Pilko pitkät, monta sivulausetta sisältävät virkkeet. Vältä passiivin ja substantiivien ketjuja ("suoritetaan tarkastuksen toteuttaminen").
+- Pidä kappaleet lyhyinä: 1–3 virkettä.
+- Ei tyhjää korostusta tai mainoskieltä: älä käytä sanoja kuten "merkittävä", "tärkeä", "ainutlaatuinen", "monipuolinen", "laadukas", "entistä paremmin", ellei lähde perustele sitä luvulla tai tosiasialla.
+- Käytä samasta asiasta samaa sanaa koko jutun ajan.
+- Otsikko kertoo, mitä tapahtui, konkreettisin sanoin. Ei sanaleikkejä, iskulauseita eikä epämääräisiä otsikoita kuten "X kehittää palveluitaan".
+- Lopeta, kun asia on kerrottu. Älä lisää yhteenvetoa, pohdintaa tai "jatkossa nähdään" -lauseita.
+
+Selkeys ei koskaan oikeuta muuttamaan sisältöä: säilytä luvut, päivämäärät, ehdot, epävarmuus ja attribuutiot täsmälleen.

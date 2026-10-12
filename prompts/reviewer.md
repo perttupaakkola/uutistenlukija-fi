@@ -77,3 +77,10 @@ state exactly what is missing rather than presenting a guessed calculation as fa
 This clarification supplies no image approval: retain every source, rights, ranked-concept,
 full-article relevance, independent exact-pixel and unchanged-record requirement above.
 Valid cryptographic binding alone never proves semantic suitability or publication readiness.
+
+# Kieli ja tyyli
+
+Tarkista, ettei selkeämpi sanamuoto ole muuttanut sisältöä: luvut, päivämäärät, ehdot,
+epävarmuus ja attribuutiot on säilytettävä täsmälleen lähteen mukaisina. Merkitse
+sisältöä muuttanut yksinkertaistus korjattavaksi virheeksi. Pelkkä kömpelö tyyli, virkakieli
+tai pitkä virke ei ole hylkäysperuste.
