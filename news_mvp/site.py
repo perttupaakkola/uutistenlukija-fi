@@ -1130,6 +1130,7 @@ def listing_page_html(page_items, page_number, page_count, archive_items=None, s
             '<li><a href="/oppaat/pyhainpaiva-halloween-2026/">Pyhäinpäivä ja halloween 2026: la 31.10.</a></li>'
             '<li><a href="/oppaat/isanpaiva-2026/">Isänpäivä 2026: su 8.11., liputus ja lahjaideat</a></li>'
             '<li><a href="/oppaat/pikkujoulut-2026/">Pikkujoulut 2026: päivät, ideat ja verovapaus</a></li>'
+            '<li><a href="/oppaat/koulujen-loma-ajat-2026-2027/">Koulujen loma-ajat 2026–2027: joululoma ja hiihtoloma</a></li>'
             '<li><a href="/oppaat/sahkokatko/">Sähkökatko: mitä tehdä ja milloin saat korvauksen</a></li>'
             '<li><a href="/oppaat/talvirenkaat-2026/">Talvirenkaat 2026: milloin ne pitää vaihtaa?</a></li>'
             '<li><a href="/syysloma-2026/">Syysloma 2026: maksutonta tekemistä kaupungeittain</a></li>'
