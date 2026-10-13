@@ -379,9 +379,8 @@ main.container { padding-top: 0; padding-bottom: 48px; }
   gap: 24px;
   padding: 22px;
   border: 1px solid var(--portal-line);
-  border-left: 4px solid var(--portal-red);
   border-radius: 8px;
-  background: #f7f3ee;
+  background: #fff;
 }
 
 @media (max-width: 1180px) {
@@ -869,8 +868,6 @@ main.container { padding-top: 0; padding-bottom: 48px; }
   .portal-newsletter {
     padding: 18px;
     text-align: left;
-    background: #f7f3ee;
-    border-left: 4px solid var(--portal-red);
   }
   .portal-newsletter__icon { display: none; }
   .portal-newsletter h2 { font-size: 19px; }
