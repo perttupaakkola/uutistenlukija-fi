@@ -800,12 +800,9 @@ def reuse_rights_html(sources):
         short_label = short_license_label(license_url)
         license_label = short_label or "Käyttöehdot"
         body = (f'<strong>{esc(source["publisher"])}</strong>: '
-                f'<a href="{esc(reuse["url"])}">Lähde</a> · '
                 f'<a href="{esc(license_url or reuse["url"])}">{esc(license_label)}</a>')
         if short_label:
             body += ' · Muokattu ja tiivistetty.'
-        if reuse.get("notice"):
-            body += f' · {esc(reuse["notice"])}'
         rows.append(f'<li>{body}</li>')
     if not rows:
         return ""

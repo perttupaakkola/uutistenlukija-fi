@@ -1587,18 +1587,16 @@ def check_article(html,packet,draft,canonical=None):
                                       'final_review_result', 'version')):
         raise ValueError('Amendment article marker missing or unsupported')
     required=[draft['title'],draft['summary']]+[p['text'] for p in draft['paragraphs']]
+    from . import site
+    expected_reuse = site.reuse_rights_html(packet['sources'])
+    reuse_marker = '<section class="source-reuse">'
+    if expected_reuse:
+        if html.count(reuse_marker) != 1 or expected_reuse not in html:
+            raise ValueError('Public article differs from reviewed reuse attribution')
+    elif reuse_marker in html:
+        raise ValueError('Public article has unexpected reuse attribution')
     for source in packet['sources']:
         required.append(source['url'])
-        if source.get('reuse'):
-            required += [source['reuse']['url']]
-            from . import site
-            expected_reuse = site.reuse_rights_html([source])
-            expected_row = expected_reuse.split('<ul>', 1)[1].split('</ul>', 1)[0]
-            if expected_row not in html:
-                raise ValueError('Public article differs from reviewed reuse attribution')
-            if 'notice' in source['reuse']: required.append(source['reuse']['notice'])
-            if 'license_url' in source['reuse'] and ('href="'+esc(source['reuse']['license_url'])+'"') not in html:
-                raise ValueError('Missing direct reuse licence link')
     image=draft.get('image')
     if image is None:
         # 'Luonnos' as a bare word is not a marker: a cited source title can legitimately

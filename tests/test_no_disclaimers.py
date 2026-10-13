@@ -7,6 +7,8 @@ the About page only. Required image credits/licences and AI-image labels stay.
 import unittest
 from pathlib import Path
 
+from news_mvp import official, site
+
 ROOT = Path(__file__).resolve().parents[1]
 SOURCES = ["news_mvp/site.py", "news_mvp/frontpage.py", "news_mvp/utility_guides.py",
            "news_mvp/holiday_reference.py"]
@@ -24,6 +26,19 @@ class NoDisclaimerClutter(unittest.TestCase):
             text = (ROOT / rel).read_text()
             found += [f"{rel}: {phrase}" for phrase in BANNED if phrase in text]
         self.assertEqual(found, [])
+
+    def test_internal_reuse_notice_is_not_rendered_in_an_article(self):
+        provider = official.policy()["providers"]["poliisi-lansi-uusimaa"]
+        source = {
+            "publisher": provider["publisher"],
+            "reuse": official.reuse(provider),
+        }
+        article = '<article class="story single-article">' + site.reuse_rights_html([source]) + '</article>'
+        self.assertNotIn("Vain tekstiaineistoa", article)
+        self.assertNotIn("kuvia ei käytetä", article)
+        self.assertNotIn(">Lähde</a>", article)
+        self.assertIn(source["publisher"], article)
+        self.assertIn('>Käyttöehdot</a>', article)
 
 
 if __name__ == "__main__":

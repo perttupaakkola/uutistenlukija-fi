@@ -83,16 +83,20 @@ def mutations(html, paragraphs, packet, draft):
     yield 'duplicate_jsonld_key', html.replace('"datePublished":','"datePublished":"2000-01-01T00:00:00Z","datePublished":')
     sources = [dict(c['capture_source'],id=c['id']) for c in packet['final_review_input']['source_packet']['preparation']['citations']]
     yield 'reordered_sources', html.replace(site.source_list_html(sources),site.source_list_html(list(reversed(sources))))
-    yield 'wrong_text_license', html.replace(escape(sources[0]['reuse']['license']), 'Wrong text license')
-    yield 'wrong_text_changes', html.replace(escape(sources[0]['reuse']['changes']), 'Wrong changes')
     yield 'wrong_source_date', html.replace(site.time_html(sources[0]['published_at']),site.time_html('2000-01-01T00:00:00Z'))
     yield 'wrong_source_label', html.replace(escape(sources[0]['publisher'])+': '+escape(sources[0]['title']), 'Wrong source')
     yield 'paragraph_in_script', html.replace(paragraphs[0],'<script>'+paragraphs[0]+'</script>')
     yield 'relocated_body', html.replace('<div class="article-reading-main">','<div class="wrong-main">')
     yield 'extra_reading_prose', html.replace('<div class="content">','<p>Stale outside body</p><div class="content">')
     yield 'wrong_text_license_link', html.replace(escape(sources[0]['reuse']['license_url']), 'https://wrong.invalid/text-license')
+    licence = (f'<a href="{escape(sources[0]["reuse"]["license_url"])}">'
+               f'{escape(site.short_license_label(sources[0]["reuse"]["license_url"]) or "Käyttöehdot")}</a>')
+    legacy_source = f'<a href="{escape(sources[0]["reuse"]["url"])}">Lähde</a> · '
+    yield 'legacy_reuse_source_link', html.replace(licence, legacy_source+licence, 1)
     if sources[0]['reuse'].get('notice'):
-        yield 'wrong_reuse_notice', html.replace(escape(sources[0]['reuse']['notice']), 'Wrong notice')
+        reuse = site.reuse_rights_html(sources)
+        legacy = reuse.replace('</li>', ' · '+escape(sources[0]['reuse']['notice'])+'</li>', 1)
+        yield 'legacy_reuse_notice', html.replace(reuse, legacy, 1)
 
 
 def exercise(packet, draft, image_bytes, root):
