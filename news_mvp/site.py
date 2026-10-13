@@ -1128,6 +1128,7 @@ def listing_page_html(page_items, page_number, page_count, archive_items=None, s
             '<li><a href="/oppaat/koulujen-loma-ajat-2026-2027/">Koulujen loma-ajat 2026–2027: joululoma ja hiihtoloma</a></li>'
             '<li><a href="/oppaat/veronpalautus-2026/">Veronpalautus 2026: maksupäivät 3.11. ja 3.12.</a></li>'
             '<li><a href="/oppaat/eduskuntavaalit-2027/">Eduskuntavaalit 2027: vaalipäivä su 18.4.2027</a></li>'
+            '<li><a href="/oppaat/pyhapaivat-2027/">Pyhäpäivät 2027: arkipyhät ja pitkät viikonloput</a></li>'
             '<li><a href="/oppaat/sahkokatko/">Sähkökatko: mitä tehdä ja milloin saat korvauksen</a></li>'
             '<li><a href="/oppaat/talvirenkaat-2026/">Talvirenkaat 2026: milloin ne pitää vaihtaa?</a></li>'
             '<li><a href="/syysloma-2026/">Syysloma 2026: maksutonta tekemistä kaupungeittain</a></li>'
