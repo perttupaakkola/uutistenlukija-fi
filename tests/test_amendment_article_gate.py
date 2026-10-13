@@ -24,11 +24,12 @@ def projected_html(packet, draft):
         published=site.timestamp(m['datePublished']).isoformat(),modified=site.timestamp(m['dateModified']).isoformat(),
         category=draft['category'],image_url=url,sources=sources)
     html = '<!doctype html><html><head><link rel="canonical" href="'+m['canonical']+'">'+ld+'</head><body><article class="story single-article">'
-    html += '<h1>'+escape(draft['title'])+'</h1><p class="article-meta" data-category="'+draft['category']+'"><span>Julkaistu '+site.time_html(m['datePublished'])+'</span></p>'
+    html += '<h1>'+escape(draft['title'])+'</h1><p class="article-meta" data-category="'+draft['category']+'"><span>Julkaistu&nbsp;'+site.time_html(m['datePublished'])+'</span></p>'
     html += site.article_status_html(m['notice'])+'<p class="lead">'+escape(draft['summary'])+'</p>'
     html += '<div class="article-reading-grid"><div class="article-reading-main">'+site.article_hero_figure(image,url)+'<div class="content">'+''.join(paragraphs)+'</div></div>'
+    html += site.article_actions_html(route, draft['category'], True, draft['title'])
     html += '<div class="article-afterword"><div class="article-evidence"><section class="sources"><h2>Lähteet</h2><ol>'+site.source_list_html(sources)+'</ol></section>'
-    html += site.reuse_rights_html(sources)+site.image_rights_html(image)+'</div></div></div></article></body></html>'
+    html += site.reuse_rights_html(sources)+site.image_rights_html(image)+site.article_correction_html()+'</div></div></div></article></body></html>'
     return html, paragraphs
 
 
@@ -68,7 +69,7 @@ def mutations(html, paragraphs, packet, draft):
     yield 'wrong_image_license', html.replace(escape(draft['image']['license_url']), 'https://wrong.invalid/license')
     yield 'text_only_in_comment', html.replace(paragraphs[0], '<!--'+paragraphs[0]+'-->')
     yield 'hidden_ancestor', html.replace('<body>', '<body hidden>')
-    yield 'wrong_publication_label', html.replace('Julkaistu ', 'Wrong publication ')
+    yield 'wrong_publication_label', html.replace('Julkaistu&nbsp;', 'Wrong publication&nbsp;')
     yield 'wrong_category', html.replace('data-category="'+draft['category']+'"', 'data-category="Wrong"')
     status = site.article_status_html(m['notice'])
     yield 'duplicate_status', html.replace(status, status+status)
@@ -140,16 +141,15 @@ class AmendmentArticleGateTests(unittest.TestCase):
         m = packet['final_review_input']['source_packet']['public_metadata']
         route = m['canonical'].removeprefix('https://uutistenlukija.fi')
         breadcrumb = ('<nav class="article-breadcrumb" aria-label="Murupolku"><ol>'
-            '<li><a href="/">Etusivu</a></li><li><a href="'+escape(site.category_route(draft['category']))+'">'+
-            escape(site.category_display(draft['category']))+'</a></li><li aria-current="page">Juttu</li></ol></nav>')
+            '<li><a href="/">Etusivu</a></li><li aria-current="page"><a href="'+
+            escape(site.category_route(draft['category']))+'">'+escape(site.category_display(draft['category']))+
+            '</a></li></ol></nav>')
         html = html.replace('<h1>', breadcrumb+'<h1>', 1)
         html = html.replace('</span></p>', '</span><span class="article-reading-time">'+
             str(site.reading_time_minutes(draft))+' min lukuaika</span></p>', 1)
-        html = html.replace('<div class="article-reading-grid">',
-            site.article_actions_html(route, draft['category'], True, draft['title'])+'<div class="article-reading-grid">', 1)
         context = site.article_context_html({'id': 1}, draft,
             [({'id': 2, 'slug': 'other-story', 'created_at': m['datePublished']}, {}, draft, {})])
-        html = html.replace('<div class="article-afterword">', context+'<div class="article-afterword">', 1)
+        html = html.replace('</div></div></article></body>', '</div>'+context+'</div></article></body>', 1)
         sources = packet['final_review_input']['source_packet']['preparation']['citations']
         label = '1 uutislähde' if len(sources) == 1 else str(len(sources))+' uutislähdettä'
         html = html.replace('<h2>Lähteet</h2><ol>', '<h2>Lähteet</h2><p class="source-count">'+label+'</p><ol>')

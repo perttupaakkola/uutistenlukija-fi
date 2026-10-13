@@ -65,6 +65,8 @@ class ReaderDepthContracts(unittest.TestCase):
         self.assertNotIn(related[1]["title"], text)
         self.assertNotIn(current[1]["title"], text)
         self.assertEqual(text.count('<li><a href="/uutiset/'), 7)
+        self.assertEqual(text.count('</ul><p class="article-context__more"><a '), 2)
+        self.assertLess(text.index('Samasta osastosta'), text.index('Uusimmat'))
 
     def test_public_shell_and_article_expose_local_saved_story_controls(self):
         shell = site.page("Etusivu", "<p>Uutiset</p>", "/")
@@ -80,14 +82,18 @@ class ReaderDepthContracts(unittest.TestCase):
         self.assertIn('data-save-title="Esimerkkiuutinen"', actions)
         self.assertIn('data-save-category="Tiede"', actions)
         self.assertIn('aria-pressed="false"', actions)
-        self.assertIn("Osaston uutiset: Tiede", actions)
+        self.assertNotIn("Osaston uutiset:", actions)
+        self.assertNotIn("Lue seuraavaksi tuoreimmat uutiset", actions)
 
-    def test_phone_continuation_dom_precedes_sources_without_duplication(self):
+    def test_phone_continuation_dom_follows_sources_without_duplication(self):
         reading = '<div class="article-reading-main"><div class="content">Body</div></div>'
+        actions = '<nav class="article-actions">Actions</nav>'
         context = '<aside class="article-context"><span class="article-context__title">Next</span></aside>'
         afterword = '<div class="article-afterword"><section class="sources"><h2>Lähteet</h2></section></div>'
-        text = f'<div class="article-reading-grid">{reading}{context}{afterword}</div>'
-        self.assertLess(text.index('article-context__title'), text.index('<h2>Lähteet</h2>'))
+        text = f'<div class="article-reading-grid">{reading}{actions}{afterword}{context}</div>'
+        self.assertLess(text.index('Body'), text.index('Actions'))
+        self.assertLess(text.index('Actions'), text.index('<h2>Lähteet</h2>'))
+        self.assertLess(text.index('<h2>Lähteet</h2>'), text.index('article-context__title'))
         self.assertEqual(text.count('article-context__title'), 1)
 
     def test_saved_story_script_is_local_only_and_bounded(self):

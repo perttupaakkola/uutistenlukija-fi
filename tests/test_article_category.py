@@ -19,8 +19,8 @@ CREDIT_FROM_MODEL='AI-kuvitus ('+IMAGE_MODEL+')'
 ARTICLE_RE=re.compile(r'<article class="([^"]*)">(.*?)</article>',re.S)
 SINGLE_RE=re.compile(r'<article class="([^"]*\bsingle-article\b[^"]*)">(.*?)</article>',re.S)
 CATEGORY_LINK_RE=re.compile(r'<nav class="article-breadcrumb" aria-label="Murupolku"><ol>'
-                            r'<li><a href="/">Etusivu</a></li><li><a href="([^"]+)">([^<]*)</a></li>'
-                            r'<li aria-current="page">([^<]*)</li></ol></nav>')
+                            r'<li><a href="/">Etusivu</a></li><li aria-current="page">'
+                            r'<a href="([^"]+)">([^<]*)</a></li></ol></nav>')
 H1_RE=re.compile(r'<h1[^>]*>(.*?)</h1>',re.S)
 HERO_RE=re.compile(r'<figure class="article-hero">(.*?)</figure>',re.S)
 CANON_RE=re.compile(r'<link rel="canonical" href="([^"]+)"')
@@ -150,6 +150,27 @@ class ArticleAndCategoryRendering(unittest.TestCase):
         self.assertNotIn(IMAGE_MODEL,html)
         self.assertNotIn(CREDIT_FROM_MODEL,html)
 
+    def test_article_elements_follow_normal_reading_order(self):
+        jobs,output,_=self.render([
+            ('Kulttuuri','current'), ('Kulttuuri','related-1'), ('Kulttuuri','related-2'),
+            ('Kulttuuri','related-3'), ('Kulttuuri','same-desk'), ('Urheilu','newest'),
+        ])
+        html=self.article_text(output,jobs[0])
+        ordered=(
+            '<nav class="article-breadcrumb"', '<h1>', 'class="article-meta"',
+            '<p class="lead">', '<figure class="article-hero">', '<div class="content">',
+            '<nav class="article-actions"', '<section class="sources">',
+            '<a class="article-corrections"', '<section class="related">',
+            '<h2>Samasta osastosta</h2>',
+        )
+        for marker in ordered:
+            self.assertIn(marker, html)
+        positions=[html.index(marker) for marker in ordered]
+        self.assertEqual(positions, sorted(positions))
+        self.assertNotIn('Osaston uutiset:', html)
+        self.assertNotIn('Lue seuraavaksi tuoreimmat uutiset', html)
+        self.assertIn('Julkaistu&nbsp;<time', html)
+
     def test_article_breadcrumb_links_its_category_page_with_display_name(self):
         for stored,slug,display in [('Kotimaa','kotimaa','Kotimaa'),('Maailma','ulkomaat','Ulkomaat')]:
             with self.subTest(category=stored):
@@ -159,8 +180,8 @@ class ArticleAndCategoryRendering(unittest.TestCase):
                 self.assertIsNotNone(match)
                 self.assertEqual(match.group(1),f'/categories/{slug}/')
                 self.assertEqual(match.group(2),display)
-                self.assertEqual(match.group(3),'Juttu')
                 self.assertNotIn('class="back"',html)
+                self.assertNotIn('>Juttu<',html)
 
     def test_category_pages_filter_and_map_maailma_and_show_empty_honestly(self):
         jobs,output,_=self.render([('Maailma','m1'),('Talous','t1'),('Tiede','x1')])

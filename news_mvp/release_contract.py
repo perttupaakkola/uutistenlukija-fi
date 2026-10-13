@@ -1433,7 +1433,7 @@ def _check_amendment_article(html, packet, draft, canonical):
     spans = [n for n in meta[2] if isinstance(n, list) and n[0] == 'span']
     if not spans:
         raise ValueError('Missing visible publication label')
-    equal(spans[0], fragment_node('<span>Julkaistu '+site.time_html(metadata['datePublished'])+'</span>'))
+    equal(spans[0], fragment_node('<span>Julkaistu&nbsp;'+site.time_html(metadata['datePublished'])+'</span>'))
     times = [n for n in _amendment_nodes(meta) if n[0] == 'time']
     equal(_amendment_one(times, 'time'), fragment_node(site.time_html(metadata['datePublished'])))
     status = _amendment_one(all_nodes, 'section', 'article-status')
@@ -1509,21 +1509,25 @@ def _check_amendment_article(html, packet, draft, canonical):
     breadcrumb = optional(article, 'nav', 'article-breadcrumb')
     if breadcrumb:
         equal(breadcrumb[0], fragment_node('<nav class="article-breadcrumb" aria-label="Murupolku"><ol>'
-            '<li><a href="/">Etusivu</a></li><li><a href="'+escape(site.category_route(draft['category']))+'">'+
-            escape(site.category_display(draft['category']))+'</a></li><li aria-current="page">Juttu</li></ol></nav>'))
-    actions = optional(article, 'nav', 'article-actions')
+            '<li><a href="/">Etusivu</a></li><li aria-current="page"><a href="'+
+            escape(site.category_route(draft['category']))+'">'+escape(site.category_display(draft['category']))+
+            '</a></li></ol></nav>'))
+    actions = optional(grid, 'nav', 'article-actions')
     if actions:
         equal(actions[0], fragment_node(site.article_actions_html(route, draft['category'], True, draft['title'])))
-    if children(article) != breadcrumb + [h1, meta, status, lead] + actions + [grid]:
+    if children(article) != breadcrumb + [h1, meta, status, lead, grid]:
         raise ValueError('Unexpected amendment article prose/module')
     afterword = _amendment_one(descendants, 'div', 'article-afterword')
     context = optional(grid, 'aside', 'article-context')
-    if children(grid) != [main] + context + [afterword]:
+    if children(grid) != [main] + actions + [afterword] + context:
         raise ValueError('Unexpected amendment reading-grid prose/module')
     related = optional(afterword, 'section', 'related')
     if children(afterword) != [evidence] + related:
         raise ValueError('Unexpected amendment afterword prose/module')
-    if children(evidence) != [source_section] + reuse_nodes + [rights]:
+    corrections = optional(evidence, 'a', 'article-corrections')
+    if corrections:
+        equal(corrections[0], fragment_node(site.article_correction_html()))
+    if children(evidence) != [source_section] + reuse_nodes + [rights] + corrections:
         raise ValueError('Unexpected amendment evidence prose/module')
     source_children = children(source_section)
     count = optional(source_section, 'p', 'source-count')

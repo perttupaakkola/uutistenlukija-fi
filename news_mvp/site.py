@@ -714,14 +714,16 @@ def article_context_html(job, draft, articles, related_ids=()):
     if same_desk:
         blocks.append(
             '<section class="article-context__block">'
-            '<div class="article-context__head"><h2>Samasta osastosta</h2>'
-            f'<a href="{esc(category_route(draft.get("category")))}">Kaikki {esc(category_display(draft.get("category"))).lower()}-uutiset</a></div>'
-            f'<ul>{story_rows(same_desk)}</ul></section>')
+            '<div class="article-context__head"><h2>Samasta osastosta</h2></div>'
+            f'<ul>{story_rows(same_desk)}</ul>'
+            f'<p class="article-context__more"><a href="{esc(category_route(draft.get("category")))}">'
+            f'Kaikki {esc(category_display(draft.get("category"))).lower()}-uutiset</a></p></section>')
     if newest:
         blocks.append(
             '<section class="article-context__block">'
-            f'<div class="article-context__head"><h2>Uusimmat</h2><a href="{LATEST_PATH}">Koko uutisvirta</a></div>'
-            f'<ul>{story_rows(newest)}</ul></section>')
+            '<div class="article-context__head"><h2>Uusimmat</h2></div>'
+            f'<ul>{story_rows(newest)}</ul>'
+            f'<p class="article-context__more"><a href="{LATEST_PATH}">Koko uutisvirta</a></p></section>')
     if not blocks:
         return ""
     return '<aside class="article-context" aria-label="Jatka lukemista">' + "".join(blocks) + '</aside>'
@@ -812,33 +814,32 @@ def reuse_rights_html(sources):
 
 def article_actions_html(link, category, public, title=""):
     """Working reader actions with no unverified account or email destination."""
-    reader_tools = ""
-    if public:
-        canonical = SITE_URL.rstrip("/") + link
-        reader_tools = (
-            f'<button class="article-save" type="button" data-save-url="{esc(canonical)}" '
-            f'data-save-title="{esc(title)}" data-save-category="{esc(category_display(category))}" '
-            'aria-pressed="false" aria-describedby="save-feedback">'
-            '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" '
-            'stroke-width="1.9" aria-hidden="true"><path d="M6 4h12v17l-6-4-6 4z"/></svg>'
-            '<span>Tallenna</span></button>'
-            f'<button class="article-share" type="button" data-share-url="{esc(canonical)}" '
-            'aria-describedby="share-feedback">'
-            '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" '
-            'stroke-width="1.9" aria-hidden="true"><circle cx="18" cy="5" r="2.5"/>'
-            '<circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="19" r="2.5"/>'
-            '<path d="m8.2 10.8 7.6-4.5M8.2 13.2l7.6 4.5"/></svg>'
-            '<span>Jaa tai kopioi linkki</span></button>'
-            '<span id="save-feedback" class="article-action-feedback" aria-live="polite"></span>'
-            '<span id="share-feedback" class="article-action-feedback" aria-live="polite"></span>')
-    return ('<nav class="article-actions" aria-label="Jutun toiminnot">'
-            '<div class="article-actions__primary">'
-            f'<a class="article-section-return" href="{esc(category_route(category))}">'
-            f'<span aria-hidden="true">←</span> Osaston uutiset: {esc(category_display(category))}</a>'
-            f'{reader_tools}</div>'
-            '<div class="article-actions__secondary">'
-            + (f'<a class="article-latest-return" href="{LATEST_PATH}">Lue seuraavaksi tuoreimmat uutiset</a>' if public else '')
-            + f'<a href="{ABOUT_PATH}#korjaukset">Korjauskäytäntö</a></div></nav>')
+    if not public:
+        return ""
+    canonical = SITE_URL.rstrip("/") + link
+    return (
+        '<nav class="article-actions" aria-label="Jutun toiminnot">'
+        f'<button class="article-save" type="button" data-save-url="{esc(canonical)}" '
+        f'data-save-title="{esc(title)}" data-save-category="{esc(category_display(category))}" '
+        'aria-pressed="false" aria-describedby="save-feedback">'
+        '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" '
+        'stroke-width="1.9" aria-hidden="true"><path d="M6 4h12v17l-6-4-6 4z"/></svg>'
+        '<span>Tallenna</span></button>'
+        f'<button class="article-share" type="button" data-share-url="{esc(canonical)}" '
+        'aria-describedby="share-feedback">'
+        '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" '
+        'stroke-width="1.9" aria-hidden="true"><circle cx="18" cy="5" r="2.5"/>'
+        '<circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="19" r="2.5"/>'
+        '<path d="m8.2 10.8 7.6-4.5M8.2 13.2l7.6 4.5"/></svg>'
+        '<span>Jaa tai kopioi linkki</span></button>'
+        '<span id="save-feedback" class="article-action-feedback" aria-live="polite"></span>'
+        '<span id="share-feedback" class="article-action-feedback" aria-live="polite"></span>'
+        '</nav>')
+
+
+def article_correction_html():
+    """Quiet process link placed after the article's evidence and rights."""
+    return f'<a class="article-corrections" href="{ABOUT_PATH}#korjaukset">Korjauskäytäntö</a>'
 
 
 def listing_feed_html(items, empty_text, recovery_html=""):
@@ -1634,8 +1635,8 @@ def render_site(store, output_dir, state_dir=None, public=False, include_ids=Non
             related_html = f'<section class="related"><h2>Lue myös</h2><ul>{related_items}</ul></section>'
         breadcrumb = (f'<nav class="article-breadcrumb" aria-label="Murupolku"><ol>'
                       f'<li><a href="/">Etusivu</a></li>'
-                      f'<li><a href="{esc(category_route(draft["category"]))}">{esc(category_display(draft["category"]))}</a></li>'
-                      f'<li aria-current="page">Juttu</li></ol></nav>')
+                      f'<li aria-current="page"><a href="{esc(category_route(draft["category"]))}">'
+                      f'{esc(category_display(draft["category"]))}</a></li></ol></nav>')
         status_data = packet.get("article_status")
         status = article_status_html(status_data)
         withdrawn = isinstance(status_data, dict) and status_data.get("kind") == "withdrawn"
@@ -1649,10 +1650,10 @@ def render_site(store, output_dir, state_dir=None, public=False, include_ids=Non
         afterword = (f'<div class="article-afterword"><div class="article-evidence">'
                      f'<section class="sources"><h2>Lähteet</h2>'
                      f'<p class="source-count">{esc(source_label)}</p><ol>{source_list}</ol></section>'
-                     f'{reuse_rights}{image_rights}</div>{related_html}</div>')
+                     f'{reuse_rights}{image_rights}{article_correction_html()}</div>{related_html}</div>')
         story_content = "" if withdrawn else (
-            f'{actions}<div class="article-reading-grid"><div class="article-reading-main">'
-            f'{reading}</div>{context}{afterword}</div>')
+            f'<div class="article-reading-grid"><div class="article-reading-main">'
+            f'{reading}</div>{actions}{afterword}{context}</div>')
         if withdrawn:
             story_content = f'{actions}'
         deck = "" if withdrawn else f'<p class="lead">{esc(draft["summary"])}</p>'
@@ -1660,7 +1661,7 @@ def render_site(store, output_dir, state_dir=None, public=False, include_ids=Non
                         if not withdrawn else "")
         body = f'''<article class="story single-article">{breadcrumb}{fixture}
 <h1>{esc(draft["title"])}</h1>
-<p class="article-meta" data-category="{esc(draft["category"])}"><span>{"Luonnos · " if not public else ""}Julkaistu {time_html(job["created_at"])}</span>{reading_time}</p>
+<p class="article-meta" data-category="{esc(draft["category"])}"><span>{"Luonnos · " if not public else ""}Julkaistu&nbsp;{time_html(job["created_at"])}</span>{reading_time}</p>
 {status}{deck}{story_content}</article>'''
         # --- SEO metadata ---------------------------------------------------
         # Built only for the public build; the private preview stays noindex.
