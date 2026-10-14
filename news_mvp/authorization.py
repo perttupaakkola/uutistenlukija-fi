@@ -28,6 +28,13 @@ def authorize(config,source_commit=None):
     if family=='news-reviewed-v2':
         expected=proposed_policy_v2()
         expected.update(enabled=True,approved_by='Hermes',review_ref=policy.get('review_ref'))
+        explainers=config.get('explainers')
+        if explainers is not None and (not isinstance(explainers,dict) or
+                set(explainers)!={'enabled','max_per_day','max_per_tick'} or
+                type(explainers.get('enabled')) is not bool or
+                type(explainers.get('max_per_day')) is not int or
+                not 1<=explainers['max_per_day']<=2 or explainers.get('max_per_tick')!=1):
+            raise ValueError('Explainer admission exceeds reviewed policy')
         if policy!=expected or not policy.get('review_ref') or config.get('source_recipes') or config['max_source_age_hours']!=48 or config['discovery']!={'family':'news-reviewed-v2','max_candidates':5}:
             raise ValueError('Combined source policy is not explicitly approved for this exact candidate')
         return
@@ -48,11 +55,15 @@ def proposed_policy(source_commit=None):
 
 def proposed_policy_v2(source_commit=None):
     from .official import policy
+    from .explainers import policy_digest as explainer_policy_digest
     return {**proposed_policy(),'schema_version':2,'source_family':'news-reviewed-v2',
             'source_families':['nasa-modis','helsinki','stat','kuntaliitto','ecb','ec-press',
                 'kuopio','vantaa','espoo','valtioneuvosto','oulu','poliisi-helsinki',
                 'poliisi-ita-uusimaa','poliisi-lansi-uusimaa','poliisi-sisa-suomi',
                 'poliisi-lounais-suomi','poliisi-oulu','fmi-warnings',
-                'fintraffic-traffic'],'text_only_policy':'official-text-v1',
+                'fintraffic-traffic','explainer'],'text_only_policy':'official-text-v1',
             'text_only_policy_sha256':digest(policy()),'max_index_entries_per_official_source':50,
+            'explainer_policy':'explainer-sources-v2',
+            'explainer_policy_sha256':explainer_policy_digest(),
+            'max_explainers_per_helsinki_day':2,'max_explainers_per_tick':1,
             'max_fetch_calls_per_tick':20}

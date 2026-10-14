@@ -1,0 +1,130 @@
+{
+  "generated_at": "2026-10-14T00:21:27.757737+00:00",
+  "mode": "read-only live dry-run; no production database writes, no capture, no render, no publish",
+  "selection": {
+    "higher_scored_skipped": {
+      "title": "MTV selvitti: Karmea dieselhinta ei peru bussivuoroja joukolla – kiitos sähkön",
+      "impact_score": 8,
+      "reason": "fewer than two usable readable sources besides A"
+    },
+    "selected_rank_reason": "next highest reader-impact topic with three media signals and a source-complete packet"
+  },
+  "topic": {
+    "title": "Kaakkoissuomalaisilta on huijattu yli 80 000 euroa viikossa – asukkaille infotilaisuus Lappeenrannassa",
+    "story_key": "explainer:kaakkoissuomalaisilta-huijattu-yli-80-000-euroa-viikossa-asukkaille-infotilaisuus-lappeenrannassa",
+    "outlet_count": 3,
+    "impact_score": 3,
+    "impact_reasons": ["named_reader_group"]
+  },
+  "headline_signals": [
+    {"publisher": "mtvuutiset.fi", "text_used": true},
+    {"publisher": "yle.fi", "text_used": false},
+    {"publisher": "voice.fi", "text_used": true}
+  ],
+  "packet_audit": {
+    "policy": "explainer-sources-v2",
+    "policy_sha256": "01875d586f59d6995fbd32700e1c7e8eb4d4e1ef789a8ea3ad63ee45b9ad4dfa",
+    "source_sha256": {
+      "A": "8c950fd01b4f300fe1817bb7d698d58c2de4ebf0e2437169f485265672f38dac",
+      "B": "7cadeaef128763fa913b4f10af96f5b1ce1b16a6ee3dc154f115ac9d4b8b18f1",
+      "C": "96a52879503caab776b8d0bc6ba12bc342f66ea836c279837f87fccfb789c4a8"
+    },
+    "primary_relevance": {
+      "deterministic": {
+        "topic_terms": ["asukkai", "euroa", "huija", "infotila", "kaakkois", "lappeenr", "viiko"],
+        "matched_terms": ["euroa", "huija", "kaakkois", "lappeenr", "viiko"],
+        "passed": true
+      },
+      "model": {
+        "relevant": true,
+        "reason": "Kaakkois-Suomen poliisilaitoksen tiedote kertoo samasta tapahtumasta: alueella menetettiin viikolla 41 yli 80 000 euroa puhelinhuijauksissa, ja Lappeenrannassa järjestetään 20.10.2026 asukastilaisuus petoksilta suojautumisesta."
+      }
+    },
+    "sources": [
+      {
+        "id": "A",
+        "primary": true,
+        "primary_type": "official_document",
+        "publisher": "poliisi.fi",
+        "title": "Kaakkois-Suomessa yli 80 000 euroa puhelinhuijareille viikossa",
+        "url": "https://poliisi.fi/-/kaakkois-suomessa-yli-80-000-euroa-puhelinhuijareille-viikossa-",
+        "published_at": "2026-10-13T14:00:00+00:00"
+      },
+      {
+        "id": "B",
+        "related": true,
+        "publisher": "mtvuutiset.fi",
+        "title": "Kaakkoissuomalaisilta on huijattu yli 80 000 euroa viikossa – asukkaille infotilaisuus Lappeenrannassa",
+        "url": "https://www.mtvuutiset.fi/artikkeli/kaakkoissuomalaisilta-on-huijattu-yli-80-000-euroa-viikossa-asukkaille-infotilaisuus-lappeenrannassa/9406150",
+        "published_at": "2026-10-13T14:26:12+00:00"
+      },
+      {
+        "id": "C",
+        "related": true,
+        "news_hook": true,
+        "publisher": "voice.fi",
+        "title": "Puhelinhuijarit veivät yli 80 000 euroa – härskit keinot käytössä",
+        "url": "https://www.voice.fi/ilmiot/puhelinhuijarit-veivat-yli-80-000-euroa-harskit-keinot-kaytossa",
+        "published_at": "2026-10-13T19:57:23+00:00"
+      }
+    ]
+  },
+  "draft": {
+    "category": "Kotimaa",
+    "image": null,
+    "kind": "explainer",
+    "title": "Kaakkois-Suomessa huijattiin viikossa yli 80 000 euroa",
+    "summary": "Kaakkois-Suomen poliisilaitoksen alueella menetettiin viikolla 41 ilmi tulleissa tapauksissa yli 80 000 euroa puhelinhuijauksiin. Poliisi muistuttaa, ettei se soita videopuheluita eikä pyydä pankkitunnuksia. Lappeenrannassa järjestetään 20.10.2026 maksuton asukastilaisuus petoksilta suojautumisesta.",
+    "paragraphs": [
+      {"section": "Mitä tapahtui", "text": "Kaakkois-Suomen poliisilaitoksen alueella menetettiin viikon 41 aikana yli 80 000 euroa erilaisiin puhelinhuijauksiin. Poliisin mukaan summa kertyi tapauksista, jotka tulivat ilmi saman viikon aikana. MTV Uutisten mukaan alueella tuli viikon aikana ilmi runsas määrä puhelinhuijauksia.", "source_ids": ["A", "B", "C"]},
+      {"text": "Poliisi kertoi menetyksistä tiedotteessaan 13.10.2026, ja samana päivänä niistä uutisoivat myös MTV Uutiset ja Voice.fi. Lisäksi poliisi antaa tiedotteessa ohjeita huijauksilta suojautumiseen ja kertoo, mitä tehdä, jos epäilee joutuneensa huijatuksi.", "source_ids": ["A", "B", "C"]},
+      {"text": "Lappeenrannan kaupunki järjestää yhdessä Kaakkois-Suomen poliisilaitoksen kanssa asukastilaisuuden, jonka aiheena on arjen turvallisuus ja petoksilta suojautuminen. Tilaisuus pidetään tiistaina 20. lokakuuta kello 17–18.30 Lappeenrannan kaupungintalon valtuustosalissa.", "source_ids": ["A", "B", "C"]},
+      {"section": "Tausta", "text": "Poliisin mukaan huijauksen kohteeksi voi joutua kuka tahansa, koska ammattimaiset huijarit ovat taitavia luomaan uskottavan vaikutelman. Siksi poliisi pitää tärkeänä, että huijauksen mahdollisuus tiedostetaan.", "source_ids": ["A", "C"]},
+      {"text": "Huijauksissa hyödynnetään ajankohtaisia ilmiöitä sekä ihmisten tunteita ja luontaista käyttäytymistä. Huijari voi vedota esimerkiksi pelkoon, hätään, kiireeseen, auttamisen haluun tai rikastumisen toiveeseen.", "source_ids": ["A", "C"]},
+      {"text": "Uhria saatetaan lähestyä esiintymällä luotettavan tahon, kuten poliisin, Verottajan tai pankin, edustajana. Tavoitteena on saada uhri luovuttamaan henkilö- tai pankkitietojaan, siirtämään rahaa tai tekemään sijoituspäätös ilman riittävää harkintaa.", "source_ids": ["A"]},
+      {"text": "Poliisin mukaan yhteydenotto voi tulla puheluna, videopuheluna, tekstiviestinä tai sähköpostina. Se voi näyttää tulevan luotettavasta numerosta tai osoitteesta, minkä vuoksi huijausta voi olla vaikea tunnistaa.", "source_ids": ["A", "C"]},
+      {"text": "Eri puolilla Suomea on tullut ilmi tapauksia, joissa uhri on saanut videopuhelun poliisin virkapukuun pukeutuneelta henkilöltä. Poliisi muistuttaa, ettei se soita videopuheluita eikä koskaan pyydä keneltäkään pankkitunnuksia.", "source_ids": ["A", "C"]},
+      {"section": "Mitä se tarkoittaa sinulle", "text": "Huijauksen kohteeksi voi poliisin mukaan joutua kuka tahansa. Jos sinulta pyydetään pankkitietoja, tunnistautumista tai nopeita toimia, poliisi neuvoo ottamaan aikalisän: lopeta puhelu tai katkaise keskustelu ja harkitse asiaa rauhassa.", "source_ids": ["A", "B", "C"]},
+      {"text": "Poliisi kehottaa pysähtymään miettimään, mitä riskejä on, jos toimit niin kuin sinua kehotetaan. Poliisin mukaan tuntemattoman henkilön tarkoitusperien kyseenalaistaminen ei ole epäkohteliasta, ja taitavan huijauksen tunnistaminen vaatii kriittistä asennetta ja tarkkaavaisuutta.", "source_ids": ["A"]},
+      {"text": "Poliisi neuvoo, ettei päätöksiä pidä tehdä kiireessä, vaikka sinua painostettaisiin. Verkkopankkitunnuksia, maksukortin tietoja tai muita arkaluonteisia tietoja ei pidä luovuttaa koskaan kenellekään ulkopuoliselle. Tarkista aina, mitä olet vahvistamassa, äläkä hyväksy tunnistautumis- tai maksupyyntöjä, joiden tarkoituksesta et ole täysin varma.", "source_ids": ["A", "B"]},
+      {"text": "Poliisi kehottaa myös olemaan kirjautumatta verkkopalveluihin ja käyttämättä pankkitunnuksia tai korttitietoja saatujen linkkien kautta. Kirjoita pankin tai viranomaisen verkko-osoite itse selaimeen tai käytä palveluntarjoajan mobiilisovellusta, äläkä asenna sovelluksia tuntemattoman henkilön pyynnöstä.", "source_ids": ["A"]},
+      {"text": "Yhteydenoton aitouden voit tarkistaa ottamalla itse yhteyttä pankkiin, viranomaiseen tai palveluntarjoajaan sen virallisia yhteydenottokanavia pitkin. Jos mahdollisuus kuulostaa liian hyvältä, se on poliisin mukaan harvoin totta, eikä rahaa tule rehellisellä tavalla mistään ilmaiseksi.", "source_ids": ["A", "C"]},
+      {"text": "Poliisi suosittelee puhumaan huijauksista läheisten kanssa ja kertomaan epäilyttävästä yhteydenotosta luotettavalle henkilölle. Erityisesti ikääntyneiden läheisten kanssa on poliisin mukaan hyvä sopia etukäteen, että raha- ja pankkiasioihin liittyvät pyynnöt tarkistetaan aina yhdessä luotettavan henkilön kanssa.", "source_ids": ["A", "C"]},
+      {"text": "Jos epäilet joutuneesi huijatuksi tai olet jo luovuttanut pankkitunnuksia tai maksutietoja tai siirtänyt rahaa huijarille, poliisi kehottaa ottamaan välittömästi yhteyttä omaan pankkiin ja tekemään rikosilmoituksen poliisille. Säilytä myös viestit, puhelinnumerot ja muut tapahtumaan liittyvät tiedot tutkintaa varten.", "source_ids": ["A", "B", "C"]},
+      {"text": "Lappeenrannan asukastilaisuuteen 20.10.2026 voi osallistua maksutta ja ilmoittautumatta etukäteen.", "source_ids": ["A", "B", "C"]},
+      {"section": "Luvut", "text": "Yli 80 000 euroa menetettiin puhelinhuijauksiin Kaakkois-Suomen poliisilaitoksen alueella viikolla 41. Luku koskee viikon aikana ilmi tulleita tapauksia.", "source_ids": ["A", "B", "C"]},
+      {"text": "Poliisin tiedote julkaistiin 13.10.2026 kello 17.00. Siinä ei eritellä, kuinka monesta tapauksesta summa koostuu tai kuinka paljon yksittäiset uhrit menettivät.", "source_ids": ["A"]},
+      {"text": "Lähteissä ei esitetä vertailulukuja muilta viikoilta. Lappeenrannan asukastilaisuus pidetään 20.10.2026 kello 17–18.30, ja osallistuminen on maksutonta.", "source_ids": ["A", "B", "C"]},
+      {"section": "Mitä seuraavaksi", "text": "Asukastilaisuus järjestetään tiistaina 20.10.2026 kello 17–18.30 Lappeenrannan kaupungintalon valtuustosalissa. Järjestäjinä ovat Lappeenrannan kaupunki ja Kaakkois-Suomen poliisilaitos.", "source_ids": ["A", "B", "C"]},
+      {"text": "Tilaisuudessa käsitellään arjen turvallisuutta ja petoksilta suojautumista. Osallistuminen on maksutonta, eikä siihen tarvitse ilmoittautua etukäteen.", "source_ids": ["A", "B", "C"]},
+      {"text": "Lisätietoa petosrikoksista poliisi ohjaa hakemaan verkkosivuiltaan. Lähteissä ei kerrota muista tulevista tilaisuuksista tai jatkotoimista.", "source_ids": ["A"]}
+    ]
+  },
+  "review": {
+    "approved": false,
+    "fixable": false,
+    "image_retryable": true,
+    "draft_sha256": "910391dc3ce12904606197bbd735347f458df6de914f356079018abaf3992502",
+    "reasons": [
+      "Hylkäyksen ainoa syy on kuva: draft.image on null, eikä source_packet sisällä kuvaa. Jokainen julkinen artikkeli vaatii relevantin kuvan.",
+      "Otsikko on alle 60 merkkiä, ja summa, viikko sekä Kaakkois-Suomen alueellinen rajaus ovat lähteiden tukemia.",
+      "Selittäjän viisi osiota ovat oikeassa järjestyksessä, kaikki lukijalle annetut ohjeet ovat poliisin tiedotteesta ja Mitä seuraavaksi sisältää vain lähteissä ilmoitetut vaiheet.",
+      "Kuvan lisäämisen jälkeen kuvatietue on arvioitava erikseen; päätös ei ole julkaisulupa."
+    ]
+  },
+  "correction_history": [
+    {
+      "initial_draft_sha256": "9bd9bebfacdb68d6e4636ecc8a1a371db8a8f256ba72ffc0a05c98c9e4e7e09c",
+      "initial_review": {"approved": false, "fixable": true},
+      "correction_round": 1,
+      "final_draft_sha256": "910391dc3ce12904606197bbd735347f458df6de914f356079018abaf3992502"
+    }
+  ],
+  "model_receipts": [
+    {"role": "explainer_source_relevance", "session_id": "20261014_002129_bd5a05", "response_sha256": "cf9aedcb3ad6d6a762142377ff00ad53dc433b177e65d7c54fb6f7f1f8fbac8e"},
+    {"role": "writer", "session_id": "20261014_002137_f3ff30", "response_sha256": "9bd9bebfacdb68d6e4636ecc8a1a371db8a8f256ba72ffc0a05c98c9e4e7e09c"},
+    {"role": "reviewer", "session_id": "20261014_002421_22f3f3", "response_sha256": "db4cc7115b1dd792752cf41d1438f99c6ad422683e6385f00525196399fecf4a"},
+    {"role": "reviser", "session_id": "20261014_002459_af1a50", "response_sha256": "910391dc3ce12904606197bbd735347f458df6de914f356079018abaf3992502"},
+    {"role": "reviewer", "session_id": "20261014_002536_c33b5e", "response_sha256": "0c3c60d13a91f101a314370b1bcbe92a2a99f45e3f997f0925c35011f502157f"}
+  ]
+}

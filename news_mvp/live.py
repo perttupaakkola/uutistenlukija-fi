@@ -105,8 +105,33 @@ def live_tick(config_path):
                     break
             if retry:
                 return _advance_job(store, store.get(retry['id']), config, config_path)
-            recipes=[json.loads((ROOT/path).read_text()) for path in config.get('source_recipes',[])]
             errors=[]
+            # An explainer uses the same job and publisher state machine.  Topic detection is
+            # attempted once; if no source-complete topic qualifies, the normal discovery
+            # rotation keeps this tick instead of being displaced.
+            explainer_settings = config.get('explainers') or {}
+            if explainer_settings.get('enabled') is True:
+                from .explainers import can_admit, capture_packet, discover_one
+                if can_admit(store, limit=explainer_settings.get('max_per_day', 2)):
+                    searcher = _related_searcher()
+                    if searcher is not None:
+                        try:
+                            relevance_model = hermes_model(config)
+                            found = discover_one(
+                                store, searcher,
+                                relevance_checker=lambda request: relevance_model.call(
+                                    'explainer_source_relevance', request))
+                            if found is not None:
+                                _topic, packet = found
+                                capture_packet(packet, config['state_dir'])
+                                admission = ingest(config, packet)
+                                if admission['admitted']:
+                                    return _advance_job(store, store.get(admission['id']),
+                                                        config, config_path)
+                        except (ValueError, OSError) as error:
+                            errors = [{'provider':'explainer','stage':'collection',
+                                       'url':'headline-search','error':safe_error(error)}]
+            recipes=[json.loads((ROOT/path).read_text()) for path in config.get('source_recipes',[])]
             collection_excluded=store.collection_failure_urls(time.time())
             if config.get('discovery',{}).get('family')=='news-reviewed-v2':
                 excluded=collection_excluded|{r[0] for r in store.db.execute("SELECT source_url FROM jobs WHERE status IN ('rejected','failed') OR id IN (SELECT job_id FROM publications WHERE status IN ('deployed','failed'))")}

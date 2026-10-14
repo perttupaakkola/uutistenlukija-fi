@@ -67,7 +67,9 @@ def validate_packet(packet, now, max_age_hours=48):
     if not isinstance(sources, list) or not 1 <= len(sources) <= 8:
         raise ValueError("Provide 1–8 actual source excerpts")
     ids, urls = set(), set()
-    for source in sources:
+    explainer = packet.get("kind") == "explainer"
+    fresh_hooks = 0
+    for position, source in enumerate(sources):
         if not isinstance(source, dict):
             raise ValueError("Source must be an object")
         sid = text(source.get("id"), "source id", 40)
@@ -82,8 +84,44 @@ def validate_packet(packet, now, max_age_hours=48):
         if len(excerpt) < 200:
             raise ValueError("Source excerpt too thin for review")
         age = (now - timestamp(source.get("published_at"))).total_seconds()
-        if age < -300 or age > max_age_hours * 3600:
+        # Background acts and reports may be older; the marked news hook may not be.
+        if explainer and source.get("news_hook") is True and -300 <= age <= max_age_hours * 3600:
+            fresh_hooks += 1
+        if age < -300 or (not explainer and age > max_age_hours * 3600):
             raise ValueError("Source is stale or future-dated")
+        if explainer and position == 0 and (sid != "A" or source.get("primary") is not True):
+            raise ValueError("Explainer source A must be the directly relevant primary source")
+    if explainer:
+        from .explainers import (OFFICIAL_DOMAINS, POLICY as EXPLAINER_POLICY,
+                                 TEXT_BLOCKED_DOMAINS, _domain, _domain_matches,
+                                 policy_digest, validate_primary_relevance)
+        if not 3 <= len(sources) <= 6:
+            raise ValueError("Explainer needs source A and 2–5 usable reports")
+        if fresh_hooks < 1:
+            raise ValueError("Explainer needs a fresh news hook source")
+        domains = [_domain(source["url"]) for source in sources]
+        primary_type = sources[0].get("primary_type")
+        if (len(set(domains)) != len(domains) or
+                primary_type not in ("official_document", "original_reporting") or
+                (primary_type == "official_document" and
+                 not _domain_matches(domains[0], OFFICIAL_DOMAINS)) or
+                (primary_type == "original_reporting" and
+                 _domain_matches(domains[0], OFFICIAL_DOMAINS)) or
+                any(_domain_matches(domain, TEXT_BLOCKED_DOMAINS) for domain in domains) or
+                any(source.get("related") is not True for source in sources[1:])):
+            raise ValueError("Explainer sources are blocked, non-independent or lack valid A")
+        basis = packet.get("publication_basis")
+        captures = basis.get("source_sha256") if isinstance(basis, dict) else None
+        if (not packet.get("story_key", "").startswith("explainer:") or
+                not isinstance(basis, dict) or
+                basis.get("policy") != EXPLAINER_POLICY or
+                basis.get("policy_sha256") != policy_digest() or
+                not isinstance(captures, dict) or set(captures) != ids or
+                any(captures[source["id"]] != hashlib.sha256(source["text"].encode()).hexdigest()
+                    for source in sources)):
+            raise ValueError("Explainer source-policy binding is missing or changed")
+        validate_primary_relevance(basis.get("topic_title"), sources[0],
+                                   basis.get("primary_relevance"))
     if len(encode(packet).encode()) > 200000:
         raise ValueError("Packet exceeds 200 KB")
     return packet
@@ -97,8 +135,10 @@ def validate_draft(draft, packet):
     if draft.get("category") not in CATEGORIES:
         raise ValueError("Unsupported category")
     paragraphs = draft.get("paragraphs")
-    if not isinstance(paragraphs, list) or not 2 <= len(paragraphs) <= 20:
-        raise ValueError("Draft needs 2–20 sourced paragraphs")
+    explainer = packet.get("kind") == "explainer"
+    maximum = 30 if explainer else 20
+    if not isinstance(paragraphs, list) or not 2 <= len(paragraphs) <= maximum:
+        raise ValueError(f"Draft needs 2–{maximum} sourced paragraphs")
     source_ids = {s["id"] for s in packet["sources"]}
     for paragraph in paragraphs:
         if not isinstance(paragraph, dict):
@@ -107,6 +147,17 @@ def validate_draft(draft, packet):
         cited = paragraph.get("source_ids")
         if not isinstance(cited, list) or not cited or any(x not in source_ids for x in cited):
             raise ValueError("Every paragraph must cite known source IDs")
+    if explainer:
+        from .explainers import SECTION_LABELS
+        if draft.get("kind") != "explainer":
+            raise ValueError("Explainer draft kind is missing")
+        labels = [p.get("section") for p in paragraphs if p.get("section") is not None]
+        if labels != list(SECTION_LABELS):
+            raise ValueError("Explainer sections are missing, duplicated or out of order")
+        words = re.findall(r"\b[0-9A-Za-zÀ-ÿ]+(?:[-–][0-9A-Za-zÀ-ÿ]+)*\b",
+                           " ".join(p["text"] for p in paragraphs))
+        if not 500 <= len(words) <= 900:
+            raise ValueError("Explainer body must contain 500–900 words")
     # Images are supplied by the operator/source intake, or generated by news_mvp/imagery.py.
     # Never invented by the writer model: the draft must carry exactly the packet's record.
     if draft.get("image") != packet.get("image"):
@@ -209,7 +260,8 @@ class HermesModel:
             request['context'] = context
         if draft is not None:
             request.update(draft=draft, draft_sha256=digest(draft))
-        prompt = (ROOT / "prompts" / (role + ".md")).read_text() + "\n\nINPUT JSON:\n" + encode(request)
+        prompt_role = "explainer" if role == "writer" and packet.get("kind") == "explainer" else role
+        prompt = (ROOT / "prompts" / (prompt_role + ".md")).read_text() + "\n\nINPUT JSON:\n" + encode(request)
         # The isolated editorial profile carries no model choice. Resolve the one current
         # default from the main Hermes config at call time, so future model changes require
         # no profile, prompt, worker, or code edits.

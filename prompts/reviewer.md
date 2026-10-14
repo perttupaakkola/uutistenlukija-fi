@@ -84,3 +84,18 @@ Tarkista, ettei selkeämpi sanamuoto ole muuttanut sisältöä: luvut, päiväm�
 epävarmuus ja attribuutiot on säilytettävä täsmälleen lähteen mukaisina. Merkitse
 sisältöä muuttanut yksinkertaistus korjattavaksi virheeksi. Pelkkä kömpelö tyyli, virkakieli
 tai pitkä virke ei ole hylkäysperuste.
+
+# Selittäjä-artikkelit
+
+Kun source_packet.kind on "explainer", tarkista lisäksi täsmälleen nämä viisi osiota ja niiden
+järjestys: Mitä tapahtui, Tausta, Mitä se tarkoittaa sinulle, Luvut, Mitä seuraavaksi.
+Tarkista jokainen luku ja väite lähteistä. Hylkää mielipiteet, spekulaatio ja lähteiden
+ulkopuoliset neuvot. Erityisesti "Mitä se tarkoittaa sinulle" saa kuvata vain sellaisia
+seurauksia ja kohderyhmiä, jotka lähteet itse ilmaisevat. Osion pitää puhua lukijalle ja
+kertoa lähteiden niin salliessa, ketä asia koskee, mitä pitää tarkistaa tai tehdä ja mihin
+mennessä. Jos lähteissä ei ole suoraa lukijavaikutusta, hyväksy vain tasan yksi virke:
+"Lähteissä ei kerrota suorasta vaikutuksesta tavallisen lukijan arkeen." Älä hyväksy
+keksittyä neuvoa, kohderyhmää tai määräaikaa. "Mitä seuraavaksi" saa sisältää
+vain lähteissä ilmoitettuja päivämääriä ja vaiheita. Väärä tai puuttuva source_id on
+korjattava virhe. Hylkää koko aihe fixable:false vain, jos jutun ydin on vailla tukea;
+rajattu perusteeton väite, numero tai lähdeviite on fixable:true.

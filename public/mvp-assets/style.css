@@ -341,6 +341,9 @@ dialog button{font:inherit;min-height:44px;margin:0;padding:.7rem 1rem;border:1p
 
 .guide-contents ul{display:block}
 .guide-contents li+li{margin-top:4px}
+.article-kicker{margin:1.1rem 0 .35rem;color:var(--portal-blue,#082867);font:800 .76rem/1.2 var(--font-sans,system-ui,sans-serif);letter-spacing:.08em;text-transform:uppercase}
+.content .explainer-section{margin:2rem 0 .65rem;font-size:1.3rem;line-height:1.25}
+:root[data-theme="dark"] .article-kicker{color:#8ab4ff}
 @media(max-width:600px){
   .saved-stories__inner{padding:18px}
 }

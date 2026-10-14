@@ -1158,7 +1158,22 @@ def listing_page_html(page_items, page_number, page_count, archive_items=None, s
 
 def article_path(job):
     """Readable slug URL; the job id remains the stable suffix identity."""
-    return "uutiset/" + slugs.article_slug(job["id"], _job_title(job)) + "/"
+    prefix = "selittaja-" if _job_kind(job) == "explainer" else ""
+    return "uutiset/" + prefix + slugs.article_slug(job["id"], _job_title(job)) + "/"
+
+
+def _job_kind(job):
+    """Read kind from the durable packet, falling back to draft metadata projections."""
+    for field in ("packet", "draft"):
+        try:
+            value = job.get(field)
+            if isinstance(value, (str, bytes)):
+                value = json.loads(value)
+            if isinstance(value, dict) and value.get("kind") == "explainer":
+                return "explainer"
+        except (ValueError, TypeError, AttributeError):
+            continue
+    return "article"
 
 
 def _job_title(job):
@@ -1616,10 +1631,15 @@ def render_site(store, output_dir, state_dir=None, public=False, include_ids=Non
         _machine_date, date = semantic_datetime(job["created_at"])
         fixture = '<p class="fixture">Testiaineisto: keksitty uutinen, ei oikea julkaisu.</p>' if packet.get("fixture") else ""
         source_numbers = {s["id"]: i + 1 for i, s in enumerate(packet["sources"])}
-        paragraphs = "".join('<p>' + _paragraph_text_html(link, p, packet["sources"]) +
-                             ' <span class="citations">' +
-                             " ".join(f'<a href="#lahde-{source_numbers[s]}">[{source_numbers[s]}]</a>' for s in p["source_ids"]) +
-                             '</span></p>' for p in draft["paragraphs"])
+        explainer = packet.get("kind") == "explainer"
+        paragraphs = "".join(
+            ((f'<h2 class="explainer-section">{esc(p["section"])}</h2>'
+              if explainer and p.get("section") else "") +
+             '<p>' + _paragraph_text_html(link, p, packet["sources"]) +
+             ' <span class="citations">' +
+             " ".join(f'<a href="#lahde-{source_numbers[s]}">[{source_numbers[s]}]</a>'
+                      for s in p["source_ids"]) + '</span></p>')
+            for p in draft["paragraphs"])
         source_list = source_list_html(packet["sources"])
         reuse_rights = reuse_rights_html(packet["sources"])
         image = display_image(draft.get("image"))
@@ -1660,9 +1680,11 @@ def render_site(store, output_dir, state_dir=None, public=False, include_ids=Non
         deck = "" if withdrawn else f'<p class="lead">{esc(draft["summary"])}</p>'
         reading_time = (f'<span class="article-reading-time">{reading_time_minutes(draft)} min lukuaika</span>'
                         if not withdrawn else "")
-        body = f'''<article class="story single-article">{breadcrumb}{fixture}
+        kind_attribute = ' data-article-kind="explainer"' if explainer else ""
+        kicker = '<p class="article-kicker">Selittäjä</p>' if explainer else ""
+        body = f'''<article class="story single-article"{kind_attribute}>{breadcrumb}{fixture}{kicker}
 <h1>{esc(draft["title"])}</h1>
-<p class="article-meta" data-category="{esc(draft["category"])}"><span>{"Luonnos · " if not public else ""}Julkaistu&nbsp;{time_html(job["created_at"])}</span>{reading_time}</p>
+<p class="article-meta" data-category="{esc(draft["category"])}"{kind_attribute}><span>{"Luonnos · " if not public else ""}Julkaistu&nbsp;{time_html(job["created_at"])}</span>{reading_time}</p>
 {status}{deck}{story_content}</article>'''
         # --- SEO metadata ---------------------------------------------------
         # Built only for the public build; the private preview stays noindex.
@@ -1687,7 +1709,7 @@ def render_site(store, output_dir, state_dir=None, public=False, include_ids=Non
                 link,
                 published=published_iso,
                 modified=modified_iso,
-                category=draft.get("category"),
+                category="explainer" if explainer else draft.get("category"),
                 image_url=image_for_meta,
                 sources=packet["sources"],
             )

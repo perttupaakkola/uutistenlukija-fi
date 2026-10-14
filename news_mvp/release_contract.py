@@ -695,6 +695,49 @@ def media(packet, draft, policy_gate=True):
             if stock is not None:
                 result['stock_image'] = stock
             return result
+    if packet.get('kind') == 'explainer':
+        from .explainers import (KIND, POLICY as EXPLAINER_POLICY, OFFICIAL_DOMAINS,
+                                 TEXT_BLOCKED_DOMAINS, _domain, _domain_matches,
+                                 policy_digest, validate_primary_relevance)
+        basis = packet.get('publication_basis')
+        sources = packet.get('sources')
+        if (packet.get('kind') != KIND or not isinstance(basis, dict) or
+                basis.get('policy') != EXPLAINER_POLICY or
+                (policy_gate and basis.get('policy_sha256') != policy_digest()) or
+                not isinstance(sources, list) or not 3 <= len(sources) <= 6 or
+                packet.get('story_key', '').startswith('explainer:') is False):
+            raise ValueError('Missing exact explainer source policy')
+        hashes = basis.get('source_sha256')
+        if not isinstance(hashes, dict) or set(hashes) != {source.get('id') for source in sources}:
+            raise ValueError('Explainer source capture identities are missing')
+        for index, source in enumerate(sources):
+            domain = _domain(source.get('url'))
+            if (not re.fullmatch(SHA, str(hashes.get(source.get('id'), ''))) or
+                    hashes[source['id']] != hashlib.sha256(source.get('text', '').encode()).hexdigest() or
+                    _domain_matches(domain, TEXT_BLOCKED_DOMAINS)):
+                raise ValueError('Explainer source is blocked or differs from its capture')
+            if index == 0:
+                if (source.get('id') != 'A' or source.get('primary') is not True or
+                        source.get('primary_type') not in
+                        ('official_document', 'original_reporting') or
+                        (source.get('primary_type') == 'official_document' and
+                         not _domain_matches(domain, OFFICIAL_DOMAINS)) or
+                        (source.get('primary_type') == 'original_reporting' and
+                         _domain_matches(domain, OFFICIAL_DOMAINS))):
+                    raise ValueError('Explainer source A is not a valid primary source')
+            elif source.get('related') is not True:
+                raise ValueError('Explainer reports must be marked as related evidence')
+        if not any(source.get('news_hook') is True for source in sources[1:]):
+            if sources[0].get('news_hook') is not True:
+                raise ValueError('Explainer has no marked news hook')
+        validate_primary_relevance(basis.get('topic_title'), sources[0],
+                                   basis.get('primary_relevance'))
+        result = {'image_sha256': image_sha256, 'text_only': {
+            'policy': EXPLAINER_POLICY, 'policy_sha256': policy_digest(),
+            'provenance_sha256': digest({'basis': basis, 'sources': sources})}}
+        if stock is not None:
+            result['stock_image'] = stock
+        return result
     from .official import policy, reuse
     spec = policy()
     basis = packet.get('publication_basis', {})
@@ -817,6 +860,22 @@ def _archived_source_matches(raw, provider, source, parsed):
 
 def verify_intake(packet, state, *, archive_image_only=False):
     """Bind the stored, reviewed text to actual captured upstream bytes before release."""
+    if packet.get('kind') == 'explainer':
+        directory = Path(state)/'intake'/digest(packet)
+        intake_packet = packet
+        image = packet.get('image')
+        if not directory.is_dir() and isinstance(image, dict):
+            directory, intake_packet = _original_intake(packet, Path(state)/'intake')
+        try:
+            saved = json.loads((directory/'packet.json').read_text())
+            receipt = json.loads((directory/'receipt.json').read_text())
+        except (OSError, ValueError) as error:
+            raise ValueError('Explainer intake capture is missing') from error
+        if (saved != intake_packet or receipt.get('packet_sha256') != digest(intake_packet) or
+                receipt.get('kind') != 'explainer' or
+                receipt.get('source_sha256') != intake_packet['publication_basis']['source_sha256']):
+            raise ValueError('Explainer intake capture identity mismatch')
+        return
     from .official import rights_text, source_fields, policy, ADDITIONAL_PROVIDERS
     basis = packet['publication_basis'];provider = basis['provider']
     directory = Path(state)/'intake'/digest(packet)
@@ -1588,6 +1647,26 @@ def check_article(html,packet,draft,canonical=None):
         raise ValueError('Amendment article marker missing or unsupported')
     required=[draft['title'],draft['summary']]+[p['text'] for p in draft['paragraphs']]
     from . import site
+    if packet.get('kind') == 'explainer':
+        from .explainers import SECTION_LABELS
+        if (html.count('<p class="article-kicker">Selittäjä</p>') != 1 or
+                html.count('data-article-kind="explainer"') != 2 or
+                '"articleSection":"explainer"' not in html):
+            raise ValueError('Explainer label or measurement markup is missing')
+        expected = ''.join(
+            ((f'<h2 class="explainer-section">{esc(p["section"])}</h2>'
+              if p.get('section') else '') + '<p>' +
+             site._paragraph_text_html(canonical or '', p, packet['sources']) +
+             ' <span class="citations">' + ' '.join(
+                 f'<a href="#lahde-{next(i for i, s in enumerate(packet["sources"], 1) if s["id"] == sid)}">[{next(i for i, s in enumerate(packet["sources"], 1) if s["id"] == sid)}]</a>'
+                 for sid in p['source_ids']) + '</span></p>')
+            for p in draft['paragraphs'])
+        if html.count('<div class="content">'+expected+'</div>') != 1:
+            raise ValueError('Explainer section structure differs from reviewed draft')
+        if [p.get('section') for p in draft['paragraphs'] if p.get('section')] != list(SECTION_LABELS):
+            raise ValueError('Explainer section order changed')
+        if canonical is not None and '/uutiset/selittaja-' not in canonical:
+            raise ValueError('Explainer canonical is not identifiable')
     expected_reuse = site.reuse_rights_html(packet['sources'])
     reuse_marker = '<section class="source-reuse">'
     if expected_reuse:

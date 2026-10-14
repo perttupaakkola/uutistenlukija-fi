@@ -59,6 +59,15 @@ def load_config(path):
         raise ValueError("Invalid editorial_timeout_seconds")
     if config.get("backend") not in ("fixture", "hermes"):
         raise ValueError("Choose fixture or hermes backend")
+    explainers = config.get("explainers")
+    if explainers is not None:
+        if (not isinstance(explainers, dict) or
+                set(explainers) != {"enabled", "max_per_day", "max_per_tick"} or
+                type(explainers.get("enabled")) is not bool or
+                type(explainers.get("max_per_day")) is not int or
+                not 1 <= explainers["max_per_day"] <= 2 or
+                explainers.get("max_per_tick") != 1):
+            raise ValueError("Invalid explainer admission settings")
     return config
 
 
@@ -297,6 +306,8 @@ def tick(config_path, model=None, now=None, _already_locked=False, target_job_id
                     reason = text(draft.get("reason"), "withholding reason", 2000)
                     store.finish_review(job["id"], {"approved": False, "reasons": [reason], "draft_sha256": None})
                     return {"status": "rejected", "id": job["id"]}
+                if packet.get("kind") == "explainer":
+                    draft = {**draft, "kind": "explainer"}
                 # Fit an over-long headline into the SERP budget before the reviewer and the
                 # illustration step see the draft; both use the final title.
                 draft = repair_title(model, packet, draft)
@@ -358,6 +369,8 @@ def tick(config_path, model=None, now=None, _already_locked=False, target_job_id
                         'review': review, 'correction_round': correction_round})
                     if not isinstance(revised, dict):
                         raise ValueError('Revised draft must be an object')
+                    if packet.get('kind') == 'explainer':
+                        revised = {**revised, 'kind': 'explainer'}
                     revised = repair_title(model, packet, revised)
                     if config.get("illustrations", True) and not packet.get("fixture", False):
                         # Image reviews are bound to the exact article text, so a corrected
