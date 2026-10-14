@@ -53,7 +53,7 @@ class Page(HTMLParser):
         self.meta, self.links, self.times = {}, [], []
 
     def handle_starttag(self, tag, attrs):
-        a = dict(attrs)
+        a = {k: ('' if v is None else v) for k, v in attrs}
         if tag == 'meta':
             self.meta[a.get('property', a.get('name'))] = a.get('content', '')
         if tag == 'a' and a.get('href'):
