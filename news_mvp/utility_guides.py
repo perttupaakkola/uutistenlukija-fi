@@ -32,8 +32,8 @@ def guides(now) -> tuple[dict, ...]:
     clock_answer = ('Suomessa kelloja siirrettiin sunnuntaina 25. lokakuuta 2026 aamulla kello 04.00 takaisin kello 03.00. Tämä sivu käsittelee vuoden 2026 syksyn siirtoa, ei seuraavaa kellonsiirtoa.' if expired else
                     'Suomessa kelloja siirretään sunnuntaina 25. lokakuuta 2026 aamulla kello 04.00 takaisin kello 03.00. Yö pitenee yhdellä tunnilla.')
     return (
-        dict(path=GUIDE_PATHS[0], title='Kellojen siirto 2026: kellot siirretään taaksepäin su 25.10. kello 04 → 03',
-             description='Milloin kelloja siirretään 2026? Normaaliaikaan siirrytään sunnuntaina 25.10.2026 kello 04 → 03, tunti taaksepäin. Lisäksi kevään 2027 siirto ja muistilista laitteille.',
+        dict(path=GUIDE_PATHS[0], title='Kellojen siirto syksy 2026: milloin kellot käännetään? Su 25.10. klo 04 → 03',
+             description='Milloin kelloja käännetään syksyllä 2026? Kellot siirretään talviaikaan eli normaaliaikaan sunnuntaina 25.10.2026 kello 04 → 03, tunti taaksepäin. Lisäksi kevään 2027 siirto ja muistilista laitteille.',
              answer=clock_answer, source=CLOCK_SOURCE, source_label='Finlex: kesäaika-asetus 753/2001, 1 ja 3 §',
              sections=(
                  ('Miksi juuri 25. lokakuuta?', '<p>Asetuksen mukaan normaaliaikaan palataan lokakuun viimeisenä sunnuntaina kello neljä, jolloin aikaa siirretään tunti taaksepäin. Vuoden 2026 kalenterissa viimeinen sunnuntai on 25. lokakuuta. Päivä on laskettu tästä säännöstä.</p>'),
@@ -115,8 +115,8 @@ def guides(now) -> tuple[dict, ...]:
                  ('Lyhyt katko, sulaneet pakasteet tai rikkoutunut laite', '<p>Alle 12 tunnin katkoista tai usein toistuvista lyhyistä katkoista voit KKV:n mukaan vaatia verkkoyhtiöltä hinnanalennusta, jos kyse on sähköntoimituksen virheestä. Hinnanalennus on vähintään kahden viikon osuus vuotuisesta verkkopalvelumaksusta. Jos virheellisestä toimituksesta aiheutuu vahinkoa, esimerkiksi pakasteet sulavat, voit vaatia vahingonkorvausta vakiokorvauksen lisäksi. Tee vaatimus kirjallisesti kohtuullisessa ajassa. Pitkäkään myrskykatko ei aina ole virhe, joten tarkista myös, korvaako kotivakuutuksesi vahingon. Erimielisyydessä apua saa kuluttajaneuvonnasta.</p>'),
                  ('Kun sähköt palaavat', '<p>Kytke laitteet takaisin vähitellen, ei kaikkia kerralla. Tarkista pakastimen ja jääkaapin ruoat: sulaneita ja lämmenneitä herkästi pilaantuvia ruokia ei kannata pakastaa uudelleen. Vedä vessa vasta, kun sähköt ovat palanneet ja vesihuoltolaitos ei ole antanut muuta ohjetta. Aseta lopuksi kellot ja ajastimet uudelleen.</p>')),
              related=(('/oppaat/palovaroittimen-tarkistus/', 'Palovaroittimen tarkistus: testinappi ja uusimisajankohta'), ('/oppaat/kellojen-siirto-2026/', 'Kellojen siirto 25. lokakuuta 2026'), ('/oppaat/talvirenkaat-2026/', 'Talvirenkaat 2026: milloin ne pitää vaihtaa?'), ('/oppaat/#oppaat-saavaroitukset-title', 'Säävaroituksen alue ja voimassaolo'), ('/categories/kotimaa/', 'Kotimaan uutiset'))),
-        dict(path=GUIDE_PATHS[7], title='Pyhäinpäivä ja halloween 2026: pyhäinpäivä la 31.10., halloween-kierros pe 30.10.?',
-             description='Pyhäinpäivä on lauantaina 31.10.2026, samana päivänä kuin halloween. Milloin karkki vai kepponen -kierros kannattaa tehdä, ovatko kaupat ja Alko auki ja miten kynttilä viedään haudalle.',
+        dict(path=GUIDE_PATHS[7], title='Koska on halloween 2026? La 31.10. sama päivä kuin pyhäinpäivä – kierros pe 30.10.',
+             description='Halloween on lauantaina 31.10.2026, samana päivänä kuin pyhäinpäivä. Milloin karkki vai kepponen -kierros kannattaa tehdä, ovatko kaupat ja Alko auki ja miten kynttilä viedään haudalle.',
              answer='Vuonna 2026 pyhäinpäivää vietetään lauantaina 31. lokakuuta, joten se osuu samalle päivälle kuin halloween. Esimerkiksi Huittisten kaupunki suosittelee lasten karkki vai kepponen -kierroksia perjantaiksi 30.10. ja kehottaa lopettamaan ovikierrokset viimeistään kello 19.30. Alkon kaikki myymälät ovat pyhäinpäivänä auki, ja ruokakauppojen aukioloajat vaihtelevat myymälöittäin.',
              source=ALLSAINTS_SOURCE, source_label='Evl.fi: pyhäinpäivä',
              sections=(
@@ -127,8 +127,8 @@ def guides(now) -> tuple[dict, ...]:
                  ('Onko pyhäinpäivä vapaapäivä tai liputuspäivä?', '<p>Pyhäinpäivä on kirkollinen juhlapyhä, joka on aina lauantai. Moni on siksi joka tapauksessa vapaalla, mutta työvuoroissa tai liikkeissä työskentelevien vapaapäivät ja mahdolliset pyhälisät määräytyvät oman työehtosopimuksen mukaan. Pyhäinpäivä ei ole sisäministeriön luettelossa liputuspäivä. Seuraavat liputuspäivät ovat 6.11. ruotsalaisuuden päivä ja 8.11. isänpäivä.</p>'),
                  ('Mitä tästä ei voi päätellä?', '<p>Halloween-suositukset vaihtelevat kunnittain ja naapurustoittain; yhden kaupungin ohje ei sido muita. Kauppojen ja hautausmaiden aukiolot tarkistetaan aina myymälältä ja seurakunnalta, sillä tämä opas ei luettele yksittäisiä aukioloja.</p>')),
              related=(('/oppaat/liputuspaivat-2026/', 'Liputuspäivät loppuvuonna 2026: isänpäivä 8.11.'), ('/oppaat/kellojen-siirto-2026/', 'Kellojen siirto 25. lokakuuta 2026'), ('/oppaat/talvirenkaat-2026/', 'Talvirenkaat 2026: milloin ne pitää vaihtaa?'), ('/syysloma-2026/', 'Syysloma 2026: maksutonta tekemistä kaupungeittain'), ('/categories/kotimaa/', 'Kotimaan uutiset'))),
-        dict(path=GUIDE_PATHS[8], title='Isänpäivä 2026 on sunnuntaina 8.11.: liputus, lahjaideat ja muistilista',
-             description='Isänpäivää vietetään sunnuntaina 8. marraskuuta 2026. Virallinen liputuspäivä kello 8 alkaen, edulliset ja aineettomat lahjaideat isälle ja isoisälle sekä muistilista ennen sunnuntaita.',
+        dict(path=GUIDE_PATHS[8], title='Isänpäivä 2026 Suomessa: vietetään sunnuntaina 8.11. – liputus ja lahjaideat',
+             description='Milloin isänpäivä on 2026? Suomessa isänpäivää vietetään marraskuun toisena sunnuntaina, 8. marraskuuta 2026. Virallinen liputuspäivä kello 8 alkaen, edulliset ja aineettomat lahjaideat isälle ja isoisälle sekä muistilista ennen sunnuntaita.',
              answer='Isänpäivää vietetään Suomessa marraskuun toisena sunnuntaina, vuonna 2026 sunnuntaina 8. marraskuuta. Se on virallinen liputuspäivä: lippu nostetaan kello 8 ja lasketaan auringon laskiessa. Vuonna 2027 isänpäivä on sunnuntaina 14. marraskuuta.',
              source=FATHERS_SOURCE, source_label='Sisäministeriö: liputuspäivät ja -ajat',
              sections=(
