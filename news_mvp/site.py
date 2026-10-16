@@ -724,9 +724,48 @@ def article_context_html(job, draft, articles, related_ids=()):
             '<div class="article-context__head"><h2>Uusimmat</h2></div>'
             f'<ul>{story_rows(newest)}</ul>'
             f'<p class="article-context__more"><a href="{LATEST_PATH}">Koko uutisvirta</a></p></section>')
+    if blocks:
+        guides = timely_guide_links(ClockDateTime.now(timezone.utc))
+        if guides:
+            rows = "".join(
+                f'<li><a href="{href}"><span class="article-context__title">{esc(title)}</span>'
+                f'<span class="article-context__meta">{esc(meta)}</span></a></li>'
+                for href, title, meta in guides)
+            blocks.append(
+                '<section class="article-context__block article-context__block--guides">'
+                '<div class="article-context__head"><h2>Ajankohtaiset oppaat</h2></div>'
+                f'<ul>{rows}</ul></section>')
     if not blocks:
         return ""
     return '<aside class="article-context" aria-label="Jatka lukemista">' + "".join(blocks) + '</aside>'
+
+
+# Dated answer guides, shown on article pages until the day after their event.
+# (last useful date, path, title, meta)
+TIMELY_GUIDES = (
+    ("2026-10-25", "/oppaat/kellojen-siirto-2026/", "Kellojen siirto syksy 2026: milloin kellot käännetään?",
+     "Su 25.10. klo 4 → 3, tunti taaksepäin"),
+    ("2026-10-31", "/oppaat/pyhainpaiva-halloween-2026/", "Pyhäinpäivä ja halloween 2026",
+     "Lauantai 31.10. – aukioloajat ja juhlinta"),
+    ("2026-11-01", "/oppaat/talvirenkaat-2026/", "Renkaanvaihto 2026: talvirenkaat",
+     "Talvirenkaat 1.11. alkaen, urasyvyys ja nastarenkaat"),
+    ("2026-11-08", "/oppaat/isanpaiva-2026/", "Isänpäivä 2026 Suomessa",
+     "Sunnuntai 8.11. – liputus ja lahjaideat"),
+    ("2026-12-03", "/oppaat/veronpalautus-2026/", "Veronpalautus 2026: maksupäivät",
+     "3.11. ja 3.12."),
+    ("2026-11-29", "/oppaat/adventti-2026/", "Adventti 2026", "1. adventti sunnuntaina 29.11."),
+    ("2026-12-26", "/oppaat/joulu-2026/", "Joulu 2026: välipäivät ja uusivuosi",
+     "Jouluaatto torstaina 24.12."),
+    ("2027-12-31", "/oppaat/kelan-maksupaivat-2026-2027/", "Kelan maksupäivät 2026–2027",
+     "Lapsilisä, asumistuki, eläke"),
+)
+
+
+def timely_guide_links(now, limit=4):
+    """Next upcoming dated guides, soonest first; past events drop out automatically."""
+    today = now.astimezone(ClockZoneInfo("Europe/Helsinki")).date().isoformat()
+    upcoming = sorted((g for g in TIMELY_GUIDES if g[0] >= today), key=lambda g: g[0])
+    return [(path, title, meta) for _end, path, title, meta in upcoming[:limit]]
 
 
 def image_rights_html(image):
