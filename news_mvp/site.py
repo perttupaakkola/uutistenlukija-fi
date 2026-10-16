@@ -1133,6 +1133,7 @@ def listing_page_html(page_items, page_number, page_count, archive_items=None, s
             '<li><a href="/oppaat/veronpalautus-2026/">Veronpalautus 2026: maksupäivät 3.11. ja 3.12.</a></li>'
             '<li><a href="/oppaat/eduskuntavaalit-2027/">Eduskuntavaalit 2027: vaalipäivä su 18.4.2027</a></li>'
             '<li><a href="/oppaat/pyhapaivat-2027/">Kalenteri 2027: pyhäpäivät ja viikkonumerot</a></li>'
+            '<li><a href="/oppaat/paasiainen-2027/">Pääsiäinen 2027: pitkäperjantai 26.3., 2. pääsiäispäivä 29.3.</a></li>'
             '<li><a href="/oppaat/sahkokatko/">Sähkökatko: mitä tehdä ja milloin saat korvauksen</a></li>'
             '<li><a href="/oppaat/kaamos-2026/">Kaamos 2026: milloin alkaa ja päivän pituus</a></li>'
             '<li><a href="/oppaat/taysikuu-2026-2027/">Täysikuu 2026–2027 ja kuukalenteri</a></li>'
