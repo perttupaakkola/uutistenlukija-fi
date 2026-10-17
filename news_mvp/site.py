@@ -747,6 +747,8 @@ TIMELY_GUIDES = (
      "Su 25.10. klo 4 → 3, tunti taaksepäin"),
     ("2026-10-31", "/oppaat/pyhainpaiva-halloween-2026/", "Pyhäinpäivä ja halloween 2026",
      "Lauantai 31.10. – aukioloajat ja juhlinta"),
+    ("2026-10-31", "/oppaat/halloween-tapahtumat-2026/", "Halloween 2026 tapahtumat",
+     "Heureka, Puotila, Kangasala, Puijo"),
     ("2026-11-01", "/oppaat/talvirenkaat-2026/", "Renkaanvaihto 2026: talvirenkaat",
      "Talvirenkaat 1.11. alkaen, urasyvyys ja nastarenkaat"),
     ("2026-11-08", "/oppaat/isanpaiva-2026/", "Isänpäivä 2026 Suomessa",
@@ -1166,6 +1168,7 @@ def listing_page_html(page_items, page_number, page_count, archive_items=None, s
             '<li><a href="/oppaat/koronarokotus-2026/">Koronarokotus 2026: kuka saa ja milloin</a></li>'
             '<li><a href="/oppaat/kellojen-siirto-2026/">Kellojen siirto 25. lokakuuta 2026</a></li>'
             '<li><a href="/oppaat/pyhainpaiva-halloween-2026/">Pyhäinpäivä ja halloween 2026: la 31.10.</a></li>'
+            '<li><a href="/oppaat/halloween-tapahtumat-2026/">Halloween 2026 tapahtumat: Helsinki, Vantaa, Tampere, Kuopio, Oulu</a></li>'
             '<li><a href="/oppaat/isanpaiva-2026/">Isänpäivä 2026: su 8.11., liputus ja lahjaideat</a></li>'
             '<li><a href="/oppaat/pikkujoulut-2026/">Pikkujoulut 2026: päivät, ideat ja verovapaus</a></li>'
             '<li><a href="/oppaat/adventti-2026/">Adventti 2026: 1. adventti su 29.11.</a></li>'
