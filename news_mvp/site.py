@@ -760,6 +760,8 @@ TIMELY_GUIDES = (
      "Tuomaan Markkinat 27.11.–22.12."),
     ("2026-12-06", "/oppaat/itsenaisyyspaiva-2026/", "Itsenäisyyspäivä 2026",
      "Sunnuntai 6.12. – liputus, paraati, Alko"),
+    ("2026-12-04", "/oppaat/laskettelukausi-2026-2027/", "Laskettelukausi 2026–2027",
+     "Ruka ja Levi auki, Tahko 13.11., Ylläs 21.11."),
     ("2026-12-26", "/oppaat/joulu-2026/", "Joulu 2026: välipäivät ja uusivuosi",
      "Jouluaatto torstaina 24.12."),
     ("2027-12-31", "/oppaat/kelan-maksupaivat-2026-2027/", "Kelan maksupäivät 2026–2027",
@@ -1173,6 +1175,7 @@ def listing_page_html(page_items, page_number, page_count, archive_items=None, s
             '<li><a href="/oppaat/pikkujoulut-2026/">Pikkujoulut 2026: päivät, ideat ja verovapaus</a></li>'
             '<li><a href="/oppaat/adventti-2026/">Adventti 2026: 1. adventti su 29.11.</a></li>'
             '<li><a href="/oppaat/black-friday-2026/">Black Friday 2026: pe 27.11. ja kuluttajan oikeudet</a></li>'
+            '<li><a href="/oppaat/laskettelukausi-2026-2027/">Laskettelukausi 2026–2027: milloin rinteet aukeavat?</a></li>'
             '<li><a href="/oppaat/koulujen-loma-ajat-2026-2027/">Hiihtoloma 2027 kaupungeittain: vko 8, 9 vai 10?</a></li>'
             '<li><a href="/oppaat/kelan-maksupaivat-2026-2027/">Kelan maksupäivät 2026–2027: lapsilisä, asumistuki, eläke</a></li>'
             '<li><a href="/oppaat/elakkeet-2027/">Eläkkeet 2027: kansaneläke +2,3 %, työeläke n. 2,6 %</a></li>'
