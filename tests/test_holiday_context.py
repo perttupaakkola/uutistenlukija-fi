@@ -21,7 +21,7 @@ class HolidayContext(unittest.TestCase):
 
     def test_expired_comparison_is_truthfully_labelled_archive(self):
         with patch("news_mvp.site.ClockDateTime") as clock:
-            clock.now.return_value = datetime(2026, 10, 23, tzinfo=timezone.utc)
+            clock.now.return_value = datetime(2026, 10, 26, tzinfo=timezone.utc)
             body = self.context(next(iter(site.GUIDES_JOB_IDS)))
         self.assertIn("maksuttoman tekemisen arkisto", body)
         self.assertNotIn("vertaile kuutta", body)

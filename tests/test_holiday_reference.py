@@ -62,8 +62,8 @@ class HolidayReference(unittest.TestCase):
             self.assertNotIn('https://uutistenlukija.fi/syysloma-2026/',(output/'sitemap.xml').read_text())
 
     def test_exact_expiry_and_honest_dated_archive(self):
-        before = datetime.fromisoformat('2026-10-22T11:59:59+00:00')
-        after = datetime.fromisoformat('2026-10-22T12:00:00+00:00')
+        before = datetime.fromisoformat('2026-10-25T15:59:59+00:00')
+        after = datetime.fromisoformat('2026-10-25T16:00:00+00:00')
         self.assertFalse(reference.archived(before))
         self.assertTrue(reference.archived(after))
         active = reference.render(before,site.page,True)
@@ -107,3 +107,15 @@ class HolidayCityExpansion(unittest.TestCase):
                      '16.10.2026 klo 14–17', 'K7', 'Turku: jättikasvisnäyttely', '3,50 €', 'Espoon, Tampereen ja Turun tiedot tarkistettu 11.10.2026',
                      'https://www.espoo.fi/fi/tapahtumat/espooevents:agqljabk5m'):
             self.assertIn(fact, text)
+
+
+class HolidayWeek43(unittest.TestCase):
+    def test_week43_cities_keep_conditions_and_sources(self):
+        text = reference.render(datetime.fromisoformat('2026-10-18T12:00:00+03:00'), site.page, True)
+        for fact in ('Viikko 43: syysloma 19.–25.10.', 'RTK areenalla', 'Harjula-salissa', 'normaalilla uimahallimaksulla',
+                     'Pihkassa', 'Vellamon', 'ti–to 20.–22.10. klo 12–14', 'Ouluhallissa ke 21.10. klo 18–22',
+                     'tarkistettu 18.10.2026'):
+            self.assertIn(fact, text)
+        for url, _ in reference.WEEK43_SOURCES:
+            self.assertIn('href="' + url + '"', text)
+        self.assertEqual(text.count('<dl>'), 12)
