@@ -24,7 +24,7 @@ dialog button{font:inherit;min-height:44px;margin:0;padding:.7rem 1rem;border:1p
 .consent-dialog__mark{display:grid;flex:0 0 42px;width:42px;height:42px;place-items:center;border-radius:50%;background:rgba(8,40,103,.09);color:var(--portal-blue,#082867)}
 .consent-dialog__mark svg{width:23px;height:23px;fill:currentColor}
 .consent-dialog__eyebrow{display:block;margin-bottom:.15rem;color:var(--portal-blue,#082867);font:750 11px/1.2 var(--font-sans,system-ui,sans-serif);letter-spacing:.11em;text-transform:uppercase}
-#consent-title{margin:0;color:var(--portal-ink,#071329);font:750 clamp(1.45rem,5vw,1.8rem)/1.15 var(--font-sans,system-ui,sans-serif);letter-spacing:-.02em}
+#consent-title{margin:0;padding-right:44px;color:var(--portal-ink,#071329);font:750 clamp(1.45rem,5vw,1.8rem)/1.15 var(--font-sans,system-ui,sans-serif);letter-spacing:-.02em}
 .consent-dialog__copy{margin:1.25rem 0 .45rem;color:var(--portal-ink,#071329);font:400 1rem/1.55 var(--font-sans,system-ui,sans-serif)}
 .consent-dialog__note{margin:0;color:var(--portal-muted,#647084);font:400 .9rem/1.45 var(--font-sans,system-ui,sans-serif)}
 .consent-dialog__actions{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:.7rem;margin-top:1.35rem}
