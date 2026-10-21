@@ -1,9 +1,10 @@
 """Which article pages are offered to search engines.
 
-Short automated articles (under 150 words of body text, not explainers, with no
-earned Google impressions) stay published for readers but are served
-`noindex,follow` and left out of the sitemap, so search engines judge the site
-by its fuller pages. The list is reviewed data in search_noindex.json.
+Articles rated as outdated or of little value to readers (AI rating of
+information, importance, source trust and current relevance; source count is
+not a criterion) and all distant NASA satellite-image pieces stay published
+for readers but are served `noindex,follow` and left out of the sitemap.
+The list is reviewed data in search_noindex.json.
 """
 import json
 from pathlib import Path
