@@ -90,12 +90,13 @@ def _tag(name, content, attribute="name"):
     return f'<meta {attribute}="{html.escape(name, quote=True)}" content="{html.escape(content, quote=True)}">'
 
 
-def article_head(title, description, canonical_path, image_url=None, published=None, modified=None):
+def article_head(title, description, canonical_path, image_url=None, published=None, modified=None,
+                 index=True):
     """Meta block for one public article page."""
     url = SITE + canonical_path
     parts = [
         _tag("description", description),
-        _tag("robots", "index,follow,max-image-preview:large"),
+        _tag("robots", "index,follow,max-image-preview:large" if index else "noindex,follow"),
         _tag("author", PUBLISHER),
         _tag("og:site_name", PUBLISHER, "property"),
         _tag("og:locale", "fi_FI", "property"),

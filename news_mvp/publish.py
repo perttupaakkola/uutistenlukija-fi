@@ -11,6 +11,7 @@ from html.parser import HTMLParser
 from pathlib import Path
 
 from cutover.check_release import check
+from . import index_policy
 from .authorization import authorize
 from .diagnostics import safe_error
 from .editorial import ROOT, digest, timestamp, validate_review, validate_packet
@@ -348,6 +349,8 @@ def _article_sitemap_entries(identifiers,title_by_id,article_mod,news_by_id):
         if draft is not None and not isinstance(draft,(str,bytes,dict)):
             draft=None
         path=article_path({'id':identifier,'draft':draft})
+        if not index_policy.indexable(path):
+            continue  # short article: served noindex, so not offered in the sitemap
         entries.append(_sitemap_url_entry('https://uutistenlukija.fi/'+path,
                                            article_mod.get(identifier),
                                            news_by_id.get(identifier)))

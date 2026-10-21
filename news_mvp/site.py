@@ -11,7 +11,7 @@ from pathlib import Path
 from urllib.parse import urlsplit
 from zoneinfo import ZoneInfo
 
-from . import frontpage, indexing, seo, slugs
+from . import frontpage, index_policy, indexing, seo, slugs
 from .editorial import ROOT, digest, timestamp, validate_draft, validate_review
 
 
@@ -1761,6 +1761,7 @@ def render_site(store, output_dir, state_dir=None, public=False, include_ids=Non
                 link,
                 image_url=image_for_meta,
                 published=published_iso,
+                index=index_policy.indexable(link),
             ) + seo.news_article_jsonld(
                 draft["title"],
                 description,
