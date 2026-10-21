@@ -1401,6 +1401,7 @@ def page(title, body, canonical_path=None, head_meta="", readability_present=Tru
         search_script = ""
     return f'''<!doctype html>
 <html lang="fi"{' class="reader-page"' if article_page else ""}><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="p:domain_verify" content="a2d575667319dc275a10ee095a79b376">
 {head}<title>{esc(title)} · Uutistenlukija</title>
 {icon_links}{style_links}</head><body{' class="reader-page"' if article_page else ""}>
 <a class="skip skip-to-content" href="#sisalto">Siirry sisältöön</a>
