@@ -32,9 +32,15 @@ def canonical(url,provider):
  return url
 STTINFO_GRANT = ('STT Infossa julkaistu materiaali on vapaasti julkaistavissa, '
                  'ellei toisin mainita.')
+EPRESSI_BASIS = ('owner-approved 2026-10-22: press releases distributed via '
+                 'ePressi to media for publication')
 
 
 def rights_text(raw,provider):
+ if provider=='epressi':
+  if raw!=EPRESSI_BASIS.encode('utf-8'):
+   raise ValueError('Missing exact owner-approved ePressi publication basis')
+  return EPRESSI_BASIS
  if provider=='sttinfo':
   text=(raw.decode('utf-8') if raw==STTINFO_GRANT.encode('utf-8')
         else parse(raw,lambda t,a:t=='body').text())
@@ -156,29 +162,48 @@ def _espoo_fields(raw,url):
  if len(body)<200 or len(body)>MAX_ARTICLE_CHARS:raise ValueError('Missing substantive article text')
  return {'id':'A','title':title,'published_at':published,'text':body}
 
-def _sttinfo_title_key(value):
+def press_wire_title_key(value):
  return ' '.join(re.findall(r'[a-z0-9åäö]+',value.casefold()))
 
 
-def _sttinfo_non_news(title):
+def press_wire_non_news(title):
  value=' '.join(title.casefold().split())
  if 'nostot medialle' in value:return 'non-news: Nostot medialle'
- if re.search(r'\b(?:media|lehdistö)kutsu\b|\bkutsu\s*:',value):return 'non-news: media invitation'
- if re.search(r'\b(?:rekrytointi|rekry|työpaikat?|avoimet työpaikat|haemme)\b',value):
+ if re.search(r'\b(?:media|lehdistö)kutsu\b|\blehdistö(?:\s*-?\s*ja\s*info)?(?:-|\s*)tilaisuus\b|\bkutsu\s*:',value):
+  return 'non-news: media invitation'
+ if (re.search(r'\b(?:rekrytointi|rekry|työpaikat?|avoimet työpaikat)\b',value) or
+     re.search(r'\bhaemme\b.*\b(?:johtajaa|päällikköä|asiantuntijaa|työntekijää|tekijää)\b',value)):
   return 'non-news: recruitment or job ad'
+ if (re.search(r'\b(?:apurah\w*|stipend\w*|palkin(?:to|no)\w*)\b',value)
+     and re.search(r'\b(?:hae|hakea|haettav\w*|haku\w*|ehdota\w*|ehdotuks\w*)\b',value)):
+  return 'non-news: award or stipend call'
+ if re.search(r'\betsinnässä\b.*\bvuoden\b.*\b(?:ehdota\w*|ehdotuks\w*)\b',value):
+  return 'non-news: award or stipend call'
+ if re.search(r'\b(?:nimitetty|nimitys|valittu|aloittaa)\b.*\b(?:\w*johtaja\w*|\w*päällikkö\w*|virkaan|virkamieheksi)\b',value):
+  return 'non-news: appointment of a single official'
+ if re.search(r'\b\w*(?:johtajaksi|päälliköksi)\b\s*$',value):
+  return 'non-news: appointment of a single official'
+ if (re.search(r'\b\w*(?:näyttely|konsertti|festivaali|teatteriesitys)\w*\b',value) or
+     re.search(r'\b(?:taide\w*|museo\w*|galleria\w*).{0,40}\bavajais\w*\b',value)):
+  return 'non-news: exhibition or art event'
  return None
 
 
-def sttinfo_publisher_allowed(name,spec):
+def press_wire_publisher_allowed(name,spec=None):
  """Return the deterministic public-body decision before any permissive rule."""
  folded=' '.join(name.casefold().split())
  party=(r'puolue|\bsdp\b|kokoomu|perussuomalai|\bkeskusta\b|vihreät|'
         r'vasemmistoliitto|\brkp\b|\bsfp\b|\bkd\b|liike nyt')
  if re.search(party,folded):return False,'political party or politician feed'
  if re.search(r'\b(?:oyj?|ab)\b',folded):return False,'company'
+ shared=policy().get('press_wire_public_bodies',{})
+ explicit={value.casefold() for value in shared.get('allowed_publishers',[])}
+ explicit.update(value.casefold() for value in (spec or {}).get('allowed_publishers',[]))
+ councils={value.casefold() for value in shared.get('regional_councils',[])}
+ if folded in councils:return True,'regional council'
+ if 'kuntayhtymä' in folded:return True,'joint municipal authority'
  if re.search(r'\b(?:ry|rf)\b|yhdistys|järjestö|liitto|säätiö',folded):
   return False,'association or foundation'
- explicit={value.casefold() for value in spec.get('allowed_publishers',[])}
  if folded in explicit:return True,'explicit public-body allowlist'
  # A trailing translated abbreviation does not change the Finnish institutional name.
  base=re.sub(r'\s*\([^)]{2,12}\)\s*$','',folded)
@@ -193,7 +218,7 @@ def sttinfo_publisher_allowed(name,spec):
  return False,'unknown publisher'
 
 
-def _sttinfo_restriction(text,now,published):
+def press_wire_restriction(text,now,published):
  folded=' '.join(text.casefold().split())
  for pattern,label in ((r'ei saa julkaista','publication prohibited'),
                        (r'\bembargo\b','embargo'),
@@ -210,6 +235,25 @@ def _sttinfo_restriction(text,now,published):
       hour=int(match.group(2)),minute=int(match.group(3)))
   if release>local_now:return 'future publication time'
  return None
+
+
+def press_wire_duplicate(title,page,excluded):
+ excluded=set(excluded)
+ if any(link.get('href') in excluded or 'url:'+link.get('href','') in excluded
+        for link in page.links):return 'duplicate URL/story key'
+ key=press_wire_title_key(title)
+ existing=[value[6:] for value in excluded if isinstance(value,str) and value.startswith('title:')]
+ if any(key==old or SequenceMatcher(None,key,old).ratio()>=.90 for old in existing):
+  return 'duplicate title similarity'
+ return None
+
+
+# Backward-compatible names keep the STT Info contract importable while both wires use
+# exactly the same allowlist, non-news, restriction and duplicate-title policy.
+_sttinfo_title_key=press_wire_title_key
+_sttinfo_non_news=press_wire_non_news
+sttinfo_publisher_allowed=press_wire_publisher_allowed
+_sttinfo_restriction=press_wire_restriction
 
 
 def _sttinfo_parts(raw,url,now):
@@ -246,25 +290,18 @@ def _sttinfo_parts(raw,url,now):
  body='\n'.join(lines[3:min(stops)]).strip()
  if len(body)<200 or len(body)>MAX_ARTICLE_CHARS:
   raise ValueError('Missing substantive STT Info release text')
- rejection=_sttinfo_non_news(title)
+ rejection=press_wire_non_news(title)
  if rejection:raise ValueError(rejection)
- allowed,reason=sttinfo_publisher_allowed(publisher,spec)
+ allowed,reason=press_wire_publisher_allowed(publisher,spec)
  if not allowed:raise ValueError(reason+': '+publisher)
- restriction=_sttinfo_restriction('\n'.join(lines),now,published)
+ restriction=press_wire_restriction('\n'.join(lines),now,published)
  if restriction:raise ValueError('Restricted STT Info release: '+restriction)
  return {'id':'A','title':title,'published_at':published.isoformat(),'text':body,
          'publisher':publisher+' / STT Info'},page,publisher,reason
 
 
 def _sttinfo_duplicate(title,page,excluded):
- excluded=set(excluded)
- if any(link.get('href') in excluded or 'url:'+link.get('href','') in excluded
-        for link in page.links):return 'duplicate URL/story key'
- key=_sttinfo_title_key(title)
- existing=[value[6:] for value in excluded if isinstance(value,str) and value.startswith('title:')]
- if any(key==old or SequenceMatcher(None,key,old).ratio()>=.90 for old in existing):
-  return 'duplicate title similarity'
- return None
+ return press_wire_duplicate(title,page,excluded)
 
 
 def sttinfo_candidates(raw,spec,now,excluded,response):
@@ -280,7 +317,7 @@ def sttinfo_candidates(raw,spec,now,excluded,response):
    age=(now-date).total_seconds()
   except (TypeError,ValueError):continue
   if (url in excluded or 'url:'+url in excluded or not 0<=age<=48*3600 or
-      not re.fullmatch(spec['article_pattern'],url) or _sttinfo_non_news(title)):
+      not re.fullmatch(spec['article_pattern'],url) or press_wire_non_news(title)):
    continue
   candidates.append((url,title))
  if not candidates:return []
@@ -295,7 +332,81 @@ def sttinfo_candidates(raw,spec,now,excluded,response):
           '_source_raw':article,'publisher':publisher,'publisher_reason':reason}]
 
 
+def epressi_feed_index(spec,now):
+ """Prefer the municipal feed 3:1 while sampling all releases within the two-fetch cap."""
+ indexes=spec.get('indexes',[spec['index']])
+ expected=['https://www.epressi.com/tiedotteet/kaupungit-ja-kunnat.rss',
+           'https://www.epressi.com/tiedotteet.rss']
+ if indexes!=expected or spec['index']!=expected[0]:
+  raise ValueError('Invalid ePressi feed configuration')
+ return indexes[1] if int(now.timestamp()//900)%4==3 else indexes[0]
+
+
+def _epressi_parts(raw,url,now):
+ spec=policy()['providers']['epressi']
+ if not re.fullmatch(spec['article_pattern'],url):raise ValueError('Unapproved article URL')
+ page=Meta();page.feed(raw.decode('utf-8'))
+ if page.canonicals!=[url]:raise ValueError('Canonical article mismatch')
+ title=page.one('og:title').strip()
+ heading=parse(raw,lambda t,a:t=='h1').text()
+ if not title or heading!=title:raise ValueError('ePressi title mismatch')
+ publisher=parse(raw,lambda t,a:t=='a' and 'js-customer-name' in a.get('class','').split()).text()
+ if not publisher or '\n' in publisher:raise ValueError('Missing exact ePressi publisher')
+ body=parse(raw,lambda t,a:t=='div' and 'news-body' in a.get('class','').split()).text()
+ if len(body)<200 or len(body)>MAX_ARTICLE_CHARS:
+  raise ValueError('Missing substantive ePressi release text')
+ try:published=datetime.fromisoformat(page.one('article:published_time'))
+ except (TypeError,ValueError) as error:raise ValueError('Missing ePressi publication time') from error
+ if published.tzinfo is None:raise ValueError('Missing ePressi publication timezone')
+ rejection=press_wire_non_news(title)
+ if rejection:raise ValueError(rejection)
+ allowed,reason=press_wire_publisher_allowed(publisher,spec)
+ if not allowed:raise ValueError(reason+': '+publisher)
+ restriction=press_wire_restriction('\n'.join((title,body)),now,published)
+ if restriction:raise ValueError('Restricted ePressi release: '+restriction)
+ return {'id':'A','title':title,'published_at':published.isoformat(),'text':body,
+         'publisher':publisher+' / ePressi'},page,publisher,reason
+
+
+def epressi_candidates(raw,spec,now,excluded,response):
+ """Inspect one rotating release: one selected feed plus one page fetch per tick."""
+ try:items=ET.fromstring(raw).findall('./channel/item')
+ except ET.ParseError as error:raise ValueError('Invalid ePressi RSS') from error
+ candidates=[]
+ for item in items[:50]:
+  url=item.findtext('link','');title=item.findtext('title','').strip()
+  categories=[' '.join((node.text or '').casefold().split()) for node in item.findall('category')]
+  rejection=press_wire_non_news(title)
+  if (rejection is None and 'kulttuuri ja taide' in categories and
+      re.search(r'\b(?:saapuu|esiinty\w*|juhlista\w*|karnevaal\w*|tapahtuma\w*)\b',
+                title.casefold())):
+   rejection='non-news: exhibition or art event'
+  try:
+   date=parsedate_to_datetime(item.findtext('pubDate',''))
+   if date.tzinfo is None:raise ValueError
+   age=(now-date).total_seconds()
+  except (TypeError,ValueError):continue
+  if (url in excluded or 'url:'+url in excluded or not 0<=age<=48*3600 or
+      not re.fullmatch(spec['article_pattern'],url) or
+      any(re.search(r'p[oö]rssitiedote',category) for category in categories) or
+      rejection):
+   continue
+  candidates.append((url,title))
+ if not candidates:return []
+ url,feed_title=candidates[int(now.timestamp()//900)%len(candidates)]
+ article=response(url,spec['hosts'])
+ fields,page,publisher,reason=_epressi_parts(article,url,now)
+ if fields['title']!=feed_title:raise ValueError('ePressi feed/article title mismatch')
+ duplicate=press_wire_duplicate(feed_title,page,excluded)
+ if duplicate:raise ValueError(duplicate)
+ return [{'family':'finnish-official','provider':'epressi','url':url,
+          '_source_raw':article,'publisher':publisher,'publisher_reason':reason}]
+
+
 def source_fields(raw,provider,url,now=None):
+ if provider=='epressi':
+  fields,_,_,_=_epressi_parts(raw,url,now or datetime.now(timezone.utc))
+  return fields
  if provider=='sttinfo':
   fields,_,_,_=_sttinfo_parts(raw,url,now or datetime.now(timezone.utc))
   return fields

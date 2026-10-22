@@ -32,16 +32,16 @@ POLICE_PROVIDERS = ('poliisi-helsinki', 'poliisi-ita-uusimaa', 'poliisi-lansi-uu
                     'poliisi-sisa-suomi', 'poliisi-lounais-suomi', 'poliisi-oulu')
 POLICE_FEEDS_PER_TICK = 3
 ADDITIONAL_PROVIDERS = ('kuntaliitto', 'ecb', 'ec-press', 'kuopio', 'vantaa', 'espoo',
-                        'valtioneuvosto', 'oulu', 'sttinfo') + POLICE_PROVIDERS
+                        'valtioneuvosto', 'oulu', 'sttinfo', 'epressi') + POLICE_PROVIDERS
 # Providers discovered from an RSS index (rather than an HTML link list).
 RSS_PROVIDERS = ('helsinki', 'ecb', 'ec-press', 'kuopio', 'vantaa', 'espoo',
-                 'valtioneuvosto', 'oulu', 'sttinfo') + POLICE_PROVIDERS
+                 'valtioneuvosto', 'oulu', 'sttinfo', 'epressi') + POLICE_PROVIDERS
 
 # Publication order for round-robin discovery. Every provider in the policy must appear
 # here, or it is silently never discovered.
 PROVIDER_ORDER = ('nasa-modis', 'helsinki', 'stat', 'kuntaliitto', 'ecb', 'ec-press',
                   'kuopio', 'vantaa', 'espoo', 'valtioneuvosto', 'oulu',
-                  'sttinfo') + POLICE_PROVIDERS
+                  'sttinfo', 'epressi') + POLICE_PROVIDERS
 
 VOID = {'area', 'base', 'br', 'col', 'embed', 'hr', 'img', 'input', 'link', 'meta', 'param', 'source', 'track', 'wbr'}
 
@@ -225,19 +225,24 @@ def discover(config, now=None, excluded=(), errors=None, provider_only=None):
         if provider_only is not None and provider != provider_only:continue
         if provider in POLICE_PROVIDERS and provider not in active_police:continue
         try:
-            raw = response(spec['index'], spec['hosts'])
+            index = spec['index']
+            if provider == 'epressi':
+                from .official_additional import epressi_feed_index
+                index = epressi_feed_index(spec, now)
+            raw = response(index, spec['hosts'])
         except (ValueError,OSError) as error:
             if errors is None:raise
             errors.append({'provider':provider,'stage':'discovery','error':safe_error(error)})
             continue
         rows = []
-        if provider == 'sttinfo':
-            # STT Info is an aggregator: unlike an institutional feed, the index does not
-            # identify the publisher. Inspect exactly one rotating release page per tick,
-            # so this provider performs at most two discovery fetches (feed + page).
-            from .official_additional import sttinfo_candidates
+        if provider in ('sttinfo', 'epressi'):
+            # Press wires are aggregators: unlike an institutional feed, their indexes do not
+            # authoritatively identify the publisher. Inspect exactly one rotating release
+            # page per tick, so each wire performs at most two fetches (feed + page).
+            from .official_additional import epressi_candidates, sttinfo_candidates
             try:
-                rows = sttinfo_candidates(raw, spec, now, excluded, response)
+                candidates = sttinfo_candidates if provider == 'sttinfo' else epressi_candidates
+                rows = candidates(raw, spec, now, excluded, response)
             except (ValueError, OSError) as error:
                 if errors is None:
                     raise
@@ -337,12 +342,11 @@ def collect(recipe, state_dir, now=None, search=None, *, primary_data=_AUTO_PRIM
     url = web_url(recipe['url'])
     if not re.fullmatch(spec['article_pattern'], url):
         raise ValueError('Not an allowlisted article URL')
-    if provider == 'sttinfo':
-        # The owner-approved sentence was fetched and reviewed when the policy was added.
-        # Keep STT Info to its hard two-fetch tick budget (feed + one rotating release):
-        # capture the exact policy sentence as the rights evidence instead of re-fetching
-        # the terms page for every release. Its text hash and the whole policy digest are
-        # independently enforced below and again by release/readback verification.
+    if provider in ('sttinfo', 'epressi'):
+        # Keep both wires to their hard two-fetch tick budgets (feed + one rotating release).
+        # STT Info captures its reviewed grant; ePressi captures the explicit owner-decision
+        # basis (not a platform grant). Their hashes and the whole policy digest are enforced
+        # below and again by release/readback verification.
         rights = spec['rights_text'].encode('utf-8')
     else:
         rights = response(spec['rights_url'], spec['hosts'], allow_pdf=provider == 'kuopio')
@@ -351,7 +355,7 @@ def collect(recipe, state_dir, now=None, search=None, *, primary_data=_AUTO_PRIM
         raise ValueError('Source reuse terms changed; independent review required')
     if provider == 'ec-press':
         raw = response(ec_press_api_url(url), spec['hosts'], allow_json=True)
-    elif provider == 'sttinfo' and isinstance(recipe.get('_source_raw'), bytes):
+    elif provider in ('sttinfo', 'epressi') and isinstance(recipe.get('_source_raw'), bytes):
         # Discovery already spent the provider's one rotating page fetch. Reuse those exact
         # bytes for collection rather than downloading a moving aggregator page twice.
         raw = recipe['_source_raw']
@@ -401,7 +405,9 @@ def collect(recipe, state_dir, now=None, search=None, *, primary_data=_AUTO_PRIM
               'image_note': ('Ei lähdekuvaa: lähteen omaa kuvaa ei käytetä, koska tekstin '
                              'käyttöehdot eivät kata kuvia. Kuvitus saatetaan liittää myöhemmin '
                              'tekoälyllä tuotettuna.'),
-              'supporting_documents': [{'id': 'RIGHTS', 'purpose': 'text reuse permission; not news or image evidence',
+              'supporting_documents': [{'id': 'RIGHTS', 'purpose': (
+                  'owner-approved press-wire publication basis; not a platform grant, news or image evidence'
+                  if provider == 'epressi' else 'text reuse permission; not news or image evidence'),
                   'url': spec['rights_url'], 'retrieved_at': now.isoformat(), 'text': permission,
                   'sha256': hashlib.sha256(rights).hexdigest()}]}
     if primary_binding is not None:

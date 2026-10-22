@@ -146,8 +146,8 @@ def live_tick(config_path):
                         for source in saved.get('sources',[]):
                             title=source.get('title')
                             if isinstance(title,str):
-                                from .official_additional import _sttinfo_title_key
-                                excluded.add('title:'+_sttinfo_title_key(title))
+                                from .official_additional import press_wire_title_key
+                                excluded.add('title:'+press_wire_title_key(title))
                     except (TypeError,ValueError,KeyError): pass
                 last=store.db.execute('SELECT packet FROM jobs ORDER BY created_at DESC,rowid DESC LIMIT 1').fetchone()
                 previous=json.loads(last[0]) if last else {}

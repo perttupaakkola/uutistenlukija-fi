@@ -829,7 +829,7 @@ def source_list_html(sources):
     rows = []
     for index, source in enumerate(sources, 1):
         publisher = esc(source["publisher"])
-        if source["publisher"].endswith(" / STT Info"):
+        if source["publisher"].endswith((" / STT Info", " / ePressi")):
             publisher = "Lähde: " + publisher
         rows.append(
             f'<li id="lahde-{index}"><a href="{esc(source["url"])}" rel="noopener noreferrer">'
@@ -845,6 +845,11 @@ def reuse_rights_html(sources):
     for source in sources:
         reuse = source.get("reuse")
         if not reuse:
+            continue
+        # ePressi has no platform reuse grant to present as website terms. Its exact owner
+        # decision remains hash-bound internal evidence; the reader sees only source
+        # attribution, not a disclaimer or a misleading "Käyttöehdot" link.
+        if source["publisher"].endswith(" / ePressi"):
             continue
         license_url = reuse.get("license_url")
         short_label = short_license_label(license_url)

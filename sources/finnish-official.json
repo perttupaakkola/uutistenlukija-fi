@@ -1,6 +1,42 @@
 {
   "mode": "official-text-v1",
   "max_source_age_hours": 48,
+  "press_wire_public_bodies": {
+    "allowed_publishers": [
+      "Kela",
+      "Kela/FPA",
+      "Finanssivalvonta",
+      "Lupa- ja valvontavirasto",
+      "Traficom",
+      "Tulli",
+      "Verohallinto",
+      "Terveyden ja hyvinvoinnin laitos (THL)",
+      "Geologian tutkimuskeskus (GTK)",
+      "Ruokavirasto",
+      "Väylävirasto",
+      "Eduskunta"
+    ],
+    "regional_councils": [
+      "Etelä-Karjalan liitto",
+      "Etelä-Pohjanmaan liitto",
+      "Etelä-Savon maakuntaliitto",
+      "Kainuun liitto",
+      "Kanta-Hämeen liitto",
+      "Keski-Pohjanmaan liitto",
+      "Keski-Suomen liitto",
+      "Kymenlaakson liitto",
+      "Lapin liitto",
+      "Pirkanmaan liitto",
+      "Pohjanmaan liitto",
+      "Pohjois-Karjalan maakuntaliitto",
+      "Pohjois-Pohjanmaan liitto",
+      "Pohjois-Savon liitto",
+      "Päijät-Hämeen liitto",
+      "Satakuntaliitto",
+      "Uudenmaan liitto",
+      "Varsinais-Suomen liitto"
+    ]
+  },
   "providers": {
     "helsinki": {
       "publisher": "Helsingin kaupunki",
@@ -236,25 +272,30 @@
       "hosts": ["www.sttinfo.fi"],
       "timezone": "Europe/Helsinki",
       "article_pattern": "https://www\\.sttinfo\\.fi/tiedote/\\d+/[a-z0-9-]+\\?(?:publisherId=\\d+&)?lang=fi",
-      "allowed_publishers": [
-        "Kela",
-        "Kela/FPA",
-        "Finanssivalvonta",
-        "Lupa- ja valvontavirasto",
-        "Traficom",
-        "Tulli",
-        "Verohallinto",
-        "Terveyden ja hyvinvoinnin laitos (THL)",
-        "Geologian tutkimuskeskus (GTK)",
-        "Ruokavirasto",
-        "Väylävirasto",
-        "Eduskunta"
-      ],
       "max_fetches_per_tick": 2,
       "rights_text": "STT Infossa julkaistu materiaali on vapaasti julkaistavissa, ellei toisin mainita.",
       "rights_text_sha256": "e2cd90b05def14980d604b8cfbd94b4a06f4929bcd8c487e2ed7a6b50d90e881",
       "license": "STT Info: julkaistu materiaali on vapaasti julkaistavissa, ellei toisin mainita; tiedotekohtaiset rajoitukset tarkistetaan ja kuvia ei käytetä",
       "notice": "Lähde: <julkaisija> / STT Info",
+      "text_only": true
+    },
+    "epressi": {
+      "publisher": "ePressi",
+      "index": "https://www.epressi.com/tiedotteet/kaupungit-ja-kunnat.rss",
+      "indexes": [
+        "https://www.epressi.com/tiedotteet/kaupungit-ja-kunnat.rss",
+        "https://www.epressi.com/tiedotteet.rss"
+      ],
+      "rights_url": "https://www.epressi.com/",
+      "hosts": ["www.epressi.com"],
+      "timezone": "Europe/Helsinki",
+      "article_pattern": "https://www\\.epressi\\.com/tiedotteet/(?!porssitiedot)[a-z0-9-]+/[a-z0-9.-]+\\.html",
+      "max_fetches_per_tick": 2,
+      "basis": "owner-approved 2026-10-22: press releases distributed via ePressi to media for publication",
+      "rights_text": "owner-approved 2026-10-22: press releases distributed via ePressi to media for publication",
+      "rights_text_sha256": "f5c20062b1050660bba049efe747512fec54b77ceb24ecf019619388f1934bbf",
+      "license": "Owner-approved 2026-10-22 publication basis: press releases distributed via ePressi to media for publication; ePressi states no explicit reuse grant; release-specific restrictions are checked and images are excluded",
+      "notice": "Lähde: <julkaisija> / ePressi",
       "text_only": true
     }
   },

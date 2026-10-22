@@ -770,11 +770,11 @@ def media(packet, draft, policy_gate=True):
                    re.fullmatch(provider.get('story_key_pattern',''), packet['story_key'])) if structured else (
                    packet['story_key'] == 'url:'+source['url'])
     publisher_ok = source['publisher'] == provider['publisher']
-    if provider_key == 'sttinfo':
-        from .official_additional import sttinfo_publisher_allowed
-        suffix = ' / STT Info'
+    if provider_key in ('sttinfo', 'epressi'):
+        from .official_additional import press_wire_publisher_allowed
+        suffix = ' / '+('STT Info' if provider_key == 'sttinfo' else 'ePressi')
         public_name = source['publisher'][:-len(suffix)] if source['publisher'].endswith(suffix) else ''
-        publisher_ok = bool(public_name) and sttinfo_publisher_allowed(public_name, provider)[0]
+        publisher_ok = bool(public_name) and press_wire_publisher_allowed(public_name, provider)[0]
     if (not re.fullmatch(provider['article_pattern'], source['url']) or not identity_ok or
             not publisher_ok or
             (structured and basis.get('source_endpoint') != provider['index'])):
