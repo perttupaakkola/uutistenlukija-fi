@@ -1,7 +1,11 @@
 """Exact captured institutional article and rights parsing for official intake."""
 import json
 import re
+from difflib import SequenceMatcher
 from datetime import datetime, timezone
+from email.utils import parsedate_to_datetime
+import xml.etree.ElementTree as ET
+from urllib.parse import urlsplit
 from zoneinfo import ZoneInfo
 from .official import Page
 from .official import MAX_ARTICLE_CHARS
@@ -26,7 +30,16 @@ def canonical(url,provider):
  # ECB's doubled separator is an explicit observed URL contract, never repaired.
  if not re.fullmatch(policy()['providers'][provider]['article_pattern'],url):raise ValueError('Unapproved article URL')
  return url
+STTINFO_GRANT = ('STT Infossa julkaistu materiaali on vapaasti julkaistavissa, '
+                 'ellei toisin mainita.')
+
+
 def rights_text(raw,provider):
+ if provider=='sttinfo':
+  text=(raw.decode('utf-8') if raw==STTINFO_GRANT.encode('utf-8')
+        else parse(raw,lambda t,a:t=='body').text())
+  if text.count(STTINFO_GRANT)!=1:raise ValueError('Missing exact STT Info reuse grant')
+  return STTINFO_GRANT
  if provider.startswith('poliisi-'):
   text=parse(raw,lambda t,a:t=='body').text()
   start='Tekijänoikeudet tekstiin, kuviin ja muuhun sisältöön'
@@ -143,7 +156,149 @@ def _espoo_fields(raw,url):
  if len(body)<200 or len(body)>MAX_ARTICLE_CHARS:raise ValueError('Missing substantive article text')
  return {'id':'A','title':title,'published_at':published,'text':body}
 
-def source_fields(raw,provider,url):
+def _sttinfo_title_key(value):
+ return ' '.join(re.findall(r'[a-z0-9åäö]+',value.casefold()))
+
+
+def _sttinfo_non_news(title):
+ value=' '.join(title.casefold().split())
+ if 'nostot medialle' in value:return 'non-news: Nostot medialle'
+ if re.search(r'\b(?:media|lehdistö)kutsu\b|\bkutsu\s*:',value):return 'non-news: media invitation'
+ if re.search(r'\b(?:rekrytointi|rekry|työpaikat?|avoimet työpaikat|haemme)\b',value):
+  return 'non-news: recruitment or job ad'
+ return None
+
+
+def sttinfo_publisher_allowed(name,spec):
+ """Return the deterministic public-body decision before any permissive rule."""
+ folded=' '.join(name.casefold().split())
+ party=(r'puolue|\bsdp\b|kokoomu|perussuomalai|\bkeskusta\b|vihreät|'
+        r'vasemmistoliitto|\brkp\b|\bsfp\b|\bkd\b|liike nyt')
+ if re.search(party,folded):return False,'political party or politician feed'
+ if re.search(r'\b(?:oyj?|ab)\b',folded):return False,'company'
+ if re.search(r'\b(?:ry|rf)\b|yhdistys|järjestö|liitto|säätiö',folded):
+  return False,'association or foundation'
+ explicit={value.casefold() for value in spec.get('allowed_publishers',[])}
+ if folded in explicit:return True,'explicit public-body allowlist'
+ # A trailing translated abbreviation does not change the Finnish institutional name.
+ base=re.sub(r'\s*\([^)]{2,12}\)\s*$','',folded)
+ if re.search(r'(?:virasto|laitos|keskus|valvonta)$',base):
+  return True,'state authority or agency name'
+ if base.endswith('ministeriö'):return True,'ministry'
+ if 'hyvinvointialue' in base:return True,'wellbeing services county'
+ if re.search(r'\b(?:kaupunki|kunta)\b',base):return True,'city or municipality'
+ if 'yliopisto' in base or 'ammattikorkeakoulu' in base:return True,'university'
+ if re.search(r'(?:oikeus|tuomioistuin)$',base):return True,'court'
+ if base=='eduskunta':return True,'Eduskunta'
+ return False,'unknown publisher'
+
+
+def _sttinfo_restriction(text,now,published):
+ folded=' '.join(text.casefold().split())
+ for pattern,label in ((r'ei saa julkaista','publication prohibited'),
+                       (r'\bembargo\b','embargo'),
+                       (r'vain tiedotusvälineiden käyttöön','media-only use'),
+                       (r'kaikki oikeudet pidätetään','all rights reserved')):
+  if re.search(pattern,folded):return label
+ matches=re.finditer(r'julkaisuvapaa(?:na)?(?:\s+(\d{1,2}\.\d{1,2}\.\d{4}))?'
+                     r'\s+klo\s+(\d{1,2})[.:](\d{2})',folded)
+ local_now=now.astimezone(ZoneInfo('Europe/Helsinki'))
+ for match in matches:
+  day=(datetime.strptime(match.group(1),'%d.%m.%Y').date() if match.group(1)
+       else published.astimezone(ZoneInfo('Europe/Helsinki')).date())
+  release=datetime.combine(day,datetime.min.time(),ZoneInfo('Europe/Helsinki')).replace(
+      hour=int(match.group(2)),minute=int(match.group(3)))
+  if release>local_now:return 'future publication time'
+ return None
+
+
+def _sttinfo_parts(raw,url,now):
+ spec=policy()['providers']['sttinfo']
+ if not re.fullmatch(spec['article_pattern'],url):raise ValueError('Unapproved article URL')
+ page=Meta();page.feed(raw.decode('utf-8'))
+ if page.one('og:type')!='article':raise ValueError('Not an STT Info release')
+ canonical_url=page.one('og:url').replace('&amp;','&')
+ if urlsplit(canonical_url)._replace(query='')!=urlsplit(url)._replace(query=''):
+  raise ValueError('Canonical article mismatch')
+ lines=parse(raw,lambda t,a:t=='body').text().splitlines()
+ if len(lines)<5 or lines.count('Tietoja julkaisijasta')!=1:
+  raise ValueError('Missing STT Info release or publisher block')
+ title=lines[0].strip()
+ header=lines[1].split(' | ')
+ if len(header)!=3 or not header[1].strip():
+  raise ValueError('Missing exact STT Info publisher header')
+ if header[2]!='Tiedote':raise ValueError('non-news STT Info item type: '+header[2])
+ publisher=header[1].strip()
+ meta_title=page.one('og:title')
+ if title!=parse(raw,lambda t,a:t=='h1').text() or meta_title!=title+' | '+publisher:
+  raise ValueError('STT Info title or publisher mismatch')
+ stamp,separator,zone=header[0].rpartition(' ')
+ try:
+  if not separator or zone not in ('EET','EEST'):raise ValueError
+  local=datetime.strptime(stamp,'%d.%m.%Y %H:%M:%S')
+ except ValueError as error:raise ValueError('Missing STT Info publication time') from error
+ published=local.replace(tzinfo=ZoneInfo('Europe/Helsinki'))
+ expected_zone='EEST' if published.dst().total_seconds() else 'EET'
+ if zone!=expected_zone:raise ValueError('STT Info timezone mismatch')
+ stops=[i for i,line in enumerate(lines[3:],3)
+        if line in ('Avainsanat','Liitteet','Linkit','Tietoja julkaisijasta')]
+ if not stops:raise ValueError('Missing STT Info article boundary')
+ body='\n'.join(lines[3:min(stops)]).strip()
+ if len(body)<200 or len(body)>MAX_ARTICLE_CHARS:
+  raise ValueError('Missing substantive STT Info release text')
+ rejection=_sttinfo_non_news(title)
+ if rejection:raise ValueError(rejection)
+ allowed,reason=sttinfo_publisher_allowed(publisher,spec)
+ if not allowed:raise ValueError(reason+': '+publisher)
+ restriction=_sttinfo_restriction('\n'.join(lines),now,published)
+ if restriction:raise ValueError('Restricted STT Info release: '+restriction)
+ return {'id':'A','title':title,'published_at':published.isoformat(),'text':body,
+         'publisher':publisher+' / STT Info'},page,publisher,reason
+
+
+def _sttinfo_duplicate(title,page,excluded):
+ excluded=set(excluded)
+ if any(link.get('href') in excluded or 'url:'+link.get('href','') in excluded
+        for link in page.links):return 'duplicate URL/story key'
+ key=_sttinfo_title_key(title)
+ existing=[value[6:] for value in excluded if isinstance(value,str) and value.startswith('title:')]
+ if any(key==old or SequenceMatcher(None,key,old).ratio()>=.90 for old in existing):
+  return 'duplicate title similarity'
+ return None
+
+
+def sttinfo_candidates(raw,spec,now,excluded,response):
+ """Inspect one rotating release: one feed fetch in caller plus one page fetch here."""
+ try:items=ET.fromstring(raw).findall('./channel/item')
+ except ET.ParseError as error:raise ValueError('Invalid STT Info RSS') from error
+ candidates=[]
+ for item in items[:50]:
+  url=item.findtext('link','');title=item.findtext('title','').strip()
+  try:
+   date=parsedate_to_datetime(item.findtext('pubDate',''))
+   if date.tzinfo is None:raise ValueError
+   age=(now-date).total_seconds()
+  except (TypeError,ValueError):continue
+  if (url in excluded or 'url:'+url in excluded or not 0<=age<=48*3600 or
+      not re.fullmatch(spec['article_pattern'],url) or _sttinfo_non_news(title)):
+   continue
+  candidates.append((url,title))
+ if not candidates:return []
+ # Fifteen-minute rotation means an ineligible head item cannot starve the rest of the feed.
+ url,feed_title=candidates[int(now.timestamp()//900)%len(candidates)]
+ article=response(url,spec['hosts'])
+ fields,page,publisher,reason=_sttinfo_parts(article,url,now)
+ if fields['title']!=feed_title:raise ValueError('STT Info feed/article title mismatch')
+ duplicate=_sttinfo_duplicate(feed_title,page,excluded)
+ if duplicate:raise ValueError(duplicate)
+ return [{'family':'finnish-official','provider':'sttinfo','url':url,
+          '_source_raw':article,'publisher':publisher,'publisher_reason':reason}]
+
+
+def source_fields(raw,provider,url,now=None):
+ if provider=='sttinfo':
+  fields,_,_,_=_sttinfo_parts(raw,url,now or datetime.now(timezone.utc))
+  return fields
  spec=policy()['providers'][provider];url=canonical(url,provider)
  if provider=='ec-press':return _ec_press_fields(raw,url)
  if provider=='espoo':return _espoo_fields(raw,url)

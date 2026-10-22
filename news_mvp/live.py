@@ -141,7 +141,13 @@ def live_tick(config_path):
                 for row in store.db.execute(
                         "SELECT packet FROM jobs WHERE status IN ('rejected','failed') OR "
                         "id IN (SELECT job_id FROM publications WHERE status IN ('deployed','failed'))"):
-                    try: excluded.add(json.loads(row[0])['story_key'])
+                    try:
+                        saved=json.loads(row[0]);excluded.add(saved['story_key'])
+                        for source in saved.get('sources',[]):
+                            title=source.get('title')
+                            if isinstance(title,str):
+                                from .official_additional import _sttinfo_title_key
+                                excluded.add('title:'+_sttinfo_title_key(title))
                     except (TypeError,ValueError,KeyError): pass
                 last=store.db.execute('SELECT packet FROM jobs ORDER BY created_at DESC,rowid DESC LIMIT 1').fetchone()
                 previous=json.loads(last[0]) if last else {}

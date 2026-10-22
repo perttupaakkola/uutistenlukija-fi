@@ -228,6 +228,34 @@
       "rights_text_sha256": "d31a6899cd85c0172bc71f5bb19f1a2b85193ff8b1f1f6528d240470d0dae192",
       "license": "Poliisi.fi-sivuston käyttöehdot: tekstiaineiston käyttö ja linkitys sallittu hyvän tavan mukaisissa asiayhteyksissä lähde mainiten; kaupallinen, poliittinen ja uskonnollinen käyttö kielletty; kuvien käyttö edellyttää lupaa",
       "license_url": "https://poliisi.fi/tietoa-sivustosta"
+    },
+    "sttinfo": {
+      "publisher": "STT Info",
+      "index": "https://www.sttinfo.fi/rss/releases/latest",
+      "rights_url": "https://www.sttinfo.fi/tiedote/48745333/tilaa-tiedotteita-stt-infosta?publisherId=42020162",
+      "hosts": ["www.sttinfo.fi"],
+      "timezone": "Europe/Helsinki",
+      "article_pattern": "https://www\\.sttinfo\\.fi/tiedote/\\d+/[a-z0-9-]+\\?(?:publisherId=\\d+&)?lang=fi",
+      "allowed_publishers": [
+        "Kela",
+        "Kela/FPA",
+        "Finanssivalvonta",
+        "Lupa- ja valvontavirasto",
+        "Traficom",
+        "Tulli",
+        "Verohallinto",
+        "Terveyden ja hyvinvoinnin laitos (THL)",
+        "Geologian tutkimuskeskus (GTK)",
+        "Ruokavirasto",
+        "Väylävirasto",
+        "Eduskunta"
+      ],
+      "max_fetches_per_tick": 2,
+      "rights_text": "STT Infossa julkaistu materiaali on vapaasti julkaistavissa, ellei toisin mainita.",
+      "rights_text_sha256": "e2cd90b05def14980d604b8cfbd94b4a06f4929bcd8c487e2ed7a6b50d90e881",
+      "license": "STT Info: julkaistu materiaali on vapaasti julkaistavissa, ellei toisin mainita; tiedotekohtaiset rajoitukset tarkistetaan ja kuvia ei käytetä",
+      "notice": "Lähde: <julkaisija> / STT Info",
+      "text_only": true
     }
   },
   "data_providers": {

@@ -828,9 +828,12 @@ def source_list_html(sources):
     """Only actual editorial evidence; reuse/mirror terms are rendered separately."""
     rows = []
     for index, source in enumerate(sources, 1):
+        publisher = esc(source["publisher"])
+        if source["publisher"].endswith(" / STT Info"):
+            publisher = "Lähde: " + publisher
         rows.append(
             f'<li id="lahde-{index}"><a href="{esc(source["url"])}" rel="noopener noreferrer">'
-            f'{esc(source["publisher"])}: {esc(source["title"])}</a><br>'
+            f'{publisher}: {esc(source["title"])}</a><br>'
             f'<small>Lähteen päiväys: {time_html(source["published_at"])}</small></li>'
         )
     return "".join(rows)

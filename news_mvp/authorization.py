@@ -60,7 +60,7 @@ def proposed_policy_v2(source_commit=None):
             'source_families':['nasa-modis','helsinki','stat','kuntaliitto','ecb','ec-press',
                 'kuopio','vantaa','espoo','valtioneuvosto','oulu','poliisi-helsinki',
                 'poliisi-ita-uusimaa','poliisi-lansi-uusimaa','poliisi-sisa-suomi',
-                'poliisi-lounais-suomi','poliisi-oulu','fmi-warnings',
+                'poliisi-lounais-suomi','poliisi-oulu','sttinfo','fmi-warnings',
                 'fintraffic-traffic','explainer'],'text_only_policy':'official-text-v1',
             'text_only_policy_sha256':digest(policy()),'max_index_entries_per_official_source':50,
             'explainer_policy':'explainer-sources-v2',

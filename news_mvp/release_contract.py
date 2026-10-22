@@ -769,8 +769,14 @@ def media(packet, draft, policy_gate=True):
     identity_ok = (packet['story_key'] == basis.get('story_key') and
                    re.fullmatch(provider.get('story_key_pattern',''), packet['story_key'])) if structured else (
                    packet['story_key'] == 'url:'+source['url'])
+    publisher_ok = source['publisher'] == provider['publisher']
+    if provider_key == 'sttinfo':
+        from .official_additional import sttinfo_publisher_allowed
+        suffix = ' / STT Info'
+        public_name = source['publisher'][:-len(suffix)] if source['publisher'].endswith(suffix) else ''
+        publisher_ok = bool(public_name) and sttinfo_publisher_allowed(public_name, provider)[0]
     if (not re.fullmatch(provider['article_pattern'], source['url']) or not identity_ok or
-            source['publisher'] != provider['publisher'] or
+            not publisher_ok or
             (structured and basis.get('source_endpoint') != provider['index'])):
         raise ValueError('Source/reuse policy mismatch')
     # The reuse record is policy-coupled: it is generated from the provider's declared licence,
@@ -898,7 +904,8 @@ def verify_intake(packet, state, *, archive_image_only=False):
         raise ValueError('Captured intake bytes changed')
     if rights_text(rights,provider) != packet['supporting_documents'][0]['text']:
         raise ValueError('Captured rights text changed')
-    parsed = source_fields(raw,provider,packet['sources'][0]['url'])
+    parsed = source_fields(raw,provider,packet['sources'][0]['url'],
+                           datetime.fromisoformat(packet['supporting_documents'][0]['retrieved_at']))
     parsed = reconstruct_primary(packet, directory, parsed, raw, rights)
     if any(packet['sources'][0].get(k) != v for k,v in parsed.items()):
         if not (archive_image_only and _archived_source_matches(raw, provider, packet['sources'][0], parsed)):

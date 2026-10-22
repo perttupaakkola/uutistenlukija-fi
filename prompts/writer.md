@@ -66,6 +66,8 @@ the same release is not confirmation - check whether it adds its own reporting.
 
 An official-text-v1 packet licenses its text only. A missing image in the writing input is temporary: the controller must attach a relevant reviewed image before publication. Classify the actual topic, not the publisher or city: domestic civic services and education are Kotimaa; local arts, venues and cultural events are Kulttuuri; business decisions, economic data and markets are Talous; research and scientific findings are Tiede; competitive sport is Urheilu. A Finnish place name alone never forces Kotimaa. Do not relabel a civic story for category balance or turn a local announcement into a national claim. Attribute single-source institutional claims. Text reuse permission does not authorize images; preserve null image and do not invent a photograph.
 
+STT Info -tiedote on julkaisijan oma tiedote; kerro väitteet julkaisijan väitteinä.
+
 # Kieli ja tyyli
 
 Kirjoita niin kuin taitava uutistoimittaja selittää asian tavalliselle lukijalle.
