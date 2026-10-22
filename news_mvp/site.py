@@ -1770,7 +1770,7 @@ def render_site(store, output_dir, state_dir=None, public=False, include_ids=Non
                 link,
                 image_url=image_for_meta,
                 published=published_iso,
-                index=index_policy.indexable(link),
+                index=index_policy.indexable(link, None if explainer else draft),
             ) + seo.news_article_jsonld(
                 draft["title"],
                 description,

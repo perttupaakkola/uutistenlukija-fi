@@ -187,5 +187,19 @@ class NewsSitemapBundleCallsite(unittest.TestCase):
         self.assertIsNone(home.find('news:news',NS))
 
 
+
+def setUpModule():
+    # Fixture articles are a few words long; keep them indexable here.
+    from news_mvp import index_policy
+    global _MIN_WORDS
+    _MIN_WORDS = index_policy.MIN_INDEX_WORDS
+    index_policy.MIN_INDEX_WORDS = 0
+
+
+def tearDownModule():
+    from news_mvp import index_policy
+    index_policy.MIN_INDEX_WORDS = _MIN_WORDS
+
+
 if __name__=='__main__':
     unittest.main()
