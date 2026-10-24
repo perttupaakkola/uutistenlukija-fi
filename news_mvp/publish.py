@@ -545,6 +545,7 @@ def public_bundle(store,job,state,*,site_refresh=False):
                 for path in listing_paths if _published_page(site, path)]
     atomic_write(site/'sitemap.xml','<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="'+NEWS_SITEMAP_NS+'">'+''.join(entries)+'</urlset>')
     atomic_write(site/'robots.txt','User-agent: *\nAllow: /\nSitemap: https://uutistenlukija.fi/sitemap.xml\n')
+    atomic_write(site/'llms.txt',_llms_txt(news_now))
     # --- Redirects: reviewed legacy mappings plus same-article hash aliases -----
     # Eligibility is what THIS render actually wrote: the current job plus deployed ids
     # render_site selected, each confirmed as a real, non-symlink index.html inside the
@@ -1069,3 +1070,26 @@ def requeue_failed(config, job_id=None):
             reset.append(identifier)
         remaining=store.db.execute("SELECT count(*) FROM publications WHERE status='failed'").fetchone()[0]
     return {'reset':reset,'skipped':skipped,'remaining_failed':remaining}
+
+
+def _llms_txt(now):
+    """Plain index for AI assistants (llms.txt convention): what the site is and its guides."""
+    from .utility_guides import guides
+    lines = ['# Uutistenlukija', '',
+             '> Suomenkielinen maksuton uutissivusto: kotimaan uutiset, paikalliset viranomaistiedotteet, '
+             'selittäjät ja päivättyjä käytännön oppaita (päivämäärät, aikataulut, säännöt). '
+             'Jokainen sivu nimeää lähteensä.', '',
+             '## Oppaat', '']
+    for g in guides(now):
+        title = ' '.join(str(g['title']).split())
+        desc = ' '.join(str(g.get('description', '')).split())
+        lines.append(f'- [{title}](https://uutistenlukija.fi{g["path"]}): {desc}')
+    lines += ['', '## Osastot', '',
+              '- [Kaikki oppaat](https://uutistenlukija.fi' + OPPAAT_PATH + ')',
+              '- [Tuoreimmat uutiset](https://uutistenlukija.fi' + LATEST_PATH + ')']
+    for slug, display in CATEGORY_PAGES:
+        lines.append(f'- [{display}](https://uutistenlukija.fi/categories/{slug}/)')
+    lines += ['- [Tietoa sivustosta](https://uutistenlukija.fi' + ABOUT_PATH + ')',
+              '- [Lähteet](https://uutistenlukija.fi' + SOURCES_PATH + ')',
+              '- [RSS](https://uutistenlukija.fi/rss.xml)', '']
+    return '\n'.join(lines)
