@@ -390,7 +390,13 @@ def render_guide(g, page, public, snapshot=None):
             ''.join(f'<section><h2>{e(title)}</h2>{text}</section>' for title, text in g['sections']) +
             '<nav aria-label="Aiheeseen liittyvät ohjeet"><h2>Jatka lukemista</h2><ul>' +
             ''.join(f'<li><a href="{e(path)}">{e(label)}</a></li>' for path, label in g['related']) +
-            '</ul><p><a href="/oppaat/">Kaikki oppaat</a></p></nav></div></div></div></article>')
+            '</ul><p><a href="/oppaat/">Kaikki oppaat</a></p>'
+            '<p class="calendar-subscribe"><strong>Pyhäpäivät omaan kalenteriin:</strong> '
+            '<a href="https://calendar.google.com/calendar/r?cid=webcal://uutistenlukija.fi/kalenteri/suomen-pyhapaivat.ics" rel="noopener">Google-kalenteri</a> · '
+            '<a href="webcal://uutistenlukija.fi/kalenteri/suomen-pyhapaivat.ics">iPhone / Outlook</a> · '
+            '<a href="/kalenteri/suomen-pyhapaivat.ics">.ics-tiedosto</a>. '
+            'Arkipyhät, liputuspäivät ja veronpalautukset 2026–2027 päivittyvät automaattisesti.</p>'
+            '</nav></div></div></div></article>')
     structured = {'@context': 'https://schema.org', '@type': 'WebPage', 'name': g['title'],
                   'url': ORIGIN + g['path'], 'description': g['description'], 'inLanguage': 'fi',
                   'isPartOf': {'@type': 'WebSite', 'url': ORIGIN + '/'},

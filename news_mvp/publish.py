@@ -546,6 +546,8 @@ def public_bundle(store,job,state,*,site_refresh=False):
     atomic_write(site/'sitemap.xml','<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="'+NEWS_SITEMAP_NS+'">'+''.join(entries)+'</urlset>')
     atomic_write(site/'robots.txt','User-agent: *\nAllow: /\nSitemap: https://uutistenlukija.fi/sitemap.xml\n')
     atomic_write(site/'llms.txt',_llms_txt(news_now))
+    from .calendar_feed import PATH as CALENDAR_PATH, ics as calendar_ics
+    atomic_write(site/CALENDAR_PATH.lstrip('/'),calendar_ics(news_now))
     # --- Redirects: reviewed legacy mappings plus same-article hash aliases -----
     # Eligibility is what THIS render actually wrote: the current job plus deployed ids
     # render_site selected, each confirmed as a real, non-symlink index.html inside the
@@ -1091,5 +1093,6 @@ def _llms_txt(now):
         lines.append(f'- [{display}](https://uutistenlukija.fi/categories/{slug}/)')
     lines += ['- [Tietoa sivustosta](https://uutistenlukija.fi' + ABOUT_PATH + ')',
               '- [Lähteet](https://uutistenlukija.fi' + SOURCES_PATH + ')',
-              '- [RSS](https://uutistenlukija.fi/rss.xml)', '']
+              '- [RSS](https://uutistenlukija.fi/rss.xml)',
+              '- [Suomen pyhäpäivät kalenteriin (iCalendar)](https://uutistenlukija.fi/kalenteri/suomen-pyhapaivat.ics)', '']
     return '\n'.join(lines)
