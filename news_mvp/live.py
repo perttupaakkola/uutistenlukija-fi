@@ -10,7 +10,7 @@ from .editorial import ROOT, digest, web_url
 from .intake import collect
 from .discovery import discover,collect_modis
 from .data_sources import FAMILIES as DATA_FAMILIES, collect as collect_data
-from .publish import ensure_table, publish, guard, unresolved_site_refreshes
+from .publish import ensure_table, publish, guard, unresolved_site_refreshes, set_deadline, TICK_BUDGET_SECONDS
 from .store import database
 
 _RELATED_SEARCHER = None
@@ -60,6 +60,14 @@ def _related_searcher():
 
 
 def live_tick(config_path):
+    set_deadline(time.monotonic() + TICK_BUDGET_SECONDS)
+    try:
+        return _live_tick(config_path)
+    finally:
+        set_deadline(None)
+
+
+def _live_tick(config_path):
     config=load_config(config_path)
     if not config['enabled']:return {'status':'stopped'}
     if config['backend']!='hermes':raise ValueError('Live scheduler refuses the fixture backend')

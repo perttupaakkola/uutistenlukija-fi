@@ -639,6 +639,28 @@ class UncommittedPreparationError(RuntimeError):
     """Only content-addressed objects were attempted; no commit/ref/dispatch."""
 
 
+class PreparationDeferred(UncommittedPreparationError):
+    """The tick's time budget ran out before the commit; resume next tick."""
+
+
+# 28 Oct: a tick spent 19 min writing a story, then systemd's 30 min start
+# timeout SIGTERMed it mid-upload (~750 changed blobs). A tick now carries a
+# wall-clock deadline; preparation stops cleanly before it and the pending
+# publication resumes from the blob checkpoints on the next tick.
+TICK_BUDGET_SECONDS = 24 * 60
+_deadline = None
+
+
+def set_deadline(monotonic_deadline):
+    global _deadline
+    _deadline = monotonic_deadline
+
+
+def check_deadline(stage):
+    if _deadline is not None and time.monotonic() >= _deadline:
+        raise PreparationDeferred(f'Tick time budget reached during {stage}; resuming next tick')
+
+
 TREE_RETRIES = 12
 INVALID_BLOB = re.compile(r'tree\.sha ([0-9a-f]{40}) is not a valid blob')
 
@@ -702,6 +724,7 @@ def incremental_tree(entries, base=None, reupload=None):
                              or re.search(r'HTTP 50[0234]', text))
                 if transient and lag_retries < TREE_RETRIES:
                     lag_retries += 1
+                    check_deadline('tree retry')
                     time.sleep(min(2 * 2 ** lag_retries, 20))
                     continue
                 raise
@@ -715,6 +738,7 @@ def prepare_commit_tree(site,receipt):
     parent=api('git/ref/heads/main')['object']['sha'];base=api('git/commits/'+parent)['tree']['sha']
     sources={}
     def blob(data):
+        check_deadline('blob upload')
         sha=upload_blob(site,data);sources[sha]=data;return sha
     def reupload(sha):
         if sha not in sources:raise ValueError('GitHub rejected an unknown blob')
@@ -733,6 +757,8 @@ def prepare_commit_tree(site,receipt):
 def make_commit(site,receipt):
     try:
         parent,tree=prepare_commit_tree(site,receipt)
+    except PreparationDeferred:
+        raise
     except Exception as error:
         raise UncommittedPreparationError(safe_error(error)) from error
     # Beyond this point an uncertain response must remain blocked. Never replay
@@ -1009,6 +1035,7 @@ def publish(store,job,state,config_path):
     external_started=False
     try:
         if not row['remote_commit']:
+            check_deadline('bundle preparation')
             with store.db:store.db.execute('UPDATE publications SET attempts=attempts+1 WHERE job_id=?',(job['id'],))
             site,receipt=public_bundle(store,job,state);guard(config_path)
             external_started=True
@@ -1095,6 +1122,13 @@ def publish(store,job,state,config_path):
         outcome='failed' if saved['status']=='failed' else ('unknown' if external_started or saved['remote_commit'] else 'failed')
         if isinstance(error,UncommittedPreparationError) and not saved['remote_commit']:
             outcome='preparing'
+        if isinstance(error,PreparationDeferred) and not saved['remote_commit']:
+            # A budget stop is not a failed attempt: blob checkpoints keep the
+            # progress, so refund the attempt and let the next tick resume.
+            with store.db:store.db.execute(
+                "UPDATE publications SET status='preparing',error=?,attempts=CASE WHEN ? THEN max(attempts-1,0) ELSE attempts END WHERE job_id=?",
+                ('Deferred: '+safe_error(error),1 if external_started else 0,job['id']))
+            return {'status':'preparation_continues','job_id':job['id'],'reason':str(error)}
         with store.db:store.db.execute("UPDATE publications SET status=?,error=? WHERE job_id=?",(outcome,safe_error(error),job['id']))
         raise
 
