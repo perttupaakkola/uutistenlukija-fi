@@ -39,6 +39,79 @@ class GitObjectTransport(unittest.TestCase):
             for item in entries:git('update-index','--add','--cacheinfo',item['mode'],item['sha'],item['path'])
             self.assertEqual(tree,git('write-tree'))
 
+    def test_rejected_cached_blob_is_reuploaded_once_and_chunk_retried(self):
+        sha='a'*40;calls=[];healed=[]
+        def tree_api(path,request):
+            calls.append(path)
+            if len(calls)==1:raise RuntimeError('GitHub POST git/trees: HTTP 422 ValueError: {"message": "tree.sha '+sha+' is not a valid blob"}')
+            return {'sha':'b'*40}
+        entries=[{'path':'x.html','mode':'100644','type':'blob','sha':sha}]
+        with patch('news_mvp.publish.api',side_effect=tree_api):
+            self.assertEqual(incremental_tree(entries,reupload=healed.append),'b'*40)
+        self.assertEqual(healed,[sha]);self.assertEqual(len(calls),2)
+        def always(path,request):raise RuntimeError('tree.sha '+sha+' is not a valid blob')
+        with patch('news_mvp.publish.api',side_effect=always),patch('news_mvp.publish.time.sleep'):
+            with self.assertRaises(RuntimeError):incremental_tree(entries,reupload=lambda s:None)
+            with self.assertRaises(RuntimeError):incremental_tree(entries)
+
+    def test_base_tree_lag_is_retried_then_raised(self):
+        calls=[]
+        def lag(path,request):
+            calls.append(request)
+            if len(calls)<3:raise RuntimeError('GitHub POST git/trees: HTTP 422 ValueError: {"message": "base_tree is not a valid tree oid"}')
+            return {'sha':'c'*40}
+        entries=[{'path':'x.html','mode':'100644','type':'blob','sha':'a'*40}]
+        with patch('news_mvp.publish.api',side_effect=lag),patch('news_mvp.publish.time.sleep') as sleep:
+            self.assertEqual(incremental_tree(entries,'d'*40),'c'*40)
+            self.assertEqual(sleep.call_count,2)
+        def never(path,request):raise RuntimeError('base_tree is not a valid tree oid')
+        with patch('news_mvp.publish.api',side_effect=never) as request,patch('news_mvp.publish.time.sleep'):
+            with self.assertRaises(RuntimeError):incremental_tree(entries,'d'*40)
+            self.assertEqual(request.call_count,13)
+        def tree_lag(path,request):raise RuntimeError('tree.sha '+'e'*40+' is not a valid tree')
+        with patch('news_mvp.publish.api',side_effect=tree_lag) as request,patch('news_mvp.publish.time.sleep'):
+            with self.assertRaises(RuntimeError):incremental_tree(entries,'d'*40)
+            self.assertEqual(request.call_count,13)
+
+    def test_unpersisted_chained_base_is_rebuilt_by_replaying_chunks(self):
+        # 28 Oct: GitHub returned a chunk tree sha, then rejected it as
+        # base_tree for minutes. Replaying the earlier chunk must heal it.
+        persisted=set();calls=[]
+        def flaky(path,request):
+            calls.append(request)
+            if 'base_tree' in request and request['base_tree'] not in persisted:
+                raise RuntimeError('GitHub POST git/trees: HTTP 422 ValueError: {"message": "base_tree is not a valid tree oid"}')
+            sha=hashlib.sha1(repr(sorted((e['path'] for e in request['tree']))).encode()+request.get('base_tree','').encode()).hexdigest()
+            if len(calls)>1:persisted.add(sha)  # first creation is lost
+            return {'sha':sha}
+        entries=[{'path':f'p{n:03d}.html','mode':'100644','type':'blob','sha':'a'*40} for n in range(100)]
+        with patch('news_mvp.publish.api',side_effect=flaky),patch('news_mvp.publish.time.sleep') as sleep:
+            incremental_tree(entries)
+        self.assertEqual(sleep.call_count,2)
+        self.assertEqual(calls[4],calls[0])
+
+    def test_bursty_422_and_500_on_chained_chunks_are_survived(self):
+        # Real pattern seen 28 Oct: "..4..444....4.4..4.." plus HTTP 500.
+        import itertools,json as _j
+        pattern=itertools.cycle('..4..444....5.4..4..55....4444..');calls=[]
+        def bursty(path,request):
+            calls.append(1);c=next(pattern)
+            if c=='4':raise RuntimeError('GitHub POST git/trees: HTTP 422 ValueError: {"message": "base_tree is not a valid tree oid"}')
+            if c=='5':raise RuntimeError('GitHub POST git/trees: HTTP 500 ')
+            return {'sha':hashlib.sha1(_j.dumps(request,sort_keys=True).encode()).hexdigest()}
+        entries=[{'path':f'p{n:04d}.html','mode':'100644','type':'blob','sha':'a'*40} for n in range(64*12)]
+        with patch('news_mvp.publish.api',side_effect=bursty),patch('news_mvp.publish.time.sleep') as sleep:
+            incremental_tree(entries)
+        self.assertTrue(all(c.args[0]<=20 for c in sleep.call_args_list))
+
+    def test_forced_upload_bypasses_checkpoint(self):
+        raw=b'forced bytes';sha=hashlib.sha1(b'blob '+str(len(raw)).encode()+b'\0'+raw).hexdigest()
+        with tempfile.TemporaryDirectory() as directory:
+            site=Path(directory)/'live-site'
+            with patch('news_mvp.publish.api',return_value={'sha':sha}) as request:
+                upload_blob(site,raw);upload_blob(site,raw,force=True)
+                self.assertEqual(request.call_count,2)
+
     def test_preparation_failure_is_distinct_from_uncertain_commit(self):
         with patch('news_mvp.publish.prepare_commit_tree',side_effect=RuntimeError('tree timeout')),patch('news_mvp.publish.api') as request:
             with self.assertRaises(UncommittedPreparationError):make_commit(None,{'job_id':'fixture'})

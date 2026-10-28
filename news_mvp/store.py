@@ -70,6 +70,8 @@ def database(state_dir):
         db.close()
 
 
+IMAGE_RETRY_WINDOW = 3 * 3600
+
 class Store:
     def __init__(self, db):
         self.db = db
@@ -228,10 +230,16 @@ class Store:
 
     def defer_image(self, job_id, now, retry_seconds, error):
         """A bounded image attempt is not terminal editorial failure; retain its draft."""
+        # Image retries are free only for IMAGE_RETRY_WINDOW seconds after the job was
+        # created. After that each deferral counts as an attempt, so a story whose image
+        # keeps failing exhausts max_attempts instead of blocking every newer story forever.
+        from datetime import datetime, timezone
+        cutoff = datetime.fromtimestamp(now - IMAGE_RETRY_WINDOW, timezone.utc).isoformat()
         with self.db:
-            self.db.execute("UPDATE jobs SET status='ready', attempts=MAX(0,attempts-1), "
+            self.db.execute("UPDATE jobs SET status='ready', "
+                            "attempts=CASE WHEN created_at < ? THEN attempts ELSE MAX(0,attempts-1) END, "
                             "next_attempt=?, error=? WHERE id=?",
-                            (now + retry_seconds, error, job_id))
+                            (cutoff, now + retry_seconds, error, job_id))
 
     def get(self, job_id):
         row = self.db.execute("SELECT * FROM jobs WHERE id=?", (job_id,)).fetchone()

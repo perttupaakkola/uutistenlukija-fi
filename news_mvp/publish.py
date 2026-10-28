@@ -3,6 +3,7 @@ import base64
 import hashlib
 import json
 import os
+import re
 import subprocess
 import time
 import urllib.error
@@ -45,12 +46,14 @@ def api(path, data=None, method=None):
     # Git blobs/trees are content addressed: retrying identical bytes creates no
     # second object. Commits, refs and dispatch retain their uncertain-outcome
     # handling and are never automatically replayed here.
-    attempts = 3 if path in ('git/blobs','git/trees') and request.method == 'POST' else 1
+    content_addressed = path in ('git/blobs','git/trees') and request.method == 'POST'
+    attempts = 3 if content_addressed else 1
+    retry_codes = (500,502,503,504) if content_addressed else (502,503,504)
     for attempt in range(attempts):
         try:
             with urllib.request.urlopen(request,timeout=30) as response:return json.load(response)
         except urllib.error.HTTPError as error:
-            if error.code not in (502,503,504) or attempt+1 == attempts:
+            if error.code not in retry_codes or attempt+1 == attempts:
                 detail = ''
                 try:
                     body=json.loads(error.read(8000))
@@ -620,10 +623,10 @@ def public_bundle(store,job,state,*,site_refresh=False):
     return site,receipt
 
 
-def upload_blob(site,data):
+def upload_blob(site,data,force=False):
     expected=hashlib.sha1(b'blob '+str(len(data)).encode()+b'\0'+data).hexdigest()
     checkpoint=Path(site).parent/'uploaded-git-blobs'/expected
-    if checkpoint.exists():
+    if checkpoint.exists() and not force:
         if checkpoint.read_text()!=expected+'\n':raise ValueError('Uploaded Git blob checkpoint changed')
         return expected
     actual=api('git/blobs',{'content':base64.b64encode(data).decode(),'encoding':'base64'})['sha']
@@ -636,7 +639,11 @@ class UncommittedPreparationError(RuntimeError):
     """Only content-addressed objects were attempted; no commit/ref/dispatch."""
 
 
-def incremental_tree(entries, base=None):
+TREE_RETRIES = 12
+INVALID_BLOB = re.compile(r'tree\.sha ([0-9a-f]{40}) is not a valid blob')
+
+
+def incremental_tree(entries, base=None, reupload=None):
     """Bound GitHub's nested-path work while retaining every preceding chunk."""
     # Full public trees contain hundreds of nested article/image paths. GitHub
     # can reject one large request with a 422 server processing timeout.
@@ -644,11 +651,61 @@ def incremental_tree(entries, base=None):
     # update a branch. Preserve last-entry replacement semantics for workflows.
     entries = {entry['path']: entry for entry in entries}
     ordered = [entries[path] for path in sorted(entries)]
+    history = []  # (request, sha) of every chunk this call created
+
+    def replay():
+        # A chained base GitHub keeps rejecting for minutes is a tree it
+        # acknowledged but did not persist. Trees are content addressed, so
+        # re-POSTing the same chunks recreates exactly the same objects.
+        for previous, expected in history:
+            if api('git/trees', previous)['sha'] != expected:
+                raise ValueError('Replayed Git tree identity mismatch')
+
     for offset in range(0, len(ordered), 64):
         request = {'tree': ordered[offset:offset+64]}
         if base is not None:
             request['base_tree'] = base
-        base = api('git/trees', request)['sha']
+        healed = set()
+        lag_retries = 0
+        rebuilt = False
+        while True:
+            try:
+                base = api('git/trees', request)['sha']
+                break
+            except RuntimeError as error:
+                # GitHub's object store can briefly not see a just-created
+                # tree/blob (replica lag), and a local upload checkpoint can
+                # outlive GitHub's copy of an uncommitted object. Re-upload a
+                # rejected blob once (content addressed, idempotent), then wait
+                # and retry the identical chunk a bounded number of times.
+                text = str(error)
+                match = INVALID_BLOB.search(text)
+                if match and reupload is not None and match.group(1) not in healed:
+                    healed.add(match.group(1))
+                    reupload(match.group(1))
+                    continue
+                if ('base_tree is not a valid tree oid' in text and history
+                        and not rebuilt and lag_retries >= 2):
+                    rebuilt = True
+                    try:
+                        replay()
+                    except RuntimeError:
+                        pass  # transient; the chunk retry below handles it
+                    continue
+                # 28 Oct: GitHub rejected ~30% of valid chained requests in
+                # bursts (422 base_tree/tree invalid, HTTP 500) for hours. Each
+                # request is independent, so many short retries beat a few
+                # long exponential ones; worst case stays well under the
+                # service's 30 min start timeout per release.
+                transient = (match or 'base_tree is not a valid tree oid' in text
+                             or 'is not a valid tree' in text
+                             or re.search(r'HTTP 50[0234]', text))
+                if transient and lag_retries < TREE_RETRIES:
+                    lag_retries += 1
+                    time.sleep(min(2 * 2 ** lag_retries, 20))
+                    continue
+                raise
+        history.append((request, base))
     if base is None:
         raise ValueError('Refuse an empty release tree')
     return base
@@ -656,15 +713,20 @@ def incremental_tree(entries, base=None):
 
 def prepare_commit_tree(site,receipt):
     parent=api('git/ref/heads/main')['object']['sha'];base=api('git/commits/'+parent)['tree']['sha']
-    def blob(data):return upload_blob(site,data)
-    public_tree=incremental_tree([{'path':name,'mode':'100644','type':'blob','sha':blob((site/name).read_bytes())} for name in receipt['files']])
+    sources={}
+    def blob(data):
+        sha=upload_blob(site,data);sources[sha]=data;return sha
+    def reupload(sha):
+        if sha not in sources:raise ValueError('GitHub rejected an unknown blob')
+        if upload_blob(site,sources[sha],force=True)!=sha:raise ValueError('Uploaded Git blob identity mismatch')
+    public_tree=incremental_tree([{'path':name,'mode':'100644','type':'blob','sha':blob((site/name).read_bytes())} for name in receipt['files']],reupload=reupload)
     paths=cmd('git','ls-files').splitlines()
     entries=[{'path':name,'mode':'100644','type':'blob','sha':blob((ROOT/name).read_bytes())} for name in paths]
     entries += [{'path':'public','mode':'040000','type':'tree','sha':public_tree},
         {'path':'release/release.json','mode':'100644','type':'blob','sha':blob(json.dumps(receipt,ensure_ascii=False,indent=2).encode())},
         {'path':'.github/workflows/deploy.yml','mode':'100644','type':'blob','sha':blob((ROOT/'ops/deploy.yml').read_bytes())},
         {'path':'.github/workflows/source-validation.yml','mode':'100644','type':'blob','sha':blob((ROOT/'ops/source-validation.yml').read_bytes())}]
-    tree=incremental_tree(entries,base)
+    tree=incremental_tree(entries,base,reupload=reupload)
     return parent,tree
 
 
