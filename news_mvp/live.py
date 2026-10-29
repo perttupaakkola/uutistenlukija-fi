@@ -31,6 +31,10 @@ def _advance_job(store, job, config, config_path, errors=None):
     return result
 
 
+def _image_pending(error):
+    return isinstance(error, str) and error.startswith('Image pending')
+
+
 def _related_searcher():
     """Lazily build the search backend used for related-coverage lookups.
 
@@ -100,8 +104,13 @@ def _live_tick(config_path):
             # a due retry forever.
             store.recover(config['max_attempts'])
             retry = None
+            # A story waiting only for an acceptable image must not starve intake: its
+            # 15 min image backoff is shorter than the tick spacing, so it was due on every
+            # tick and blocked all newer stories for hours (29 Oct). Image-pending retries
+            # yield to discovery and run only when no new story was advanced this tick.
+            image_retry = None
             for candidate in store.db.execute(
-                    "SELECT id,packet FROM jobs WHERE status='ready' AND next_attempt<=? "
+                    "SELECT id,packet,error FROM jobs WHERE status='ready' AND next_attempt<=? "
                     "AND attempts<? ORDER BY next_attempt, created_at, id",
                     (time.time(), config['max_attempts'])):
                 try:
@@ -109,6 +118,9 @@ def _live_tick(config_path):
                 except (TypeError, ValueError):
                     fixture = False
                 if not fixture:
+                    if _image_pending(candidate['error']):
+                        image_retry = image_retry or candidate
+                        continue
                     retry = candidate
                     break
             if retry:
@@ -182,6 +194,7 @@ def _live_tick(config_path):
                 if publication and publication['status'] in ('deployed','failed'):continue
                 job=store.get(job_id)
                 if job and job['status'] in ('rejected','failed'):continue
+                if job and job['status']=='ready' and _image_pending(job.get('error')):continue
                 if job is None:
                     cap=config.get('migration_publication_limit')
                     if config.get('authorization_mode','migration')=='migration' and cap is not None:
@@ -212,6 +225,8 @@ def _live_tick(config_path):
                 # Public publication state is one-row-at-a-time; keep any image backfill
                 # attached to this live tick inside the same atomic release.
                 return _advance_job(store, job, config, config_path, errors)
+            if image_retry:
+                return _advance_job(store, store.get(image_retry['id']), config, config_path, errors)
             # Existing published/text-only stories use the same reviewed image chain as new
             # stories. A live release tracks one publication row at a time; the private
             # controller may fill up to three, but the public tick attaches one atomically.
