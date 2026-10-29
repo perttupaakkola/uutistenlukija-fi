@@ -719,8 +719,12 @@ def incremental_tree(entries, base=None, reupload=None):
                 # request is independent, so many short retries beat a few
                 # long exponential ones; worst case stays well under the
                 # service's 30 min start timeout per release.
+                # 29 Oct: GitHub also answers a valid 64-entry chunk with
+                # 422 "Sorry, your request timed out" when its backend is slow.
+                # That is a server-side timeout, not a bad request: retry it.
                 transient = (match or 'base_tree is not a valid tree oid' in text
                              or 'is not a valid tree' in text
+                             or 'request timed out' in text
                              or re.search(r'HTTP 50[0234]', text))
                 if transient and lag_retries < TREE_RETRIES:
                     lag_retries += 1

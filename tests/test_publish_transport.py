@@ -104,6 +104,25 @@ class GitObjectTransport(unittest.TestCase):
             incremental_tree(entries)
         self.assertTrue(all(c.args[0]<=20 for c in sleep.call_args_list))
 
+    def test_github_tree_request_timeout_422_is_retried(self):
+        # 29 Oct: one tick died on 422 "Sorry, your request timed out" for a
+        # normal chunk; the identical request succeeds moments later.
+        calls=[]
+        msg=('GitHub POST git/trees: HTTP 422 ValueError: {"message": "Sorry, your request timed out.  '
+             'It is likely that your input was too large to process."}')
+        def slow(path,request):
+            calls.append(request)
+            if len(calls)<3:raise RuntimeError(msg)
+            return {'sha':'f'*40}
+        entries=[{'path':'x.html','mode':'100644','type':'blob','sha':'a'*40}]
+        with patch('news_mvp.publish.api',side_effect=slow),patch('news_mvp.publish.time.sleep') as sleep:
+            self.assertEqual(incremental_tree(entries,'d'*40),'f'*40)
+            self.assertEqual(sleep.call_count,2)
+        def never(path,request):raise RuntimeError(msg)
+        with patch('news_mvp.publish.api',side_effect=never) as request,patch('news_mvp.publish.time.sleep'):
+            with self.assertRaises(RuntimeError):incremental_tree(entries,'d'*40)
+            self.assertEqual(request.call_count,13)
+
     def test_forced_upload_bypasses_checkpoint(self):
         raw=b'forced bytes';sha=hashlib.sha1(b'blob '+str(len(raw)).encode()+b'\0'+raw).hexdigest()
         with tempfile.TemporaryDirectory() as directory:
