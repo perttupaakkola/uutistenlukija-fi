@@ -264,13 +264,20 @@ def _sttinfo_parts(raw,url,now):
  canonical_url=page.one('og:url').replace('&amp;','&')
  if urlsplit(canonical_url)._replace(query='')!=urlsplit(url)._replace(query=''):
   raise ValueError('Canonical article mismatch')
- lines=parse(raw,lambda t,a:t=='body').text().splitlines()
- if len(lines)<5 or lines.count('Tietoja julkaisijasta')!=1:
-  raise ValueError('Missing STT Info release or publisher block')
+ # Image captions are not release text (the 28 Oct 2026 layout puts a figcaption
+ # between the share button and the body).
+ lines=parse(re.sub(rb'<figcaption\b.*?</figcaption>',b'',raw,flags=re.S),
+             lambda t,a:t=='body').text().splitlines()
+ if len(lines)<5:raise ValueError('Missing STT Info release or publisher block')
  title=lines[0].strip()
  header=lines[1].split(' | ')
  if len(header)!=3 or not header[1].strip():
   raise ValueError('Missing exact STT Info publisher header')
+ # STT Info replaced the 'Tietoja julkaisijasta' block with 'Lue lisää julkaisijalta
+ # <publisher>' on 28 Oct 2026. Accept exactly one of either, bound to the header.
+ more='Lue lisää julkaisijalta '+header[1].strip()
+ if lines.count('Tietoja julkaisijasta')!=1 and lines.count(more)!=1:
+  raise ValueError('Missing STT Info release or publisher block')
  if header[2]!='Tiedote':raise ValueError('non-news STT Info item type: '+header[2])
  publisher=header[1].strip()
  meta_title=page.one('og:title')
@@ -285,7 +292,8 @@ def _sttinfo_parts(raw,url,now):
  expected_zone='EEST' if published.dst().total_seconds() else 'EET'
  if zone!=expected_zone:raise ValueError('STT Info timezone mismatch')
  stops=[i for i,line in enumerate(lines[3:],3)
-        if line in ('Avainsanat','Liitteet','Linkit','Tietoja julkaisijasta')]
+        if line in ('Avainsanat','Liitteet','Linkit','Yhteyshenkilöt',
+                    'Tietoja julkaisijasta',more)]
  if not stops:raise ValueError('Missing STT Info article boundary')
  body='\n'.join(lines[3:min(stops)]).strip()
  if len(body)<200 or len(body)>MAX_ARTICLE_CHARS:
@@ -294,7 +302,9 @@ def _sttinfo_parts(raw,url,now):
  if rejection:raise ValueError(rejection)
  allowed,reason=press_wire_publisher_allowed(publisher,spec)
  if not allowed:raise ValueError(reason+': '+publisher)
- restriction=press_wire_restriction('\n'.join(lines),now,published)
+ # Other releases listed under 'Lue lisää julkaisijalta' are not this release.
+ own=lines[:lines.index(more)] if more in lines else lines
+ restriction=press_wire_restriction('\n'.join(own),now,published)
  if restriction:raise ValueError('Restricted STT Info release: '+restriction)
  return {'id':'A','title':title,'published_at':published.isoformat(),'text':body,
          'publisher':publisher+' / STT Info'},page,publisher,reason

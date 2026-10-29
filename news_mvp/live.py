@@ -88,6 +88,10 @@ def _live_tick(config_path):
             if unresolved_site_refreshes(store):
                 return {'status':'site_refresh_pending',
                         'reason':'Run the site-refresh operator command to reconcile it'}
+            # Expire image-waiting stories before publication reconciliation can return:
+            # on 29 Oct three upload ticks in a row skipped the age limit and a story sat
+            # 5 h 10 min instead of 4 h. Jobs with a publication row are never touched.
+            store.expire_image_pending(time.time())
             # Publication reconciliation owns the tick, even after its source disappears
             # or ages out. Never rotate providers while an outcome is unresolved.
             from .backfill import pending as pending_publications
@@ -103,7 +107,6 @@ def _live_tick(config_path):
             # out of the newest discovery window. Without this step, fresh candidates can strand
             # a due retry forever.
             store.recover(config['max_attempts'])
-            store.expire_image_pending(time.time())
             retry = None
             # A story waiting only for an acceptable image must not starve intake: its
             # 15 min image backoff is shorter than the tick spacing, so it was due on every

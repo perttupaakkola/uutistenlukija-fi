@@ -38,6 +38,41 @@ class ImagePendingExpiry(unittest.TestCase):
         import news_mvp.live as live
         self.assertIn('store.expire_image_pending(', Path(live.__file__).read_text())
 
+    def test_expiry_runs_before_publication_reconciliation_returns(self):
+        # 29 Oct: story ed879136 (admitted 14:17) stayed queued until 19:27 because
+        # the 18:30, 18:57 and 19:12 ticks all returned through upload reconciliation.
+        from pathlib import Path
+        import news_mvp.live as live
+        src = Path(live.__file__).read_text()
+        tick = src[src.index('def _live_tick'):]
+        self.assertLess(tick.index('store.expire_image_pending('),
+                        tick.index('pending=pending_publications(store)'))
+
+    def test_live_tick_expires_while_upload_pending(self):
+        import json, tempfile
+        from pathlib import Path
+        from unittest.mock import patch
+        from news_mvp.live import live_tick
+        from news_mvp.store import database
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp); state = root / 'state'; cfg = root / 'config.json'
+            cfg.write_text(json.dumps({'enabled': True, 'backend': 'hermes', 'state_dir': str(state),
+                'output_dir': str(root / 'p'), 'source_recipes': [], 'discovery': {'family': 'nasa-modis'},
+                'max_attempts': 3, 'retry_seconds': 60, 'illustrations': False}))
+            old = datetime.fromtimestamp(self.now - IMAGE_PENDING_MAX_AGE - 3600, timezone.utc).isoformat()
+            with database(state) as store:
+                url = 'https://www.kuopio.fi/2026/10/29/piispanpuiston-taydennysistutukset-ovat-valmistuneet/'
+                jid = store.admit({'fixture': False, 'story_key': 'url:' + url, 'sources': [{'url': url}]}, old)[0]
+                with store.db:
+                    store.db.execute("UPDATE jobs SET error=? WHERE id=?",
+                        ('Image pending: editorial image-only rejection; candidate retained for audit', jid))
+            with patch('news_mvp.backfill.pending', return_value=[{'job_id': 'other'}]), \
+                    patch('news_mvp.live.publish', return_value={'status': 'dispatched'}), \
+                    patch('news_mvp.live.unresolved_site_refreshes', return_value=[]):
+                live_tick(cfg)
+            with database(state) as store:
+                self.assertEqual(store.get(jid)['status'], 'failed')
+
 
 if __name__ == '__main__':
     unittest.main()
