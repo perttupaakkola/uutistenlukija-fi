@@ -1,9 +1,14 @@
-import json, tempfile, unittest
+import json, tempfile, time, unittest
+from datetime import datetime, timezone
 from pathlib import Path
 from unittest.mock import patch
 
 from news_mvp.live import live_tick
 from news_mvp.store import database
+
+
+def _ago(seconds):
+    return datetime.fromtimestamp(time.time() - seconds, timezone.utc).isoformat()
 
 
 class ImagePendingYieldsToIntake(unittest.TestCase):
@@ -30,7 +35,7 @@ class ImagePendingYieldsToIntake(unittest.TestCase):
 
     def test_new_story_is_advanced_before_due_image_retry(self):
         with database(self.state) as store:
-            stuck = self.admit(store, 'stuck-image', '2026-10-29T08:24:00+00:00')
+            stuck = self.admit(store, 'stuck-image', _ago(2 * 3600))
             self.pend(store, stuck)
         fresh = {'url': 'https://example.invalid/fresh', 'story_key': 'url:https://example.invalid/fresh'}
         advanced = []
@@ -38,7 +43,7 @@ class ImagePendingYieldsToIntake(unittest.TestCase):
             advanced.append(job['id']); return {'status': 'ready', 'job_id': job['id']}
         def fake_ingest(config, packet):
             with database(self.state) as s:
-                return {'admitted': True, 'id': self.admit(s, 'fresh', '2026-10-29T10:00:00+00:00')}
+                return {'admitted': True, 'id': self.admit(s, 'fresh', _ago(60))}
         with patch('news_mvp.live.discover', return_value=[fresh]), \
                 patch('news_mvp.live.collect', return_value=({'x': 1}, {})), \
                 patch('news_mvp.live.ingest', side_effect=fake_ingest), \
@@ -49,7 +54,7 @@ class ImagePendingYieldsToIntake(unittest.TestCase):
 
     def test_image_retry_runs_when_no_new_story_and_is_skipped_in_discovery(self):
         with database(self.state) as store:
-            stuck = self.admit(store, 'stuck-image', '2026-10-29T08:24:00+00:00')
+            stuck = self.admit(store, 'stuck-image', _ago(2 * 3600))
             self.pend(store, stuck)
         same = {'url': 'https://example.invalid/stuck-image',
                 'story_key': 'url:https://example.invalid/stuck-image'}
@@ -64,7 +69,7 @@ class ImagePendingYieldsToIntake(unittest.TestCase):
 
     def test_ordinary_due_retry_still_precedes_discovery(self):
         with database(self.state) as store:
-            due = self.admit(store, 'interrupted', '2026-10-29T08:24:00+00:00')
+            due = self.admit(store, 'interrupted', _ago(2 * 3600))
             self.pend(store, due, 'Interrupted tick; saved draft retained')
         advanced = []
         def fake_advance(store, job, config, config_path, errors=None):

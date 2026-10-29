@@ -71,6 +71,10 @@ def database(state_dir):
 
 
 IMAGE_RETRY_WINDOW = 3 * 3600
+# Hard deadline: a story still waiting only for an image this long after admission is
+# closed as failed, even if it never got another turn (image retries yield to new stories,
+# so attempt counting alone can leave it waiting forever; 29 Oct).
+IMAGE_PENDING_MAX_AGE = 4 * 3600
 
 class Store:
     def __init__(self, db):
@@ -227,6 +231,19 @@ class Store:
             self.db.execute("UPDATE jobs SET status=?, next_attempt=?, error=? WHERE id=?",
                             ("failed" if row["attempts"] >= max_attempts else "ready",
                              now + retry_seconds * row["attempts"], error, job_id))
+
+    def expire_image_pending(self, now, max_age=IMAGE_PENDING_MAX_AGE):
+        """Fail ready stories that have waited only for an image beyond max_age seconds.
+
+        Jobs with any publication row are never touched."""
+        from datetime import datetime, timezone
+        cutoff = datetime.fromtimestamp(now - max_age, timezone.utc).isoformat()
+        with self.db:
+            cur = self.db.execute(
+                "UPDATE jobs SET status='failed', error='Image pending expired: ' || error "
+                "WHERE status='ready' AND error LIKE 'Image pending%' AND created_at < ? "
+                "AND id NOT IN (SELECT job_id FROM publications)", (cutoff,))
+        return cur.rowcount
 
     def defer_image(self, job_id, now, retry_seconds, error):
         """A bounded image attempt is not terminal editorial failure; retain its draft."""
