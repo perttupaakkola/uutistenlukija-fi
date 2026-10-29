@@ -316,7 +316,7 @@ class StockImageryTests(unittest.TestCase):
         self.assertEqual(record['license_url'], 'https://unsplash.com/license')
         self.assertEqual(record['caption'], imagery.STOCK_CAPTION)
         self.assertEqual(record['credit'], 'Photo by Matti Meikalainen on Unsplash')
-        self.assertEqual(record['alt'], 'Arkistokuva: a police car parked in the snow')
+        self.assertEqual(record['alt'], 'Kuvituskuva: a police car parked in the snow')
         self.assertEqual(record['depicted'], 'a police car parked in the snow')
         self.assertEqual(record['source_url'], page)
         # The raster behind the hotlink is a real checkerboard and really went through verify().
@@ -419,7 +419,7 @@ class StockImageryTests(unittest.TestCase):
             record = imagery.fetch_unsplash(DRAFT)
         self.assertIsNotNone(record)
         self.assertIsNone(record['depicted'])
-        self.assertEqual(record['alt'], 'Arkistokuva aiheesta police crime economy')
+        self.assertEqual(record['alt'], 'Kuvituskuva: aiheesta police crime economy')
         self.assertIs(record['stock_provenance']['download_tracking']['successful'], True)
 
     # -- Pexels ----------------------------------------------------------

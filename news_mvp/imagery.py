@@ -12,6 +12,7 @@ description is never evidence that the raster is usable.
 """
 import base64
 import hashlib
+import inspect
 import io
 import json
 import math
@@ -70,6 +71,17 @@ _GENERATED_PERSON_SCENE = re.compile(
     r'ohjaaj\w*|teacher\w*|k(?:ä|a)si\w*|hands?)\b', re.I)
 
 
+class _NoSafeImageConcept(ValueError):
+    """A valid ranked decision whose purportedly safe scenes all depict people."""
+
+    def __init__(self, decision, rejected_scenes):
+        super().__init__(
+            'A safe generated concept cannot depict people or body parts; '
+            'no safe ranked concept remains')
+        self.decision = decision
+        self.rejected_scenes = tuple(rejected_scenes)
+
+
 def _depicts_people(scene):
     # A safety exclusion is not itself a proposed person in the scene.
     without_exclusion = re.sub(
@@ -80,6 +92,12 @@ def _depicts_people(scene):
     # Never suppress the käs* root or compounds/agents such as käsityöläinen.
     without_exclusion = re.sub(
         r'\bkäsityökalu(?:t|ja)\b', '', without_exclusion, flags=re.I)
+    # These adjectives describe how an otherwise visible object is operated or sized; they do
+    # not propose a hand in the scene.  The production breathalyser decision said
+    # "Käsikäyttöinen alkometri ... lepää kojelaudalla" and was rejected solely because
+    # the old käsi* root matched the first word, despite the object explicitly resting alone.
+    without_exclusion = re.sub(
+        r'\bkäsi(?:käyttöinen|varainen|kannettava)\b', '', without_exclusion, flags=re.I)
     # A bounded singular adjective/noun agreement contract, not a nuor* whitelist.
     # Full tokens preserve human compounds and unmatched/ambiguous uses fail closed.
     forest_cases = (
@@ -168,6 +186,7 @@ def validate_image_decision(value, draft=None, *, require_concepts=False,
         if not isinstance(concepts, list) or not 2 <= len(concepts) <= 3:
             raise ValueError('Article image decision needs two or three ranked concepts')
         validated = []
+        rejected_scenes = []
         scenes = set()
         for rank, concept in enumerate(concepts, 1):
             if (not isinstance(concept, dict) or set(concept) != IMAGE_CONCEPT_KEYS or
@@ -177,17 +196,23 @@ def validate_image_decision(value, draft=None, *, require_concepts=False,
             single = validate_image_decision({**{k: concept[k] for k in IMAGE_DECISION_KEYS
                                                  if k != 'category'}, 'category': value['category']},
                                              draft, allow_semantic_queries=True)
-            if concept['safe_to_generate'] and _depicts_people(single['depictable_scene']):
-                raise ValueError('A safe generated concept cannot depict people or body parts')
+            safe_to_generate = concept['safe_to_generate']
+            if safe_to_generate and _depicts_people(single['depictable_scene']):
+                # Keep the concept for licensed-photo search, but never let a classifier's
+                # optimistic flag relax the independent generation guard for these pixels.
+                safe_to_generate = False
+                rejected_scenes.append(single['depictable_scene'])
             scene_key = single['depictable_scene'].casefold()
             if scene_key in scenes:
                 raise ValueError('Image concepts must depict different scenes')
             scenes.add(scene_key)
-            validated.append({'rank': rank, 'safe_to_generate':concept['safe_to_generate'],
+            validated.append({'rank': rank, 'safe_to_generate':safe_to_generate,
                               **{k: single[k] for k in IMAGE_DECISION_KEYS
                                                 if k != 'category'}})
         if not any(concept['safe_to_generate'] for concept in validated):
-            raise ValueError('At least one ranked concept must be safe to generate')
+            decision = {'version': ARTICLE_IMAGE_VERSION, 'category': value['category'],
+                        'concepts': validated}
+            raise _NoSafeImageConcept(decision, rejected_scenes)
         return {'version': ARTICLE_IMAGE_VERSION, 'category': value['category'],
                 'concepts': validated}
     if require_concepts:
@@ -200,7 +225,12 @@ def validate_image_decision(value, draft=None, *, require_concepts=False,
     must_avoid = _decision_list(value['must_avoid'], 'must_avoid')
     queries = _decision_list(value['search_queries'], 'search_queries', minimum=3,
                              maximum=MAX_SEARCH_QUERIES)
-    if any(not _concrete_query(query) for query in queries):
+    # A fourth or fifth bad suggestion must not discard an otherwise complete concept. Keep
+    # the strict three-query minimum, but deterministically remove unusable extras. This was
+    # observed with "80 km/h nopeusrajoitusmerkki": the numeric fragment left only one
+    # meaningful word while the same concept already contained three concrete searches.
+    queries = [query for query in queries if _concrete_query(query)]
+    if len(queries) < 3:
         raise ValueError('Image classifier search queries must be concrete phrases')
     category = _decision_text(value['category'], 'category', 40)
     try:
@@ -257,13 +287,148 @@ def _fallback_image_decision(draft, category=''):
         decision, draft if isinstance(draft, dict) and draft.get('category') else None)
 
 
-def classify_draft(draft, model=None, packet=None):
-    """Run the existing model adapter once and return its validated image decision."""
+def _classifier_supports_context(model):
+    try:
+        parameters = inspect.signature(model.call).parameters.values()
+    except (TypeError, ValueError, AttributeError):
+        return False
+    return any(parameter.name == 'context' or
+               parameter.kind is inspect.Parameter.VAR_KEYWORD
+               for parameter in parameters)
+
+
+def _classifier_feedback(error, prior_feedback=None):
+    rejected = list(getattr(error, 'rejected_scenes', ()))[:3]
+    feedback = {
+        'attempt': 2,
+        'validation_error': str(error)[:500],
+        'rejected_scenes': rejected,
+        'instruction': (
+            'Return a different complete decision. Preserve rejected people scenes for '
+            'licensed-photo search with safe_to_generate=false, and include at least one '
+            'article-grounded scene containing only objects, architecture or a place.'),
+    }
+    if prior_feedback:
+        feedback['prior_editorial_rejection'] = prior_feedback
+    return {'image_classifier_feedback': feedback}
+
+
+def _prior_feedback(value):
+    if not isinstance(value, dict):
+        return None
+    reasons = value.get('reasons')
+    if value.get('image_retryable') is not True or not isinstance(reasons, list):
+        return None
+    return {
+        'reasons': [str(reason)[:1000] for reason in reasons[-4:]],
+        'instruction': (
+            'Do not repeat the rejected scene or search strategy. Prefer the strongest '
+            'people-free object or place concept supported by the article.'),
+    }
+
+
+def _derived_safe_concept(draft):
+    """Last-resort article-grounded object/place concept after two rejected responses."""
+    subject = subject_from_draft(draft)
+    if not subject:
+        raise ValueError('Draft has no depictable subject')
+    article = ' '.join([subject, str(draft.get('summary', ''))] + [
+        str(paragraph.get('text', '')) for paragraph in draft.get('paragraphs', ())
+        if isinstance(paragraph, dict)]).casefold()
+    choices = (
+        (('majoitus', 'hotelli', 'vastaanotto'),
+         'Tyhjä majoitusliikkeen vastaanottotiski luonnonvalossa, tiskillä metallinen palvelukello.',
+         ['empty hotel reception counter', 'metal service bell'],
+         ['hotel reception counter', 'empty reception desk', 'metal service bell']),
+        (('koulutus', 'opetus', 'oppitunti', 'luokkahuone'),
+         'Tyhjä luokkahuone, jossa on pöytiä, tuoleja ja suljettuja vihkoja luonnonvalossa.',
+         ['empty classroom desks', 'closed notebooks'],
+         ['empty classroom desks', 'closed notebooks desk', 'classroom chairs']),
+        (('liikenne', 'rattijuop', 'ylinope', 'moottoripyör', 'kuljettaj'),
+         'Tyhjä kaksikaistainen suomalainen maantie metsän ja pellon välissä päivänvalossa.',
+         ['empty two-lane road'],
+         ['empty Finnish road', 'two lane road', 'Nordic rural road']),
+        (('puhelu', 'puhelin', 'keskustel', 'kokous', 'minister'),
+         'Tumma pöytäpuhelin tyhjällä puisella kokouspöydällä, vieressä suljettu kansio.',
+         ['desk telephone', 'closed document folder'],
+         ['desk telephone table', 'conference table phone', 'closed document folder']),
+        (('metsä', 'taimikko', 'puu'),
+         'Metsänreunan taimikko ja puiden rungot pehmeässä päivänvalossa.',
+         ['forest saplings', 'tree trunks'],
+         ['forest saplings Finland', 'tree trunks forest', 'Nordic forest edge']),
+    )
+    scene = must_show = queries = None
+    for words, candidate_scene, candidate_show, candidate_queries in choices:
+        if any(word in article for word in words):
+            scene, must_show, queries = candidate_scene, candidate_show, candidate_queries
+            break
+    if scene is None:
+        by_category = {
+            'Maailma': ('Tyhjä kokoushuone, jossa on puinen pöytä, tuoleja ja suljettuja kansioita.',
+                        ['empty meeting table'], ['empty meeting table', 'closed folders table', 'meeting room chairs']),
+            'Talous': ('Pöydällä on laskin, suljettuja kansioita ja tyhjiä paperiarkkeja.',
+                       ['calculator and folders'], ['calculator office desk', 'closed folders desk', 'blank paper calculator']),
+            'Tiede': ('Laboratoriopöydällä on lasiastioita ja nimeämättömiä tutkimusvälineitä.',
+                      ['laboratory glassware'], ['laboratory glassware table', 'research equipment desk', 'empty science laboratory']),
+            'Kulttuuri': ('Tyhjässä näyttelytilassa on neutraaleja kehyksiä ja penkki.',
+                          ['empty exhibition room'], ['empty exhibition room', 'gallery frames bench', 'museum interior empty']),
+            'Urheilu': ('Tyhjä urheilukenttä ja sen rajaviivat päivänvalossa.',
+                        ['empty sports field'], ['empty sports field', 'sports field lines', 'outdoor playing field']),
+        }
+        scene, must_show, queries = by_category.get(draft.get('category'), (
+            'Nimeämättömän julkisen rakennuksen tyhjä sisäänkäynti päivänvalossa.',
+            ['public building entrance'], ['public building entrance', 'empty building doorway', 'Nordic civic building']))
+    return {
+        'safe_to_generate': True, 'subject': subject, 'depictable_scene': scene,
+        'must_show': must_show,
+        'must_avoid': ['people, faces, hands or other body parts', 'readable text or logos'],
+        'search_queries': queries,
+    }
+
+
+def _fallback_ranked_decision(draft, rejected=None):
+    category = draft.get('category', '') if isinstance(draft, dict) else ''
+    retained = []
+    if isinstance(rejected, dict) and rejected.get('version') == ARTICLE_IMAGE_VERSION:
+        category = rejected.get('category') or category
+        retained = [{**concept, 'safe_to_generate': False}
+                    for concept in rejected.get('concepts', ())[:2]]
+    safe = _derived_safe_concept(draft)
+    concepts = retained + [safe]
+    if len(concepts) == 1:
+        licensed = {**safe, 'safe_to_generate': False,
+            'depictable_scene': 'Todellinen lisensoitu uutisvalokuva artikkelin konkreettisesta aiheesta.',
+            'must_show': safe['must_show'][:1]}
+        concepts.append(licensed)
+        concepts.reverse()
+    concepts = [{**concept, 'rank': rank} for rank, concept in enumerate(concepts, 1)]
+    return validate_image_decision({'version': ARTICLE_IMAGE_VERSION, 'category': category,
+                                    'concepts': concepts}, draft, require_concepts=True)
+
+
+def classify_draft(draft, model=None, packet=None, *, feedback=None):
+    """Return a safe decision after at most one explicit, different classifier retry."""
     if model is None:
         return _fallback_image_decision(
             draft, draft.get('category', '') if isinstance(draft, dict) else '')
-    raw = model.call('image_classifier', packet or {}, draft)
-    return validate_image_decision(raw, draft, require_concepts=True)
+    packet = packet or {}
+    prior = _prior_feedback(feedback)
+    supports_context = _classifier_supports_context(model)
+    context = ({'image_classifier_feedback': prior} if prior and supports_context else None)
+    raw = model.call('image_classifier', packet, draft, **({'context': context} if context else {}))
+    try:
+        return validate_image_decision(raw, draft, require_concepts=True)
+    except (TypeError, ValueError) as first_error:
+        rejected = getattr(first_error, 'decision', None)
+        if not supports_context:
+            return _fallback_ranked_decision(draft, rejected)
+        retry_context = _classifier_feedback(first_error, prior)
+        retry_raw = model.call('image_classifier', packet, draft, context=retry_context)
+        try:
+            return validate_image_decision(retry_raw, draft, require_concepts=True)
+        except (TypeError, ValueError) as second_error:
+            return _fallback_ranked_decision(
+                draft, getattr(second_error, 'decision', None) or rejected)
 
 
 def concept_decision(decision, concept):
@@ -813,7 +978,7 @@ def _stock_alt(review):
     if (not isinstance(value, str) or not 12 <= len(value.strip()) <= 200 or
             value.strip()[-1:] not in ('.', '!', '?') or '\n' in value):
         raise ValueError('Stock image needs a concise complete reviewed Finnish alt')
-    return 'Arkistokuva: ' + value.strip()
+    return 'Kuvituskuva: ' + value.strip()
 
 
 def validate_pixel_review(image, draft=None):
@@ -1551,7 +1716,8 @@ UNSPLASH_PER_PAGE = 10
 MAX_IMAGE_BYTES = 12 * 1024 * 1024
 MAX_QUERY_TERMS = 6
 
-STOCK_CAPTION = 'Arkistokuva artikkelin aiheesta.'
+STOCK_ALT_PREFIX = 'Kuvituskuva: '
+STOCK_CAPTION = 'Kuvituskuva. Kuva ei esitä uutisen tapahtumaa.'
 LEGACY_STOCK_CAPTION = 'Arkistokuva. Kuva ei esitä uutisen tapahtumaa.'
 STOCK_LICENSE = 'Unsplash License'
 STOCK_UTM = (('utm_source', 'uutistenlukija'), ('utm_medium', 'referral'))
@@ -2179,7 +2345,7 @@ def _stock_record(candidate, query, pixels, depicted, retrieved_at, decision=Non
         'image_url': candidate['hotlink'],
         'download_tracking': {'url': candidate['download'], 'successful': True},
     }
-    alt = f'Arkistokuva: {depicted}' if depicted else f'Arkistokuva aiheesta {query}'
+    alt = STOCK_ALT_PREFIX + (depicted if depicted else f'aiheesta {query}')
     record = {
         'url': candidate['hotlink'],
         'alt': alt[:250],
@@ -2560,7 +2726,7 @@ def _pexels_record(candidate, query, sha, local_path, pixels, depicted, retrieve
         'retrieved_at': retrieved_at,
         'image_url': candidate['image_url'],
     }
-    alt = f"Arkistokuva: {depicted}" if depicted else f'Arkistokuva aiheesta {query}'
+    alt = STOCK_ALT_PREFIX + (depicted if depicted else f'aiheesta {query}')
     record = {
         'url': f'{PUBLIC_BASE}/{local_path}',
         'local_path': local_path,
@@ -2749,7 +2915,7 @@ def _open_source_record(provider, candidate, query, state_dir, pixels, sha, loca
             'changes':'Tallennettu JPEG-muodossa; kuvan sisältöä ei muokattu.'}
         if candidate.get('attribution_credit'):
             provenance['attribution']['source_credit'] = candidate['attribution_credit']
-    alt = f'Arkistokuva: {depicted}' if depicted else f'Arkistokuva aiheesta {query}'
+    alt = STOCK_ALT_PREFIX + (depicted if depicted else f'aiheesta {query}')
     record = {
         'url': f'{PUBLIC_BASE}/{local_path}',
         'local_path': local_path,

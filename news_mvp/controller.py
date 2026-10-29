@@ -253,12 +253,13 @@ def _defer_image_only_rejection(store, config, job, packet, draft, review, model
     store.save_packet(job['id'],packet);store.save_draft(job['id'],draft,model.name)
     raise ImagePending('Image pending: editorial image-only rejection; candidate retained for audit')
 
-def article_first_image(draft, packet, state_dir, model):
+def article_first_image(draft, packet, state_dir, model, *, classifier_feedback=None):
     """Rank the final article before considering even an intake-supplied photograph."""
     from .imagery import build_image, classify_draft
     text_draft = {key: value for key, value in draft.items() if key != 'image'}
     text_packet = {key: value for key, value in packet.items() if key != 'image'}
-    decision = classify_draft(text_draft, model=model, packet=text_packet)
+    decision = classify_draft(text_draft, model=model, packet=text_packet,
+                              feedback=classifier_feedback)
     # The rights-pinned intake photo is only one candidate in the ranked search.
     candidate_draft = {**text_draft, 'image': packet.get('image')}
     return build_image(candidate_draft, state_dir, category=draft.get('category', ''),
@@ -319,7 +320,19 @@ def tick(config_path, model=None, now=None, _already_locked=False, target_job_id
                 # contract test and must never make a provider or generation request.
                 if config.get("illustrations", True) and not packet.get("fixture", False):
                     try:
-                        illustration = article_first_image(draft, packet, config["state_dir"], model)
+                        prior_review = None
+                        raw_prior_review = (job.get('review') if isinstance(job, dict)
+                                            else job['review'])
+                        if raw_prior_review:
+                            try:
+                                candidate_review = json.loads(raw_prior_review)
+                                if candidate_review.get('image_retryable') is True:
+                                    prior_review = candidate_review
+                            except (TypeError, ValueError, AttributeError):
+                                pass
+                        illustration = article_first_image(
+                            draft, packet, config["state_dir"], model,
+                            classifier_feedback=prior_review)
                     except Exception as error:
                         illustration = None
                         # Preserve the exact classified refusal; never hide a parser/provider

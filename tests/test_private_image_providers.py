@@ -94,7 +94,7 @@ class PrivateImageProviders(unittest.TestCase):
                   'reason':'Library books match the article','alt_fi':'Kirjoja kirjaston hyllyillä.'}
         with patch.dict('os.environ',{'UUTIS_VISION_PROVIDER':'google'}),patch.object(providers,'google_vision',return_value=response):
             review=imagery.review_pixels(raw,draft,generated=False)
-        self.assertEqual(imagery._stock_alt(review),'Arkistokuva: Kirjoja kirjaston hyllyillä.')
+        self.assertEqual(imagery._stock_alt(review),'Kuvituskuva: Kirjoja kirjaston hyllyillä.')
         self.assertEqual(review['image_sha256'],hashlib.sha256(raw).hexdigest())
 
     def test_missing_truncated_or_overlong_stock_alt_fails_closed(self):

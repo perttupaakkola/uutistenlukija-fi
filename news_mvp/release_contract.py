@@ -429,6 +429,7 @@ def stock_binding(image):
         if image['caption'] != CAPTION or image['credit'] != CREDIT:
             raise ValueError('Invalid source-chart credit or caption')
     elif image['caption'] not in {
+            'Kuvituskuva. Kuva ei esitä uutisen tapahtumaa.',
             'Arkistokuva artikkelin aiheesta.',
             'Arkistokuva. Kuva ei esitä uutisen tapahtumaa.',
             'Arkistokuva artikkelin aiheesta. Kuva ei esitä uutisen tapahtumapaikkaa.',
