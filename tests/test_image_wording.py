@@ -72,5 +72,26 @@ class GeneratedWording(unittest.TestCase):
                     check_article(changed, case._packet_for(), case._draft())
 
 
+    def test_related_stock_thumbnail_label_does_not_block_generated_article(self):
+        # Real case 30 Oct 2026: generated-image article refused at upload because its
+        # 'Lue myös' block linked a story whose licensed stock photo is labelled with
+        # the current stock prefix (identical to the retired AI word).
+        from news_mvp.imagery import STOCK_ALT_PREFIX
+        self.assertTrue(STOCK_ALT_PREFIX.casefold().startswith(RETIRED_IMAGE_STEM))
+        case = article_cases.GeneratedCreditContract()
+        related = ('<section class="related"><h2>Lue myös</h2><ul><li class="related-story">'
+                   '<a class="related-story__link" href="/uutiset/ranne-osallistuu-66c345b00004/">'
+                   '<span class="related-story__thumb"><img src="/assets/' + 'b'*64 + '.jpg" '
+                   'alt="' + STOCK_ALT_PREFIX + 'Moderni kokouspöytä, jossa on sisäänrakennettu näyttö." '
+                   'loading="lazy"></span><span class="related-story__title">Ranne osallistuu</span>'
+                   '</a></li></ul></section>')
+        html = case._html(AI_CREDIT).replace('</body>', related + '</body>')
+        check_article(html, case._packet_for(), case._draft())
+        # The word in the article's own content is still refused.
+        with self.assertRaises(ValueError):
+            check_article(html.replace('</body>', RETIRED_IMAGE_STEM + 'a</body>'),
+                          case._packet_for(), case._draft())
+
+
 if __name__ == '__main__':
     unittest.main()

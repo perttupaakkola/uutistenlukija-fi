@@ -104,6 +104,14 @@ class _ImageSources(HTMLParser):
             self._picture -= 1
 
 
+_RELATED_SECTION = re.compile(r'<section class="related">.*?</section>', re.S)
+
+
+def _without_related_stories(html):
+    """The article page minus its 'Lue myös' links to other, separately reviewed stories."""
+    return _RELATED_SECTION.sub('', html)
+
+
 def _only_branding_images(html):
     """True when a page's only images are the exact logo asset inside header/footer.
 
@@ -1706,7 +1714,11 @@ def check_article(html,packet,draft,canonical=None):
         if image.get('generated') is True:
             from .image_wording import validate_generated_wording, contains_retired_word
             validate_generated_wording(image)
-            if contains_retired_word(html):
+            # The retired word is retired only as an AI-image label. Since 29 Oct it is
+            # the current label of licensed stock photos, which legitimately appear as
+            # thumbnails of *other* stories in the 'Lue myös' block (30 Oct: a generated
+            # article was refused because a related story's stock alt started with it).
+            if contains_retired_word(_without_related_stories(html)):
                 raise ValueError('Public article contains retired image vocabulary')
             parsed_images = _ImageSources()
             parsed_images.feed(html)
