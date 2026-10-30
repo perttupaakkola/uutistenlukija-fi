@@ -77,9 +77,12 @@ def _live_tick(config_path):
     if config['backend']!='hermes':raise ValueError('Live scheduler refuses the fixture backend')
     if config.get('discovery',{}).get('family')=='finnish-official':
         raise ValueError('Official Finnish sources are private preparation only; public policy is not approved')
-    if config.get('discovery',{}).get('family')=='news-reviewed-v2':guard(config_path)
     with single_tick(config['state_dir']) as locked:
         if not locked:return {'status':'busy'}
+        # The clean-tree guard must run only while holding controller.lock: guarded source
+        # edits hold the same lock while their tree is dirty. On 30 Oct (06:52, 20:00) the
+        # guard ran before the lock and crashed the tick mid guide commit.
+        if config.get('discovery',{}).get('family')=='news-reviewed-v2':guard(config_path)
         if config.get('frontpage_snapshots', False):
             from .frontpage import refresh
             refresh(config['state_dir'])
