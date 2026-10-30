@@ -1126,6 +1126,19 @@ def publish(store,job,state,config_path):
         outcome='failed' if saved['status']=='failed' else ('unknown' if external_started or saved['remote_commit'] else 'failed')
         if isinstance(error,UncommittedPreparationError) and not saved['remote_commit']:
             outcome='preparing'
+        transient=upstream_outage_count(error,store,job['id'])
+        if transient is not None and not saved['remote_commit']:
+            # 30 Oct: GitHub had a service disruption and answered blob uploads
+            # with HTTP 500 even after the in-call retries. An upstream outage
+            # is not a fault of this publication, so it must not burn the three
+            # preparation attempts (which would block the story for good after
+            # ~45 min of outage). Refund the attempt and resume next tick, but
+            # only TRANSIENT_OUTAGE_TICKS times; after that the normal attempt
+            # count applies again so a persistent fault still stops.
+            with store.db:store.db.execute(
+                "UPDATE publications SET status='preparing',error=?,attempts=CASE WHEN ? THEN max(attempts-1,0) ELSE attempts END WHERE job_id=?",
+                (f'Transient {transient}: '+safe_error(error),1 if external_started else 0,job['id']))
+            return {'status':'preparation_continues','job_id':job['id'],'reason':'Upstream outage: '+safe_error(error)}
         if isinstance(error,PreparationDeferred) and not saved['remote_commit']:
             # A budget stop is not a failed attempt: blob checkpoints keep the
             # progress, so refund the attempt and let the next tick resume.
@@ -1135,6 +1148,21 @@ def publish(store,job,state,config_path):
             return {'status':'preparation_continues','job_id':job['id'],'reason':str(error)}
         with store.db:store.db.execute("UPDATE publications SET status=?,error=? WHERE job_id=?",(outcome,safe_error(error),job['id']))
         raise
+
+
+TRANSIENT_OUTAGE_TICKS = 48  # ~12 h of 15-minute ticks
+_OUTAGE = re.compile(r'HTTP 5\d\d|timed out|URLError|Connection (reset|refused)|Temporary failure')
+_TRANSIENT_PREFIX = re.compile(r'^Transient (\d+): ')
+
+
+def upstream_outage_count(error,store,job_id):
+    """Next outage counter if `error` is an upstream outage before any commit, else None."""
+    if not isinstance(error,UncommittedPreparationError) or isinstance(error,PreparationDeferred):return None
+    if not _OUTAGE.search(str(error)):return None
+    previous=store.db.execute('SELECT error FROM publications WHERE job_id=?',(job_id,)).fetchone()
+    match=_TRANSIENT_PREFIX.match((previous[0] if previous else None) or '')
+    count=(int(match.group(1)) if match else 0)+1
+    return count if count<=TRANSIENT_OUTAGE_TICKS else None
 
 
 def requeue_failed(config, job_id=None):

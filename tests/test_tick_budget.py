@@ -86,3 +86,36 @@ class TickBudget(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+
+
+class UpstreamOutage(TickBudget):
+    """30 Oct: GitHub disruption returned HTTP 500 for git/blobs; must not burn attempts."""
+
+    REAL = 'RuntimeError: GitHub POST git/blobs: HTTP 500 '
+
+    def test_github_500_refunds_attempt_and_is_bounded(self):
+        with database(self.config['state_dir']) as store:
+            self._row(store)
+            with patch('news_mvp.publish.guard'), patch('news_mvp.publish.cmd', return_value='source'), \
+                 patch('news_mvp.publish.public_bundle', return_value=(None, {})), \
+                 patch('news_mvp.publish.make_commit', side_effect=pub.UncommittedPreparationError(self.REAL)):
+                for n in range(1, pub.TRANSIENT_OUTAGE_TICKS + 1):
+                    result = pub.publish(store, self.job, self.config['state_dir'], self.config_path)
+                    self.assertEqual(result['status'], 'preparation_continues')
+                    row = store.db.execute('SELECT status,attempts,error FROM publications').fetchone()
+                    self.assertEqual((row[0], row[1]), ('preparing', 0))
+                    self.assertTrue(row[2].startswith(f'Transient {n}: '))
+                # bound reached: ordinary attempt counting resumes and raises
+                with self.assertRaises(pub.UncommittedPreparationError):
+                    pub.publish(store, self.job, self.config['state_dir'], self.config_path)
+                self.assertEqual(store.db.execute('SELECT attempts FROM publications').fetchone()[0], 1)
+
+    def test_non_outage_error_still_counts(self):
+        with database(self.config['state_dir']) as store:
+            self._row(store)
+            with patch('news_mvp.publish.guard'), patch('news_mvp.publish.cmd', return_value='source'), \
+                 patch('news_mvp.publish.public_bundle', return_value=(None, {})), \
+                 patch('news_mvp.publish.make_commit', side_effect=pub.UncommittedPreparationError('RuntimeError: GitHub POST git/blobs: HTTP 422 bad')):
+                with self.assertRaises(pub.UncommittedPreparationError):
+                    pub.publish(store, self.job, self.config['state_dir'], self.config_path)
+            self.assertEqual(store.db.execute('SELECT attempts FROM publications').fetchone()[0], 1)
