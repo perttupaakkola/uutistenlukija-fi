@@ -73,6 +73,41 @@ class ImagePendingExpiry(unittest.TestCase):
             with database(state) as store:
                 self.assertEqual(store.get(jid)['status'], 'failed')
 
+    def test_expiry_runs_before_site_refresh_branch_returns(self):
+        # 31 Oct: story 3130617e (admitted 14:17 UTC) was still queued after 19:30 because
+        # the 18:43/18:58 ticks returned through the site-refresh branch first.
+        from pathlib import Path
+        import news_mvp.live as live
+        src = Path(live.__file__).read_text()
+        tick = src[src.index('def _live_tick'):]
+        self.assertLess(tick.index('store.expire_image_pending('),
+                        tick.index('if unresolved_site_refreshes(store):'))
+
+    def test_live_tick_expires_while_site_refresh_pending(self):
+        import json, tempfile
+        from pathlib import Path
+        from unittest.mock import patch
+        from news_mvp.live import live_tick
+        from news_mvp.store import database
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp); state = root / 'state'; cfg = root / 'config.json'
+            cfg.write_text(json.dumps({'enabled': True, 'backend': 'hermes', 'state_dir': str(state),
+                'output_dir': str(root / 'p'), 'source_recipes': [], 'discovery': {'family': 'nasa-modis'},
+                'max_attempts': 3, 'retry_seconds': 60, 'illustrations': False}))
+            old = datetime.fromtimestamp(self.now - IMAGE_PENDING_MAX_AGE - 3600, timezone.utc).isoformat()
+            with database(state) as store:
+                url = 'https://www.kuopio.fi/2026/10/31/site-refresh-expiry-case/'
+                jid = store.admit({'fixture': False, 'story_key': 'url:' + url, 'sources': [{'url': url}]}, old)[0]
+                with store.db:
+                    store.db.execute("UPDATE jobs SET error=? WHERE id=?",
+                        ('Image pending: editorial image-only rejection; candidate retained for audit', jid))
+            with patch('news_mvp.live.unresolved_site_refreshes', return_value=[{'id': 'r'}]), \
+                    patch('news_mvp.publish.site_refresh', return_value={'status': 'dispatched'}):
+                result = live_tick(cfg)
+            self.assertEqual(result['status'], 'site_refresh_reconcile')
+            with database(state) as store:
+                self.assertEqual(store.get(jid)['status'], 'failed')
+
 
 if __name__ == '__main__':
     unittest.main()

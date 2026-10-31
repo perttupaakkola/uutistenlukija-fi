@@ -88,6 +88,11 @@ def _live_tick(config_path):
             refresh(config['state_dir'])
         with database(config['state_dir']) as store:
             ensure_table(store)
+            # Expire image-waiting stories before ANY branch can return: on 29 Oct upload
+            # reconciliation ticks skipped the age limit (5 h 10 min wait), and on 31 Oct
+            # site-refresh ticks did the same (story 3130617e past 5 h). Jobs with a
+            # publication row are never touched.
+            store.expire_image_pending(time.time())
             if unresolved_site_refreshes(store):
                 # 31 Oct: a guide refresh was dispatched at 18:15, the operator run ended
                 # without the second reconcile call, and every tick only said "pending",
@@ -99,10 +104,6 @@ def _live_tick(config_path):
                 except Exception as error:
                     reconciled = {'status':'site_refresh_error','error':safe_error(error)}
                 return {'status':'site_refresh_reconcile','result':reconciled}
-            # Expire image-waiting stories before publication reconciliation can return:
-            # on 29 Oct three upload ticks in a row skipped the age limit and a story sat
-            # 5 h 10 min instead of 4 h. Jobs with a publication row are never touched.
-            store.expire_image_pending(time.time())
             # Publication reconciliation owns the tick, even after its source disappears
             # or ages out. Never rotate providers while an outcome is unresolved.
             from .backfill import pending as pending_publications
