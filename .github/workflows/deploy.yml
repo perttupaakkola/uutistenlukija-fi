@@ -20,11 +20,16 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: test "$(gh api repos/$GITHUB_REPOSITORY/commits/main --jq .sha)" = "$GITHUB_SHA"
-      - uses: cloudflare/wrangler-action@v4
-        with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy public --project-name=uutistenlukija-fi --branch=main --commit-hash=${{ github.sha }} --commit-dirty=false
+      # 31 Oct 2026: one Cloudflare API blip ("Internal authentication error: internal
+      # server error [code: 10500]") failed the single wrangler call, and the publisher
+      # treats a failed run as final, so a reviewed article was lost. Cloudflare-side
+      # errors are retried here, bounded (4 tries, 30/60/90 s apart); any other error
+      # fails at once. Redeploying the same commit is idempotent.
+      - name: Deploy to Cloudflare Pages (bounded retry on Cloudflare-side errors)
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: bash ops/pages_deploy.sh
       - name: Bind successful production deployment to this packet and commit
         env:
           CF_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
