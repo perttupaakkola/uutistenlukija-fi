@@ -7,8 +7,8 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 from .diagnostics import safe_error
-from .editorial import (FixtureModel, HermesModel, digest, text, validate_packet,
-                        validate_draft, validate_review)
+from .editorial import (FixtureModel, HermesModel, digest, explainer_word_count, text,
+                        validate_packet, validate_draft, validate_review)
 from .site import render_site
 from .store import database
 
@@ -122,6 +122,45 @@ def repair_title(model, packet, draft):
     candidate = value.get("title") if isinstance(value, dict) else None
     if isinstance(candidate, str) and 0 < len(candidate.strip()) <= 60:
         return {**draft, "title": candidate.strip()}
+    return draft
+
+
+EXPLAINER_LENGTH_REPAIRS = 1
+
+
+def repair_explainer_length(model, packet, draft):
+    """Give an explainer outside the 500–900 word rule one bounded, sourced length repair.
+
+    31 Oct 2026: the writer under-shot the length on 8 of 23 explainers (222–493 words).
+    The short draft was saved and reused on every retry, so the identical validation
+    error repeated until the story failed. One reviser call is told the exact count and
+    target; its result is used only if it keeps the explainer shape. Anything else
+    leaves the draft unchanged and validate_draft fails it as before (no loop: the count
+    is recomputed from the draft each time and the call is bounded per attempt).
+    """
+    if packet.get("kind") != "explainer" or not isinstance(draft, dict):
+        return draft
+    for _ in range(EXPLAINER_LENGTH_REPAIRS):
+        count = explainer_word_count(draft)
+        if 500 <= count <= 900:
+            return draft
+        direction = ("laajenna" if count < 500 else "tiivistä")
+        review = {"approved": False, "fixable": True, "reasons": [
+            f"Leipäteksti on {count} sanaa, mutta selittäjän pitää olla 500–900 sanaa. "
+            f"Korjaus: {direction} teksti 600–800 sanaan. Laajenna vain lähdekatkelmissa "
+            "olevilla tiedoilla (taustat, luvut, aikataulut, attribuutiot, ehdot); älä keksi "
+            "mitään. Säilytä viisi osiota, lähdemerkinnät ja kuva muuttumattomina."]}
+        try:
+            revised = model.call("reviser", packet, draft, context={
+                "review": review, "correction_round": 0, "length_repair": True})
+        except (ValueError, TypeError, KeyError, RuntimeError, OSError, subprocess.SubprocessError):
+            return draft
+        if not isinstance(revised, dict) or revised.get("withhold") is True:
+            return draft
+        revised = {**revised, "kind": "explainer", "image": draft.get("image")}
+        if abs(explainer_word_count(revised) - 700) >= abs(count - 700):
+            return draft
+        draft = revised
     return draft
 
 
@@ -311,6 +350,9 @@ def tick(config_path, model=None, now=None, _already_locked=False, target_job_id
                     draft = {**draft, "kind": "explainer"}
                 # Fit an over-long headline into the SERP budget before the reviewer and the
                 # illustration step see the draft; both use the final title.
+                # A saved draft is reused on retry, so a too-short explainer must be repaired
+                # here, before the image work, or every retry repeats the same failure.
+                draft = repair_explainer_length(model, packet, draft)
                 draft = repair_title(model, packet, draft)
                 # Keep the completed writing work across image-provider outages.
                 store.save_draft(job["id"], draft, model.name)
