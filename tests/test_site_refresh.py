@@ -157,6 +157,29 @@ class SiteRefreshTests(unittest.TestCase):
         readback=json.loads((artifact.parent/'live-readback.json').read_text())
         self.assertEqual(readback['live_style_sha256'],receipt['style_sha256'])
 
+    def test_earlier_dispatched_refresh_reconciles_after_head_moved(self):
+        # 31 Oct: refresh da1efc6ee was dispatched, then left; a later guide commit must
+        # not make it unreconcilable ('An earlier site refresh must be reconciled first').
+        with database(self.case.state) as store:
+            ensure_table(store)
+            from news_mvp.publish import ensure_site_refresh_table
+            ensure_site_refresh_table(store)
+            store.db.execute("INSERT INTO site_refreshes VALUES('earlier',?,?,?,NULL,'dispatched',"
+                             "NULL,'2026-10-31T18:15:33+00:00','x')",('0'*40,self.job['id'],REMOTE))
+            store.db.commit()
+        calls=[]
+        result=self.dispatch(calls)
+        self.assertEqual(result['status'],'awaiting_dispatch_visibility')
+        self.assertEqual(result['site_refresh_id'],'earlier')
+        self.assertFalse(any(call[:3] == ('gh','workflow','run') for call in calls))
+
+    def test_live_tick_reconciles_pending_refresh_itself(self):
+        from pathlib import Path as P
+        import news_mvp.live as live
+        src=P(live.__file__).read_text()
+        block=src[src.index('if unresolved_site_refreshes(store):'):][:900]
+        self.assertIn('site_refresh(config, config_path)',block)
+
     def test_normal_publish_behavior_is_unchanged_without_active_refresh(self):
         with database(self.case.state) as store, patch('news_mvp.publish.guard'):
             result=publish(store,self.job,self.case.state,self.case.cfg)

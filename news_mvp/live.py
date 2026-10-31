@@ -89,8 +89,16 @@ def _live_tick(config_path):
         with database(config['state_dir']) as store:
             ensure_table(store)
             if unresolved_site_refreshes(store):
-                return {'status':'site_refresh_pending',
-                        'reason':'Run the site-refresh operator command to reconcile it'}
+                # 31 Oct: a guide refresh was dispatched at 18:15, the operator run ended
+                # without the second reconcile call, and every tick only said "pending",
+                # blocking articles for 45+ min. The tick now reconciles it itself (same
+                # lock, no redispatch: site_refresh never replays an unknown dispatch).
+                from .publish import site_refresh
+                try:
+                    reconciled = site_refresh(config, config_path)
+                except Exception as error:
+                    reconciled = {'status':'site_refresh_error','error':safe_error(error)}
+                return {'status':'site_refresh_reconcile','result':reconciled}
             # Expire image-waiting stories before publication reconciliation can return:
             # on 29 Oct three upload ticks in a row skipped the age limit and a story sat
             # 5 h 10 min instead of 4 h. Jobs with a publication row are never touched.

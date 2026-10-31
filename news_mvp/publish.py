@@ -835,7 +835,10 @@ def site_refresh(config, config_path):
                              'anchor_job_id':job['id']})
         if active:
             row = dict(active[0])
-            if row['id'] != refresh_id:
+            # A newer commit after dispatch must not strand the earlier refresh: once it
+            # has a remote commit its outcome no longer depends on HEAD, so reconcile it.
+            if row['id'] != refresh_id and not (row['remote_commit'] and
+                                                row['anchor_job_id'] == job['id']):
                 raise ValueError('An earlier site refresh must be reconciled first')
         else:
             previous = store.db.execute('SELECT * FROM site_refreshes WHERE id=?',
