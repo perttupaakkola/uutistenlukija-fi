@@ -240,3 +240,25 @@ class EPressiTests(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+
+
+class EPressiBodyHeadingTests(unittest.TestCase):
+    def test_real_release_with_h1_inside_body_keeps_page_title(self):
+        # Real page (1 Nov 2026): body boilerplate "Luontoliitosta" is its own <h1>.
+        raw = (FIXTURES / 'epressi_release_body_h1.html').read_bytes()
+        url = ('https://www.epressi.com/tiedotteet/ymparisto-ja-luonto/'
+               'mielenosoituksia-datakeskuksia-vastaan-ympari-suomen-7.11.2026.html')
+        from news_mvp.official_additional import _epressi_parts
+        try:
+            _epressi_parts(raw, url, datetime(2026, 11, 1, 15, 0, tzinfo=timezone.utc))
+        except ValueError as error:
+            self.assertNotIn('title mismatch', str(error))
+
+    def test_page_heading_still_must_match_og_title(self):
+        raw = (FIXTURES / 'epressi_release_body_h1.html').read_bytes().replace(
+            b'col-12 mb-0 px-0">Mielenosoituksia', b'col-12 mb-0 px-0">Toinen otsikko')
+        url = ('https://www.epressi.com/tiedotteet/ymparisto-ja-luonto/'
+               'mielenosoituksia-datakeskuksia-vastaan-ympari-suomen-7.11.2026.html')
+        from news_mvp.official_additional import _epressi_parts
+        with self.assertRaisesRegex(ValueError, 'title mismatch'):
+            _epressi_parts(raw, url, datetime(2026, 11, 1, 15, 0, tzinfo=timezone.utc))

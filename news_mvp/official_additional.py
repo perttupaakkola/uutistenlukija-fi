@@ -358,7 +358,10 @@ def _epressi_parts(raw,url,now):
  page=Meta();page.feed(raw.decode('utf-8'))
  if page.canonicals!=[url]:raise ValueError('Canonical article mismatch')
  title=page.one('og:title').strip()
- heading=parse(raw,lambda t,a:t=='h1').text()
+ # The release body may carry its own <h1> (e.g. an 'About us' boilerplate heading,
+ # 1 Nov 2026); only the page heading before the news-body block names the release.
+ head_raw=re.split(rb'<div[^>]*class="[^"]*\bnews-body\b',raw,maxsplit=1)[0]
+ heading=parse(head_raw,lambda t,a:t=='h1').text()
  if not title or heading!=title:raise ValueError('ePressi title mismatch')
  publisher=parse(raw,lambda t,a:t=='a' and 'js-customer-name' in a.get('class','').split()).text()
  if not publisher or '\n' in publisher:raise ValueError('Missing exact ePressi publisher')
