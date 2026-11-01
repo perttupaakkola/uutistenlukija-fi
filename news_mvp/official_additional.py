@@ -314,6 +314,22 @@ def _sttinfo_duplicate(title,page,excluded):
  return press_wire_duplicate(title,page,excluded)
 
 
+class PressWireRejection(ValueError):
+ """A rotating press-wire pick that failed after its page was chosen.
+
+ Carries the release URL so the controller can quarantine exactly that release:
+ without it the 15-minute rotation re-fetched and re-rejected the same page on
+ every tick (STT Info 'Fliiga', 1 Nov 2026).
+ """
+ def __init__(self,url,error):
+  super().__init__(str(error));self.url=url
+
+
+def _inspect_pick(url,check):
+ try:return check()
+ except (ValueError,OSError) as error:raise PressWireRejection(url,error) from error
+
+
 def sttinfo_candidates(raw,spec,now,excluded,response):
  """Inspect one rotating release: one feed fetch in caller plus one page fetch here."""
  try:items=ET.fromstring(raw).findall('./channel/item')
@@ -333,11 +349,14 @@ def sttinfo_candidates(raw,spec,now,excluded,response):
  if not candidates:return []
  # Fifteen-minute rotation means an ineligible head item cannot starve the rest of the feed.
  url,feed_title=candidates[int(now.timestamp()//900)%len(candidates)]
- article=response(url,spec['hosts'])
- fields,page,publisher,reason=_sttinfo_parts(article,url,now)
- if fields['title']!=feed_title:raise ValueError('STT Info feed/article title mismatch')
- duplicate=_sttinfo_duplicate(feed_title,page,excluded)
- if duplicate:raise ValueError(duplicate)
+ def check():
+  article=response(url,spec['hosts'])
+  fields,page,publisher,reason=_sttinfo_parts(article,url,now)
+  if fields['title']!=feed_title:raise ValueError('STT Info feed/article title mismatch')
+  duplicate=_sttinfo_duplicate(feed_title,page,excluded)
+  if duplicate:raise ValueError(duplicate)
+  return article,publisher,reason
+ article,publisher,reason=_inspect_pick(url,check)
  return [{'family':'finnish-official','provider':'sttinfo','url':url,
           '_source_raw':article,'publisher':publisher,'publisher_reason':reason}]
 
@@ -407,11 +426,14 @@ def epressi_candidates(raw,spec,now,excluded,response):
   candidates.append((url,title))
  if not candidates:return []
  url,feed_title=candidates[int(now.timestamp()//900)%len(candidates)]
- article=response(url,spec['hosts'])
- fields,page,publisher,reason=_epressi_parts(article,url,now)
- if fields['title']!=feed_title:raise ValueError('ePressi feed/article title mismatch')
- duplicate=press_wire_duplicate(feed_title,page,excluded)
- if duplicate:raise ValueError(duplicate)
+ def check():
+  article=response(url,spec['hosts'])
+  fields,page,publisher,reason=_epressi_parts(article,url,now)
+  if fields['title']!=feed_title:raise ValueError('ePressi feed/article title mismatch')
+  duplicate=press_wire_duplicate(feed_title,page,excluded)
+  if duplicate:raise ValueError(duplicate)
+  return article,publisher,reason
+ article,publisher,reason=_inspect_pick(url,check)
  return [{'family':'finnish-official','provider':'epressi','url':url,
           '_source_raw':article,'publisher':publisher,'publisher_reason':reason}]
 

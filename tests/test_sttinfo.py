@@ -117,6 +117,35 @@ class STTInfoTests(unittest.TestCase):
                 self.config, NOW, errors=errors, provider_only='sttinfo'), [])
         self.assertIn('unknown publisher', errors[0]['error'].lower())
 
+    def test_rejected_pick_carries_url_and_is_quarantined_next_tick(self):
+        # Real case 1 Nov 2026: STT Info release by 'Fliiga' was re-inspected and
+        # re-rejected on every tick because the rejection was not remembered.
+        from news_mvp.store import database
+        from news_mvp.editorial import web_url
+        errors = []
+        with patch.object(official, 'response',
+                          side_effect=[self.feed, self.publisher_page('Fliiga')]):
+            self.assertEqual(official.discover(
+                self.config, NOW, errors=errors, provider_only='sttinfo'), [])
+        self.assertEqual(errors[0]['url'], URL)
+        self.assertEqual(errors[0]['error'], 'ValueError: unknown publisher: Fliiga')
+        with tempfile.TemporaryDirectory() as temp:
+            with database(Path(temp)) as store:
+                store.record_collection_failure(
+                    errors[0]['url'], 'sttinfo', 'rejected release: ' + errors[0]['error'], 1000.0)
+                excluded = store.collection_failure_urls(1000.0 + 7 * 3600)
+            self.assertIn(web_url(URL), excluded)
+        calls = []
+        def fetch(url, hosts):
+            calls.append(url)
+            return self.feed
+        errors = []
+        with patch.object(official, 'response', side_effect=fetch):
+            self.assertEqual(official.discover(self.config, NOW, excluded, errors,
+                                               provider_only='sttinfo'), [])
+        self.assertEqual(calls, [self.spec['index']])
+        self.assertEqual(errors, [])
+
     def test_collection_attribution_text_only_and_strict_readback(self):
         recipe = {'family': 'finnish-official', 'provider': 'sttinfo',
                   'url': URL, '_source_raw': self.page}

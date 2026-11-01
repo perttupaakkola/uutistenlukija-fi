@@ -14,6 +14,7 @@ PERMANENT_COLLECTION_ERRORS = (
     "stale or future-dated",
     "aggregator/hub page",
     "title mismatch",
+    "rejected release: valueerror",
 )
 
 JOBS_SCHEMA = """(

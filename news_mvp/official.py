@@ -246,8 +246,11 @@ def discover(config, now=None, excluded=(), errors=None, provider_only=None):
             except (ValueError, OSError) as error:
                 if errors is None:
                     raise
-                errors.append({'provider': provider, 'stage': 'filtering',
-                               'error': safe_error(error)})
+                entry = {'provider': provider, 'stage': 'filtering'}
+                if getattr(error, 'url', None):
+                    entry['url'] = error.url
+                entry['error'] = safe_error(error.__cause__ or error)
+                errors.append(entry)
                 rows = []
         elif provider in RSS_PROVIDERS:
             try:

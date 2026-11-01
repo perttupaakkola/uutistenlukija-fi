@@ -196,6 +196,15 @@ def _live_tick(config_path):
                     except (TypeError,ValueError,KeyError): recent_categories.append(None)
                 recipes+=discover(config,excluded=excluded,errors=errors,after_provider=after,
                                   recent_categories=recent_categories)
+                # A press-wire pick rejected after its page fetch is remembered per URL;
+                # otherwise the same release is re-fetched and re-rejected every tick.
+                for failure in errors:
+                    if failure.get('stage')=='filtering' and failure.get('url'):
+                        try:
+                            store.record_collection_failure(
+                                failure['url'],failure['provider'],
+                                'rejected release: '+failure['error'],time.time())
+                        except ValueError:pass
             else:recipes+=discover(config)
             seen=set()
             for recipe in recipes:
