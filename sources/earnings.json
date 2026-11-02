@@ -1,0 +1,44 @@
+{
+  "mode": "earnings-text-v1",
+  "max_source_age_hours": 48,
+  "max_articles_per_day": 6,
+  "feeds": {
+    "sttinfo": {
+      "url": "https://www.sttinfo.fi/rss/announcements/latest?lang=fi",
+      "hosts": ["www.sttinfo.fi"],
+      "article_pattern": "https://www\\.sttinfo\\.fi/announcement/[0-9]+\\?publisherId=[0-9]+&lang=fi"
+    },
+    "cision": {
+      "url": "https://news.cision.com/fi/ListItems?format=rss",
+      "hosts": ["news.cision.com"],
+      "article_pattern": "https://news\\.cision\\.com/fi/[a-z0-9-]+/r/[a-z0-9-]+,c[0-9]+"
+    }
+  },
+  "companies": [
+    {"name": "Nordea", "aliases": ["Nordea Bank"], "priority": 100},
+    {"name": "Nokia", "aliases": ["Nokia Oyj"], "priority": 99},
+    {"name": "Kone", "aliases": ["KONE Oyj"], "priority": 98},
+    {"name": "Sampo", "aliases": ["Sampo Oyj"], "priority": 97},
+    {"name": "UPM", "aliases": ["UPM-Kymmene"], "priority": 96},
+    {"name": "Neste", "aliases": ["Neste Oyj"], "priority": 95},
+    {"name": "Wärtsilä", "aliases": ["Wärtsilä Oyj", "Wartsila"], "priority": 94},
+    {"name": "Fortum", "aliases": ["Fortum Oyj"], "priority": 93},
+    {"name": "Stora Enso", "aliases": ["Stora Enso Oyj", "Stora Enson"], "priority": 92},
+    {"name": "Kesko", "aliases": ["Kesko Oyj"], "priority": 91},
+    {"name": "Elisa", "aliases": ["Elisa Oyj"], "priority": 90},
+    {"name": "Konecranes", "aliases": ["Konecranes Oyj"], "priority": 89},
+    {"name": "Metso", "aliases": ["Metso Oyj"], "priority": 88},
+    {"name": "Orion", "aliases": ["Orion Oyj"], "priority": 87},
+    {"name": "Valmet", "aliases": ["Valmet Oyj"], "priority": 86},
+    {"name": "Huhtamäki", "aliases": ["Huhtamäki Oyj"], "priority": 85},
+    {"name": "Outokumpu", "aliases": ["Outokumpu Oyj"], "priority": 84},
+    {"name": "Nokian Renkaat", "aliases": ["Nokian Tyres"], "priority": 83},
+    {"name": "Tietoevry", "aliases": ["TietoEVRY", "Tietoevry Oyj"], "priority": 82},
+    {"name": "Kemira", "aliases": ["Kemira Oyj"], "priority": 81},
+    {"name": "Mandatum", "aliases": ["Mandatum Oyj"], "priority": 80},
+    {"name": "Kalmar", "aliases": ["Kalmar Oyj"], "priority": 79},
+    {"name": "Kojamo", "aliases": ["Kojamo Oyj"], "priority": 78},
+    {"name": "YIT", "aliases": ["YIT Oyj", "YIT:n"], "priority": 77},
+    {"name": "Aktia", "aliases": ["Aktia Pankki", "Aktia Bank"], "priority": 76}
+  ]
+}

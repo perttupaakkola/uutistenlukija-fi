@@ -9,6 +9,8 @@
   "retry_seconds": 60,
   "max_source_age_hours": 48,
   "explainers": {"enabled": true, "max_per_day": 2, "max_per_tick": 1},
+  "earnings": {"enabled": true, "max_per_day": 6},
+  "weekly_economy": {"enabled": true, "max_per_week": 1},
   "source_recipes": [],
   "discovery": {
     "family": "nasa-modis",

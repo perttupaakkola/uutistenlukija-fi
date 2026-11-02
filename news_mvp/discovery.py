@@ -30,6 +30,12 @@ def discover(config,now=None,excluded=(),errors=None,after_provider=None,recent_
     if settings.get('family')=='finnish-official':
         from .official import discover as official_discover
         return official_discover(config,now,excluded,errors)
+    if settings.get('family')=='earnings':
+        from .earnings import discover as earnings_discover
+        return earnings_discover(config,now,excluded,errors)
+    if settings.get('family')=='weekly-economy':
+        from .weekly_economy import discover as weekly_discover
+        return weekly_discover(config,now,excluded,errors)
     if settings.get('family')!='nasa-modis':raise ValueError('Unknown discovery family')
     limit=settings.get('max_candidates',5)
     if type(limit) is not int or not 1<=limit<=5:raise ValueError('Discovery limit must be 1–5')
@@ -149,6 +155,10 @@ def discover_mixed(config,now=None,excluded=(),errors=None,after_provider=None,r
     # bounded feed/API fetch.  Together they therefore add at most two discovery calls per
     # tick and leave the reviewed global fetch ceiling unchanged.
     order=list(PROVIDER_ORDER)+list(DATA_FAMILIES)
+    if config.get('earnings', {}).get('enabled') is True:
+        order.append('earnings')
+    if config.get('weekly_economy', {}).get('enabled') is True:
+        order.append('weekly-economy')
     if after_provider in order:
         i=order.index(after_provider)+1;order=order[i:]+order[:i]
     pools={}
@@ -160,6 +170,12 @@ def discover_mixed(config,now=None,excluded=(),errors=None,after_provider=None,r
         try:
             if provider=='nasa-modis':
                 pools[provider]=discover({**config,'discovery':{'family':'nasa-modis','max_candidates':max(limit,3)}},now,excluded)
+            elif provider=='earnings':
+                from .earnings import discover as earnings_discover
+                pools[provider]=earnings_discover(config,now,excluded,errors)
+            elif provider=='weekly-economy':
+                from .weekly_economy import discover as weekly_discover
+                pools[provider]=weekly_discover(config,now,excluded,errors)
             elif provider in DATA_FAMILIES:
                 pools[provider]=discover_family(provider,now,excluded)
             else:

@@ -1,0 +1,99 @@
+{
+  "mode": "weekly-economy-text-v1",
+  "publish_weekday": 4,
+  "publish_hour_helsinki": 16,
+  "max_articles_per_week": 1,
+  "max_source_age_hours": 192,
+  "fx": {
+    "url": "https://www.ecb.europa.eu/stats/eurofxref/eurofxref-hist-90d.xml",
+    "hosts": ["www.ecb.europa.eu"],
+    "currencies": ["USD", "SEK", "GBP", "NOK"]
+  },
+  "central_bank_decisions": {
+    "Euroopan keskuspankki": {
+      "index": "https://www.ecb.europa.eu/press/govcdec/mopo/2026/html/index_include.en.html",
+      "hosts": ["www.ecb.europa.eu"],
+      "kind": "ecb",
+      "article_pattern": "https://www\\.ecb\\.europa\\.eu/press/pr/date/2026/html/ecb\\.mp[0-9]+~[a-f0-9]+\\.fi\\.html"
+    },
+    "Yhdysvaltain keskuspankki": {
+      "index": "https://www.federalreserve.gov/feeds/press_monetary.xml",
+      "hosts": ["www.federalreserve.gov"],
+      "kind": "rss",
+      "title_pattern": "Federal Reserve issues FOMC statement",
+      "article_pattern": "https://www\\.federalreserve\\.gov/newsevents/pressreleases/monetary20[0-9]{6}a\\.htm"
+    },
+    "Ruotsin keskuspankki": {
+      "index": "https://www.riksbank.se/en-gb/press-and-published/notices-and-press-releases/",
+      "hosts": ["www.riksbank.se"],
+      "kind": "html",
+      "title_pattern": "policy rate|monetary policy decision",
+      "article_pattern": "https://www\\.riksbank\\.se/en-gb/press-and-published/notices-and-press-releases/20[0-9]{2}/.*"
+    },
+    "Norges Bank": {
+      "index": "https://www.norges-bank.no/en/news-events/news/?selectedFacets%5bType%5d=11520",
+      "hosts": ["www.norges-bank.no"],
+      "kind": "html",
+      "title_pattern": "policy rate (?:raised|lowered|kept)|monetary policy decision",
+      "article_pattern": "https://www\\.norges-bank\\.no/en/news-events/news/Press-releases/20[0-9]{2}/.*-rate/"
+    },
+    "Bank of England": {
+      "index": "https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes",
+      "hosts": ["www.bankofengland.co.uk"],
+      "kind": "html",
+      "title_pattern": "monetary policy summary|bank rate",
+      "article_pattern": "https://www\\.bankofengland\\.co\\.uk/monetary-policy-summary-and-minutes/20[0-9]{2}/.*"
+    }
+  },
+  "statistics_finland": {
+    "publications": "https://api.stat.fi/content/publications?endDate=*&startDate=*&published=true&start=0&rows=100&lang=fi&sort=desc&showTotal=true",
+    "calendar": "https://api.stat.fi/content/calendar?endDate=*&startDate=*&start=0&rows=100&lang=fi&sort=asc&showTotal=true",
+    "hosts": ["api.stat.fi"],
+    "article_pattern": "https://stat\\.fi/fi/julkaisu/[a-z0-9]+"
+  },
+  "company_feeds": {
+    "sttinfo": {
+      "url": "https://www.sttinfo.fi/rss/announcements/latest?lang=fi",
+      "hosts": ["www.sttinfo.fi"]
+    },
+    "cision": {
+      "url": "https://news.cision.com/fi/ListItems?format=rss",
+      "hosts": ["news.cision.com"]
+    }
+  },
+  "calendar_companies": ["Teleste"],
+  "central_bank_calendars": {
+    "Euroopan keskuspankki": {
+      "url": "https://www.ecb.europa.eu/press/calendars/mgcgc/html/index.en.html",
+      "hosts": ["www.ecb.europa.eu"]
+    },
+    "Yhdysvaltain keskuspankki": {
+      "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+      "hosts": ["www.federalreserve.gov"]
+    },
+    "Ruotsin keskuspankki": {
+      "url": "https://www.riksbank.se/en-gb/monetary-policy/monetary-policy-report/",
+      "hosts": ["www.riksbank.se"]
+    },
+    "Norges Bank": {
+      "url": "https://www.norges-bank.no/en/topics/Monetary-policy/Monetary-policy-meetings/",
+      "hosts": ["www.norges-bank.no"]
+    },
+    "Bank of England": {
+      "url": "https://www.bankofengland.co.uk/monetary-policy/upcoming-mpc-dates",
+      "hosts": ["www.bankofengland.co.uk"]
+    }
+  },
+  "source_patterns": [
+    "https://www\\.ecb\\.europa\\.eu/.*",
+    "https://api\\.stat\\.fi/.*",
+    "https://stat\\.fi/.*",
+    "https://www\\.sttinfo\\.fi/.*",
+    "https://news\\.cision\\.com/.*",
+    "https://www\\.federalreserve\\.gov/.*",
+    "https://www\\.riksbank\\.se/.*",
+    "https://www\\.norges-bank\\.no/.*",
+    "https://www\\.bankofengland\\.co\\.uk/.*",
+    "https://uutistenlukija\\.fi/uutiset/.*"
+  ]
+}

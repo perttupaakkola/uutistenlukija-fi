@@ -18,7 +18,8 @@ from .diagnostics import safe_error
 from .editorial import ROOT, digest, timestamp, validate_review, validate_packet
 from datetime import datetime, timedelta, timezone
 from .release_contract import media, verify_intake, check_article, load_legacy_redirects, legacy_redirect_lines
-from .site import (ABOUT_PATH, CATEGORY_PAGES, LATEST_PATH, OPPAAT_PATH, SOURCES_PATH,
+from .site import (ABOUT_PATH, CATEGORY_PAGES, EARNINGS_METHOD_PATH, LATEST_PATH,
+                   OPPAAT_PATH, SOURCES_PATH,
                    atomic_write, article_path, esc, missing_page, page, render_site)
 from .store import database
 from . import slugs
@@ -501,6 +502,7 @@ def public_bundle(store,job,state,*,site_refresh=False):
              _sitemap_url_entry('https://uutistenlukija.fi/tietosuoja/'),
              _sitemap_url_entry('https://uutistenlukija.fi'+ABOUT_PATH),
              _sitemap_url_entry('https://uutistenlukija.fi'+SOURCES_PATH),
+             _sitemap_url_entry('https://uutistenlukija.fi'+EARNINGS_METHOD_PATH),
              _sitemap_url_entry('https://uutistenlukija.fi/ai-kuvat/')]
     entries+=_article_sitemap_entries(ids,title_by_id,article_mod,news_by_id)
     # Rendered archive pages are published pages too; the sitemap must list them.

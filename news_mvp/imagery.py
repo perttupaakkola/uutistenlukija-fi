@@ -408,27 +408,43 @@ def _fallback_ranked_decision(draft, rejected=None):
 
 def classify_draft(draft, model=None, packet=None, *, feedback=None):
     """Return a safe decision after at most one explicit, different classifier retry."""
-    if model is None:
-        return _fallback_image_decision(
-            draft, draft.get('category', '') if isinstance(draft, dict) else '')
     packet = packet or {}
+
+    def final(value):
+        value = validate_image_decision(value, draft, require_concepts=True)
+        if packet.get('kind') != 'earnings':
+            return value
+        people = 'people, faces, hands or other body parts'
+        concepts = []
+        for concept in value['concepts']:
+            avoid = list(concept['must_avoid'])
+            if not any('people' in item.casefold() or 'person' in item.casefold()
+                       for item in avoid):
+                avoid.append(people)
+            concepts.append({**concept, 'must_avoid': avoid})
+        return validate_image_decision({**value, 'concepts': concepts}, draft,
+                                       require_concepts=True)
+
+    if model is None:
+        return final(_fallback_image_decision(
+            draft, draft.get('category', '') if isinstance(draft, dict) else ''))
     prior = _prior_feedback(feedback)
     supports_context = _classifier_supports_context(model)
     context = ({'image_classifier_feedback': prior} if prior and supports_context else None)
     raw = model.call('image_classifier', packet, draft, **({'context': context} if context else {}))
     try:
-        return validate_image_decision(raw, draft, require_concepts=True)
+        return final(raw)
     except (TypeError, ValueError) as first_error:
         rejected = getattr(first_error, 'decision', None)
         if not supports_context:
-            return _fallback_ranked_decision(draft, rejected)
+            return final(_fallback_ranked_decision(draft, rejected))
         retry_context = _classifier_feedback(first_error, prior)
         retry_raw = model.call('image_classifier', packet, draft, context=retry_context)
         try:
-            return validate_image_decision(retry_raw, draft, require_concepts=True)
+            return final(retry_raw)
         except (TypeError, ValueError) as second_error:
-            return _fallback_ranked_decision(
-                draft, getattr(second_error, 'decision', None) or rejected)
+            return final(_fallback_ranked_decision(
+                draft, getattr(second_error, 'decision', None) or rejected))
 
 
 def concept_decision(decision, concept):

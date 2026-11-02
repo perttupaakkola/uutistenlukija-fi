@@ -35,6 +35,18 @@ def authorize(config,source_commit=None):
                 type(explainers.get('max_per_day')) is not int or
                 not 1<=explainers['max_per_day']<=2 or explainers.get('max_per_tick')!=1):
             raise ValueError('Explainer admission exceeds reviewed policy')
+        earnings=config.get('earnings')
+        if earnings is not None and (not isinstance(earnings,dict) or
+                set(earnings)!={'enabled','max_per_day'} or
+                type(earnings.get('enabled')) is not bool or
+                earnings.get('max_per_day')!=6):
+            raise ValueError('Earnings admission exceeds reviewed policy')
+        weekly=config.get('weekly_economy')
+        if weekly is not None and (not isinstance(weekly,dict) or
+                set(weekly)!={'enabled','max_per_week'} or
+                type(weekly.get('enabled')) is not bool or
+                weekly.get('max_per_week')!=1):
+            raise ValueError('Weekly economy admission exceeds reviewed policy')
         if policy!=expected or not policy.get('review_ref') or config.get('source_recipes') or config['max_source_age_hours']!=48 or config['discovery']!={'family':'news-reviewed-v2','max_candidates':5}:
             raise ValueError('Combined source policy is not explicitly approved for this exact candidate')
         return
@@ -56,13 +68,21 @@ def proposed_policy(source_commit=None):
 def proposed_policy_v2(source_commit=None):
     from .official import policy
     from .explainers import policy_digest as explainer_policy_digest
+    from .earnings import policy_digest as earnings_policy_digest
+    from .weekly_economy import policy_digest as weekly_policy_digest
     return {**proposed_policy(),'schema_version':2,'source_family':'news-reviewed-v2',
             'source_families':['nasa-modis','helsinki','stat','kuntaliitto','ecb','ec-press',
                 'kuopio','vantaa','espoo','valtioneuvosto','oulu','poliisi-helsinki',
                 'poliisi-ita-uusimaa','poliisi-lansi-uusimaa','poliisi-sisa-suomi',
                 'poliisi-lounais-suomi','poliisi-oulu','sttinfo','epressi','fmi-warnings',
-                'fintraffic-traffic','explainer'],'text_only_policy':'official-text-v1',
+                'fintraffic-traffic','earnings','weekly-economy','explainer'],'text_only_policy':'official-text-v1',
             'text_only_policy_sha256':digest(policy()),'max_index_entries_per_official_source':50,
+            'earnings_policy':'earnings-text-v1',
+            'earnings_policy_sha256':earnings_policy_digest(),
+            'max_earnings_per_helsinki_day':6,
+            'weekly_economy_policy':'weekly-economy-text-v1',
+            'weekly_economy_policy_sha256':weekly_policy_digest(),
+            'max_weekly_economy_per_week':1,
             'explainer_policy':'explainer-sources-v2',
             'explainer_policy_sha256':explainer_policy_digest(),
             'max_explainers_per_helsinki_day':2,'max_explainers_per_tick':1,

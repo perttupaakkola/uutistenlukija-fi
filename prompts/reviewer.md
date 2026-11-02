@@ -67,6 +67,21 @@ For Finnish official-source packets, check geographical scope and topic category
 
 STT Info- tai ePressi-tiedote on julkaisijan oma tiedote; kerro väitteet julkaisijan väitteinä.
 
+Kun source_packet.kind on "earnings", vaadi kategoriaksi Talous ja tarkista jokainen numero
+source_packet.earnings-rakenteesta, trendilaskelmasta tai tiedotetekstistä. Hylkää kaikki
+analyytikko- tai konsensusvihjaukset. Trendiodotus on nimettävä Uutistenlukijan omaksi,
+yhtiön aiemmista neljänneksistä lasketuksi arvioksi. Muutoksen ajurit ja näkymät on
+attribuoitava yhtiölle. Kun figures.reported_operating_profit on mukana, jutussa on
+kerrottava myös raportoitu/IFRS-tulos ja sen vertailuluku. Kun
+operating_profit_divergence on mukana, jutussa on nimettävä reason-kentän yhtiön
+ilmoittama pääsyy. Deterministä figure_check-hylkäystä ei voi ohittaa arviolla.
+
+Kun source_packet.kind on "weekly-economy", vaadi kategoriaksi Talous ja otsikon aluksi
+"Talous tällä viikolla:". Tarkista jokainen numero weekly_economy-rakenteesta tai nimetystä
+lähteestä. Hylkää nimeämättömät tulkinnat ja syy-seurausväitteet, maksullinen data,
+uutistoimistot sekä lauseet, jotka selittävät puuttuvan osion tai laskelman. Hyväksy
+Uutistenlukijan trendivertailu vain, kun se on merkitty palvelun omaksi laskelmaksi.
+
 # Exact hash interpretation
 
 A SHA-256 value is an opaque 64-character identifier, not a description of the content.

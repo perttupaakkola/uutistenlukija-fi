@@ -68,6 +68,18 @@ def load_config(path):
                 not 1 <= explainers["max_per_day"] <= 2 or
                 explainers.get("max_per_tick") != 1):
             raise ValueError("Invalid explainer admission settings")
+    earnings = config.get("earnings")
+    if earnings is not None and (not isinstance(earnings, dict) or
+            set(earnings) != {"enabled", "max_per_day"} or
+            type(earnings.get("enabled")) is not bool or
+            earnings.get("max_per_day") != 6):
+        raise ValueError("Invalid earnings admission settings")
+    weekly = config.get("weekly_economy")
+    if weekly is not None and (not isinstance(weekly, dict) or
+            set(weekly) != {"enabled", "max_per_week"} or
+            type(weekly.get("enabled")) is not bool or
+            weekly.get("max_per_week") != 1):
+        raise ValueError("Invalid weekly economy admission settings")
     return config
 
 
@@ -354,6 +366,22 @@ def tick(config_path, model=None, now=None, _already_locked=False, target_job_id
                 # here, before the image work, or every retry repeats the same failure.
                 draft = repair_explainer_length(model, packet, draft)
                 draft = repair_title(model, packet, draft)
+                if packet.get('kind') in ('earnings', 'weekly-economy'):
+                    if packet.get('kind') == 'earnings':
+                        from .earnings import figure_check
+                    else:
+                        from .weekly_economy import figure_check
+                    try:
+                        figure_check(draft, packet)
+                    except ValueError as figure_error:
+                        # One bounded deterministic repair. The second comparison is final;
+                        # a model review can never waive a numerical mismatch.
+                        revised = model.call("reviser", packet, draft, context={
+                            'figure_check': str(figure_error), 'correction_round': 1})
+                        if not isinstance(revised, dict):
+                            raise ValueError('Figure-check revision must be an object')
+                        draft = repair_title(model, packet, revised)
+                        figure_check(draft, packet)
                 # Keep the completed writing work across image-provider outages.
                 store.save_draft(job["id"], draft, model.name)
                 # Understand the complete reviewed draft before searching for an image. The
@@ -427,6 +455,12 @@ def tick(config_path, model=None, now=None, _already_locked=False, target_job_id
                     if packet.get('kind') == 'explainer':
                         revised = {**revised, 'kind': 'explainer'}
                     revised = repair_title(model, packet, revised)
+                    if packet.get('kind') in ('earnings', 'weekly-economy'):
+                        if packet.get('kind') == 'earnings':
+                            from .earnings import figure_check
+                        else:
+                            from .weekly_economy import figure_check
+                        figure_check(revised, packet)
                     if config.get("illustrations", True) and not packet.get("fixture", False):
                         # Image reviews are bound to the exact article text, so a corrected
                         # article needs its image chosen and pixel-reviewed again.

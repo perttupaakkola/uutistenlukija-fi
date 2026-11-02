@@ -10,6 +10,9 @@ from .editorial import ROOT, digest, web_url
 from .intake import collect
 from .discovery import discover,collect_modis
 from .data_sources import FAMILIES as DATA_FAMILIES, collect as collect_data
+from .earnings import collect as collect_earnings, can_admit as can_admit_earnings
+from .weekly_economy import (collect as collect_weekly_economy,
+                             can_admit as can_admit_weekly_economy)
 from .publish import ensure_table, publish, guard, unresolved_site_refreshes, set_deadline, TICK_BUDGET_SECONDS
 from .store import database
 
@@ -208,6 +211,11 @@ def _live_tick(config_path):
             else:recipes+=discover(config)
             seen=set()
             for recipe in recipes:
+                if recipe.get('family') == 'earnings' and not can_admit_earnings(store):
+                    continue
+                if (recipe.get('family') == 'weekly-economy' and
+                        not can_admit_weekly_economy(store)):
+                    continue
                 identity=recipe.get('story_key','url:'+web_url(recipe['url']))
                 failure_key=(recipe.get('failure_url',web_url(recipe['url']))
                              if recipe.get('family') in DATA_FAMILIES else web_url(recipe['url']))
@@ -226,6 +234,8 @@ def _live_tick(config_path):
                         if store.db.execute("SELECT count(*) FROM publications WHERE status='deployed'").fetchone()[0]>=cap:continue
                     try:
                         collector=(collect_modis if recipe.get('family')=='nasa-modis' else
+                                   collect_earnings if recipe.get('family')=='earnings' else
+                                   collect_weekly_economy if recipe.get('family')=='weekly-economy' else
                                    collect_data if recipe.get('family') in DATA_FAMILIES else collect)
                         # Related-coverage search turns the single-source packet into a
                         # multi-source one so the writer synthesises instead of restating one

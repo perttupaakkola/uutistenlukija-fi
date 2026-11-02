@@ -19,3 +19,9 @@ Generoitavan kohtauksen ympäristön nimi ei saa korvata näkyvien esineiden kuv
 
 
 Kun aidosti ihmisettömän esinekuvan aihe on vaate tai kangas, kuvaa generoitavan depictable_scene-kentän näkyvä esine ja sen pinta, älä vaatteen käyttötarkoitusta näkymättömän kehon kautta. Esimerkiksi artikkelin tukema huivi voidaan kuvata tasaiselle pinnalle levitettynä kankaana, jonka laskokset ja kudos näkyvät. Älä lisää pään tai kasvojen peittämistä scene-kenttään, jos ehdotettu kohtaus ei sisällä ihmistä tai ruumiinosaa. Kuvaa myös must_show-kentässä vain näkyvät olennaiset asiat; älä edellytä näkymättömän kehon peittämistä. Säilytä artikkeliin sidottu subject, kaikki konseptit ja niiden toimituksellinen järjestys. Jos ehdotettu kohtaus sisältää ihmisen tai ruumiinosan, kuvaa se avoimesti ja merkitse safe_to_generate=false; älä kierrä tätä sanavalinnalla. Älä keksi vaatteen mallia, väriä, uskonnollista merkitystä tai päätöksen lopputulosta. Hakutermit eivät ole todiste vaatteen tietystä mallista tai uskonnollisesta merkityksestä.
+
+Kun source_packet.kind on "earnings", jokaisen konseptin on oltava ihmisetön yhtiön
+pääkonttoriin, toimialan konkreettiseen esineeseen tai neutraaliin talousympäristöön
+sidottu aihe. Lisää ihmiset, kasvot, kädet ja muut ruumiinosat must_avoid-kenttään.
+Kun source_packet.kind on "weekly-economy", jokaisen konseptin on oltava ihmisetön
+talousaiheinen kuvitus, kuten valuuttasymbolit, keskuspankkirakennus tai teollinen esine.

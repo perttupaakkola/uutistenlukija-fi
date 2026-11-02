@@ -64,10 +64,16 @@ def validate_packet(packet, now, max_age_hours=48):
         raise ValueError("Packet must be an object")
     text(packet.get("story_key"), "story_key", 200)
     sources = packet.get("sources")
-    if not isinstance(sources, list) or not 1 <= len(sources) <= 8:
-        raise ValueError("Provide 1–8 actual source excerpts")
+    source_limit = 12 if packet.get("kind") == "weekly-economy" else 8
+    if not isinstance(sources, list) or not 1 <= len(sources) <= source_limit:
+        raise ValueError(f"Provide 1–{source_limit} actual source excerpts")
     ids, urls = set(), set()
     explainer = packet.get("kind") == "explainer"
+    # A Friday roundup legitimately cites releases from Monday onward.  The
+    # packet's own source policy still caps this at eight days; the ordinary
+    # 48-hour controller setting must not erase the first half of the week.
+    if packet.get("kind") == "weekly-economy":
+        max_age_hours = max(max_age_hours, 192)
     fresh_hooks = 0
     for position, source in enumerate(sources):
         if not isinstance(source, dict):
@@ -81,7 +87,7 @@ def validate_packet(packet, now, max_age_hours=48):
         text(source.get("publisher"), "publisher", 160)
         text(source.get("title"), "source title", 240)
         excerpt = text(source.get("text"), "source excerpt")
-        if len(excerpt) < 200:
+        if len(excerpt) < 200 and packet.get("kind") != "weekly-economy":
             raise ValueError("Source excerpt too thin for review")
         age = (now - timestamp(source.get("published_at"))).total_seconds()
         # Background acts and reports may be older; the marked news hook may not be.

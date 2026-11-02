@@ -29,6 +29,7 @@ HOMEPAGE_TOPIC_LIMIT = 7
 HELSINKI = ZoneInfo("Europe/Helsinki")
 ABOUT_PATH = "/tietoja/"
 PRIVACY_PATH = "/tietosuoja/"
+EARNINGS_METHOD_PATH = "/talous/menetelma/"
 # These are the established populated desks. Empty routes remain available in the
 # grouped full directory and are promoted here only after an explicit content review.
 PRIMARY_CATEGORY_SLUGS = ("kotimaa", "ulkomaat", "talous", "kulttuuri", "tiede")
@@ -105,6 +106,18 @@ def _paragraph_text_html(article_route, paragraph, sources):
         return (esc(before)
                 + f'<a href="{esc(destination)}">{esc(label)}</a>'
                 + esc(after))
+    # Weekly economy packets cite Uutistenlukija's own results coverage.  Turn
+    # only an exact, cited internal source URL into a link; arbitrary model-
+    # supplied URLs remain escaped plain text.
+    internal = [source["url"] for source in sources
+                if source.get("id") in paragraph.get("source_ids", []) and
+                source.get("publisher") == "Uutistenlukija" and
+                str(source.get("url", "")).startswith("https://uutistenlukija.fi/uutiset/") and
+                str(source["url"]) in text]
+    if len(internal) == 1 and text.count(internal[0]) == 1:
+        before, after = text.split(internal[0])
+        return (esc(before) + f'<a href="{esc(internal[0])}">{esc(internal[0])}</a>' +
+                esc(after))
     return plain
 
 
@@ -1018,6 +1031,69 @@ def sources_page_body():
             '</div></div>')
 
 
+def earnings_method_page_body():
+    """Static, reader-facing explanation of the reproducible trend comparison."""
+    return ('<article class="story about-page">'
+            '<h1>Tulosuutisten trendiodotus</h1>'
+            '<p>Uutistenlukija vertaa yhtiön ilmoittamaa neljänneskohtaista liikevoittoa '
+            'omaan, aiemmista tuloksista laskettuun trendiodotukseen.</p>'
+            '<h2>Näin laskelma tehdään</h2>'
+            '<p>Lähtökohtana on saman neljänneksen toteutunut luku vuotta aiemmin. '
+            'Sitä skaalataan kolmen sen jälkeen raportoidun neljänneksen peräkkäisten '
+            'kasvuprosenttien keskiarvolla. Sama lasku tehdään liikevaihdolle ja yhtiön '
+            'ensisijaisesti raportoimalle liikevoitolle, kuten oikaistulle tai '
+            'vertailukelpoiselle liikevoitolle.</p>'
+            '<p>Tulos merkitään linjassa olevaksi, jos poikkeama odotuksesta on enintään '
+            'kaksi prosenttia kumpaankin suuntaan. Muuten tulos on odotuksen ylä- tai alapuolella.</p>'
+            '<h2>Ohjeistuksen etenemä</h2>'
+            '<p>Jos yhtiö antaa numeerisen koko vuoden ohjeistushaarukan, toteutunut '
+            'vuoden alusta kertynyt luku muunnetaan koko vuoden arvioksi yhtiön oman '
+            'kausivaihtelun avulla. Laskelma käyttää kahden edellisen täyden vuoden '
+            'viimeisten neljännesten keskimääräistä osuutta koko vuoden liikevoitosta. '
+            'Arviota ei näytetä ilman kahta täyttä vertailuvuotta eikä silloin, jos '
+            'vuosien osuudet eroavat yli kymmenen prosenttiyksikköä.</p>'
+            '<h2>Rajat</h2>'
+            '<p>Vertailua ei näytetä ilman neljää peräkkäistä aiempaa neljännestä. '
+            'Trendilaskelma ei huomioi kausivaihtelua, yrityskauppoja, rakennemuutoksia tai '
+            'markkinan ennusteita. Se voi siksi poiketa olennaisesti sijoittajien odotuksista.</p>'
+            '<p>Trendiodotus on Uutistenlukijan oma mekaaninen vertailuluku. Se ei ole '
+            'analyytikkoennuste eikä analyytikkokonsensus.</p></article>')
+
+
+def earnings_baseline_html(packet):
+    baseline = packet.get('earnings_baseline') if isinstance(packet, dict) else None
+    guidance = packet.get('guidance_check') if isinstance(packet, dict) else None
+    baseline_available = isinstance(baseline, dict) and baseline.get('available')
+    guidance_available = isinstance(guidance, dict) and guidance.get('available')
+    if not baseline_available and not guidance_available:
+        return ""
+    paragraphs = []
+    if baseline_available:
+        result = baseline['operating_profit']
+        expected = str(result['expected']).replace('.', ',')
+        deviation = str(result['deviation_percent']).replace('.', ',')
+        paragraphs.append('<p>Tulos oli Uutistenlukijan laskeman '
+                          f'trendiodotuksen {esc(baseline["comparison"])} '
+                          f'(odotus {esc(expected)} milj. euroa, poikkeama {esc(deviation)} %). '
+                          'Laskelma perustuu yhtiön aiempiin neljänneksiin.</p>')
+    if guidance_available:
+        pace = str(guidance['seasonally_estimated_full_year']).replace('.', ',')
+        low = str(guidance['low']).replace('.', ',')
+        high = str(guidance['high']).replace('.', ',')
+        share = str(guidance['q4_share']).replace('.', ',')
+        position = guidance.get('position', 'ohjeistushaarukassa')
+        years = ' ja '.join(str(year) for year in guidance.get('seasonal_years', []))
+        paragraphs.append(f'<p>Kausivaihtelun perusteella laskettu arvio '
+                          f'({esc(pace)} milj. euroa) on yhtiön {esc(position)}; '
+                          f'yhtiö itse odottaa {esc(low)}–{esc(high)} milj. euroa. '
+                          f'Laskelmassa vuosien {esc(years)} keskimääräinen Q4:n osuus '
+                          f'on {esc(share)} %.</p>')
+    return ('<aside class="article-context article-context--earnings" '
+            'aria-label="Uutistenlukijan tuloslaskelmat">'
+            '<h2>Uutistenlukijan tuloslaskelmat</h2>' + ''.join(paragraphs) +
+            f'<p><a href="{EARNINGS_METHOD_PATH}">Näin laskelmat tehdään</a>.</p></aside>')
+
+
 def about_page_body():
     """Truthful service, process and correction policy without an unproved contact."""
     return ('<article class="story about-page">'
@@ -1334,6 +1410,7 @@ def page(title, body, canonical_path=None, head_meta="", readability_present=Tru
                           '<div class="site-footer-col"><h3>Palvelu</h3><ul class="site-footer-links">'
                           f'<li><a href="{ABOUT_PATH}">Tietoa Uutistenlukijasta</a></li>'
                           f'<li><a href="{SOURCES_PATH}">Lähteet ja tuotantotapa</a></li>'
+                          f'<li><a href="{EARNINGS_METHOD_PATH}">Tulosuutisten menetelmä</a></li>'
                           '<li><a href="/ai-kuvat/">AI-kuvien käyttöehdot</a></li>'
                           f'<li><a href="{PRIVACY_PATH}">Tietosuoja</a></li>'
                           '<li><a href="/rss.xml">RSS-syöte</a></li></ul>'
@@ -1744,7 +1821,8 @@ def render_site(store, output_dir, state_dir=None, public=False, include_ids=Non
         source_label = "1 uutislähde" if source_count == 1 else f"{source_count} uutislähdettä"
         actions = article_actions_html(link, draft["category"], public, draft["title"])
         context = article_context_html(job, draft, articles, related_ids | duplicate_ids)
-        reading = f'{figure}{image_note}<div class="content">{paragraphs}</div>'
+        reading = (f'{figure}{image_note}<div class="content">{paragraphs}</div>'
+                   f'{earnings_baseline_html(packet)}')
         afterword = (f'<div class="article-afterword"><div class="article-evidence">'
                      f'<section class="sources"><h2>Lähteet</h2>'
                      f'<p class="source-count">{esc(source_label)}</p><ol>{source_list}</ol></section>'
@@ -1959,6 +2037,11 @@ def render_site(store, output_dir, state_dir=None, public=False, include_ids=Non
     about_title = "Tietoa Uutistenlukijasta"
     atomic_write(output_dir / "tietoja/index.html",
                  page(about_title, about_page_body(), ABOUT_PATH if public else None, snapshot=snapshot))
+    method_title = "Tulosuutisten trendiodotus"
+    atomic_write(output_dir / "talous/menetelma/index.html",
+                 page(method_title, earnings_method_page_body(),
+                      EARNINGS_METHOD_PATH if public else None, snapshot=snapshot,
+                      active_section="/categories/talous/"))
     if public:
         # This noindex page and its bounded four-field index are deliberately absent
         # from the sitemap and RSS. `listing_items` already excludes withdrawn and

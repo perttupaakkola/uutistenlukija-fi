@@ -747,6 +747,73 @@ def media(packet, draft, policy_gate=True):
         if stock is not None:
             result['stock_image'] = stock
         return result
+    if packet.get('kind') == 'earnings':
+        from .earnings import policy as earnings_policy, policy_digest as earnings_digest, figure_check
+        spec = earnings_policy()
+        basis = packet.get('publication_basis', {})
+        sources = packet.get('sources', [])
+        report = packet.get('earnings')
+        if (basis.get('policy') != spec['mode'] or
+                (policy_gate and basis.get('policy_sha256') != earnings_digest()) or
+                basis.get('provider') != 'earnings' or len(sources) != 1 or
+                not isinstance(report, dict)):
+            raise ValueError('Missing exact earnings source policy')
+        wire = spec['feeds'].get(basis.get('wire_provider'))
+        source = sources[0]
+        company = next((row for row in spec['companies']
+                        if row['name'] == report.get('company')), None)
+        if (wire is None or company is None or
+                not re.fullmatch(wire['article_pattern'], source.get('url', '')) or
+                source.get('publisher') != f"Lähde: {company['name']} (pörssitiedote)" or
+                packet.get('story_key') !=
+                f"earnings:{company['name']}:{report.get('period_end')}" or
+                not re.fullmatch(SHA, str(basis.get('source_sha256', ''))) or
+                basis.get('source_fields_sha256') != digest(source)):
+            raise ValueError('Earnings source provenance mismatch')
+        figure_check(draft, packet)
+        result = {'image_sha256': image_sha256, 'text_only': {
+            'policy': spec['mode'], 'policy_sha256': earnings_digest(),
+            'provenance_sha256': digest({'basis': basis, 'source': source,
+                                         'earnings': report,
+                                         'baseline': packet.get('earnings_baseline'),
+                                         'guidance': packet.get('guidance_check')})}}
+        if stock is not None:
+            result['stock_image'] = stock
+        return result
+    if packet.get('kind') == 'weekly-economy':
+        from .weekly_economy import (figure_check, policy as weekly_policy,
+                                     policy_digest as weekly_digest)
+        spec = weekly_policy()
+        basis = packet.get('publication_basis', {})
+        sources = packet.get('sources', [])
+        hashes = basis.get('source_sha256')
+        captures = basis.get('capture_sha256')
+        if (basis.get('policy') != spec['mode'] or
+                (policy_gate and basis.get('policy_sha256') != weekly_digest()) or
+                basis.get('provider') != 'weekly-economy' or
+                not isinstance(sources, list) or not 1 <= len(sources) <= 12 or
+                not isinstance(hashes, dict) or
+                set(hashes) != {source.get('id') for source in sources} or
+                not isinstance(captures, dict) or not captures or
+                any(not re.fullmatch(SHA, str(value)) for value in captures.values()) or
+                basis.get('source_fields_sha256') != digest(sources) or
+                not re.fullmatch(r'weekly-economy:\d{4}-\d{2}-\d{2}',
+                                 packet.get('story_key', ''))):
+            raise ValueError('Missing exact weekly economy source policy')
+        for source in sources:
+            if (not any(re.fullmatch(pattern, source.get('url', ''))
+                        for pattern in spec['source_patterns']) or
+                    hashes.get(source.get('id')) !=
+                    hashlib.sha256(source.get('text', '').encode()).hexdigest()):
+                raise ValueError('Weekly economy source provenance mismatch')
+        figure_check(draft, packet)
+        result = {'image_sha256': image_sha256, 'text_only': {
+            'policy': spec['mode'], 'policy_sha256': weekly_digest(),
+            'provenance_sha256': digest({'basis': basis, 'sources': sources,
+                                         'weekly_economy': packet.get('weekly_economy')})}}
+        if stock is not None:
+            result['stock_image'] = stock
+        return result
     from .official import policy, reuse
     spec = policy()
     basis = packet.get('publication_basis', {})
@@ -890,6 +957,57 @@ def verify_intake(packet, state, *, archive_image_only=False):
                 receipt.get('kind') != 'explainer' or
                 receipt.get('source_sha256') != intake_packet['publication_basis']['source_sha256']):
             raise ValueError('Explainer intake capture identity mismatch')
+        return
+    if packet.get('kind') == 'earnings':
+        from .earnings import extract_report, release_text, policy as earnings_policy
+        basis = packet['publication_basis']
+        directory = Path(state)/'intake'/digest(packet)
+        intake_packet = packet
+        if (not directory.is_dir() and isinstance(packet.get('image'), dict) and
+                (packet['image'].get('generated') is True or
+                 'stock_provenance' in packet['image'] or
+                 'stock_provenance_sha256' in packet['image'])):
+            directory, intake_packet = _original_intake(packet, Path(state)/'intake')
+        try:
+            raw = (directory/'source.html').read_bytes()
+            saved = json.loads((directory/'packet.json').read_text())
+            receipt = json.loads((directory/'receipt.json').read_text())
+        except (OSError, ValueError) as error:
+            raise ValueError('Earnings intake capture is missing') from error
+        source = packet['sources'][0]
+        parsed = extract_report(release_text(raw, basis['wire_provider']),
+                                packet['earnings']['company'], source['title'],
+                                source['published_at'])
+        if (hashlib.sha256(raw).hexdigest() != basis['source_sha256'] or
+                parsed != packet['earnings'] or saved != intake_packet or
+                receipt.get('packet_sha256') != digest(intake_packet) or
+                receipt.get('kind') != 'earnings' or
+                basis.get('policy') != earnings_policy()['mode']):
+            raise ValueError('Earnings intake capture identity mismatch')
+        return
+    if packet.get('kind') == 'weekly-economy':
+        from .weekly_economy import policy as weekly_policy
+        basis = packet['publication_basis']
+        directory = Path(state)/'intake'/digest(packet)
+        intake_packet = packet
+        if (not directory.is_dir() and isinstance(packet.get('image'), dict) and
+                (packet['image'].get('generated') is True or
+                 'stock_provenance' in packet['image'] or
+                 'stock_provenance_sha256' in packet['image'])):
+            directory, intake_packet = _original_intake(packet, Path(state)/'intake')
+        try:
+            captures = json.loads((directory/'captures.json').read_text())
+            saved = json.loads((directory/'packet.json').read_text())
+            receipt = json.loads((directory/'receipt.json').read_text())
+        except (OSError, ValueError) as error:
+            raise ValueError('Weekly economy intake capture is missing') from error
+        expected = {name: hashlib.sha256(value.encode()).hexdigest()
+                    for name, value in captures.items()}
+        if (expected != basis.get('capture_sha256') or saved != intake_packet or
+                receipt.get('packet_sha256') != digest(intake_packet) or
+                receipt.get('kind') != 'weekly-economy' or
+                basis.get('policy') != weekly_policy()['mode']):
+            raise ValueError('Weekly economy intake capture identity mismatch')
         return
     from .official import rights_text, source_fields, policy, ADDITIONAL_PROVIDERS
     basis = packet['publication_basis'];provider = basis['provider']
