@@ -753,6 +753,8 @@ TIMELY_GUIDES = (
      "Talvirenkaat 1.11. alkaen, urasyvyys ja nastarenkaat"),
     ("2026-11-08", "/oppaat/isanpaiva-2026/", "Isänpäivä 2026 Suomessa",
      "Sunnuntai 8.11. – liputus ja lahjaideat"),
+    ("2026-11-08", "/oppaat/isanpaiva-tervehdykset-2026/", "Isänpäivän tervehdykset 2026",
+     "Valmiit viestit ja korttitekstit isälle"),
     ("2026-12-03", "/oppaat/veronpalautus-2026/", "Veronpalautus 2026: maksupäivät",
      "3.11. ja 3.12."),
     ("2026-11-29", "/oppaat/adventti-2026/", "Adventti 2026", "1. adventti sunnuntaina 29.11."),
@@ -1184,6 +1186,7 @@ def listing_page_html(page_items, page_number, page_count, archive_items=None, s
             '<li><a href="/oppaat/pyhainpaiva-halloween-2026/">Pyhäinpäivä ja halloween 2026: la 31.10.</a></li>'
             '<li><a href="/oppaat/halloween-tapahtumat-2026/">Halloween 2026 tapahtumat: Helsinki, Vantaa, Tampere, Kuopio, Oulu</a></li>'
             '<li><a href="/oppaat/isanpaiva-2026/">Isänpäivä 2026: su 8.11., liputus ja lahjaideat</a></li>'
+            '<li><a href="/oppaat/isanpaiva-tervehdykset-2026/">Isänpäivän tervehdykset ja korttitekstit 2026</a></li>'
             '<li><a href="/oppaat/pikkujoulut-2026/">Pikkujoulut 2026: päivät, ideat ja verovapaus</a></li>'
             '<li><a href="/oppaat/adventti-2026/">Adventti 2026: 1. adventti su 29.11.</a></li>'
             '<li><a href="/oppaat/black-friday-2026/">Black Friday 2026: pe 27.11. ja kuluttajan oikeudet</a></li>'
