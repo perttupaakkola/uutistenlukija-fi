@@ -60,6 +60,9 @@ class RssOnboarding(unittest.TestCase):
         self.assertIn('aria-live="polite"',html)
         self.assertIn('tilaamalla RSS-syötteen',html)
         self.assertEqual(html.count('class="portal-newsletter"'),1)
+        self.assertEqual(html.count('href="/rss.xml">RSS-syöte</a>'),2)
+        menu=html.split('<div class="menu-directory"',1)[1].split('</nav>',1)[0]
+        self.assertNotIn('href="/rss.xml"',menu)
         self.assertNotIn('type="email"',html)
         self.assertNotIn('front-shortcuts',html)
         self.assertIn('portal-lead',html)

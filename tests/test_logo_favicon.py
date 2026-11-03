@@ -85,19 +85,21 @@ class LogoFaviconTests(unittest.TestCase):
                 self.assertIn('rel="apple-touch-icon" sizes="180x180"', head)
                 self.assertIn('href="/mvp-assets/images/apple-touch-icon.png"', head)
 
-    def test_header_and_footer_have_both_variants_and_one_nonempty_alt(self):
+    def test_header_has_both_variants_and_footer_uses_dark_surface_variant(self):
         html = site.page("Etusivu", "<p>x</p>", "/")
-        for class_name in ("portal-logo", "site-footer-brand"):
-            fragment = re.search(
-                rf'<a class="{class_name}"[^>]*>(.*?)</a>', html, re.S
-            ).group(1)
-            images = re.findall(r"<img\s+([^>]+)>", fragment)
-            self.assertEqual(len(images), 2)
-            self.assertIn("logo-light.png", images[0])
-            self.assertIn("logo-dark.png", images[1])
-            alts = re.findall(r'alt="([^"]*)"', fragment)
-            self.assertEqual([alt for alt in alts if alt], ["Uutistenlukija"])
-            self.assertIn('alt="" aria-hidden="true"', images[1])
+        header = re.search(r'<a class="portal-logo"[^>]*>(.*?)</a>', html, re.S).group(1)
+        header_images = re.findall(r"<img\s+([^>]+)>", header)
+        self.assertEqual(len(header_images), 2)
+        self.assertIn("logo-light.png", header_images[0])
+        self.assertIn("logo-dark.png", header_images[1])
+        self.assertEqual([alt for alt in re.findall(r'alt="([^"]*)"', header) if alt],
+                         ["Uutistenlukija"])
+
+        footer = re.search(r'<a class="site-footer-brand"[^>]*>(.*?)</a>', html, re.S).group(1)
+        footer_images = re.findall(r"<img\s+([^>]+)>", footer)
+        self.assertEqual(len(footer_images), 1)
+        self.assertIn("logo-dark.png", footer_images[0])
+        self.assertIn('alt="Uutistenlukija"', footer_images[0])
 
     def test_build_copies_root_favicon(self):
         with tempfile.TemporaryDirectory() as directory:

@@ -195,9 +195,9 @@ class HomepageImages(unittest.TestCase):
         self.assertNotIn('<b>',home)
         self.assertNotIn('<i>',home)
         self.assertNotIn('<script>alert(1)</script>',home)
-        # Header and footer use both approved theme assets; four reviewed story
-        # images remain the only editorial images on the listing.
-        self.assertEqual(home.count('<img'),8)
+        # The header keeps both theme assets while the always-dark footer uses its
+        # light-ink variant; four reviewed story images are the editorial images.
+        self.assertEqual(home.count('<img'),7)
         parsed=scan(home)
         self.assertEqual([attrs['alt'] for attrs in editorial_images(parsed)],[alt]*4)
         self.assertEqual([attrs['src'] for attrs in editorial_images(parsed)],[f'/mvp-assets/{sha}.jpg']*4)

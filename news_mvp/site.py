@@ -140,6 +140,15 @@ def time_html(value, css_class=""):
     return f'<time{class_attr} datetime="{esc(machine)}">{esc(visible)}</time>'
 
 
+def front_time_html(value, css_class=""):
+    """Compact, consistent timestamp for the space-constrained homepage cards."""
+    machine, visible = semantic_datetime(value)
+    date, clock = visible.split(" klo ", 1)
+    day, month, _year = date.split(".")
+    class_attr = f' class="{esc(css_class)}"' if css_class else ""
+    return f'<time{class_attr} datetime="{esc(machine)}">{day}.{month}. klo {clock}</time>'
+
+
 def story_title_key(draft):
     """Conservative normalized key used only to compare already reviewed records."""
     title = str((draft or {}).get("title") or "").casefold()
@@ -1155,7 +1164,7 @@ def homepage_topic_strip(items, exclude_ids=None):
             f'<div class="portal-topic-card portal-topic-card--{esc(slug)}">'
             f'<a class="portal-topic-card__label" href="/categories/{esc(slug)}/">{esc(display)}</a>'
             f'<h3><a href="{link}">{esc(draft["title"])}</a></h3>'
-            f'<span class="portal-topic-card__time">Julkaistu {time_html(job["created_at"])}</span>'
+            f'<span class="portal-topic-card__time">{front_time_html(job["created_at"])}</span>'
             f'</div>')
     if not cards:
         return ""
@@ -1199,7 +1208,7 @@ def listing_page_html(page_items, page_number, page_count, archive_items=None, s
         return (f'<article class="portal-teaser{modifier}">{thumb}<div>'
                 f'<div class="portal-teaser__meta">'
                 f'<span class="portal-kicker portal-teaser__category portal-teaser__category--{slug}">{category}</span>'
-                f'<span>Julkaistu {time_html(job["created_at"])}</span></div>'
+                f'<span>{front_time_html(job["created_at"])}</span></div>'
                 f'<h3><a href="{link}">{esc(draft["title"])}</a></h3></div>'
                 f'{fixture}</article>')
 
@@ -1212,7 +1221,7 @@ def listing_page_html(page_items, page_number, page_count, archive_items=None, s
         return (f'<article class="portal-row-card{modifier}">{thumb}<div>'
                 f'<div class="portal-row-card__meta">'
                 f'<span class="portal-kicker portal-row-card__category portal-row-card__category--{slug}">{category}</span>'
-                f'<span class="portal-row-card__time">Julkaistu {time_html(job["created_at"])}</span></div>'
+                f'<span class="portal-row-card__time">{front_time_html(job["created_at"])}</span></div>'
                 f'<h3><a href="{link}">{esc(draft["title"])}</a></h3></div>'
                 f'{fixture}</article>')
 
@@ -1229,7 +1238,7 @@ def listing_page_html(page_items, page_number, page_count, archive_items=None, s
                      f'<div class="portal-lead__body">'
                      f'<span class="portal-kicker portal-lead__category portal-lead__category--{slug}">{category}</span>'
                      f'<a class="portal-lead__time" href="{link}">Uusin juttu · julkaistu '
-                     f'{time_html(job["created_at"])}</a>'
+                     f'{front_time_html(job["created_at"])}</a>'
                      f'<h2 id="front-lead-title"><a href="{link}">{esc(draft["title"])}</a></h2>'
                      f'<p>{esc(draft["summary"])}</p>{fixture}'
                      f'<div class="portal-meta-row">'
@@ -1249,44 +1258,23 @@ def listing_page_html(page_items, page_number, page_count, archive_items=None, s
     rail = ('<aside class="portal-right-rail" aria-label="Sivupalkki">'
             '<section class="portal-newsletter"><h2>Seuraa uutisia</h2>'
             '<p>Saat uudet jutut suoraan uutissovellukseesi tilaamalla RSS-syötteen.</p>'
-            '<a href="/rss.xml">RSS-syöte</a>'
+            '<div class="portal-rss-actions"><a href="/rss.xml">RSS-syöte</a>'
             '<button type="button" class="portal-rss-copy" data-rss-copy-url="https://uutistenlukija.fi/rss.xml" '
             'aria-describedby="rss-copy-feedback" hidden>Kopioi syötteen osoite</button>'
+            '</div>'
             '<p id="rss-copy-feedback" class="portal-rss-feedback" role="status" aria-live="polite"></p>'
             '</section>'
             + '<section class="portal-most-read portal-guides-rail" aria-labelledby="front-guides-title">'
             '<h2 id="front-guides-title">Ajankohtaiset oppaat</h2><ol>'
-            '<li><a href="/oppaat/influenssarokotus-2026/">Influenssarokotus 2026: alkamispäivät alueittain</a></li>'
-            '<li><a href="/oppaat/koronarokotus-2026/">Koronarokotus 2026: kuka saa ja milloin</a></li>'
-            '<li><a href="/oppaat/kellojen-siirto-2026/">Kellojen siirto 25. lokakuuta 2026</a></li>'
-            '<li><a href="/oppaat/pyhainpaiva-halloween-2026/">Pyhäinpäivä ja halloween 2026: la 31.10.</a></li>'
-            '<li><a href="/oppaat/halloween-tapahtumat-2026/">Halloween 2026 tapahtumat: Helsinki, Vantaa, Tampere, Kuopio, Oulu</a></li>'
-            '<li><a href="/oppaat/isanpaiva-2026/">Isänpäivä 2026: su 8.11., liputus ja lahjaideat</a></li>'
-            '<li><a href="/oppaat/isanpaiva-tervehdykset-2026/">Isänpäivän tervehdykset ja korttitekstit 2026</a></li>'
-            '<li><a href="/oppaat/pikkujoulut-2026/">Pikkujoulut 2026: päivät, ideat ja verovapaus</a></li>'
-            '<li><a href="/oppaat/adventti-2026/">Adventti 2026: 1. adventti su 29.11.</a></li>'
-            '<li><a href="/oppaat/black-friday-2026/">Black Friday 2026: pe 27.11. ja kuluttajan oikeudet</a></li>'
-            '<li><a href="/oppaat/joulupaketit-2026/">Joulupaketit 2026: viimeiset lähetyspäivät</a></li>'
-            '<li><a href="/oppaat/kauneimmat-joululaulut-2026/">Kauneimmat Joululaulut 2026: tilaisuudet kaupungeittain</a></li>'
-            '<li><a href="/oppaat/laskettelukausi-2026-2027/">Laskettelukausi 2026–2027: milloin rinteet aukeavat?</a></li>'
-            '<li><a href="/oppaat/koulujen-loma-ajat-2026-2027/">Hiihtoloma 2027 kaupungeittain: vko 8, 9 vai 10?</a></li>'
-            '<li><a href="/oppaat/kelan-maksupaivat-2026-2027/">Kelan maksupäivät 2026–2027: lapsilisä, asumistuki, eläke</a></li>'
-            '<li><a href="/oppaat/elakkeet-2027/">Eläkkeet 2027: kansaneläke +2,3 %, työeläke n. 2,6 %</a></li>'
-            '<li><a href="/oppaat/veronpalautus-2026/">Veronpalautus 2026: maksupäivät 3.11. ja 3.12.</a></li>'
-            '<li><a href="/oppaat/eduskuntavaalit-2027/">Eduskuntavaalit 2027: vaalipäivä su 18.4.2027</a></li>'
-            '<li><a href="/oppaat/pyhapaivat-2027/">Kalenteri 2027: pyhäpäivät ja viikkonumerot</a></li>'
-            '<li><a href="/oppaat/itsenaisyyspaiva-2026/">Itsenäisyyspäivä 2026: sunnuntai 6.12., liputus ja paraati</a></li>'
-            '<li><a href="/oppaat/joulumarkkinat-2026/">Joulumarkkinat 2026: Tuomaan Markkinat ja joulutorit kaupungeittain</a></li>'
-            '<li><a href="/oppaat/joulu-2026/">Joulu 2026: jouluaatto to 24.12., välipäivät ja uusivuosi</a></li>'
-            '<li><a href="/oppaat/paasiainen-2027/">Pääsiäinen 2027: pitkäperjantai 26.3., 2. pääsiäispäivä 29.3.</a></li>'
-            '<li><a href="/oppaat/sahkokatko/">Sähkökatko: mitä tehdä ja milloin saat korvauksen</a></li>'
-            '<li><a href="/oppaat/kaamos-2026/">Kaamos 2026: milloin alkaa ja päivän pituus</a></li>'
-            '<li><a href="/oppaat/taysikuu-2026-2027/">Täysikuu 2026–2027 ja kuukalenteri</a></li>'
-            '<li><a href="/oppaat/talvirenkaat-2026/">Renkaanvaihto 2026: talvirenkaat 1.11. ja urasyvyys</a></li>'
-            '<li><a href="/syysloma-2026/">Syysloma 2026: maksutonta tekemistä kaupungeittain</a></li>'
-            '<li><a href="/oppaat/palovaroittimen-tarkistus/">Palovaroittimen tarkistus</a></li>'
-            '<li><a href="/oppaat/liputuspaivat-2026/">Liputuspäivät loppuvuonna 2026</a></li>'
-            '</ol></section>'
+            '<li><a href="/oppaat/influenssarokotus-2026/">Influenssarokotus 2026</a></li>'
+            '<li><a href="/oppaat/koronarokotus-2026/">Koronarokotus 2026</a></li>'
+            '<li><a href="/oppaat/kellojen-siirto-2026/">Kellojen siirto 2026</a></li>'
+            '<li><a href="/oppaat/halloween-tapahtumat-2026/">Halloween-tapahtumat 2026</a></li>'
+            '<li><a href="/oppaat/isanpaiva-2026/">Isänpäivä 2026</a></li>'
+            '<li><a href="/oppaat/pikkujoulut-2026/">Pikkujoulut 2026</a></li>'
+            '<li><a href="/oppaat/talvirenkaat-2026/">Talvirenkaat 2026</a></li>'
+            '<li><a href="/syysloma-2026/">Syysloma 2026</a></li>'
+            '</ol><a class="portal-guides-rail__all" href="/oppaat/">Kaikki oppaat</a></section>'
             + frontpage.markets(snapshot) + '</aside>')
     grid_label = ' aria-labelledby="front-lead-title"' if lead_html else ""
     grid_class = "portal-front-grid"
@@ -1383,6 +1371,12 @@ def page(title, body, canonical_path=None, head_meta="", readability_present=Tru
                 f'class="{class_name} theme-logo theme-logo--light" {shared}>'
                 f'<img src="/{assets}/images/logo-dark.png" alt="" aria-hidden="true" '
                 f'class="{class_name} theme-logo theme-logo--dark" {shared}>')
+
+    def footer_brand_image():
+        """The footer is always dark, independent of the reader's page theme."""
+        return (f'<img src="/{assets}/images/logo-dark.png" alt="Uutistenlukija" '
+                f'class="site-footer-brand__image" loading="lazy" decoding="async" '
+                f'width="977" height="191">')
     # The imported portal theme keeps its original sheet links and order; the assets
     # root then carries the small compatibility layer render_site writes, and the
     # reading-quality layer comes last so it can only add.
@@ -1425,7 +1419,7 @@ def page(title, body, canonical_path=None, head_meta="", readability_present=Tru
     # The public brand links home; the private preview must not advertise a published
     # destination it does not have, so there the brand is plain text.
     footer_brand = (f'<a class="site-footer-brand" href="/" aria-label="Uutistenlukija etusivulle">'
-                    f'{brand_images("site-footer-brand__image", "lazy")}</a>' if public else
+                    f'{footer_brand_image()}</a>' if public else
                     '<div class="site-footer-brand"><h2>Uutistenlukija</h2></div>')
     labels_by_slug = dict(CATEGORY_PAGES)
     nav_items = (("/", "Etusivu"),) + tuple(
@@ -1465,8 +1459,7 @@ def page(title, body, canonical_path=None, head_meta="", readability_present=Tru
                  f'<li><a href="{LATEST_PATH}">Tuoreimmat</a></li>'
                  f'<li><a href="{ABOUT_PATH}">Tietoa Uutistenlukijasta</a></li>'
                  f'<li><a href="{ABOUT_PATH}#korjaukset">Korjauskäytäntö</a></li>'
-                 f'<li><a href="{SOURCES_PATH}">Lähteet ja tuotantotapa</a></li>'
-                 + ('<li><a href="/rss.xml">RSS-syöte</a></li>' if public else '') + '</ul></div>'
+                 f'<li><a href="{SOURCES_PATH}">Lähteet ja tuotantotapa</a></li></ul></div>'
                  '<div class="menu-directory__group"><p class="menu-directory__title">Asetukset</p><ul>'
                  f'<li class="theme-menu-item">{menu_theme_button}</li>'
                  + menu_saved_button

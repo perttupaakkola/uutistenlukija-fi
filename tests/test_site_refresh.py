@@ -173,6 +173,37 @@ class SiteRefreshTests(unittest.TestCase):
         self.assertEqual(result['site_refresh_id'],'earlier')
         self.assertFalse(any(call[:3] == ('gh','workflow','run') for call in calls))
 
+    def test_stale_preparing_refresh_without_remote_commit_is_superseded(self):
+        # 3 Nov: refresh d433e567 stayed 'preparing' with no remote commit after its run
+        # was interrupted; a later guide commit made every refresh/tick fail with
+        # 'An earlier site refresh must be reconciled first'.
+        with database(self.case.state) as store:
+            ensure_table(store)
+            from news_mvp.publish import ensure_site_refresh_table
+            ensure_site_refresh_table(store)
+            store.db.execute("INSERT INTO site_refreshes VALUES('stale',?,?,NULL,NULL,'preparing',"
+                             "NULL,'2026-11-03T12:24:04+00:00','x')",('0'*40,self.job['id']))
+            store.db.commit()
+        calls=[]
+        result=self.dispatch(calls)
+        self.assertEqual(result['status'],'dispatched')
+        self.assertNotEqual(result['site_refresh_id'],'stale')
+        with database(self.case.state) as store:
+            stale=store.db.execute("SELECT status,error FROM site_refreshes WHERE id='stale'").fetchone()
+            self.assertEqual(tuple(stale),('failed','SupersededBeforeRemoteCommit'))
+        self.assertEqual(sum(call[:3] == ('gh','workflow','run') for call in calls),1)
+
+    def test_preparing_refresh_with_remote_commit_is_not_superseded(self):
+        with database(self.case.state) as store:
+            ensure_table(store)
+            from news_mvp.publish import ensure_site_refresh_table
+            ensure_site_refresh_table(store)
+            store.db.execute("INSERT INTO site_refreshes VALUES('started',?,?,?,NULL,'prepared',"
+                             "NULL,'2026-11-03T12:24:04+00:00','x')",('0'*40,'other-anchor','f'*40))
+            store.db.commit()
+        with self.assertRaisesRegex(ValueError,'earlier site refresh'):
+            self.dispatch([])
+
     def test_live_tick_reconciles_pending_refresh_itself(self):
         from pathlib import Path as P
         import news_mvp.live as live

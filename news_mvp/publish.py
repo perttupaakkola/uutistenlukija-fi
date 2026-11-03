@@ -813,6 +813,12 @@ def _read_live(url):
         return response.read()
 
 
+def _superseded_preparation(row, refresh_id):
+    """An interrupted refresh that never recorded a remote commit has no external effect."""
+    return (row['id'] != refresh_id and row['status'] == 'preparing' and
+            not row['remote_commit'] and not row['run_id'])
+
+
 def site_refresh(config, config_path):
     """Ship the committed renderer/assets with a deployed article as immutable anchor."""
     state = config['state_dir']
@@ -835,6 +841,18 @@ def site_refresh(config, config_path):
         source_commit = cmd('git','rev-parse','HEAD')
         refresh_id = digest({'release_kind':'site_refresh','source_commit':source_commit,
                              'anchor_job_id':job['id']})
+        if active and _superseded_preparation(dict(active[0]), refresh_id):
+            # 3 Nov: refresh d433e567 was left in 'preparing' (no remote commit) when its
+            # run was interrupted; the next guide commit moved HEAD and every refresh and
+            # publisher tick then failed with 'earlier site refresh must be reconciled
+            # first'. Nothing external happened for a row without a remote commit (the
+            # ref update and dispatch only follow a recorded commit), so a newer source
+            # supersedes it and the new refresh ships both changes.
+            with store.db:
+                store.db.execute(
+                    "UPDATE site_refreshes SET status='failed',error='SupersededBeforeRemoteCommit' WHERE id=?",
+                    (active[0]['id'],))
+            active = []
         if active:
             row = dict(active[0])
             # A newer commit after dispatch must not strand the earlier refresh: once it

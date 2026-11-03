@@ -20,6 +20,14 @@ FINNISH_INFLATION = {'class':'dataset','source':'Statistics Finland, consumer pr
 
 
 class FrontpageData(unittest.TestCase):
+    def test_homepage_meta_uses_compact_date_with_semantic_datetime(self):
+        rendered = site.front_time_html("2026-11-03T09:29:00Z")
+        self.assertEqual(
+            rendered,
+            '<time datetime="2026-11-03T09:29:00Z">3.11. klo 11.29</time>',
+        )
+        self.assertNotIn("2026</time>", rendered)
+
     def test_snapshots_cache_source_times_and_survive_provider_failure(self):
         with tempfile.TemporaryDirectory() as state:
             reader = Mock(side_effect=lambda url: MARKETS if url == f.ECB_URL else

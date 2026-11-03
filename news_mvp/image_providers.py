@@ -7,7 +7,11 @@ import base64
 import hashlib
 import io
 import json
+import os
 import re
+import signal
+import subprocess
+import tempfile
 import time
 import urllib.parse
 import urllib.request
@@ -104,6 +108,125 @@ def google_vision(raw, instruction, max_tokens=1200):
         return json.loads(''.join(part.get('text', '') for part in result['candidates'][0]['content']['parts']))
     except (KeyError, IndexError, TypeError, ValueError):
         raise GenerationError('Google vision returned no valid JSON review') from None
+
+
+CODEX_VISION_HOST = 'codex-oauth-vision'
+CODEX_VISION_MODEL = 'gpt-6.1-sol'
+CODEX_VISION_EFFORT = 'low'
+CODEX_VISION_TIMEOUT = 120
+# Per-process breaker: a publisher tick is one process, so this never outlives it.
+_CODEX_VISION_STATE = {'down_until': 0.0, 'failures': 0}
+
+
+def _codex_vision_model():
+    value = os.environ.get('UUTIS_CODEX_VISION_MODEL', CODEX_VISION_MODEL)
+    return value if re.fullmatch(r'[a-z0-9.-]{3,40}', value) else CODEX_VISION_MODEL
+
+
+def _extract_json_object(text):
+    text = (text or '').strip()
+    fenced = re.fullmatch(r'```(?:json)?\s*(.*?)\s*```', text, re.S)
+    if fenced:
+        text = fenced.group(1)
+    try:
+        value = json.loads(text)
+    except ValueError:
+        start, end = text.find('{'), text.rfind('}')
+        if start < 0 or end <= start:
+            raise ValueError('No JSON object') from None
+        value = json.loads(text[start:end + 1])
+    if not isinstance(value, dict):
+        raise ValueError('Vision reply is not a JSON object')
+    return value
+
+
+def codex_vision(raw, instruction, max_tokens=1200, timeout=CODEX_VISION_TIMEOUT):
+    """One isolated ChatGPT-OAuth Codex vision call returning the google_vision JSON contract.
+
+    Only a freshly re-encoded, metadata-free JPEG named ``image.jpg`` in a private temporary
+    directory is attached; no filename, URL or EXIF reaches the model. No API-key environment
+    is inherited, the sandbox is read-only and shell/apps/agents/web search are disabled.
+    """
+    from .imagery import _pixels, GenerationError
+    from .codex_images import _binary, _environment
+    raster = _pixels(raw); raster.thumbnail((1024, 1024))
+    buffer = io.BytesIO(); raster.save(buffer, format='JPEG', quality=90)
+    prompt = (instruction + '\n\nReply with exactly one JSON object and nothing else. '
+              'Do not use tools; inspect only the attached image.')
+    model = _codex_vision_model()
+    try:
+        binary = _binary()
+        with tempfile.TemporaryDirectory(prefix='uutis-codex-vision-') as workspace:
+            image = Path(workspace) / 'image.jpg'
+            image.write_bytes(buffer.getvalue())
+            last = Path(workspace) / 'reply.txt'
+            command = [binary, 'exec', '--ephemeral', '--ignore-user-config', '--ignore-rules',
+                '--skip-git-repo-check', '--json', '--sandbox', 'read-only',
+                '--disable', 'shell_tool', '--disable', 'apps', '--disable', 'multi_agent',
+                '-m', model, '-c', 'model_reasoning_effort="' + CODEX_VISION_EFFORT + '"',
+                '-c', 'approval_policy="never"', '-c', 'web_search="disabled"',
+                '-C', workspace, '-i', str(image), '-o', str(last), '-']
+            proc = subprocess.Popen(command, env=_environment(), stdin=subprocess.PIPE,
+                                    stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True,
+                                    start_new_session=True)
+            try:
+                stdout, stderr = proc.communicate(prompt, timeout=timeout)
+            except subprocess.TimeoutExpired:
+                os.killpg(proc.pid, signal.SIGKILL); proc.communicate()
+                raise GenerationError('Codex vision timed out') from None
+            limited = bool(re.search(r'usage limit|rate limit|too many requests|quota',
+                                     (stdout or '') + (stderr or ''), re.I))
+            if proc.returncode:
+                raise GenerationError('Codex vision limit reached' if limited
+                                      else 'Codex vision invocation failed')
+            events = [json.loads(line) for line in stdout.splitlines() if line.strip().startswith('{')]
+            if (sum(e.get('type') == 'turn.completed' for e in events) != 1 or
+                    any(e.get('type') in ('error', 'turn.failed') for e in events)):
+                raise GenerationError('Codex vision limit reached' if limited
+                                      else 'Codex vision turn incomplete')
+            if any((e.get('item') or {}).get('type') in
+                   ('command_execution', 'file_change', 'mcp_tool_call', 'web_search') for e in events):
+                raise GenerationError('Codex vision attempted tool use')
+            reply = last.read_text() if last.exists() else ''
+        try:
+            return _extract_json_object(reply)
+        except ValueError:
+            raise GenerationError('Codex vision returned no valid JSON review') from None
+    except GenerationError:
+        raise
+    except Exception as error:
+        raise GenerationError('Codex vision unavailable: ' + type(error).__name__) from None
+
+
+def vision(raw, instruction, max_tokens=1200, provider=None):
+    """Configured vision route. Returns ``(json_value, model_label)``.
+
+    ``codex-oauth`` uses the ChatGPT subscription; any Codex failure (including usage
+    limits) falls back to Google for that call and is recorded as a bounded request event.
+    """
+    from .imagery import GenerationError
+    provider = provider or os.environ.get('UUTIS_VISION_PROVIDER', 'openai')
+    if provider == 'codex-oauth':
+        state = _CODEX_VISION_STATE
+        if time.time() >= state['down_until']:
+            try:
+                value = codex_vision(raw, instruction, max_tokens)
+                state['failures'] = 0
+                request_event(CODEX_VISION_HOST, 200)
+                return value, 'codex-oauth:' + _codex_vision_model()
+            except GenerationError as error:
+                state['failures'] += 1
+                limited = 'limit' in str(error)
+                if limited or state['failures'] >= 3:
+                    state['down_until'] = time.time() + (1800 if limited else 600)
+                request_event(CODEX_VISION_HOST, None,
+                              'UsageLimitFallback' if limited else 'CodexFallback')
+        else:
+            request_event(CODEX_VISION_HOST, None, 'BreakerFallback')
+        return google_vision(raw, instruction, max_tokens), 'google:' + VISION_MODEL
+    if provider == 'google':
+        return google_vision(raw, instruction, max_tokens), 'google:' + VISION_MODEL
+    raise GenerationError('Configured vision provider has no shared route')
 
 
 def _request_path(subject, prompt, state_dir, model=KIE_MODEL):

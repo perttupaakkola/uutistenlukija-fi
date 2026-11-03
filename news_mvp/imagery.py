@@ -65,6 +65,16 @@ IMAGE_CONCEPT_KEYS = frozenset({
 ARTICLE_IMAGE_VERSION = 'article-first-v1'
 MIN_REAL_FIT = 8
 MAX_ARTICLE_CANDIDATES_PER_PROVIDER = 4
+# Whole-article budget for exact-pixel reviews across every concept and provider.
+# Measured on 129 articles (27 Oct-3 Nov 2026): ~12 reviews keep ~90% of real-photo
+# selections while cutting vision calls by roughly two thirds. Each concept also has
+# its own share so the first concept cannot consume the entire budget.
+MAX_ARTICLE_PIXEL_REVIEWS = 12
+MAX_CONCEPT_PIXEL_REVIEWS = 8
+SHARED_VISION_PROVIDERS = frozenset({'google', 'codex-oauth'})
+# Set only around stock adapters whose candidates always get an exact full-article review.
+from contextvars import ContextVar as _ContextVar
+_SKIP_PRE_REVIEW_DESCRIBE = _ContextVar('uutis_skip_pre_review_describe', default=False)
 _GENERATED_PERSON_SCENE = re.compile(
     r'\b(?:laps\w*|last(?:a(?:ni|si|mme|nne|an|nsa)?|en\w*)|children|kids?|people|persons?|faces?|kasvo\w*|'
     r'ihmi\w*|henkil(?![öo]auto(?:n|ja)?\b)\w*|aiku\w*|nuor\w*|katsoj\w*|opettaj\w*|'
@@ -644,10 +654,12 @@ def describe(raw):
     supposed to depict. Best effort - a missing credential returns None rather than failing the
     pipeline, because this is a secondary check.
     """
-    if os.environ.get('UUTIS_VISION_PROVIDER') == 'google':
-        from .image_providers import google_vision
+    if _SKIP_PRE_REVIEW_DESCRIBE.get():
+        return None
+    if os.environ.get('UUTIS_VISION_PROVIDER') in SHARED_VISION_PROVIDERS:
+        from .image_providers import vision
         try:
-            value = google_vision(raw, 'Describe only visible content of these pixels. Do not infer a filename, '
+            value, _ = vision(raw, 'Describe only visible content of these pixels. Do not infer a filename, '
                 'prompt or event. State if there is readable text or identifiable people. '
                 'Describe the visible state of principal objects when unambiguous; for books, '
                 'say whether they are closed or open. Do not guess obscured details. '
@@ -851,10 +863,9 @@ def review_pixels(raw, draft, generated=False, *, source_context=None, concept=N
     vision_provider = os.environ.get('UUTIS_VISION_PROVIDER', 'openai')
     review_model = 'gpt-4o-mini'
     try:
-        if vision_provider == 'google':
-            from .image_providers import google_vision, VISION_MODEL
-            value = google_vision(raw, instruction)
-            review_model = 'google:' + VISION_MODEL
+        if vision_provider in SHARED_VISION_PROVIDERS:
+            from .image_providers import vision
+            value, review_model = vision(raw, instruction)
         elif vision_provider == 'openai':
             request = urllib.request.Request('https://api.openai.com/v1/chat/completions', data=body,
                 headers={'Authorization': 'Bearer ' + _api_key(), 'Content-Type': 'application/json'})
@@ -898,9 +909,9 @@ def review_pixels(raw, draft, generated=False, *, source_context=None, concept=N
                 'posters and writing, including small classroom boards or signs. Read them '
                 'where possible. Return JSON only: {"readable_text_present": boolean, '
                 '"examples": [strings]}. Do not use the article or filename to infer text.')
-            if vision_provider == 'google':
-                from .image_providers import google_vision
-                text_audit = google_vision(raw, audit_instruction, 500)
+            if vision_provider in SHARED_VISION_PROVIDERS:
+                from .image_providers import vision
+                text_audit, _ = vision(raw, audit_instruction, 500)
             else:
                 audit_body = json.dumps({'model':'gpt-4o-mini','temperature':0,
                     'max_tokens':300,'response_format':{'type':'json_object'},
@@ -934,9 +945,9 @@ def review_pixels(raw, draft, generated=False, *, source_context=None, concept=N
                 '"visible_people_count": integer, "reason": string}. A front or three-quarter '
                 'face with visible features is recognizable even without knowing the name. '
                 'Do not infer consent or names.')
-            if vision_provider == 'google':
-                from .image_providers import google_vision
-                face_audit = google_vision(raw, face_instruction, 300)
+            if vision_provider in SHARED_VISION_PROVIDERS:
+                from .image_providers import vision
+                face_audit, _ = vision(raw, face_instruction, 300)
             else:
                 face_body = json.dumps({'model':'gpt-4o-mini','temperature':0,
                     'max_tokens':250,'response_format':{'type':'json_object'},
@@ -1311,9 +1322,14 @@ def _build_image_article_first(draft, state_dir, category, model, attempts, deci
     municipal = ((provider_packet or {}).get('publication_basis') or {}).get('provider') in {
         'helsinki', 'oulu', 'kuopio', 'vantaa', 'espoo'}
     searches, qualifying = [], []
+    # Exact-pixel vision reviews are the expensive step. Bound them per article and per
+    # concept; providers already rank candidates by cheap metadata relevance and exact
+    # duplicates are refused before any review.
+    budget = {'article': MAX_ARTICLE_PIXEL_REVIEWS}
     for concept in decision['concepts']:
         single = concept_decision(decision, concept)
         rank = concept['rank']
+        budget['concept'] = min(MAX_CONCEPT_PIXEL_REVIEWS, budget['article'])
         providers = []
         existing = ((packet or {}).get('final_image') if amendment_evidence is not None
                     else (packet or {}).get('image'))
@@ -1375,6 +1391,10 @@ def _build_image_article_first(draft, state_dir, category, model, attempts, deci
                         candidate_event(stock, image_sha, 'amendment_selection_rejected')
                         return None
                     context = _record_pixel_context(stock)
+                    if budget['concept'] <= 0:
+                        candidate_event(stock, image_sha, 'review_budget_exhausted')
+                        raise RuntimeError('Article pixel-review budget reached')
+                    budget['concept'] -= 1; budget['article'] -= 1
                     review = review_pixels(raw, draft, generated=False, concept=single,
                         **({'source_context':context} if context else {}))
                     score = review.get('fit_score')
@@ -1414,6 +1434,12 @@ def _build_image_article_first(draft, state_dir, category, model, attempts, deci
                     candidate_event(stock, image_sha, 'review_or_rights_unavailable')
                     return None
 
+            if budget['concept'] <= 0:
+                continue  # Audited as searched; no further network or vision calls.
+            # The exact full-article review always follows for these adapters, so a
+            # separate pre-review description call would only duplicate vision spend.
+            skip_token = (_SKIP_PRE_REVIEW_DESCRIBE.set(True)
+                          if provider in ('pexels', 'unsplash', 'wikimedia', 'google') else None)
             try:
                 found = fetch_candidate(selected)
                 if found and (found.get('pixel_review') or {}).get('concept_sha256') != _digest(single):
@@ -1421,6 +1447,9 @@ def _build_image_article_first(draft, state_dir, category, model, attempts, deci
             except Exception:
                 attempt['outcome'] = 'unavailable'
                 found = None
+            finally:
+                if skip_token is not None:
+                    _SKIP_PRE_REVIEW_DESCRIBE.reset(skip_token)
             if found:
                 attempt['outcome'] = 'accepted'
                 qualifying.append((found['pixel_review']['fit_score'], rank, found))
