@@ -68,20 +68,18 @@ class ReaderDepthContracts(unittest.TestCase):
         self.assertEqual(text.count('</ul><p class="article-context__more"><a '), 2)
         self.assertLess(text.index('Samasta osastosta'), text.index('Uusimmat'))
 
-    def test_public_shell_and_article_expose_local_saved_story_controls(self):
+    def test_public_shell_and_article_exclude_removed_saved_story_controls(self):
         shell = site.page("Etusivu", "<p>Uutiset</p>", "/")
         private_shell = site.page("Esikatselu", "<p>Uutiset</p>")
         actions = site.article_actions_html(
             "/uutiset/esimerkki/", "Tiede", True, "Esimerkkiuutinen",
         )
-        self.assertEqual(shell.count("data-saved-toggle"), 2)
-        self.assertIn('id="saved-stories-dialog"', shell)
-        self.assertIn("vain tämän selaimen omassa muistissa", shell)
-        self.assertNotIn("data-saved-toggle", private_shell)
-        self.assertNotIn("saved-stories-dialog", private_shell)
-        self.assertIn('data-save-title="Esimerkkiuutinen"', actions)
-        self.assertIn('data-save-category="Tiede"', actions)
-        self.assertIn('aria-pressed="false"', actions)
+        for text in (shell, private_shell, actions):
+            self.assertNotIn("data-saved", text)
+            self.assertNotIn("saved-stories", text)
+            self.assertNotIn("Tallennetut", text)
+            self.assertNotIn("Tallenna", text)
+        self.assertIn('class="article-share"', actions)
         self.assertNotIn("Osaston uutiset:", actions)
         self.assertNotIn("Lue seuraavaksi tuoreimmat uutiset", actions)
 
@@ -96,11 +94,11 @@ class ReaderDepthContracts(unittest.TestCase):
         self.assertLess(text.index('<h2>Lähteet</h2>'), text.index('article-context__title'))
         self.assertEqual(text.count('article-context__title'), 1)
 
-    def test_saved_story_script_is_local_only_and_bounded(self):
+    def test_saved_story_script_is_removed(self):
         source = (site.ROOT / "static/portal.js").read_text()
-        self.assertIn('uutistenlukija-saved-stories', source)
-        self.assertIn("window.localStorage.setItem", source)
-        self.assertIn("slice(0, 40)", source)
+        self.assertNotIn('uutistenlukija-saved-stories', source)
+        self.assertNotIn('data-save-url', source)
+        self.assertNotIn('data-saved-toggle', source)
         self.assertNotIn("fetch(", source)
         self.assertNotIn("XMLHttpRequest", source)
 

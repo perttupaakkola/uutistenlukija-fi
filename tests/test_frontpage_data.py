@@ -60,7 +60,7 @@ class FrontpageData(unittest.TestCase):
         self.assertFalse(f.current_inflation(inflation, NOW + timedelta(days=51)))
         self.assertFalse(f.current_inflation(inflation, NOW - timedelta(days=1)))
         text = (lambda data, now: f.weather(data, now)+f.markets(data, now)+f.data_script(data))({'helsinki': item, 'markets': market}, NOW + timedelta(days=8))
-        self.assertIn('Sääennuste ei ole nyt saatavilla', text)
+        self.assertNotIn('class="portal-weather"', text)
         self.assertIn('Valuuttakurssit eivät ole nyt saatavilla', text)
         self.assertNotIn('<dd>', text)
 
@@ -76,14 +76,16 @@ class FrontpageData(unittest.TestCase):
         with self.assertRaises(ValueError): f.parse_inflation(json.dumps(bad))
         text = (lambda data, now: f.weather(data, now)+f.markets(data, now)+f.data_script(data))({'unexpected': '</script><script>alert(1)</script>'}, NOW)
         self.assertNotIn('<script>alert', text)
-        self.assertIn('MET Norway', text)
+        self.assertNotIn('class="portal-weather"', text)
         self.assertIn('Valuuttakurssit eivät ole nyt saatavilla', text)
         self.assertNotIn('weather-city', text)
 
     def test_readable_real_values_with_source_date(self):
         text = (lambda data, now: f.weather(data, now)+f.markets(data, now)+f.data_script(data))({'helsinki': f.parse_weather(json.dumps(WEATHER)), 'markets': f.parse_markets(MARKETS), 'finnish_inflation':f.parse_inflation(json.dumps(FINNISH_INFLATION))}, NOW)
         self.assertIn('°C', text)
-        self.assertIn('Helsinki · ennuste', text)
+        self.assertIn('<small id="weather-city">Helsinki</small>', text)
+        self.assertNotIn('ennuste</small>', text)
+        self.assertIn('title="Sääennuste: Ilmatieteen laitos, CC BY 4.0"', text)
         self.assertIn('24.09.2026', text)
         self.assertIn('1,1300', text)
         self.assertIn('11,2600', text)

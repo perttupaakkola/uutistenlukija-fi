@@ -117,153 +117,6 @@
   }
 })();
 
-/* Account-free reading list. Stories are kept only in this browser and every
-   control remains useful when storage is unavailable. */
-(function () {
-  "use strict";
-  if (!document.querySelectorAll) return;
-
-  var STORAGE_KEY = "uutistenlukija-saved-stories";
-  var saveButtons = Array.prototype.slice.call(document.querySelectorAll("[data-save-url]"));
-  var openButtons = Array.prototype.slice.call(document.querySelectorAll("[data-saved-toggle]"));
-  var countNodes = Array.prototype.slice.call(document.querySelectorAll("[data-saved-count]"));
-  var dialog = document.getElementById("saved-stories-dialog");
-  var list = document.getElementById("saved-stories-list");
-  var empty = document.getElementById("saved-stories-empty");
-  var entries = [];
-
-  function readEntries() {
-    try {
-      var value = JSON.parse(window.localStorage.getItem(STORAGE_KEY) || "[]");
-      if (!Array.isArray(value)) return [];
-      return value.filter(function (item) {
-        if (!item || typeof item.url !== "string" || typeof item.title !== "string") return false;
-        try {
-          var url = new URL(item.url);
-          return url.origin === "https://uutistenlukija.fi" && url.pathname.indexOf("/uutiset/") === 0;
-        } catch (error) {
-          return false;
-        }
-      }).map(function (item) {
-        return { url: item.url, title: item.title.slice(0, 300), category: String(item.category || "Uutinen").slice(0, 80) };
-      }).slice(0, 40);
-    } catch (error) {
-      return [];
-    }
-  }
-
-  function writeEntries() {
-    try {
-      window.localStorage.setItem(STORAGE_KEY, JSON.stringify(entries));
-      return true;
-    } catch (error) {
-      return false;
-    }
-  }
-
-  function saved(url) {
-    return entries.some(function (entry) { return entry.url === url; });
-  }
-
-  function sync() {
-    countNodes.forEach(function (node) {
-      node.textContent = String(entries.length);
-      node.setAttribute("aria-label", entries.length === 1 ? "1 tallennettu juttu" : entries.length + " tallennettua juttua");
-    });
-    saveButtons.forEach(function (button) {
-      var active = saved(button.getAttribute("data-save-url"));
-      button.setAttribute("aria-pressed", active ? "true" : "false");
-      var label = button.querySelector("span");
-      if (label) label.textContent = active ? "Tallennettu" : "Tallenna";
-    });
-  }
-
-  function remove(url) {
-    entries = entries.filter(function (entry) { return entry.url !== url; });
-    writeEntries();
-    sync();
-    renderList();
-  }
-
-  function renderList() {
-    if (!list || !empty) return;
-    while (list.firstChild) list.removeChild(list.firstChild);
-    empty.hidden = entries.length > 0;
-    entries.forEach(function (entry) {
-      var item = document.createElement("li");
-      var link = document.createElement("a");
-      var title = document.createElement("span");
-      var meta = document.createElement("span");
-      var removeButton = document.createElement("button");
-      link.href = entry.url;
-      title.className = "saved-stories__title";
-      title.textContent = entry.title;
-      meta.className = "saved-stories__meta";
-      meta.textContent = entry.category || "Uutinen";
-      link.appendChild(title);
-      link.appendChild(meta);
-      removeButton.type = "button";
-      removeButton.textContent = "Poista";
-      removeButton.setAttribute("aria-label", "Poista tallennettu juttu: " + entry.title);
-      removeButton.addEventListener("click", function () { remove(entry.url); });
-      item.appendChild(link);
-      item.appendChild(removeButton);
-      list.appendChild(item);
-    });
-  }
-
-  entries = readEntries();
-  sync();
-
-  saveButtons.forEach(function (button) {
-    button.addEventListener("click", function () {
-      var url = button.getAttribute("data-save-url");
-      var feedback = document.getElementById(button.getAttribute("aria-describedby"));
-      if (saved(url)) {
-        entries = entries.filter(function (entry) { return entry.url !== url; });
-      } else {
-        entries.unshift({
-          url: url,
-          title: button.getAttribute("data-save-title") || document.title,
-          category: button.getAttribute("data-save-category") || "Uutinen"
-        });
-        entries = entries.slice(0, 40);
-      }
-      if (!writeEntries()) {
-        entries = readEntries();
-        if (feedback) feedback.textContent = "Tallennus ei ole käytettävissä tässä selaimessa.";
-        sync();
-        return;
-      }
-      sync();
-      if (feedback) feedback.textContent = saved(url) ? "Juttu tallennettiin tälle laitteelle." : "Tallennus poistettiin.";
-    });
-  });
-
-  openButtons.forEach(function (button) {
-    button.addEventListener("click", function () {
-      if (!dialog) return;
-      renderList();
-      if (typeof dialog.showModal === "function") dialog.showModal();
-      else dialog.setAttribute("open", "");
-    });
-  });
-
-  if (dialog) {
-    Array.prototype.forEach.call(dialog.querySelectorAll("[data-saved-close]"), function (button) {
-      button.addEventListener("click", function () {
-        if (typeof dialog.close === "function") dialog.close();
-        else dialog.removeAttribute("open");
-      });
-    });
-    dialog.addEventListener("click", function (event) {
-      if (event.target !== dialog) return;
-      if (typeof dialog.close === "function") dialog.close();
-      else dialog.removeAttribute("open");
-    });
-  }
-})();
-
 /* Page-local reader actions and resilient image failure states. */
 (function () {
   "use strict";
@@ -352,29 +205,21 @@
   if (!source) return;
   var data;
   try { data = JSON.parse(source.textContent); } catch (_) { return; }
-  function fiDate(raw) {
-    return new Intl.DateTimeFormat('fi-FI', { timeZone: 'Europe/Helsinki', day: 'numeric', month: 'numeric', hour: '2-digit', minute: '2-digit' }).format(new Date(raw));
-  }
   function update() {
     var now = Date.now(), weather = data.helsinki || {};
     var age = now - Date.parse(weather.updated_at);
     var hour = (weather.hours || []).reduce(function (best, item) {
       return !best || Math.abs(Date.parse(item.time) - now) < Math.abs(Date.parse(best.time) - now) ? item : best;
     }, null);
-    var value = document.getElementById('weather-value'), time = document.getElementById('weather-time');
-    if (value && time) {
-      var detail = 'Sääennuste ei ole nyt saatavilla.';
+    var value = document.getElementById('weather-value');
+    if (value) {
+      var surface = value.closest('.portal-weather');
       if (hour && age >= 0 && age <= 18 * 3600000 && Math.abs(Date.parse(hour.time) - now) <= 5400000) {
         value.textContent = Math.round(hour.temperature) + ' °C';
-        time.textContent = 'Helsinki · ennuste';
-        detail = 'Ennuste ' + fiDate(hour.time) + ' · päivitetty ' + fiDate(weather.updated_at) + ' · MET Norway, CC BY 4.0';
+        surface.hidden = false;
       } else {
-        value.textContent = '-- °C';
-        time.textContent = 'Helsinki · sää ei saatavilla';
+        surface.hidden = true;
       }
-      var surface = value.closest('.portal-weather');
-      surface.title = detail;
-      surface.setAttribute('aria-label', value.textContent + ', ' + time.textContent + '. ' + detail);
     }
     var market = data.markets || {}, values = document.getElementById('market-values'), label = document.getElementById('market-time');
     var marketAge = Math.floor(now / 86400000) - Math.floor(Date.parse(market.date) / 86400000);

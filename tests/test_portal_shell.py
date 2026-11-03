@@ -307,20 +307,17 @@ class PortalShell(unittest.TestCase):
         self.assertIn('data-first-party-action="/haku/"', home)
         self.assertIn("Hae julkaistuista uutisista", home)
         self.assertNotIn("Ilman JavaScriptiä haku avautuu Googlessa", home)
-        # Weather is stated as unavailable instead of showing an invented reading.
-        self.assertIn("Sääennuste ei ole nyt saatavilla", home)
+        # Missing weather is omitted instead of showing an invented reading.
+        self.assertNotIn("portal-weather", home)
         self.assertNotIn("data-weather-widget", home)
-        self.assertIn('<div class="portal-weather"', home)
-        self.assertIn('class="portal-weather__source" href="https://www.met.no/', home)
         self.assertNotIn('id="saa"', home)
-        self.assertIn('Sääennuste ei ole nyt saatavilla.', home)
         self.assertIn('class="portal-market"', home)
         self.assertNotIn('front-shortcuts', home)
         self.assertIn('Valuuttakurssit eivät ole nyt saatavilla.', home)
         # Theme toggle and mobile menu button.
         self.assertIn('id="theme-toggle"', home)
         self.assertIn('id="theme-toggle-menu"', home)
-        self.assertIn('class="portal-search site-search site-search--collapsed"', home)
+        self.assertIn('class="portal-search portal-search--wide site-search site-search--collapsed"', home)
         self.assertIn('aria-controls="header-search-form"', home)
         self.assertNotIn('header-search-note', home)
         self.assertIn('id="hamburger"', home)

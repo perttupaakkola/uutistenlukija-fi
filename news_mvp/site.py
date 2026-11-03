@@ -964,12 +964,6 @@ def article_actions_html(link, category, public, title=""):
     canonical = SITE_URL.rstrip("/") + link
     return (
         '<nav class="article-actions" aria-label="Jutun toiminnot">'
-        f'<button class="article-save" type="button" data-save-url="{esc(canonical)}" '
-        f'data-save-title="{esc(title)}" data-save-category="{esc(category_display(category))}" '
-        'aria-pressed="false" aria-describedby="save-feedback">'
-        '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" '
-        'stroke-width="1.9" aria-hidden="true"><path d="M6 4h12v17l-6-4-6 4z"/></svg>'
-        '<span>Tallenna</span></button>'
         f'<button class="article-share" type="button" data-share-url="{esc(canonical)}" '
         'aria-describedby="share-feedback">'
         '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" '
@@ -977,7 +971,6 @@ def article_actions_html(link, category, public, title=""):
         '<circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="19" r="2.5"/>'
         '<path d="m8.2 10.8 7.6-4.5M8.2 13.2l7.6 4.5"/></svg>'
         '<span>Jaa tai kopioi linkki</span></button>'
-        '<span id="save-feedback" class="article-action-feedback" aria-live="polite"></span>'
         '<span id="share-feedback" class="article-action-feedback" aria-live="polite"></span>'
         '</nav>')
 
@@ -1473,6 +1466,7 @@ def page(title, body, canonical_path=None, head_meta="", readability_present=Tru
                           '<li><a href="/ai-kuvat/">AI-kuvien käyttöehdot</a></li>'
                           f'<li><a href="{PRIVACY_PATH}">Tietosuoja</a></li>'
                           '<li><a href="/rss.xml">RSS-syöte</a></li></ul>'
+                          '<p class="site-footer-weather-source">Säätiedot: Ilmatieteen laitos (CC BY 4.0)</p>'
                           '<button class="site-footer-consent-button" id="consent-settings" '
                           'data-consent-settings type="button">Evästeasetukset</button></div>')
     else:
@@ -1505,16 +1499,6 @@ def page(title, body, canonical_path=None, head_meta="", readability_present=Tru
                    '<svg class="theme-icon theme-icon--light" xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>')
     theme_button = (f'<button id="theme-toggle" data-theme-toggle="header" class="portal-icon-button theme-toggle-btn" type="button" aria-label="Vaihda teema" aria-pressed="false">{theme_icons}</button>')
     menu_theme_button = (f'<button id="theme-toggle-menu" data-theme-toggle="menu" class="theme-toggle-btn" type="button" aria-label="Vaihda teema" aria-pressed="false">{theme_icons}<span>Vaihda teema</span></button>')
-    saved_button = ('<button class="portal-action portal-action--desktop portal-saved-toggle" '
-                    'data-saved-toggle type="button" aria-haspopup="dialog" '
-                    'aria-controls="saved-stories-dialog">Tallennetut '
-                    '<span class="saved-count" data-saved-count aria-label="0 tallennettua juttua">0</span></button>'
-                    if public else '')
-    menu_saved_button = ('<li class="saved-menu-item"><button class="menu-saved-toggle" '
-                         'data-saved-toggle type="button" aria-haspopup="dialog" '
-                         'aria-controls="saved-stories-dialog">Tallennetut '
-                         '<span class="saved-count" data-saved-count aria-label="0 tallennettua juttua">0</span>'
-                         '</button></li>' if public else '')
     full_menu = ('<div class="menu-directory" aria-label="Koko valikko">'
                  '<div class="menu-directory__head"><strong>Valikko</strong>'
                  '<button id="menu-close" class="menu-close" type="button">Sulje valikko</button></div>'
@@ -1527,18 +1511,8 @@ def page(title, body, canonical_path=None, head_meta="", readability_present=Tru
                  f'<li><a href="{SOURCES_PATH}">Lähteet ja tuotantotapa</a></li></ul></div>'
                  '<div class="menu-directory__group"><p class="menu-directory__title">Asetukset</p><ul>'
                  f'<li class="theme-menu-item">{menu_theme_button}</li>'
-                 + menu_saved_button
                  + ('<li><button class="menu-consent-settings" data-consent-settings type="button">Evästeasetukset</button></li>' if public else '')
                  + '</ul></div></div>')
-    saved_dialog = ('<dialog id="saved-stories-dialog" class="saved-stories" aria-labelledby="saved-stories-title">'
-                    '<div class="saved-stories__inner"><div class="saved-stories__head">'
-                    '<div><span class="saved-stories__eyebrow">Tällä laitteella</span>'
-                    '<h2 id="saved-stories-title">Tallennetut jutut</h2></div>'
-                    '<button class="saved-stories__close" data-saved-close type="button" aria-label="Sulje tallennetut jutut">Sulje</button>'
-                    '</div><p class="saved-stories__note">Tallennukset säilyvät vain tämän selaimen omassa muistissa.</p>'
-                    '<p id="saved-stories-empty" class="saved-stories__empty">Et ole vielä tallentanut juttuja.</p>'
-                    '<ul id="saved-stories-list" class="saved-stories__list"></ul></div></dialog>'
-                    if public else '')
     if public:
         search_form_extra = ' data-first-party-action="/haku/"'
         search_label = "Hae julkaistuista uutisista"
@@ -1562,7 +1536,7 @@ def page(title, body, canonical_path=None, head_meta="", readability_present=Tru
 <header class="site-header" role="banner">
 <div class="portal-masthead">
 <a class="portal-logo" href="/" aria-label="Uutistenlukija etusivulle">{brand_images("portal-logo__image", "eager")}</a>
-<div id="header-search" class="portal-search site-search site-search--collapsed">
+<div id="header-search" class="portal-search portal-search--wide site-search site-search--collapsed">
 <button id="header-search-toggle" class="portal-icon-button search-toggle-btn" type="button" aria-label="Avaa haku" aria-expanded="false" aria-controls="header-search-form"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4.2-4.2"/></svg><span class="visually-hidden">Haku</span></button>
 <form id="header-search-form" class="site-search__form" action="{esc(SEARCH_ACTION)}" method="get" role="search" aria-label="Etsi uutisia"{search_form_extra}>
 <label class="site-search__label" for="header-search-input">{esc(search_label)}</label>
@@ -1573,8 +1547,6 @@ def page(title, body, canonical_path=None, head_meta="", readability_present=Tru
 </div>
 <div class="portal-actions" aria-label="Pikatoiminnot">
 {frontpage.weather(snapshot)}
-<a class="portal-action portal-action--desktop" href="{SOURCES_PATH}">Lähteet</a>
-{saved_button}
 {theme_button}
 <button id="hamburger" class="portal-icon-button hamburger-btn" type="button" aria-label="Avaa valikko" aria-expanded="false" aria-controls="main-nav-menu"><svg class="portal-menu-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><span class="portal-mobile-label">Valikko</span></button>
 </div>
@@ -1592,7 +1564,6 @@ def page(title, body, canonical_path=None, head_meta="", readability_present=Tru
 <div class="site-footer-copyright"><div class="container"><p>{footer_tagline}</p></div></div>
 </footer>
 {consent}
-{saved_dialog}
 {frontpage.data_script(snapshot)}
 <script src="{asset_url(assets, 'portal.js')}" defer></script>
 {search_script}

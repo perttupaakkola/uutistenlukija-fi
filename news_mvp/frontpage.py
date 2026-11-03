@@ -190,21 +190,19 @@ def current_inflation(item, now):
 
 
 def weather(snapshot=None, now=None):
-    """Populate the original compact Helsinki header surface; no extra module."""
+    """Render the compact Helsinki header surface only for a current forecast."""
     snapshot = snapshot or {}
     now = now or datetime.now(timezone.utc)
     item = snapshot.get('helsinki') or {}
     hour = current_weather(item, now)
-    value = f'{hour["temperature"]:.0f} °C' if hour else '-- °C'
-    label = 'Helsinki · ennuste' if hour else 'Helsinki · sää ei saatavilla'
-    detail = ('Ennuste ' + date(hour['time']).astimezone(FI).strftime('%d.%m. klo %H.%M') +
-              ' · päivitetty ' + date(item['updated_at']).astimezone(FI).strftime('%d.%m. klo %H.%M') +
-              ' · MET Norway, CC BY 4.0') if hour else 'Sääennuste ei ole nyt saatavilla. MET Norway, CC BY 4.0.'
-    return (f'<div class="portal-weather" title="{html.escape(detail)}" aria-label="{html.escape(value + ", " + label + ". " + detail)}">'
+    if not hour:
+        return ''
+    value = f'{hour["temperature"]:.0f} °C'
+    attribution = 'Sääennuste: Ilmatieteen laitos, CC BY 4.0'
+    return (f'<div class="portal-weather" title="{attribution}" aria-label="{attribution}">'
             '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="27" height="27" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>'
-            f'<span><strong id="weather-value">{value}</strong><small id="weather-time">{label}</small></span>'
-            '<a class="portal-weather__source" href="https://www.met.no/en/free-meteorological-data/Licensing-and-crediting" '
-            'aria-label="Säätiedon lähde ja käyttöehdot: MET Norway">Lähde</a></div>')
+            f'<span><strong id="weather-value">{value}</strong><small id="weather-city">Helsinki</small></span>'
+            '</div>')
 
 
 def markets(snapshot=None, now=None):
