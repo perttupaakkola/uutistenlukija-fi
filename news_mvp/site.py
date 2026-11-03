@@ -81,6 +81,71 @@ def esc(value):
     return html.escape(str(value), quote=True)
 
 
+_FINNISH_VOWELS = frozenset("aeiouyåäö")
+_FINNISH_DIPHTHONGS = frozenset((
+    "ai", "ei", "oi", "ui", "yi", "äi", "öi",
+    "au", "eu", "iu", "ou", "ey", "äy", "öy",
+    "ie", "uo", "yö",
+))
+_HEADLINE_WORD = re.compile(r"[^\W\d_]+", re.UNICODE)
+
+
+def _finnish_syllable_breaks(word):
+    """Return conservative syllable boundaries for one Finnish headline word.
+
+    Chrome for Linux has no Finnish hyphenation dictionary.  The normal Finnish
+    V-CV rule gives us deterministic break opportunities without altering the
+    reviewed title: in a consonant run between vowels, the last consonant starts
+    the next syllable.  Adjacent vowels split only when they are neither a long
+    vowel nor a Finnish diphthong.
+    """
+    lowered = word.casefold()
+    breaks = set()
+    index = 1
+    while index < len(word):
+        previous, current = lowered[index - 1], lowered[index]
+        if previous in _FINNISH_VOWELS and current in _FINNISH_VOWELS:
+            if previous != current and previous + current not in _FINNISH_DIPHTHONGS:
+                breaks.add(index)
+            index += 1
+            continue
+        if previous in _FINNISH_VOWELS and current not in _FINNISH_VOWELS:
+            end = index
+            while end < len(word) and lowered[end] not in _FINNISH_VOWELS:
+                end += 1
+            if end < len(word):
+                breaks.add(end - 1)
+            index = max(index + 1, end)
+            continue
+        index += 1
+    return breaks
+
+
+def headline_html(value):
+    """Escape a visible headline and add soft-hyphen entities to long words only.
+
+    Callers use this solely in rendered h2/h3 text.  The stored title, metadata,
+    feeds, URLs and accessible labels continue to use the original clean string.
+    """
+    title = str(value)
+    parts = []
+    cursor = 0
+    for match in _HEADLINE_WORD.finditer(title):
+        parts.append(esc(title[cursor:match.start()]))
+        word = match.group(0)
+        if len(word) < 16:
+            parts.append(esc(word))
+        else:
+            boundaries = _finnish_syllable_breaks(word)
+            parts.append("".join(
+                ("&shy;" if index in boundaries else "") + esc(letter)
+                for index, letter in enumerate(word)
+            ))
+        cursor = match.end()
+    parts.append(esc(title[cursor:]))
+    return "".join(parts)
+
+
 def _paragraph_text_html(article_route, paragraph, sources):
     """Escape prose, adding only explicitly reviewed, article-bound programme links."""
     text = paragraph["text"]
@@ -933,7 +998,7 @@ def listing_feed_html(items, empty_text, recovery_html=""):
                     f'<p class="portal-feed-item__meta"><a href="{esc(category_route(draft.get("category")))}">'
                     f'{esc(category_display(draft.get("category")))}</a><span aria-hidden="true"> · </span>'
                     f'Julkaistu {time_html(job["created_at"], "portal-feed-item__time")}</p>'
-                    f'<h2><a href="{link}">{esc(draft["title"])}</a></h2>'
+                    f'<h2><a href="{link}">{headline_html(draft["title"])}</a></h2>'
                     f'<p>{esc(draft["summary"])}</p></div>{thumb}{fixture}</article>')
     if not rows:
         return (f'<div class="portal-list-feed portal-list-feed--empty">'
@@ -1163,7 +1228,7 @@ def homepage_topic_strip(items, exclude_ids=None):
         cards.append(
             f'<div class="portal-topic-card portal-topic-card--{esc(slug)}">'
             f'<a class="portal-topic-card__label" href="/categories/{esc(slug)}/">{esc(display)}</a>'
-            f'<h3><a href="{link}">{esc(draft["title"])}</a></h3>'
+            f'<h3><a href="{link}">{headline_html(draft["title"])}</a></h3>'
             f'<span class="portal-topic-card__time">{front_time_html(job["created_at"])}</span>'
             f'</div>')
     if not cards:
@@ -1209,7 +1274,7 @@ def listing_page_html(page_items, page_number, page_count, archive_items=None, s
                 f'<div class="portal-teaser__meta">'
                 f'<span class="portal-kicker portal-teaser__category portal-teaser__category--{slug}">{category}</span>'
                 f'<span>{front_time_html(job["created_at"])}</span></div>'
-                f'<h3><a href="{link}">{esc(draft["title"])}</a></h3></div>'
+                f'<h3><a href="{link}">{headline_html(draft["title"])}</a></h3></div>'
                 f'{fixture}</article>')
 
     def river_row(item):
@@ -1222,7 +1287,7 @@ def listing_page_html(page_items, page_number, page_count, archive_items=None, s
                 f'<div class="portal-row-card__meta">'
                 f'<span class="portal-kicker portal-row-card__category portal-row-card__category--{slug}">{category}</span>'
                 f'<span class="portal-row-card__time">{front_time_html(job["created_at"])}</span></div>'
-                f'<h3><a href="{link}">{esc(draft["title"])}</a></h3></div>'
+                f'<h3><a href="{link}">{headline_html(draft["title"])}</a></h3></div>'
                 f'{fixture}</article>')
 
     lead_html = ""
@@ -1239,7 +1304,7 @@ def listing_page_html(page_items, page_number, page_count, archive_items=None, s
                      f'<span class="portal-kicker portal-lead__category portal-lead__category--{slug}">{category}</span>'
                      f'<a class="portal-lead__time" href="{link}">Uusin juttu · julkaistu '
                      f'{front_time_html(job["created_at"])}</a>'
-                     f'<h2 id="front-lead-title"><a href="{link}">{esc(draft["title"])}</a></h2>'
+                     f'<h2 id="front-lead-title"><a href="{link}">{headline_html(draft["title"])}</a></h2>'
                      f'<p>{esc(draft["summary"])}</p>{fixture}'
                      f'<div class="portal-meta-row">'
                      f'<a class="portal-save-link" href="{link}" aria-label="Lue juttu: {esc(draft["title"])}">Lue juttu</a>'

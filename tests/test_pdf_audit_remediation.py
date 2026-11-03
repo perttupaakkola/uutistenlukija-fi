@@ -297,7 +297,7 @@ class PdfAuditRemediation(unittest.TestCase):
         teaser_html = re.search(
             r'<article class="portal-teaser[^>]*>.*?</article>', homepage, re.S
         ).group(0)
-        self.assertIn(f'<h3><a href="/{site.article_path(teaser)}">{title}</a></h3>',
+        self.assertIn(f'<h3><a href="/{site.article_path(teaser)}">{site.headline_html(title)}</a></h3>',
                       teaser_html)
 
         portal = (output / "assets/css/portal-overhaul.css").read_text()
