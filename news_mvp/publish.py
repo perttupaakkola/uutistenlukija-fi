@@ -122,7 +122,59 @@ def ensure_site_refresh_table(store):
         id TEXT PRIMARY KEY, source_commit TEXT NOT NULL, anchor_job_id TEXT NOT NULL,
         remote_commit TEXT, run_id INTEGER, status TEXT NOT NULL, error TEXT,
         created TEXT NOT NULL, style_sha256 TEXT NOT NULL)''')
+    store.db.execute('''CREATE TABLE IF NOT EXISTS site_refresh_guide_hashes (
+        refresh_id TEXT NOT NULL, url TEXT NOT NULL, content_hash TEXT NOT NULL,
+        PRIMARY KEY(refresh_id,url))''')
+    store.db.execute('''CREATE TABLE IF NOT EXISTS guide_indexnow_submissions (
+        url TEXT PRIMARY KEY, content_hash TEXT NOT NULL, submitted_at TEXT NOT NULL)''')
     store.db.commit()
+
+
+def site_refresh_guide_hashes(store, refresh_id):
+    return {row['url']: row['content_hash'] for row in store.db.execute(
+        'SELECT url,content_hash FROM site_refresh_guide_hashes WHERE refresh_id=? ORDER BY url',
+        (refresh_id,))}
+
+
+def guide_content_hashes(site):
+    """Hashes for exactly the guide HTML shipped in this rendered bundle."""
+    from .utility_guides import GUIDE_PATHS
+    result = {}
+    for path in GUIDE_PATHS:
+        page_path = Path(site) / path.strip('/') / 'index.html'
+        if page_path.is_file():
+            result['https://uutistenlukija.fi' + path] = hashlib.sha256(page_path.read_bytes()).hexdigest()
+    return result
+
+
+def submit_changed_guides(store, rendered_hashes, result_callback=None, limit=50):
+    """Best-effort IndexNow for changed deployed guides; this function never raises."""
+    try:
+        ensure_site_refresh_table(store)
+        if isinstance(rendered_hashes, str):
+            rendered_hashes = json.loads(rendered_hashes)
+        if not isinstance(rendered_hashes, dict):
+            return False
+        previous = {row['url']: row['content_hash'] for row in store.db.execute(
+            'SELECT url,content_hash FROM guide_indexnow_submissions')}
+        changed = [(url, content_hash) for url, content_hash in sorted(rendered_hashes.items())
+                   if previous.get(url) != content_hash][:limit]
+        if not changed:
+            return False
+        from . import indexing
+        if not indexing.ping([url for url, _content_hash in changed],
+                             result_callback=result_callback):
+            return False
+        submitted_at = datetime.now(timezone.utc).isoformat()
+        with store.db:
+            store.db.executemany(
+                'INSERT INTO guide_indexnow_submissions(url,content_hash,submitted_at) VALUES(?,?,?) '
+                'ON CONFLICT(url) DO UPDATE SET content_hash=excluded.content_hash, '
+                'submitted_at=excluded.submitted_at',
+                [(url, content_hash, submitted_at) for url, content_hash in changed])
+        return True
+    except Exception:
+        return False
 
 
 def unresolved_site_refreshes(store):
@@ -896,6 +948,8 @@ def site_refresh(config, config_path):
             if previous is not None:
                 row = dict(previous)
                 status = 'idle' if row['status'] == 'deployed' else row['status']
+                if row['status'] == 'deployed':
+                    submit_changed_guides(store, site_refresh_guide_hashes(store, row['id']))
                 return {'status':status,'site_refresh_id':row['id'],
                         'anchor_job_id':row['anchor_job_id'],
                         'remote_commit':row['remote_commit'],'run_id':row['run_id']}
@@ -910,10 +964,15 @@ def site_refresh(config, config_path):
                     "INSERT INTO site_refreshes VALUES(?,?,?,NULL,NULL,'preparing',NULL,?,?)",
                     (refresh_id,source_commit,job['id'],datetime.now(timezone.utc).isoformat(),
                      receipt['style_sha256']))
+                store.db.executemany(
+                    'INSERT INTO site_refresh_guide_hashes(refresh_id,url,content_hash) VALUES(?,?,?)',
+                    [(refresh_id,url,content_hash)
+                     for url,content_hash in guide_content_hashes(site).items()])
             row = dict(store.db.execute('SELECT * FROM site_refreshes WHERE id=?',
                                         (refresh_id,)).fetchone())
 
         if row['status'] == 'deployed':
+            submit_changed_guides(store, site_refresh_guide_hashes(store, row['id']))
             return {'status':'idle','site_refresh_id':row['id'],
                     'anchor_job_id':row['anchor_job_id'],'remote_commit':row['remote_commit'],
                     'run_id':row['run_id']}
@@ -1035,6 +1094,10 @@ def site_refresh(config, config_path):
             with store.db:
                 store.db.execute("UPDATE site_refreshes SET status='deployed',error=NULL WHERE id=?",
                                  (row['id'],))
+            submit_changed_guides(
+                store, site_refresh_guide_hashes(store, row['id']), result_callback=lambda result:
+                atomic_write(receipt_dir/'guide-indexnow-notification.json',
+                             json.dumps(result,indent=2)+'\n'))
             return {'status':'deployed','site_refresh_id':row['id'],'anchor_job_id':job['id'],
                     'run_id':run['databaseId'],'remote_commit':row['remote_commit'],
                     'deployment_id':live['deployment_id']}
@@ -1278,16 +1341,25 @@ def requeue_failed(config, job_id=None):
 
 def _llms_txt(now):
     """Plain index for AI assistants (llms.txt convention): what the site is and its guides."""
-    from .utility_guides import guides
+    from .utility_guides import EVENT_GUIDE_PATHS, guides
     lines = ['# Uutistenlukija', '',
              '> Suomenkielinen maksuton uutissivusto: kotimaan uutiset, paikalliset viranomaistiedotteet, '
              'selittäjät ja päivättyjä käytännön oppaita (päivämäärät, aikataulut, säännöt). '
              'Jokainen sivu nimeää lähteensä.', '',
              '## Oppaat', '']
-    for g in guides(now):
+    guide_rows = guides(now)
+    event_order = {path: position for position, path in enumerate(EVENT_GUIDE_PATHS)}
+    all_order = {g['path']: position for position, g in enumerate(guide_rows)}
+    guide_rows = sorted(guide_rows, key=lambda g: (
+        0 if g['path'] in event_order else 1,
+        event_order.get(g['path'], all_order[g['path']])))
+    for g in guide_rows:
         title = ' '.join(str(g['title']).split())
         desc = ' '.join(str(g.get('description', '')).split())
-        lines.append(f'- [{title}](https://uutistenlukija.fi{g["path"]}): {desc}')
+        year, month, day = g['updated'].split('-')
+        updated = f'{int(day)}.{int(month)}.{year}'
+        lines.append(f'- [{title}](https://uutistenlukija.fi{g["path"]}) '
+                     f'(päivitetty {updated}): {desc}')
     lines += ['', '## Osastot', '',
               '- [Kaikki oppaat](https://uutistenlukija.fi' + OPPAAT_PATH + ')',
               '- [Tuoreimmat uutiset](https://uutistenlukija.fi' + LATEST_PATH + ')']

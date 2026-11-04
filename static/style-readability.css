@@ -11,6 +11,15 @@
 /* Finnish compounds: break rather than force a horizontal scrollbar at 320px. */
 .story-body,.lead{overflow-wrap:break-word;hyphens:auto;-webkit-hyphens:auto}
 
+/* Guide discovery is intentionally plain: the article theme owns colours and
+   table chrome, while these rules only keep a long town index compact. */
+.guide-updated{margin:.35rem 0;color:inherit;font-size:.92rem}
+.guide-town-jump ul{display:flex;flex-wrap:wrap;gap:.35rem 1rem;padding-left:0;list-style:none}
+.guide-town-jump li{margin:0}
+.guide-summary-table{max-height:34rem;overflow:auto;margin-bottom:2rem}
+.guide-summary-table table{margin:0}
+.guide-summary-table th,.guide-summary-table td{padding:.45rem .6rem;vertical-align:top}
+
 /* Private candidate only: keep visited links legible on desktop photo leads.
    Phone, image-free leads, non-lead links and dark palette stay unchanged. */
 @media (min-width: 901px) {

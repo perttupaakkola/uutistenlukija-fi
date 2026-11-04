@@ -1,4 +1,5 @@
 import json
+import html
 import re
 import tempfile
 import unittest
@@ -89,3 +90,37 @@ class UtilityGuides(unittest.TestCase):
             self.assertIn('noindex,nofollow', text)
             self.assertNotIn('rel="canonical"', text)
             self.assertNotIn('application/ld+json', text)
+
+    def test_event_guides_project_town_anchors_summary_and_item_list_from_data(self):
+        items = {g['path']: g for g in guides.guides(
+            datetime.fromisoformat('2026-11-04T12:00:00+00:00'))}
+        for path in guides.EVENT_GUIDE_PATHS:
+            with self.subTest(path=path):
+                guide = items[path]
+                events = guides.guide_events(guide)
+                self.assertTrue(events)
+                rendered = guides.render_guide(guide, site.page, True)
+                first = events[0]
+                anchor = guides._anchor(first['town'])
+                self.assertIn(f'href="#{anchor}"', rendered)
+                self.assertIn(f'<section id="{anchor}">', rendered)
+                self.assertIn('<th scope="col">Kaupunki</th>', rendered)
+                self.assertIn(html.escape(first['place']), rendered)
+                schemas = [json.loads(raw) for raw in re.findall(
+                    r'<script type="application/ld\+json">(.*?)</script>', rendered)]
+                item_list = next(schema for schema in schemas if schema['@type'] == 'ItemList')
+                self.assertEqual(item_list['numberOfItems'], len(events))
+                self.assertEqual(item_list['itemListElement'][0]['item']['url'],
+                                 guides.ORIGIN + path + '#' + anchor)
+
+    def test_visible_update_date_and_date_modified_are_the_data_change_date(self):
+        now = datetime.fromisoformat('2026-11-04T12:00:00+00:00')
+        for guide in guides.guides(now):
+            with self.subTest(path=guide['path']):
+                rendered = guides.render_guide(guide, site.page, True)
+                year, month, day = guide['updated'].split('-')
+                display = f'{int(day)}.{int(month)}.{year}'
+                self.assertIn(f'<time datetime="{guide["updated"]}">{display}</time>', rendered)
+                schemas = [json.loads(raw) for raw in re.findall(
+                    r'<script type="application/ld\+json">(.*?)</script>', rendered)]
+                self.assertEqual(schemas[0]['dateModified'], guide['updated'])

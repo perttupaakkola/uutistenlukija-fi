@@ -1,6 +1,8 @@
 """Original standalone reader utilities; not news records or publication timestamps."""
 import html
 import json
+import re
+import unicodedata
 from datetime import datetime
 from zoneinfo import ZoneInfo
 
@@ -34,6 +36,30 @@ CAROLS_SOURCE = 'https://www.helsinginseurakunnat.fi/artikkelit/kauneimmatjoulul
 TAX_SOURCE = 'https://www.vero.fi/henkiloasiakkaat/maksaminen/veronpalautukset/veronpalautuksen-maara-ja-maksupaivat/'
 GUIDE_PATHS = ('/oppaat/kellojen-siirto-2026/', '/oppaat/talvirenkaat-2026/', '/oppaat/palovaroittimen-tarkistus/', '/oppaat/liputuspaivat-2026/', '/oppaat/influenssarokotus-2026/', '/oppaat/koronarokotus-2026/', '/oppaat/sahkokatko/', '/oppaat/pyhainpaiva-halloween-2026/', '/oppaat/isanpaiva-2026/', '/oppaat/pikkujoulut-2026/', '/oppaat/koulujen-loma-ajat-2026-2027/', '/oppaat/veronpalautus-2026/', '/oppaat/eduskuntavaalit-2027/', '/oppaat/pyhapaivat-2027/', '/oppaat/adventti-2026/', '/oppaat/black-friday-2026/', '/oppaat/elakkeet-2027/', '/oppaat/kaamos-2026/', '/oppaat/taysikuu-2026-2027/', '/oppaat/kelan-maksupaivat-2026-2027/', '/oppaat/paasiainen-2027/', '/oppaat/joulu-2026/', '/oppaat/itsenaisyyspaiva-2026/', '/oppaat/joulumarkkinat-2026/', '/oppaat/halloween-tapahtumat-2026/', '/oppaat/laskettelukausi-2026-2027/', '/oppaat/joulupaketit-2026/', '/oppaat/kauneimmat-joululaulut-2026/', '/oppaat/isanpaiva-tervehdykset-2026/')
 
+# These dates are the latest authored changes in each guide's data block, taken
+# from repository history.  They are deliberately data, not datetime.now(): a
+# rebuild must never make an unchanged guide appear fresh.
+GUIDE_UPDATED = (
+    '2026-10-19', '2026-10-15', '2026-10-12', '2026-10-16', '2026-10-18',
+    '2026-10-14', '2026-10-12', '2026-10-27', '2026-11-03', '2026-10-13',
+    '2026-10-18', '2026-10-15', '2026-10-15', '2026-10-20', '2026-10-15',
+    '2026-10-14', '2026-10-18', '2026-10-15', '2026-10-15', '2026-10-16',
+    '2026-10-16', '2026-10-19', '2026-11-01', '2026-11-04', '2026-11-01',
+    '2026-11-03', '2026-10-26', '2026-11-02', '2026-11-02',
+)
+
+# Event guides are intentionally first in llms.txt.  Section indexes point at
+# the existing editorial event data; the town table, anchors and JSON-LD are all
+# projected from those same list items rather than maintained as a second list.
+EVENT_GUIDES = {
+    GUIDE_PATHS[23]: ('Joulumarkkinat', (0, 1)),
+    GUIDE_PATHS[8]: ('Isänpäivä', tuple(range(2, 23))),
+    GUIDE_PATHS[22]: ('Itsenäisyyspäivän tapahtumat', (4, 5)),
+    GUIDE_PATHS[24]: ('Halloween-tapahtumat', tuple(range(1, 21))),
+    GUIDE_PATHS[27]: ('Kauneimmat joululaulut', tuple(range(1, 9))),
+}
+EVENT_GUIDE_PATHS = tuple(EVENT_GUIDES)
+
 
 def guides(now) -> tuple[dict, ...]:
     if now.tzinfo is None or now.utcoffset() is None:
@@ -43,7 +69,7 @@ def guides(now) -> tuple[dict, ...]:
     halloween_next = (('Halloween 2026 on ohi: seuraavat tapahtumat marras–joulukuussa', '<p>Halloween ja pyhäinpäivä olivat la 31.10.2026, ja tämän sivun tapahtumat ovat päättyneet. Listat jäävät tähän tiedoksi. Seuraavat koko perheen tapahtumat:</p><ul><li><strong>Isänpäivä su 8.11.2026</strong>: isänpäivän brunssit, lounaat ja tapahtumat Helsingissä, Espoossa, Vantaalla, Tampereella, Turussa, Oulussa, Jyväskylässä ja muissa kaupungeissa: <a href="/oppaat/isanpaiva-2026/">isänpäivä 2026 kaupungeittain</a>.</li><li><strong>Joulunavaukset alkaen la 14.11.</strong>: Kuopio ja Tapiola la 14.11., Lohja pe 20.11., Helsinki, Tampere, Vaasa, Pori, Kouvola, Kajaani ja Joensuu 21.–22.11., Tuomaan Markkinat ja Turku 1. adventtina 27.–29.11.: <a href="/oppaat/joulumarkkinat-2026/">joulumarkkinat ja joulunavaukset 2026</a>.</li><li><strong>Pikkujoulut ja 1. adventti su 29.11.</strong>: <a href="/oppaat/pikkujoulut-2026/">pikkujoulut 2026</a> ja <a href="/oppaat/adventti-2026/">adventtisunnuntait</a>.</li><li><strong>Itsenäisyyspäivä su 6.12.</strong>: soihtukulkueet ja kaupunkien juhlat: <a href="/oppaat/itsenaisyyspaiva-2026/">itsenäisyyspäivä 2026</a>.</li></ul>'),) if halloween_over else ()
     clock_answer = ('Suomessa kelloja siirrettiin sunnuntaina 25. lokakuuta 2026 aamulla kello 04.00 takaisin kello 03.00. Tämä sivu käsittelee vuoden 2026 syksyn siirtoa, ei seuraavaa kellonsiirtoa.' if expired else
                     'Suomessa kelloja siirretään sunnuntaina 25. lokakuuta 2026 aamulla kello 04.00 takaisin kello 03.00. Yö pitenee yhdellä tunnilla.')
-    return (
+    result = (
         dict(path=GUIDE_PATHS[0], title='Kellojen siirto syksy 2026: talviaika alkaa su 25.10. – kellot tunti taaksepäin klo 04 → 03',
              description='Milloin siirrytään talviaikaan 2026? Kellot käännetään yöllä la–su 24.–25.10.2026: sunnuntaina klo 04 → 03, tunti taaksepäin. Kellojen siirrot 2026–2030. Auringonnousu ja -lasku ennen ja jälkeen siirron kaupungeittain, kevään 2027 siirto ja muistilista laitteille.',
              answer=clock_answer, source=CLOCK_SOURCE, source_label='Finlex: kesäaika-asetus 753/2001, 1 ja 3 §',
@@ -450,6 +476,13 @@ def guides(now) -> tuple[dict, ...]:
              sections=(('Miten tervehdystä käytetään?', '<p>Kaikki tämän sivun tervehdykset ovat Uutistenlukijan omia, ja niitä saa vapaasti käyttää omissa viesteissä ja korteissa. <strong>Lähetä WhatsAppissa</strong> -linkki avaa WhatsAppin valmiin tekstin kanssa; valitse vastaanottaja ja muokkaa viestiä ennen lähettämistä. Henkilökohtaisin tervehdys syntyy, kun lisäät perään yhden oman muiston, esimerkiksi yhteisen retken tai isän tavallisen sanonnan.</p>'), ('Lyhyet isänpäivätervehdykset tekstiviestiin ja WhatsAppiin', '<ul class="greeting-list"><li>”Hyvää isänpäivää, isä! Kiitos, että olet aina ollut lähellä.” <a href="https://wa.me/?text=Hyv%C3%A4%C3%A4%20is%C3%A4np%C3%A4iv%C3%A4%C3%A4%2C%20is%C3%A4%21%20Kiitos%2C%20ett%C3%A4%20olet%20aina%20ollut%20l%C3%A4hell%C3%A4." rel="noopener nofollow">Lähetä WhatsAppissa</a></li><li>”Hyvää isänpäivää! Olet paras isä, jonka olisin voinut saada.” <a href="https://wa.me/?text=Hyv%C3%A4%C3%A4%20is%C3%A4np%C3%A4iv%C3%A4%C3%A4%21%20Olet%20paras%20is%C3%A4%2C%20jonka%20olisin%20voinut%20saada." rel="noopener nofollow">Lähetä WhatsAppissa</a></li><li>”Hyvää isänpäivää! Kiitos kaikista neuvoista, myös niistä, joita en silloin kuunnellut.” <a href="https://wa.me/?text=Hyv%C3%A4%C3%A4%20is%C3%A4np%C3%A4iv%C3%A4%C3%A4%21%20Kiitos%20kaikista%20neuvoista%2C%20my%C3%B6s%20niist%C3%A4%2C%20joita%20en%20silloin%20kuunnellut." rel="noopener nofollow">Lähetä WhatsAppissa</a></li><li>”Isä, kiitos, että opetit minut ajamaan pyörällä ja nousemaan ylös, kun kaaduin. Hyvää isänpäivää!” <a href="https://wa.me/?text=Is%C3%A4%2C%20kiitos%2C%20ett%C3%A4%20opetit%20minut%20ajamaan%20py%C3%B6r%C3%A4ll%C3%A4%20ja%20nousemaan%20yl%C3%B6s%2C%20kun%20kaaduin.%20Hyv%C3%A4%C3%A4%20is%C3%A4np%C3%A4iv%C3%A4%C3%A4%21" rel="noopener nofollow">Lähetä WhatsAppissa</a></li><li>”Lämmin halaus ja hyvää isänpäivää! Nähdään pian.” <a href="https://wa.me/?text=L%C3%A4mmin%20halaus%20ja%20hyv%C3%A4%C3%A4%20is%C3%A4np%C3%A4iv%C3%A4%C3%A4%21%20N%C3%A4hd%C3%A4%C3%A4n%20pian." rel="noopener nofollow">Lähetä WhatsAppissa</a></li><li>”Hyvää isänpäivää! Toivottavasti saat tänään levätä ja nauttia.” <a href="https://wa.me/?text=Hyv%C3%A4%C3%A4%20is%C3%A4np%C3%A4iv%C3%A4%C3%A4%21%20Toivottavasti%20saat%20t%C3%A4n%C3%A4%C3%A4n%20lev%C3%A4t%C3%A4%20ja%20nauttia." rel="noopener nofollow">Lähetä WhatsAppissa</a></li><li>”Kiitos, että uskoit minuun silloinkin, kun en itse uskonut. Hyvää isänpäivää, isä!” <a href="https://wa.me/?text=Kiitos%2C%20ett%C3%A4%20uskoit%20minuun%20silloinkin%2C%20kun%20en%20itse%20uskonut.%20Hyv%C3%A4%C3%A4%20is%C3%A4np%C3%A4iv%C3%A4%C3%A4%2C%20is%C3%A4%21" rel="noopener nofollow">Lähetä WhatsAppissa</a></li><li>”Hyvää isänpäivää maailman kärsivällisimmälle isälle!” <a href="https://wa.me/?text=Hyv%C3%A4%C3%A4%20is%C3%A4np%C3%A4iv%C3%A4%C3%A4%20maailman%20k%C3%A4rsiv%C3%A4llisimm%C3%A4lle%20is%C3%A4lle%21" rel="noopener nofollow">Lähetä WhatsAppissa</a></li></ul>'), ('Isänpäiväkortin tekstit', '<p>Pidemmät tekstit sopivat korttiin tai kukkien mukaan.</p><ul class="greeting-list"><li>”Rakas isä, kiitos turvallisista vuosista, yhteisistä retkistä ja siitä, että ovesi on aina ollut auki. Hyvää isänpäivää!” <a href="https://wa.me/?text=Rakas%20is%C3%A4%2C%20kiitos%20turvallisista%20vuosista%2C%20yhteisist%C3%A4%20retkist%C3%A4%20ja%20siit%C3%A4%2C%20ett%C3%A4%20ovesi%20on%20aina%20ollut%20auki.%20Hyv%C3%A4%C3%A4%20is%C3%A4np%C3%A4iv%C3%A4%C3%A4%21" rel="noopener nofollow">Lähetä WhatsAppissa</a></li><li>”Isä, sinulta opin, että asiat hoidetaan rauhassa ja loppuun asti. Kiitos esimerkistäsi. Hyvää isänpäivää!” <a href="https://wa.me/?text=Is%C3%A4%2C%20sinulta%20opin%2C%20ett%C3%A4%20asiat%20hoidetaan%20rauhassa%20ja%20loppuun%20asti.%20Kiitos%20esimerkist%C3%A4si.%20Hyv%C3%A4%C3%A4%20is%C3%A4np%C3%A4iv%C3%A4%C3%A4%21" rel="noopener nofollow">Lähetä WhatsAppissa</a></li><li>”Kun mietin lapsuuttani, muistan ensimmäisenä naurusi. Kiitos, isä, ja hyvää isänpäivää.” <a href="https://wa.me/?text=Kun%20mietin%20lapsuuttani%2C%20muistan%20ensimm%C3%A4isen%C3%A4%20naurusi.%20Kiitos%2C%20is%C3%A4%2C%20ja%20hyv%C3%A4%C3%A4%20is%C3%A4np%C3%A4iv%C3%A4%C3%A4." rel="noopener nofollow">Lähetä WhatsAppissa</a></li><li>”Tänään juhlitaan sinua, joka olet korjannut, kuljettanut, kannustanut ja odottanut. Hyvää isänpäivää, isä!” <a href="https://wa.me/?text=T%C3%A4n%C3%A4%C3%A4n%20juhlitaan%20sinua%2C%20joka%20olet%20korjannut%2C%20kuljettanut%2C%20kannustanut%20ja%20odottanut.%20Hyv%C3%A4%C3%A4%20is%C3%A4np%C3%A4iv%C3%A4%C3%A4%2C%20is%C3%A4%21" rel="noopener nofollow">Lähetä WhatsAppissa</a></li><li>”Kiitos, isä, kaikista aamuista, jolloin heräsit ennen muita, ja illoista, jolloin jaksoit vielä kuunnella. Hyvää isänpäivää!” <a href="https://wa.me/?text=Kiitos%2C%20is%C3%A4%2C%20kaikista%20aamuista%2C%20jolloin%20her%C3%A4sit%20ennen%20muita%2C%20ja%20illoista%2C%20jolloin%20jaksoit%20viel%C3%A4%20kuunnella.%20Hyv%C3%A4%C3%A4%20is%C3%A4np%C3%A4iv%C3%A4%C3%A4%21" rel="noopener nofollow">Lähetä WhatsAppissa</a></li></ul>'), ('Lapselta isälle (pienen lapsen kortti)', '<p>Lyhyitä lauseita, jotka lapsi voi kirjoittaa itse tai sanella aikuiselle.</p><ul class="greeting-list"><li>”Isi, sä oot paras! Hyvää isänpäivää!” <a href="https://wa.me/?text=Isi%2C%20s%C3%A4%20oot%20paras%21%20Hyv%C3%A4%C3%A4%20is%C3%A4np%C3%A4iv%C3%A4%C3%A4%21" rel="noopener nofollow">Lähetä WhatsAppissa</a></li><li>”Hyvää isänpäivää, isi! Mennään taas yhdessä metsään.” <a href="https://wa.me/?text=Hyv%C3%A4%C3%A4%20is%C3%A4np%C3%A4iv%C3%A4%C3%A4%2C%20isi%21%20Menn%C3%A4%C3%A4n%20taas%20yhdess%C3%A4%20mets%C3%A4%C3%A4n." rel="noopener nofollow">Lähetä WhatsAppissa</a></li><li>”Isi, kiitos kun luet mulle iltasadun. Hyvää isänpäivää!” <a href="https://wa.me/?text=Isi%2C%20kiitos%20kun%20luet%20mulle%20iltasadun.%20Hyv%C3%A4%C3%A4%20is%C3%A4np%C3%A4iv%C3%A4%C3%A4%21" rel="noopener nofollow">Lähetä WhatsAppissa</a></li><li>”Rakas isi, sä teet parhaat letut. Hyvää isänpäivää!” <a href="https://wa.me/?text=Rakas%20isi%2C%20s%C3%A4%20teet%20parhaat%20letut.%20Hyv%C3%A4%C3%A4%20is%C3%A4np%C3%A4iv%C3%A4%C3%A4%21" rel="noopener nofollow">Lähetä WhatsAppissa</a></li></ul>'), ('Isoisälle, papalle ja ukille', '<ul class="greeting-list"><li>”Hyvää isänpäivää, pappa! Kiitos tarinoista ja kaikesta, mitä olet opettanut.” <a href="https://wa.me/?text=Hyv%C3%A4%C3%A4%20is%C3%A4np%C3%A4iv%C3%A4%C3%A4%2C%20pappa%21%20Kiitos%20tarinoista%20ja%20kaikesta%2C%20mit%C3%A4%20olet%20opettanut." rel="noopener nofollow">Lähetä WhatsAppissa</a></li><li>”Hyvää isänpäivää, ukki! Sinun kanssasi aika kuluu aina liian nopeasti.” <a href="https://wa.me/?text=Hyv%C3%A4%C3%A4%20is%C3%A4np%C3%A4iv%C3%A4%C3%A4%2C%20ukki%21%20Sinun%20kanssasi%20aika%20kuluu%20aina%20liian%20nopeasti." rel="noopener nofollow">Lähetä WhatsAppissa</a></li><li>”Rakas vaari, hyvää isänpäivää! Odotan jo seuraavaa yhteistä kalaretkeä.” <a href="https://wa.me/?text=Rakas%20vaari%2C%20hyv%C3%A4%C3%A4%20is%C3%A4np%C3%A4iv%C3%A4%C3%A4%21%20Odotan%20jo%20seuraavaa%20yhteist%C3%A4%20kalaretke%C3%A4." rel="noopener nofollow">Lähetä WhatsAppissa</a></li><li>”Hyvää isänpäivää isoisälle, joka on ollut isä kahdelle sukupolvelle.” <a href="https://wa.me/?text=Hyv%C3%A4%C3%A4%20is%C3%A4np%C3%A4iv%C3%A4%C3%A4%20isois%C3%A4lle%2C%20joka%20on%20ollut%20is%C3%A4%20kahdelle%20sukupolvelle." rel="noopener nofollow">Lähetä WhatsAppissa</a></li></ul>'), ('Bonusisälle ja uusperheen isälle', '<ul class="greeting-list"><li>”Hyvää isänpäivää! Kiitos, että valitsit olla osa elämääni.” <a href="https://wa.me/?text=Hyv%C3%A4%C3%A4%20is%C3%A4np%C3%A4iv%C3%A4%C3%A4%21%20Kiitos%2C%20ett%C3%A4%20valitsit%20olla%20osa%20el%C3%A4m%C3%A4%C3%A4ni." rel="noopener nofollow">Lähetä WhatsAppissa</a></li><li>”Et ole velvollinen, mutta olet silti aina paikalla. Hyvää isänpäivää!” <a href="https://wa.me/?text=Et%20ole%20velvollinen%2C%20mutta%20olet%20silti%20aina%20paikalla.%20Hyv%C3%A4%C3%A4%20is%C3%A4np%C3%A4iv%C3%A4%C3%A4%21" rel="noopener nofollow">Lähetä WhatsAppissa</a></li><li>”Hyvää isänpäivää bonusisälle: kiitos kärsivällisyydestä ja huumorista.” <a href="https://wa.me/?text=Hyv%C3%A4%C3%A4%20is%C3%A4np%C3%A4iv%C3%A4%C3%A4%20bonusis%C3%A4lle%3A%20kiitos%20k%C3%A4rsiv%C3%A4llisyydest%C3%A4%20ja%20huumorista." rel="noopener nofollow">Lähetä WhatsAppissa</a></li></ul>'), ('Kun isä on kaukana', '<p>Jos et pääse paikalle, sovi soittoaika etukäteen ja lähetä viesti jo aamulla.</p><ul class="greeting-list"><li>”Hyvää isänpäivää täältä kaukaa! Ajattelen sinua tänään erityisen paljon.” <a href="https://wa.me/?text=Hyv%C3%A4%C3%A4%20is%C3%A4np%C3%A4iv%C3%A4%C3%A4%20t%C3%A4%C3%A4lt%C3%A4%20kaukaa%21%20Ajattelen%20sinua%20t%C3%A4n%C3%A4%C3%A4n%20erityisen%20paljon." rel="noopener nofollow">Lähetä WhatsAppissa</a></li><li>”Kilometrejä on paljon, mutta ajatukset ovat tänään luonasi. Hyvää isänpäivää, isä!” <a href="https://wa.me/?text=Kilometrej%C3%A4%20on%20paljon%2C%20mutta%20ajatukset%20ovat%20t%C3%A4n%C3%A4%C3%A4n%20luonasi.%20Hyv%C3%A4%C3%A4%20is%C3%A4np%C3%A4iv%C3%A4%C3%A4%2C%20is%C3%A4%21" rel="noopener nofollow">Lähetä WhatsAppissa</a></li><li>”Hyvää isänpäivää! Soitan iltapäivällä, ja ensi kerralla juodaan kahvit yhdessä.” <a href="https://wa.me/?text=Hyv%C3%A4%C3%A4%20is%C3%A4np%C3%A4iv%C3%A4%C3%A4%21%20Soitan%20iltap%C3%A4iv%C3%A4ll%C3%A4%2C%20ja%20ensi%20kerralla%20juodaan%20kahvit%20yhdess%C3%A4." rel="noopener nofollow">Lähetä WhatsAppissa</a></li></ul>'), ('Hauskat isänpäivätervehdykset', '<ul class="greeting-list"><li>”Hyvää isänpäivää! Tänään saat valita radiokanavan autossa.” <a href="https://wa.me/?text=Hyv%C3%A4%C3%A4%20is%C3%A4np%C3%A4iv%C3%A4%C3%A4%21%20T%C3%A4n%C3%A4%C3%A4n%20saat%20valita%20radiokanavan%20autossa." rel="noopener nofollow">Lähetä WhatsAppissa</a></li><li>”Hyvää isänpäivää isälle, jonka vitsit ovat huonoja mutta naurattavat silti.” <a href="https://wa.me/?text=Hyv%C3%A4%C3%A4%20is%C3%A4np%C3%A4iv%C3%A4%C3%A4%20is%C3%A4lle%2C%20jonka%20vitsit%20ovat%20huonoja%20mutta%20naurattavat%20silti." rel="noopener nofollow">Lähetä WhatsAppissa</a></li><li>”Hyvää isänpäivää! Lupaan, että tänään kukaan ei säädä lämpötilaa ilman lupaasi.” <a href="https://wa.me/?text=Hyv%C3%A4%C3%A4%20is%C3%A4np%C3%A4iv%C3%A4%C3%A4%21%20Lupaan%2C%20ett%C3%A4%20t%C3%A4n%C3%A4%C3%A4n%20kukaan%20ei%20s%C3%A4%C3%A4d%C3%A4%20l%C3%A4mp%C3%B6tilaa%20ilman%20lupaasi." rel="noopener nofollow">Lähetä WhatsAppissa</a></li><li>”Kiitos, isä, että sanoit &quot;kysy äidiltä&quot; vain joka toisella kerralla. Hyvää isänpäivää!” <a href="https://wa.me/?text=Kiitos%2C%20is%C3%A4%2C%20ett%C3%A4%20sanoit%20%22kysy%20%C3%A4idilt%C3%A4%22%20vain%20joka%20toisella%20kerralla.%20Hyv%C3%A4%C3%A4%20is%C3%A4np%C3%A4iv%C3%A4%C3%A4%21" rel="noopener nofollow">Lähetä WhatsAppissa</a></li></ul>'), ('Muistotervehdys isälle, joka ei ole enää täällä', '<p>Isänpäivä voi olla raskas. Moni sytyttää kynttilän tai käy haudalla, ja lyhyt viesti sisarukselle tai omalle äidille voi lohduttaa.</p><ul class="greeting-list"><li>”Tänään sytytän kynttilän isälle. Kiitos kaikesta, mitä annoit.” <a href="https://wa.me/?text=T%C3%A4n%C3%A4%C3%A4n%20sytyt%C3%A4n%20kynttil%C3%A4n%20is%C3%A4lle.%20Kiitos%20kaikesta%2C%20mit%C3%A4%20annoit." rel="noopener nofollow">Lähetä WhatsAppissa</a></li><li>”Ajattelen tänään isääsi ja sinua. Lämmin halaus isänpäivänä.” <a href="https://wa.me/?text=Ajattelen%20t%C3%A4n%C3%A4%C3%A4n%20is%C3%A4%C3%A4si%20ja%20sinua.%20L%C3%A4mmin%20halaus%20is%C3%A4np%C3%A4iv%C3%A4n%C3%A4." rel="noopener nofollow">Lähetä WhatsAppissa</a></li><li>”Isä, ikävä ei mene pois, mutta muistot lämmittävät. Kiitos, että olit minun isäni.” <a href="https://wa.me/?text=Is%C3%A4%2C%20ik%C3%A4v%C3%A4%20ei%20mene%20pois%2C%20mutta%20muistot%20l%C3%A4mmitt%C3%A4v%C3%A4t.%20Kiitos%2C%20ett%C3%A4%20olit%20minun%20is%C3%A4ni." rel="noopener nofollow">Lähetä WhatsAppissa</a></li></ul>'), ('Isänpäivä ruotsiksi ja englanniksi', '<ul class="greeting-list"><li>”Glad farsdag, pappa! Tack för allt.” <a href="https://wa.me/?text=Glad%20farsdag%2C%20pappa%21%20Tack%20f%C3%B6r%20allt." rel="noopener nofollow">Lähetä WhatsAppissa</a></li><li>”Happy Father’s Day, Dad! Thank you for everything.” <a href="https://wa.me/?text=Happy%20Father%E2%80%99s%20Day%2C%20Dad%21%20Thank%20you%20for%20everything." rel="noopener nofollow">Lähetä WhatsAppissa</a></li></ul>'), ('Näin kirjoitat oman isänpäiväkortin', '<ol><li><strong>Aloita puhuttelulla</strong>, jota oikeasti käytätte: isä, iskä, isi, faija, pappa tai etunimi.</li><li><strong>Kiitä yhdestä konkreettisesta asiasta.</strong> ”Kiitos, että hait minut joka perjantai harkoista” jää mieleen paremmin kuin yleinen kiitos.</li><li><strong>Lisää yhteinen muisto tai suunnitelma</strong>, esimerkiksi tuleva kalaretki, ottelu tai kahvihetki.</li><li><strong>Lopeta toivotukseen</strong>: hyvää isänpäivää, halaus ja nimesi. Pienen lapsen kortissa riittää piirustus ja nimi.</li><li><strong>Ajoitus</strong>: isänpäivä on sunnuntaina 8.11.2026. Postitse lähetettävä kortti kannattaa jättää postiin viimeistään tiistaina 3.11., jotta se ehtii perille ennen sunnuntaita.</li></ol>'), ('Jaa lista perheelle', '<p>Kokoatteko sisarusten kanssa yhteistä korttia? <a href="https://wa.me/?text=Is%C3%A4np%C3%A4iv%C3%A4n%20tervehdyksi%C3%A4%20ja%20korttitekstej%C3%A4%3A%20https%3A//uutistenlukija.fi/oppaat/isanpaiva-tervehdykset-2026/%3Futm_source%3Dwhatsapp%26utm_medium%3Dshare%26utm_campaign%3Disanpaiva" rel="noopener nofollow">Jaa tämä sivu WhatsAppissa</a>. Isänpäivän lounaat, brunssit ja tapahtumat kaupungeittain löytyvät <a href="/oppaat/isanpaiva-2026/">isänpäivä 2026 -oppaasta</a>.</p>'), ('Mitä tästä ei voi päätellä?', '<p>Tervehdykset ovat Uutistenlukijan itse kirjoittamia esimerkkejä, eivät lainauksia runoilijoilta tai kirjailijoilta. Postin kulkuaika on arvio: tarkista lähetyspäivä Postin omasta palvelusta, jos kortti lähtee kauas tai ulkomaille.</p>')),
              related=(('/oppaat/isanpaiva-2026/', 'Isänpäivä 2026: lounaat, brunssit ja tapahtumat kaupungeittain'), ('/oppaat/liputuspaivat-2026/', 'Liputuspäivät loppuvuonna 2026'), ('/oppaat/joulupaketit-2026/', 'Joulupaketit 2026: viimeiset lähetyspäivät'), ('/categories/kotimaa/', 'Kotimaan uutiset'))),
     )
+    if len(result) != len(GUIDE_UPDATED):
+        raise ValueError('Every utility guide needs a real editorial update date')
+    for guide, updated in zip(result, GUIDE_UPDATED):
+        guide['updated'] = updated
+        if guide['path'] in EVENT_GUIDES:
+            guide['event_topic'], guide['event_sections'] = EVENT_GUIDES[guide['path']]
+    return result
 
 
 def discovery_html(now):
@@ -457,12 +490,167 @@ def discovery_html(now):
             ''.join(f'<li><a href="{g["path"]}">{html.escape(g["title"])}</a></li>' for g in guides(now)) + '</ul></nav>')
 
 
+_TOWN_LOCATIVES = {
+    'Akaa': 'Akaassa', 'Alajärvi': 'Alajärvellä', 'Espoo': 'Espoossa',
+    'Forssa': 'Forssassa', 'Helsinki': 'Helsingissä', 'Heinola': 'Heinolassa',
+    'Hyvinkää': 'Hyvinkäällä', 'Hämeenlinna': 'Hämeenlinnassa',
+    'Iisalmi': 'Iisalmessa', 'Ilmajoki': 'Ilmajoella', 'Imatra': 'Imatralla',
+    'Joensuu': 'Joensuussa', 'Jyväskylä': 'Jyväskylässä', 'Järvenpää': 'Järvenpäässä',
+    'Kajaani': 'Kajaanissa', 'Kangasala': 'Kangasalla', 'Kaarina': 'Kaarinassa',
+    'Kemi': 'Kemissä', 'Kempele': 'Kempeleessä', 'Kerava': 'Keravalla',
+    'Kirkkonummi': 'Kirkkonummella', 'Kokkola': 'Kokkolassa', 'Kotka': 'Kotkassa',
+    'Kouvola': 'Kouvolassa', 'Kuopio': 'Kuopiossa', 'Kuusamo': 'Kuusamossa',
+    'Lahti': 'Lahdessa', 'Lappeenranta': 'Lappeenrannassa', 'Lempäälä': 'Lempäälässä',
+    'Lohja': 'Lohjalla', 'Loviisa': 'Loviisassa', 'Mikkeli': 'Mikkelissä',
+    'Muurame': 'Muuramessa', 'Naantali': 'Naantalissa', 'Nokia': 'Nokialla',
+    'Nurmijärvi': 'Nurmijärvellä', 'Orivesi': 'Orivedellä', 'Oulu': 'Oulussa',
+    'Pieksämäki': 'Pieksämäellä', 'Pori': 'Porissa', 'Porvoo': 'Porvoossa',
+    'Raahe': 'Raahessa', 'Raisio': 'Raisiossa', 'Raasepori': 'Raaseporissa',
+    'Rauma': 'Raumalla', 'Riihimäki': 'Riihimäellä', 'Rovaniemi': 'Rovaniemellä',
+    'Salo': 'Salossa', 'Savonlinna': 'Savonlinnassa', 'Seinäjoki': 'Seinäjoella',
+    'Tampere': 'Tampereella', 'Tornio': 'Torniossa', 'Turku': 'Turussa',
+    'Tuusula': 'Tuusulassa', 'Vaasa': 'Vaasassa', 'Valkeakoski': 'Valkeakoskella',
+    'Vantaa': 'Vantaalla', 'Varkaus': 'Varkaudessa', 'Vihti': 'Vihdissä',
+    'Ylöjärvi': 'Ylöjärvellä',
+}
+
+
+def _plain(fragment):
+    return ' '.join(html.unescape(re.sub(r'<[^>]+>', ' ', fragment)).split())
+
+
+def _anchor(value):
+    ascii_value = unicodedata.normalize('NFKD', value).encode('ascii', 'ignore').decode()
+    return re.sub(r'[^a-z0-9]+', '-', ascii_value.lower()).strip('-')
+
+
+def _town_for_item(section_title, strong):
+    for town in sorted(_TOWN_LOCATIVES, key=len, reverse=True):
+        if re.match(re.escape(town) + r'\s*[,;:–-]', strong, re.I):
+            return town
+    in_item = [town for town in _TOWN_LOCATIVES
+               if re.search(r'\b' + re.escape(town) + r'\b', strong, re.I)]
+    if len(in_item) == 1:
+        return in_item[0]
+    mentioned = [town for town, locative in _TOWN_LOCATIVES.items()
+                 if re.search(r'\b' + re.escape(town) + r'\b', section_title, re.I)
+                 or re.search(r'\b' + re.escape(locative) + r'\b', section_title, re.I)]
+    return mentioned[0] if len(mentioned) == 1 else None
+
+
+def _event_dates(value):
+    """Return display/start/end for real calendar dates found in editorial text."""
+    abbreviated = re.search(r'(?<!\d)(\d{1,2})\.\s*[–-]\s*(\d{1,2})\.(\d{1,2})\.(20\d{2})', value)
+    dates = []
+    if abbreviated:
+        dates.append((int(abbreviated.group(1)), int(abbreviated.group(3)), int(abbreviated.group(4))))
+    for day, month, year in re.findall(r'(?<![\d.])(\d{1,2})\.(\d{1,2})\.(20\d{2})', value):
+        day, month, year = int(day), int(month), int(year)
+        if 1 <= day <= 31 and 1 <= month <= 12:
+            dates.append((day, month, year))
+    for day, month in re.findall(r'(?<![\d.])(\d{1,2})\.(\d{1,2})\.(?!\d)', value):
+        day, month = int(day), int(month)
+        if 1 <= day <= 31 and 1 <= month <= 12:
+            dates.append((day, month, 2026))
+    unique = sorted(set(dates), key=lambda value_date: (value_date[2], value_date[1], value_date[0]))
+    if not unique:
+        return None, None, None
+    start, end = unique[0], unique[-1]
+    iso = lambda d: f'{d[2]:04d}-{d[1]:02d}-{d[0]:02d}'
+    display = f'{start[0]}.{start[1]}.{start[2]}'
+    if end != start:
+        display += f'–{end[0]}.{end[1]}.{end[2]}'
+    return display, iso(start), iso(end) if end != start else None
+
+
+def guide_events(g):
+    """Project event rows from the guide's canonical editorial list items."""
+    events = []
+    for index in g.get('event_sections', ()):
+        title, fragment = g['sections'][index]
+        # Event lists in these curated sections are flat. Keeping the original li
+        # markup retains source links and editorial details in the town projection.
+        for raw in re.findall(r'<li>(.*?)(?:</li>|$)', fragment, re.S | re.I):
+            strong_match = re.search(r'<strong>(.*?)</strong>', raw, re.S | re.I)
+            if not strong_match:
+                continue
+            strong = _plain(strong_match.group(1))
+            town = _town_for_item(title, strong)
+            if not town:
+                continue
+            plain = _plain(raw)
+            date_label, start_date, end_date = _event_dates(plain)
+            tail = _plain(raw[strong_match.end():]).lstrip(' ,:–-')
+            place = re.split(r'(?i)\b(?:ma|ti|ke|to|pe|la|su)\s+\d|(?<!\d)\d{1,2}\.\d{1,2}\.|[;:(]', tail, maxsplit=1)[0].strip(' ,.–-')
+            if not place or place.lower() in ('ma', 'ti', 'ke', 'to', 'pe', 'la', 'su'):
+                after_town = re.sub(r'^' + re.escape(town) + r'\s*[,;:–-]\s*', '', strong, flags=re.I)
+                place = re.split(r'(?i)\b(?:ma|ti|ke|to|pe|la|su)\s+\d|\s+[–-]\s+', after_town, maxsplit=1)[0].strip(' ,.–-')
+            event = {'town': town, 'name': strong, 'html': raw, 'place': place or town,
+                     'date_label': date_label or 'Aika järjestäjän sivulla'}
+            if start_date:
+                event['startDate'] = start_date
+            if end_date:
+                event['endDate'] = end_date
+            events.append(event)
+    return tuple(events)
+
+
+def _event_guide_html(g, events):
+    if not events:
+        return ''
+    e = html.escape
+    towns = list(dict.fromkeys(event['town'] for event in events))
+    jump = ('<nav class="guide-town-jump" aria-label="Siirry kaupungin tapahtumiin">'
+            '<h2>Kaupungit</h2><ul>' + ''.join(
+                f'<li><a href="#{_anchor(town)}">{e(town)}</a></li>' for town in towns
+            ) + '</ul></nav>')
+    rows = ''.join('<tr><td><a href="#' + _anchor(event['town']) + '">' + e(event['town']) +
+                   '</a></td><td>' + e(event['date_label']) + '</td><td>' + e(event['place']) + '</td></tr>'
+                   for event in events)
+    summary = ('<section aria-labelledby="tapahtumat-lyhyesti"><h2 id="tapahtumat-lyhyesti">'
+               'Tapahtumat lyhyesti</h2><div class="guide-summary-table"><table>'
+               '<thead><tr><th scope="col">Kaupunki</th><th scope="col">Päivä</th>'
+               '<th scope="col">Paikka</th></tr></thead><tbody>' + rows + '</tbody></table></div></section>')
+    town_sections = []
+    for town in towns:
+        items = ''.join('<li>' + event['html'] + '</li>' for event in events if event['town'] == town)
+        heading = f'{g["event_topic"]} {_TOWN_LOCATIVES[town]} 2026'
+        town_sections.append(f'<section id="{_anchor(town)}"><h2>{e(heading)}</h2><ul>{items}</ul></section>')
+    return jump + summary + ''.join(town_sections)
+
+
+def _item_list(g, events):
+    elements = []
+    for position, event in enumerate(events, 1):
+        item = {'@type': 'Event', 'name': event['name'],
+                'location': {'@type': 'Place', 'name': event['place'],
+                             'address': {'@type': 'PostalAddress',
+                                         'addressLocality': event['town']}},
+                'url': ORIGIN + g['path'] + '#' + _anchor(event['town'])}
+        for field in ('startDate', 'endDate'):
+            if field in event:
+                item[field] = event[field]
+        elements.append({'@type': 'ListItem', 'position': position, 'item': item})
+    return {'@context': 'https://schema.org', '@type': 'ItemList',
+            'name': g['title'], 'numberOfItems': len(elements), 'itemListElement': elements}
+
+
 def render_guide(g, page, public, snapshot=None):
     e = html.escape
+    events = guide_events(g)
+    event_html = _event_guide_html(g, events)
+    editorial_sections = ''.join(
+        f'<section><h2>{e(title)}</h2>{text}</section>'
+        for index, (title, text) in enumerate(g['sections'])
+        if index not in g.get('event_sections', ()))
+    updated_year, updated_month, updated_day = g['updated'].split('-')
+    updated_display = f'{int(updated_day)}.{int(updated_month)}.{updated_year}'
     body = ('<article class="story single-article"><header><p>Arjen opas</p>'
-            f'<h1>{e(g["title"])}</h1><p class="lead">{e(g["answer"])}</p></header>'
+            f'<h1>{e(g["title"])}</h1><div class="guide-updated">Päivitetty '
+            f'<time datetime="{e(g["updated"])}">{e(updated_display)}</time></div>'
+            f'<p class="lead">{e(g["answer"])}</p></header>'
             f'<div class="article-reading-grid"><div class="article-reading-main"><div class="content article-body"><p><a href="{e(g["source"])}" rel="noopener noreferrer">{e(g["source_label"])}</a></p>' +
-            ''.join(f'<section><h2>{e(title)}</h2>{text}</section>' for title, text in g['sections']) +
+            event_html + editorial_sections +
             '<nav aria-label="Aiheeseen liittyvät ohjeet"><h2>Jatka lukemista</h2><ul>' +
             ''.join(f'<li><a href="{e(path)}">{e(label)}</a></li>' for path, label in g['related']) +
             '</ul><p><a href="/oppaat/">Kaikki oppaat</a></p>'
@@ -474,10 +662,17 @@ def render_guide(g, page, public, snapshot=None):
             '</nav></div></div></div></article>')
     structured = {'@context': 'https://schema.org', '@type': 'WebPage', 'name': g['title'],
                   'url': ORIGIN + g['path'], 'description': g['description'], 'inLanguage': 'fi',
+                  'dateModified': g['updated'],
                   'isPartOf': {'@type': 'WebSite', 'url': ORIGIN + '/'},
                   'breadcrumb': {'@type': 'BreadcrumbList', 'itemListElement': [
                       {'@type': 'ListItem', 'position': n, 'name': name, 'item': ORIGIN + path}
                       for n, (name, path) in enumerate((('Etusivu', '/'), ('Oppaat', '/oppaat/'), (g['title'], g['path'])), 1)]}}
-    meta = f'<meta name="description" content="{e(g["description"])}"><script type="application/ld+json">' + json.dumps(structured, ensure_ascii=False).replace('<', '\\u003c') + '</script>'
+    schemas = [structured]
+    if events:
+        schemas.append(_item_list(g, events))
+    meta = f'<meta name="description" content="{e(g["description"])}">' + ''.join(
+        '<script type="application/ld+json">' +
+        json.dumps(schema, ensure_ascii=False).replace('<', '\\u003c') + '</script>'
+        for schema in schemas)
     return page(g['title'], body, g['path'] if public else None, head_meta=meta,
                 snapshot=snapshot, active_section='/oppaat/', article_page=True)

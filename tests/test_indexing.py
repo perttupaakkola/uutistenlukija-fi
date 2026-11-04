@@ -1,6 +1,8 @@
 """IndexNow contracts: key hosted at the root, submission strictly best-effort."""
 import json
+import tempfile
 import unittest
+from pathlib import Path
 from unittest.mock import patch
 
 
@@ -146,6 +148,24 @@ class IndexNow(unittest.TestCase):
             self.assertFalse(indexing.ping(['https://uutistenlukija.fi/uutiset/x/']))
             self.assertFalse(indexing.ping(['https://example.com/other']))
             self.assertFalse(indexing.ping([]))
+
+    def test_deployed_guide_hash_is_submitted_only_on_change_and_never_raises(self):
+        from news_mvp.publish import submit_changed_guides
+        from news_mvp.store import database
+        url = 'https://uutistenlukija.fi/oppaat/joulumarkkinat-2026/'
+        with tempfile.TemporaryDirectory() as directory, database(Path(directory)) as store:
+            with patch('news_mvp.indexing.ping', return_value=True) as ping:
+                self.assertTrue(submit_changed_guides(store, {url: 'hash-a'}))
+                self.assertFalse(submit_changed_guides(store, {url: 'hash-a'}))
+                self.assertTrue(submit_changed_guides(store, {url: 'hash-b'}))
+            self.assertEqual(ping.call_count, 2)
+            self.assertEqual(ping.call_args.args[0], [url])
+            with patch('news_mvp.indexing.ping', side_effect=RuntimeError('offline')):
+                self.assertFalse(submit_changed_guides(store, {url: 'hash-c'}))
+            saved = store.db.execute(
+                'SELECT content_hash FROM guide_indexnow_submissions WHERE url=?', (url,)
+            ).fetchone()[0]
+            self.assertEqual(saved, 'hash-b')
 
 
 if __name__ == "__main__":
