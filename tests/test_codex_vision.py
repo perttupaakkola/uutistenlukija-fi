@@ -79,44 +79,63 @@ class CodexVision(unittest.TestCase):
         self.assertNotIn(b'secret-filename-hint', call['image_bytes'])
         self.assertNotIn('secret-filename-hint', call['prompt'])
 
-    def test_codex_failure_falls_back_to_google_and_is_logged(self):
+    def test_codex_usage_limit_raises_without_google_and_opens_breaker(self):
         fake = FakeCodex(None, returncode=1, stderr='You have hit your usage limit')
         with tempfile.TemporaryDirectory() as state:
             with providers.image_attempt({'title': 'x'}, state) as receipt, \
-                    mock.patch.object(providers, 'google_vision', return_value={'description': 'g'}) as google:
-                value, model = self._run(fake)
-                again, _ = self._run(fake)
+                    mock.patch.object(providers, 'google_vision') as google:
+                with self.assertRaises(imagery.GenerationError):
+                    self._run(fake)
+                with self.assertRaises(imagery.GenerationError):
+                    self._run(fake)
                 events = list(receipt['requests'])
-        self.assertEqual(value, {'description': 'g'}); self.assertEqual(again, {'description': 'g'})
-        self.assertEqual(model, 'google:' + providers.VISION_MODEL)
-        self.assertEqual(google.call_count, 2)
-        self.assertEqual(len(fake.calls), 1)  # usage limit opens the breaker
-        self.assertEqual([e['error_type'] for e in events], ['UsageLimitFallback', 'BreakerFallback'])
+        google.assert_not_called()
+        self.assertEqual(len(fake.calls), 1)  # usage limit: no retry, breaker opens
+        self.assertEqual([e['error_type'] for e in events], ['UsageLimit', 'BreakerOpen'])
         self.assertTrue(all(e['host'] == providers.CODEX_VISION_HOST for e in events))
 
-    def test_malformed_or_tool_using_reply_falls_back(self):
-        for fake in (FakeCodex('not json at all'),
-                     FakeCodex('{"description": "x"}', events=[
-                         {'type': 'item.completed', 'item': {'type': 'command_execution'}},
-                         {'type': 'turn.completed'}])):
-            providers._CODEX_VISION_STATE.update(down_until=0.0, failures=0)
-            with mock.patch.object(providers, 'google_vision', return_value={'description': 'g'}):
-                value, model = self._run(fake)
-            self.assertEqual(model, 'google:' + providers.VISION_MODEL)
+    def test_transient_codex_failure_is_retried_on_codex(self):
+        good = {'description': 'ok'}
+        calls = []
+        def flaky(raw, instruction, max_tokens=1200):
+            calls.append(1)
+            if len(calls) == 1:
+                raise imagery.GenerationError('Codex vision unavailable: TimeoutExpired')
+            return good
+        providers._CODEX_VISION_STATE.update(down_until=0.0, failures=0)
+        with mock.patch.object(providers, 'codex_vision', side_effect=flaky), \
+                mock.patch.object(providers, 'google_vision') as google:
+            value, model = providers.vision(_jpeg(), 'x', provider='codex-oauth')
+        self.assertEqual(value, good); self.assertEqual(len(calls), 2)
+        self.assertTrue(model.startswith('codex-oauth:'))
+        google.assert_not_called()
 
-    def test_timeout_falls_back(self):
+    def test_timeout_raises_without_google(self):
         class Slow:
             pid = 1; returncode = None
             def communicate(self, prompt=None, timeout=None):
                 if prompt is not None:
                     raise subprocess.TimeoutExpired('codex', timeout)
                 return '', ''
+        providers._CODEX_VISION_STATE.update(down_until=0.0, failures=0)
         with mock.patch('news_mvp.codex_images._binary', return_value='/bin/codex'), \
                 mock.patch.object(providers.subprocess, 'Popen', return_value=Slow()), \
                 mock.patch.object(providers.os, 'killpg'), \
-                mock.patch.object(providers, 'google_vision', return_value={'description': 'g'}):
-            value, model = providers.vision(_jpeg(), 'x', provider='codex-oauth')
-        self.assertEqual(value, {'description': 'g'})
+                mock.patch.object(providers, 'google_vision') as google:
+            with self.assertRaises(imagery.GenerationError):
+                providers.vision(_jpeg(), 'x', provider='codex-oauth')
+        google.assert_not_called()
+
+    def test_malformed_reply_never_uses_google(self):
+        for fake in (FakeCodex('not json at all'),
+                     FakeCodex('{"description": "x"}', events=[
+                         {'type': 'item.completed', 'item': {'type': 'command_execution'}},
+                         {'type': 'turn.completed'}])):
+            providers._CODEX_VISION_STATE.update(down_until=0.0, failures=0)
+            with mock.patch.object(providers, 'google_vision') as google:
+                with self.assertRaises(imagery.GenerationError):
+                    self._run(fake)
+            google.assert_not_called()
 
     def test_review_pixels_uses_codex_route_and_records_model(self):
         primary = {'approved': True, 'no_people': True, 'fit_score': 9, 'must_show_visible': [True],

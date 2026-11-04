@@ -207,28 +207,34 @@ def vision(raw, instruction, max_tokens=1200, provider=None):
     """Configured vision route. Returns ``(json_value, model_label)``.
 
     ``codex-oauth`` uses the ChatGPT subscription; any Codex failure (including usage
-    limits) falls back to Google for that call and is recorded as a bounded request event.
+    limits) is retried once on Codex and otherwise raised; there is no Google fallback.
     """
     from .imagery import GenerationError
     provider = provider or os.environ.get('UUTIS_VISION_PROVIDER', 'openai')
     if provider == 'codex-oauth':
+        # 4 Nov 2026: ChatGPT-only route. Google credits are depleted (HTTP 402), so there is
+        # no Google fallback: retry Codex once, then let the story stay image_pending.
         state = _CODEX_VISION_STATE
-        if time.time() >= state['down_until']:
+        if time.time() < state['down_until']:
+            request_event(CODEX_VISION_HOST, None, 'BreakerOpen')
+            raise GenerationError('Codex vision paused after repeated failures; retry next tick')
+        last = None
+        for _ in range(2):
             try:
                 value = codex_vision(raw, instruction, max_tokens)
                 state['failures'] = 0
                 request_event(CODEX_VISION_HOST, 200)
                 return value, 'codex-oauth:' + _codex_vision_model()
             except GenerationError as error:
+                last = error
                 state['failures'] += 1
                 limited = 'limit' in str(error)
-                if limited or state['failures'] >= 3:
-                    state['down_until'] = time.time() + (1800 if limited else 600)
-                request_event(CODEX_VISION_HOST, None,
-                              'UsageLimitFallback' if limited else 'CodexFallback')
-        else:
-            request_event(CODEX_VISION_HOST, None, 'BreakerFallback')
-        return google_vision(raw, instruction, max_tokens), 'google:' + VISION_MODEL
+                request_event(CODEX_VISION_HOST, None, 'UsageLimit' if limited else 'CodexError')
+                if limited:
+                    break
+        if 'limit' in str(last) or state['failures'] >= 4:
+            state['down_until'] = time.time() + (1800 if 'limit' in str(last) else 600)
+        raise GenerationError('Codex vision unavailable: ' + str(last)[:160])
     if provider == 'google':
         state = _GOOGLE_VISION_STATE
         if time.time() >= state['down_until']:
