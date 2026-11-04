@@ -31,7 +31,37 @@ NEWS_SITEMAP_LIMIT=1000
 
 
 def cmd(*args):
-    return subprocess.check_output(args,cwd=ROOT,text=True,stderr=subprocess.DEVNULL).strip()
+    return subprocess.check_output(args,cwd=ROOT,text=True,stderr=subprocess.PIPE).strip()
+
+
+class DispatchRefused(RuntimeError):
+    """`gh workflow run` exited non-zero: GitHub did not accept the deploy dispatch."""
+
+
+DISPATCH_REFUSAL_LIMIT = 16  # ~4 h of 15-minute ticks
+_REFUSED_PREFIX = re.compile(r'^DispatchRefused (\d+): ')
+
+
+def dispatch_deploy():
+    """Start the deploy workflow; raise DispatchRefused with GitHub's own words on failure.
+
+    4 Nov 2026: during a GitHub incident `gh workflow run` exited 1. The error was
+    swallowed and the row left 'unknown', which every later tick read as "already
+    dispatched, wait for the run to appear" - but no run existed, so the article
+    would have waited forever.
+    """
+    try:
+        cmd('gh','workflow','run','deploy.yml','--repo',REPO,'--ref','main')
+    except subprocess.CalledProcessError as error:
+        detail=(error.stderr or error.output or '').strip()[-300:]
+        raise DispatchRefused(f'gh workflow run exit {error.returncode}: {detail}') from error
+
+
+def refused_dispatch_count(previous_error):
+    """Next refusal counter, or None once DISPATCH_REFUSAL_LIMIT refusals are used up."""
+    match=_REFUSED_PREFIX.match(previous_error or '')
+    count=(int(match.group(1)) if match else 0)+1
+    return count if count<=DISPATCH_REFUSAL_LIMIT else None
 
 
 def api(path, data=None, method=None):
@@ -938,7 +968,17 @@ def site_refresh(config, config_path):
                     store.db.execute("UPDATE site_refreshes SET status='dispatching' WHERE id=?",
                                      (row['id'],))
                 external_started = True
-                cmd('gh','workflow','run','deploy.yml','--repo',REPO,'--ref','main')
+                try:
+                    dispatch_deploy()
+                except DispatchRefused as refused:
+                    count = refused_dispatch_count(row.get('error'))
+                    if count is None:
+                        raise
+                    with store.db:
+                        store.db.execute("UPDATE site_refreshes SET status='prepared',error=? WHERE id=?",
+                                         (f'DispatchRefused {count}: '+safe_error(refused),row['id']))
+                    return {'status':'dispatch_retry','site_refresh_id':row['id'],
+                            'remote_commit':row['remote_commit'],'reason':safe_error(refused)}
                 with store.db:
                     store.db.execute("UPDATE site_refreshes SET status='dispatched' WHERE id=?",
                                      (row['id'],))
@@ -1080,7 +1120,18 @@ def publish(store,job,state,config_path):
             guard(config_path)
             cmd('gh','workflow','enable',WORKFLOW,'--repo',REPO)
             with store.db:store.db.execute("UPDATE publications SET status='dispatching' WHERE job_id=?",(job['id'],))
-            cmd('gh','workflow','run','deploy.yml','--repo',REPO,'--ref','main')
+            try:
+                dispatch_deploy()
+            except DispatchRefused as refused:
+                # GitHub refused the dispatch, so no run exists: go back to
+                # 'prepared' so the next tick checks for a run first and then
+                # dispatches again. Bounded; after the limit the row stays
+                # 'unknown' and the problem monitor flags it.
+                count=refused_dispatch_count(row.get('error'))
+                if count is None:raise
+                with store.db:store.db.execute("UPDATE publications SET status='prepared',error=? WHERE job_id=?",
+                                               (f'DispatchRefused {count}: '+safe_error(refused),job['id']))
+                return {'status':'dispatch_retry','job_id':job['id'],'remote_commit':row['remote_commit'],'reason':safe_error(refused)}
             with store.db:store.db.execute("UPDATE publications SET status='dispatched' WHERE job_id=?",(job['id'],))
             return {'status':'dispatched','job_id':job['id'],'remote_commit':row['remote_commit']}
         run=runs[0]

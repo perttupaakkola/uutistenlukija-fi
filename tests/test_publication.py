@@ -76,6 +76,41 @@ class Publication(unittest.TestCase):
             self.assertEqual(sum(args[:3]==('gh','workflow','run') for args in calls),1)
             self.assertEqual(store.db.execute('SELECT count(*) FROM publications').fetchone()[0],1)
 
+    def test_refused_dispatch_returns_to_prepared_and_redispatches_bounded(self):
+        # 4 Nov 2026 real case: article 5a0d3abc, commit pushed, `gh workflow run`
+        # exited 1 during a GitHub incident; row stuck in 'unknown' awaiting a run forever.
+        import subprocess
+        from news_mvp import publish as pub
+        draft=FixtureModel().call('writer',self.packet);draft['image']={'sha256':'a'*64,'local_path':'media/'+('a'*64)+'.jpg','url':'https://example.invalid/image.jpg','source_url':'https://example.invalid/story','license_url':'https://example.invalid/rights','license':'isolated test rights','alt':'Test','credit':'Test'}
+        packet=copy.deepcopy(self.packet);packet['image']=draft['image'];packet['fixture']=False
+        job={'id':self.job,'packet':json.dumps(packet),'draft':json.dumps(draft),'review':json.dumps({'approved':True,'draft_sha256':digest(draft),'reasons':['isolated test']})}
+        with database(self.config['state_dir']) as store:
+            ensure_table(store)
+            store.db.execute('INSERT INTO publications(job_id,packet_sha,draft_sha,image_sha,source_commit,remote_commit,status) VALUES(?,?,?,?,?,?,?)',
+                (self.job,digest(packet),digest(draft),'a'*64,'source','a3d44b042e0dddf3a4117e2db88df3dbdd697f8f','prepared'));store.db.commit()
+            calls=[]
+            def refusing(*args):
+                calls.append(args)
+                if args[:3]==('gh','workflow','run'):raise subprocess.CalledProcessError(1,args,output='',stderr='HTTP 503: Service Unavailable')
+                return 'source'
+            with patch('news_mvp.publish.guard'),patch('news_mvp.publish.cmd',side_effect=refusing),patch('news_mvp.publish.api',return_value={'object':{'sha':'a3d44b042e0dddf3a4117e2db88df3dbdd697f8f'}}),patch('news_mvp.publish.matching_runs',return_value=[]):
+                for attempt in range(1,pub.DISPATCH_REFUSAL_LIMIT+1):
+                    result=publish(store,job,self.config['state_dir'],self.config_path)
+                    self.assertEqual(result['status'],'dispatch_retry')
+                    self.assertIn('HTTP 503',result['reason'])
+                    row=store.db.execute('SELECT status,error FROM publications').fetchone()
+                    self.assertEqual(row['status'],'prepared')
+                    self.assertTrue(row['error'].startswith(f'DispatchRefused {attempt}: '))
+                with self.assertRaises(pub.DispatchRefused):publish(store,job,self.config['state_dir'],self.config_path)
+                self.assertEqual(store.db.execute('SELECT status FROM publications').fetchone()[0],'unknown')
+                self.assertEqual(sum(a[:3]==('gh','workflow','run') for a in calls),pub.DISPATCH_REFUSAL_LIMIT+1)
+            with store.db:store.db.execute("UPDATE publications SET status='prepared',error='DispatchRefused 1: x'")
+            calls=[]
+            with patch('news_mvp.publish.guard'),patch('news_mvp.publish.cmd',side_effect=lambda *a:calls.append(a) or 'source'),patch('news_mvp.publish.api',return_value={'object':{'sha':'a3d44b042e0dddf3a4117e2db88df3dbdd697f8f'}}),patch('news_mvp.publish.matching_runs',return_value=[]):
+                self.assertEqual(publish(store,job,self.config['state_dir'],self.config_path)['status'],'dispatched')
+                self.assertEqual(publish(store,job,self.config['state_dir'],self.config_path)['status'],'awaiting_dispatch_visibility')
+            self.assertEqual(sum(a[:3]==('gh','workflow','run') for a in calls),1)
+
     def test_deployed_source_skips_collection_and_publication_on_next_tick(self):
         recipe='sources/monterrey-2026-09-11.json';data=json.loads((ROOT/recipe).read_text());identity=digest('url:'+data['url'])
         cfg=json.loads(self.config_path.read_text());cfg.update(backend='hermes',source_recipes=[recipe]);self.config_path.write_text(json.dumps(cfg))
