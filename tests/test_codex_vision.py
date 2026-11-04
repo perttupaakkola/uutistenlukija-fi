@@ -211,3 +211,36 @@ class ArticleReviewBudget(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+
+
+class GoogleBillingFallback(unittest.TestCase):
+    """Real case 4 Nov 2026: every Gemini call answered HTTP 402 'prepayment credits depleted'."""
+
+    def setUp(self):
+        providers._CODEX_VISION_STATE.update(down_until=0.0, failures=0)
+        providers._GOOGLE_VISION_STATE.update(down_until=0.0)
+
+    def _env(self):
+        return mock.patch.dict('os.environ', {'UUTIS_VISION_PROVIDER': 'google'})
+
+    def test_depleted_credits_fall_over_to_codex_and_open_breaker(self):
+        from news_mvp.imagery import GenerationError
+        refusal = GenerationError('generativelanguage.googleapis.com request unavailable: HTTP 402')
+        with self._env(), mock.patch.object(providers, 'google_vision', side_effect=refusal) as google, \
+                mock.patch.object(providers, 'codex_vision', return_value={'description': 'c'}) as codex:
+            first = providers.vision(_jpeg(), 'x')
+            second = providers.vision(_jpeg(), 'x')
+        self.assertEqual(first[0], {'description': 'c'})
+        self.assertTrue(first[1].startswith('codex-oauth:'))
+        self.assertEqual(second[0], {'description': 'c'})
+        self.assertEqual(google.call_count, 1)  # breaker: no second paid refusal per tick
+        self.assertEqual(codex.call_count, 2)
+
+    def test_non_billing_google_error_is_not_masked(self):
+        from news_mvp.imagery import GenerationError
+        with self._env(), mock.patch.object(providers, 'google_vision',
+                                            side_effect=GenerationError('Google vision returned no valid JSON review')), \
+                mock.patch.object(providers, 'codex_vision') as codex:
+            with self.assertRaises(GenerationError):
+                providers.vision(_jpeg(), 'x')
+        codex.assert_not_called()

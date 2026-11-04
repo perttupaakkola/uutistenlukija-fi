@@ -116,6 +116,11 @@ CODEX_VISION_EFFORT = 'low'
 CODEX_VISION_TIMEOUT = 120
 # Per-process breaker: a publisher tick is one process, so this never outlives it.
 _CODEX_VISION_STATE = {'down_until': 0.0, 'failures': 0}
+GOOGLE_VISION_HOST = 'google-vision-fallback'
+GOOGLE_BILLING_REFUSAL = re.compile(r'HTTP (402|429)\b')
+GOOGLE_BREAKER_SECONDS = 1800
+# Per-process breaker for Google billing/quota refusals (code guard: google-billing-fallback).
+_GOOGLE_VISION_STATE = {'down_until': 0.0}
 
 
 def _codex_vision_model():
@@ -225,7 +230,23 @@ def vision(raw, instruction, max_tokens=1200, provider=None):
             request_event(CODEX_VISION_HOST, None, 'BreakerFallback')
         return google_vision(raw, instruction, max_tokens), 'google:' + VISION_MODEL
     if provider == 'google':
-        return google_vision(raw, instruction, max_tokens), 'google:' + VISION_MODEL
+        state = _GOOGLE_VISION_STATE
+        if time.time() >= state['down_until']:
+            try:
+                return google_vision(raw, instruction, max_tokens), 'google:' + VISION_MODEL
+            except GenerationError as error:
+                # 4 Nov 2026: depleted Gemini prepaid credits (HTTP 402) held every story for
+                # 6+ hours because Google had no fallback. A billing/quota refusal is not a
+                # per-image verdict: open a bounded breaker and use the Codex route instead.
+                if not GOOGLE_BILLING_REFUSAL.search(str(error)):
+                    raise
+                state['down_until'] = time.time() + GOOGLE_BREAKER_SECONDS
+                request_event(GOOGLE_VISION_HOST, None, 'BillingFallback')
+        else:
+            request_event(GOOGLE_VISION_HOST, None, 'BreakerFallback')
+        value = codex_vision(raw, instruction, max_tokens)
+        request_event(CODEX_VISION_HOST, 200)
+        return value, 'codex-oauth:' + _codex_vision_model()
     raise GenerationError('Configured vision provider has no shared route')
 
 
