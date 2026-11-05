@@ -188,6 +188,27 @@ class LegibleTextRejection(unittest.TestCase):
             with self.subTest(description=description):
                 self.assertFalse(has_legible_text(description))
 
+    def test_reviewer_absence_sentences_are_not_flagged(self):
+        """5 Nov 2026 real reviewer output: 3 approved pictures discarded as 'texty'."""
+        from news_mvp.imagery import has_legible_text
+        for description in (
+                'An apartment building under construction with scaffolding and a tower crane '
+                'stands between older concrete apartment blocks. A metal fence borders a gravel '
+                'path among autumn trees beneath an overcast sky. No people or readable text are '
+                'visible.',
+                'Through the windshield, a wet road and streetlights are visible at dusk. '
+                'No people or readable markings are visible.',
+                'A quiet meeting room. No people, text or logos appear.',
+                'Stacks of binders on a table. Neither people nor readable text are present.',
+                'There are no people, logos or legible words in the image.'):
+            with self.subTest(description=description):
+                self.assertFalse(has_legible_text(description))
+
+    def test_absence_elsewhere_does_not_hide_real_text(self):
+        from news_mvp.imagery import has_legible_text
+        self.assertTrue(has_legible_text('No people are visible. A sign reads STOP by the road.'))
+        self.assertTrue(has_legible_text('There is no text on the wall, but the van has a logo.'))
+
     def test_missing_description_is_not_flagged(self):
         """The checker is best effort; a missing description must not block an image."""
         from news_mvp.imagery import has_legible_text

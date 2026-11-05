@@ -1109,6 +1109,12 @@ def _rejected_image_hashes(state_dir):
     return result
 
 
+def _generated_refusal(reason):
+    """Record why a generated picture was refused in the attempt receipt (no content)."""
+    from .image_providers import request_event
+    request_event('generated-image-refused', error=reason)
+
+
 def _reject_generated(model, subject, prompt, state_dir):
     from .image_providers import reject_kie, reject_google
     if model and model.startswith('codex-oauth:'):
@@ -1118,6 +1124,14 @@ def _reject_generated(model, subject, prompt, state_dir):
         reject_kie(subject, prompt, state_dir)
     elif model and model.startswith('google:'):
         reject_google(subject, prompt, state_dir)
+
+
+_ABSENCE_SENTENCE = re.compile(
+    r'(?:^|(?<=[.;!?]))\s*(?:there\s+(?:is|are)\s+|it\s+(?:has|shows)\s+)?(?:no|neither)\b'
+    r'[^.;!?]*?(?=,?\s*\b(?:but|except|although|however|while)\b|[.;!?]|$)',
+    re.I)
+_ABSENCE_PHRASE = re.compile(r'\b(?:with\s+no|without(?:\s+any)?)\b'
+    r'[^.;!?,]*?(?=\s*\b(?:but|except|although|however|while)\b|[.;!?,]|$)', re.I)
 
 
 def has_legible_text(description):
@@ -1135,11 +1149,15 @@ def has_legible_text(description):
     """
     if not description:
         return False
-    lowered = description.lower()
-    # An explicit statement of absence must win, or the negation itself trips the patterns.
-    if re.search(r'\bno (legible |visible |readable )?text\b|\bwithout (any )?(visible |legible )?'
-                 r'(text|lettering|words)\b|\bno lettering\b|\bno words\b', lowered):
-        return False
+    # Statements of absence ("No people or readable text are visible.", "Neither people nor
+    # text appear.", "... with no text visible") are removed clause by clause before the
+    # positive patterns run. 5 Nov 2026: the ChatGPT reviewer began ending every description
+    # with "No people or readable text are visible."; the old whole-text absence check only
+    # knew "no text" directly after "no", so the words "readable text" counted as text and
+    # every approved generated picture was thrown away. Clause removal also keeps a real
+    # positive ("A sign reads STOP.") from being hidden by an unrelated "no text" elsewhere.
+    description = _ABSENCE_SENTENCE.sub(' ', description)
+    description = _ABSENCE_PHRASE.sub(' ', description)
     return bool(re.search(
         r'legible text|readable text|visible text|text on|text (?:is|are|reads)\b|'
         r'lettering|logo|\bthe word\b|\bwords?\b[^.]{0,20}\bon\b|'
@@ -1661,6 +1679,7 @@ def _build_image(draft, state_dir, category='', model=DEFAULT_MODEL, attempts=3,
         jpeg = _jpg(raw)
         sha = hashlib.sha256(jpeg).hexdigest()
         if sha in used_images:
+            _generated_refusal('duplicate')
             _reject_generated(used_model, subject, prompt, state_dir)
             continue
         pixel_review = None
@@ -1669,13 +1688,23 @@ def _build_image(draft, state_dir, category='', model=DEFAULT_MODEL, attempts=3,
                 pixel_review = review_pixels(jpeg, draft, generated=True,
                     **({'concept': decision} if exact_concept else {}))
             except GenerationError:
+                _generated_refusal('review_unavailable')
                 continue
             if (not pixel_review['approved'] or
                     (exact_concept and pixel_review.get('fit_score', -1) < MIN_REAL_FIT)):
+                _generated_refusal('review_not_approved' if not pixel_review['approved']
+                                   else 'fit_below_threshold')
                 _reject_generated(used_model, subject, prompt, state_dir)
                 continue
             description = pixel_review['description']
-            if has_legible_text(description):
+            audit = pixel_review.get('text_audit')
+            # The dedicated pixel text audit (readable_text_present) is the stronger evidence;
+            # the prose keyword scan is only a fallback when no audit ran.
+            texty = (audit['readable_text_present'] is True
+                     if isinstance(audit, dict) and type(audit.get('readable_text_present')) is bool
+                     else has_legible_text(description))
+            if texty:
+                _generated_refusal('text_audit' if isinstance(audit, dict) else 'text_keywords')
                 _reject_generated(used_model, subject, prompt, state_dir)
                 continue
         media = Path(state_dir) / 'media'
