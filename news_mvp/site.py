@@ -855,6 +855,8 @@ TIMELY_GUIDES = (
      "Posti 16.–21.12., Matkahuolto 21.12., PostNord 22.12."),
     ("2026-12-20", "/oppaat/kauneimmat-joululaulut-2026/", "Kauneimmat Joululaulut 2026",
      "Vilkkain päivä su 13.12., loppiaiseen asti"),
+    ("2026-12-13", "/oppaat/lucian-paiva-2026/", "Lucian päivä 2026",
+     "Su 13.12.: kruunajaiset ja Lucia-kulkueet"),
     ("2026-12-26", "/oppaat/joulu-2026/", "Joulu 2026: välipäivät ja uusivuosi",
      "Jouluaatto torstaina 24.12."),
     ("2027-12-31", "/oppaat/kelan-maksupaivat-2026-2027/", "Kelan maksupäivät 2026–2027",
