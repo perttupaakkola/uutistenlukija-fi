@@ -251,9 +251,11 @@ class PdfAuditRemediation(unittest.TestCase):
         about = (output / "tietoja/index.html").read_text()
         self.assertNotIn("mailto:", rendered.casefold())
         self.assertNotIn("info@uutistenlukija", rendered.casefold())
-        self.assertIn("Varmistettua yleisön yhteydenottokanavaa ei julkaista", about)
+        self.assertNotIn("Sivusto ei väitä", about)
+        self.assertNotIn("yhteydenottokanavaa ei julkaista", about)
+        self.assertIn("Uutistenlukijan toimitus", about)
         article = (output / site.article_path(self.template) / "index.html").read_text()
-        self.assertIn('href="/tietoja/#korjaukset"', article)
+        self.assertIn('href="/korjaukset/"', article)
         self.assertIn('data-share-url="https://uutistenlukija.fi/', article)
 
     def test_scoped_normal_text_contrast_rules_exceed_four_point_five(self):

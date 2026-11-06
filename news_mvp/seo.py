@@ -15,8 +15,31 @@ import re
 
 SITE = "https://uutistenlukija.fi"
 PUBLISHER = "Uutistenlukija"
+PUBLISHER_ID = SITE + "/#organization"
+PUBLISHER_LOGO = SITE + "/mvp-assets/images/publisher-logo.png"
+BLUESKY_PROFILE = "https://bsky.app/profile/uutistenlukija.bsky.social"
+ABOUT_URL = SITE + "/tietoja/"
+CORRECTIONS_URL = SITE + "/korjaukset/"
 DESCRIPTION_MAX = 158
 TITLE_MAX = 60
+
+
+def news_media_organization():
+    """One shared publisher identity for site-level and article structured data."""
+    return {
+        "@type": "NewsMediaOrganization",
+        "@id": PUBLISHER_ID,
+        "name": PUBLISHER,
+        "url": SITE,
+        "logo": {
+            "@type": "ImageObject",
+            "url": PUBLISHER_LOGO,
+        },
+        "sameAs": [BLUESKY_PROFILE],
+        "publishingPrinciples": ABOUT_URL,
+        "ethicsPolicy": ABOUT_URL,
+        "correctionsPolicy": CORRECTIONS_URL,
+    }
 
 
 def _plain(value):
@@ -133,10 +156,11 @@ def news_article_jsonld(title, description, canonical_path, published, modified,
         "datePublished": published,
         "dateModified": modified or published,
         "url": url,
-        "publisher": {
+        "publisher": news_media_organization(),
+        "author": {
             "@type": "Organization",
-            "name": PUBLISHER,
-            "url": SITE,
+            "name": "Uutistenlukijan toimitus",
+            "url": ABOUT_URL,
         },
         "isAccessibleForFree": True,
     }

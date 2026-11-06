@@ -80,7 +80,7 @@ class SiteMetadata(unittest.TestCase):
         hrefs = self._footer_hrefs(text)
         self.assertTrue(hrefs, "public page footer has no links")
         self.assertGreaterEqual(len(set(hrefs)), 3, f"public footer links: {hrefs}")
-        for required in ("/tietosuoja/", "/lahteet/", "/rss.xml"):
+        for required in ("/tietosuoja/", "/tietoja/", "/korjaukset/", "/lahteet/", "/rss.xml"):
             self.assertIn(required, hrefs, f"public footer is missing {required}: {hrefs}")
 
     def _render_public(self):
@@ -131,6 +131,17 @@ class SiteMetadata(unittest.TestCase):
         self.assertEqual(websites[0].get("name"), site.SITE_NAME)
         self.assertEqual(websites[0].get("url"), site.SITE_URL)
         self.assertEqual(websites[0].get("description"), site.HOME_DESCRIPTION)
+        organizations = [payload for payload in payloads
+                         if payload.get("@type") == "NewsMediaOrganization"]
+        self.assertEqual(len(organizations), 1)
+        organization = organizations[0]
+        self.assertEqual(organization["name"], site.SITE_NAME)
+        self.assertEqual(organization["url"], site.SITE_URL.rstrip("/"))
+        self.assertEqual(organization["logo"]["url"], site.seo.PUBLISHER_LOGO)
+        self.assertEqual(organization["sameAs"], [site.seo.BLUESKY_PROFILE])
+        self.assertEqual(organization["publishingPrinciples"], site.seo.ABOUT_URL)
+        self.assertEqual(organization["ethicsPolicy"], site.seo.ABOUT_URL)
+        self.assertEqual(organization["correctionsPolicy"], site.seo.CORRECTIONS_URL)
         item_lists = [payload for payload in payloads if payload.get("@type") == "ItemList"]
         self.assertEqual(len(item_lists), 1)
         self.assertIn(
@@ -143,11 +154,46 @@ class SiteMetadata(unittest.TestCase):
             item_lists[0]["itemListElement"],
         )
         article = self._read(output, self.job)
+        article_payload = next(payload for payload in self._jsonld(article)
+                               if payload.get("@type") == "NewsArticle")
+        self.assertEqual(article_payload["publisher"], site.seo.news_media_organization())
+        self.assertEqual(article_payload["author"], {
+            "@type": "Organization",
+            "name": "Uutistenlukijan toimitus",
+            "url": site.seo.ABOUT_URL,
+        })
         self.assertIn("Helsingin kaupunki", article)
         self.assertNotIn(
             "Teksti on tuotettu tekoälyn avulla ja tarkastettu erillisessä lähdetarkistuksessa.",
             article,
         )
+
+        root = self._site_root(output)
+        about = (root / "tietoja/index.html").read_text(encoding="utf-8")
+        corrections = (root / "korjaukset/index.html").read_text(encoding="utf-8")
+        sitemap = (root / "sitemap.xml").read_text(encoding="utf-8")
+        self.assertNotIn("Sivusto ei väitä", about)
+        self.assertNotIn("yhteydenottokanavaa ei julkaista", about)
+        self.assertIn("Uutistenlukijan toimitus", about)
+        self.assertIn(site.seo.BLUESKY_PROFILE, about)
+        about_organizations = [payload for payload in self._jsonld(about)
+                               if payload.get("@type") == "NewsMediaOrganization"]
+        self.assertEqual(about_organizations, [organization])
+        self.assertIn("Korjausperiaatteet", corrections)
+        self.assertIn("Ei listattavia korjauksia.", corrections)
+        self.assertIn("https://uutistenlukija.fi/korjaukset/", sitemap)
+
+    def test_corrections_page_lists_recorded_correction(self):
+        packet = {"article_status": {
+            "kind": "corrected",
+            "at": "2026-11-06T08:15:00+00:00",
+            "note": "Virheellinen luku korjattiin.",
+        }}
+        rendered = site.corrections_page_body([(self.job, packet, self.draft, {})])
+        self.assertIn(self.draft["title"], rendered)
+        self.assertIn("korjattu", rendered)
+        self.assertIn("6.11.2026", rendered)
+        self.assertNotIn("Ei listattavia korjauksia", rendered)
 
     def test_private_page_excludes_public_navigation(self):
         with database(self.state) as store:

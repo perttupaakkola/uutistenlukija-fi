@@ -24,8 +24,9 @@ class OwnerCleanup(ArticleAndCategoryRendering):
         self.assertIn('href="#lahde-1"', html)
         for route in ('index.html', 'categories/kulttuuri/index.html'):
             self.assertNotIn('class="reader-page"', (output / route).read_text())
-        self.assertIn('automatisoitu', site.about_page_body())
-        self.assertIn('ihmisen ennakkotarkastamia', site.about_page_body())
+        self.assertIn('tekoälyn avulla linkitetyistä alkuperäislähteistä', site.about_page_body())
+        self.assertIn('Uutistenlukijan toimitus', site.about_page_body())
+        self.assertNotIn('ihmisen ennakkotarkastamia', site.about_page_body())
 
     def test_minimal_reuse_keeps_only_publisher_licence_and_cc_changes(self):
         sources = copy.deepcopy(self.packet['sources'])

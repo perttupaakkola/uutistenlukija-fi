@@ -28,6 +28,7 @@ HOMEPAGE_CENTER_ROWS = 4
 HOMEPAGE_TOPIC_LIMIT = 7
 HELSINKI = ZoneInfo("Europe/Helsinki")
 ABOUT_PATH = "/tietoja/"
+CORRECTIONS_PATH = "/korjaukset/"
 PRIVACY_PATH = "/tietosuoja/"
 EARNINGS_METHOD_PATH = "/talous/menetelma/"
 # These are the established populated desks. Empty routes remain available in the
@@ -499,6 +500,14 @@ def website_jsonld():
     }
 
 
+def news_media_organization_jsonld():
+    """Site-level publisher identity, sharing the article publisher fields."""
+    return {
+        "@context": "https://schema.org",
+        **seo.news_media_organization(),
+    }
+
+
 def listing_page_path(page_number):
     """Public path of one listing page: page 1 is the homepage, page N is /sivu/N/."""
     return "/" if page_number == 1 else f"/sivu/{page_number}/"
@@ -581,7 +590,9 @@ def homepage_head_meta(articles, path="/", page_title="Uusimmat uutiset", start_
         f'<meta name="twitter:title" content="{esc(title)}">'
         f'<meta name="twitter:description" content="{esc(description)}">'
     ) + image_meta
-    return metas + jsonld_script(website_jsonld()) + jsonld_script(home_item_list_jsonld(articles, start_position))
+    organization = jsonld_script(news_media_organization_jsonld()) if path == "/" else ""
+    return (metas + jsonld_script(website_jsonld()) + organization
+            + jsonld_script(home_item_list_jsonld(articles, start_position)))
 
 
 def atomic_write(path, value):
@@ -979,7 +990,7 @@ def article_actions_html(link, category, public, title=""):
 
 def article_correction_html():
     """Quiet process link placed after the article's evidence and rights."""
-    return f'<a class="article-corrections" href="{ABOUT_PATH}#korjaukset">Korjauskäytäntö</a>'
+    return f'<a class="article-corrections" href="{CORRECTIONS_PATH}">Korjauskäytäntö</a>'
 
 
 def listing_feed_html(items, empty_text, recovery_html=""):
@@ -1164,31 +1175,45 @@ def earnings_baseline_html(packet):
 
 
 def about_page_body():
-    """Truthful service, process and correction policy without an unproved contact."""
+    """Short reader-facing description of the service and its publisher."""
     return ('<article class="story about-page">'
             '<h1>Tietoa Uutistenlukijasta</h1>'
-            '<p>Uutistenlukija on automaattisesti tuotettu suomenkielinen uutispalvelu. '
-            'Palvelun ylläpito vastaa teknisestä tuotannosta ja julkaisuprosessista. '
-            'Sivusto ei väitä, että jutut olisivat nimetyn toimittajan kirjoittamia tai ihmisen ennakkotarkastamia.</p>'
-            '<h2>Mitä palvelu kattaa</h2>'
-            '<p>Palvelu kokoaa rajatun uutisvirran kelpuutetuista virallisista ja avoimista lähteistä. '
-            'Se ei ole kattava uutistoimisto eikä lupaa seurata kaikkia aiheita, alueita tai näkökulmia.</p>'
-            '<h2 id="prosessi">Miten juttu syntyy</h2>'
-            '<ol><li>Lähdeaineisto kerätään kelpuutetusta lähteestä ja sidotaan tallennettuun lähdeosoitteeseen.</li>'
-            '<li>Tekoäly laatii suomenkielisen luonnoksen vain tallennettujen lähdekatkelmien perusteella.</li>'
-            '<li>Erillinen automatisoitu tarkistus vertaa väitteitä lähteisiin ja vaatii kappalekohtaiset viitteet.</li>'
-            '<li>Kuva valitaan ja tarkistetaan erillisillä relevanssi- ja käyttöoikeussäännöillä.</li>'
-            '<li>Julkaisu tapahtuu vain, jos lähde-, rakenne-, kuva- ja julkaisuportit hyväksyvät saman tallennetun version.</li></ol>'
-            '<p>Automaatio ja lähteet voivat olla puutteellisia. Artikkelin lähteet ja kuvan oikeudet '
-            'auttavat arvioimaan yksittäistä juttua.</p>'
-            '<h2 id="korjaukset">Korjaukset ja poistot</h2>'
-            '<p>Vahvistettu olennainen korjaus merkitään juttuun päivämäärineen. Jos jutun julkaisemista ei voida enää '
-            'perustella, sisältö voidaan korvata poistosta kertovalla ilmoituksella samalla osoitteella.</p>'
-            '<p>Varmistettua yleisön yhteydenottokanavaa ei julkaista ennen kuin sen toimivuus on osoitettu. '
-            'Sivulla ei siksi ole tällä hetkellä sähköpostiosoitetta tai yhteydenottolomaketta.</p>'
-            '<h2>Prosessikuvaus</h2>'
-            '<p>Versio 1.0 · tarkistettu 30.9.2026. Vanha juttu säilyttää siihen tallennetut lähde- ja '
-            'tuotantotiedot, vaikka palvelun myöhempi prosessikuvaus muuttuisi.</p>'
+            '<p>Uutistenlukija on suomalainen uutispalvelu, joka kertoo ministeriöiden, kaupunkien, '
+            'poliisin, Tilastokeskuksen, EU:n ja muiden virallisten ja julkisten lähteiden uutisista.</p>'
+            '<h2>Miten jutut tehdään</h2>'
+            '<p>Jutut kirjoitetaan tekoälyn avulla linkitetyistä alkuperäislähteistä. Jokaisessa jutussa '
+            'on linkit sen lähteisiin, ja jutun tiedot tarkistetaan automaattisesti niitä vasten ennen julkaisua.</p>'
+            '<h2>Julkaisija</h2>'
+            '<p>Vastaava julkaisija on <strong>Uutistenlukijan toimitus</strong>.</p>'
+            '<p><a href="' + CORRECTIONS_PATH + '">Korjausperiaatteet</a> · '
+            '<a href="' + SOURCES_PATH + '">Lähteet ja tuotantotapa</a> · '
+            '<a href="' + seo.BLUESKY_PROFILE + '" rel="me noopener noreferrer">Uutistenlukija Blueskyssa</a></p>'
+            '</article>')
+
+
+def corrections_page_body(articles):
+    """Correction policy plus the corrected stories recorded in this render."""
+    corrected = []
+    for job, packet, draft, _review in articles:
+        status = packet.get("article_status")
+        if isinstance(status, dict) and status.get("kind") == "corrected":
+            corrected.append((job, draft, status))
+    if corrected:
+        rows = "".join(
+            f'<li><a href="/{article_path(job)}">{esc(draft["title"])}</a> – '
+            f'korjattu {time_html(status["at"])}.</li>'
+            for job, draft, status in corrected
+        )
+        listing = f'<ul>{rows}</ul>'
+    else:
+        listing = '<p>Ei listattavia korjauksia.</p>'
+    return ('<article class="story about-page">'
+            '<h1>Korjausperiaatteet</h1>'
+            '<p>Korjaamme jutussa havaitun virheen mahdollisimman pian. Korjaus merkitään juttuun '
+            'ja merkinnässä kerrotaan korjauksen päivämäärä sekä mitä muutettiin.</p>'
+            '<p>Vanhentunutta juttua voidaan päivittää, jos uudet tiedot täydentävät sitä. Juttu voidaan '
+            'myös poistaa, jos sen pitäminen julkaistuna ei enää ole perusteltua.</p>'
+            '<h2>Korjatut jutut</h2>' + listing +
             '</article>')
 
 
@@ -1463,6 +1488,7 @@ def page(title, body, canonical_path=None, head_meta="", readability_present=Tru
                           '<li><a href="/categories/talous/">Talous</a></li></ul></div>'
                           '<div class="site-footer-col"><h3>Palvelu</h3><ul class="site-footer-links">'
                           f'<li><a href="{ABOUT_PATH}">Tietoa Uutistenlukijasta</a></li>'
+                          f'<li><a href="{CORRECTIONS_PATH}">Korjausperiaatteet</a></li>'
                           f'<li><a href="{SOURCES_PATH}">Lähteet ja tuotantotapa</a></li>'
                           f'<li><a href="{EARNINGS_METHOD_PATH}">Tulosuutisten menetelmä</a></li>'
                           '<li><a href="/ai-kuvat/">AI-kuvien käyttöehdot</a></li>'
@@ -1509,7 +1535,7 @@ def page(title, body, canonical_path=None, head_meta="", readability_present=Tru
                  '<div class="menu-directory__group"><p class="menu-directory__title">Palvelu</p><ul>'
                  f'<li><a href="{LATEST_PATH}">Tuoreimmat</a></li>'
                  f'<li><a href="{ABOUT_PATH}">Tietoa Uutistenlukijasta</a></li>'
-                 f'<li><a href="{ABOUT_PATH}#korjaukset">Korjauskäytäntö</a></li>'
+                 f'<li><a href="{CORRECTIONS_PATH}">Korjausperiaatteet</a></li>'
                  f'<li><a href="{SOURCES_PATH}">Lähteet ja tuotantotapa</a></li></ul></div>'
                  '<div class="menu-directory__group"><p class="menu-directory__title">Asetukset</p><ul>'
                  f'<li class="theme-menu-item">{menu_theme_button}</li>'
@@ -2067,7 +2093,13 @@ def render_site(store, output_dir, state_dir=None, public=False, include_ids=Non
                  page(sources_title, sources_page_body(), SOURCES_PATH if public else None, snapshot=snapshot))
     about_title = "Tietoa Uutistenlukijasta"
     atomic_write(output_dir / "tietoja/index.html",
-                 page(about_title, about_page_body(), ABOUT_PATH if public else None, snapshot=snapshot))
+                 page(about_title, about_page_body(), ABOUT_PATH if public else None,
+                      head_meta=jsonld_script(news_media_organization_jsonld()) if public else "",
+                      snapshot=snapshot))
+    corrections_title = "Korjausperiaatteet"
+    atomic_write(output_dir / "korjaukset/index.html",
+                 page(corrections_title, corrections_page_body(articles),
+                      CORRECTIONS_PATH if public else None, snapshot=snapshot))
     method_title = "Tulosuutisten trendiodotus"
     atomic_write(output_dir / "talous/menetelma/index.html",
                  page(method_title, earnings_method_page_body(),

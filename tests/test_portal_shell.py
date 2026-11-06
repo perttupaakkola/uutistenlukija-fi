@@ -36,7 +36,7 @@ DIRECTORY_HREFS = ["/categories/kotimaa/", "/categories/ulkomaat/",
                    "/categories/talous/", "/categories/teknologia/",
                    "/categories/urheilu/", "/categories/kulttuuri/",
                    "/categories/tiede/", "/oppaat/", "/tuoreimmat/",
-                   "/tietoja/", "/tietoja/#korjaukset", "/lahteet/"]
+                   "/tietoja/", "/korjaukset/", "/lahteet/"]
 # Theme-native footer structure: the reference's own class names, nothing invented.
 FOOTER_CLASSES = {"site-footer", "container", "site-footer-grid", "site-footer-col",
                   "site-footer-brand-col", "site-footer-brand", "site-footer-slogan",

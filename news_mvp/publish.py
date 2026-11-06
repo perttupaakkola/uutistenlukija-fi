@@ -18,7 +18,7 @@ from .diagnostics import safe_error
 from .editorial import ROOT, digest, timestamp, validate_review, validate_packet
 from datetime import datetime, timedelta, timezone
 from .release_contract import media, verify_intake, check_article, load_legacy_redirects, legacy_redirect_lines
-from .site import (ABOUT_PATH, CATEGORY_PAGES, EARNINGS_METHOD_PATH, LATEST_PATH,
+from .site import (ABOUT_PATH, CORRECTIONS_PATH, CATEGORY_PAGES, EARNINGS_METHOD_PATH, LATEST_PATH,
                    OPPAAT_PATH, SOURCES_PATH,
                    atomic_write, article_path, esc, missing_page, page, render_site)
 from .store import database
@@ -541,7 +541,7 @@ def public_bundle(store,job,state,*,site_refresh=False):
     snapshot = load(state)
     render_site(store,site,state,public=True,include_ids=ids,
                 verify_policy_ids=set() if site_refresh else {job['id']},snapshot=snapshot)
-    privacy='''<article class="story"><h1>Tietosuoja ja evästeet</h1><p>Voit käyttää uutispalvelua sallimatta analytiikkaa. Luvallasi käytämme Google Analyticsia sivuston käytön mittaamiseen. Emme käytä mainonnan evästeitä.</p><p>Suostumus tallennetaan selaimeesi. Voit muuttaa valintaasi sivun Evästeasetukset-painikkeella. Analytiikan poistaminen käytöstä poistaa tämän sivuston Google Analytics -evästeet selaimesta.</p><p>Palvelun tuotantotapa ja korjauskäytäntö kuvataan <a href="/tietoja/">Tietoa Uutistenlukijasta</a> -sivulla.</p></article>'''
+    privacy='''<article class="story"><h1>Tietosuoja ja evästeet</h1><p>Voit käyttää uutispalvelua sallimatta analytiikkaa. Luvallasi käytämme Google Analyticsia sivuston käytön mittaamiseen. Emme käytä mainonnan evästeitä.</p><p>Suostumus tallennetaan selaimeesi. Voit muuttaa valintaasi sivun Evästeasetukset-painikkeella. Analytiikan poistaminen käytöstä poistaa tämän sivuston Google Analytics -evästeet selaimesta.</p><p>Palvelun tuotantotapa kuvataan <a href="/tietoja/">Tietoa Uutistenlukijasta</a> -sivulla ja korjauskäytäntö <a href="/korjaukset/">Korjausperiaatteissa</a>.</p></article>'''
     atomic_write(site/'tietosuoja/index.html',page('Tietosuoja ja evästeet',privacy,'/tietosuoja/',snapshot=snapshot))
     # Terms for AI images. This is the license_url/source_url of every generated article
     # image, so it must exist and must actually describe the image rights - pointing that field
@@ -583,6 +583,7 @@ def public_bundle(store,job,state,*,site_refresh=False):
     entries=[_sitemap_url_entry('https://uutistenlukija.fi/'),
              _sitemap_url_entry('https://uutistenlukija.fi/tietosuoja/'),
              _sitemap_url_entry('https://uutistenlukija.fi'+ABOUT_PATH),
+             _sitemap_url_entry('https://uutistenlukija.fi'+CORRECTIONS_PATH),
              _sitemap_url_entry('https://uutistenlukija.fi'+SOURCES_PATH),
              _sitemap_url_entry('https://uutistenlukija.fi'+EARNINGS_METHOD_PATH),
              _sitemap_url_entry('https://uutistenlukija.fi/ai-kuvat/')]
