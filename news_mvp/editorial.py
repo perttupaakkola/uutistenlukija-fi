@@ -253,6 +253,24 @@ class FixtureModel:
         return {**data["review"], "draft_sha256": digest(draft)}
 
 
+class ModelUnavailable(RuntimeError):
+    """The editorial model cannot be reached at all (login expired, provider down).
+
+    This says nothing about the story, so it must never use up the story's attempts."""
+
+
+# Evidence 7 Nov 2026: the Claude subscription OAuth session expired and could not be
+# refreshed; every writer call exited non-zero with this text and seven stories burned
+# all three attempts in five hours. Match only provider/login wording, never story data.
+_MODEL_LOGIN_PATTERNS = re.compile(
+    r"no usable login|ClaudeCodeLoggedOut|OAuth session expired|could not be refreshed|"
+    r"couldn't start the model connection|claude auth login|HTTP 401", re.I)
+
+
+def model_login_unavailable(diagnostics):
+    return bool(_MODEL_LOGIN_PATTERNS.search(diagnostics or ""))
+
+
 class HermesModel:
     """Fresh news-mvp profile only. Live profile/OAuth qualification is phase 3."""
     name = "hermes"
@@ -294,6 +312,8 @@ class HermesModel:
                                 timeout=self.timeout, cwd=ROOT, env=env)
         if result.returncode:
             # Runtime diagnostics can include sensitive data; do not persist them.
+            if model_login_unavailable(result.stdout + "\n" + result.stderr):
+                raise ModelUnavailable("Editorial model login unavailable; story kept for retry")
             raise RuntimeError("Hermes call failed; inspect the private runtime diagnostics")
         if len(result.stdout.encode()) > 64000:
             raise ValueError("Model output exceeds 64 KB")

@@ -233,6 +233,14 @@ class Store:
                             ("failed" if row["attempts"] >= max_attempts else "ready",
                              now + retry_seconds * row["attempts"], error, job_id))
 
+    def defer_model_unavailable(self, job_id, now, retry_seconds, error):
+        """Model/login outage: keep the story ready and refund the claimed attempt.
+
+        Bounded: stale stories still age out through max_source_age_hours at intake."""
+        with self.db:
+            self.db.execute("UPDATE jobs SET status='ready', attempts=MAX(0,attempts-1), "
+                            "next_attempt=?, error=? WHERE id=?", (now + retry_seconds, error, job_id))
+
     def expire_image_pending(self, now, max_age=IMAGE_PENDING_MAX_AGE):
         """Fail ready stories that have waited only for an image beyond max_age seconds.
 

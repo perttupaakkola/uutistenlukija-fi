@@ -7,7 +7,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 from .diagnostics import safe_error
-from .editorial import (FixtureModel, HermesModel, digest, explainer_word_count, text,
+from .editorial import (FixtureModel, HermesModel, ModelUnavailable, digest, explainer_word_count, text,
                         validate_packet, validate_draft, validate_review)
 from .site import render_site
 from .store import database
@@ -489,6 +489,12 @@ def tick(config_path, model=None, now=None, _already_locked=False, target_job_id
             except ImagePending as error:
                 store.defer_image(job['id'], now.timestamp(), max(900, config['retry_seconds']), str(error))
                 return {'status': 'image_pending', 'id': job['id'], 'retryable': True}
+            except ModelUnavailable as error:
+                # The model is down, not the story: refund the attempt and wait 15 min.
+                # Without this a login outage marked every new story failed (7 Nov 2026).
+                store.defer_model_unavailable(job['id'], now.timestamp(), max(900, config['retry_seconds']),
+                                              safe_error(error))
+                return {'status': 'model_unavailable', 'id': job['id'], 'retryable': True}
             except (ValueError, TypeError, KeyError, RuntimeError, OSError, subprocess.SubprocessError) as error:
                 # Record a bounded, redacted message: a bare class name made every
                 # failure undisagnosable, while raw provider output may hold secrets.
