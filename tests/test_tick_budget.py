@@ -119,3 +119,46 @@ class UpstreamOutage(TickBudget):
                 with self.assertRaises(pub.UncommittedPreparationError):
                     pub.publish(store, self.job, self.config['state_dir'], self.config_path)
             self.assertEqual(store.db.execute('SELECT attempts FROM publications').fetchone()[0], 1)
+
+
+class GithubResubmit400(TickBudget):
+    """7 Nov: real GitHub edge 400 on git/blobs for a valid upload (job 4e966685)."""
+
+    REAL = ('RuntimeError: GitHub POST git/blobs: HTTP 400 ValueError: {"message": "We received a malformed request '
+            'from your client. Sorry about that. Please try resubmitting your request and contact us if the problem persists."}')
+
+    def test_resubmit_400_refunds_attempt(self):
+        with database(self.config['state_dir']) as store:
+            self._row(store)
+            with patch('news_mvp.publish.guard'), patch('news_mvp.publish.cmd', return_value='source'), \
+                 patch('news_mvp.publish.public_bundle', return_value=(None, {})), \
+                 patch('news_mvp.publish.make_commit', side_effect=pub.UncommittedPreparationError(self.REAL)):
+                result = pub.publish(store, self.job, self.config['state_dir'], self.config_path)
+            self.assertEqual(result['status'], 'preparation_continues')
+            row = store.db.execute('SELECT status,attempts,error FROM publications').fetchone()
+            self.assertEqual((row[0], row[1]), ('preparing', 0))
+            self.assertTrue(row[2].startswith('Transient 1: '))
+
+    def test_api_retries_resubmit_400_for_blobs_only(self):
+        import io, urllib.error
+        body = b'{"message": "We received a malformed request from your client. Sorry about that. Please try resubmitting your request and contact us if the problem persists."}'
+        calls = []
+        class Resp(io.BytesIO):
+            def __enter__(self): return self
+            def __exit__(self, *a): return False
+        def urlopen(request, timeout):
+            calls.append(request.full_url)
+            if len(calls) == 1:
+                raise urllib.error.HTTPError(request.full_url, 400, 'Bad Request', {}, io.BytesIO(body))
+            return Resp(b'{"sha": "ok"}')
+        cred = type('R', (), {'stdout': 'password=x\n'})()
+        with patch('news_mvp.publish.subprocess.run', return_value=cred), \
+             patch('news_mvp.publish.urllib.request.urlopen', side_effect=urlopen), patch('news_mvp.publish.time.sleep'):
+            self.assertEqual(pub.api('git/blobs', {'content': 'eA==', 'encoding': 'base64'})['sha'], 'ok')
+            self.assertEqual(len(calls), 2)
+            calls.clear()
+            with self.assertRaises(RuntimeError):
+                pub.api('git/commits', {'message': 'm'})
+            self.assertEqual(len(calls), 1)
+        self.assertFalse(pub.is_github_resubmit_400(400, '{"message": "Invalid tree"}'))
+        self.assertFalse(pub.is_github_resubmit_400(422, body.decode()))

@@ -84,15 +84,28 @@ def api(path, data=None, method=None):
         try:
             with urllib.request.urlopen(request,timeout=30) as response:return json.load(response)
         except urllib.error.HTTPError as error:
-            if error.code not in retry_codes or attempt+1 == attempts:
-                detail = ''
-                try:
-                    body=json.loads(error.read(8000))
-                    detail=safe_error(ValueError(json.dumps({k:body[k] for k in ('message','errors') if k in body})))
-                except (ValueError,TypeError,AttributeError):
-                    pass
+            detail = ''
+            try:
+                body=json.loads(error.read(8000))
+                detail=safe_error(ValueError(json.dumps({k:body[k] for k in ('message','errors') if k in body})))
+            except (ValueError,TypeError,AttributeError):
+                pass
+            # 7 Nov: GitHub's edge answered one well-formed base64 blob upload
+            # (522 identical-shape uploads in the same tick succeeded) with HTTP
+            # 400 "We received a malformed request ... Please try resubmitting".
+            # For content-addressed objects resubmitting identical bytes is safe.
+            retryable = error.code in retry_codes or (content_addressed and is_github_resubmit_400(error.code,detail))
+            if not retryable or attempt+1 == attempts:
                 raise RuntimeError(f'GitHub {request.method} {path}: HTTP {error.code} {detail}') from None
             time.sleep(2 ** attempt)
+
+
+_RESUBMIT_400 = re.compile(r'malformed request.*resubmit', re.I | re.S)
+
+
+def is_github_resubmit_400(code, text):
+    """GitHub's generic edge 400 that explicitly asks the client to resubmit."""
+    return code == 400 and bool(_RESUBMIT_400.search(text or ''))
 
 
 def guard(config_path):
@@ -1289,7 +1302,7 @@ def publish(store,job,state,config_path):
 
 
 TRANSIENT_OUTAGE_TICKS = 48  # ~12 h of 15-minute ticks
-_OUTAGE = re.compile(r'HTTP 5\d\d|timed out|URLError|Connection (reset|refused)|Temporary failure')
+_OUTAGE = re.compile(r'HTTP 5\d\d|HTTP 400 .*malformed request.*resubmit|timed out|URLError|Connection (reset|refused)|Temporary failure', re.I)
 _TRANSIENT_PREFIX = re.compile(r'^Transient (\d+): ')
 
 
