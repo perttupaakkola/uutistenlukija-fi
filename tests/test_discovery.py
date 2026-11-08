@@ -64,6 +64,29 @@ class Discovery(unittest.TestCase):
             self.assertEqual((row['provider'], row['count']), ('kuntaliitto', 1))
             self.assertEqual(store.collection_failure_urls(base + 7 * 24 * 60 * 60 + 1), set())
 
+    def test_source_near_freshness_limit_is_skipped_not_crashing(self):
+        # 8 Nov 14:15 real case: collector accepted a 47 h+ source, ingest's 1 h margin
+        # refused it and the uncaught ValueError exited the publisher run.
+        from datetime import timedelta
+        url = 'https://example.invalid/near-limit'
+        def near(recipe, state, **kw):
+            p = self.fixture_packet(recipe['url'])
+            old = (datetime.now(timezone.utc) - timedelta(hours=47, minutes=30)).isoformat()
+            for s in p['sources']: s['published_at'] = old
+            return p, {}
+        with patch('news_mvp.live.discover', return_value=[{'url': url, 'provider': 'epressi'}]), \
+                patch('news_mvp.live.collect', side_effect=near) as collect, \
+                patch('news_mvp.live.tick', side_effect=AssertionError()), \
+                patch('news_mvp.live.publish', side_effect=AssertionError()):
+            first = live_tick(self.path)
+            second = live_tick(self.path)
+        self.assertEqual(first['status'], 'idle')
+        self.assertIn('too close to the freshness limit', first['source_errors'][0]['error'])
+        self.assertEqual(collect.call_count, 1)
+        self.assertEqual(second['status'], 'idle')
+        with database(self.config['state_dir']) as store:
+            self.assertEqual(store.db.execute('select count(*) from jobs').fetchone()[0], 0)
+
     def test_transient_collection_failure_retries_after_six_hours_then_gives_up(self):
         from news_mvp.store import COLLECTION_BACKOFF_SECONDS, COLLECTION_FAILURE_TTL_SECONDS
         url = 'https://example.invalid/timeout'

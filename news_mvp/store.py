@@ -15,6 +15,7 @@ PERMANENT_COLLECTION_ERRORS = (
     "aggregator/hub page",
     "title mismatch",
     "rejected release: valueerror",
+    "too close to the freshness limit",
 )
 
 JOBS_SCHEMA = """(

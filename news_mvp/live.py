@@ -254,7 +254,18 @@ def _live_tick(config_path):
                         errors.append({'provider':provider,'stage':'collection','url':recipe['url'],'error':detail})
                         continue
                     store.clear_collection_failure(failure_key)
-                    admission=ingest(config,packet)
+                    # 8 Nov 14:15: a source collected at 47+ h passed the collector but hit the
+                    # 1 h admission freshness margin; the refusal escaped this loop and crashed
+                    # the run (and would repeat each tick). Remember it and move on instead.
+                    try:
+                        admission=ingest(config,packet)
+                    except ValueError as error:
+                        if 'too close to the freshness limit' not in str(error):raise
+                        provider=recipe.get('provider',recipe.get('family','explicit'))
+                        detail=safe_error(error)
+                        store.record_collection_failure(failure_key,provider,detail,time.time())
+                        errors.append({'provider':provider,'stage':'admission','url':recipe['url'],'error':detail})
+                        continue
                     if admission['id']!=job_id:raise ValueError('Source identity mismatch')
                     job=store.get(job_id)
                 # Public publication state is one-row-at-a-time; keep any image backfill
