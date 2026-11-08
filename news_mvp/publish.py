@@ -1160,7 +1160,17 @@ def publish(store,job,state,config_path):
         # both admission and reconciliation before insert, dispatch or idle/deployed.
         raise ValueError('Amendment publication version ownership is not installed')
     if store.db.execute('SELECT 1 FROM publications WHERE job_id=?',(job['id'],)).fetchone() is None:
-        validate_packet(packet,datetime.now(timezone.utc),48)
+        try:
+            validate_packet(packet,datetime.now(timezone.utc),48)
+        except ValueError as error:
+            # 8 Nov 12:20: a source aged past 48 h during the tick and this raise killed
+            # the whole publisher run. An unpublished story that aged out is retired, not
+            # retried (it can never become fresh again) and the tick ends cleanly.
+            if 'stale' not in str(error):raise
+            with store.db:
+                store.db.execute("UPDATE jobs SET status='failed',error=? WHERE id=?",
+                                 ('Source aged out before publication: '+str(error),job['id']))
+            return {'status':'stale_at_publish','job_id':job['id']}
     if packet.get('publication_basis') is not None:
         from .backfill import active
         verify_intake(packet,state,archive_image_only=active(store,job['id']) is not None)

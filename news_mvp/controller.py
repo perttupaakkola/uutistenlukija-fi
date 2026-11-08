@@ -106,9 +106,23 @@ def single_tick(state_dir):
             fcntl.flock(lock, fcntl.LOCK_UN)
 
 
+# A tick needs up to ~24 min (writer, review, image) between admission and the
+# publish-time freshness check. On 8 Nov a story admitted at 47 h 50 min aged past
+# 48 h mid-tick and crashed the publisher. New stories must stay fresh for a full tick.
+ADMISSION_FRESHNESS_MARGIN_SECONDS = 3600
+
+
 def ingest(config, packet, now=None):
     now = now or datetime.now(timezone.utc)
     validate_packet(packet, now, config["max_source_age_hours"])
+    from datetime import timedelta
+    try:
+        validate_packet(packet, now + timedelta(seconds=ADMISSION_FRESHNESS_MARGIN_SECONDS),
+                        config["max_source_age_hours"])
+    except ValueError as error:
+        if "stale" in str(error):
+            raise ValueError("Source too close to the freshness limit to finish a tick") from error
+        raise
     if config["backend"] == "fixture" and packet.get("fixture") is not True:
         raise ValueError("Fixture configuration requires explicitly labelled fixture data")
     with database(config["state_dir"]) as store:
