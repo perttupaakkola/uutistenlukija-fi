@@ -144,8 +144,42 @@ def rights_text(raw, provider):
     return page.text() + '\n' + licenses[0]
 
 
+# poliisi.fi sits behind a Cloudflare rate limit keyed on our IP. Discovery used to fire three
+# police feeds ~0.03 s apart (plus rights + article fetches when collecting a police story),
+# and the third request of a batch was answered "429 Too Many Requests" on most ticks
+# (Länsi-Uusimaa / Oulu, Nov 2026). Space same-host requests and retry a 429 exactly once
+# after a pause; a second 429 propagates so the tick moves on instead of looping.
+HOST_SPACING_SECONDS = {'poliisi.fi': 2.5}
+RATE_LIMIT_RETRY_SECONDS = 20
+_last_host_fetch = {}
+
+
+def _spaced_fetch(url, hosts):
+    import time
+    from urllib.error import HTTPError
+    from urllib.parse import urlsplit
+    host = urlsplit(url).hostname or ''
+    gap = HOST_SPACING_SECONDS.get(host)
+    for attempt in (1, 2):
+        if gap:
+            wait = _last_host_fetch.get(host, 0) + gap - time.monotonic()
+            if wait > 0:
+                time.sleep(wait)
+            _last_host_fetch[host] = time.monotonic()
+        try:
+            return fetch(url, hosts)
+        except HTTPError as error:
+            if error.code != 429 or not gap or attempt == 2:
+                raise
+            try:
+                pause = int(error.headers.get('Retry-After') or RATE_LIMIT_RETRY_SECONDS)
+            except (TypeError, ValueError, AttributeError):
+                pause = RATE_LIMIT_RETRY_SECONDS
+            time.sleep(min(max(pause, 1), 60))
+
+
 def response(url, hosts, allow_pdf=False, allow_json=False):
-    raw, mime, final = fetch(url, hosts)
+    raw, mime, final = _spaced_fetch(url, hosts)
     allowed = ('text/html', 'application/rss+xml', 'application/xml', 'text/xml')
     if allow_pdf:
         # Only the rights fetch may take a PDF (Kuopio publishes its licence that way), and
