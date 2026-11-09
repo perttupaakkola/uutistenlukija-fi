@@ -62,7 +62,10 @@ def timestamp(value):
 def validate_packet(packet, now, max_age_hours=48):
     if not isinstance(packet, dict):
         raise ValueError("Packet must be an object")
-    text(packet.get("story_key"), "story_key", 200)
+    # story_key is "url:" + the source URL, and web_url() accepts URLs up to 2000
+    # characters. A 200 cap silently dropped real press releases with long slugs
+    # (STT Info 9 Nov 2026, 204 chars) as "Invalid story_key".
+    text(packet.get("story_key"), "story_key", 2100)
     sources = packet.get("sources")
     source_limit = 12 if packet.get("kind") == "weekly-economy" else 8
     if not isinstance(sources, list) or not 1 <= len(sources) <= source_limit:
