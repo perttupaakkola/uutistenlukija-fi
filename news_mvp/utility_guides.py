@@ -1,5 +1,6 @@
 """Original standalone reader utilities; not news records or publication timestamps."""
 import html
+import urllib.parse
 import json
 import re
 import unicodedata
@@ -636,8 +637,19 @@ def _event_guide_html(g, events):
     for town in towns:
         items = ''.join('<li>' + event['html'] + '</li>' for event in events if event['town'] == town)
         heading = f'{g["event_topic"]} {_TOWN_LOCATIVES[town]} 2026'
-        town_sections.append(f'<section id="{_anchor(town)}"><h2>{e(heading)}</h2><ul>{items}</ul></section>')
+        town_sections.append(f'<section id="{_anchor(town)}"><h2>{e(heading)}</h2><ul>{items}</ul>'
+                             f'{_town_share_html(g, town, heading)}</section>')
     return jump + summary + ''.join(town_sections)
+
+
+def _town_share_html(g, town, heading):
+    """One-tap WhatsApp share of a single town's list (UTM-tagged for GA4)."""
+    slug = g['path'].strip('/').split('/')[-1]
+    link = (ORIGIN + g['path'] + '?utm_source=whatsapp&utm_medium=share&utm_campaign=' +
+            slug + '-' + _anchor(town) + '#' + _anchor(town))
+    text = urllib.parse.quote(f'{heading}: päivät ja paikat {link}', safe='')
+    return (f'<p class="guide-share"><a href="https://wa.me/?text={text}" rel="noopener nofollow">'
+            f'Lähetä {html.escape(town)}-lista WhatsAppissa</a></p>')
 
 
 def _item_list(g, events):
