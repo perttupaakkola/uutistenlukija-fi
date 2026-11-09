@@ -69,6 +69,8 @@ def guides(now) -> tuple[dict, ...]:
     expired = now.astimezone(ZoneInfo('Europe/Helsinki')).date() >= datetime(2026, 10, 26).date()
     halloween_over = now.astimezone(ZoneInfo('Europe/Helsinki')).date() >= datetime(2026, 11, 2).date()
     halloween_next = (('Halloween 2026 on ohi: seuraavat tapahtumat marras–joulukuussa', '<p>Halloween ja pyhäinpäivä olivat la 31.10.2026, ja tämän sivun tapahtumat ovat päättyneet. Listat jäävät tähän tiedoksi. Seuraavat koko perheen tapahtumat:</p><ul><li><strong>Isänpäivä su 8.11.2026</strong>: isänpäivän brunssit, lounaat ja tapahtumat Helsingissä, Espoossa, Vantaalla, Tampereella, Turussa, Oulussa, Jyväskylässä ja muissa kaupungeissa: <a href="/oppaat/isanpaiva-2026/">isänpäivä 2026 kaupungeittain</a>.</li><li><strong>Joulunavaukset alkaen la 14.11.</strong>: Kuopio ja Tapiola la 14.11., Lohja pe 20.11., Helsinki, Tampere, Vaasa, Pori, Kouvola, Kajaani ja Joensuu 21.–22.11., Tuomaan Markkinat ja Turku 1. adventtina 27.–29.11.: <a href="/oppaat/joulumarkkinat-2026/">joulumarkkinat ja joulunavaukset 2026</a>.</li><li><strong>Pikkujoulut ja 1. adventti su 29.11.</strong>: <a href="/oppaat/pikkujoulut-2026/">pikkujoulut 2026</a> ja <a href="/oppaat/adventti-2026/">adventtisunnuntait</a>.</li><li><strong>Itsenäisyyspäivä su 6.12.</strong>: soihtukulkueet ja kaupunkien juhlat: <a href="/oppaat/itsenaisyyspaiva-2026/">itsenäisyyspäivä 2026</a>.</li></ul>'),) if halloween_over else ()
+    fathers_over = now.astimezone(ZoneInfo('Europe/Helsinki')).date() >= datetime(2026, 11, 9).date()
+    fathers_next = ('Isänpäivä 2026 on ohi: seuraavat tapahtumat marras–joulukuussa', '<p>Isänpäivää vietettiin su 8.11.2026, ja tämän sivun tapahtumat ja lounaat ovat päättyneet. Listat jäävät tähän tiedoksi. Seuraavaksi kaupungeissa:</p><ul><li><strong>Joulunavaukset alkaen la 14.11.</strong>: Kuopio ja Tapiola la 14.11., Lohja pe 20.11., Helsinki, Tampere, Vaasa, Pori, Kouvola, Kajaani ja Joensuu 21.–22.11., Tuomaan Markkinat Senaatintorilla 27.11.–22.12.: <a href="/oppaat/joulumarkkinat-2026/">joulumarkkinat ja joulutorit 2026 kaupungeittain</a>.</li><li><strong>Kauneimmat Joululaulut 1. adventista su 29.11. alkaen</strong>: tilaisuudet päivineen ja kellonaikoineen yli 20 kaupungissa: <a href="/oppaat/kauneimmat-joululaulut-2026/">Kauneimmat Joululaulut 2026</a>.</li><li><strong>Itsenäisyyspäivä su 6.12.</strong>: soihtukulkueet ja kaupunkien juhlat: <a href="/oppaat/itsenaisyyspaiva-2026/">itsenäisyyspäivä 2026</a>.</li><li><strong>Lucian päivä su 13.12.</strong>: Lucia-kulkue ja kruunajaiset: <a href="/oppaat/lucian-paiva-2026/">Lucian päivä 2026</a>.</li><li><strong>Joulupaketit</strong>: viimeiset lähetyspäivät: <a href="/oppaat/joulupaketit-2026/">joulupaketit 2026</a>.</li></ul>')
     clock_answer = ('Suomessa kelloja siirrettiin sunnuntaina 25. lokakuuta 2026 aamulla kello 04.00 takaisin kello 03.00. Tämä sivu käsittelee vuoden 2026 syksyn siirtoa, ei seuraavaa kellonsiirtoa.' if expired else
                     'Suomessa kelloja siirretään sunnuntaina 25. lokakuuta 2026 aamulla kello 04.00 takaisin kello 03.00. Yö pitenee yhdellä tunnilla.')
     result = (
@@ -493,6 +495,10 @@ def guides(now) -> tuple[dict, ...]:
         guide['updated'] = updated
         if guide['path'] in EVENT_GUIDES:
             guide['event_topic'], guide['event_sections'] = EVENT_GUIDES[guide['path']]
+        if fathers_over and guide['path'] in (GUIDE_PATHS[8], GUIDE_PATHS[28]):
+            guide['sections'] = (fathers_next,) + tuple(guide['sections'])
+            if 'event_sections' in guide:
+                guide['event_sections'] = tuple(i + 1 for i in guide['event_sections'])
     return result
 
 
