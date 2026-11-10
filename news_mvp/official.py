@@ -149,8 +149,13 @@ def rights_text(raw, provider):
 # and the third request of a batch was answered "429 Too Many Requests" on most ticks
 # (Länsi-Uusimaa / Oulu, Nov 2026). Space same-host requests and retry a 429 exactly once
 # after a pause; a second 429 propagates so the tick moves on instead of looping.
+# 10 Nov 2026: spacing alone did not stop it. The Oulu feed keeps getting
+# "429 cf-mitigated: challenge" at random (measured 429 429 200 429... at 6 s spacing
+# on a quiet IP), so a single retry 20 s later also failed on 6 of ~40 due ticks.
+# Retry a bounded number of times with growing pauses; the last 429 still propagates.
 HOST_SPACING_SECONDS = {'poliisi.fi': 2.5}
 RATE_LIMIT_RETRY_SECONDS = 20
+RATE_LIMIT_PAUSES = (15, 30)  # pauses before attempt 2 and 3; then give up for this tick
 _last_host_fetch = {}
 
 
@@ -160,7 +165,8 @@ def _spaced_fetch(url, hosts):
     from urllib.parse import urlsplit
     host = urlsplit(url).hostname or ''
     gap = HOST_SPACING_SECONDS.get(host)
-    for attempt in (1, 2):
+    attempts = len(RATE_LIMIT_PAUSES) + 1
+    for attempt in range(1, attempts + 1):
         if gap:
             wait = _last_host_fetch.get(host, 0) + gap - time.monotonic()
             if wait > 0:
@@ -169,10 +175,10 @@ def _spaced_fetch(url, hosts):
         try:
             return fetch(url, hosts)
         except HTTPError as error:
-            if error.code != 429 or not gap or attempt == 2:
+            if error.code != 429 or not gap or attempt == attempts:
                 raise
             try:
-                pause = int(error.headers.get('Retry-After') or RATE_LIMIT_RETRY_SECONDS)
+                pause = int(error.headers.get('Retry-After') or RATE_LIMIT_PAUSES[attempt - 1])
             except (TypeError, ValueError, AttributeError):
                 pause = RATE_LIMIT_RETRY_SECONDS
             time.sleep(min(max(pause, 1), 60))

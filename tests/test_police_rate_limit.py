@@ -29,7 +29,7 @@ class PoliceRateLimit(unittest.TestCase):
                 patch('time.sleep') as sleep:
             self.assertEqual(official.response(LANSI, ['poliisi.fi']), FEED)
         self.assertEqual(len(calls), 2)
-        self.assertIn(official.RATE_LIMIT_RETRY_SECONDS, [c.args[0] for c in sleep.call_args_list])
+        self.assertIn(official.RATE_LIMIT_PAUSES[0], [c.args[0] for c in sleep.call_args_list])
 
     def test_second_429_is_not_a_loop(self):
         calls = []
@@ -38,7 +38,7 @@ class PoliceRateLimit(unittest.TestCase):
         with patch.object(official, 'fetch', side_effect=fetch), patch('time.sleep'):
             with self.assertRaises(HTTPError):
                 official.response(LANSI, ['poliisi.fi'])
-        self.assertEqual(len(calls), 2, 'exactly one bounded retry')
+        self.assertEqual(len(calls), len(official.RATE_LIMIT_PAUSES) + 1, 'bounded retries, no loop')
 
     def test_police_feeds_spaced_not_burst(self):
         now = [1000.0]
@@ -62,6 +62,23 @@ class PoliceRateLimit(unittest.TestCase):
         with patch.object(official, 'fetch', side_effect=too_many('x')), patch('time.sleep'):
             with self.assertRaises(HTTPError):
                 official.response('https://www.hel.fi/fi/uutiset/rss', ['www.hel.fi'])
+
+
+    def test_oulu_random_challenge_pattern_recovers(self):
+        # Real pattern measured 10 Nov 2026 on the Oulu feed: challenge, challenge, ok.
+        oulu = official.policy()['providers']['poliisi-oulu']
+        codes = [429, 429, 200]
+        calls = []
+        def fetch(url, hosts):
+            calls.append(url)
+            if codes[len(calls) - 1] == 429:
+                raise too_many(url)
+            return FEED, 'application/rss+xml', url
+        with patch.object(official, 'fetch', side_effect=fetch), patch('time.sleep') as sleep:
+            self.assertEqual(official.response(oulu['index'], oulu['hosts']), FEED)
+        self.assertEqual(len(calls), 3)
+        pauses = [c.args[0] for c in sleep.call_args_list if c.args[0] >= 10]
+        self.assertEqual(pauses, list(official.RATE_LIMIT_PAUSES))
 
 
 if __name__ == '__main__':
