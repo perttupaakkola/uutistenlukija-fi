@@ -537,6 +537,12 @@ _TOWN_LOCATIVES = {
     'Vantaa': 'Vantaalla', 'Varkaus': 'Varkaudessa', 'Vihti': 'Vihdissä',
     'Ylöjärvi': 'Ylöjärvellä', 'Parainen': 'Paraisilla', 'Maarianhamina': 'Maarianhaminassa',
     'Kemiönsaari': 'Kemiönsaarella',
+    'Lapua': 'Lapualla', 'Hanko': 'Hangossa', 'Ylivieska': 'Ylivieskassa',
+    'Eurajoki': 'Eurajoella', 'Haapajärvi': 'Haapajärvellä', 'Juuka': 'Juuassa', 'Juva': 'Juvalla',
+    'Kalajoki': 'Kalajoella', 'Karkkila': 'Karkkilassa', 'Kauhajoki': 'Kauhajoella', 'Kauhava': 'Kauhavalla',
+    'Iitti': 'Iitissä', 'Kemijärvi': 'Kemijärvellä', 'Sastamala': 'Sastamalassa',
+    'Kristiinankaupunki': 'Kristiinankaupungissa', 'Kurikka': 'Kurikassa', 'Siuntio': 'Siuntiossa',
+    'Ulvila': 'Ulvilassa', 'Kolari': 'Kolarissa',
 }
 
 
