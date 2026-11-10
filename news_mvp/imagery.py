@@ -1254,9 +1254,9 @@ def validate_selection_evidence(image, draft=None):
     qualifying = [(rank, item) for rank, item in reviewed
                   if item['approved'] and item['fit_score'] >= MIN_REAL_FIT]
     if selected['kind']=='generated':
-        safest = next(concept['rank'] for concept in decision['concepts']
-                      if concept['safe_to_generate'])
-        if qualifying or selected['concept_rank'] != safest:
+        safe_ranks = {concept['rank'] for concept in decision['concepts']
+                      if concept['safe_to_generate']}
+        if qualifying or selected['concept_rank'] not in safe_ranks:
             raise ValueError('Generation may follow only a failed real search for every concept')
     elif not any(rank == selected['concept_rank'] and
                  item['image_sha256'] == selected['image_sha256'] and
@@ -1492,10 +1492,22 @@ def _build_image_article_first(draft, state_dir, category, model, attempts, deci
         # Stock-only amendment scope: generation recomputes ordinary text-based
         # exclusions and cannot honor this immutable ownership inventory.
         return None
-    safest = next(concept for concept in decision['concepts'] if concept['safe_to_generate'])
-    best = concept_decision(decision, safest)
-    generated = _build_image(draft, state_dir, category, model, attempts, best,
-                             False, True, packet, skip_stock=True, exact_concept=True)
+    # Every safe concept gets a turn, in editorial rank order, within the same total
+    # generation budget. Repeating one refused prompt only reproduced the same refusal
+    # (10 Nov 2026: "blurred papers cannot be identified as budget documents" x3).
+    safe = [concept for concept in decision['concepts'] if concept['safe_to_generate']]
+    generated, safest, left = None, None, max(1, attempts)
+    for index, concept in enumerate(safe):
+        if left <= 0:
+            break
+        share = left if index == len(safe) - 1 else 1
+        left -= share
+        generated = _build_image(draft, state_dir, category, model, share,
+                                 concept_decision(decision, concept), False, True, packet,
+                                 skip_stock=True, exact_concept=True)
+        if generated:
+            safest = concept
+            break
     if not generated:
         return None
     review = generated.get('pixel_review') or {}

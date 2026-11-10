@@ -267,7 +267,11 @@ class ModelUnavailable(RuntimeError):
 # all three attempts in five hours. Match only provider/login wording, never story data.
 _MODEL_LOGIN_PATTERNS = re.compile(
     r"no usable login|ClaudeCodeLoggedOut|OAuth session expired|could not be refreshed|"
-    r"couldn't start the model connection|claude auth login|HTTP 401", re.I)
+    r"couldn't start the model connection|claude auth login|HTTP 401|"
+    # 9-10 Nov 2026: the subscription hit its session limit; stderr carried
+    # "HTTP 429 ... This request would exceed your account's rate limit ... You've hit
+    # your session limit" and story 6ac5a25e burned all three attempts in 32 minutes.
+    r"HTTP 429|exceed your account's rate limit|hit your (?:session|usage|weekly) limit", re.I)
 
 
 def model_login_unavailable(diagnostics):
