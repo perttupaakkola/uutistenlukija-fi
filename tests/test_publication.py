@@ -143,6 +143,37 @@ class Publication(unittest.TestCase):
             self.assertEqual(store.db.execute('SELECT status FROM publications').fetchone()[0],'failed')
             self.assertEqual(sum(a[:3]==('gh','workflow','run') for a in calls),pub.STARTUP_FAILURE_LIMIT-1)
 
+    def test_lost_dispatch_redispatched_after_wait_bounded(self):
+        # 11 Nov 2026 real case: article f2b1b20b, commit 62137a85 pushed 21:30:56 UTC;
+        # dispatch accepted 21:31:01 but GitHub ran it on the previous main f73cd97f
+        # ('Reject superseded main'), so no run for our commit ever appeared.
+        from datetime import datetime, timedelta, timezone
+        from news_mvp import publish as pub
+        commit='62137a850207b9f74386ce1c61fc4389a7562f01'
+        draft=FixtureModel().call('writer',self.packet);draft['image']={'sha256':'a'*64,'local_path':'media/'+('a'*64)+'.jpg','url':'https://example.invalid/image.jpg','source_url':'https://example.invalid/story','license_url':'https://example.invalid/rights','license':'isolated test rights','alt':'Test','credit':'Test'}
+        packet=copy.deepcopy(self.packet);packet['image']=draft['image'];packet['fixture']=False
+        job={'id':self.job,'packet':json.dumps(packet),'draft':json.dumps(draft),'review':json.dumps({'approved':True,'draft_sha256':digest(draft),'reasons':['isolated test']})}
+        with database(self.config['state_dir']) as store:
+            ensure_table(store)
+            store.db.execute('INSERT INTO publications(job_id,packet_sha,draft_sha,image_sha,source_commit,remote_commit,status) VALUES(?,?,?,?,?,?,?)',
+                (self.job,digest(packet),digest(draft),'a'*64,'source',commit,'prepared'));store.db.commit()
+            calls=[]
+            def age(minutes):
+                with store.db:store.db.execute("UPDATE publications SET error=replace(error,substr(error,12,instr(error,' lost=')-12),?)",
+                                               ((datetime.now(timezone.utc)-timedelta(minutes=minutes)).isoformat(),))
+            with patch('news_mvp.publish.guard'),patch('news_mvp.publish.cmd',side_effect=lambda *a:calls.append(a) or 'source'),patch('news_mvp.publish.api',return_value={'object':{'sha':commit}}),patch('news_mvp.publish.matching_runs',return_value=[]):
+                self.assertEqual(publish(store,job,self.config['state_dir'],self.config_path)['status'],'dispatched')
+                self.assertTrue(store.db.execute('SELECT error FROM publications').fetchone()[0].endswith(' lost=0'))
+                age(5)
+                self.assertEqual(publish(store,job,self.config['state_dir'],self.config_path)['status'],'awaiting_dispatch_visibility')
+                for expected in (1,2):
+                    age(25)
+                    self.assertEqual(publish(store,job,self.config['state_dir'],self.config_path)['status'],'dispatched')
+                    self.assertTrue(store.db.execute('SELECT error FROM publications').fetchone()[0].endswith(f' lost={expected}'))
+                age(25)
+                self.assertEqual(publish(store,job,self.config['state_dir'],self.config_path)['status'],'awaiting_dispatch_visibility')
+            self.assertEqual(sum(a[:3]==('gh','workflow','run') for a in calls),1+pub.DISPATCH_LOST_LIMIT)
+
     def test_real_deploy_failure_still_final(self):
         from news_mvp.publish import startup_failure_redispatch
         self.assertEqual(startup_failure_redispatch([{'databaseId':1,'conclusion':'failure'}],None),([{'databaseId':1,'conclusion':'failure'}],None,None))

@@ -64,6 +64,41 @@ def refused_dispatch_count(previous_error):
     return count if count<=DISPATCH_REFUSAL_LIMIT else None
 
 
+DISPATCH_LOST_AFTER_SECONDS = 1200
+DISPATCH_LOST_LIMIT = 2
+_DISPATCHED = re.compile(r'^Dispatched (\S+) lost=(\d+)(?: startup=(\d+))?$')
+
+
+def dispatched_marker(lost=0, startup=None):
+    from datetime import datetime, timezone
+    # startup = newest 'startup_failure' run this dispatch answered (so it is never answered twice)
+    return f'Dispatched {datetime.now(timezone.utc).isoformat()} lost={lost}'+(f' startup={startup}' if startup else '')
+
+
+def lost_dispatch(previous_error, status):
+    """Next lost-dispatch count when an accepted dispatch never produced a run for our commit.
+
+    11 Nov 2026 real case: article f2b1b20b's commit 62137a85 was pushed to main at
+    21:30:56 UTC and `gh workflow run --ref main` was accepted at 21:31:01, but GitHub
+    resolved main to the previous commit f73cd97f. That run failed 'Reject superseded
+    main' and no run ever existed for our commit, so the row would have sat in
+    'dispatched' (awaiting visibility) forever. After DISPATCH_LOST_AFTER_SECONDS the
+    dispatch is treated as lost and redispatched, at most DISPATCH_LOST_LIMIT times.
+    Returns None while waiting (or once the limit is used up).
+    """
+    from datetime import datetime, timezone
+    if status!='dispatched':return None
+    match=_DISPATCHED.match(previous_error or '')
+    if not match:return None
+    try:
+        when=datetime.fromisoformat(match.group(1))
+    except ValueError:
+        return None
+    if (datetime.now(timezone.utc)-when).total_seconds()<DISPATCH_LOST_AFTER_SECONDS:return None
+    count=int(match.group(2))+1
+    return count if count<=DISPATCH_LOST_LIMIT else None
+
+
 STARTUP_FAILURE_LIMIT = 3
 
 
@@ -86,6 +121,8 @@ def startup_failure_redispatch(runs, previous_error, status=None):
     newest=max(r['databaseId'] for r in failed)
     match=re.match(r'^StartupFailure: run (\d+) ',previous_error or '')
     if match and match.group(1)==str(newest):return real,None,newest
+    marker=_DISPATCHED.match(previous_error or '')
+    if marker and marker.group(3)==str(newest):return real,None,newest
     # A redispatch GitHub then refused is owned by the bounded DispatchRefused path.
     if status=='prepared' and (previous_error or '').startswith('DispatchRefused '):return real,None,newest
     return real,('exhausted' if len(failed)>=STARTUP_FAILURE_LIMIT else 'redispatch'),newest
@@ -1068,13 +1105,21 @@ def site_refresh(config, config_path):
                     store.db.execute("UPDATE site_refreshes SET status='prepared',run_id=?,error=? WHERE id=?",
                                      (failed_id, f'StartupFailure: run {failed_id} never started; redispatching', row['id']))
                 row['status'] = 'prepared'
+                row['run_id'] = failed_id
                 row['error'] = f'StartupFailure: run {failed_id} never started; redispatching'
             if len(runs) > 1:
                 raise ValueError('Multiple deploy runs found for one site refresh')
             if not runs:
+                lost = 0
                 if row['status'] in ('dispatching','dispatched','unknown'):
-                    return {'status':'awaiting_dispatch_visibility','site_refresh_id':row['id'],
-                            'remote_commit':row['remote_commit']}
+                    lost = lost_dispatch(row.get('error'), row['status'])
+                    if lost is None:
+                        return {'status':'awaiting_dispatch_visibility','site_refresh_id':row['id'],
+                                'remote_commit':row['remote_commit']}
+                    row['status'] = 'prepared'
+                else:
+                    previous = _DISPATCHED.match(row.get('error') or '')
+                    lost = int(previous.group(2)) if previous else 0
                 guard(config_path)
                 cmd('gh','workflow','enable',WORKFLOW,'--repo',REPO)
                 with store.db:
@@ -1093,8 +1138,8 @@ def site_refresh(config, config_path):
                     return {'status':'dispatch_retry','site_refresh_id':row['id'],
                             'remote_commit':row['remote_commit'],'reason':safe_error(refused)}
                 with store.db:
-                    store.db.execute("UPDATE site_refreshes SET status='dispatched' WHERE id=?",
-                                     (row['id'],))
+                    store.db.execute("UPDATE site_refreshes SET status='dispatched',error=? WHERE id=?",
+                                     (dispatched_marker(lost, failed_id),row['id']))
                 return {'status':'dispatched','site_refresh_id':row['id'],
                         'anchor_job_id':job['id'],'remote_commit':row['remote_commit']}
 
@@ -1247,10 +1292,17 @@ def publish(store,job,state,config_path):
         if startup=='redispatch':
             with store.db:store.db.execute("UPDATE publications SET status='prepared',run_id=?,error=? WHERE job_id=?",
                                            (failed_id,f'StartupFailure: run {failed_id} never started; redispatching',job['id']))
-            row['status']='prepared';row['error']=f'StartupFailure: run {failed_id} never started; redispatching'
+            row['status']='prepared';row['run_id']=failed_id;row['error']=f'StartupFailure: run {failed_id} never started; redispatching'
         if not runs:
+            lost=0
             if row['status'] in ('dispatching','dispatched','unknown'):
-                return {'status':'awaiting_dispatch_visibility','job_id':job['id'],'remote_commit':row['remote_commit']}
+                lost=lost_dispatch(row.get('error'),row['status'])
+                if lost is None:
+                    return {'status':'awaiting_dispatch_visibility','job_id':job['id'],'remote_commit':row['remote_commit']}
+                row['status']='prepared'
+            else:
+                previous=_DISPATCHED.match(row.get('error') or '')
+                lost=int(previous.group(2)) if previous else 0
             guard(config_path)
             cmd('gh','workflow','enable',WORKFLOW,'--repo',REPO)
             with store.db:store.db.execute("UPDATE publications SET status='dispatching' WHERE job_id=?",(job['id'],))
@@ -1266,7 +1318,7 @@ def publish(store,job,state,config_path):
                 with store.db:store.db.execute("UPDATE publications SET status='prepared',error=? WHERE job_id=?",
                                                (f'DispatchRefused {count}: '+safe_error(refused),job['id']))
                 return {'status':'dispatch_retry','job_id':job['id'],'remote_commit':row['remote_commit'],'reason':safe_error(refused)}
-            with store.db:store.db.execute("UPDATE publications SET status='dispatched' WHERE job_id=?",(job['id'],))
+            with store.db:store.db.execute("UPDATE publications SET status='dispatched',error=? WHERE job_id=?",(dispatched_marker(lost,failed_id),job['id']))
             return {'status':'dispatched','job_id':job['id'],'remote_commit':row['remote_commit']}
         run=runs[0]
         with store.db:store.db.execute('UPDATE publications SET run_id=? WHERE job_id=?',(run['databaseId'],job['id']))
