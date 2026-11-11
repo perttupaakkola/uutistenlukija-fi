@@ -64,6 +64,33 @@ def refused_dispatch_count(previous_error):
     return count if count<=DISPATCH_REFUSAL_LIMIT else None
 
 
+STARTUP_FAILURE_LIMIT = 3
+
+
+def startup_failure_redispatch(runs, previous_error, status=None):
+    """Split deploy runs; decide whether a GitHub 'startup_failure' run needs a redispatch.
+
+    11 Nov 2026 real case: article f2b1b20b's deploy run 43096348961 ended
+    'startup_failure' (GitHub never started a single job, during an Actions/webhooks
+    disruption). Every non-success conclusion was treated as a final deploy failure,
+    so the article was lost although nothing had been deployed. A run that never
+    started is safe to redispatch; bounded to STARTUP_FAILURE_LIMIT runs per commit.
+
+    The run already handled is read from the row's error text ('StartupFailure: run N'),
+    so a later tick never redispatches twice for the same failed run.
+    Returns (real_runs, action, newest_failed_id): action is None, 'redispatch' or 'exhausted'.
+    """
+    failed=[r for r in runs if r.get('conclusion')=='startup_failure']
+    real=[r for r in runs if r.get('conclusion')!='startup_failure']
+    if real or not failed:return real,None,None
+    newest=max(r['databaseId'] for r in failed)
+    match=re.match(r'^StartupFailure: run (\d+) ',previous_error or '')
+    if match and match.group(1)==str(newest):return real,None,newest
+    # A redispatch GitHub then refused is owned by the bounded DispatchRefused path.
+    if status=='prepared' and (previous_error or '').startswith('DispatchRefused '):return real,None,newest
+    return real,('exhausted' if len(failed)>=STARTUP_FAILURE_LIMIT else 'redispatch'),newest
+
+
 def api(path, data=None, method=None):
     if data is None and method is None:
         return json.loads(cmd('gh','api',f'repos/{REPO}/{path}'))
@@ -1028,7 +1055,20 @@ def site_refresh(config, config_path):
                 external_started = True
                 api('git/refs/heads/main',{'sha':row['remote_commit'],'force':False},method='PATCH')
 
-            runs = matching_runs(row['remote_commit'])
+            all_runs = matching_runs(row['remote_commit'])
+            runs, startup, failed_id = startup_failure_redispatch(all_runs, row.get('error'), row['status'])
+            if startup == 'exhausted':
+                with store.db:
+                    store.db.execute(
+                        "UPDATE site_refreshes SET status='failed',error='ConfirmedCompletedRunFailure' WHERE id=?",
+                        (row['id'],))
+                raise ValueError('Site refresh deployment failed; no automatic redispatch')
+            if startup == 'redispatch':
+                with store.db:
+                    store.db.execute("UPDATE site_refreshes SET status='prepared',run_id=?,error=? WHERE id=?",
+                                     (failed_id, f'StartupFailure: run {failed_id} never started; redispatching', row['id']))
+                row['status'] = 'prepared'
+                row['error'] = f'StartupFailure: run {failed_id} never started; redispatching'
             if len(runs) > 1:
                 raise ValueError('Multiple deploy runs found for one site refresh')
             if not runs:
@@ -1200,7 +1240,14 @@ def publish(store,job,state,config_path):
             current=api('git/ref/heads/main')['object']['sha']
             if current!=row['remote_commit']:
                 api('git/refs/heads/main',{'sha':row['remote_commit'],'force':False},method='PATCH')
-        runs=matching_runs(row['remote_commit'])
+        runs,startup,failed_id=startup_failure_redispatch(matching_runs(row['remote_commit']),row.get('error'),row['status'])
+        if startup=='exhausted':
+            with store.db:store.db.execute("UPDATE publications SET status='failed',error='ConfirmedCompletedRunFailure' WHERE job_id=?",(job['id'],))
+            raise ValueError('Public deployment failed; no automatic redispatch')
+        if startup=='redispatch':
+            with store.db:store.db.execute("UPDATE publications SET status='prepared',run_id=?,error=? WHERE job_id=?",
+                                           (failed_id,f'StartupFailure: run {failed_id} never started; redispatching',job['id']))
+            row['status']='prepared';row['error']=f'StartupFailure: run {failed_id} never started; redispatching'
         if not runs:
             if row['status'] in ('dispatching','dispatched','unknown'):
                 return {'status':'awaiting_dispatch_visibility','job_id':job['id'],'remote_commit':row['remote_commit']}
