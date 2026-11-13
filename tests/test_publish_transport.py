@@ -140,6 +140,20 @@ class GitObjectTransport(unittest.TestCase):
             self.assertNotIsInstance(caught.exception,UncommittedPreparationError)
             self.assertEqual(request.call_count,1)
 
+    def test_commit_refused_for_missing_tree_is_retried_then_uncommitted(self):
+        # Real 13 Nov error text stored on the stuck site refresh row.
+        real=RuntimeError('GitHub POST git/commits: HTTP 422 ValueError: {"message": "Tree SHA does not exist"}')
+        with patch('news_mvp.publish.prepare_commit_tree',return_value=('parent','tree')), \
+             patch('news_mvp.publish.time.sleep'), \
+             patch('news_mvp.publish.api',side_effect=[real,real,{'sha':'c'*40}]) as request:
+            self.assertEqual(make_commit(None,{'job_id':'fixture'}),'c'*40)
+            self.assertEqual(request.call_count,3)
+        with patch('news_mvp.publish.prepare_commit_tree',return_value=('parent','tree')), \
+             patch('news_mvp.publish.time.sleep'), \
+             patch('news_mvp.publish.api',side_effect=real) as request:
+            with self.assertRaises(UncommittedPreparationError):make_commit(None,{'job_id':'fixture'})
+            self.assertEqual(request.call_count,5)
+
     def call(self, path, responses, method=None):
         credential=subprocess.CompletedProcess([],0,'username=test\npassword=synthetic-only\n','')
         with patch('news_mvp.publish.subprocess.run',return_value=credential), \

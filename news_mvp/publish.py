@@ -932,8 +932,34 @@ def make_commit(site,receipt):
     message = ('Refresh Uutistenlukija site from '+receipt['source_commit'][:12]
                if receipt.get('release_kind') == 'site_refresh'
                else 'Fresh MVP reviewed article '+receipt['job_id'][:12])
-    return api('git/commits',{'message':message, 'tree':tree,'parents':[parent],
-                            'author':{'name':'Uutistenlukija MVP','email':'news-mvp@localhost'}})['sha']
+    body={'message':message, 'tree':tree,'parents':[parent],
+          'author':{'name':'Uutistenlukija MVP','email':'news-mvp@localhost'}}
+    for attempt in range(COMMIT_TREE_RETRIES+1):
+        try:
+            return api('git/commits',body)['sha']
+        except RuntimeError as error:
+            # 13 Nov: GitHub acknowledged our final tree, then answered the
+            # commit with 422 "Tree SHA does not exist" (object-store lag, the
+            # same class as the base_tree lag above). A 422 validation refusal
+            # is a definite "no commit was created", not an uncertain outcome,
+            # so it must not park the release in 'unknown' for good. Wait and
+            # retry a bounded number of times; then hand it back as an
+            # uncommitted preparation so the next tick re-POSTs the
+            # content-addressed trees (recreating any GitHub lost) and retries.
+            if not is_missing_commit_tree(str(error)):
+                raise
+            if attempt == COMMIT_TREE_RETRIES:
+                raise UncommittedPreparationError(safe_error(error)) from error
+            time.sleep(min(4 * 2 ** attempt, 20))
+
+
+COMMIT_TREE_RETRIES = 4
+_MISSING_TREE = re.compile(r'GitHub POST git/commits: HTTP 422 .*Tree SHA does not exist', re.S)
+
+
+def is_missing_commit_tree(text):
+    """GitHub's definite refusal to create a commit whose tree it cannot see."""
+    return bool(_MISSING_TREE.search(text or ''))
 
 
 def matching_runs(commit):
