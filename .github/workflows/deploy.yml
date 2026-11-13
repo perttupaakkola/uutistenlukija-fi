@@ -50,20 +50,26 @@ jobs:
           # otherwise-successful deploy. Measured 2026-09-16: the article went live and served
           # 200 while this step reported failure. Poll until the stage settles, and only then
           # decide - a genuine failure still fails, it just fails on evidence.
-          deadline=time.time()+180
+          deadline=time.time()+300
           d=None
           while time.time()<deadline:
               result=fetch()
               assert result['success'] is True
               d=result['result']['canonical_deployment']
+              # 13 Nov 2026 real case (run 43347544446): wrangler returned, the check read
+              # 1 s later and Cloudflare still named the PREVIOUS (settled, successful)
+              # deployment canonical, so the commit assert failed a deploy that went live.
+              # Only a settled stage of THIS commit ends the wait.
               if (d.get('environment')=='production'
+                      and ((d.get('deployment_trigger') or {}).get('metadata') or {}).get('commit_hash')==os.environ['GITHUB_SHA']
                       and (d.get('latest_stage') or {}).get('status') in ('success','failure')):
                   break
               time.sleep(10)
           assert d is not None, 'No canonical deployment reported'
           assert d['environment']=='production' and (d['latest_stage'] or {}).get('status')=='success', \
               'Production stage did not succeed: '+json.dumps(d.get('latest_stage'))
-          assert d['deployment_trigger']['metadata']['commit_hash']==os.environ['GITHUB_SHA']
+          assert d['deployment_trigger']['metadata']['commit_hash']==os.environ['GITHUB_SHA'], \
+              'Canonical deployment never became this commit: '+str(d['deployment_trigger']['metadata'].get('commit_hash'))
           receipt=json.loads(Path('release/release.json').read_text())
           record=deployment_record(receipt,d,os.environ['GITHUB_SHA'])
           Path('live-deployment.json').write_text(json.dumps(record,indent=2)+'\n')
