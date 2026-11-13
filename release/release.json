@@ -4,18 +4,16 @@
   "origin": "https://uutistenlukija.fi",
   "ga4_id": "G-35XERS8V6J",
   "source_commit": "eee955873c976cf81393f7747011e654b718a03d",
-  "job_id": "884a46a65b39205c08b026b69382d16305e0f04d218c44c3ab0c69e5ef7fe094",
-  "packet_sha256": "4d9f5ec779672b9fbaca1bf4bfd8cdd4fb117df881334b2570b388a1fa14c98a",
-  "draft_sha256": "dff3fd9abf6337617a66da9cd0099879cb5c59b4ede55321e8ae9db70f6da5ea",
-  "image_sha256": "b6bf6f55f251fcc18e53448f9f507b3aa30c598236a71c35048d7e7f57e1558d",
+  "job_id": "1d556189c1a6100bb7aa7492fc3a2d2735eb787cf4d0f29a489dd46620d8cca8",
+  "packet_sha256": "e5b772cdc38dc80dc98fa2b68fa17401cdb443312874ad7798becec9344bacc7",
+  "draft_sha256": "62036f035700afd6044a9b1153b36645e232d344406e50dc19a5825ae49d3301",
+  "image_sha256": "e27eb2e1e6a712626557aa2600895279de82eb2b8a2d003f8f5934a4c23336b0",
   "text_only": {
     "policy": "official-text-v1",
     "policy_sha256": "d01ef84b79a4da8fa0dfa006a670e7fcb06acd84f4a5adaa43a0536b0f4742c8",
-    "provenance_sha256": "f9b95f559a26d84d5ef899f6e3a1bd3241d7f8f84ffb9f4095f81d26b1e4f27a"
+    "provenance_sha256": "ba20ead371b354b215af181277f10d4e87f0fa3ea60c31878104efa161a10a9a"
   },
-  "new_article_files": [
-    "uutiset/huittinen-aloittaa-veden-kloorauksen-keittokehotus-jatkuu-884a46a65b39/index.html"
-  ],
+  "new_article_files": [],
   "files": {
     "0bce47347326f83e8507a46c6b0c3bdb.txt": "f1a2b584ad8690f8447736e1c18c93360e63182fd2e6fe49ec7359a97c9b40c5",
     "404.html": "6e925ae9e5bc3bcba34e26022c1bf0aa8a9ea9e7995d329e9b364fd7a3964a5f",
@@ -2252,111 +2250,115 @@
     "uutiset/yrityksia-lopetti-enemman-kuin-aloitti-huhti-kesakuussa-2026-a4a923e9509d/index.html": "b6b1464367a98eff7e1839799ac5f84700ed4a701e3c14705b05b80e144f6a4d",
     "uutiset/zelenskyi-pyytaa-eu-lta-70-mrd-euron-lisatukea-42553e7bcf16/index.html": "19d520f9cfd4a45837855f0bd0ab200b730e77ef794e7e522ed519728c549718"
   },
-  "schema_version": 2,
+  "schema_version": 4,
+  "release_kind": "site_refresh",
+  "anchor_job_id": "1d556189c1a6100bb7aa7492fc3a2d2735eb787cf4d0f29a489dd46620d8cca8",
+  "anchor_article_file": "uutiset/tampereen-harmalan-autohallipaloa-tutkitaan-tahallisena-1d556189c1a6/index.html",
+  "style_sha256": "69ddc2ea24425fbba389cf2b42006ab80a77269444543b4fc0452d854f14c451",
   "packet": {
     "fixture": false,
     "image": {
-      "alt": "AI-generoitu kuva: Teräskattilassa kiehuu voimakkaasti vettä mustalla liesitasolla, ja kattilasta nousee runsaasti höyryä.",
+      "alt": "AI-generoitu kuva: Autohallin nokimustasta betonikatosta roikkuu sulaneita kaapeleita, ja tyhjän pysäköintiruudun lattialla on palojätettä.",
       "attempts": 1,
       "caption": "AI-generoitu kuva. Ei valokuva tapahtumasta.",
       "classifier_output": {
         "category": "Kotimaa",
         "concepts": [
           {
-            "depictable_scene": "Teräksinen kattila täynnä voimakkaasti kiehuvaa vettä keittiön liesitasolla, kattilasta nousee runsaasti höyryä, taustalla tavallinen kodin keittiö arkisessa valaistuksessa.",
+            "depictable_scene": "Taloyhtiön autohallin sisätila palon jälkeen: noen mustaama betonikatto, jonka pinnassa kulkevat metalliset kaapelihyllyt ja niillä sulaneet, roikkuvat sähkökaapelit. Alla näkyy tyhjä, nokinen pysäköintiruutu ja betonilattialla tuhkaa ja palojätettä, valaistuksena himmeä hallin valo.",
             "must_avoid": [
               "people",
-              "hands",
               "faces",
-              "electric kettle as the main object",
-              "readable text or logos"
+              "hands or other body parts",
+              "active flames",
+              "readable text or license plates",
+              "identifiable car brands or logos"
             ],
             "must_show": [
-              "pot of boiling water on stove",
-              "rising steam"
+              "soot-blackened concrete ceiling",
+              "melted electrical cables hanging from cable tray"
             ],
             "rank": 1,
             "safe_to_generate": true,
             "search_queries": [
-              "Huittinen keittokehotus",
-              "kiehuva vesi kattila",
-              "boiling water pot stove",
-              "veden keittokehotus juomavesi",
-              "pot of water boiling steam kitchen"
+              "Härmälä autohalli palo",
+              "autohallipalo Tampere",
+              "burned parking garage ceiling",
+              "melted electrical cables soot",
+              "fire damaged garage cable tray"
             ],
-            "subject": "Juomaveden keittokehotus: vesi on keitettävä vähintään viisi minuuttia"
+            "subject": "Palon vaurioittamat sähkökaapeleita hallin katossa autohallissa"
           },
           {
-            "depictable_scene": "Huittisten paloaseman takapiha Klaavolantiellä, rakennuksen seinässä ulkovesiposti ja hanallinen letku, jonka luona ihmiset täyttävät kannellisia ämpäreitä, kanistereita tai pulloja juomavedellä.",
+            "depictable_scene": "Todellinen uutiskuva Tampereen Härmälän Hissikadulta: kahden kerrostalon välissä oleva autohalli yöllä tai palon jälkeisenä aamuna, edessä Pirkanmaan pelastuslaitoksen paloautoja ja poliisiautoja sekä mahdollisesti palomiehiä työssään.",
             "must_avoid": [
-              "identifiable minors",
-              "staged or unrelated location presented as Huittinen"
+              "injured people",
+              "identifiable bystanders as main subject",
+              "staged or fabricated scene"
             ],
             "must_show": [
-              "outdoor water tap on building wall",
-              "water canisters being filled"
+              "apartment buildings with garage between them",
+              "fire engines outside"
             ],
             "rank": 2,
             "safe_to_generate": false,
             "search_queries": [
-              "Huittisten paloasema",
-              "Huittinen paloasema Klaavolantie",
-              "drinking water distribution canister",
-              "ulkovesipiste vedenjakelu kanisteri",
-              "water canister filling outdoor tap"
+              "Hissikatu Härmälä Tampere",
+              "Härmälä kerrostalo autohalli",
+              "Pirkanmaan pelastuslaitos paloauto Härmälä",
+              "fire engine apartment building night"
             ],
-            "subject": "Juomavettä voi hakea ulkovesipisteistä paloaseman takapihalta"
+            "subject": "Hissikadulla sijaitsevan taloyhtiön autohalli ja kerrostalot"
           },
           {
-            "depictable_scene": "Kodin keittiön teräksinen vesihana, josta valuu tasainen kirkas vesisuihku teräksiseen tiskialtaaseen, altaan reunalla vesipisaroita ja vaimea päivänvalo ikkunasta.",
+            "depictable_scene": "Kerrostalon porraskäytävä, jonka vaaleilla seinillä ja katossa näkyy harmaata noki- ja savujälkeä. Betoniportaat ja metallinen kaide johtavat ylöspäin, ja ilmassa leijuu ohut savuharso.",
             "must_avoid": [
               "people",
-              "hands",
               "faces",
-              "cloudy or discolored water",
-              "readable text or logos"
+              "hands or other body parts",
+              "active flames",
+              "readable text or signs"
             ],
             "must_show": [
-              "running kitchen faucet",
-              "stainless steel sink"
+              "concrete stairwell with metal handrail",
+              "grey soot stains on walls and ceiling"
             ],
             "rank": 3,
             "safe_to_generate": true,
             "search_queries": [
-              "vesihana juoksutus",
-              "running kitchen faucet",
-              "vesijohtoverkoston klooraus Huittinen",
-              "tap water running sink",
-              "juomaveden desinfiointi kloori"
+              "porraskäytävä savuvahinko",
+              "kerrostalon porraskäytävä noki",
+              "smoke damaged stairwell",
+              "soot stained staircase walls"
             ],
-            "subject": "Vettä pitää juoksuttaa kaikista vesipisteistä"
+            "subject": "Savuvahinkoja taloyhtiön porraskäytäviin"
           }
         ],
         "version": "article-first-v1"
       },
       "credit": "AI-kuvitus",
-      "depicted": "A stainless steel pot filled with vigorously boiling water sits on a black kitchen stovetop, with abundant steam rising above it. No people or readable text are visible.",
+      "depicted": "An empty concrete parking garage has a soot-blackened ceiling, metal cable trays and melted cables hanging down. Ash and debris cover part of a marked parking space.",
       "generated": true,
       "license": "AI-generated image",
       "license_url": "https://uutistenlukija.fi/ai-kuvat/",
-      "local_path": "media/b6bf6f55f251fcc18e53448f9f507b3aa30c598236a71c35048d7e7f57e1558d.jpg",
+      "local_path": "media/e27eb2e1e6a712626557aa2600895279de82eb2b8a2d003f8f5934a4c23336b0.jpg",
       "model": "codex-oauth:gpt-image-2",
       "pixel_review": {
-        "alt_fi": "Teräskattilassa kiehuu voimakkaasti vettä mustalla liesitasolla, ja kattilasta nousee runsaasti höyryä.",
+        "alt_fi": "Autohallin nokimustasta betonikatosta roikkuu sulaneita kaapeleita, ja tyhjän pysäköintiruudun lattialla on palojätettä.",
         "approved": true,
-        "article_text_sha256": "52a0c16016e7f68e565fc8b2895e70f0ae1d58072db2be24db9570c13d7aef97",
-        "concept_sha256": "e39610abb9b482e99fe315807400b5a25272d903e850265c5033461c0fce2641",
-        "description": "A stainless steel pot filled with vigorously boiling water sits on a black kitchen stovetop, with abundant steam rising above it. No people or readable text are visible.",
+        "article_text_sha256": "18d08c9653af83d1f88ad755e9034bc0368c35e60bddf40173d3f94d4d914f7c",
+        "concept_sha256": "0d1552efe629c5d25837ce4a4c36667e78d32e398ce56e5b941791f36e6a79bc",
+        "description": "An empty concrete parking garage has a soot-blackened ceiling, metal cable trays and melted cables hanging down. Ash and debris cover part of a marked parking space.",
         "fit_score": 9,
-        "image_sha256": "b6bf6f55f251fcc18e53448f9f507b3aa30c598236a71c35048d7e7f57e1558d",
+        "image_sha256": "e27eb2e1e6a712626557aa2600895279de82eb2b8a2d003f8f5934a4c23336b0",
         "model": "codex-oauth:gpt-6.1-sol",
         "must_show_visible": [
           true,
           true
         ],
         "no_people": true,
-        "reason": "The visible boiling water and rising steam match both required concept elements and directly illustrate the article’s instruction to boil drinking and cooking water. The image does not establish boiling duration or document the local water treatment, and has no visible defects that undermine its relevance.",
-        "reviewed_at": "2026-11-13T14:47:31.978026+00:00",
+        "reason": "The visible fire damage to ceiling cables directly matches the selected concept and the article's description of damaged electrical cables in a parking garage. No people, flames, readable text or identifiable logos are visible. The scene supports the disclosed generated illustration without establishing the actual location or event.",
+        "reviewed_at": "2026-11-13T15:57:01.901174+00:00",
         "text_audit": {
           "examples": [],
           "readable_text_present": false
@@ -2365,113 +2367,113 @@
       "pixels": {
         "height": 1024,
         "mode": "RGB",
-        "variance": 11361.3,
+        "variance": 5247.9,
         "width": 1536
       },
-      "prompt_sha256": "cf8b2fec9e3770f1b605973c48340d3edb458890eaa219ae154002080da72478",
+      "prompt_sha256": "640b770755f5ecb9df8847ea57b77c699c3c3f3909ab4ff933d77b2722a13e5d",
       "prompt_version": "imagery-v4-article-first-exact-concept",
       "relevance_check": {
         "accepted": true,
-        "evidence": "Teräksinen kattila täynnä voimakkaasti kiehuvaa vettä keittiön liesitasolla, kattilasta nousee runsaasti höyryä, taustalla tavallinen kodin keittiö arkisessa valaistuksessa.",
+        "evidence": "Taloyhtiön autohallin sisätila palon jälkeen: noen mustaama betonikatto, jonka pinnassa kulkevat metalliset kaapelihyllyt ja niillä sulaneet, roikkuvat sähkökaapelit. Alla näkyy tyhjä, nokinen pysäköintiruutu ja betonilattialla tuhkaa ja palojätettä, valaistuksena himmeä hallin valo.",
         "matched": [
-          "pot of boiling water on stove",
-          "rising steam"
+          "soot-blackened concrete ceiling",
+          "melted electrical cables hanging from cable tray"
         ],
         "method": "generation",
         "reason": "generated from the accepted scene"
       },
       "review_note": "Tekoälyn tuottama kuva vastaa valittua konkreettista aihetta. Artikkeli kertoo selvästi, ettei kuva ole valokuva tapahtumasta. Kuva ei esitä tunnistettavaa todellista henkilöä.",
       "selection_evidence": {
-        "article_text_sha256": "52a0c16016e7f68e565fc8b2895e70f0ae1d58072db2be24db9570c13d7aef97",
-        "decision_sha256": "044683567fead3b561a500124d0df22240db4a349a363a3c2dfb088875918ef4",
+        "article_text_sha256": "18d08c9653af83d1f88ad755e9034bc0368c35e60bddf40173d3f94d4d914f7c",
+        "decision_sha256": "d34a84198785351809a1882bd48ccfd4e61b4afc54f77639cc8da87811162d7a",
         "minimum_real_fit": 8,
         "searches": [
           {
             "candidates": [
               {
                 "approved": false,
-                "fit_score": 4,
-                "image_sha256": "b68082cd21fc6ac40586275df8471b9a20edea5e18b08f03ba7e7bf49f8a8e1d",
+                "fit_score": 0,
+                "image_sha256": "187b1d842ef327da37666160dcf25ca9d3edd8259d4cb0bde4d6b71094a6a17b",
                 "license": "Pexels License",
-                "reason": "The kitchen provides only broad context for household water use. The selected scene requires boiling water in a pot on the stove and rising steam; both are absent. One or more required concept elements are not visible.",
-                "source_url": "https://www.pexels.com/photo/white-furniture-in-kitchen-19980203/"
+                "reason": "The decorative tabletop objects do not illustrate the parking garage fire or its damage. Neither a soot-blackened concrete ceiling nor melted electrical cables hanging from a cable tray is visible. One or more required concept elements are not visible.",
+                "source_url": "https://www.pexels.com/photo/a-burned-palo-santo-and-seashells-7602963/"
               },
               {
                 "approved": false,
-                "fit_score": 4,
-                "image_sha256": "06ee17a4b7437650df3398702b9c403793717dce2d76c3d272f1f9ebc93809b4",
+                "fit_score": 1,
+                "image_sha256": "f853d97dc3a7a70a314d3d9f8fb07f13ab7684a937a5e38180a89a7460970683",
                 "license": "Pexels License",
-                "reason": "The main subject is food cooking in a frying pan, which offers only a broad kitchen connection to the article. Neither a pot visibly containing boiling water nor rising steam is present, so the selected water-boiling concept is not illustrated. One or more required concept elements are not visible.",
-                "source_url": "https://www.pexels.com/photo/dish-cooking-on-black-non-stick-pan-on-a-burner-86999/"
+                "reason": "The portrait does not illustrate the parking garage fire or damaged ceiling cables. Neither required element is visible, and the image contains a person, face, hand and active flame, all excluded by the selected concept. One or more required concept elements are not visible.",
+                "source_url": "https://www.pexels.com/photo/grayscale-photo-of-a-woman-smudging-8898231/"
               },
               {
                 "approved": false,
-                "fit_score": 4,
-                "image_sha256": "66fc77626e02147999413f1b74e802a1386a09864f8a67647af80218266a8327",
+                "fit_score": 5,
+                "image_sha256": "22a6769d08903f3184c5fef011c448c5dd54b196c9839bbf965ce8150f5c1d48",
                 "license": "Pexels License",
-                "reason": "The scene shows cooking but does not visibly demonstrate boiling drinking water, the article's concrete household precaution. Both required elements are absent, and the visible person, hands and face conflict with the selected concept. One or more required concept elements are not visible.",
-                "source_url": "https://www.pexels.com/photo/smiling-woman-preparing-topping-for-muffins-in-kitchen-7525108/"
+                "reason": "The parking garage provides context for the article, but the image does not show the selected fire-damaged ceiling or melted electrical cables hanging from a cable tray. Dark ceiling areas alone do not establish soot damage. One or more required concept elements are not visible.",
+                "source_url": "https://www.pexels.com/photo/exit-from-underground-parking-17789434/"
               },
               {
                 "approved": false,
-                "fit_score": 7,
-                "image_sha256": "d5722d21f09ca701acc7dfc8d21798e17f88aba4a914939e4d441bcbf15073c0",
+                "fit_score": 5,
+                "image_sha256": "e503c5ad2640eae81b8e92f269edfc258f2821e2992a826ed7cc409d7b856fc4",
                 "license": "Pexels License",
-                "reason": "The boiling water directly illustrates the article's instruction to boil drinking water, but the required rising steam is not clearly visible. The visible hand and person also conflict with the selected concept's exclusions. One or more required concept elements are not visible.",
-                "source_url": "https://www.pexels.com/photo/boiling-water-in-pot-on-burner-12673645/"
+                "reason": "The parking garage provides context for the article, but no clear fire damage is visible. The ceiling is not visibly soot-blackened, and no melted electrical cables hang from a cable tray. The image does not depict the selected fire-damaged scene or establish the reported location. One or more required concept elements are not visible.",
+                "source_url": "https://www.pexels.com/photo/photo-of-an-empty-parking-lot-20262986/"
               }
             ],
             "concept_rank": 1,
             "outcome": "no_qualifying_candidate",
             "provider": "pexels",
             "queries": [
-              "Huittinen keittokehotus",
-              "kiehuva vesi kattila",
-              "boiling water pot stove"
+              "Härmälä autohalli palo",
+              "autohallipalo Tampere",
+              "burned parking garage ceiling"
             ]
           },
           {
             "candidates": [
               {
                 "approved": false,
-                "fit_score": 2,
-                "image_sha256": "607ea1ed677d034d253f52197dca08817657038df95104c476c25f24d5328686",
+                "fit_score": 5,
+                "image_sha256": "959a8e2f8ed4afc38a98c115fc9ca3997df48970bead2414c9684ceae9e525d1",
                 "license": "Unsplash License",
-                "reason": "The outdoor shoreline does not illustrate drinking-water boiling, chlorination or water distribution. Neither the required pot of boiling water on a stove nor rising steam is visible. One or more required concept elements are not visible.",
-                "source_url": "https://unsplash.com/photos/a-body-of-water-surrounded-by-trees-and-rocks-NGOrTrZO_5w?utm_source=uutistenlukija&utm_medium=referral"
+                "reason": "The garage provides only broad context for the article. No soot-blackened ceiling, melted hanging cables, or visible fire damage appears, so it does not depict the selected fire-damaged scene or establish the reported venue. One or more required concept elements are not visible.",
+                "source_url": "https://unsplash.com/photos/empty-white-concrete-pillared-parking-lot-fAmj2spOqxc?utm_source=uutistenlukija&utm_medium=referral"
               },
               {
                 "approved": false,
-                "fit_score": 7,
-                "image_sha256": "3e5d41adbb47a716f87ed6794489f13dc027b70f11ba4f9a77076a38c61ebec0",
+                "fit_score": 5,
+                "image_sha256": "5f851aedf4d3101f23c2519a3ead7f5b743710055afd6a4dc144ba53a6e7ea86",
                 "license": "Unsplash License",
-                "reason": "The steaming pot relates concretely to the article's water-boiling advice, but its contents and boiling water are not visible. The rustic stove setting only partially matches the selected kitchen scene. One or more required concept elements are not visible.",
-                "source_url": "https://unsplash.com/photos/steam-rises-from-a-pot-on-a-rustic-stove-0KKh9PQ4GT4?utm_source=uutistenlukija&utm_medium=referral"
+                "reason": "The parking garage provides only general context for the article. No clearly soot-blackened ceiling or melted electrical cables hanging from a cable tray are visible, and the pixels do not establish fire damage or the reported venue. One or more required concept elements are not visible.",
+                "source_url": "https://unsplash.com/photos/an-empty-parking-garage-with-a-ramp-leading-up-to-it-4or9wfgs9Tg?utm_source=uutistenlukija&utm_medium=referral"
               },
               {
                 "approved": false,
-                "fit_score": 6,
-                "image_sha256": "b35127c150b3207d685d53a84096e60e9f69a389eef45c0e8d484db00f57b73a",
+                "fit_score": 5,
+                "image_sha256": "6fd07099bca85fd7727571f31f8e67796d291190fe87e64a3cac58c3a07fe52c",
                 "license": "Unsplash License",
-                "reason": "The covered pot relates to the article's water-boiling advice, but neither boiling water nor rising steam is clearly visible, so the selected scene is not demonstrated. One or more required concept elements are not visible.",
-                "source_url": "https://unsplash.com/photos/stainless-steel-cooking-pot-with-water-PJBDItb1tpg?utm_source=uutistenlukija&utm_medium=referral"
+                "reason": "The garage provides general context for the article, but the selected subject is fire-damaged ceiling cables. Neither a clearly soot-blackened concrete ceiling nor melted cables hanging from a cable tray is visible; the dark ceiling alone does not establish soot damage. One or more required concept elements are not visible.",
+                "source_url": "https://unsplash.com/photos/a-parking-garage-filled-with-lots-of-parked-cars-_S0ZoNnhhyQ?utm_source=uutistenlukija&utm_medium=referral"
               },
               {
                 "approved": false,
-                "fit_score": 6,
-                "image_sha256": "ea7445f549c723d6379b111ed0fa3258dee5a9c7b5eb2dd3fb33d477408bcfb2",
+                "fit_score": 5,
+                "image_sha256": "5c59e94a0780d541e19f706d03cf1e0840f74573e37ef78f91693b4dace7acba",
                 "license": "Unsplash License",
-                "reason": "The pot being heated on a stove relates to the article's water-boiling advice, but boiling water and rising steam are not visible, so the selected scene is only partially represented. One or more required concept elements are not visible.",
-                "source_url": "https://unsplash.com/photos/white-and-pink-floral-cooking-pot-on-stove-GsgeJvo9MTs?utm_source=uutistenlukija&utm_medium=referral"
+                "reason": "The garage provides general context for the article, but neither the selected fire-damaged ceiling nor melted cables hanging from a cable tray is visible. The image does not establish the reported location or aftermath, and the readable exit sign conflicts with the concept's text restriction. One or more required concept elements are not visible.",
+                "source_url": "https://unsplash.com/photos/a-large-empty-parking-garage-NiO0GHXlmSs?utm_source=uutistenlukija&utm_medium=referral"
               }
             ],
             "concept_rank": 1,
             "outcome": "no_qualifying_candidate",
             "provider": "unsplash",
             "queries": [
-              "Huittinen keittokehotus",
-              "kiehuva vesi kattila",
-              "boiling water pot stove"
+              "Härmälä autohalli palo",
+              "autohallipalo Tampere",
+              "burned parking garage ceiling"
             ]
           },
           {
@@ -2480,9 +2482,9 @@
             "outcome": "no_qualifying_candidate",
             "provider": "wikimedia",
             "queries": [
-              "Huittinen keittokehotus",
-              "kiehuva vesi kattila",
-              "boiling water pot stove"
+              "Härmälä autohalli palo",
+              "autohallipalo Tampere",
+              "burned parking garage ceiling"
             ]
           },
           {
@@ -2491,53 +2493,53 @@
             "outcome": "no_qualifying_candidate",
             "provider": "google",
             "queries": [
-              "Huittinen keittokehotus",
-              "kiehuva vesi kattila",
-              "boiling water pot stove"
+              "Härmälä autohalli palo",
+              "autohallipalo Tampere",
+              "burned parking garage ceiling"
             ]
           },
           {
             "candidates": [
               {
                 "approved": false,
-                "fit_score": 1,
-                "image_sha256": "3c56b4feec9533ae78d955c78b1d8707f57163b941a393db742563b246842b2f",
+                "fit_score": 4,
+                "image_sha256": "60f94c5542c6c8d5bd12139988217fd31ff3a33b787e51de47540eae8f592bdb",
                 "license": "Pexels License",
-                "reason": "The pixels show a hotel exterior with no visible connection to the article's water chlorination or collection points. Neither an outdoor wall tap nor water canisters being filled is visible. One or more required concept elements are not visible.",
-                "source_url": "https://www.pexels.com/photo/huskvarna-stadshotell-in-sweden-17644420/"
+                "reason": "The apartment building provides only broad residential context. The pixels do not establish the article's Hissikatu location or show a garage between apartment buildings, fire engines, or visible fire damage. One or more required concept elements are not visible.",
+                "source_url": "https://www.pexels.com/photo/residential-building-near-road-in-winter-15916284/"
               },
               {
                 "approved": false,
                 "fit_score": 2,
-                "image_sha256": "1e7e09d02c4fea73b88a05207280d0f64f06f620eb9a75afd2c7549f5e3f0b96",
+                "image_sha256": "82cd29e34056a9784dad2e60308c5aa431dfe6504fb971e427bd1345c4bbf57d",
                 "license": "Pexels License",
-                "reason": "The scene shows firefighting equipment, not drinking-water collection or chlorination. Neither a wall-mounted outdoor water tap nor water canisters being filled is visible, and the building cannot be verified as the article's water collection site. One or more required concept elements are not visible.",
-                "source_url": "https://www.pexels.com/photo/firefighter-with-equipment-in-wroclaw-housing-area-38485128/"
-              },
-              {
-                "approved": false,
-                "fit_score": 1,
-                "image_sha256": "51cf2b7cc9c308837f99c517a12284821bd7c629998a23ddc54ab5c2712d205c",
-                "license": "Pexels License",
-                "reason": "The visible school building does not illustrate the article's water chlorination or the selected drinking-water collection scene. No outdoor wall tap or water canisters being filled are visible, and the building is not established as either collection venue named in the article. One or more required concept elements are not visible.",
-                "source_url": "https://www.pexels.com/photo/exterior-view-of-salpausselan-koulu-in-lahti-finland-39143902/"
+                "reason": "The waterfront commercial buildings do not illustrate the reported apartment garage fire or the selected scene. No garage between apartment buildings, fire engines, police vehicles or visible fire damage is present. One or more required concept elements are not visible.",
+                "source_url": "https://www.pexels.com/photo/historic-kehrasaari-buildings-by-riverside-in-tampere-38409325/"
               },
               {
                 "approved": false,
                 "fit_score": 4,
-                "image_sha256": "4a37089dd714ac8e85b85a24246c910d4b1116ae221563bfe90f7628456a4c1b",
+                "image_sha256": "cb76cb13cc0c59a96175b6534e13a8ff4c8caa844ea284d447cf7ff9739fd5f5",
                 "license": "Pexels License",
-                "reason": "The outdoor water container has a general connection to water use, but it does not show the selected drinking-water collection scene: there is no tap on a building wall and no canisters being filled. The pixels do not establish a connection to the specified distribution site or chlorination process. One or more required concept elements are not vis",
-                "source_url": "https://www.pexels.com/photo/rural-outdoor-water-faucet-with-mirror-reflection-34573111/"
+                "reason": "The apartment buildings and parked vehicles provide only broad residential context for the garage fire article. The pixels do not establish the specific location or show the selected scene: a garage between apartment buildings with fire engines outside. One or more required concept elements are not visible.",
+                "source_url": "https://www.pexels.com/photo/modern-urban-architecture-with-vehicles-in-black-and-white-31640058/"
+              },
+              {
+                "approved": false,
+                "fit_score": 4,
+                "image_sha256": "60f94c5542c6c8d5bd12139988217fd31ff3a33b787e51de47540eae8f592bdb",
+                "license": "Pexels License",
+                "reason": "The apartment building provides only a broad residential connection to the article. The pixels do not establish the Hissikatu location or show the selected scene: a garage between apartment buildings and fire engines outside. One or more required concept elements are not visible.",
+                "source_url": "https://www.pexels.com/photo/residential-building-near-road-in-winter-15916284/"
               }
             ],
             "concept_rank": 2,
             "outcome": "no_qualifying_candidate",
             "provider": "pexels",
             "queries": [
-              "Huittisten paloasema",
-              "Huittinen paloasema Klaavolantie",
-              "drinking water distribution canister"
+              "Hissikatu Härmälä Tampere",
+              "Härmälä kerrostalo autohalli",
+              "Pirkanmaan pelastuslaitos paloauto Härmälä"
             ]
           },
           {
@@ -2546,9 +2548,9 @@
             "outcome": "no_qualifying_candidate",
             "provider": "unsplash",
             "queries": [
-              "Huittisten paloasema",
-              "Huittinen paloasema Klaavolantie",
-              "drinking water distribution canister"
+              "Hissikatu Härmälä Tampere",
+              "Härmälä kerrostalo autohalli",
+              "Pirkanmaan pelastuslaitos paloauto Härmälä"
             ]
           },
           {
@@ -2557,9 +2559,9 @@
             "outcome": "no_qualifying_candidate",
             "provider": "wikimedia",
             "queries": [
-              "Huittisten paloasema",
-              "Huittinen paloasema Klaavolantie",
-              "drinking water distribution canister"
+              "Hissikatu Härmälä Tampere",
+              "Härmälä kerrostalo autohalli",
+              "Pirkanmaan pelastuslaitos paloauto Härmälä"
             ]
           },
           {
@@ -2568,9 +2570,9 @@
             "outcome": "no_qualifying_candidate",
             "provider": "google",
             "queries": [
-              "Huittisten paloasema",
-              "Huittinen paloasema Klaavolantie",
-              "drinking water distribution canister"
+              "Hissikatu Härmälä Tampere",
+              "Härmälä kerrostalo autohalli",
+              "Pirkanmaan pelastuslaitos paloauto Härmälä"
             ]
           },
           {
@@ -2579,9 +2581,9 @@
             "outcome": "no_qualifying_candidate",
             "provider": "pexels",
             "queries": [
-              "vesihana juoksutus",
-              "running kitchen faucet",
-              "vesijohtoverkoston klooraus Huittinen"
+              "porraskäytävä savuvahinko",
+              "kerrostalon porraskäytävä noki",
+              "smoke damaged stairwell"
             ]
           },
           {
@@ -2590,9 +2592,9 @@
             "outcome": "no_qualifying_candidate",
             "provider": "unsplash",
             "queries": [
-              "vesihana juoksutus",
-              "running kitchen faucet",
-              "vesijohtoverkoston klooraus Huittinen"
+              "porraskäytävä savuvahinko",
+              "kerrostalon porraskäytävä noki",
+              "smoke damaged stairwell"
             ]
           },
           {
@@ -2601,9 +2603,9 @@
             "outcome": "no_qualifying_candidate",
             "provider": "wikimedia",
             "queries": [
-              "vesihana juoksutus",
-              "running kitchen faucet",
-              "vesijohtoverkoston klooraus Huittinen"
+              "porraskäytävä savuvahinko",
+              "kerrostalon porraskäytävä noki",
+              "smoke damaged stairwell"
             ]
           },
           {
@@ -2612,192 +2614,193 @@
             "outcome": "no_qualifying_candidate",
             "provider": "google",
             "queries": [
-              "vesihana juoksutus",
-              "running kitchen faucet",
-              "vesijohtoverkoston klooraus Huittinen"
+              "porraskäytävä savuvahinko",
+              "kerrostalon porraskäytävä noki",
+              "smoke damaged stairwell"
             ]
           }
         ],
         "selected": {
           "concept_rank": 1,
           "fit_score": 9,
-          "image_sha256": "b6bf6f55f251fcc18e53448f9f507b3aa30c598236a71c35048d7e7f57e1558d",
+          "image_sha256": "e27eb2e1e6a712626557aa2600895279de82eb2b8a2d003f8f5934a4c23336b0",
           "kind": "generated"
         },
         "version": "article-first-v1"
       },
-      "sha256": "b6bf6f55f251fcc18e53448f9f507b3aa30c598236a71c35048d7e7f57e1558d",
+      "sha256": "e27eb2e1e6a712626557aa2600895279de82eb2b8a2d003f8f5934a4c23336b0",
       "source_url": "https://uutistenlukija.fi/ai-kuvat/",
-      "subject": "Juomaveden keittokehotus: vesi on keitettävä vähintään viisi minuuttia",
-      "url": "https://uutistenlukija.fi/media/b6bf6f55f251fcc18e53448f9f507b3aa30c598236a71c35048d7e7f57e1558d.jpg"
+      "subject": "Palon vaurioittamat sähkökaapeleita hallin katossa autohallissa",
+      "url": "https://uutistenlukija.fi/media/e27eb2e1e6a712626557aa2600895279de82eb2b8a2d003f8f5934a4c23336b0.jpg"
     },
     "publication_basis": {
       "policy": "official-text-v1",
       "policy_sha256": "d01ef84b79a4da8fa0dfa006a670e7fcb06acd84f4a5adaa43a0536b0f4742c8",
-      "provider": "epressi",
+      "provider": "poliisi-sisa-suomi",
       "related_sources": 3,
-      "source_fields_sha256": "7b9144e586b3dc301d2eff0ac619c710b314f4c15d434c575d3a0e92ad7b7350",
-      "source_sha256": "b5380c6873a519da08a9c656260b87cf005a0029547a4787c3e03d087d336753"
+      "source_fields_sha256": "b7c396cb2051b1c5a97bd3325b8f659591060b977aa9526c9bdd81a8a0a70912",
+      "source_sha256": "29d832bb7b628a33f6cf2d5f3b2d0f491cae379455e0e9a4be413f4ba2b53b67"
     },
     "sources": [
       {
         "id": "A",
-        "published_at": "2026-11-13T11:11:00+02:00",
-        "publisher": "Huittisten kaupunki / ePressi",
+        "published_at": "2026-11-13T14:42+0200",
+        "publisher": "Poliisi / Sisä-Suomen poliisilaitos",
         "reuse": {
           "changes": "Itsenäinen suomenkielinen uutisteksti; lähteen tietoja on tiivistetty.",
-          "license": "Owner-approved 2026-10-22 publication basis: press releases distributed via ePressi to media for publication; ePressi states no explicit reuse grant; release-specific restrictions are checked and images are excluded",
-          "notice": "Lähde: <julkaisija> / ePressi",
-          "url": "https://www.epressi.com/"
+          "license": "Poliisi.fi-sivuston käyttöehdot: tekstiaineiston käyttö ja linkitys sallittu hyvän tavan mukaisissa asiayhteyksissä lähde mainiten; kaupallinen, poliittinen ja uskonnollinen käyttö kielletty; kuvien käyttö edellyttää lupaa",
+          "license_url": "https://poliisi.fi/tietoa-sivustosta",
+          "notice": "Lähde: Poliisi. Vain tekstiaineistoa; poliisin kuvia ei käytetä.",
+          "url": "https://poliisi.fi/tietoa-sivustosta"
         },
-        "text": "Tiedote: 13.11.2026\nHUITTISEN KAUPUNGIN VESIHUOLTO, ETELÄ-SATAKUNNAN YMPÄRISTÖTERVEYDENHUOLTO JA SATAKUNNAN HYVINVOINTIALUE TIEDOTTAVAT\nJUOMAVEDEN KEITTOKEHOTUS JATKUU HUITTISTEN KAUPUNGIN SOLKISEN JA LAITISEN ALUEELLA – SAIRASTUMISRISKI ON VÄHÄINEN - VESIJOHTOVERKOSTON DESINFIOINTI ALOITETAAN\nNormaaleiden näytteidenottojen yhteydessä juomavedestä 10.11.2026 Huittisten kaupungin alueelta otetuista vesinäytteistä on löydetty koliformisia bakteereita. Näytteiden ottoa on jatkettu ja tähän asti otetuista näytteistä ei ole löytynyt E. coli-bakteeria eikä suolistoperäistä enterokokkia ja koliformisten bakteerien pitoisuus oli pieni.\nJuomaveden keittokehotus jatkuu edelleen.\nVEDEN DESINFIOINTI\nPerjantaina 13.11.2026 aloitetaan rajatulla alueella juomaveden desinfiointi kloorilla. Kartalla keittokehotusalue rajattu punaisella ja desinfioinnin piirissä olevat kadut merkitty sinisellä. Desinfiointi kestää useita päiviä. Kotitalouksiin, joihin desinfiointi kohdistuu, toimitetaan vielä erillinen tiedote, jossa kloorattavan alueen tarkka kartta ja ohje.\nDesinfioinnin aikana vettä voi käyttää turvallisesti juomavetenä ja ruoan laittoon, kun se on keitetty, mutta vesi saattaa tuoksua ja maistua kloorilta. Desinfioinnin aikana veden käyttö on turvallista esimerkiksi peseytymiseen ja siivoukseen.\nVettä pitää juoksuttaa kaikista vesipisteistä, jotta myös kiinteistöjen vesijohdot puhdistuvat desinfioidulla vedellä. Juoksutusaika on yleensä muutamia minuutteja tai niin kauan, että vesi alkaa haista kloorille. Desinfioidun veden annetaan tämän jälkeen vaikuttaa vesijohdoissa. Myös lämmintä vettä pitää juoksuttaa.\nTERVEYS\nJuomavesinäytteissä koliformisten bakteerien määrä on ollut pieni ja tästä syystä sairastumisriski arvioidaan vähäiseksi. Jos saat vatsaoireita, esim. ripulia, ota yhteyttä Huittisten sote-keskukseen Sata-sovelluksen kautta tai puhelimitse puh. 044 772 8420 maanantaista perjantaihin klo 8.00–16.00.\nJos epäilet saaneesi oireita vedestä, voit tehdä Ympäristöterveydenhuollon sähköisen ilmoituspalvelun ilppa-ilmoituksen: Ilppa: Kuluttajan ilmoitukset\nVESINÄYTTEET JA TIEDOTUS\nLisänäytteidenottoa Huittisten alueella jatketaan ja vedenkeittokehotus kartalla rajatulla alueella jatkuu edelleen. Seuraava tiedote tulosten osalta annetaan viimeistään maanantaina 16.11.2026 klo 15. Silloin tiedotetaan uusista tuloksista ja annetaan tarvittaessa lisää toimintaohjeita.\nTilanteesta tiedottamista jatketaan toistaiseksi vesihuoltolaitoksen järjestelmässä olevien puhelinnumeroiden tai sähköpostiosoitteiden kautta. Lisäksi tiedotetta jaettiin kaupungin verkkosivujen, mediatiedotteen ja sosiaalisen median kautta.\nHuittisten kaupungin verkkosivuille https://www.huittinen.fi/ päivitetään ajankohtaista tietoa tilanteesta.\nVEDENKÄYTTÖ\nKaikki juomavesi ja ruuanlaittoon käytettävä vesi on keitettävä vähintään 5 minuutin ajan Huittisten kaupungissa seuraavilla alueilla: Solkisen alue ja Laitisen alue\nLiitteenä on kartta keittokehotusalueesta, jolla keittokehotus jatkuu. Kartalla keittokehotusalue rajattu punaisella ja desinfioinnin piirissä olevat kadut sinisellä.\nKeittämisen jälkeen vesi on myös jäähdyttyään käyttökelpoista. Vedenkeittimellä kiehauttaminen ei yksinomaan riitä. Veden keittokehotus on voimassa toistaiseksi.\nKeittämätöntä vettä voi käyttää peseytymiseen normaalisti.\nAstioita voi pestä, jos vesi ei ole sameaa tai värillistä. Astianpesukoneessa suositellaan käytettäväksi kuuminta pesuohjelmaa. Käsin tiskattaessa suositellaan käytettäväksi keitettyä vettä ainakin huuhteluun. Pestyjen astioiden ja muiden välineiden on annettava kuivua hyvin ennen käyttöä.\nJUOMAVEDENNOUTO\nJuomavettä voi tarvittaessa noutaa Huittisten paloaseman takapihalta, seinän ulkovesipostista, os. Klaavolantie 2 ja Tahto Areenan viereisen väistökoulun B-oven vieressä ulkovesipostista, os. Huhkolantie 2. Paikalla on hanallinen letku. Ota vedennoutamista varten puhdas astia esimerkiksi kannellinen ämpäri, kanisteri tai pulloja. Vesi kannattaa säilyttää kylmässä esimerkiksi jääkaapissa tai ulkoterassilla. Vaihda vesi riittävän usein.\nLISÄTIETOJA:\nYmpäristöterveydenhuollon johtaja\nJonna Aro\npuh. 044 707 2930\nVesihuoltopäällikkö\nAnne Stenberg\npuh. 044 560 4353\nYlilääkäri, Satakunnan hyvinvointialueen tartuntataudeista vastaava lääkäri\nRaija Uusitalo-Seppälä\nraija.uusitalo-seppala@sata.fi\nhttps://www.huittinen.fi/asuminen-ja-ymparisto/vesihuolto/",
-        "title": "Juomaveden keittokehotus jatkuu Huittisten Solkisen ja Laitisen alueella - Sairastumisriski on vähäinen - Vesijohtoverkoston desinfiointi aloitetaan",
-        "url": "https://www.epressi.com/tiedotteet/kaupungit-ja-kunnat/juomaveden-keittokehotus-jatkuu-huittisten-solkisen-ja-laitisen-alueella-sairastumisriski-on-vahainen-vesijohtoverkoston-desinfiointi-aloitetaan.html"
+        "text": "Poliisi tutkii Tampereen Härmälässä, Hissikadulla sytytettyä autohallipaloa tahallisena tekona. Hätäkeskukseen ilmoitettiin torstaina 12.11.2026 ennen puolta yötä Hissikatu 4 taloyhtiön autohallissa olevasta tulipalosta. Paikalle meni useita pelastuksen ja poliisin yksiköitä.\nPoliisin esitutkinnassa on ilmennyt tulipalon olevan tahallaan sytytetty. Palo aiheutti huomattavia omaisuusvahinkoja kiinteistölle sekä usealle hallissa pysäköitynä olleelle autolle. Lisäksi taloyhtiön porraskäytäviin aiheutui savuvahinkoja.\nPoliisi pyytää kaikkia silminnäkijähavaintoja Härmälästä, erityisesti Hissikadun ympäristöstä tekijän paikalta poistumisen aikoihin, noin kello 23.30.\nTässä vaiheessa poliisi epäilee yhtä henkilöä teosta. Tarkempaa kuvausta mahdollisesta henkilöstä ei tässä vaiheessa kerrota, koska tämä saattaa vaikuttaa silminnäkijöiden havaintoihin. Poliisi selvittää myös poikkeavasti käyttäytyneen henkilön tai henkilöiden liikkeitä ennen tapahtumia. Tämän johdosta poliisi pyytää havaintoja myös aiemmin illalta mahdollisesta henkilöstä, joka olisi jäänyt lähistöllä käyttäytymisen tai muun johdosta katsojan muistiin.\nVihjeet pyydetään sähköpostitse vihjeet.sisa-suomi@poliisi.fi\nPoliisi muistuttaa, että tulipalon aikana ei kerrostalossa tule poistua savun täyttämään porraskäytävään. Porraskäytävään meneminen voi olla hengenvaarallista. Tällaisessa tilanteessa on aina turvallisinta pysyä asunnossa.",
+        "title": "Tampereen Härmälässä tulipalo, jota epäillään tahallisesti sytytetyksi",
+        "url": "https://poliisi.fi/-/tampereen-harmalassa-tulipalo-jota-epaillaan-tahallisesti-sytytetyksi"
       },
       {
         "id": "B",
-        "published_at": "2026-11-13T08:00:24+00:00",
-        "publisher": "huittinen.fi",
+        "published_at": "2026-11-13T13:20:15+00:00",
+        "publisher": "rikosuutiset.fi",
         "related": true,
-        "text": "Asuminen ja ympäristö, Tekniset palvelut, Tiedote, Vesihuolto, Yleinen 13.11.2026 Juomaveden keittokehotus jatkuu Solkisen ja Laitisen alueella – sairastumisriski on vähäinen – verkoston desinfiointi alkaa Tiedote: 13.11.2026 HUITTISEN KAUPUNGIN VESIHUOLTO, ETELÄ-SATAKUNNAN YMPÄRISTÖTERVEYDENHUOLTO JA SATAKUNNAN HYVINVOINTIALUE TIEDOTTAVAT JUOMAVEDEN KEITTOKEHOTUS JATKUU HUITTISTEN KAUPUNGIN SOLKISEN JA LAITISEN ALUEELLA – SAIRASTUMISRISKI ON VÄHÄINEN – VERKOSTON DESINFIOINTI ALOITETAAN Normaaleiden näytteidenottojen yhteydessä juomavedestä 10.11.2026 Huittisten kaupungin alueelta otetuista vesinäytteistä on löydetty koliformisia bakteereita. Näytteiden ottoa on jatkettu ja tähän asti otetuista näytteistä ei ole löytynyt E. coli-bakteeria eikä suolistoperäistä enterokokkia ja koliformisten bakteerien pitoisuus oli pieni. Juomaveden keittokehotus jatkuu edelleen. VEDEN DESINFIOINTI Perjantaina 13.11.2026 aloitetaan rajatulla alueella juomaveden desinfiointi kloorilla. Kartalla keittokehotusalue rajattu punaisella ja desinfioinnin piirissä olevat kadut merkitty sinisellä. Desinfiointi kestää useita päiviä. Kotitalouksiin, joihin desinfiointi kohdistuu, toimitetaan vielä erillinen tiedote, jossa kloorattavan alueen tarkka kartta ja ohje. Desinfioinnin aikana vettä voi käyttää turvallisesti juomavetenä ja ruoan laittoon, kun se on keitetty, mutta vesi saattaa tuoksua ja maistua kloorilta. Desinfioinnin aikana veden käyttö on turvallista esimerkiksi peseytymiseen ja siivoukseen. Vettä pitää juoksuttaa kaikista vesipisteistä, jotta myös kiinteistöjen vesijohdot puhdistuvat desinfioidulla vedellä. Juoksutusaika on yleensä muutamia minuutteja tai niin kauan, että vesi alkaa haista kloorille. Desinfioidun veden annetaan tämän jälkeen vaikuttaa vesijohdoissa. Myös lämmintä vettä pitää juoksuttaa. TERVEYS Juomavesinäytteissä koliformisten bakteerien määrä on ollut pieni ja tästä syystä sairastumisriski arvioidaan vähäiseksi. Jos saat vatsaoireita, esim. ripulia, ota yhteyttä Huittisten sote-keskukseen Sata-sovelluksen kautta tai puhelimitse puh. 044 772 8420 maanantaista perjantaihin klo 8.00–16.00. Jos epäilet saaneesi oireita vedestä, voit tehdä Ympäristöterveydenhuollon sähköisen ilmoituspalvelun ilppa-ilmoituksen: Ilppa: Kuluttajan ilmoitukset VESINÄYTTEET JA TIEDOTUS Lisänäytteidenottoa Huittisten alueella jatketaan ja vedenkeittokehotus kartalla rajatulla alueella jatkuu edelleen. Seuraava tiedote tulosten osalta annetaan viimeistään maanantaina 16.11.2026 klo 15. Silloin tiedotetaan uusista tuloksista ja annetaan tarvittaessa lisää toimintaohjeita. Tilanteesta tiedottamista jatketaan toistaiseksi vesihuoltolaitoksen järjestelmässä olevien puhelinnumeroiden tai sähköpostiosoitteiden kautta. Lisäksi tiedotetta jaettiin kaupungin verkkosivujen, mediatiedotteen ja sosiaalisen median kautta. Huittisten kaupungin verkkosivuille https://www.huittinen.fi/ päivitetään ajankohtaista tietoa tilanteesta. VEDENKÄYTTÖ Kaikki juomavesi ja ruuanlaittoon käytettävä vesi on keitettävä vähintään 5 minuutin ajan Huittisten kaupungissa seuraavilla alueilla: Solkisen alue ja Laitisen alue Liitteenä on kartta keittokehotusalueesta, jolla keittokehotus jatkuu. Kartalla keittokehotusalue rajattu punaisella ja desinfioinnin piirissä olevat kadut sinisellä. Keittämisen jälkeen vesi on myös jäähdyttyään käyttökelpoista. Vedenkeittimellä kiehauttaminen ei yksinomaan riitä. Veden keittokehotus on voimassa toistaiseksi. Keittämätöntä vettä voi käyttää peseytymiseen normaalisti. Astioita voi pestä, jos vesi ei ole sameaa tai värillistä. Astianpesukoneessa suositellaan käytettäväksi kuuminta pesuohjelmaa. Käsin tiskattaessa suositellaan käytettäväksi keitettyä vettä ainakin huuhteluun. Pestyjen astioiden ja muiden välineiden on annettava kuivua hyvin ennen käyttöä. JUOMAVEDENNOUTO Juomavettä voi tarvittaessa noutaa Huittisten paloaseman takapihalta, seinän ulkovesipostista, os. Klaavolantie 2 ja Tahto Areenan viereisen väistökoulun B-oven vieressä ulkovesipostista, os. Huhkolantie 2. Paikalla on hanallinen letku. Ota vedennoutamista varten puhdas astia esimerkiksi kannellinen ämpäri, kanisteri tai pulloja. Vesi kannattaa säilyttää kylmässä esimerkiksi jääkaapissa tai ulkoterassilla. Vaihda vesi riittävän usein. LISÄTIETOJA: Ympäristöterveydenhuollon johtaja Jonna Aro p. 044 707 2930 Vesihuoltopäällikkö Anne Stenberg p. 044 560 4353 Ylilääkäri, Satakunnan hyvinvointialueen tartuntataudeista vastaava lääkäri Raija Uusitalo-Seppälä raija.uusitalo-seppala@sata.fi Jaa Jaa Facebookissa (siirryt toiseen palveluun) Jaa X:ssä (siirryt toiseen palveluun) Jaa LinkedInissä (siirryt toiseen palveluun) Vesihuolto Katso myös 11.11.2026 Asuminen ja ympäristö, Tiedote, Vesihuolto, Yleinen TIEDOTE: Laitisen ja Solkisen alueella juomaveden saastuminen 12.11.2026 Asuminen ja ympäristö, Tiedote, Vesihuolto, Yleinen Juomaveden keittokehotus jatkuu Solkisen ja Laitisen alueella Lisää ajankohtaisia",
-        "title": "Juomaveden keittokehotus jatkuu Solkisen ja Laitisen alueella ...",
-        "url": "https://www.huittinen.fi/2026/11/13/juomaveden-keittokehotus-jatkuu-solkisen-ja-laitisen-alueella-sairastumisriski-on-vahainen-verkoston-desinfiointi-alkaa/"
+        "text": "KotimaaTuhotyötTulipalot Tampereen Härmälässä tulipalo, jota epäillään tahallisesti sytytetyksi 13.11.2026 0 Tampere. Poliisi tutkii Tampereen Härmälässä, Hissikadulla sytytettyä autohallipaloa tahallisena tekona. Hätäkeskukseen ilmoitettiin torstaina 12.11.2026 ennen puolta yötä Hissikatu 4 taloyhtiön autohallissa olevasta tulipalosta. Paikalle meni useita pelastuksen ja poliisin yksiköitä, kertoo Sisä-Suomen poliisilaitos. Poliisin esitutkinnassa on ilmennyt tulipalon olevan tahallaan sytytetty. Palo aiheutti huomattavia omaisuusvahinkoja kiinteistölle sekä usealle hallissa pysäköitynä olleelle autolle. Lisäksi taloyhtiön porraskäytäviin aiheutui savuvahinkoja. Poliisi pyytää kaikkia silminnäkijähavaintoja Härmälästä, erityisesti Hissikadun ympäristöstä tekijän paikalta poistumisen aikoihin, noin kello 23.30. Tässä vaiheessa poliisi epäilee yhtä henkilöä teosta. Tarkempaa kuvausta mahdollisesta henkilöstä ei tässä vaiheessa kerrota, koska tämä saattaa vaikuttaa silminnäkijöiden havaintoihin. Poliisi selvittää myös poikkeavasti käyttäytyneen henkilön tai henkilöiden liikkeitä ennen tapahtumia. Tämän johdosta poliisi pyytää havaintoja myös aiemmin illalta mahdollisesta henkilöstä, joka olisi jäänyt lähistöllä käyttäytymisen tai muun johdosta katsojan muistiin. Vihjeet pyydetään sähköpostitse vihjeet.sisa-suomi@poliisi.fi Jaa Facebook X WhatsApp Telegram ReddIt Copy URL Edellinen artikkeliTehostettua valvontaa perjantaina Helsinki – Vantaan lentoasemalla SAMANKALTAISET UUTISET Kotimaa Tehostettua valvontaa perjantaina Helsinki – Vantaan lentoasemalla 13.11.2026 Henkirikokset Yksi henkilö vangittu Turun henkirikoksesta epäiltynä 13.11.2026 Kotimaa Poliisitehtävä Jyväskylän Kortemäessä 13.11.2026 LUETUIMMAT 24h Kommentoidut Poliisi huijasi katujengiä näyttelemällä juopunutta – katso video operaatiosta 22.1.2024 Riihimäellä elintarvikevarkaita huoltoasemalla – poliisi tavoitti tekijät nopeasti 22.11.2023 Kärkölässä lopetettiin eilen poliisin määräyksellä susi 27.11.2023 Alavudella lopetettiin tänään susi poliisin määräyksellä 15.12.2023 Laittoman maahantulon ilmiö Kaakkois-Suomen rajavartioston alueella 19.11.2023 Lataa lisää UUSIMMAT Tehostettua valvontaa perjantaina Helsinki – Vantaan lentoasemalla 13.11.2026 Yksi henkilö vangittu Turun henkirikoksesta epäiltynä 13.11.2026 Poliisitehtävä Jyväskylän Kortemäessä 13.11.2026 Lataa lisää",
+        "title": "Tampereen Härmälässä tulipalo, jota epäillään tahallisesti ...",
+        "url": "https://rikosuutiset.fi/tampereen-harmalassa-tulipalo-jota-epaillaan-tahallisesti-sytytetyksi/"
       },
       {
         "id": "C",
-        "published_at": "2026-11-13T11:56:53+00:00",
-        "publisher": "satakunnanhyvinvointialue.fi",
+        "published_at": "2026-11-13T14:42:00+02:00",
+        "publisher": "nordenbladet.fi",
         "related": true,
-        "text": "Juomaveden keittokehotus jatkuu Huittisten kaupungin Solkisen ja Laitisen alueella – sairastumisriski on vähäinen Uutinen 13.11.2026 Huittisen kaupungin vesihuolto, Etelä-Satakunnan ympäristöterveydenhuolto ja Satakunnan hyvinvointialue tiedottavat Normaaleiden näytteidenottojen yhteydessä juomavedestä 10.11.2026 Huittisten kaupungin alueelta otetuista vesinäytteistä on löydetty koliformisia bakteereita. Näytteiden ottoa on jatkettu ja tähän asti otetuista näytteistä ei ole löytynyt E. coli-bakteeria eikä suolistoperäistä enterokokkia ja koliformisten bakteerien pitoisuus oli pieni. Juomaveden keittokehotus jatkuu edelleen. Veden desinfiointi Perjantaina 13.11.2026 aloitetaan rajatulla alueella juomaveden desinfiointi kloorilla. Kartalla keittokehotusalue rajattu punaisella ja desinfioinnin piirissä olevat kadut merkitty sinisellä. Desinfiointi kestää useita päiviä. Kotitalouksiin, joihin desinfiointi kohdistuu, toimitetaan vielä erillinen tiedote, jossa kloorattavan alueen tarkka kartta ja ohje. Desinfioinnin aikana vettä voi käyttää turvallisesti juomavetenä ja ruoan laittoon, kun se on keitetty, mutta vesi saattaa tuoksua ja maistua kloorilta. Desinfioinnin aikana veden käyttö on turvallista esimerkiksi peseytymiseen ja siivoukseen. Vettä pitää juoksuttaa kaikista vesipisteistä, jotta myös kiinteistöjen vesijohdot puhdistuvat desinfioidulla vedellä. Juoksutusaika on yleensä muutamia minuutteja tai niin kauan, että vesi alkaa haista kloorille. Desinfioidun veden annetaan tämän jälkeen vaikuttaa vesijohdoissa. Myös lämmintä vettä pitää juoksuttaa. Terveys Juomavesinäytteissä koliformisten bakteerien määrä on ollut pieni ja tästä syystä sairastumisriski arvioidaan vähäiseksi. Jos saat vatsaoireita, esim. ripulia, ota yhteyttä Huittisten sote-keskukseen Sata-sovelluksen kautta tai puhelimitse puh. 044 772 8420 maanantaista perjantaihin klo 8.00–16.00. Jos epäilet saaneesi oireita vedestä, voit tehdä Ympäristöterveydenhuollon sähköisen ilmoituspalvelun ilppa-ilmoituksen: Ilppa: Kuluttajan ilmoitukset(siirryt toiseen palveluun) Tiedotus Lisänäytteidenottoa Huittisten alueella jatketaan ja vedenkeittokehotus kartalla rajatulla alueella jatkuu edelleen. Seuraava tiedote tulosten osalta annetaan viimeistään maanantaina 16.11.2026 klo 15. Silloin tiedotetaan uusista tuloksista ja annetaan tarvittaessa lisää toimintaohjeita. Tilanteesta tiedottamista jatketaan toistaiseksi vesihuoltolaitoksen järjestelmässä olevien puhelinnumeroiden tai sähköpostiosoitteiden kautta. Lisäksi tiedotetta jaettiin kaupungin verkkosivujen, mediatiedotteen ja sosiaalisen median kautta. Huittisten kaupungin verkkosivuille https://www.huittinen.fi/(avautuu uuteen ikkunaan, siirryt toiseen palveluun) päivitetään ajankohtaista tietoa tilanteesta. Vedenkäyttö Kaikki juomavesi ja ruuanlaittoon käytettävä vesi on keitettävä vähintään 5 minuutin ajan Huittisten kaupungissa seuraavilla alueilla: Solkisen alue ja Laitisen alue Liitteenä on kartta keittokehotusalueesta, jolla keittokehotus jatkuu. Kartalla keittokehotusalue rajattu punaisella ja desinfioinnin piirissä olevat kadut sinisellä. Keittämisen jälkeen vesi on myös jäähdyttyään käyttökelpoista. Vedenkeittimellä kiehauttaminen ei yksinomaan riitä. Veden keittokehotus on voimassa toistaiseksi. Keittämätöntä vettä voi käyttää peseytymiseen normaalisti. Astioita voi pestä, jos vesi ei ole sameaa tai värillistä. Astianpesukoneessa suositellaan käytettäväksi kuuminta pesuohjelmaa. Käsin tiskattaessa suositellaan käytettäväksi keitettyä vettä ainakin huuhteluun. Pestyjen astioiden ja muiden välineiden on annettava kuivua hyvin ennen käyttöä. Juomaveden nouto Juomavettä voi tarvittaessa noutaa Huittisten paloaseman takapihalta, seinän ulkovesipostista, os. Klaavolantie 2 ja Tahto Areenan viereisen väistökoulun B-oven vieressä ulkovesipostista, os. Huhkolantie 2. Paikalla on hanallinen letku. Ota vedennoutamista varten puhdas astia esimerkiksi kannellinen ämpäri, kanisteri tai pulloja. Vesi kannattaa säilyttää kylmässä esimerkiksi jääkaapissa tai ulkoterassilla. Vaihda vesi riittävän usein.",
-        "title": "Juomaveden keittokehotus jatkuu Huittisten kaupungin Solkisen ...",
-        "url": "https://satakunnanhyvinvointialue.fi/2026/11/13/juomaveden-keittokehotus-jatkuu-huittisten-kaupungin-solkisen-ja-laitisen-alueella-sairastumisriski-on-vahainen/"
+        "text": "Tampereen Härmälässä tulipalo, jota epäillään tahallisesti sytytetyksi Tekijä - 13 marraskuun, 2026 NordenBladet — Poliisi tutkii Tampereen Härmälässä, Hissikadulla sytytettyä autohallipaloa tahallisena tekona. Hätäkeskukseen ilmoitettiin torstaina 12.11.2026 ennen puolta yötä Hissikatu 4 taloyhtiön autohallissa olevasta tulipalosta. Paikalle meni useita pelastuksen ja poliisin yksiköitä.Poliisin esitutkinnassa on ilmennyt tulipalon olevan tahallaan sytytetty. Palo aiheutti huomattavia omaisuusvahinkoja kiinteistölle sekä usealle hallissa pysäköitynä olleelle autolle. Lisäksi taloyhtiön porraskäytäviin aiheutui savuvahinkoja. Tampereen Härmälässä tulipalo, jota epäillään tahallisesti sytytetyksi Lähde: Poliisi.fi TAGIT poliisi poliisiuutiset rikokset rikosuutisia Suomi tiedotteet Facebook Tulosta TUOREIMMAT UUTISET Koulu-uhkaus Saimaan ammattiopisto Sampossa Sohjo ei armahtanut kesärenkaita ykköstiellä Poliisi löysi veneilyturmassa kadonneen miehen Länsi-Uudenmaan poliisi hyödyntää valvontaperävaunua alueellaan Tampereen Härmälässä tulipalo, jota epäillään tahallisesti sytytetyksi Tehostettua valvontaa perjantaina Helsinki – Vantaan lentoasemalla Yksi vangittu Turun henkirikoksesta epäiltynä Hämeen poliisilla vain vähän huomautettavaa metsästyksestä Mainos:",
+        "title": "Tampereen Härmälässä tulipalo, jota epäillään tahallisesti ...",
+        "url": "https://nordenbladet.fi/articles/39368-tampereen-harmalassa-tulipalo-jota-epaillaan-tahallisesti-sytytetyksi"
       },
       {
         "id": "D",
-        "published_at": "2026-11-11T18:03:00+02:00",
-        "publisher": "lauttakyla.fi",
+        "published_at": "2026-11-13T15:11:00+02:00",
+        "publisher": "is.fi",
         "related": true,
-        "text": "Juomaveden keittokehotus koskee kartalla näkyvää aluetta. Kuva: Huittisten kaupunki Pauliina Vilenius Juomavesi on keitettävä Huittisten Solkisen ja Laitisen alueella, tiedottaa kaupunki. Juomavedessä voi olla tautia aiheuttavia mikrobeja, sillä tiistaina 10. marraskuuta Huittisten kaupungin alueelta otetuista vesinäytteistä on löydetty koliformisia bakteereita. Kaikki juomavesi ja ruuanlaittoon käytettävä vesi on keitettävä vähintään viiden minuutin ajan. Keittämisen jälkeen jälkeen vesi on myös jäähdyttyään käyttökelpoista. Vedenkeittimellä kiehauttaminen ei yksinomaan riitä. Veden keittokehotus on voimassa toistaiseksi. Keittämätöntä vettä voi tiedotteen mukaan käyttää peseytymiseen normaalisti. Astioita voi pestä, jos vesi ei ole sameaa tai värillistä. Astianpesukoneessa suositellaan käytettäväksi kuuminta pesuohjelmaa. Käsin tiskattaessa suositellaan käytettäväksi keitettyä vettä ainakin huuhteluun. Pestyjen astioiden ja muiden välineiden on annettava kuivua hyvin ennen käyttöä. Viranomaiset ja vesihuoltolaitos selvittävät tilannetta ja uusia näytteitä on otettu keskiviikkona 11. marraskuuta. Alustavia tuloksia näytteistä saadaan aikaisintaan torstaina. Uusi tiedote annetaan viimeistään perjantaina 13.11. kello 10. Silloin tiedotetaan uusista tuloksista ja annetaan tarvittaessa lisää toimintaohjeita, tiedotteessa kerrotaan. huittinen Bakteerit Laitinen Solkinen vesinäyte ✔️ Linkki kopioitu! Kommentoi Kommentit Kommentoi asiallisesti Kirjoita kommenttisi selkeästi ja napakasti. Loukkaavia, henkilöön meneviä tai vihamielisiä kommentteja emme julkaise. Toimitus lukee kommentit ennen julkaisua ja muokkaa niitä tarvittaessa. Rakentavasti kriittiset, asialliset kommentit ovat tervetulleita. Nimi Nimimerkki Anna nimimerkki, mikäli et halua kommentoida omalla nimelläsi. Sähköpostiosoite Tämän kentän sisältö pidetään yksityisenä eikä sitä näytetä julkisesti. Kommentti Lähetä Kloriformi 11.11.2026 18:39 Hei! Jos oikeasti on kyseessä tautia aiheuttava bakteeri, pitäisi kaupungin tiedottamisen olla sellaista, että se tavoittaa alueen asukkaat. Ei se auta mitään, että tiedote pannaan näkyviin kaupungin nettisivuille. Mistä tänne osaa kukaan lähteä tietoa hakemaan. Rehellisyyden nimissä voisi myös kertoa kaupunkilaisille, että vedessä on ollut bakteereja ilmeisesti jo useamman viikon ajan, mutta vasta nyt on herätty todellisuuteen. Toivon, että kaupungin puolesta vastataan rehellisesti, mistä asti otetuissa vesinäytteissä on oikeasti ollut bakteereja. Lue lisää",
-        "title": "Juomavesi keitettävä Solkisen ja Laitisen alueella ...",
-        "url": "https://lauttakyla.fi/uutiset/huittinen/88054705-56b7-422d-bd5c-042a26cc48de"
+        "text": "IS ExtraTommi Nikunen eli vuosia kaksoiselämää – kulissien takana tapahtui järkyttäviä asioita Wide ContentPlaceholder Main ContentPlaceholder Tampereen seutu Kymmenet asunnot pimenivät Tampereella – poliisi epäilee rikosta Poliisi pyytää silminnäkijähavaintoja autohallin tulipalon tekijästä. JaaFacebook X Sähköposti Kopioi linkki Tallenna Kommentoi Sulje Markus Puolakanaho, Netta Palokallio 15:11 | Päivitetty 17:38 Tampereen Härmälässä syttyi torstaina autohallissa tulipalo, joka pimensi kokonaisen kerrostalon. – Palo oli kahden kerrostalon välissä olevassa hallissa. Palo vaurioitti sähkökaapeleita, jotka olivat palaneen auton yläpuolella autohallin katossa, kertoo palomestari Aku Pietilä Pirkanmaan pelastuslaitokselta. Palo pimensi toisen kerrostalon ja katkaisi sieltä lämmöt. Kyseessä on iso kerrostalo, jossa on 64 asuntoa. Katkos alkoi yöllä ja jatkui edelleen vielä ainakin puoliltapäivin, kun pelastuslaitos poistui kohteelta. Poliisi epäilee paloa tahallaan sytytetyksi. Hätäkeskukseen ilmoitettiin torstaina ennen puoltayötä tulipalosta, joka oli syttynyt taloyhtiön autohalliin Hissikadulla. Useat poliisin ja pelastuslaitoksen yksiköt kiisivät paikalle. Palo aiheutti merkittäviä omaisuusvahinkoja kiinteistölle sekä usealle hallissa pysäköitynä olleelle autolle. Lisäksi taloyhtiön porraskäytäviin aiheutui savuvahinkoja. Poliisin esitutkinnassa on ilmennyt tulipalon olevan tahallaan sytytetty. Teosta epäillään yhtä ihmistä. Poliisi ei kuvaile henkilöä tarkemmin, jotta se ei vaikuttaisi silminnäkijöiden havaintoihin. Poliisi pyytää kaikkia silminnäkijähavaintoja Härmälästä, erityisesti Hissikadun ympäristöstä noin kello 23.30 ajalta. Silloin tekijä poistui poliisin mukaan paikalta. Poliisi selvittää myös poikkeavasti käyttäytyneen henkilön tai henkilöiden liikkeitä ennen tapahtumia. Havaintoja pyydetään myös aiemmin illalta mahdollisesta henkilöstä, joka olisi jäänyt lähistöllä käyttäytymisen tai muun johdosta katsojan muistiin. Vihjeet pyydetään sähköpostitse vihjeet.sisa-suomi@poliisi.fi Poliisi muistuttaa, että tulipalon aikana ei kerrostalossa saa poistua savun täyttämään porraskäytävään. Porraskäytävään meneminen voi olla hengenvaarallista. Turvallisinta on siis vastaavassa tilanteessa pysyä asunnossa. Lue lisää kirjoittajalta Markus Puolakanaho, Netta Palokallio Seuraa ja lue artikkeliin liittyviä aiheita RikoksetPoliisiTampereTampereen seutuTulipalot JaaFacebook X Sähköposti Kopioi linkki Tallenna Kommentoi Osion tuoreimmat Luitko jo nämä? Luetuimmat Osion tuoreimmat",
+        "title": "Tampereella suuri tulipalo – poliisi epäilee rikosta",
+        "url": "https://www.is.fi/tampereen-seutu/art-2000012411142.html"
       }
     ],
-    "story_key": "url:https://www.epressi.com/tiedotteet/kaupungit-ja-kunnat/juomaveden-keittokehotus-jatkuu-huittisten-solkisen-ja-laitisen-alueella-sairastumisriski-on-vahainen-vesijohtoverkoston-desinfiointi-aloitetaan.html",
+    "story_key": "url:https://poliisi.fi/-/tampereen-harmalassa-tulipalo-jota-epaillaan-tahallisesti-sytytetyksi",
     "supporting_documents": [
       {
         "id": "RIGHTS",
-        "purpose": "owner-approved press-wire publication basis; not a platform grant, news or image evidence",
-        "retrieved_at": "2026-11-13T14:37:48.799755+00:00",
-        "sha256": "f5c20062b1050660bba049efe747512fec54b77ceb24ecf019619388f1934bbf",
-        "text": "owner-approved 2026-10-22: press releases distributed via ePressi to media for publication",
-        "url": "https://www.epressi.com/"
+        "purpose": "text reuse permission; not news or image evidence",
+        "retrieved_at": "2026-11-13T15:53:05.539925+00:00",
+        "sha256": "b634d1ed194fd3ba5bb34d0cf6d67505f47bb24c9269d3cd531506aca83d67d3",
+        "text": "Tekijänoikeudet tekstiin, kuviin ja muuhun sisältöön\nSivuston tekstiaineiston käyttö ja siihen linkitys on sallittu hyvän tavan mukaisissa asiayhteyksissä. Toivomme, että lähdetiedoksi merkitään Poliisi tai tarkemmin. Oikeudet sivustossa julkaistaviin teksti- ja kuva-aineistoihin ovat poliisilla. Sivuston kuvien käyttö edellyttää lupaa. Kuvia ei saa manipuloida tai muuttaa.\nAineiston tai kuvien käyttö on kielletty\nkaupalliseen, poliittiseen kuten vaalikampanja tai uskonnolliseen tarkoitukseen\nsopimattomalla tai hyvän tavan vastaisella tavalla.\nLisätietoja referenssioikeudesta poliisi.fi/referenssioikeus.\n",
+        "url": "https://poliisi.fi/tietoa-sivustosta"
       }
     ]
   },
   "draft": {
     "category": "Kotimaa",
     "image": {
-      "alt": "AI-generoitu kuva: Teräskattilassa kiehuu voimakkaasti vettä mustalla liesitasolla, ja kattilasta nousee runsaasti höyryä.",
+      "alt": "AI-generoitu kuva: Autohallin nokimustasta betonikatosta roikkuu sulaneita kaapeleita, ja tyhjän pysäköintiruudun lattialla on palojätettä.",
       "attempts": 1,
       "caption": "AI-generoitu kuva. Ei valokuva tapahtumasta.",
       "classifier_output": {
         "category": "Kotimaa",
         "concepts": [
           {
-            "depictable_scene": "Teräksinen kattila täynnä voimakkaasti kiehuvaa vettä keittiön liesitasolla, kattilasta nousee runsaasti höyryä, taustalla tavallinen kodin keittiö arkisessa valaistuksessa.",
+            "depictable_scene": "Taloyhtiön autohallin sisätila palon jälkeen: noen mustaama betonikatto, jonka pinnassa kulkevat metalliset kaapelihyllyt ja niillä sulaneet, roikkuvat sähkökaapelit. Alla näkyy tyhjä, nokinen pysäköintiruutu ja betonilattialla tuhkaa ja palojätettä, valaistuksena himmeä hallin valo.",
             "must_avoid": [
               "people",
-              "hands",
               "faces",
-              "electric kettle as the main object",
-              "readable text or logos"
+              "hands or other body parts",
+              "active flames",
+              "readable text or license plates",
+              "identifiable car brands or logos"
             ],
             "must_show": [
-              "pot of boiling water on stove",
-              "rising steam"
+              "soot-blackened concrete ceiling",
+              "melted electrical cables hanging from cable tray"
             ],
             "rank": 1,
             "safe_to_generate": true,
             "search_queries": [
-              "Huittinen keittokehotus",
-              "kiehuva vesi kattila",
-              "boiling water pot stove",
-              "veden keittokehotus juomavesi",
-              "pot of water boiling steam kitchen"
+              "Härmälä autohalli palo",
+              "autohallipalo Tampere",
+              "burned parking garage ceiling",
+              "melted electrical cables soot",
+              "fire damaged garage cable tray"
             ],
-            "subject": "Juomaveden keittokehotus: vesi on keitettävä vähintään viisi minuuttia"
+            "subject": "Palon vaurioittamat sähkökaapeleita hallin katossa autohallissa"
           },
           {
-            "depictable_scene": "Huittisten paloaseman takapiha Klaavolantiellä, rakennuksen seinässä ulkovesiposti ja hanallinen letku, jonka luona ihmiset täyttävät kannellisia ämpäreitä, kanistereita tai pulloja juomavedellä.",
+            "depictable_scene": "Todellinen uutiskuva Tampereen Härmälän Hissikadulta: kahden kerrostalon välissä oleva autohalli yöllä tai palon jälkeisenä aamuna, edessä Pirkanmaan pelastuslaitoksen paloautoja ja poliisiautoja sekä mahdollisesti palomiehiä työssään.",
             "must_avoid": [
-              "identifiable minors",
-              "staged or unrelated location presented as Huittinen"
+              "injured people",
+              "identifiable bystanders as main subject",
+              "staged or fabricated scene"
             ],
             "must_show": [
-              "outdoor water tap on building wall",
-              "water canisters being filled"
+              "apartment buildings with garage between them",
+              "fire engines outside"
             ],
             "rank": 2,
             "safe_to_generate": false,
             "search_queries": [
-              "Huittisten paloasema",
-              "Huittinen paloasema Klaavolantie",
-              "drinking water distribution canister",
-              "ulkovesipiste vedenjakelu kanisteri",
-              "water canister filling outdoor tap"
+              "Hissikatu Härmälä Tampere",
+              "Härmälä kerrostalo autohalli",
+              "Pirkanmaan pelastuslaitos paloauto Härmälä",
+              "fire engine apartment building night"
             ],
-            "subject": "Juomavettä voi hakea ulkovesipisteistä paloaseman takapihalta"
+            "subject": "Hissikadulla sijaitsevan taloyhtiön autohalli ja kerrostalot"
           },
           {
-            "depictable_scene": "Kodin keittiön teräksinen vesihana, josta valuu tasainen kirkas vesisuihku teräksiseen tiskialtaaseen, altaan reunalla vesipisaroita ja vaimea päivänvalo ikkunasta.",
+            "depictable_scene": "Kerrostalon porraskäytävä, jonka vaaleilla seinillä ja katossa näkyy harmaata noki- ja savujälkeä. Betoniportaat ja metallinen kaide johtavat ylöspäin, ja ilmassa leijuu ohut savuharso.",
             "must_avoid": [
               "people",
-              "hands",
               "faces",
-              "cloudy or discolored water",
-              "readable text or logos"
+              "hands or other body parts",
+              "active flames",
+              "readable text or signs"
             ],
             "must_show": [
-              "running kitchen faucet",
-              "stainless steel sink"
+              "concrete stairwell with metal handrail",
+              "grey soot stains on walls and ceiling"
             ],
             "rank": 3,
             "safe_to_generate": true,
             "search_queries": [
-              "vesihana juoksutus",
-              "running kitchen faucet",
-              "vesijohtoverkoston klooraus Huittinen",
-              "tap water running sink",
-              "juomaveden desinfiointi kloori"
+              "porraskäytävä savuvahinko",
+              "kerrostalon porraskäytävä noki",
+              "smoke damaged stairwell",
+              "soot stained staircase walls"
             ],
-            "subject": "Vettä pitää juoksuttaa kaikista vesipisteistä"
+            "subject": "Savuvahinkoja taloyhtiön porraskäytäviin"
           }
         ],
         "version": "article-first-v1"
       },
       "credit": "AI-kuvitus",
-      "depicted": "A stainless steel pot filled with vigorously boiling water sits on a black kitchen stovetop, with abundant steam rising above it. No people or readable text are visible.",
+      "depicted": "An empty concrete parking garage has a soot-blackened ceiling, metal cable trays and melted cables hanging down. Ash and debris cover part of a marked parking space.",
       "generated": true,
       "license": "AI-generated image",
       "license_url": "https://uutistenlukija.fi/ai-kuvat/",
-      "local_path": "media/b6bf6f55f251fcc18e53448f9f507b3aa30c598236a71c35048d7e7f57e1558d.jpg",
+      "local_path": "media/e27eb2e1e6a712626557aa2600895279de82eb2b8a2d003f8f5934a4c23336b0.jpg",
       "model": "codex-oauth:gpt-image-2",
       "pixel_review": {
-        "alt_fi": "Teräskattilassa kiehuu voimakkaasti vettä mustalla liesitasolla, ja kattilasta nousee runsaasti höyryä.",
+        "alt_fi": "Autohallin nokimustasta betonikatosta roikkuu sulaneita kaapeleita, ja tyhjän pysäköintiruudun lattialla on palojätettä.",
         "approved": true,
-        "article_text_sha256": "52a0c16016e7f68e565fc8b2895e70f0ae1d58072db2be24db9570c13d7aef97",
-        "concept_sha256": "e39610abb9b482e99fe315807400b5a25272d903e850265c5033461c0fce2641",
-        "description": "A stainless steel pot filled with vigorously boiling water sits on a black kitchen stovetop, with abundant steam rising above it. No people or readable text are visible.",
+        "article_text_sha256": "18d08c9653af83d1f88ad755e9034bc0368c35e60bddf40173d3f94d4d914f7c",
+        "concept_sha256": "0d1552efe629c5d25837ce4a4c36667e78d32e398ce56e5b941791f36e6a79bc",
+        "description": "An empty concrete parking garage has a soot-blackened ceiling, metal cable trays and melted cables hanging down. Ash and debris cover part of a marked parking space.",
         "fit_score": 9,
-        "image_sha256": "b6bf6f55f251fcc18e53448f9f507b3aa30c598236a71c35048d7e7f57e1558d",
+        "image_sha256": "e27eb2e1e6a712626557aa2600895279de82eb2b8a2d003f8f5934a4c23336b0",
         "model": "codex-oauth:gpt-6.1-sol",
         "must_show_visible": [
           true,
           true
         ],
         "no_people": true,
-        "reason": "The visible boiling water and rising steam match both required concept elements and directly illustrate the article’s instruction to boil drinking and cooking water. The image does not establish boiling duration or document the local water treatment, and has no visible defects that undermine its relevance.",
-        "reviewed_at": "2026-11-13T14:47:31.978026+00:00",
+        "reason": "The visible fire damage to ceiling cables directly matches the selected concept and the article's description of damaged electrical cables in a parking garage. No people, flames, readable text or identifiable logos are visible. The scene supports the disclosed generated illustration without establishing the actual location or event.",
+        "reviewed_at": "2026-11-13T15:57:01.901174+00:00",
         "text_audit": {
           "examples": [],
           "readable_text_present": false
@@ -2806,113 +2809,113 @@
       "pixels": {
         "height": 1024,
         "mode": "RGB",
-        "variance": 11361.3,
+        "variance": 5247.9,
         "width": 1536
       },
-      "prompt_sha256": "cf8b2fec9e3770f1b605973c48340d3edb458890eaa219ae154002080da72478",
+      "prompt_sha256": "640b770755f5ecb9df8847ea57b77c699c3c3f3909ab4ff933d77b2722a13e5d",
       "prompt_version": "imagery-v4-article-first-exact-concept",
       "relevance_check": {
         "accepted": true,
-        "evidence": "Teräksinen kattila täynnä voimakkaasti kiehuvaa vettä keittiön liesitasolla, kattilasta nousee runsaasti höyryä, taustalla tavallinen kodin keittiö arkisessa valaistuksessa.",
+        "evidence": "Taloyhtiön autohallin sisätila palon jälkeen: noen mustaama betonikatto, jonka pinnassa kulkevat metalliset kaapelihyllyt ja niillä sulaneet, roikkuvat sähkökaapelit. Alla näkyy tyhjä, nokinen pysäköintiruutu ja betonilattialla tuhkaa ja palojätettä, valaistuksena himmeä hallin valo.",
         "matched": [
-          "pot of boiling water on stove",
-          "rising steam"
+          "soot-blackened concrete ceiling",
+          "melted electrical cables hanging from cable tray"
         ],
         "method": "generation",
         "reason": "generated from the accepted scene"
       },
       "review_note": "Tekoälyn tuottama kuva vastaa valittua konkreettista aihetta. Artikkeli kertoo selvästi, ettei kuva ole valokuva tapahtumasta. Kuva ei esitä tunnistettavaa todellista henkilöä.",
       "selection_evidence": {
-        "article_text_sha256": "52a0c16016e7f68e565fc8b2895e70f0ae1d58072db2be24db9570c13d7aef97",
-        "decision_sha256": "044683567fead3b561a500124d0df22240db4a349a363a3c2dfb088875918ef4",
+        "article_text_sha256": "18d08c9653af83d1f88ad755e9034bc0368c35e60bddf40173d3f94d4d914f7c",
+        "decision_sha256": "d34a84198785351809a1882bd48ccfd4e61b4afc54f77639cc8da87811162d7a",
         "minimum_real_fit": 8,
         "searches": [
           {
             "candidates": [
               {
                 "approved": false,
-                "fit_score": 4,
-                "image_sha256": "b68082cd21fc6ac40586275df8471b9a20edea5e18b08f03ba7e7bf49f8a8e1d",
+                "fit_score": 0,
+                "image_sha256": "187b1d842ef327da37666160dcf25ca9d3edd8259d4cb0bde4d6b71094a6a17b",
                 "license": "Pexels License",
-                "reason": "The kitchen provides only broad context for household water use. The selected scene requires boiling water in a pot on the stove and rising steam; both are absent. One or more required concept elements are not visible.",
-                "source_url": "https://www.pexels.com/photo/white-furniture-in-kitchen-19980203/"
+                "reason": "The decorative tabletop objects do not illustrate the parking garage fire or its damage. Neither a soot-blackened concrete ceiling nor melted electrical cables hanging from a cable tray is visible. One or more required concept elements are not visible.",
+                "source_url": "https://www.pexels.com/photo/a-burned-palo-santo-and-seashells-7602963/"
               },
               {
                 "approved": false,
-                "fit_score": 4,
-                "image_sha256": "06ee17a4b7437650df3398702b9c403793717dce2d76c3d272f1f9ebc93809b4",
+                "fit_score": 1,
+                "image_sha256": "f853d97dc3a7a70a314d3d9f8fb07f13ab7684a937a5e38180a89a7460970683",
                 "license": "Pexels License",
-                "reason": "The main subject is food cooking in a frying pan, which offers only a broad kitchen connection to the article. Neither a pot visibly containing boiling water nor rising steam is present, so the selected water-boiling concept is not illustrated. One or more required concept elements are not visible.",
-                "source_url": "https://www.pexels.com/photo/dish-cooking-on-black-non-stick-pan-on-a-burner-86999/"
+                "reason": "The portrait does not illustrate the parking garage fire or damaged ceiling cables. Neither required element is visible, and the image contains a person, face, hand and active flame, all excluded by the selected concept. One or more required concept elements are not visible.",
+                "source_url": "https://www.pexels.com/photo/grayscale-photo-of-a-woman-smudging-8898231/"
               },
               {
                 "approved": false,
-                "fit_score": 4,
-                "image_sha256": "66fc77626e02147999413f1b74e802a1386a09864f8a67647af80218266a8327",
+                "fit_score": 5,
+                "image_sha256": "22a6769d08903f3184c5fef011c448c5dd54b196c9839bbf965ce8150f5c1d48",
                 "license": "Pexels License",
-                "reason": "The scene shows cooking but does not visibly demonstrate boiling drinking water, the article's concrete household precaution. Both required elements are absent, and the visible person, hands and face conflict with the selected concept. One or more required concept elements are not visible.",
-                "source_url": "https://www.pexels.com/photo/smiling-woman-preparing-topping-for-muffins-in-kitchen-7525108/"
+                "reason": "The parking garage provides context for the article, but the image does not show the selected fire-damaged ceiling or melted electrical cables hanging from a cable tray. Dark ceiling areas alone do not establish soot damage. One or more required concept elements are not visible.",
+                "source_url": "https://www.pexels.com/photo/exit-from-underground-parking-17789434/"
               },
               {
                 "approved": false,
-                "fit_score": 7,
-                "image_sha256": "d5722d21f09ca701acc7dfc8d21798e17f88aba4a914939e4d441bcbf15073c0",
+                "fit_score": 5,
+                "image_sha256": "e503c5ad2640eae81b8e92f269edfc258f2821e2992a826ed7cc409d7b856fc4",
                 "license": "Pexels License",
-                "reason": "The boiling water directly illustrates the article's instruction to boil drinking water, but the required rising steam is not clearly visible. The visible hand and person also conflict with the selected concept's exclusions. One or more required concept elements are not visible.",
-                "source_url": "https://www.pexels.com/photo/boiling-water-in-pot-on-burner-12673645/"
+                "reason": "The parking garage provides context for the article, but no clear fire damage is visible. The ceiling is not visibly soot-blackened, and no melted electrical cables hang from a cable tray. The image does not depict the selected fire-damaged scene or establish the reported location. One or more required concept elements are not visible.",
+                "source_url": "https://www.pexels.com/photo/photo-of-an-empty-parking-lot-20262986/"
               }
             ],
             "concept_rank": 1,
             "outcome": "no_qualifying_candidate",
             "provider": "pexels",
             "queries": [
-              "Huittinen keittokehotus",
-              "kiehuva vesi kattila",
-              "boiling water pot stove"
+              "Härmälä autohalli palo",
+              "autohallipalo Tampere",
+              "burned parking garage ceiling"
             ]
           },
           {
             "candidates": [
               {
                 "approved": false,
-                "fit_score": 2,
-                "image_sha256": "607ea1ed677d034d253f52197dca08817657038df95104c476c25f24d5328686",
+                "fit_score": 5,
+                "image_sha256": "959a8e2f8ed4afc38a98c115fc9ca3997df48970bead2414c9684ceae9e525d1",
                 "license": "Unsplash License",
-                "reason": "The outdoor shoreline does not illustrate drinking-water boiling, chlorination or water distribution. Neither the required pot of boiling water on a stove nor rising steam is visible. One or more required concept elements are not visible.",
-                "source_url": "https://unsplash.com/photos/a-body-of-water-surrounded-by-trees-and-rocks-NGOrTrZO_5w?utm_source=uutistenlukija&utm_medium=referral"
+                "reason": "The garage provides only broad context for the article. No soot-blackened ceiling, melted hanging cables, or visible fire damage appears, so it does not depict the selected fire-damaged scene or establish the reported venue. One or more required concept elements are not visible.",
+                "source_url": "https://unsplash.com/photos/empty-white-concrete-pillared-parking-lot-fAmj2spOqxc?utm_source=uutistenlukija&utm_medium=referral"
               },
               {
                 "approved": false,
-                "fit_score": 7,
-                "image_sha256": "3e5d41adbb47a716f87ed6794489f13dc027b70f11ba4f9a77076a38c61ebec0",
+                "fit_score": 5,
+                "image_sha256": "5f851aedf4d3101f23c2519a3ead7f5b743710055afd6a4dc144ba53a6e7ea86",
                 "license": "Unsplash License",
-                "reason": "The steaming pot relates concretely to the article's water-boiling advice, but its contents and boiling water are not visible. The rustic stove setting only partially matches the selected kitchen scene. One or more required concept elements are not visible.",
-                "source_url": "https://unsplash.com/photos/steam-rises-from-a-pot-on-a-rustic-stove-0KKh9PQ4GT4?utm_source=uutistenlukija&utm_medium=referral"
+                "reason": "The parking garage provides only general context for the article. No clearly soot-blackened ceiling or melted electrical cables hanging from a cable tray are visible, and the pixels do not establish fire damage or the reported venue. One or more required concept elements are not visible.",
+                "source_url": "https://unsplash.com/photos/an-empty-parking-garage-with-a-ramp-leading-up-to-it-4or9wfgs9Tg?utm_source=uutistenlukija&utm_medium=referral"
               },
               {
                 "approved": false,
-                "fit_score": 6,
-                "image_sha256": "b35127c150b3207d685d53a84096e60e9f69a389eef45c0e8d484db00f57b73a",
+                "fit_score": 5,
+                "image_sha256": "6fd07099bca85fd7727571f31f8e67796d291190fe87e64a3cac58c3a07fe52c",
                 "license": "Unsplash License",
-                "reason": "The covered pot relates to the article's water-boiling advice, but neither boiling water nor rising steam is clearly visible, so the selected scene is not demonstrated. One or more required concept elements are not visible.",
-                "source_url": "https://unsplash.com/photos/stainless-steel-cooking-pot-with-water-PJBDItb1tpg?utm_source=uutistenlukija&utm_medium=referral"
+                "reason": "The garage provides general context for the article, but the selected subject is fire-damaged ceiling cables. Neither a clearly soot-blackened concrete ceiling nor melted cables hanging from a cable tray is visible; the dark ceiling alone does not establish soot damage. One or more required concept elements are not visible.",
+                "source_url": "https://unsplash.com/photos/a-parking-garage-filled-with-lots-of-parked-cars-_S0ZoNnhhyQ?utm_source=uutistenlukija&utm_medium=referral"
               },
               {
                 "approved": false,
-                "fit_score": 6,
-                "image_sha256": "ea7445f549c723d6379b111ed0fa3258dee5a9c7b5eb2dd3fb33d477408bcfb2",
+                "fit_score": 5,
+                "image_sha256": "5c59e94a0780d541e19f706d03cf1e0840f74573e37ef78f91693b4dace7acba",
                 "license": "Unsplash License",
-                "reason": "The pot being heated on a stove relates to the article's water-boiling advice, but boiling water and rising steam are not visible, so the selected scene is only partially represented. One or more required concept elements are not visible.",
-                "source_url": "https://unsplash.com/photos/white-and-pink-floral-cooking-pot-on-stove-GsgeJvo9MTs?utm_source=uutistenlukija&utm_medium=referral"
+                "reason": "The garage provides general context for the article, but neither the selected fire-damaged ceiling nor melted cables hanging from a cable tray is visible. The image does not establish the reported location or aftermath, and the readable exit sign conflicts with the concept's text restriction. One or more required concept elements are not visible.",
+                "source_url": "https://unsplash.com/photos/a-large-empty-parking-garage-NiO0GHXlmSs?utm_source=uutistenlukija&utm_medium=referral"
               }
             ],
             "concept_rank": 1,
             "outcome": "no_qualifying_candidate",
             "provider": "unsplash",
             "queries": [
-              "Huittinen keittokehotus",
-              "kiehuva vesi kattila",
-              "boiling water pot stove"
+              "Härmälä autohalli palo",
+              "autohallipalo Tampere",
+              "burned parking garage ceiling"
             ]
           },
           {
@@ -2921,9 +2924,9 @@
             "outcome": "no_qualifying_candidate",
             "provider": "wikimedia",
             "queries": [
-              "Huittinen keittokehotus",
-              "kiehuva vesi kattila",
-              "boiling water pot stove"
+              "Härmälä autohalli palo",
+              "autohallipalo Tampere",
+              "burned parking garage ceiling"
             ]
           },
           {
@@ -2932,53 +2935,53 @@
             "outcome": "no_qualifying_candidate",
             "provider": "google",
             "queries": [
-              "Huittinen keittokehotus",
-              "kiehuva vesi kattila",
-              "boiling water pot stove"
+              "Härmälä autohalli palo",
+              "autohallipalo Tampere",
+              "burned parking garage ceiling"
             ]
           },
           {
             "candidates": [
               {
                 "approved": false,
-                "fit_score": 1,
-                "image_sha256": "3c56b4feec9533ae78d955c78b1d8707f57163b941a393db742563b246842b2f",
+                "fit_score": 4,
+                "image_sha256": "60f94c5542c6c8d5bd12139988217fd31ff3a33b787e51de47540eae8f592bdb",
                 "license": "Pexels License",
-                "reason": "The pixels show a hotel exterior with no visible connection to the article's water chlorination or collection points. Neither an outdoor wall tap nor water canisters being filled is visible. One or more required concept elements are not visible.",
-                "source_url": "https://www.pexels.com/photo/huskvarna-stadshotell-in-sweden-17644420/"
+                "reason": "The apartment building provides only broad residential context. The pixels do not establish the article's Hissikatu location or show a garage between apartment buildings, fire engines, or visible fire damage. One or more required concept elements are not visible.",
+                "source_url": "https://www.pexels.com/photo/residential-building-near-road-in-winter-15916284/"
               },
               {
                 "approved": false,
                 "fit_score": 2,
-                "image_sha256": "1e7e09d02c4fea73b88a05207280d0f64f06f620eb9a75afd2c7549f5e3f0b96",
+                "image_sha256": "82cd29e34056a9784dad2e60308c5aa431dfe6504fb971e427bd1345c4bbf57d",
                 "license": "Pexels License",
-                "reason": "The scene shows firefighting equipment, not drinking-water collection or chlorination. Neither a wall-mounted outdoor water tap nor water canisters being filled is visible, and the building cannot be verified as the article's water collection site. One or more required concept elements are not visible.",
-                "source_url": "https://www.pexels.com/photo/firefighter-with-equipment-in-wroclaw-housing-area-38485128/"
-              },
-              {
-                "approved": false,
-                "fit_score": 1,
-                "image_sha256": "51cf2b7cc9c308837f99c517a12284821bd7c629998a23ddc54ab5c2712d205c",
-                "license": "Pexels License",
-                "reason": "The visible school building does not illustrate the article's water chlorination or the selected drinking-water collection scene. No outdoor wall tap or water canisters being filled are visible, and the building is not established as either collection venue named in the article. One or more required concept elements are not visible.",
-                "source_url": "https://www.pexels.com/photo/exterior-view-of-salpausselan-koulu-in-lahti-finland-39143902/"
+                "reason": "The waterfront commercial buildings do not illustrate the reported apartment garage fire or the selected scene. No garage between apartment buildings, fire engines, police vehicles or visible fire damage is present. One or more required concept elements are not visible.",
+                "source_url": "https://www.pexels.com/photo/historic-kehrasaari-buildings-by-riverside-in-tampere-38409325/"
               },
               {
                 "approved": false,
                 "fit_score": 4,
-                "image_sha256": "4a37089dd714ac8e85b85a24246c910d4b1116ae221563bfe90f7628456a4c1b",
+                "image_sha256": "cb76cb13cc0c59a96175b6534e13a8ff4c8caa844ea284d447cf7ff9739fd5f5",
                 "license": "Pexels License",
-                "reason": "The outdoor water container has a general connection to water use, but it does not show the selected drinking-water collection scene: there is no tap on a building wall and no canisters being filled. The pixels do not establish a connection to the specified distribution site or chlorination process. One or more required concept elements are not vis",
-                "source_url": "https://www.pexels.com/photo/rural-outdoor-water-faucet-with-mirror-reflection-34573111/"
+                "reason": "The apartment buildings and parked vehicles provide only broad residential context for the garage fire article. The pixels do not establish the specific location or show the selected scene: a garage between apartment buildings with fire engines outside. One or more required concept elements are not visible.",
+                "source_url": "https://www.pexels.com/photo/modern-urban-architecture-with-vehicles-in-black-and-white-31640058/"
+              },
+              {
+                "approved": false,
+                "fit_score": 4,
+                "image_sha256": "60f94c5542c6c8d5bd12139988217fd31ff3a33b787e51de47540eae8f592bdb",
+                "license": "Pexels License",
+                "reason": "The apartment building provides only a broad residential connection to the article. The pixels do not establish the Hissikatu location or show the selected scene: a garage between apartment buildings and fire engines outside. One or more required concept elements are not visible.",
+                "source_url": "https://www.pexels.com/photo/residential-building-near-road-in-winter-15916284/"
               }
             ],
             "concept_rank": 2,
             "outcome": "no_qualifying_candidate",
             "provider": "pexels",
             "queries": [
-              "Huittisten paloasema",
-              "Huittinen paloasema Klaavolantie",
-              "drinking water distribution canister"
+              "Hissikatu Härmälä Tampere",
+              "Härmälä kerrostalo autohalli",
+              "Pirkanmaan pelastuslaitos paloauto Härmälä"
             ]
           },
           {
@@ -2987,9 +2990,9 @@
             "outcome": "no_qualifying_candidate",
             "provider": "unsplash",
             "queries": [
-              "Huittisten paloasema",
-              "Huittinen paloasema Klaavolantie",
-              "drinking water distribution canister"
+              "Hissikatu Härmälä Tampere",
+              "Härmälä kerrostalo autohalli",
+              "Pirkanmaan pelastuslaitos paloauto Härmälä"
             ]
           },
           {
@@ -2998,9 +3001,9 @@
             "outcome": "no_qualifying_candidate",
             "provider": "wikimedia",
             "queries": [
-              "Huittisten paloasema",
-              "Huittinen paloasema Klaavolantie",
-              "drinking water distribution canister"
+              "Hissikatu Härmälä Tampere",
+              "Härmälä kerrostalo autohalli",
+              "Pirkanmaan pelastuslaitos paloauto Härmälä"
             ]
           },
           {
@@ -3009,9 +3012,9 @@
             "outcome": "no_qualifying_candidate",
             "provider": "google",
             "queries": [
-              "Huittisten paloasema",
-              "Huittinen paloasema Klaavolantie",
-              "drinking water distribution canister"
+              "Hissikatu Härmälä Tampere",
+              "Härmälä kerrostalo autohalli",
+              "Pirkanmaan pelastuslaitos paloauto Härmälä"
             ]
           },
           {
@@ -3020,9 +3023,9 @@
             "outcome": "no_qualifying_candidate",
             "provider": "pexels",
             "queries": [
-              "vesihana juoksutus",
-              "running kitchen faucet",
-              "vesijohtoverkoston klooraus Huittinen"
+              "porraskäytävä savuvahinko",
+              "kerrostalon porraskäytävä noki",
+              "smoke damaged stairwell"
             ]
           },
           {
@@ -3031,9 +3034,9 @@
             "outcome": "no_qualifying_candidate",
             "provider": "unsplash",
             "queries": [
-              "vesihana juoksutus",
-              "running kitchen faucet",
-              "vesijohtoverkoston klooraus Huittinen"
+              "porraskäytävä savuvahinko",
+              "kerrostalon porraskäytävä noki",
+              "smoke damaged stairwell"
             ]
           },
           {
@@ -3042,9 +3045,9 @@
             "outcome": "no_qualifying_candidate",
             "provider": "wikimedia",
             "queries": [
-              "vesihana juoksutus",
-              "running kitchen faucet",
-              "vesijohtoverkoston klooraus Huittinen"
+              "porraskäytävä savuvahinko",
+              "kerrostalon porraskäytävä noki",
+              "smoke damaged stairwell"
             ]
           },
           {
@@ -3053,33 +3056,33 @@
             "outcome": "no_qualifying_candidate",
             "provider": "google",
             "queries": [
-              "vesihana juoksutus",
-              "running kitchen faucet",
-              "vesijohtoverkoston klooraus Huittinen"
+              "porraskäytävä savuvahinko",
+              "kerrostalon porraskäytävä noki",
+              "smoke damaged stairwell"
             ]
           }
         ],
         "selected": {
           "concept_rank": 1,
           "fit_score": 9,
-          "image_sha256": "b6bf6f55f251fcc18e53448f9f507b3aa30c598236a71c35048d7e7f57e1558d",
+          "image_sha256": "e27eb2e1e6a712626557aa2600895279de82eb2b8a2d003f8f5934a4c23336b0",
           "kind": "generated"
         },
         "version": "article-first-v1"
       },
-      "sha256": "b6bf6f55f251fcc18e53448f9f507b3aa30c598236a71c35048d7e7f57e1558d",
+      "sha256": "e27eb2e1e6a712626557aa2600895279de82eb2b8a2d003f8f5934a4c23336b0",
       "source_url": "https://uutistenlukija.fi/ai-kuvat/",
-      "subject": "Juomaveden keittokehotus: vesi on keitettävä vähintään viisi minuuttia",
-      "url": "https://uutistenlukija.fi/media/b6bf6f55f251fcc18e53448f9f507b3aa30c598236a71c35048d7e7f57e1558d.jpg"
+      "subject": "Palon vaurioittamat sähkökaapeleita hallin katossa autohallissa",
+      "url": "https://uutistenlukija.fi/media/e27eb2e1e6a712626557aa2600895279de82eb2b8a2d003f8f5934a4c23336b0.jpg"
     },
     "paragraphs": [
       {
         "source_ids": [
           "A",
           "B",
-          "C"
+          "D"
         ],
-        "text": "Huittisissa aloitetaan perjantaina 13. marraskuuta juomaveden desinfiointi kloorilla rajatulla alueella. Desinfiointi kestää useita päiviä. Asiasta kertovat Huittisten kaupungin vesihuolto, Etelä-Satakunnan ympäristöterveydenhuolto ja Satakunnan hyvinvointialue yhteisessä tiedotteessaan."
+        "text": "Poliisi tutkii Tampereen Härmälässä syttynyttä autohallipaloa tahallisena tekona. Esitutkinnassa on poliisin mukaan selvinnyt, että palo sytytettiin tahallaan. Teosta epäillään tässä vaiheessa yhtä henkilöä."
       },
       {
         "source_ids": [
@@ -3087,89 +3090,82 @@
           "B",
           "C"
         ],
-        "text": "Juomaveden keittokehotus jatkuu Solkisen ja Laitisen alueilla toistaiseksi. Kaikki juomavesi ja ruoanlaittoon käytettävä vesi on keitettävä vähintään viisi minuuttia. Pelkkä kiehauttaminen vedenkeittimessä ei riitä."
+        "text": "Hätäkeskus sai ilmoituksen torstaina 12. marraskuuta ennen puoltayötä. Palo oli syttynyt Hissikadulla sijaitsevan taloyhtiön autohallissa. Paikalle lähti useita pelastuslaitoksen ja poliisin yksiköitä."
       },
       {
         "source_ids": [
           "A",
           "B",
-          "C"
+          "C",
+          "D"
         ],
-        "text": "Koliformisia bakteereita löytyi vesinäytteistä, jotka otettiin tavallisen näytteenoton yhteydessä 10. marraskuuta. Tiedotteen mukaan tähänastisista näytteistä ei ole löytynyt E. coli -bakteeria eikä suolistoperäisiä enterokokkeja. Koliformisten bakteerien määrä näytteissä on ollut pieni, ja tästä syystä sairastumisriski arvioidaan vähäiseksi."
+        "text": "Palo aiheutti poliisin mukaan suuria omaisuusvahinkoja kiinteistölle ja useille hallissa pysäköidyille autoille. Lisäksi taloyhtiön porraskäytäviin tuli savuvahinkoja."
       },
       {
         "source_ids": [
           "D"
         ],
-        "text": "Lauttakylä-lehti uutisoi keittokehotuksesta 11. marraskuuta. Lehden mukaan uusia näytteitä otettiin silloin, ja kaupunki lupasi seuraavan tiedotteen viimeistään perjantaiksi 13. marraskuuta."
+        "text": "Ilta-Sanomien mukaan palo vaurioitti hallin katossa kulkeneita sähkökaapeleita. Lehden haastatteleman Pirkanmaan pelastuslaitoksen palomestarin Aku Pietilän mukaan halli sijaitsee kahden kerrostalon välissä."
+      },
+      {
+        "source_ids": [
+          "D"
+        ],
+        "text": "Ilta-Sanomien mukaan toisesta kerrostalosta katkesivat sähköt ja lämmöt. Talossa on 64 asuntoa. Katkos alkoi yöllä ja jatkui vielä ainakin puoliltapäivin, kun pelastuslaitos lähti kohteesta."
       },
       {
         "source_ids": [
           "A",
           "B",
-          "C"
+          "D"
         ],
-        "text": "Kotitaloudet, joita klooraus koskee, saavat vielä erillisen tiedotteen, jossa on tarkka kartta ja ohjeet. Kloorauksen aikana vesi voi haista ja maistua kloorilta. Keitettynä sitä voi käyttää juomiseen ja ruoanlaittoon, ja keittämättömänä esimerkiksi peseytymiseen ja siivoukseen."
+        "text": "Poliisi pyytää silminnäkijähavaintoja Härmälästä, erityisesti Hissikadun ympäristöstä noin kello 23.30 ajalta. Poliisin mukaan tekijä poistui paikalta silloin."
       },
       {
         "source_ids": [
           "A",
           "B",
-          "C"
+          "D"
         ],
-        "text": "Vettä pitää juoksuttaa kaikista vesipisteistä, jotta myös talojen omat putket puhdistuvat. Juoksutus kestää yleensä muutaman minuutin tai kunnes vesi alkaa haista kloorilta. Myös lämmintä vettä on juoksutettava. Sen jälkeen kloorattu vesi jätetään vaikuttamaan putkiin."
+        "text": "Poliisi ei kuvaile epäiltyä tarkemmin, jotta kuvaus ei vaikuttaisi silminnäkijöiden havaintoihin. Poliisi selvittää myös poikkeavasti käyttäytyneen henkilön tai henkilöiden liikkeitä ennen paloa. Siksi se toivoo havaintoja myös aiemmalta illalta lähistöllä liikkuneesta henkilöstä, joka on jäänyt mieleen käytöksensä tai muun syyn vuoksi."
       },
       {
         "source_ids": [
           "A",
           "B",
-          "C"
+          "D"
         ],
-        "text": "Astioita voi pestä, jos vesi ei ole sameaa tai värillistä. Astianpesukoneessa suositellaan kuuminta ohjelmaa, ja käsin tiskatessa keitettyä vettä ainakin huuhteluun. Astioiden on annettava kuivua hyvin ennen käyttöä."
+        "text": "Vihjeet pyydetään sähköpostitse osoitteeseen vihjeet.sisa-suomi@poliisi.fi."
       },
       {
         "source_ids": [
           "A",
-          "B",
-          "C"
+          "D"
         ],
-        "text": "Vatsaoireista, kuten ripulista, kehotetaan ottamaan yhteyttä Huittisten sote-keskukseen Sata-sovelluksella tai numerosta 044 772 8420 arkisin kello 8–16. Jos epäilee saaneensa oireita vedestä, siitä voi tehdä ilmoituksen ympäristöterveydenhuollon sähköiseen Ilppa-palveluun."
-      },
-      {
-        "source_ids": [
-          "A",
-          "B",
-          "C"
-        ],
-        "text": "Juomavettä voi hakea ulkovesipisteistä paloaseman takapihalta osoitteessa Klaavolantie 2 sekä Tahto Areenan viereisen väistökoulun B-oven vierestä osoitteessa Huhkolantie 2. Mukaan tarvitaan puhdas astia, kuten kannellinen ämpäri, kanisteri tai pulloja."
-      },
-      {
-        "source_ids": [
-          "A",
-          "B",
-          "C"
-        ],
-        "text": "Näytteiden ottamista jatketaan. Seuraava tiedote tuloksista annetaan viimeistään maanantaina 16. marraskuuta kello 15. Kaupunki tiedottaa vesihuoltolaitoksen rekisterissä olevin puhelinnumeroin ja sähköpostiosoittein sekä verkkosivuillaan huittinen.fi."
+        "text": "Poliisi muistuttaa, että kerrostalopalon aikana savun täyttämään porraskäytävään ei pidä mennä, koska se voi olla hengenvaarallista. Poliisin mukaan turvallisinta on tällöin pysyä asunnossa."
       }
     ],
-    "summary": "Solkisen ja Laitisen alueilla vesi on yhä keitettävä, mutta viranomaisten mukaan sairastumisriski on vähäinen, koska koliformisten bakteerien määrä näytteissä on ollut pieni. Uusia tuloksia luvataan viimeistään maanantaina.",
-    "title": "Huittinen aloittaa veden kloorauksen, keittokehotus jatkuu"
+    "summary": "Poliisi epäilee teosta yhtä henkilöä ja pyytää havaintoja torstai-illalta, erityisesti Hissikadun ympäristöstä noin kello 23.30 ajalta.",
+    "title": "Tampereen Härmälän autohallipaloa tutkitaan tahallisena"
   },
   "review": {
     "approved": true,
-    "draft_sha256": "dff3fd9abf6337617a66da9cd0099879cb5c59b4ede55321e8ae9db70f6da5ea",
+    "draft_sha256": "62036f035700afd6044a9b1153b36645e232d344406e50dc19a5825ae49d3301",
     "fixable": false,
     "reasons": [
-      "Otsikossa 'Huittinen aloittaa veden kloorauksen, keittokehotus jatkuu' on 57 merkkiä, ja tärkein asia on alussa. Se perustuu lähteiden A, B ja C yhteiseen tiedotteeseen: desinfiointi kloorilla aloitetaan rajatulla alueella perjantaina 13.11.2026, ja keittokehotus jatkuu edelleen.",
-      "Lähteet A (ePressi), B (huittinen.fi) ja C (Satakunnan hyvinvointialue) sisältävät saman kolmen viranomaisen yhteistiedotteen. Luonnos ei esitä niitä toisistaan riippumattomana vahvistuksena, vaan kappale 1 attribuoi tiedot yhteiseen tiedotteeseen. A,B,C-merkinnät ovat siksi tuettuja kaikissa niitä käyttävissä kappaleissa.",
-      "Kappaleet 1–3 ovat tuettuja lähteillä A, B ja C. Desinfiointi alkaa 13.11. ja kestää useita päiviä. Keittokehotus koskee Solkisen ja Laitisen alueita toistaiseksi. Vesi on keitettävä vähintään 5 minuuttia, eikä vedenkeittimellä kiehauttaminen yksin riitä. Koliformisia bakteereja löytyi 10.11. otetuista näytteistä normaalin näytteenoton yhteydessä. E. coli -bakteeria tai suolistoperäisiä enterokokkeja ei ole löytynyt. Pitoisuus oli pieni, ja siksi sairastumisriski arvioidaan vähäiseksi. Epävarmuus ja attribuutio ('Tiedotteen mukaan', 'arvioidaan') on säilytetty.",
-      "Kappale 4 on tuettu lähteellä D (Lauttakylä 11.11.). Lehden mukaan uusia näytteitä otettiin keskiviikkona 11.11., ja uusi tiedote luvattiin viimeistään perjantaiksi 13.11. Kellonaika 10 on jätetty pois, mutta se ei muuta sisältöä. Lupaus toteutui, sillä B julkaistiin 13.11. klo 10.00 Suomen aikaa. Lehden mainitsemaa mahdollista tautimikrobia ja kommenttiosion väitteitä ei ole otettu mukaan.",
-      "Kappaleet 5–7 vastaavat lähteitä A, B ja C: kohdetalouksille tulee erillinen tiedote, jossa on kartta ja ohje. Vesi voi haista ja maistua kloorilta. Keitettyä vettä voi käyttää juomiseen ja ruoanlaittoon, ja vesi sopii peseytymiseen ja siivoukseen. Juoksutusohjeet koskevat myös lämmintä vettä, ja vesi jätetään vaikuttamaan putkiin. Astianpesuohjeet ovat lähteen mukaiset. Muotoilu on omaa, eikä se muuta ehtoja.",
-      "Kappaleet 8–10 vastaavat lähteitä A, B ja C. Sote-keskuksen numero 044 772 8420 palvelee ma–pe klo 8–16, ja sinne voi ottaa yhteyttä myös Sata-sovelluksella. Lisäksi mainitaan Ilppa-ilmoitus ja vedennoutopisteet osoitteissa Klaavolantie 2 ja Huhkolantie 2 (B-ovi). Seuraava tiedote annetaan viimeistään maanantaina 16.11.2026 klo 15. Tiedotuskanavina mainitaan vesihuoltolaitoksen yhteystiedot ja huittinen.fi. Viikonpäivät ja päivämäärät täsmäävät.",
-      "Ingressi on tuettu lähteillä A, B ja C: keittokehotus jatkuu, viranomaisten mukaan sairastumisriski on vähäinen pienen bakteerimäärän vuoksi ja uusia tuloksia luvataan viimeistään maanantaina. Luonnoksessa ei ole lisättyjä syy-seuraussuhteita, yleistyksiä tai alueellista laajennusta. Kategoria Kotimaa sopii.",
-      "Lähteet ovat tuoreita: A, B ja C ovat 13.11.2026 ja D 11.11.2026. Julkaisuperusteena on omistajan hyväksymä ePressi-tiedotteiden käyttö. Teksti on itsenäisesti muotoiltua, neutraalia ja ymmärrettävää suomea. Juttu ei tunnista yksityishenkilöitä.",
-      "Kuva on tekoälyllä generoitu. Kuvateksti 'AI-generoitu kuva. Ei valokuva tapahtumasta.' ja alt-tekstin alku kertovat tämän. Kolme konseptia on järjestetty, ja jokaiselle on tehty haut neljästä palvelusta. Kunnioitettavia oikeudellisia todellisia kuvia ei löytynyt: paras pistemäärä oli 7, kun vähimmäisvaatimus on 8. Generoitu kuva vastaa korkeimmalle sijoitettua turvallista konseptia (rank 1). Riippumattoman pikselitarkastuksen pistemäärä on 9/10, eikä kuvassa ole ihmisiä tai luettavaa tekstiä. Kiehuva vesi kattilassa havainnollistaa suoraan jutun keskeistä keittokehotusta.",
-      "Draftin kuvatietue on identtinen source_packet.image-tietueen kanssa. SHA-256-arvo b6bf6f55… täsmää kentissä sha256, local_path, url, pixel_review.image_sha256 ja selection_evidence.selected. Article_text_sha256-sidosta lopulliseen tekstiin ei voi tässä laskea, eikä siitä ole esitetty ristiriitaista näyttöä. Arvio koskee vain tätä versiota, eikä se ole julkaisulupa."
+      "Otsikko 'Tampereen Härmälän autohallipaloa tutkitaan tahallisena' on 55 merkkiä, eli alle 60 merkin tavoitteen. Ydinasia on alussa: paikka ja tahallisen teon epäily. Väitteen tukee poliisin tiedote A ('Poliisi tutkii Tampereen Härmälässä, Hissikadulla sytytettyä autohallipaloa tahallisena tekona').",
+      "Ingressin väitteet tulevat lähteestä A: yksi epäilty, havaintopyyntö Hissikadun ympäristöstä ja kellonaika noin 23.30. 'Torstai-illalta' on oikein, koska A kertoo ilmoituksen tulleen torstaina 12.11.2026 ennen puoltayötä, ja 12.11.2026 on torstai.",
+      "Kappaleiden 1–3 tiedot löytyvät lähteestä A: tahallisuus selvisi esitutkinnassa, epäiltyjä on yksi, ilmoitus tuli 12.11. ennen puoltayötä Hissikadun taloyhtiön autohallista, paikalle lähti useita yksiköitä, ja palo aiheutti omaisuusvahinkoja kiinteistölle ja usealle autolle sekä savuvahinkoja porraskäytäviin. Muotoilu 'suuria' vastaa A:n sanaa 'huomattavia' ja D:n sanaa 'merkittäviä'. Lähteet B ja C sisältävät samat lauseet, joten niiden source_ids-merkinnät ovat tekstiltään tuettuja.",
+      "B (rikosuutiset.fi) ja C (nordenbladet.fi) toistavat poliisin tiedotteen lähes sanatarkasti, ja C mainitsee lähteeksi Poliisi.fi. Ne eivät ole riippumatonta vahvistusta. Luonnos ei kuitenkaan väitä niiden vahvistavan asiaa itsenäisesti, vaan poliisin väitteet on attribuoitu poliisille.",
+      "Kappaleet 4–5 perustuvat vain lähteeseen D, ja ne on attribuoitu Ilta-Sanomille. Sisältö vastaa D:tä: palomestari Aku Pietilän (Pirkanmaan pelastuslaitos) mukaan halli on kahden kerrostalon välissä ja palo vaurioitti katon sähkökaapeleita. D:n mukaan toisesta talosta katkesivat sähköt ja lämmöt, talossa on 64 asuntoa ja katkos alkoi yöllä ja jatkui ainakin puoliltapäivin, kun pelastuslaitos poistui. Lähteiden välillä ei ole ristiriitaa.",
+      "Kappaleiden 6–8 tiedot ovat lähteissä A, B ja D: tekijän poistumisaika noin 23.30, syy epäillyn kuvailemattomuuteen, havaintopyyntö aiemmin illalla poikkeavasti käyttäytyneestä henkilöstä ja vihjeosoite vihjeet.sisa-suomi@poliisi.fi. Sanamuoto 'aiemmalta illalta' on lievästi monitulkintainen, ja lähteen ehdollisuus ('mahdollisesta henkilöstä, joka olisi jäänyt') on muuttunut indikatiiviksi. Lause 'ennen paloa' ja ingressin 'torstai-illalta' sitovat ajan kuitenkin samaan iltaan, ja havaintopyyntö on luonteeltaan hypoteettinen, joten sisältö ei olennaisesti muutu.",
+      "Kappaleen 9 turvallisuusmuistutus löytyy lähteistä A ja D. B:tä ei ole merkitty lähteeksi, mikä on oikein, koska B:n teksti ei sisällä muistutusta.",
+      "Poliisijutun yksityisyysrajat täyttyvät: epäiltyä, uhreja tai todistajia ei nimetä eikä kuvailla. Talon numeroa (Hissikatu 4) ei mainita. Ainoa nimetty henkilö on viranomainen D:ssä. Poliisin kuvia ei käytetä. Juttu on uutisarvoinen tuhopolttoepäily eikä pelkkä liikennevalvontailmoitus.",
+      "Ajankohtaisuus ja kategoria ovat kunnossa. Lähteet on julkaistu 13.11.2026 ja tapahtuma oli 12.11.2026. Kategoria Kotimaa sopii. Teksti on omaa muotoilua, ei kopioitu tiedotteen virkkeitä sellaisenaan.",
+      "Kuva on tekoälygeneroitu. Kuvateksti 'AI-generoitu kuva. Ei valokuva tapahtumasta.' ja alt-tekstin alku kertovat sen selvästi. Kuva vastaa korkeimmalle sijoitettua turvallista konseptia (rank 1, safe_to_generate true): nokinen betonikatto ja vaurioituneet kaapelit. Tämä sopii D:n kuvaamiin katon sähkökaapelivaurioihin. Kuvassa ei ole ihmisiä, liekkejä, luettavaa tekstiä tai logoja, joten must_avoid-rajat säilyvät.",
+      "Kuvan valintaprosessi täyttää vaatimukset. Konsepteja on kolme ja ne on järjestetty, ja jokaiselle tehtiin hakuja. Pexels- ja Unsplash-ehdokkaat hylättiin perustellusti (fit enintään 5 < 8), joten geneerisiä varastokuvia ei hyväksytty. Erillinen pikselitarkastus antoi pisteet 9/10, totesi must_show-elementit näkyviksi ja kirjasi no_people true.",
+      "Kuvatietue on luonnoksessa ja source_packetissa sisällöltään yhtenevä. Kuvan sha256-arvot ovat samat kentissä sha256, pixel_review.image_sha256 ja selection_evidence.selected. Kuvan sidosta article_text_sha256-arvoon 18d08c96… en pysty itsenäisesti laskemaan ilman työkaluja, eikä aineistossa ole todistetta ristiriidasta.",
+      "Hyväksyntä koskee vain tätä täsmällistä versiota. Se on arvio lähdeaineistosta, ei itsenäinen todiste lähteiden totuudesta eikä julkaisulupa. Lähteen A käyttöehdot edellyttävät lähdemainintaa (Poliisi) ja kieltävät kaupallisen käytön. Niiden noudattaminen julkaisussa on varmistettava erikseen."
     ]
   }
 }
