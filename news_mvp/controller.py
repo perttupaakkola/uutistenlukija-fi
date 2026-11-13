@@ -320,15 +320,30 @@ def _defer_image_only_rejection(store, config, job, packet, draft, review, model
 
 def article_first_image(draft, packet, state_dir, model, *, classifier_feedback=None):
     """Rank the final article before considering even an intake-supplied photograph."""
-    from .imagery import build_image, classify_draft
+    from .imagery import (build_image, classify_draft, CONCEPT_REFUSALS,
+                          concept_refusal_feedback, load_concept_refusals, save_concept_refusals)
     text_draft = {key: value for key, value in draft.items() if key != 'image'}
     text_packet = {key: value for key, value in packet.items() if key != 'image'}
-    decision = classify_draft(text_draft, model=model, packet=text_packet,
-                              feedback=classifier_feedback)
+    story_key = packet.get('story_key')
+    # Scenes whose generated pictures were refused as a whole are handed to the classifier,
+    # in every round including after a text correction, so it never proposes them again
+    # (13 Nov 2026: the correction path re-chose the same refused meeting-table scene).
+    feedback = concept_refusal_feedback(load_concept_refusals(state_dir, story_key),
+                                        classifier_feedback) or classifier_feedback
+    decision = classify_draft(text_draft, model=model, packet=text_packet, feedback=feedback)
     # The rights-pinned intake photo is only one candidate in the ranked search.
     candidate_draft = {**text_draft, 'image': packet.get('image')}
-    return build_image(candidate_draft, state_dir, category=draft.get('category', ''),
-                       decision=decision, packet=packet, allow_open_sources=True)
+    refusals = []
+    token = CONCEPT_REFUSALS.set(refusals)
+    try:
+        return build_image(candidate_draft, state_dir, category=draft.get('category', ''),
+                           decision=decision, packet=packet, allow_open_sources=True)
+    finally:
+        CONCEPT_REFUSALS.reset(token)
+        try:
+            save_concept_refusals(state_dir, story_key, refusals)
+        except OSError:
+            pass
 
 
 def tick(config_path, model=None, now=None, _already_locked=False, target_job_id=None,

@@ -1109,6 +1109,80 @@ def _rejected_image_hashes(state_dir):
     return result
 
 
+CONCEPT_REFUSALS = _ContextVar('uutis_generated_concept_refusals', default=None)
+CONCEPT_REFUSAL_DIR = 'image-concept-refusals'
+MAX_STORED_CONCEPT_REFUSALS = 6
+
+
+def concept_refused_as_scene(pixel_review):
+    """True when the reviewer saw every must-show element and still refused the picture.
+
+    Then the refusal is about the scene choice, not about this one raster, so another
+    picture of the same scene cannot pass. A missing element is raster variance and may
+    deserve a second picture of the same concept.
+    """
+    coverage = (pixel_review or {}).get('must_show_visible')
+    return (isinstance(coverage, list) and bool(coverage) and
+            all(item is True for item in coverage) and
+            (pixel_review.get('approved') is not True or
+             pixel_review.get('fit_score', -1) < MIN_REAL_FIT))
+
+
+def _record_concept_refusal(concept, pixel_review):
+    refusals = CONCEPT_REFUSALS.get()
+    if refusals is None or len(refusals) >= MAX_STORED_CONCEPT_REFUSALS:
+        return
+    refusals.append({
+        'depictable_scene': str(concept.get('depictable_scene', ''))[:400],
+        'must_show': [str(item)[:120] for item in concept.get('must_show', ())][:3],
+        'fit_score': pixel_review.get('fit_score'),
+        'reason': str(pixel_review.get('reason', ''))[:500],
+    })
+
+
+def _concept_refusal_path(state_dir, story_key):
+    from pathlib import Path
+    key = hashlib.sha256(str(story_key).encode()).hexdigest()
+    return Path(state_dir) / CONCEPT_REFUSAL_DIR / f'{key}.json'
+
+
+def load_concept_refusals(state_dir, story_key):
+    """Generated scenes already refused for this story (bounded, oldest first)."""
+    if not story_key:
+        return []
+    try:
+        value = json.loads(_concept_refusal_path(state_dir, story_key).read_text())
+    except (OSError, ValueError):
+        return []
+    return [item for item in value if isinstance(item, dict)][-MAX_STORED_CONCEPT_REFUSALS:] \
+        if isinstance(value, list) else []
+
+
+def save_concept_refusals(state_dir, story_key, new):
+    if not story_key or not new:
+        return
+    from .site import atomic_write
+    merged = (load_concept_refusals(state_dir, story_key) + list(new))[-MAX_STORED_CONCEPT_REFUSALS:]
+    atomic_write(_concept_refusal_path(state_dir, story_key),
+                 json.dumps(merged, ensure_ascii=False, sort_keys=True))
+
+
+def concept_refusal_feedback(refusals, prior_review=None):
+    """Classifier feedback naming every refused generated scene, merged with a prior review."""
+    reasons = []
+    if isinstance(prior_review, dict) and prior_review.get('image_retryable') is True:
+        reasons.extend(str(r) for r in (prior_review.get('reasons') or [])[-2:])
+    for item in refusals[-4:]:
+        reasons.append('Generated scene refused by the pixel reviewer although every required '
+                       'element was visible (fit %s/10): "%s". Reviewer: %s Choose a different, '
+                       'more article-specific people-free scene; never this scene again.'
+                       % (item.get('fit_score'), item.get('depictable_scene', ''),
+                          item.get('reason', '')))
+    if not reasons:
+        return None
+    return {'image_retryable': True, 'reasons': reasons[-4:]}
+
+
 def _generated_refusal(reason):
     """Record why a generated picture was refused in the attempt receipt (no content)."""
     from .image_providers import request_event
@@ -1707,6 +1781,13 @@ def _build_image(draft, state_dir, category='', model=DEFAULT_MODEL, attempts=3,
                 _generated_refusal('review_not_approved' if not pixel_review['approved']
                                    else 'fit_below_threshold')
                 _reject_generated(used_model, subject, prompt, state_dir)
+                if exact_concept and concept_refused_as_scene(pixel_review):
+                    # Every required element was drawn and the scene was still refused:
+                    # the concept itself is too generic for this article. Regenerating the
+                    # identical prompt only reproduces the refusal (13 Nov 2026: an empty
+                    # conference table for Orpo's Ukraine story refused 3x, fit 5).
+                    _record_concept_refusal(decision, pixel_review)
+                    break
                 continue
             description = pixel_review['description']
             audit = pixel_review.get('text_audit')
