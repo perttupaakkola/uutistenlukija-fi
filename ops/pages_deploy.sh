@@ -11,7 +11,7 @@ for attempt in $(seq 1 "$TRIES"); do
   rc=$?
   cat "$log"
   if [ "$rc" -eq 0 ]; then exit 0; fi
-  if ! grep -Eqi 'internal server error|code: 10500|code: 10013|code: 8000000|5[0-9][0-9] (Internal|Bad Gateway|Service Unavailable|Gateway Timeout)|ETIMEDOUT|ECONNRESET|EAI_AGAIN|fetch failed|socket hang up' "$log"; then
+  if ! grep -Eqi 'internal server error|unknown internal error|code: 10500|code: 10013|code: 8000000|5[0-9][0-9] (Internal|Bad Gateway|Service Unavailable|Gateway Timeout)|ETIMEDOUT|ECONNRESET|EAI_AGAIN|fetch failed|socket hang up' "$log"; then
     echo "Pages deploy failed with a non-transient error; not retrying" >&2
     exit 1
   fi

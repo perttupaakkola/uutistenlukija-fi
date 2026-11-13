@@ -128,6 +128,42 @@ def startup_failure_redispatch(runs, previous_error, status=None):
     return real,('exhausted' if len(failed)>=STARTUP_FAILURE_LIMIT else 'redispatch'),newest
 
 
+DEPLOY_STEP_RETRY_LIMIT = 2
+CLOUDFLARE_DEPLOY_STEP = 'Deploy to Cloudflare Pages'
+
+
+def failed_step(run_id):
+    """Name of the first failed step of a deploy run ('' if none can be read)."""
+    jobs=json.loads(cmd('gh','run','view',str(run_id),'--repo',REPO,'--json','jobs')).get('jobs') or []
+    for job in jobs:
+        for step in job.get('steps') or []:
+            if step.get('conclusion')=='failure':return step.get('name') or ''
+    return ''
+
+
+def deploy_step_redispatch(runs, previous_error, step_of):
+    """Decide whether a run that failed in the Cloudflare upload step is redispatched.
+
+    13 Nov 2026 real case: article 884a46a6, commit 7515f29a, run 43451905694 passed
+    every check, then wrangler answered 'Failed to publish your Function. Got error:
+    Unknown internal error occurred.' (a Cloudflare-side fault the in-run retry did not
+    recognise). Nothing was published, yet the article was marked failed for good.
+    A failure confined to the Cloudflare step deploys the same commit again, which is
+    safe; bounded to DEPLOY_STEP_RETRY_LIMIT redispatches per commit. Failures in the
+    bundle/superseded-main checks stay final. The failed run already answered is read
+    from the 'Dispatched ... startup=N' marker so one failure is answered only once.
+    Returns None, 'wait' (redispatched, new run not visible yet) or 'redispatch'.
+    """
+    if not runs:return None
+    newest=runs[0]
+    if newest.get('status')!='completed' or newest.get('conclusion')!='failure':return None
+    marker=_DISPATCHED.match(previous_error or '')
+    if marker and marker.group(3)==str(newest['databaseId']):return 'wait'
+    if sum(1 for r in runs if r.get('conclusion')=='failure')>DEPLOY_STEP_RETRY_LIMIT:return None
+    if not (step_of(newest['databaseId']) or '').startswith(CLOUDFLARE_DEPLOY_STEP):return None
+    return 'redispatch'
+
+
 def api(path, data=None, method=None):
     if data is None and method is None:
         return json.loads(cmd('gh','api',f'repos/{REPO}/{path}'))
@@ -1346,6 +1382,24 @@ def publish(store,job,state,config_path):
                 return {'status':'dispatch_retry','job_id':job['id'],'remote_commit':row['remote_commit'],'reason':safe_error(refused)}
             with store.db:store.db.execute("UPDATE publications SET status='dispatched',error=? WHERE job_id=?",(dispatched_marker(lost,failed_id),job['id']))
             return {'status':'dispatched','job_id':job['id'],'remote_commit':row['remote_commit']}
+        retry=deploy_step_redispatch(runs,row.get('error'),failed_step)
+        if retry=='wait':
+            return {'status':'awaiting_dispatch_visibility','job_id':job['id'],'remote_commit':row['remote_commit']}
+        if retry=='redispatch':
+            answered=runs[0]['databaseId']
+            guard(config_path)
+            cmd('gh','workflow','enable',WORKFLOW,'--repo',REPO)
+            with store.db:store.db.execute("UPDATE publications SET status='dispatching',run_id=? WHERE job_id=?",(answered,job['id']))
+            try:
+                dispatch_deploy()
+            except DispatchRefused as refused:
+                count=refused_dispatch_count(row.get('error'))
+                if count is None:raise
+                with store.db:store.db.execute("UPDATE publications SET status='prepared',error=? WHERE job_id=?",
+                                               (f'DispatchRefused {count}: '+safe_error(refused),job['id']))
+                return {'status':'dispatch_retry','job_id':job['id'],'remote_commit':row['remote_commit'],'reason':safe_error(refused)}
+            with store.db:store.db.execute("UPDATE publications SET status='dispatched',error=? WHERE job_id=?",(dispatched_marker(0,answered),job['id']))
+            return {'status':'dispatched','job_id':job['id'],'remote_commit':row['remote_commit'],'reason':'Cloudflare deploy step failed; redispatched'}
         run=runs[0]
         with store.db:store.db.execute('UPDATE publications SET run_id=? WHERE job_id=?',(run['databaseId'],job['id']))
         if run['status']!='completed':return {'status':'deploying','job_id':job['id'],'run_id':run['databaseId']}

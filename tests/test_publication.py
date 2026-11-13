@@ -174,6 +174,44 @@ class Publication(unittest.TestCase):
                 self.assertEqual(publish(store,job,self.config['state_dir'],self.config_path)['status'],'awaiting_dispatch_visibility')
             self.assertEqual(sum(a[:3]==('gh','workflow','run') for a in calls),1+pub.DISPATCH_LOST_LIMIT)
 
+    def test_cloudflare_step_failure_is_redispatched_bounded(self):
+        # 13 Nov 2026 real case: article 884a46a6, commit 7515f29a, run 43451905694
+        # failed only in 'Deploy to Cloudflare Pages' (wrangler: 'Failed to publish your
+        # Function. Got error: Unknown internal error occurred.'). Nothing was deployed;
+        # the article was marked failed for good. It must be redispatched, bounded.
+        from news_mvp import publish as pub
+        commit='7515f29a92537603eb87550d2b30f5231c87ea1d'
+        step='Deploy to Cloudflare Pages (bounded retry on Cloudflare-side errors)'
+        draft=FixtureModel().call('writer',self.packet);draft['image']={'sha256':'a'*64,'local_path':'media/'+('a'*64)+'.jpg','url':'https://example.invalid/image.jpg','source_url':'https://example.invalid/story','license_url':'https://example.invalid/rights','license':'isolated test rights','alt':'Test','credit':'Test'}
+        packet=copy.deepcopy(self.packet);packet['image']=draft['image'];packet['fixture']=False
+        job={'id':self.job,'packet':json.dumps(packet),'draft':json.dumps(draft),'review':json.dumps({'approved':True,'draft_sha256':digest(draft),'reasons':['isolated test']})}
+        runs=[{'databaseId':43451905694,'status':'completed','conclusion':'failure','headSha':commit}]
+        with database(self.config['state_dir']) as store:
+            ensure_table(store)
+            store.db.execute('INSERT INTO publications(job_id,packet_sha,draft_sha,image_sha,source_commit,remote_commit,status) VALUES(?,?,?,?,?,?,?)',
+                (self.job,digest(packet),digest(draft),'a'*64,'source',commit,'dispatched'));store.db.commit()
+            calls=[]
+            def listing(_commit):return [dict(r) for r in reversed(runs)]
+            with patch('news_mvp.publish.guard'),patch('news_mvp.publish.cmd',side_effect=lambda *a:calls.append(a) or 'source'),patch('news_mvp.publish.api',return_value={'object':{'sha':commit}}),patch('news_mvp.publish.matching_runs',side_effect=listing),patch('news_mvp.publish.failed_step',return_value=step):
+                self.assertEqual(publish(store,job,self.config['state_dir'],self.config_path)['status'],'dispatched')
+                self.assertEqual(sum(a[:3]==('gh','workflow','run') for a in calls),1)
+                # new run not visible yet: the same failure is never answered twice
+                self.assertEqual(publish(store,job,self.config['state_dir'],self.config_path)['status'],'awaiting_dispatch_visibility')
+                self.assertEqual(sum(a[:3]==('gh','workflow','run') for a in calls),1)
+                runs.append({'databaseId':43451999999,'status':'completed','conclusion':'failure','headSha':commit})
+                self.assertEqual(publish(store,job,self.config['state_dir'],self.config_path)['status'],'dispatched')
+                runs.append({'databaseId':43452999999,'status':'completed','conclusion':'failure','headSha':commit})
+                with self.assertRaises(ValueError):publish(store,job,self.config['state_dir'],self.config_path)
+            self.assertEqual(store.db.execute('SELECT status FROM publications').fetchone()[0],'failed')
+            self.assertEqual(sum(a[:3]==('gh','workflow','run') for a in calls),pub.DEPLOY_STEP_RETRY_LIMIT)
+
+    def test_check_step_failure_stays_final(self):
+        from news_mvp.publish import deploy_step_redispatch
+        runs=[{'databaseId':5,'status':'completed','conclusion':'failure'}]
+        self.assertIsNone(deploy_step_redispatch(runs,None,lambda _id:'Reject superseded main'))
+        self.assertIsNone(deploy_step_redispatch(runs,None,lambda _id:'Verify exact fresh public bundle'))
+        self.assertEqual(deploy_step_redispatch(runs,None,lambda _id:'Deploy to Cloudflare Pages (bounded retry on Cloudflare-side errors)'),'redispatch')
+
     def test_real_deploy_failure_still_final(self):
         from news_mvp.publish import startup_failure_redispatch
         self.assertEqual(startup_failure_redispatch([{'databaseId':1,'conclusion':'failure'}],None),([{'databaseId':1,'conclusion':'failure'}],None,None))

@@ -7,6 +7,11 @@ REAL_10500 = (
     "\u2718 [ERROR] A request to the Cloudflare API (/accounts/***/pages/projects/uutistenlukija-fi) failed.\n\n"
     "  Internal authentication error: internal server error [code: 10500]\n")
 
+# Real wrangler output from the failed 13 Nov 2026 production deploy (run 43451905694).
+REAL_FUNCTION_INTERNAL = (
+    "\u2718 [ERROR] Deployment failed!\n\n"
+    "  \tFailed to publish your Function. Got error: Unknown internal error occurred.\n")
+
 
 class PagesDeployRetry(unittest.TestCase):
     def run_with(self, outputs):
@@ -26,6 +31,9 @@ class PagesDeployRetry(unittest.TestCase):
 
     def test_real_cloudflare_10500_is_retried_then_succeeds(self):
         self.assertEqual(self.run_with([(REAL_10500, 1), ('Deployment complete', 0)]), (0, 2))
+
+    def test_real_function_unknown_internal_error_is_retried(self):
+        self.assertEqual(self.run_with([(REAL_FUNCTION_INTERNAL, 1), ('Deployment complete', 0)]), (0, 2))
 
     def test_retry_is_bounded(self):
         self.assertEqual(self.run_with([(REAL_10500, 1)] * 6), (1, 4))
