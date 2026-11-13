@@ -576,10 +576,14 @@ def _town_for_item(section_title, strong):
 
 def _event_dates(value):
     """Return display/start/end for real calendar dates found in editorial text."""
-    abbreviated = re.search(r'(?<!\d)(\d{1,2})\.\s*[–-]\s*(\d{1,2})\.(\d{1,2})\.(20\d{2})', value)
     dates = []
-    if abbreviated:
-        dates.append((int(abbreviated.group(1)), int(abbreviated.group(3)), int(abbreviated.group(4))))
+    # Abbreviated ranges such as '28.–29.11.' or '11.–13.12.2026': the first
+    # day shares the month (and year) of the second date.
+    for abbreviated in re.finditer(r'(?<![\d.])(\d{1,2})\.\s*[–-]\s*(\d{1,2})\.(\d{1,2})\.(20\d{2})?', value):
+        day, month = int(abbreviated.group(1)), int(abbreviated.group(3))
+        year = int(abbreviated.group(4) or 2026)
+        if 1 <= day <= 31 and 1 <= month <= 12:
+            dates.append((day, month, year))
     for day, month, year in re.findall(r'(?<![\d.])(\d{1,2})\.(\d{1,2})\.(20\d{2})', value):
         day, month, year = int(day), int(month), int(year)
         if 1 <= day <= 31 and 1 <= month <= 12:
@@ -617,7 +621,7 @@ def guide_events(g):
             plain = _plain(raw)
             date_label, start_date, end_date = _event_dates(plain)
             tail = _plain(raw[strong_match.end():]).lstrip(' ,:–-')
-            place = re.split(r'(?i)\b(?:ma|ti|ke|to|pe|la|su)\s+\d|(?<!\d)\d{1,2}\.\d{1,2}\.|[;:(]', tail, maxsplit=1)[0].strip(' ,.–-')
+            place = re.split(r'(?i)\b(?:ma|ti|ke|to|pe|la|su)(?:\s+\d|\s*[–-]\s*(?:ma|ti|ke|to|pe|la|su)\b)|(?<!\d)\d{1,2}\.\s*[–-]|(?<!\d)\d{1,2}\.\d{1,2}\.|[;:(]', tail, maxsplit=1)[0].strip(' ,.–-')
             if not place or place.lower() in ('ma', 'ti', 'ke', 'to', 'pe', 'la', 'su'):
                 after_town = re.sub(r'^' + re.escape(town) + r'\s*[,;:–-]\s*', '', strong, flags=re.I)
                 place = re.split(r'(?i)\b(?:ma|ti|ke|to|pe|la|su)\s+\d|\s+[–-]\s+', after_town, maxsplit=1)[0].strip(' ,.–-')
