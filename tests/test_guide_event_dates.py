@@ -23,7 +23,9 @@ class EventDatesTest(unittest.TestCase):
         now = datetime.datetime(2026, 11, 13, 9, tzinfo=datetime.timezone.utc)
         g = next(g for g in ug.guides(now) if g['path'] == '/oppaat/joulumarkkinat-2026/')
         for event in ug.guide_events(g):
-            self.assertIsNone(re.search(r'\s\d{1,2}$', event['place']), event['name'])
+            # A truncated place ends in a weekday + day number ('Senaatintori pe 27'); a street
+            # address ('Isokatu 33', 'Välikatu 21') legitimately ends in a number.
+            self.assertIsNone(re.search(r'(?i)\b(?:ma|ti|ke|to|pe|la|su)\s+\d{1,2}$', event['place']), event['name'])
             self.assertFalse(event['place'].endswith((' la', ' pe', ' ma', ' su')), event['name'])
         turku = [e for e in ug.guide_events(g) if e['town'] == 'Turku' and 'Suurtori' in e['name']]
         self.assertEqual(turku[0]['startDate'], '2026-11-28')
