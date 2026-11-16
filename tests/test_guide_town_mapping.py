@@ -37,6 +37,17 @@ class GuideTownMappingTest(unittest.TestCase):
         for town in ('Lapua', 'Hanko', 'Ylivieska', 'Iisalmi'):
             self.assertIn(town, towns)
 
+    def test_kauneimmat_multi_town_sections_get_town_sections(self):
+        # 16 Nov 2026: towns added in batches after section 8 (Sastamala, Tuusula,
+        # Liperi...) were rendered only as plain lists with no anchor or table row.
+        now = datetime(2026, 11, 16, 8, tzinfo=ZoneInfo('Europe/Helsinki'))
+        g = next(g for g in ug.guides(now) if g['path'] == '/oppaat/kauneimmat-joululaulut-2026/')
+        towns = {e['town'] for e in ug.guide_events(g)}
+        for town in ('Sastamala', 'Tuusula', 'Savonlinna', 'Liperi', 'Kontiolahti',
+                     'Lappeenranta', 'Kotka', 'Masku', 'Enonkoski'):
+            self.assertIn(town, towns)
+        self.assertGreaterEqual(len(towns), 100)
+
 
 if __name__ == '__main__':
     unittest.main()

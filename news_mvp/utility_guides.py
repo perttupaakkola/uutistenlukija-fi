@@ -58,7 +58,7 @@ EVENT_GUIDES = {
     GUIDE_PATHS[8]: ('Isänpäivä', tuple(range(2, 24))),
     GUIDE_PATHS[22]: ('Itsenäisyyspäivän tapahtumat', (4, 5)),
     GUIDE_PATHS[24]: ('Halloween-tapahtumat', tuple(range(1, 21))),
-    GUIDE_PATHS[27]: ('Kauneimmat joululaulut', tuple(range(1, 9))),
+    GUIDE_PATHS[27]: ('Kauneimmat joululaulut', tuple(range(1, 21))),
     GUIDE_PATHS[29]: ('Lucian päivän tapahtumat', (2, 3)),
 }
 EVENT_GUIDE_PATHS = tuple(EVENT_GUIDES)
@@ -554,6 +554,7 @@ _TOWN_LOCATIVES = {
     'Ylitornio': 'Ylitorniolla', 'Asikkala': 'Asikkalassa', 'Suonenjoki': 'Suonenjoella', 'Mänttä-Vilppula': 'Mänttä-Vilppulassa', 'Kaustinen': 'Kaustisella', 'Eura': 'Eurassa', 'Nurmes': 'Nurmeksessa', 'Puumala': 'Puumalassa',
     'Tammela': 'Tammelassa', 'Joroinen': 'Joroisissa', 'Kittilä': 'Kittilässä', 'Ähtäri': 'Ähtärissä', 'Viitasaari': 'Viitasaarella', 'Pyhäjärvi': 'Pyhäjärvellä', 'Oulainen': 'Oulaisissa', 'Kangasniemi': 'Kangasniemellä', 'Parkano': 'Parkanossa', 'Inkoo': 'Inkoossa',
     'Ruovesi': 'Ruovedellä', 'Posio': 'Posiolla', 'Hattula': 'Hattulassa', 'Kuortane': 'Kuortaneella', 'Pyhäjoki': 'Pyhäjoella', 'Huittinen': 'Huittisissa', 'Leppävirta': 'Leppävirralla', 'Salla': 'Sallassa', 'Luumäki': 'Luumäellä', 'Tohmajärvi': 'Tohmajärvellä', 'Ypäjä': 'Ypäjällä', 'Polvijärvi': 'Polvijärvellä',
+    'Haukipudas': 'Haukiputaalla', 'Askola': 'Askolassa', 'Loppi': 'Lopella', 'Padasjoki': 'Padasjoella', 'Laihia': 'Laihialla', 'Lumijoki': 'Lumijoella', 'Haapavesi': 'Haapavedellä', 'Ranua': 'Ranualla', 'Rautalampi': 'Rautalammella', 'Sonkajärvi': 'Sonkajärvellä', 'Petäjävesi': 'Petäjävedellä', 'Kinnula': 'Kinnulassa', 'Masku': 'Maskussa', 'Kauniainen': 'Kauniaisissa', 'Säkylä': 'Säkylässä', 'Lapinlahti': 'Lapinlahdella', 'Pukkila': 'Pukkilassa', 'Pälkäne': 'Pälkäneellä', 'Virolahti': 'Virolahdella', 'Pihtipudas': 'Pihtiputaalla', 'Joutsa': 'Joutsassa', 'Kaavi': 'Kaavilla', 'Siikajoki': 'Siikajoella', 'Närpiö': 'Närpiössä', 'Lapinjärvi': 'Lapinjärvellä', 'Miehikkälä': 'Miehikkälässä', 'Enonkoski': 'Enonkoskella', 'Evijärvi': 'Evijärvellä', 'Liperi': 'Liperissä', 'Kontiolahti': 'Kontiolahdella',
 }
 
 
@@ -568,7 +569,7 @@ def _anchor(value):
 
 def _town_for_item(section_title, strong):
     for town in sorted(_TOWN_LOCATIVES, key=len, reverse=True):
-        if re.match(re.escape(town) + r'\s*[,;:–-]', strong, re.I):
+        if re.match(re.escape(town) + r'\s*[,;:(–-]', strong, re.I):
             return town
     in_item = [town for town in _TOWN_LOCATIVES
                if re.search(r'\b' + re.escape(town) + r'\b', strong, re.I)]
