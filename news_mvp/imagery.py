@@ -819,6 +819,10 @@ def review_pixels(raw, draft, generated=False, *, source_context=None, concept=N
            'rendering is allowed. Require exact scene fit, no unauthorized person likenesses, '
            'no violence/victims, no readable invented text/logos or fabricated factual details '
            'about a real event or building. '
+           'Generated pictures are forbidden to contain any text, so judge each must_show '
+           'element by its shape and form: blank or blurred paper, documents, screens, '
+           'labels or signs count as present when the object itself is clearly visible; never '
+           'mark an element absent only because it carries no readable printing or text. '
            if generated else 'This is licensed real imagery; judge relevance from visible content. ')
         + 'Also return alt_fi: one complete concise Finnish sentence of 80-140 characters '
            '(hard maximum 140; never add a second sentence) and only the main visible subject, '
@@ -1128,13 +1132,23 @@ def concept_refused_as_scene(pixel_review):
              pixel_review.get('fit_score', -1) < MIN_REAL_FIT))
 
 
-def _record_concept_refusal(concept, pixel_review):
+def missing_must_show(pixel_review):
+    """Indices of must_show elements the reviewer could not see (empty when unknown)."""
+    coverage = (pixel_review or {}).get('must_show_visible')
+    if not isinstance(coverage, list):
+        return frozenset()
+    return frozenset(index for index, item in enumerate(coverage) if item is False)
+
+
+def _record_concept_refusal(concept, pixel_review, missing=()):
     refusals = CONCEPT_REFUSALS.get()
     if refusals is None or len(refusals) >= MAX_STORED_CONCEPT_REFUSALS:
         return
+    must_show = [str(item)[:120] for item in concept.get('must_show', ())]
     refusals.append({
         'depictable_scene': str(concept.get('depictable_scene', ''))[:400],
-        'must_show': [str(item)[:120] for item in concept.get('must_show', ())][:3],
+        'must_show': must_show[:3],
+        'missing': [must_show[i] for i in sorted(missing) if i < len(must_show)][:3],
         'fit_score': pixel_review.get('fit_score'),
         'reason': str(pixel_review.get('reason', ''))[:500],
     })
@@ -1173,6 +1187,16 @@ def concept_refusal_feedback(refusals, prior_review=None):
     if isinstance(prior_review, dict) and prior_review.get('image_retryable') is True:
         reasons.extend(str(r) for r in (prior_review.get('reasons') or [])[-2:])
     for item in refusals[-4:]:
+        if item.get('missing'):
+            reasons.append('Generated scene refused because required element(s) %s never became '
+                           'visible in repeated generated pictures (fit %s/10): "%s". Reviewer: %s '
+                           'Generated pictures carry no text, so never require printing, writing '
+                           'or labels; choose a different people-free scene whose required '
+                           'elements are recognisable by shape alone; never this scene again.'
+                           % (json.dumps(item['missing'], ensure_ascii=False),
+                              item.get('fit_score'), item.get('depictable_scene', ''),
+                              item.get('reason', '')))
+            continue
         reasons.append('Generated scene refused by the pixel reviewer although every required '
                        'element was visible (fit %s/10): "%s". Reviewer: %s Choose a different, '
                        'more article-specific people-free scene; never this scene again.'
@@ -1743,6 +1767,7 @@ def _build_image(draft, state_dir, category='', model=DEFAULT_MODEL, attempts=3,
                 if accepted:
                     return accepted
 
+    previous_missing = None
     for attempt in range(max(1, attempts)):
         used_model = None
         try:
@@ -1788,6 +1813,15 @@ def _build_image(draft, state_dir, category='', model=DEFAULT_MODEL, attempts=3,
                     # conference table for Orpo's Ukraine story refused 3x, fit 5).
                     _record_concept_refusal(decision, pixel_review)
                     break
+                missing = missing_must_show(pixel_review)
+                if exact_concept and missing and previous_missing and missing & previous_missing:
+                    # The same required element was absent from two independent pictures: the
+                    # element cannot be drawn under the generation rules, so a third identical
+                    # prompt only repeats the refusal (16 Nov 2026: "stack of printed papers"
+                    # was blank in every picture because generated images carry no text, 6x).
+                    _record_concept_refusal(decision, pixel_review, missing & previous_missing)
+                    break
+                previous_missing = missing
                 continue
             description = pixel_review['description']
             audit = pixel_review.get('text_audit')
