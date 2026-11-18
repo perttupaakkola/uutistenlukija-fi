@@ -31,5 +31,34 @@ class EventDatesTest(unittest.TestCase):
         self.assertEqual(turku[0]['startDate'], '2026-11-28')
 
 
+    def test_source_citation_date_is_not_event_date(self):
+        # Real Tampere row (18.11.): the Aamulehti article date made the table say 16.11.-21.11.
+        text = ('Tampere: joulun avaus la 21.11.2026 klo 16–18, maksuton; jouluparaati lähtee klo 16. '
+                '(Aamulehti 16.11.2026) (Tampereen kaupunki)')
+        self.assertEqual(ug._event_dates(text), ('21.11.2026', '2026-11-21', None))
+        ratina = 'Tampere, Ratina: Ratinan joulunavaus la 21.11.2026 klo 11–16. (Tamperelainen 9.11.2026) (Kauppakeskus Ratina)'
+        self.assertEqual(ug._event_dates(ratina)[1], '2026-11-21')
+
+    def test_clock_time_is_not_a_date(self):
+        # Real Kuortane row: 'ilotulitus klo 20.05.' became 20.5.
+        text = 'Kuortane: joulunavaus pe 27.11.2026 klo 16–20; ohjelmallinen joulunavaus klo 18 ja ilotulitus klo 20.05. (Kuortaneen kunta)'
+        self.assertEqual(ug._event_dates(text), ('27.11.2026', '2026-11-27', None))
+
+    def test_epiphany_end_rolls_to_next_year(self):
+        # Real Hanko row: the table said 6.1.2026–21.11.2026.
+        text = 'Hanko: Hangon joulu alkaa joulukadun avajaisilla la 21.11.2026 klo 16 ja jatkuu loppiaiseen 6.1. asti. (Visit Hanko)'
+        self.assertEqual(ug._event_dates(text), ('21.11.2026–6.1.2027', '2026-11-21', '2027-01-06'))
+
+    def test_live_lists_have_no_range_ending_before_it_starts(self):
+        import datetime
+        now = datetime.datetime(2026, 11, 18, 20, tzinfo=datetime.timezone.utc)
+        for g in ug.guides(now):
+            for event in ug.guide_events(g):
+                if 'endDate' in event:
+                    self.assertLess(event['startDate'], event['endDate'], event['name'])
+                if 'startDate' in event:
+                    self.assertGreaterEqual(event['startDate'], '2026-09-01', event['name'])
+
+
 if __name__ == '__main__':
     unittest.main()
