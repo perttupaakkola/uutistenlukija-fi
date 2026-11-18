@@ -162,3 +162,42 @@ class GithubResubmit400(TickBudget):
             self.assertEqual(len(calls), 1)
         self.assertFalse(pub.is_github_resubmit_400(400, '{"message": "Invalid tree"}'))
         self.assertFalse(pub.is_github_resubmit_400(422, body.decode()))
+
+
+class GithubRemoteDisconnected(TickBudget):
+    """18 Nov: real GitHub drop on git/blobs for job 15bb705e (no HTTP response)."""
+
+    REAL = 'RemoteDisconnected: Remote end closed connection without response'
+
+    def test_remote_disconnect_refunds_attempt(self):
+        with database(self.config['state_dir']) as store:
+            self._row(store)
+            with patch('news_mvp.publish.guard'), patch('news_mvp.publish.cmd', return_value='source'), \
+                 patch('news_mvp.publish.public_bundle', return_value=(None, {})), \
+                 patch('news_mvp.publish.make_commit', side_effect=pub.UncommittedPreparationError(self.REAL)):
+                result = pub.publish(store, self.job, self.config['state_dir'], self.config_path)
+            self.assertEqual(result['status'], 'preparation_continues')
+            row = store.db.execute('SELECT status,attempts,error FROM publications').fetchone()
+            self.assertEqual((row[0], row[1]), ('preparing', 0))
+            self.assertTrue(row[2].startswith('Transient 1: '))
+
+    def test_api_retries_remote_disconnect_for_blobs_only(self):
+        import http.client, io
+        calls = []
+        class Resp(io.BytesIO):
+            def __enter__(self): return self
+            def __exit__(self, *a): return False
+        def urlopen(request, timeout):
+            calls.append(request.full_url)
+            if len(calls) == 1:
+                raise http.client.RemoteDisconnected('Remote end closed connection without response')
+            return Resp(b'{"sha": "ok"}')
+        cred = type('R', (), {'stdout': 'password=x\n'})()
+        with patch('news_mvp.publish.subprocess.run', return_value=cred), \
+             patch('news_mvp.publish.urllib.request.urlopen', side_effect=urlopen), patch('news_mvp.publish.time.sleep'):
+            self.assertEqual(pub.api('git/blobs', {'content': 'eA==', 'encoding': 'base64'})['sha'], 'ok')
+            self.assertEqual(len(calls), 2)
+            calls.clear()
+            with self.assertRaises(http.client.RemoteDisconnected):
+                pub.api('git/commits', {'message': 'm'})
+            self.assertEqual(len(calls), 1)

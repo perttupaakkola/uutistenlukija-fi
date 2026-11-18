@@ -7,6 +7,7 @@ import re
 import subprocess
 import time
 import urllib.error
+import http.client
 import urllib.request
 from html.parser import HTMLParser
 from pathlib import Path
@@ -197,6 +198,14 @@ def api(path, data=None, method=None):
             retryable = error.code in retry_codes or (content_addressed and is_github_resubmit_400(error.code,detail))
             if not retryable or attempt+1 == attempts:
                 raise RuntimeError(f'GitHub {request.method} {path}: HTTP {error.code} {detail}') from None
+            time.sleep(2 ** attempt)
+        except (http.client.RemoteDisconnected, ConnectionError, TimeoutError, urllib.error.URLError) as error:
+            # 18 Nov: GitHub closed the connection on a git/blobs POST without
+            # any response (http.client.RemoteDisconnected), failing the whole
+            # tick. For content-addressed blobs/trees resending identical bytes
+            # is safe, so network-level drops get the same bounded retry.
+            if not content_addressed or attempt+1 == attempts:
+                raise
             time.sleep(2 ** attempt)
 
 
@@ -1491,7 +1500,7 @@ def publish(store,job,state,config_path):
 
 
 TRANSIENT_OUTAGE_TICKS = 48  # ~12 h of 15-minute ticks
-_OUTAGE = re.compile(r'HTTP 5\d\d|HTTP 400 .*malformed request.*resubmit|timed out|URLError|Connection (reset|refused)|Temporary failure', re.I)
+_OUTAGE = re.compile(r'HTTP 5\d\d|HTTP 400 .*malformed request.*resubmit|timed out|URLError|RemoteDisconnected|Remote end closed connection|Connection (reset|refused|aborted)|Temporary failure', re.I)
 _TRANSIENT_PREFIX = re.compile(r'^Transient (\d+): ')
 
 
