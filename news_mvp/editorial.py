@@ -278,6 +278,19 @@ def model_login_unavailable(diagnostics):
     return bool(_MODEL_LOGIN_PATTERNS.search(diagnostics or ""))
 
 
+# 18 Nov 2026: the local Hermes gateway dropped the chat client's socket ("keepalive ping
+# timeout", 1011) one second before the finished writer reply was sent; the CLI exited 1 with
+# "Gateway disconnected; turn outcome is unknown" and story 2265fa85 lost an attempt for a
+# transport fault that says nothing about the story. Match only Hermes's own transport wording.
+_MODEL_TRANSPORT_PATTERNS = re.compile(
+    r"Gateway disconnected|Gateway connection failed|Gateway connection/read failed|"
+    r"Gateway inaccessible|keepalive ping timeout", re.I)
+
+
+def model_transport_lost(diagnostics):
+    return bool(_MODEL_TRANSPORT_PATTERNS.search(diagnostics or ""))
+
+
 class HermesModel:
     """Fresh news-mvp profile only. Live profile/OAuth qualification is phase 3."""
     name = "hermes"
@@ -321,6 +334,8 @@ class HermesModel:
             # Runtime diagnostics can include sensitive data; do not persist them.
             if model_login_unavailable(result.stdout + "\n" + result.stderr):
                 raise ModelUnavailable("Editorial model login unavailable; story kept for retry")
+            if model_transport_lost(result.stdout + "\n" + result.stderr):
+                raise ModelUnavailable("Editorial model connection lost; story kept for retry")
             raise RuntimeError("Hermes call failed; inspect the private runtime diagnostics")
         if len(result.stdout.encode()) > 64000:
             raise ValueError("Model output exceeds 64 KB")

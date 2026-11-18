@@ -39,6 +39,32 @@ class ModelLoginUnavailableTest(unittest.TestCase):
                 row = store.get("j")
                 self.assertEqual((row["status"], row["attempts"], row["next_attempt"]), ("ready", 2, 1900.0))
 
+    def test_gateway_disconnect_is_not_a_story_failure(self):
+        # Real stderr shape of the 18 Nov 2026 failure (gateway_client.DISCONNECTED).
+        stderr = ("Gateway disconnected; turn outcome is unknown. Resume the printed session ID to "
+                  "check whether it completed or was interrupted; do not resend the work.")
+        self.assertTrue(editorial.model_transport_lost(stderr))
+        self.assertFalse(editorial.model_transport_lost("ValueError: Invalid title"))
+        done = subprocess.CompletedProcess([], 1, stdout="", stderr=stderr)
+        with tempfile.TemporaryDirectory() as home, mock.patch.object(editorial.Path, "home", return_value=Path(home)), \
+                mock.patch.object(editorial.subprocess, "run", return_value=done):
+            profile = Path(home) / ".hermes/profiles/news-mvp"
+            profile.mkdir(parents=True)
+            (profile / "config.yaml").write_text("x: 1\n")
+            with self.assertRaisesRegex(ModelUnavailable, "connection lost"):
+                HermesModel("hermes").call("writer", {"fixture": False, "kind": "news"})
+
+    def test_unknown_failure_still_counts(self):
+        done = subprocess.CompletedProcess([], 1, stdout="", stderr="something else broke")
+        with tempfile.TemporaryDirectory() as home, mock.patch.object(editorial.Path, "home", return_value=Path(home)), \
+                mock.patch.object(editorial.subprocess, "run", return_value=done):
+            profile = Path(home) / ".hermes/profiles/news-mvp"
+            profile.mkdir(parents=True)
+            (profile / "config.yaml").write_text("x: 1\n")
+            with self.assertRaises(RuntimeError) as ctx:
+                HermesModel("hermes").call("writer", {"fixture": False, "kind": "news"})
+            self.assertNotIsInstance(ctx.exception, ModelUnavailable)
+
 
 if __name__ == "__main__":
     unittest.main()
