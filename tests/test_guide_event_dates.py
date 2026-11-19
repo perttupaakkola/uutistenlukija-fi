@@ -60,5 +60,27 @@ class EventDatesTest(unittest.TestCase):
                     self.assertGreaterEqual(event['startDate'], '2026-09-01', event['name'])
 
 
+    def test_single_day_guides_use_heading_date_not_deadlines(self):
+        # Real rows 19.11.: Joensuu showed 22.11.-6.12. (sign-up deadline), Turku 21.11. and
+        # Espoo 16.11. (ticket-distribution dates) on the Independence Day list; Oulu's
+        # Lucia crowning showed 2.12.-11.12.
+        import datetime
+        now = datetime.datetime(2026, 11, 19, 6, tzinfo=datetime.timezone.utc)
+        gs = {g['path']: g for g in ug.guides(now)}
+        ind = ug.guide_events(gs['/oppaat/itsenaisyyspaiva-2026/'])
+        by = lambda town, word: next(e for e in ind if e['town'] == town and word in e['name'])
+        self.assertEqual(by('Joensuu', 'su 6.12')['date_label'], '6.12.2026')
+        self.assertEqual(by('Turku', 'juhlakonsertti')['startDate'], '2026-12-06')
+        self.assertEqual(by('Espoo', 'juhlakonsertti')['startDate'], '2026-12-06')
+        self.assertEqual(by('Tampere', 'aaton')['startDate'], '2026-12-05')
+        self.assertEqual(by('Helsinki', 'lasten')['startDate'], '2026-12-02')
+        for e in ind:
+            self.assertNotIn('Aika järjestäjän sivulla', e['date_label'], e['name'])
+            self.assertNotIn('endDate', e, e['name'])
+        lucia = ug.guide_events(gs['/oppaat/lucian-paiva-2026/'])
+        oulu = next(e for e in lucia if e['town'] == 'Oulu')
+        self.assertEqual(oulu['date_label'], '11.12.2026')
+
+
 if __name__ == '__main__':
     unittest.main()
