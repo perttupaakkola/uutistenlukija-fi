@@ -44,7 +44,7 @@ class GuideTownMappingTest(unittest.TestCase):
         g = next(g for g in ug.guides(now) if g['path'] == '/oppaat/kauneimmat-joululaulut-2026/')
         towns = {e['town'] for e in ug.guide_events(g)}
         for town in ('Sastamala', 'Tuusula', 'Savonlinna', 'Liperi', 'Kontiolahti',
-                     'Lappeenranta', 'Kotka', 'Masku', 'Enonkoski'):
+                     'Lappeenranta', 'Kotka', 'Masku', 'Enonkoski', 'Veteli', 'Rautavaara'):
             self.assertIn(town, towns)
         self.assertGreaterEqual(len(towns), 100)
 
