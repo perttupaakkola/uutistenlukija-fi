@@ -55,6 +55,23 @@ class StaleAtPublishTests(unittest.TestCase):
         self.assertIn("aged out", row["error"])
         self.assertEqual(pubs, 0)
 
+    def test_waiting_story_that_aged_out_is_retired_at_claim_not_retried(self):
+        """22 Nov 2026: ePressi story admitted at 46.9 h waited for an image, passed 48 h and
+        the tick recorded 'Source is stale or future-dated' as a retryable failure (status
+        ready), so later ticks kept claiming a story that can never become fresh."""
+        from news_mvp.controller import tick
+        packet = _shift_sources(json.loads(json.dumps(self.case.packet)), 30)
+        packet["story_key"] = "url:https://www.epressi.com/tiedotteet/aged-while-waiting"
+        cfg = load_config(self.case.cfg)
+        job_id = ingest(cfg, packet, self.case.now)["id"]
+        later = self.case.now + timedelta(hours=19)
+        result = tick(self.case.cfg, now=later, target_job_id=job_id)
+        with database(self.case.state) as store:
+            row = store.get(job_id)
+        self.assertEqual(result, {"status": "stale_retired", "id": job_id})
+        self.assertEqual(row["status"], "failed")
+        self.assertIn("aged out", row["error"])
+
 
 if __name__ == "__main__":
     unittest.main()

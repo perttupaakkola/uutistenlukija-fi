@@ -234,6 +234,19 @@ class Store:
                             ("failed" if row["attempts"] >= max_attempts else "ready",
                              now + retry_seconds * row["attempts"], error, job_id))
 
+    def has_publication(self, job_id):
+        if not self.db.execute("SELECT 1 FROM sqlite_master WHERE type='table' AND name='publications'").fetchone():
+            return False
+        return self.db.execute("SELECT 1 FROM publications WHERE job_id=?", (job_id,)).fetchone() is not None
+
+    def retire_stale(self, job_id, error):
+        """An unpublished story whose source aged out is terminal, not a retry."""
+        if self.has_publication(job_id):
+            raise ValueError("Refusing to retire a story that has a publication row")
+        with self.db:
+            self.db.execute("UPDATE jobs SET status='failed', error=? WHERE id=?",
+                            ("Source aged out before publication: " + error, job_id))
+
     def defer_model_unavailable(self, job_id, now, retry_seconds, error):
         """Model/login outage: keep the story ready and refund the claimed attempt.
 

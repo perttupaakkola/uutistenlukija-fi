@@ -379,7 +379,16 @@ def tick(config_path, model=None, now=None, _already_locked=False, target_job_id
                 model = FixtureModel() if config["backend"] == "fixture" else hermes_model(config)
             try:
                 packet = json.loads(job["packet"])
-                validate_packet(packet, now, config["max_source_age_hours"])
+                try:
+                    validate_packet(packet, now, config["max_source_age_hours"])
+                except ValueError as error:
+                    # 22 Nov 2026: a story admitted at ~47 h waited for an image, aged past
+                    # the limit and was re-claimed as an ordinary retryable failure. A source
+                    # that aged out can never become fresh again: retire it, never retry.
+                    if "stale" not in str(error) or store.has_publication(job["id"]):
+                        raise
+                    store.retire_stale(job["id"], safe_error(error))
+                    return {"status": "stale_retired", "id": job["id"]}
                 draft = json.loads(job["draft"]) if job["draft"] else model.call("writer", packet)
                 if not isinstance(draft, dict):
                     raise ValueError("Draft must be an object")
