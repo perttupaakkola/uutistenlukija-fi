@@ -130,6 +130,13 @@ def startup_failure_redispatch(runs, previous_error, status=None):
 
 
 DEPLOY_STEP_RETRY_LIMIT = 2
+# 22 Nov 2026 real case: article 81c3fc53, commit adf57a50, run 45071017866. wrangler printed
+# 'Deployment complete!' and 11 ms later GitHub cancelled the job ('The operation was
+# canceled.', nothing on our side cancels runs), so the bind step never ran and the run
+# concluded 'cancelled'. Only 'failure' was redispatched, so a live article was marked
+# failed for good. A cancel inside the Cloudflare step is the same kind of outcome as a
+# failure there: redeploying the same commit is idempotent, bounded by the same limit.
+DEPLOY_STEP_RETRY_CONCLUSIONS = ('failure','cancelled')
 CLOUDFLARE_DEPLOY_STEP = 'Deploy to Cloudflare Pages'
 
 
@@ -138,7 +145,7 @@ def failed_step(run_id):
     jobs=json.loads(cmd('gh','run','view',str(run_id),'--repo',REPO,'--json','jobs')).get('jobs') or []
     for job in jobs:
         for step in job.get('steps') or []:
-            if step.get('conclusion')=='failure':return step.get('name') or ''
+            if step.get('conclusion') in DEPLOY_STEP_RETRY_CONCLUSIONS:return step.get('name') or ''
     return ''
 
 
@@ -157,10 +164,10 @@ def deploy_step_redispatch(runs, previous_error, step_of):
     """
     if not runs:return None
     newest=runs[0]
-    if newest.get('status')!='completed' or newest.get('conclusion')!='failure':return None
+    if newest.get('status')!='completed' or newest.get('conclusion') not in DEPLOY_STEP_RETRY_CONCLUSIONS:return None
     marker=_DISPATCHED.match(previous_error or '')
     if marker and marker.group(3)==str(newest['databaseId']):return 'wait'
-    if sum(1 for r in runs if r.get('conclusion')=='failure')>DEPLOY_STEP_RETRY_LIMIT:return None
+    if sum(1 for r in runs if r.get('conclusion') in DEPLOY_STEP_RETRY_CONCLUSIONS)>DEPLOY_STEP_RETRY_LIMIT:return None
     if not (step_of(newest['databaseId']) or '').startswith(CLOUDFLARE_DEPLOY_STEP):return None
     return 'redispatch'
 

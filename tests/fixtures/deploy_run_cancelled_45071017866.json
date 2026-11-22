@@ -1,0 +1,53 @@
+{
+ "databaseId": 45071017866,
+ "status": "completed",
+ "conclusion": "cancelled",
+ "headSha": "adf57a50f526bf0d81e93648d6f8bd2421215586",
+ "annotation": "The operation was canceled.",
+ "log_tail": [
+  "Deployment complete! Take a peek over at https://3d0f2c35.uutistenlukija-fi.pages.dev",
+  "##[error]The operation was canceled."
+ ],
+ "jobs": [
+  {
+   "steps": [
+    {
+     "name": "Set up job",
+     "conclusion": "success"
+    },
+    {
+     "name": "Run actions/checkout@v5",
+     "conclusion": "success"
+    },
+    {
+     "name": "Verify exact fresh public bundle",
+     "conclusion": "success"
+    },
+    {
+     "name": "Reject superseded main",
+     "conclusion": "success"
+    },
+    {
+     "name": "Deploy to Cloudflare Pages (bounded retry on Cloudflare-side errors)",
+     "conclusion": "cancelled"
+    },
+    {
+     "name": "Bind successful production deployment to this packet and commit",
+     "conclusion": "skipped"
+    },
+    {
+     "name": "Run actions/upload-artifact@v4",
+     "conclusion": "skipped"
+    },
+    {
+     "name": "Post Run actions/checkout@v5",
+     "conclusion": "success"
+    },
+    {
+     "name": "Complete job",
+     "conclusion": "success"
+    }
+   ]
+  }
+ ]
+}

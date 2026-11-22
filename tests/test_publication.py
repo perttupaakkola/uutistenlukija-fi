@@ -212,6 +212,28 @@ class Publication(unittest.TestCase):
         self.assertIsNone(deploy_step_redispatch(runs,None,lambda _id:'Verify exact fresh public bundle'))
         self.assertEqual(deploy_step_redispatch(runs,None,lambda _id:'Deploy to Cloudflare Pages (bounded retry on Cloudflare-side errors)'),'redispatch')
 
+    def test_cancelled_cloudflare_step_is_redispatched_bounded(self):
+        # Real case 22 Nov 2026: run 45071017866 (article 81c3fc53) was cancelled by GitHub
+        # inside the Cloudflare step right after wrangler finished; it was marked failed for good.
+        import json as _json
+        from news_mvp import publish as pub
+        from news_mvp.publish import deploy_step_redispatch
+        fx=_json.loads((ROOT/'tests/fixtures/deploy_run_cancelled_45071017866.json').read_text())
+        steps={s['name']:s['conclusion'] for s in fx['jobs'][0]['steps']}
+        jobs_json=_json.dumps({'jobs':[{'steps':[{'name':n,'conclusion':c} for n,c in steps.items()]}]})
+        with patch('news_mvp.publish.cmd',return_value=jobs_json):
+            self.assertTrue(pub.failed_step(fx['databaseId']).startswith(pub.CLOUDFLARE_DEPLOY_STEP))
+        run={'databaseId':fx['databaseId'],'status':fx['status'],'conclusion':fx['conclusion']}
+        step=lambda _id:'Deploy to Cloudflare Pages (bounded retry on Cloudflare-side errors)'
+        self.assertEqual(deploy_step_redispatch([run],None,step),'redispatch')
+        # cancelled in a check step stays final
+        self.assertIsNone(deploy_step_redispatch([run],None,lambda _id:'Reject superseded main'))
+        # bounded: cancels and failures share DEPLOY_STEP_RETRY_LIMIT
+        many=[dict(run,databaseId=run['databaseId']+i,conclusion=('cancelled' if i%2 else 'failure')) for i in range(pub.DEPLOY_STEP_RETRY_LIMIT+1)]
+        self.assertIsNone(deploy_step_redispatch(many,None,step))
+        # the same cancelled run is answered only once
+        self.assertEqual(deploy_step_redispatch([run],f"Dispatched 2026-11-22T21:40:00+00:00 lost=0 startup={run['databaseId']}",step),'wait')
+
     def test_real_deploy_failure_still_final(self):
         from news_mvp.publish import startup_failure_redispatch
         self.assertEqual(startup_failure_redispatch([{'databaseId':1,'conclusion':'failure'}],None),([{'databaseId':1,'conclusion':'failure'}],None,None))
