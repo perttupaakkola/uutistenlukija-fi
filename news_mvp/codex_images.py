@@ -18,7 +18,12 @@ import time
 from datetime import datetime, timezone
 
 MODEL = 'gpt-6-astra'
+# 23 Nov 2026: gpt-6-astra answered every request with HTTP 429 for hours while the account
+# had quota and gpt-6.1-terra generated fine. A model-capacity 429 falls through to the next
+# orchestrator model inside the same attempt (code guard: codex-model-fallback).
+FALLBACK_MODELS = ('gpt-6.1-terra',)
 EFFORT = 'xhigh'
+MODEL_REFUSAL = re.compile(r'429|too many requests|usage limit|rate limit', re.I)
 IMAGE_MODEL = 'codex-oauth:gpt-image-2'
 
 
@@ -172,7 +177,8 @@ def _generate_codex(subject, prompt, state_dir, timeout=240):
                    'reasoning_effort': EFFORT, 'state': 'running', 'attempt': attempt,
                    'auth_mode': 'ChatGPT', 'api_key_environment_passed': False,
                    'prompt_sha256': hashlib.sha256(prompt.encode()).hexdigest(),
-                   'submitted_epoch': started, 'deadline_epoch': started + timeout,
+                   'submitted_epoch': started,
+                   'deadline_epoch': started + timeout * (1 + len(FALLBACK_MODELS)),
                    'submitted_at': datetime.now(timezone.utc).isoformat()}
         atomic_write(path, json.dumps(receipt, sort_keys=True))
         instruction = (
@@ -184,29 +190,37 @@ def _generate_codex(subject, prompt, state_dir, timeout=240):
             + prompt)
         atomic_write(attempt_dir / 'prompt.txt', instruction)
         try:
-            with tempfile.TemporaryDirectory(prefix='uutis-codex-image-') as workspace:
-                command = [binary, 'exec', '--ephemeral', '--ignore-user-config', '--skip-git-repo-check',
-                    '--json', '--sandbox', 'read-only', '--disable', 'shell_tool', '--disable', 'apps',
-                    '--disable', 'multi_agent', '--enable', 'image_generation', '-m', MODEL,
-                    '-c', 'model_reasoning_effort="' + EFFORT + '"', '-c', 'approval_policy="never"',
-                    '-c', 'web_search="disabled"', '-C', workspace, '-']
-                with (attempt_dir / 'events.jsonl').open('w') as stdout, (attempt_dir / 'stderr.txt').open('w') as stderr:
-                    proc = subprocess.Popen(command, env=env, stdin=subprocess.PIPE,
-                                            stdout=stdout, stderr=stderr, text=True, start_new_session=True)
-                    try:
-                        receipt['worker_pid'] = proc.pid
-                        receipt['worker_start_ticks'] = (Path('/proc') / str(proc.pid) / 'stat').read_text().split(') ', 1)[1].split()[19]
-                        atomic_write(path, json.dumps(receipt, sort_keys=True))
-                        proc.communicate(instruction, timeout=timeout)
-                    except subprocess.TimeoutExpired:
-                        os.killpg(proc.pid, signal.SIGKILL); proc.communicate()
-                        raise GenerationError('OAuth image request timed out') from None
-                    except Exception:
-                        if proc.poll() is None:
+            for model in (MODEL,) + FALLBACK_MODELS:
+                receipt['orchestrator_model'] = model
+                with tempfile.TemporaryDirectory(prefix='uutis-codex-image-') as workspace:
+                    command = [binary, 'exec', '--ephemeral', '--ignore-user-config', '--skip-git-repo-check',
+                        '--json', '--sandbox', 'read-only', '--disable', 'shell_tool', '--disable', 'apps',
+                        '--disable', 'multi_agent', '--enable', 'image_generation', '-m', model,
+                        '-c', 'model_reasoning_effort="' + EFFORT + '"', '-c', 'approval_policy="never"',
+                        '-c', 'web_search="disabled"', '-C', workspace, '-']
+                    with (attempt_dir / 'events.jsonl').open('w') as stdout, (attempt_dir / 'stderr.txt').open('w') as stderr:
+                        proc = subprocess.Popen(command, env=env, stdin=subprocess.PIPE,
+                                                stdout=stdout, stderr=stderr, text=True, start_new_session=True)
+                        try:
+                            receipt['worker_pid'] = proc.pid
+                            receipt['worker_start_ticks'] = (Path('/proc') / str(proc.pid) / 'stat').read_text().split(') ', 1)[1].split()[19]
+                            atomic_write(path, json.dumps(receipt, sort_keys=True))
+                            proc.communicate(instruction, timeout=timeout)
+                        except subprocess.TimeoutExpired:
                             os.killpg(proc.pid, signal.SIGKILL); proc.communicate()
-                        raise
+                            raise GenerationError('OAuth image request timed out') from None
+                        except Exception:
+                            if proc.poll() is None:
+                                os.killpg(proc.pid, signal.SIGKILL); proc.communicate()
+                            raise
                 if proc.returncode:
+                    refused = MODEL_REFUSAL.search((attempt_dir / 'events.jsonl').read_text() +
+                                                   (attempt_dir / 'stderr.txt').read_text())
+                    if refused and model != ((MODEL,) + FALLBACK_MODELS)[-1]:
+                        receipt.setdefault('refused_models', []).append(model)
+                        continue
                     raise GenerationError('OAuth image invocation failed')
+                break
             event_text = (attempt_dir / 'events.jsonl').read_text()
             raw, actual = _image_output(event_text, codex_home / 'generated_images', started, time.time())
             _save_result(root, receipt, raw, actual, event_text)

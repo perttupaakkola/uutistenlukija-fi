@@ -112,10 +112,15 @@ def google_vision(raw, instruction, max_tokens=1200):
 
 CODEX_VISION_HOST = 'codex-oauth-vision'
 CODEX_VISION_MODEL = 'gpt-6.1-sol'
+# 23 Nov 2026: the subscription refused gpt-6.1-sol (and gpt-6-astra) with HTTP 429 for hours
+# while the account itself had quota left and other models answered. A 429 on one model is
+# model capacity, not an account limit: fall through to the next model (code guard:
+# codex-model-fallback) instead of opening the breaker for every story.
+CODEX_VISION_FALLBACK_MODELS = ('gpt-6.1-terra', 'gpt-6-luna')
 CODEX_VISION_EFFORT = 'low'
 CODEX_VISION_TIMEOUT = 120
 # Per-process breaker: a publisher tick is one process, so this never outlives it.
-_CODEX_VISION_STATE = {'down_until': 0.0, 'failures': 0}
+_CODEX_VISION_STATE = {'down_until': 0.0, 'failures': 0, 'model_down': {}}
 GOOGLE_VISION_HOST = 'google-vision-fallback'
 GOOGLE_BILLING_REFUSAL = re.compile(r'HTTP (402|429)\b')
 GOOGLE_BREAKER_SECONDS = 1800
@@ -145,7 +150,12 @@ def _extract_json_object(text):
     return value
 
 
-def codex_vision(raw, instruction, max_tokens=1200, timeout=CODEX_VISION_TIMEOUT):
+def codex_vision_models():
+    first = _codex_vision_model()
+    return tuple(dict.fromkeys((first,) + CODEX_VISION_FALLBACK_MODELS))
+
+
+def codex_vision(raw, instruction, max_tokens=1200, timeout=CODEX_VISION_TIMEOUT, model=None):
     """One isolated ChatGPT-OAuth Codex vision call returning the google_vision JSON contract.
 
     Only a freshly re-encoded, metadata-free JPEG named ``image.jpg`` in a private temporary
@@ -158,7 +168,7 @@ def codex_vision(raw, instruction, max_tokens=1200, timeout=CODEX_VISION_TIMEOUT
     buffer = io.BytesIO(); raster.save(buffer, format='JPEG', quality=90)
     prompt = (instruction + '\n\nReply with exactly one JSON object and nothing else. '
               'Do not use tools; inspect only the attached image.')
-    model = _codex_vision_model()
+    model = model or _codex_vision_model()
     try:
         binary = _binary()
         with tempfile.TemporaryDirectory(prefix='uutis-codex-vision-') as workspace:
@@ -215,23 +225,33 @@ def vision(raw, instruction, max_tokens=1200, provider=None):
         # 4 Nov 2026: ChatGPT-only route. Google credits are depleted (HTTP 402), so there is
         # no Google fallback: retry Codex once, then let the story stay image_pending.
         state = _CODEX_VISION_STATE
+        state.setdefault('model_down', {})
         if time.time() < state['down_until']:
             request_event(CODEX_VISION_HOST, None, 'BreakerOpen')
             raise GenerationError('Codex vision paused after repeated failures; retry next tick')
         last = None
-        for _ in range(2):
-            try:
-                value = codex_vision(raw, instruction, max_tokens)
-                state['failures'] = 0
-                request_event(CODEX_VISION_HOST, 200)
-                return value, 'codex-oauth:' + _codex_vision_model()
-            except GenerationError as error:
-                last = error
-                state['failures'] += 1
-                limited = 'limit' in str(error)
-                request_event(CODEX_VISION_HOST, None, 'UsageLimit' if limited else 'CodexError')
-                if limited:
-                    break
+        models = [m for m in codex_vision_models() if time.time() >= state['model_down'].get(m, 0)]
+        for model in models:
+            for _ in range(2):
+                try:
+                    value = codex_vision(raw, instruction, max_tokens, model=model)
+                    state['failures'] = 0
+                    request_event(CODEX_VISION_HOST, 200)
+                    return value, 'codex-oauth:' + model
+                except GenerationError as error:
+                    last = error
+                    state['failures'] += 1
+                    limited = 'limit' in str(error)
+                    request_event(CODEX_VISION_HOST, None, 'UsageLimit' if limited else 'CodexError')
+                    if limited:
+                        break
+            if last is not None and 'limit' in str(last):
+                # This model is refused; the next model in the chain may still answer.
+                state['model_down'][model] = time.time() + 1800
+                continue
+            break
+        if last is None:
+            last = GenerationError('every Codex vision model limited')
         if 'limit' in str(last) or state['failures'] >= 4:
             state['down_until'] = time.time() + (1800 if 'limit' in str(last) else 600)
         raise GenerationError('Codex vision unavailable: ' + str(last)[:160])

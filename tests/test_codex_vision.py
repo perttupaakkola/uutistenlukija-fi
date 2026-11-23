@@ -48,7 +48,7 @@ class FakeCodex:
 
 class CodexVision(unittest.TestCase):
     def setUp(self):
-        providers._CODEX_VISION_STATE.update(down_until=0.0, failures=0)
+        providers._CODEX_VISION_STATE.update(down_until=0.0, failures=0, model_down={})
 
     def _run(self, fake, raw=None, instruction='Return JSON with description (string).'):
         with mock.patch('news_mvp.codex_images._binary', return_value='/bin/codex'), \
@@ -90,19 +90,21 @@ class CodexVision(unittest.TestCase):
                     self._run(fake)
                 events = list(receipt['requests'])
         google.assert_not_called()
-        self.assertEqual(len(fake.calls), 1)  # usage limit: no retry, breaker opens
-        self.assertEqual([e['error_type'] for e in events], ['UsageLimit', 'BreakerOpen'])
+        # usage limit: no same-model retry; each fallback model is tried once, then the breaker opens
+        n = len(providers.codex_vision_models())
+        self.assertEqual(len(fake.calls), n)
+        self.assertEqual([e['error_type'] for e in events], ['UsageLimit'] * n + ['BreakerOpen'])
         self.assertTrue(all(e['host'] == providers.CODEX_VISION_HOST for e in events))
 
     def test_transient_codex_failure_is_retried_on_codex(self):
         good = {'description': 'ok'}
         calls = []
-        def flaky(raw, instruction, max_tokens=1200):
+        def flaky(raw, instruction, max_tokens=1200, model=None):
             calls.append(1)
             if len(calls) == 1:
                 raise imagery.GenerationError('Codex vision unavailable: TimeoutExpired')
             return good
-        providers._CODEX_VISION_STATE.update(down_until=0.0, failures=0)
+        providers._CODEX_VISION_STATE.update(down_until=0.0, failures=0, model_down={})
         with mock.patch.object(providers, 'codex_vision', side_effect=flaky), \
                 mock.patch.object(providers, 'google_vision') as google:
             value, model = providers.vision(_jpeg(), 'x', provider='codex-oauth')
@@ -117,7 +119,7 @@ class CodexVision(unittest.TestCase):
                 if prompt is not None:
                     raise subprocess.TimeoutExpired('codex', timeout)
                 return '', ''
-        providers._CODEX_VISION_STATE.update(down_until=0.0, failures=0)
+        providers._CODEX_VISION_STATE.update(down_until=0.0, failures=0, model_down={})
         with mock.patch('news_mvp.codex_images._binary', return_value='/bin/codex'), \
                 mock.patch.object(providers.subprocess, 'Popen', return_value=Slow()), \
                 mock.patch.object(providers.os, 'killpg'), \
@@ -131,7 +133,7 @@ class CodexVision(unittest.TestCase):
                      FakeCodex('{"description": "x"}', events=[
                          {'type': 'item.completed', 'item': {'type': 'command_execution'}},
                          {'type': 'turn.completed'}])):
-            providers._CODEX_VISION_STATE.update(down_until=0.0, failures=0)
+            providers._CODEX_VISION_STATE.update(down_until=0.0, failures=0, model_down={})
             with mock.patch.object(providers, 'google_vision') as google:
                 with self.assertRaises(imagery.GenerationError):
                     self._run(fake)
@@ -236,7 +238,7 @@ class GoogleBillingFallback(unittest.TestCase):
     """Real case 4 Nov 2026: every Gemini call answered HTTP 402 'prepayment credits depleted'."""
 
     def setUp(self):
-        providers._CODEX_VISION_STATE.update(down_until=0.0, failures=0)
+        providers._CODEX_VISION_STATE.update(down_until=0.0, failures=0, model_down={})
         providers._GOOGLE_VISION_STATE.update(down_until=0.0)
 
     def _env(self):
