@@ -100,6 +100,62 @@ def lost_dispatch(previous_error, status):
     return count if count<=DISPATCH_LOST_LIMIT else None
 
 
+REF_UPDATE_RETRY_LIMIT = 8  # ~2 h of 15-minute ticks
+_REF_RETRY = re.compile(r'^RefUpdateRetry (\d+):')
+_REF_OBJECT_LAG = re.compile(r'PATCH git/refs/heads/main: HTTP 422 .*Object does not exist|API rate limit exceeded|HTTP 403 .*rate limit', re.S)
+
+
+def ref_update_retry_count(previous_error, error):
+    """Next retry number for a transient failure moving main to our commit, else None.
+
+    Only upstream-outage errors (HTTP 5xx, dropped connections, timeouts) are
+    retried; a 422 non-fast-forward or auth refusal is a real conflict and must
+    stay blocked. After REF_UPDATE_RETRY_LIMIT the row goes to 'unknown' and the
+    problem monitor flags it.
+    """
+    text=safe_error(error) if not isinstance(error,str) else error
+    # 24 Nov 05:2x: right after creating commit 29b3d1dd GitHub refused the
+    # fast-forward with 422 'Object does not exist'; minutes later the commit
+    # and all its trees were readable. A definite refusal (main not moved) of
+    # an object GitHub has not finished storing is lag, not a conflict.
+    if not (_OUTAGE.search(text) or _REF_OBJECT_LAG.search(text)):return None
+    match=_REF_RETRY.match(previous_error or '')
+    count=(int(match.group(1)) if match else 0)+1
+    return count if count<=REF_UPDATE_RETRY_LIMIT else None
+
+
+ORPHAN_REBUILD_LIMIT = 3
+_ORPHAN = re.compile(r'(?:^|: )OrphanCommit (\d+):')
+
+
+def orphan_rebuild_count(previous_error):
+    """Next rebuild number for a commit whose tree GitHub lost, or None when used up."""
+    match=_ORPHAN.search(previous_error or '')
+    count=(int(match.group(1)) if match else 0)+1
+    return count if count<=ORPHAN_REBUILD_LIMIT else None
+
+
+def commit_tree_missing(commit):
+    """True only when GitHub definitely cannot serve the root tree of our commit.
+
+    Any other outcome (readable tree, network trouble, unexpected answer)
+    returns False so the commit is kept and only the bounded ref retry runs.
+    """
+    try:
+        tree=api('git/commits/'+commit)['tree']['sha']
+    except Exception:
+        return False
+    misses=0
+    for _ in range(3):
+        result=subprocess.run(['gh','api',f'repos/{REPO}/git/trees/{tree}','--jq','.sha'],
+                              cwd=ROOT,capture_output=True,text=True,timeout=30)
+        if result.returncode==0 and result.stdout.strip()==tree:return False
+        if 'HTTP 404' not in result.stderr and 'HTTP 422' not in result.stderr:return False
+        misses+=1
+        time.sleep(2)
+    return misses==3
+
+
 STARTUP_FAILURE_LIMIT = 3
 
 
@@ -837,10 +893,21 @@ def public_bundle(store,job,state,*,site_refresh=False):
     return site,receipt
 
 
-def upload_blob(site,data,force=False):
+# 24 Nov 2026 real case (article f8bf45e1): blobs uploaded for a release that
+# was never committed sat unreferenced on GitHub; about an hour later GitHub no
+# longer served them (404), but the local checkpoint still said "uploaded", so
+# the blob was skipped, the tree/commit were accepted, and every fast-forward
+# of main to that commit failed (HTTP 500 / 422). A checkpoint is therefore only
+# trusted while it is young, or when the blob is reachable from main itself.
+CHECKPOINT_TRUST_SECONDS = 30 * 60
+
+
+def upload_blob(site,data,force=False,reachable=frozenset()):
     expected=hashlib.sha1(b'blob '+str(len(data)).encode()+b'\0'+data).hexdigest()
+    if expected in reachable and not force:
+        return expected
     checkpoint=Path(site).parent/'uploaded-git-blobs'/expected
-    if checkpoint.exists() and not force:
+    if checkpoint.exists() and not force and time.time()-checkpoint.stat().st_mtime<CHECKPOINT_TRUST_SECONDS:
         if checkpoint.read_text()!=expected+'\n':raise ValueError('Uploaded Git blob checkpoint changed')
         return expected
     actual=api('git/blobs',{'content':base64.b64encode(data).decode(),'encoding':'base64'})['sha']
@@ -952,12 +1019,28 @@ def incremental_tree(entries, base=None, reupload=None):
     return base
 
 
-def prepare_commit_tree(site,receipt):
+def reachable_blobs(tree):
+    """Blob ids reachable from main's tree (safe to skip); empty if GitHub truncates."""
+    # Only an optimisation: any unexpected answer means "nothing known reachable",
+    # which falls back to the safe path (re-upload anything with an old checkpoint).
+    try:
+        listing=api('git/trees/'+tree+'?recursive=1')
+        if not isinstance(listing,dict) or listing.get('truncated'):return frozenset()
+        return frozenset(e['sha'] for e in listing.get('tree',()) if isinstance(e,dict) and e.get('type')=='blob')
+    except Exception:
+        return frozenset()
+
+
+def prepare_commit_tree(site,receipt,distrust_checkpoints=False):
     parent=api('git/ref/heads/main')['object']['sha'];base=api('git/commits/'+parent)['tree']['sha']
+    reachable=reachable_blobs(base)
     sources={}
     def blob(data):
         check_deadline('blob upload')
-        sha=upload_blob(site,data);sources[sha]=data;return sha
+        sha=upload_blob(site,data,force=distrust_checkpoints and
+                        hashlib.sha1(b'blob '+str(len(data)).encode()+b'\0'+data).hexdigest() not in reachable,
+                        reachable=reachable)
+        sources[sha]=data;return sha
     def reupload(sha):
         if sha not in sources:raise ValueError('GitHub rejected an unknown blob')
         if upload_blob(site,sources[sha],force=True)!=sha:raise ValueError('Uploaded Git blob identity mismatch')
@@ -972,9 +1055,9 @@ def prepare_commit_tree(site,receipt):
     return parent,tree
 
 
-def make_commit(site,receipt):
+def make_commit(site,receipt,distrust_checkpoints=False):
     try:
-        parent,tree=prepare_commit_tree(site,receipt)
+        parent,tree=prepare_commit_tree(site,receipt,distrust_checkpoints)
     except PreparationDeferred:
         raise
     except Exception as error:
@@ -1006,7 +1089,9 @@ def make_commit(site,receipt):
 
 
 COMMIT_TREE_RETRIES = 4
-_MISSING_TREE = re.compile(r'GitHub POST git/commits: HTTP 422 .*Tree SHA does not exist', re.S)
+# 24 Nov: GitHub answered POST git/commits with 404 'Not Found' when it had acknowledged
+# but never stored a subtree (tests/ tree 2124574c): also a definite 'no commit created'.
+_MISSING_TREE = re.compile(r'GitHub POST git/commits: HTTP (?:422 .*Tree SHA does not exist|404 )', re.S)
 
 
 def is_missing_commit_tree(text):
@@ -1356,13 +1441,53 @@ def publish(store,job,state,config_path):
             with store.db:store.db.execute('UPDATE publications SET attempts=attempts+1 WHERE job_id=?',(job['id'],))
             site,receipt=public_bundle(store,job,state);guard(config_path)
             external_started=True
-            row['remote_commit']=make_commit(site,receipt)
+            # A rebuild after a commit GitHub could not fast-forward to re-uploads
+            # every blob not reachable from main instead of trusting checkpoints.
+            row['remote_commit']=make_commit(site,receipt,distrust_checkpoints=bool(_ORPHAN.search(row.get('error') or '')))
             with store.db:store.db.execute('UPDATE publications SET remote_commit=?,status=? WHERE job_id=?',(row['remote_commit'],'prepared',job['id']))
         guard(config_path)
         if row['status'] in ('preparing','prepared'):
-            current=api('git/ref/heads/main')['object']['sha']
-            if current!=row['remote_commit']:
-                api('git/refs/heads/main',{'sha':row['remote_commit'],'force':False},method='PATCH')
+            try:
+                current=api('git/ref/heads/main')['object']['sha']
+                if current!=row['remote_commit']:
+                    api('git/refs/heads/main',{'sha':row['remote_commit'],'force':False},method='PATCH')
+            except Exception as error:
+                # 24 Nov 2026 real case: article f8bf45e1's commit ac6bf17b was
+                # created, then GitHub answered the fast-forward PATCH of main
+                # with HTTP 500. The generic handler parked the row in
+                # 'unknown', which skips the ref step for good, so no deploy
+                # ever started. A non-forced fast-forward to one fixed commit
+                # is safe to repeat: next tick re-reads main first and GitHub
+                # refuses (422) anything that is not a fast-forward. Bounded.
+                # Bottom of the 24 Nov why-chain: GitHub had stored commit
+                # ac6bf17b but its root tree 7fee2750 answered 404 on every
+                # read, so every PATCH of main to it failed with an empty
+                # HTTP 500. Retrying the PATCH can never succeed. main never
+                # pointed at that commit and no deploy ran, so it is dropped
+                # and the next tick rebuilds the content-addressed trees (blob
+                # checkpoints and re-uploads cover lost blobs) and a new commit.
+                # A ref update that keeps failing after two retries means the
+                # commit references objects GitHub lost: rebuild it as well.
+                # 24 Nov 06:32: a commit created seconds earlier in this same
+                # tick was judged lost (GitHub not yet serving its tree) and
+                # dropped. A fresh commit only gets the bounded ref retry; the
+                # lost-object rebuild is decided on a later tick.
+                previous=_REF_RETRY.match(row.get('error') or '')
+                rebuilds=orphan_rebuild_count(row.get('error'))
+                if not external_started and rebuilds is not None and ((previous and int(previous.group(1))>=2)
+                                             or commit_tree_missing(row['remote_commit'])):
+                    with store.db:store.db.execute(
+                        "UPDATE publications SET remote_commit=NULL,status='preparing',error=? WHERE job_id=? AND remote_commit=?",
+                        (f'OrphanCommit {rebuilds}: GitHub cannot fast-forward to {row["remote_commit"][:12]} (lost objects); rebuilding',job['id'],row['remote_commit']))
+                    return {'status':'preparation_continues','job_id':job['id'],'reason':'Commit tree missing on GitHub; rebuilding commit'}
+                count=ref_update_retry_count(row.get('error'),error)
+                if count is None:raise
+                # Carry the rebuild count forward so rebuilds stay bounded.
+                orphan=_ORPHAN.search(row.get('error') or '')
+                carried=f'OrphanCommit {orphan.group(1)}: ' if orphan else ''
+                with store.db:store.db.execute("UPDATE publications SET status='prepared',error=? WHERE job_id=?",
+                                               (f'RefUpdateRetry {count}: '+carried+safe_error(error),job['id']))
+                return {'status':'ref_update_retry','job_id':job['id'],'remote_commit':row['remote_commit'],'reason':safe_error(error)}
         runs,startup,failed_id=startup_failure_redispatch(matching_runs(row['remote_commit']),row.get('error'),row['status'])
         if startup=='exhausted':
             with store.db:store.db.execute("UPDATE publications SET status='failed',error='ConfirmedCompletedRunFailure' WHERE job_id=?",(job['id'],))
