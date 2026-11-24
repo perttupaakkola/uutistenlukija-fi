@@ -1,0 +1,884 @@
+{
+ "error": "RuntimeError: GitHub PATCH git/refs/heads/main: HTTP 500",
+ "commit": "239f18f03f0a89d9ca7e49e7bdd1c6881ff60369",
+ "main": "a6c6781125ce754bd1e9fc5fc73c974efd6e2b22",
+ "commit_tree": "eb5eb01ccf3bd9bde88c8f740dc51c33f2d4d1e3",
+ "main_tree": "03a414fcfade21a9ddf473ac6cf7ea1e50d8ffe8",
+ "trees": {
+  "eb5eb01ccf3bd9bde88c8f740dc51c33f2d4d1e3": [
+   {
+    "path": ".bridge-sync-exclude",
+    "type": "blob",
+    "sha": "dfce01014b375db6b7dd5e14ef5ddf13dd9a79f4"
+   },
+   {
+    "path": ".env.example",
+    "type": "blob",
+    "sha": "0e7af5127d05a96d25eaa1aec8e1eb7b9737095c"
+   },
+   {
+    "path": ".gitattributes",
+    "type": "blob",
+    "sha": "3158557b1e2ea72ff9a9c0003e0c8bbd8dbc2e27"
+   },
+   {
+    "path": ".githooks",
+    "type": "tree",
+    "sha": "f1e2ba15ce7ed7b4fd61799f5b5d7e9ece012d21"
+   },
+   {
+    "path": ".github",
+    "type": "tree",
+    "sha": "b423af63385f60a54bce11e9b858c936ea5a5028"
+   },
+   {
+    "path": ".gitignore",
+    "type": "blob",
+    "sha": "6354f7b3ffa15e9155a63e610b2ad28679e28f36"
+   },
+   {
+    "path": ".hugo_build.lock",
+    "type": "blob",
+    "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+   },
+   {
+    "path": ".learnings",
+    "type": "tree",
+    "sha": "09b49ffa45c8f8edceb839b1ef5cccc4b7dd02ac"
+   },
+   {
+    "path": ".trash",
+    "type": "tree",
+    "sha": "c83a17315a42eb6de18d20ad362f48cd9641be09"
+   },
+   {
+    "path": "AGENTS.md",
+    "type": "blob",
+    "sha": "a4d99705858036f0146f2f0b08d91139ef93ca9c"
+   },
+   {
+    "path": "CRON.md",
+    "type": "blob",
+    "sha": "8f75a7029b690aa1408cc181682a27592abaaa55"
+   },
+   {
+    "path": "DESIGN.md",
+    "type": "blob",
+    "sha": "cae8f84713e28cb23b54b210ebcbb571f9887125"
+   },
+   {
+    "path": "FLYWHEEL.md",
+    "type": "blob",
+    "sha": "d951d9432c38f9b9ad2e806c92acfcd326bedfc6"
+   },
+   {
+    "path": "README.md",
+    "type": "blob",
+    "sha": "5bdd2f61ed031f1a3935e438726fdee01acd0c4c"
+   },
+   {
+    "path": "RUNBOOK.md",
+    "type": "blob",
+    "sha": "38e7ce532666261717278f0b7b858045bb81a815"
+   },
+   {
+    "path": "_build_err.txt",
+    "type": "blob",
+    "sha": "929df8e872baecf4421a6a82ebbdfd7dc561d80e"
+   },
+   {
+    "path": "_build_result.txt",
+    "type": "blob",
+    "sha": "8281abd02a29713b522c360487f6b9cc729cc034"
+   },
+   {
+    "path": "_sara_check.txt",
+    "type": "blob",
+    "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+   },
+   {
+    "path": "a11y-files.txt",
+    "type": "blob",
+    "sha": "1e1ad6829c5520c088f5a78689c4b50d7a6fba52"
+   },
+   {
+    "path": "a11y-stat.txt",
+    "type": "blob",
+    "sha": "d0ee52550f0d864bdf0a841f230b8909852a6f42"
+   },
+   {
+    "path": "alex_breadcrumb_diff.txt",
+    "type": "blob",
+    "sha": "fd750c7b7545b16565c7afb01f2ec4a01af6bb74"
+   },
+   {
+    "path": "alex_head.txt",
+    "type": "blob",
+    "sha": "95552180cf069de35c910a6475e0ad218cbfb260"
+   },
+   {
+    "path": "alex_kw_log.txt",
+    "type": "blob",
+    "sha": "1c6bce8bccb3720b4a5d63289d6051bbbf415de1"
+   },
+   {
+    "path": "alex_kw_status.txt",
+    "type": "blob",
+    "sha": "f8e83aa6232dfbc0ec9d6be6dfadb4733edbda67"
+   },
+   {
+    "path": "analytics",
+    "type": "tree",
+    "sha": "ad2b897d5c2b695c6ff9ac4c23d5f60eac0b3feb"
+   },
+   {
+    "path": "anttila-paluu-2026-brief.md",
+    "type": "blob",
+    "sha": "8f6ad310b1440b825d3230052eadd3b4e120fe93"
+   },
+   {
+    "path": "archetypes",
+    "type": "tree",
+    "sha": "fabb3b28a1f438a8147ecb9c0a8ce0f9e629f907"
+   },
+   {
+    "path": "artifacts",
+    "type": "tree",
+    "sha": "4752498dd32035ba6c5771b26896c61fc2a6e6dd"
+   },
+   {
+    "path": "assets",
+    "type": "tree",
+    "sha": "8a068bc3f7ab51213468bb7302375257a2154993"
+   },
+   {
+    "path": "big-story-package-spec.md",
+    "type": "blob",
+    "sha": "a7ff57a1c1bfa708f4df6f05235ab6f4e2c5541f"
+   },
+   {
+    "path": "bridge_check.txt",
+    "type": "blob",
+    "sha": "d008b20a352655c2f900eaf9c905f8a478eec325"
+   },
+   {
+    "path": "category-hero.html",
+    "type": "blob",
+    "sha": "8b6bdc9af34766fdf1b39960a94c921328705c68"
+   },
+   {
+    "path": "category.html",
+    "type": "blob",
+    "sha": "06a05b5bcaa6f77c9ffbe6c97ef77575c6e1eaed"
+   },
+   {
+    "path": "competitive-positioning-mar28.md",
+    "type": "blob",
+    "sha": "10490728fd2ec38139300f5d16b62f07b88c45dd"
+   },
+   {
+    "path": "config.example.json",
+    "type": "blob",
+    "sha": "87eba4c0c91ee2261ace7acde8ccbea837fdcab8"
+   },
+   {
+    "path": "config.private.json",
+    "type": "blob",
+    "sha": "700c894edde129a49651fefe4e6abf3df92b7faa"
+   },
+   {
+    "path": "content",
+    "type": "tree",
+    "sha": "0103861a9b37834f69ca6dd83d721223e83675cb"
+   },
+   {
+    "path": "cronlog-tmp.txt",
+    "type": "blob",
+    "sha": "3561a761eec68893c7dff6052a998fe10c6564fb"
+   },
+   {
+    "path": "cutover",
+    "type": "tree",
+    "sha": "7508188e2615e5b5605626c9adf15a0335d424f6"
+   },
+   {
+    "path": "data",
+    "type": "tree",
+    "sha": "2c2180e753465234700952c27f84c74da2fd970a"
+   },
+   {
+    "path": "docs",
+    "type": "tree",
+    "sha": "6d42af45a4b221c87829e97bd732f68741613540"
+   },
+   {
+    "path": "dryrun-explainer-2.json",
+    "type": "blob",
+    "sha": "9eeb95ff64da835d05c50ac703668730c25af661"
+   },
+   {
+    "path": "dryrun-explainer.json",
+    "type": "blob",
+    "sha": "0484f458acb92db1084afafa0920955c8f811ec4"
+   },
+   {
+    "path": "examples",
+    "type": "tree",
+    "sha": "6a81dc3edade25e6435f6d3c2a06e4f1068f0008"
+   },
+   {
+    "path": "fix_all_templates.py",
+    "type": "blob",
+    "sha": "943a73fa5a787ddb9e80c7b0ab41bcb0b1d1b1f5"
+   },
+   {
+    "path": "fixtures",
+    "type": "tree",
+    "sha": "da4dbe286222078c03c0b88def514e555191aa3c"
+   },
+   {
+    "path": "flywheel-state.json",
+    "type": "blob",
+    "sha": "fc18c92c6c33d9687827d1149a8a2d1437347005"
+   },
+   {
+    "path": "ghost",
+    "type": "tree",
+    "sha": "5e087c704fe58226296374cb206c996404a66a83"
+   },
+   {
+    "path": "hugo.toml",
+    "type": "blob",
+    "sha": "c10bfc4ab283e39e883241b6cc6feb7ba219fc43"
+   },
+   {
+    "path": "huuhkajat-kapverde-2026-brief.md",
+    "type": "blob",
+    "sha": "4110c399b6ae37b220ded46f1f0d2bf9d041608a"
+   },
+   {
+    "path": "kesaaika-2026-brief.md",
+    "type": "blob",
+    "sha": "35f1bf9ac35631cddbeeecbf0b2b150a8bc34849"
+   },
+   {
+    "path": "kouvola-droni-2026-brief.md",
+    "type": "blob",
+    "sha": "2fc69fada43816c4b8e386f4d110fadeced1c08f"
+   },
+   {
+    "path": "kpi.json",
+    "type": "blob",
+    "sha": "66ebc121f76e0da267e4d5707be862a0bc8a6817"
+   },
+   {
+    "path": "layouts",
+    "type": "tree",
+    "sha": "1ad21af202b39bc42e01260d7c78901b6ca0d247"
+   },
+   {
+    "path": "logs",
+    "type": "tree",
+    "sha": "e1d0523981d38c2f58666a19c704a9b4a1bb0942"
+   },
+   {
+    "path": "nayttokuva.png",
+    "type": "blob",
+    "sha": "f609eb3c433a054b2e7724fd3f7db08f4b5880f5"
+   },
+   {
+    "path": "news_mvp",
+    "type": "tree",
+    "sha": "f894c0f0c03c2cc51b6b21dbae80460b7a124517"
+   },
+   {
+    "path": "nhl-global-series-2026-brief.md",
+    "type": "blob",
+    "sha": "0fd2a97634faaf66010a4da2e2077ddaf86d33d9"
+   },
+   {
+    "path": "node_modules",
+    "type": "tree",
+    "sha": "e9581b76bae5aa7eef47f75714690871aed26fe8"
+   },
+   {
+    "path": "olemme-olemassa-2026-brief.md",
+    "type": "blob",
+    "sha": "137c3a35484d8e8472b4e5cda813f046598f263e"
+   },
+   {
+    "path": "operator-playbook-clean-tree.md",
+    "type": "blob",
+    "sha": "5a64b6b5a8e053e5f7ddb93bd2b98ba4c212f7a5"
+   },
+   {
+    "path": "ops",
+    "type": "tree",
+    "sha": "07c90664253c448c2e008a7166f4ebb1ffdcb1d1"
+   },
+   {
+    "path": "pahkinankuoressa-box-spec.md",
+    "type": "blob",
+    "sha": "3030f1e2105f30dc766986aebe9c1d0b96c11560"
+   },
+   {
+    "path": "pipeline",
+    "type": "tree",
+    "sha": "44e231be9bd540a06bb3e9db9d209982ed4ba43c"
+   },
+   {
+    "path": "profile.example.yaml",
+    "type": "blob",
+    "sha": "5c9e769ed56d8f83ef23ccdba47c94a5ef2315ee"
+   },
+   {
+    "path": "prompts",
+    "type": "tree",
+    "sha": "d469aac78af6b229ef1afecdf28bc88b4fedb234"
+   },
+   {
+    "path": "public",
+    "type": "tree",
+    "sha": "2853317b2e98f7475f84783cb9dbcb471370f463"
+   },
+   {
+    "path": "release",
+    "type": "tree",
+    "sha": "83b1ebb368c6727125349cf03a3ec441674d0986"
+   },
+   {
+    "path": "reports",
+    "type": "tree",
+    "sha": "0cc6f1fe7f6d8e1be3a72b8584e243b6b30096a8"
+   },
+   {
+    "path": "requirements.txt",
+    "type": "blob",
+    "sha": "95a40af2281d855c9019ad7d5dadb9b33a056e38"
+   },
+   {
+    "path": "review.lock",
+    "type": "blob",
+    "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+   },
+   {
+    "path": "scripts",
+    "type": "tree",
+    "sha": "06e871b900243000514c22a85ca476dc48619920"
+   },
+   {
+    "path": "sd-stat.txt",
+    "type": "blob",
+    "sha": "eca24e5a8b19cf642897c0d0115b10db41279b6f"
+   },
+   {
+    "path": "social",
+    "type": "tree",
+    "sha": "ea8b89eb2860985a26d9f7bdf6f514821ee07f63"
+   },
+   {
+    "path": "source-allowlist-appendix.yaml",
+    "type": "blob",
+    "sha": "4b59d02ab8e2b18df119077e28e976901ead62fb"
+   },
+   {
+    "path": "sources",
+    "type": "tree",
+    "sha": "4fcbf60c9221a02d4f59c8b95a1d09f73ce9cda6"
+   },
+   {
+    "path": "specs",
+    "type": "tree",
+    "sha": "688d0285168842e87b89cc7993ff116fa63f70bd"
+   },
+   {
+    "path": "static",
+    "type": "tree",
+    "sha": "95bc781248cc211638db0adbccb9d6d3eb420c41"
+   },
+   {
+    "path": "sync_qg_out.txt",
+    "type": "blob",
+    "sha": "f8cbc39cf8250730fc4e12dabdecb885b23fe5cd"
+   },
+   {
+    "path": "systemd",
+    "type": "tree",
+    "sha": "dd434cb6d0c7040e8ab8a168ce1f60916ed1b288"
+   },
+   {
+    "path": "test-results",
+    "type": "tree",
+    "sha": "0b3889b7d2381139e60c1ea3558d41ffafa2ebbe"
+   },
+   {
+    "path": "tests",
+    "type": "tree",
+    "sha": "2c56f4063245f4dc345cdac4832619341a7114da"
+   },
+   {
+    "path": "themes",
+    "type": "tree",
+    "sha": "8230732eabac5bae369384879b5e75c28f337768"
+   },
+   {
+    "path": "tmp_alexdiff.txt",
+    "type": "blob",
+    "sha": "f14a3975fcb50e9278fb808c05d3f9f4d6dfb50c"
+   },
+   {
+    "path": "version",
+    "type": "tree",
+    "sha": "c30282a0c762f3bc72520eb3856f8abc3a38349e"
+   }
+  ],
+  "03a414fcfade21a9ddf473ac6cf7ea1e50d8ffe8": [
+   {
+    "path": ".bridge-sync-exclude",
+    "type": "blob",
+    "sha": "dfce01014b375db6b7dd5e14ef5ddf13dd9a79f4"
+   },
+   {
+    "path": ".env.example",
+    "type": "blob",
+    "sha": "0e7af5127d05a96d25eaa1aec8e1eb7b9737095c"
+   },
+   {
+    "path": ".gitattributes",
+    "type": "blob",
+    "sha": "3158557b1e2ea72ff9a9c0003e0c8bbd8dbc2e27"
+   },
+   {
+    "path": ".githooks",
+    "type": "tree",
+    "sha": "f1e2ba15ce7ed7b4fd61799f5b5d7e9ece012d21"
+   },
+   {
+    "path": ".github",
+    "type": "tree",
+    "sha": "b423af63385f60a54bce11e9b858c936ea5a5028"
+   },
+   {
+    "path": ".gitignore",
+    "type": "blob",
+    "sha": "6354f7b3ffa15e9155a63e610b2ad28679e28f36"
+   },
+   {
+    "path": ".hugo_build.lock",
+    "type": "blob",
+    "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+   },
+   {
+    "path": ".learnings",
+    "type": "tree",
+    "sha": "09b49ffa45c8f8edceb839b1ef5cccc4b7dd02ac"
+   },
+   {
+    "path": ".trash",
+    "type": "tree",
+    "sha": "c83a17315a42eb6de18d20ad362f48cd9641be09"
+   },
+   {
+    "path": "AGENTS.md",
+    "type": "blob",
+    "sha": "a4d99705858036f0146f2f0b08d91139ef93ca9c"
+   },
+   {
+    "path": "CRON.md",
+    "type": "blob",
+    "sha": "8f75a7029b690aa1408cc181682a27592abaaa55"
+   },
+   {
+    "path": "DESIGN.md",
+    "type": "blob",
+    "sha": "cae8f84713e28cb23b54b210ebcbb571f9887125"
+   },
+   {
+    "path": "FLYWHEEL.md",
+    "type": "blob",
+    "sha": "d951d9432c38f9b9ad2e806c92acfcd326bedfc6"
+   },
+   {
+    "path": "README.md",
+    "type": "blob",
+    "sha": "5bdd2f61ed031f1a3935e438726fdee01acd0c4c"
+   },
+   {
+    "path": "RUNBOOK.md",
+    "type": "blob",
+    "sha": "38e7ce532666261717278f0b7b858045bb81a815"
+   },
+   {
+    "path": "_build_err.txt",
+    "type": "blob",
+    "sha": "929df8e872baecf4421a6a82ebbdfd7dc561d80e"
+   },
+   {
+    "path": "_build_result.txt",
+    "type": "blob",
+    "sha": "8281abd02a29713b522c360487f6b9cc729cc034"
+   },
+   {
+    "path": "_sara_check.txt",
+    "type": "blob",
+    "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+   },
+   {
+    "path": "a11y-files.txt",
+    "type": "blob",
+    "sha": "1e1ad6829c5520c088f5a78689c4b50d7a6fba52"
+   },
+   {
+    "path": "a11y-stat.txt",
+    "type": "blob",
+    "sha": "d0ee52550f0d864bdf0a841f230b8909852a6f42"
+   },
+   {
+    "path": "alex_breadcrumb_diff.txt",
+    "type": "blob",
+    "sha": "fd750c7b7545b16565c7afb01f2ec4a01af6bb74"
+   },
+   {
+    "path": "alex_head.txt",
+    "type": "blob",
+    "sha": "95552180cf069de35c910a6475e0ad218cbfb260"
+   },
+   {
+    "path": "alex_kw_log.txt",
+    "type": "blob",
+    "sha": "1c6bce8bccb3720b4a5d63289d6051bbbf415de1"
+   },
+   {
+    "path": "alex_kw_status.txt",
+    "type": "blob",
+    "sha": "f8e83aa6232dfbc0ec9d6be6dfadb4733edbda67"
+   },
+   {
+    "path": "analytics",
+    "type": "tree",
+    "sha": "ad2b897d5c2b695c6ff9ac4c23d5f60eac0b3feb"
+   },
+   {
+    "path": "anttila-paluu-2026-brief.md",
+    "type": "blob",
+    "sha": "8f6ad310b1440b825d3230052eadd3b4e120fe93"
+   },
+   {
+    "path": "archetypes",
+    "type": "tree",
+    "sha": "fabb3b28a1f438a8147ecb9c0a8ce0f9e629f907"
+   },
+   {
+    "path": "artifacts",
+    "type": "tree",
+    "sha": "4752498dd32035ba6c5771b26896c61fc2a6e6dd"
+   },
+   {
+    "path": "assets",
+    "type": "tree",
+    "sha": "8a068bc3f7ab51213468bb7302375257a2154993"
+   },
+   {
+    "path": "big-story-package-spec.md",
+    "type": "blob",
+    "sha": "a7ff57a1c1bfa708f4df6f05235ab6f4e2c5541f"
+   },
+   {
+    "path": "bridge_check.txt",
+    "type": "blob",
+    "sha": "d008b20a352655c2f900eaf9c905f8a478eec325"
+   },
+   {
+    "path": "category-hero.html",
+    "type": "blob",
+    "sha": "8b6bdc9af34766fdf1b39960a94c921328705c68"
+   },
+   {
+    "path": "category.html",
+    "type": "blob",
+    "sha": "06a05b5bcaa6f77c9ffbe6c97ef77575c6e1eaed"
+   },
+   {
+    "path": "competitive-positioning-mar28.md",
+    "type": "blob",
+    "sha": "10490728fd2ec38139300f5d16b62f07b88c45dd"
+   },
+   {
+    "path": "config.example.json",
+    "type": "blob",
+    "sha": "87eba4c0c91ee2261ace7acde8ccbea837fdcab8"
+   },
+   {
+    "path": "config.private.json",
+    "type": "blob",
+    "sha": "700c894edde129a49651fefe4e6abf3df92b7faa"
+   },
+   {
+    "path": "content",
+    "type": "tree",
+    "sha": "0103861a9b37834f69ca6dd83d721223e83675cb"
+   },
+   {
+    "path": "cronlog-tmp.txt",
+    "type": "blob",
+    "sha": "3561a761eec68893c7dff6052a998fe10c6564fb"
+   },
+   {
+    "path": "cutover",
+    "type": "tree",
+    "sha": "7508188e2615e5b5605626c9adf15a0335d424f6"
+   },
+   {
+    "path": "data",
+    "type": "tree",
+    "sha": "2c2180e753465234700952c27f84c74da2fd970a"
+   },
+   {
+    "path": "docs",
+    "type": "tree",
+    "sha": "6d42af45a4b221c87829e97bd732f68741613540"
+   },
+   {
+    "path": "dryrun-explainer-2.json",
+    "type": "blob",
+    "sha": "9eeb95ff64da835d05c50ac703668730c25af661"
+   },
+   {
+    "path": "dryrun-explainer.json",
+    "type": "blob",
+    "sha": "0484f458acb92db1084afafa0920955c8f811ec4"
+   },
+   {
+    "path": "examples",
+    "type": "tree",
+    "sha": "6a81dc3edade25e6435f6d3c2a06e4f1068f0008"
+   },
+   {
+    "path": "fix_all_templates.py",
+    "type": "blob",
+    "sha": "943a73fa5a787ddb9e80c7b0ab41bcb0b1d1b1f5"
+   },
+   {
+    "path": "fixtures",
+    "type": "tree",
+    "sha": "da4dbe286222078c03c0b88def514e555191aa3c"
+   },
+   {
+    "path": "flywheel-state.json",
+    "type": "blob",
+    "sha": "fc18c92c6c33d9687827d1149a8a2d1437347005"
+   },
+   {
+    "path": "ghost",
+    "type": "tree",
+    "sha": "5e087c704fe58226296374cb206c996404a66a83"
+   },
+   {
+    "path": "hugo.toml",
+    "type": "blob",
+    "sha": "c10bfc4ab283e39e883241b6cc6feb7ba219fc43"
+   },
+   {
+    "path": "huuhkajat-kapverde-2026-brief.md",
+    "type": "blob",
+    "sha": "4110c399b6ae37b220ded46f1f0d2bf9d041608a"
+   },
+   {
+    "path": "kesaaika-2026-brief.md",
+    "type": "blob",
+    "sha": "35f1bf9ac35631cddbeeecbf0b2b150a8bc34849"
+   },
+   {
+    "path": "kouvola-droni-2026-brief.md",
+    "type": "blob",
+    "sha": "2fc69fada43816c4b8e386f4d110fadeced1c08f"
+   },
+   {
+    "path": "kpi.json",
+    "type": "blob",
+    "sha": "66ebc121f76e0da267e4d5707be862a0bc8a6817"
+   },
+   {
+    "path": "layouts",
+    "type": "tree",
+    "sha": "1ad21af202b39bc42e01260d7c78901b6ca0d247"
+   },
+   {
+    "path": "logs",
+    "type": "tree",
+    "sha": "e1d0523981d38c2f58666a19c704a9b4a1bb0942"
+   },
+   {
+    "path": "nayttokuva.png",
+    "type": "blob",
+    "sha": "f609eb3c433a054b2e7724fd3f7db08f4b5880f5"
+   },
+   {
+    "path": "news_mvp",
+    "type": "tree",
+    "sha": "9db12b2e8495c483574f01d9c4e61e85f983cd62"
+   },
+   {
+    "path": "nhl-global-series-2026-brief.md",
+    "type": "blob",
+    "sha": "0fd2a97634faaf66010a4da2e2077ddaf86d33d9"
+   },
+   {
+    "path": "node_modules",
+    "type": "tree",
+    "sha": "e9581b76bae5aa7eef47f75714690871aed26fe8"
+   },
+   {
+    "path": "olemme-olemassa-2026-brief.md",
+    "type": "blob",
+    "sha": "137c3a35484d8e8472b4e5cda813f046598f263e"
+   },
+   {
+    "path": "operator-playbook-clean-tree.md",
+    "type": "blob",
+    "sha": "5a64b6b5a8e053e5f7ddb93bd2b98ba4c212f7a5"
+   },
+   {
+    "path": "ops",
+    "type": "tree",
+    "sha": "07c90664253c448c2e008a7166f4ebb1ffdcb1d1"
+   },
+   {
+    "path": "pahkinankuoressa-box-spec.md",
+    "type": "blob",
+    "sha": "3030f1e2105f30dc766986aebe9c1d0b96c11560"
+   },
+   {
+    "path": "pipeline",
+    "type": "tree",
+    "sha": "44e231be9bd540a06bb3e9db9d209982ed4ba43c"
+   },
+   {
+    "path": "profile.example.yaml",
+    "type": "blob",
+    "sha": "5c9e769ed56d8f83ef23ccdba47c94a5ef2315ee"
+   },
+   {
+    "path": "prompts",
+    "type": "tree",
+    "sha": "d469aac78af6b229ef1afecdf28bc88b4fedb234"
+   },
+   {
+    "path": "public",
+    "type": "tree",
+    "sha": "9a51e546a3b5b0b0011a86f7fcd773fc7415a9a3"
+   },
+   {
+    "path": "release",
+    "type": "tree",
+    "sha": "dcb95dbfc86be1a39bf21c79178491e47db5b846"
+   },
+   {
+    "path": "reports",
+    "type": "tree",
+    "sha": "0cc6f1fe7f6d8e1be3a72b8584e243b6b30096a8"
+   },
+   {
+    "path": "requirements.txt",
+    "type": "blob",
+    "sha": "95a40af2281d855c9019ad7d5dadb9b33a056e38"
+   },
+   {
+    "path": "review.lock",
+    "type": "blob",
+    "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+   },
+   {
+    "path": "scripts",
+    "type": "tree",
+    "sha": "06e871b900243000514c22a85ca476dc48619920"
+   },
+   {
+    "path": "sd-stat.txt",
+    "type": "blob",
+    "sha": "eca24e5a8b19cf642897c0d0115b10db41279b6f"
+   },
+   {
+    "path": "social",
+    "type": "tree",
+    "sha": "ea8b89eb2860985a26d9f7bdf6f514821ee07f63"
+   },
+   {
+    "path": "source-allowlist-appendix.yaml",
+    "type": "blob",
+    "sha": "4b59d02ab8e2b18df119077e28e976901ead62fb"
+   },
+   {
+    "path": "sources",
+    "type": "tree",
+    "sha": "4fcbf60c9221a02d4f59c8b95a1d09f73ce9cda6"
+   },
+   {
+    "path": "specs",
+    "type": "tree",
+    "sha": "688d0285168842e87b89cc7993ff116fa63f70bd"
+   },
+   {
+    "path": "static",
+    "type": "tree",
+    "sha": "95bc781248cc211638db0adbccb9d6d3eb420c41"
+   },
+   {
+    "path": "sync_qg_out.txt",
+    "type": "blob",
+    "sha": "f8cbc39cf8250730fc4e12dabdecb885b23fe5cd"
+   },
+   {
+    "path": "systemd",
+    "type": "tree",
+    "sha": "dd434cb6d0c7040e8ab8a168ce1f60916ed1b288"
+   },
+   {
+    "path": "test-results",
+    "type": "tree",
+    "sha": "0b3889b7d2381139e60c1ea3558d41ffafa2ebbe"
+   },
+   {
+    "path": "tests",
+    "type": "tree",
+    "sha": "2c56f4063245f4dc345cdac4832619341a7114da"
+   },
+   {
+    "path": "themes",
+    "type": "tree",
+    "sha": "8230732eabac5bae369384879b5e75c28f337768"
+   },
+   {
+    "path": "tmp_alexdiff.txt",
+    "type": "blob",
+    "sha": "f14a3975fcb50e9278fb808c05d3f9f4d6dfb50c"
+   },
+   {
+    "path": "version",
+    "type": "tree",
+    "sha": "c30282a0c762f3bc72520eb3856f8abc3a38349e"
+   }
+  ]
+ },
+ "lost": [
+  "2853317b2e98f7475f84783cb9dbcb471370f463",
+  "018ae46a0fe8627143798e90146fcfbb02f1297b",
+  "8c979e614619b448e478ae0d2a8655b435faf75d",
+  "45897f6a5a16b5f2ff628a27c26e1fe75fa9f309",
+  "415c7e838b6d6364e4975e4b62412ecd2b974af1",
+  "522a87ca0f4142d2df908b1134c2d999ef66b742",
+  "5fd210bcb8295662bb2be30298a22640a4ea8e95",
+  "7fcca244c78aabc42f68996f64ea9901b141bbe3",
+  "2b0d4428e26a9389b6e1aea65a58bc9e84612991",
+  "58e7220a220d00c6139c8fe1e63f9c49e6461105",
+  "8430f624f9a66949077220867fe20536fa920177",
+  "15e27061c477bae7e360ceaf905a6e552dbccfa1",
+  "1f84a671615adfea55741a36276e6a779440cd60",
+  "112b3b3bde34bdf9b9e634e588d616ae00d18bad",
+  "6ea24ba96fd000762c8512a6bab161612bf444c9",
+  "3d753d8a7092b0d6724785aa9fcc133413477fb9",
+  "3a0e994a8f2dcd1ddbaa3bc0696b6740974f1ad9",
+  "3c69ee63c97fd01dbacc68f7d83040f97a05cc75",
+  "f981ac2691935cb6566c7c99cfca2ae6c6b91a8c"
+ ]
+}

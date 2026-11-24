@@ -63,7 +63,7 @@ class OrphanCommit(unittest.TestCase):
     def test_rebuild_branch_installed(self):
         import inspect, news_mvp.publish as p
         src=inspect.getsource(p.publish)
-        self.assertIn('commit_tree_missing(row', src)
+        self.assertIn('commit_objects_missing(row', src)
         self.assertIn('remote_commit=NULL', src)
 
 

@@ -156,6 +156,47 @@ def commit_tree_missing(commit):
     return misses==3
 
 
+
+def _tree_gone(sha):
+    """True only when GitHub answers 404/422 three times for one tree object."""
+    for _ in range(3):
+        result=subprocess.run(['gh','api',f'repos/{REPO}/git/trees/{sha}','--jq','.sha'],
+                              cwd=ROOT,capture_output=True,text=True,timeout=30)
+        if result.returncode==0 and result.stdout.strip()==sha:return False
+        if 'HTTP 404' not in result.stderr and 'HTTP 422' not in result.stderr:return False
+        time.sleep(2)
+    return True
+
+
+def commit_objects_missing(commit, depth=2):
+    """True when GitHub definitely lost our commit's root tree or a changed subtree.
+
+    24 Nov 07:16 real case: site refresh commit 239f18f0 and its root tree
+    eb5eb01c were readable, but the changed subtrees 'public' (2853317b),
+    'public/uutiset' and 17 article folders answered 404, so every fast-forward
+    of main answered HTTP 500. Checking only the root tree missed it. Subtrees
+    that differ from main's are checked down to `depth` levels (a few calls).
+    Any unexpected answer counts as "not missing" so only the bounded retry runs.
+    """
+    if commit_tree_missing(commit):return True
+    try:
+        ours=api('git/commits/'+commit)['tree']['sha']
+        main=api('git/commits/'+api('git/ref/heads/main')['object']['sha'])['tree']['sha']
+        level=[(ours,main)]
+        for _ in range(depth):
+            following=[]
+            for tree,base in level:
+                old={e['path']:e['sha'] for e in api('git/trees/'+base)['tree']} if base else {}
+                for entry in api('git/trees/'+tree)['tree']:
+                    if entry.get('type')!='tree' or old.get(entry['path'])==entry['sha']:continue
+                    if _tree_gone(entry['sha']):return True
+                    following.append((entry['sha'],old.get(entry['path'])))
+            level=following[:20]
+    except Exception:
+        return False
+    return False
+
+
 STARTUP_FAILURE_LIMIT = 3
 
 
@@ -1142,6 +1183,52 @@ def _superseded_preparation(row, refresh_id):
             not row['remote_commit'] and not row['run_id'])
 
 
+def site_refresh_ref_failure(store, row, error, created_now):
+    """Bounded handling of a failed fast-forward of main to a site refresh commit.
+
+    24 Nov 2026 real case: refresh a52460bf's commit 239f18f0 referenced
+    subtrees GitHub had acknowledged but never stored; every PATCH of main
+    answered HTTP 500 and the refresh re-sent the identical PATCH every tick for
+    hours while blocking all article publishing. Same policy as articles: a
+    transient refusal gets a counted retry; after two retries (or when GitHub
+    definitely lost objects) a commit main never pointed at is dropped and the
+    content-addressed trees are re-uploaded into a new commit (bounded rebuilds).
+    Exhausted -> 'unknown', which the problem monitor flags. Returns None to re-raise.
+    """
+    previous = _REF_RETRY.match(row.get('error') or '')
+    rebuilds = orphan_rebuild_count(row.get('error'))
+    if (not created_now and rebuilds is not None and
+            ((previous and int(previous.group(1)) >= 2) or
+             commit_objects_missing(row['remote_commit']))):
+        try:
+            moved = api('git/ref/heads/main')['object']['sha'] == row['remote_commit']
+        except Exception:
+            moved = None
+        if moved is False:
+            with store.db:
+                store.db.execute(
+                    "UPDATE site_refreshes SET remote_commit=NULL,status='preparing',error=? "
+                    "WHERE id=? AND remote_commit=?",
+                    (f'OrphanCommit {rebuilds}: GitHub cannot fast-forward to '
+                     f'{row["remote_commit"][:12]} (lost objects); rebuilding',
+                     row['id'], row['remote_commit']))
+            return {'status':'preparation_continues','site_refresh_id':row['id'],
+                    'reason':'Commit objects missing on GitHub; rebuilding commit'}
+    count = ref_update_retry_count(row.get('error'), error)
+    if count is None:
+        with store.db:
+            store.db.execute("UPDATE site_refreshes SET status='unknown',error=? WHERE id=?",
+                             (safe_error(error), row['id']))
+        return None
+    orphan = _ORPHAN.search(row.get('error') or '')
+    carried = f'OrphanCommit {orphan.group(1)}: ' if orphan else ''
+    with store.db:
+        store.db.execute("UPDATE site_refreshes SET status='prepared',error=? WHERE id=?",
+                         (f'RefUpdateRetry {count}: '+carried+safe_error(error), row['id']))
+    return {'status':'ref_update_retry','site_refresh_id':row['id'],
+            'remote_commit':row['remote_commit'],'reason':safe_error(error)}
+
+
 def site_refresh(config, config_path):
     """Ship the committed renderer/assets with a deployed article as immutable anchor."""
     state = config['state_dir']
@@ -1228,6 +1315,7 @@ def site_refresh(config, config_path):
                     'reason':'Unknown site refresh state'}
 
         external_started = False
+        created_now = False
         try:
             if not row['remote_commit']:
                 if source_commit != row['source_commit']:
@@ -1238,7 +1326,9 @@ def site_refresh(config, config_path):
                     raise ValueError('Site refresh stylesheet changed during preparation')
                 guard(config_path)
                 external_started = True
-                remote_commit = make_commit(site, receipt)
+                created_now = True
+                remote_commit = make_commit(site, receipt, distrust_checkpoints=bool(
+                    _ORPHAN.search(row.get('error') or '')))
                 with store.db:
                     store.db.execute(
                         "UPDATE site_refreshes SET remote_commit=?,status='prepared',error=NULL WHERE id=?",
@@ -1253,7 +1343,13 @@ def site_refresh(config, config_path):
                             'reason':'Remote ref update outcome is unresolved',
                             'remote_commit':row['remote_commit']}
                 external_started = True
-                api('git/refs/heads/main',{'sha':row['remote_commit'],'force':False},method='PATCH')
+                try:
+                    api('git/refs/heads/main',{'sha':row['remote_commit'],'force':False},method='PATCH')
+                except Exception as error:
+                    handled = site_refresh_ref_failure(store, row, error, created_now)
+                    if handled is not None:
+                        return handled
+                    raise
 
             all_runs = matching_runs(row['remote_commit'])
             runs, startup, failed_id = startup_failure_redispatch(all_runs, row.get('error'), row['status'])
@@ -1475,7 +1571,7 @@ def publish(store,job,state,config_path):
                 previous=_REF_RETRY.match(row.get('error') or '')
                 rebuilds=orphan_rebuild_count(row.get('error'))
                 if not external_started and rebuilds is not None and ((previous and int(previous.group(1))>=2)
-                                             or commit_tree_missing(row['remote_commit'])):
+                                             or commit_objects_missing(row['remote_commit'])):
                     with store.db:store.db.execute(
                         "UPDATE publications SET remote_commit=NULL,status='preparing',error=? WHERE job_id=? AND remote_commit=?",
                         (f'OrphanCommit {rebuilds}: GitHub cannot fast-forward to {row["remote_commit"][:12]} (lost objects); rebuilding',job['id'],row['remote_commit']))
