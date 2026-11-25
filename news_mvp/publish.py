@@ -274,18 +274,28 @@ def api(path, data=None, method=None):
         return json.loads(cmd('gh','api',f'repos/{REPO}/{path}'))
     # Existing Git credential has repository/workflow write scope. The existing
     # gh credential owns Actions dispatch. Neither is copied or reconfigured.
-    result=subprocess.run(['git','credential','fill'],input='protocol=https\nhost=github.com\n\n',
-                          cwd=ROOT,capture_output=True,text=True,check=True,timeout=15)
-    credential=dict(line.split('=',1) for line in result.stdout.splitlines() if '=' in line)
-    request=urllib.request.Request(f'https://api.github.com/repos/{REPO}/{path}',data=json.dumps(data).encode(),
-        headers={'Authorization':'Bearer '+credential['password'],'User-Agent':'Uutistenlukija-MVP','Content-Type':'application/json'},method=method or 'POST')
+    def build_request():
+        # Read the credential afresh for every attempt so a retry after HTTP 401
+        # uses whatever the credential store holds now, not a cached value.
+        result=subprocess.run(['git','credential','fill'],input='protocol=https\nhost=github.com\n\n',
+                              cwd=ROOT,capture_output=True,text=True,check=True,timeout=15)
+        credential=dict(line.split('=',1) for line in result.stdout.splitlines() if '=' in line)
+        return urllib.request.Request(f'https://api.github.com/repos/{REPO}/{path}',data=json.dumps(data).encode(),
+            headers={'Authorization':'Bearer '+credential['password'],'User-Agent':'Uutistenlukija-MVP','Content-Type':'application/json'},method=method or 'POST')
+    request=build_request()
     # Git blobs/trees are content addressed: retrying identical bytes creates no
     # second object. Commits, refs and dispatch retain their uncertain-outcome
     # handling and are never automatically replayed here.
     content_addressed = path in ('git/blobs','git/trees') and request.method == 'POST'
     attempts = 3 if content_addressed else 1
-    retry_codes = (500,502,503,504) if content_addressed else (502,503,504)
+    # 25 Nov: GitHub answered one git/blobs POST with HTTP 401 'Bad credentials'
+    # while the same stored token authenticated fine before and minutes after
+    # (job 6f7b3dfe). A spurious 401 on an idempotent blob/tree upload is retried
+    # with a freshly read credential; a truly revoked token still fails after
+    # the bounded attempts and is NOT refunded as an outage (see _OUTAGE).
+    retry_codes = (401,500,502,503,504) if content_addressed else (502,503,504)
     for attempt in range(attempts):
+        if attempt:request=build_request()
         try:
             with urllib.request.urlopen(request,timeout=30) as response:return json.load(response)
         except urllib.error.HTTPError as error:

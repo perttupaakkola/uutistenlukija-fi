@@ -201,3 +201,46 @@ class GithubRemoteDisconnected(TickBudget):
             with self.assertRaises(http.client.RemoteDisconnected):
                 pub.api('git/commits', {'message': 'm'})
             self.assertEqual(len(calls), 1)
+
+
+class GithubSpurious401(TickBudget):
+    """25 Nov: real GitHub 401 'Bad credentials' on git/blobs for job 6f7b3dfe with a valid token."""
+
+    BODY = b'{"message": "Bad credentials"}'
+
+    def _urlopen(self, calls, failures):
+        import io, urllib.error
+        body = self.BODY
+        class Resp(io.BytesIO):
+            def __enter__(self): return self
+            def __exit__(self, *a): return False
+        def urlopen(request, timeout):
+            calls.append(request.get_header('Authorization'))
+            if len(calls) <= failures:
+                raise urllib.error.HTTPError(request.full_url, 401, 'Unauthorized', {}, io.BytesIO(body))
+            return Resp(b'{"sha": "ok"}')
+        return urlopen
+
+    def test_blob_401_retried_with_fresh_credential(self):
+        calls, creds = [], iter(['password=old\n', 'password=new\n', 'password=new\n'])
+        run = lambda *a, **k: type('R', (), {'stdout': next(creds)})()
+        with patch('news_mvp.publish.subprocess.run', side_effect=run), \
+             patch('news_mvp.publish.urllib.request.urlopen', side_effect=self._urlopen(calls, 1)), \
+             patch('news_mvp.publish.time.sleep'):
+            self.assertEqual(pub.api('git/blobs', {'content': 'eA==', 'encoding': 'base64'})['sha'], 'ok')
+        self.assertEqual(calls, ['Bearer old', 'Bearer new'])
+
+    def test_persistent_401_is_bounded_and_not_an_outage(self):
+        calls = []
+        cred = type('R', (), {'stdout': 'password=x\n'})()
+        with patch('news_mvp.publish.subprocess.run', return_value=cred), \
+             patch('news_mvp.publish.urllib.request.urlopen', side_effect=self._urlopen(calls, 99)), \
+             patch('news_mvp.publish.time.sleep'):
+            with self.assertRaises(RuntimeError) as ctx:
+                pub.api('git/blobs', {'content': 'eA==', 'encoding': 'base64'})
+            self.assertEqual(len(calls), 3)
+            calls.clear()
+            with self.assertRaises(RuntimeError):
+                pub.api('git/commits', {'message': 'm'})
+            self.assertEqual(len(calls), 1)
+        self.assertNotRegex(str(ctx.exception), pub._OUTAGE)
