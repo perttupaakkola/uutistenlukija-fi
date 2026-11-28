@@ -9,7 +9,8 @@ from news_mvp import utility_guides as ug
 # reach the rendered town sections. A missing _TOWN_LOCATIVES key silently
 # dropped Lapua, Hanko and Ylivieska from the Christmas-opening list (10 Nov 2026).
 UPCOMING = ('/oppaat/joulumarkkinat-2026/', '/oppaat/kauneimmat-joululaulut-2026/',
-            '/oppaat/itsenaisyyspaiva-2026/', '/oppaat/lucian-paiva-2026/')
+            '/oppaat/itsenaisyyspaiva-2026/', '/oppaat/lucian-paiva-2026/',
+            '/oppaat/uudenvuoden-ilotulitukset-2026/')
 
 
 class GuideTownMappingTest(unittest.TestCase):
@@ -51,3 +52,15 @@ class GuideTownMappingTest(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+
+
+class NewYearFireworksListTest(unittest.TestCase):
+    def test_every_confirmed_town_gets_a_section_on_new_years_eve(self):
+        now = datetime(2026, 11, 28, 12, tzinfo=ZoneInfo('Europe/Helsinki'))
+        g = next(g for g in ug.guides(now) if g['path'] == '/oppaat/uudenvuoden-ilotulitukset-2026/')
+        events = ug.guide_events(g)
+        towns = {e['town'] for e in events}
+        for town in ('Helsinki', 'Tampere', 'Lappeenranta', 'Kemi', 'Tornio', 'Kittilä', 'Pelkosenniemi', 'Joensuu'):
+            self.assertIn(town, towns)
+        self.assertGreaterEqual(len(towns), 15)
+        self.assertTrue(all(e.get('startDate') == '2026-12-31' for e in events))

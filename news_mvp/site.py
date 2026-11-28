@@ -870,6 +870,8 @@ TIMELY_GUIDES = (
      "Su 13.12.: kruunajaiset ja Lucia-kulkueet"),
     ("2026-12-26", "/oppaat/joulu-2026/", "Joulu 2026: välipäivät ja uusivuosi",
      "Jouluaatto torstaina 24.12."),
+    ("2027-01-01", "/oppaat/uudenvuoden-ilotulitukset-2026/", "Uudenvuoden ilotulitukset 2026",
+     "To 31.12.: ajat ja paikat kaupungeittain"),
     ("2027-12-31", "/oppaat/kelan-maksupaivat-2026-2027/", "Kelan maksupäivät 2026–2027",
      "Lapsilisä, asumistuki, eläke"),
 )
